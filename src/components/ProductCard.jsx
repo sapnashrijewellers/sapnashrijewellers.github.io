@@ -19,7 +19,7 @@ export default function ProductCard({ product, price }) {
         <div className="border rounded-2xl overflow-hidden shadow hover:shadow-lg transition bg-white">
           <div className="w-full flex items-center justify-center bg-gray-50 overflow-hidden">
             <img
-              src={product.images[0]}
+              src={`./images/${product.images[0]}`}
               loading="lazy"
               alt={product.name}
               className="h-[100px] object-cover transition-transform duration-300 hover:scale-105"

@@ -45,7 +45,7 @@ export default function ProductDetail() {
             <SwiperSlide key={i}>
               <div className="w-full max-w-full">
                 <img
-                  src={img}
+                  src={`./images/${img}`}
                   alt={product.name}
                   className="w-full h-[350px] object-contain rounded-xl mx-auto cursor-pointer"
                   onClick={() => setActiveImage(img)}

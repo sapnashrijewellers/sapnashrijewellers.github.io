@@ -19,13 +19,20 @@ export function getRatePerGram(product, rates) {
       case "18K":
         return rates.gold18K;
       default:
-        return rates.gold22K; // fallback
+        return rates.gold24K; // fallback
     }
   }
 
   // Silver categories
   if (category.includes("silver")) {
-    return rates.silver;
+    switch (product.purity) {
+      case "पाठ की चाँदी":
+        return rates.silver;
+      case "चाँदी जेवर":
+        return rates.silver * (0.92);
+      default:
+        return rates.silver; // fallback
+    }
   }
 
   // Other / imitation items
@@ -40,9 +47,15 @@ export function getRatePerGram(product, rates) {
  */
 export function calculatePrice(product, rates) {
   if (!rates) return 0;
-
+  
   const rate = getRatePerGram(product, rates);
-  const base = product.weight * rate + product.makingCharges;
+  
+  const basePrice = product.weight * rate;
+  
+  const mc = basePrice * (product.makingCharges / 100)
+  
+  const base = basePrice + mc;
+  
   const gst = (rates.gstPercent / 100) * base;
 
   return base + gst;

@@ -39,7 +39,7 @@ const {  rates } = useData();
               </span>
             </span>
             <span>
-              चाँदी (92.5): <span className="text-green-500">₹{rates.silver*1000}</span>
+              चाँदी (99.9): <span className="text-green-500">₹{rates.silver*1000}</span>
             </span>
           </div>
           <div className="flex justify-end gap-4">

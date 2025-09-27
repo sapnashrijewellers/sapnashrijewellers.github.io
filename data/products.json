@@ -25,7 +25,7 @@
     "category": "gold",
     "weight": 10,
     "purity": "22K",
-    "makingCharges": 1000,
+    "makingCharges": 10,
     "images": [
       "goldbar10.png",
       "placeholder.webp",

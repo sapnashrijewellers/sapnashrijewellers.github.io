@@ -20,7 +20,7 @@ const FloatingWhatsAppChatButton = ({ phoneNumber = '919424932197', className = 
                 z-50
                 bottom-6 right-6                  
                 text-white
-                p-1 sm:p-1
+                p-1 
                 rounded-full
                 shadow-2xl
                 transition-all duration-300
@@ -30,7 +30,7 @@ const FloatingWhatsAppChatButton = ({ phoneNumber = '919424932197', className = 
             title={`Chat on WhatsApp: +${phoneNumber}`}            
         >
             <FaWhatsapp                
-                className="text-6xl text-green-500 hover:text-green-600 cursor-pointer transition-transform transform hover:scale-110"                
+                className="text-7xl text-green-500 hover:text-green-600 cursor-pointer transition-transform transform hover:scale-110"                
             />
         </a>
     );

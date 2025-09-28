@@ -26,7 +26,7 @@ export default function ProductCard({ product, price }) {
             />
           </div>
           <div className="p-3">
-            <h2 className="font-semibold text-sm md:text-base line-clamp-1">{product.name}</h2>
+            <h2 className="text-black font-semibold text-sm md:text-base line-clamp-1">{product.name}</h2>
             
             {/* Purity and Weight row */}
             <div className="flex justify-between text-xs text-gray-500">

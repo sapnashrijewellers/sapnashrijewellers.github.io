@@ -13,11 +13,11 @@ import { Navigation, Pagination } from "swiper/modules";
 
 export default function ProductDetail() {
   const { id } = useParams();
-  const { products, rates } = useData();
+  const { products } = useData();
   const [activeImage, setActiveImage] = useState(null);
 
 
-  if (!products || !rates) return <p>Loading...</p>;
+  if (!products) return <p>Loading...</p>;
 
   const product = products.find(p => p.id.toString() === id);
   if (!product) return <p>Product not found</p>;
@@ -88,7 +88,7 @@ export default function ProductDetail() {
           onClick={() => setActiveImage(null)}
         >
           <img
-            src={activeImage}
+            src={`./images/${activeImage}`}
             alt="zoomed"
             className="max-h-full max-w-full object-contain"
           />

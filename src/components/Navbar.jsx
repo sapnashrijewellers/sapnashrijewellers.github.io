@@ -28,6 +28,7 @@ export default function Navbar() {
             <Link className="hover:underline" to="/">होम</Link>
             <Link className="hover:underline" to="/category/gold">सोना</Link>
             <Link className="hover:underline" to="/category/silver">चाँदी</Link>
+            <Link className="hover:underline" to="/calculator">कैलकुलेटर</Link>            
           </div>
 
           {/* Bottom row: Live rates */}

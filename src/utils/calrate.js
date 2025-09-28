@@ -45,18 +45,18 @@ export function getRatePerGram(product, rates) {
  * @param {object} rates - Rates object from DataContext
  * @returns {number} - Final calculated price
  */
-export function calculatePrice(product, rates) {
-  if (!rates) return 0;
+// export function calculatePrice(product, rates) {
+//   if (!rates) return 0;
   
-  const rate = getRatePerGram(product, rates);
+//   const rate = getRatePerGram(product, rates);
   
-  const basePrice = product.weight * rate;
+//   const basePrice = product.weight * rate;
   
-  const mc = basePrice * (product.makingCharges / 100)
+//   const mc = basePrice * (product.makingCharges / 100)
   
-  const base = basePrice + mc;
+//   const base = basePrice + mc;
   
-  const gst = (rates.gstPercent / 100) * base;
+//   const gst = (rates.gstPercent / 100) * base;
 
-  return base + gst;
-}
+//   return base + gst;
+// }

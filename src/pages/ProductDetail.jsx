@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { useData } from "../context/DataContext";
-import { calculatePrice } from "../utils/calrate";
+//import { calculatePrice } from "../utils/calrate";
 
 
 import { FaWhatsapp } from "react-icons/fa";
@@ -61,11 +61,11 @@ export default function ProductDetail() {
         <h1 className="text-2xl md:text-3xl font-bold mb-2">{product.name}</h1>
         <p className="text-gray-600 mb-4">{product.purity}</p>
         <p><b>वज़न:</b> {product.weight} g</p>
-        <p><b>आभूषण बनाने का शुल्क:</b> ₹{product.makingCharges}</p>
+        {/* <p><b>आभूषण बनाने का शुल्क:</b> ₹{product.makingCharges}</p>
         <p><b>GST:</b> {rates.gstPercent}%</p>
         <p className="text-xl font-bold text-yellow-700 mt-3">
           कीमत: ₹{calculatePrice(product, rates).toLocaleString('en-IN')}
-        </p>
+        </p> */}
 
         <div className="mt-4 flex items-center gap-4">
           <FaWhatsapp
@@ -73,7 +73,7 @@ export default function ProductDetail() {
             onClick={() => window.open(whatsappUrl, "_blank")}
           />
           <span className="text-sm text-gray-300">
-            अधिक जानकारी और छूट के लिए <a href="tel:7999215256">7999215256</a> पर संपर्क करें...
+            अधिक जानकारी के लिए <a href="tel:7999215256">7999215256</a> पर संपर्क करें...
           </span>
         </div>
         <ul className="mt-4 list-disc list-inside">

@@ -1,6 +1,6 @@
 import { useData } from "../context/DataContext";
 import ProductCard from "../components/ProductCard";
-import { calculatePrice } from "../utils/calrate";
+//import { calculatePrice } from "../utils/calrate";
 export default function Home() {
 
   const { products, rates } = useData();
@@ -19,7 +19,7 @@ export default function Home() {
           <ProductCard
             key={p.id}
             product={p}
-            price={calculatePrice(p, rates)}
+            //price={calculatePrice(p, rates)}
           />
         ))}
       </div>
@@ -30,7 +30,7 @@ export default function Home() {
           <ProductCard
             key={p.id}
             product={p}
-            price={calculatePrice(p, rates)}
+            //price={calculatePrice(p, rates)}
           />
         ))}
       </div>

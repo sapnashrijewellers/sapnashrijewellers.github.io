@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { useData } from "../context/DataContext";
-
-export default function Navbar() {  
-const {  rates } = useData();
+import IndianRupeeRate from './IndianRupeeRate';
+export default function Navbar() {
+  const { rates } = useData();
 
   if (!rates) return null;
 
@@ -27,7 +27,7 @@ const {  rates } = useData();
           <div className="flex flex-wrap justify-end gap-4 mb-1">
             <Link className="hover:underline" to="/">होम</Link>
             <Link className="hover:underline" to="/category/gold">सोना</Link>
-            <Link className="hover:underline" to="/category/silver">चाँदी</Link>            
+            <Link className="hover:underline" to="/category/silver">चाँदी</Link>
           </div>
 
           {/* Bottom row: Live rates */}
@@ -35,22 +35,24 @@ const {  rates } = useData();
             <span className="flex items-center gap-1">
               <span className="animate-pulse w-3 h-3 bg-red-500 rounded-full inline-block"></span>
               <span>
-                सोना (24K): <span className="text-green-500">₹{rates.gold24K}</span>
+                सोना (24K): <IndianRupeeRate rate={rates.gold24K * 10} />
+
               </span>
             </span>
             <span>
-              चाँदी (99.9): <span className="text-green-500">₹{rates.silver*1000}</span>
+              चाँदी (99.9): <IndianRupeeRate rate={rates.silver * 1000} />
             </span>
           </div>
           <div className="flex justify-end gap-4">
             <span className="flex items-center gap-1">
               <span className="animate-pulse w-3 h-3 bg-red-500 rounded-full inline-block"></span>
               <span>
-                सोना (22K): <span className="text-green-500">₹{rates.gold22K}</span>
+                सोना (22K): <IndianRupeeRate rate={rates.gold22K * 10} />
               </span>
             </span>
             <span>
-              चाँदी(जेवर): <span className="text-green-500">₹{(rates.silver*1000)*(0.75)}</span>
+              चाँदी(जेवर):
+              <IndianRupeeRate rate={(rates.silver * 1000) * (0.75)} />
             </span>
           </div>
         </div>

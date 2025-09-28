@@ -34,9 +34,9 @@ export default function ProductCard({ product, price }) {
               <span>{product.weight} gm</span>
             </div>
 
-            <p className="mt-2 font-bold text-yellow-700 text-sm md:text-base">
+            {/* <p className="mt-2 font-bold text-yellow-700 text-sm md:text-base">
               ₹ {Number(price).toLocaleString('en-IN')}
-            </p>
+            </p> */}
           </div>
         </div>
       </Link>

@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useData } from "../context/DataContext";
 import ProductCard from "../components/ProductCard";
-import { calculatePrice } from "../utils/calrate";
+//import { calculatePrice } from "../utils/calrate";
 
 
 export default function Category() {
@@ -26,7 +26,7 @@ if (!products || !rates) return <p>Loading...</p>;
             <ProductCard
               key={p.id}
               product={p}
-              price={calculatePrice(p, rates)}              
+              //price={calculatePrice(p, rates)}              
             />
           ))}
         </div>

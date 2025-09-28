@@ -1,8 +1,8 @@
 {
-  "asOn":"Sep 24 2025: 17:16",
-  "24KgoldRatePerGram": 12000,
-  "22KgoldRatePerGram": 11000,
-  "18KgoldRatePerGram": 10000,
-  "silverRatePerGram": 120,
+  "asOn":"28/09/2025, 13:08:20",
+  "24K": 12000,
+  "22K": 11000,
+  "18K": 10000,
+  "silver": 136,
   "gstPercent": 3
 }

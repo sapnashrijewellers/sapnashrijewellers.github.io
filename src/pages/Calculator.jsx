@@ -1,110 +1,134 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useData } from "../context/DataContext";
 
 const Calculator = () => {
-  // Example rates (₹ per gram) - replace with live rates if available
-  const rates = {
-    gold: {
-      "24K": 6200,
-      "22K": 5700,
-      "18K": 4700,
-    },
-    silver: {
-      "silver jewellery": 80,
-      "silver 99.9": 85,
-    },
+  const { rates } = useData();
+
+  const initialProd = {
+    category: "gold",
+    purity: "gold24K",
+    weight: 10,
+    makingCharges: 10,
+    gst: 3,
   };
 
-  const [form, setForm] = useState({
-    type: "gold",
-    purity: "24K",
-    weight: "",
-    makingCharges: "",
-    gst: "3",
-  });
-
+  const [form, setForm] = useState(initialProd);
+  const [purityOptions, setPurityOptions] = useState([]);
   const [price, setPrice] = useState(null);
+
+  // map for user-friendly labels
+  const purityLabels = {
+    gold24K: "सोना (24K)",
+    gold22K: "सोना (22K)",
+    gold18K: "सोना (18K)",
+    silver: "चाँदी (99.9)",
+    silverJewellery: "चाँदी (जेवर)",
+  };
+
+  // Recompute purity dropdown when category changes
+  useEffect(() => {
+    if (!rates) return;
+
+    let options = [];
+    if (form.category === "gold") {
+      options = ["gold24K", "gold22K", "gold18K"];
+    } else {
+      options = ["silver", "silverJewellery"];
+    }
+
+    setPurityOptions(options);
+
+    // auto reset if current purity invalid
+    if (!options.includes(form.purity)) {
+      setForm((prev) => ({ ...prev, purity: options[0] }));
+    }
+  }, [form.category, rates]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setForm({ ...form, [name]: value });
+    setForm((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const getRatePerGram = () => {
+    if (!rates) return 0;
+
+    if (form.purity === "silverJewellery") {
+      // derive from silver
+      return rates.silver * 0.92;
+    }
+
+    return rates[form.purity] || 0;
   };
 
   const calculatePrice = () => {
-    const { type, purity, weight, makingCharges, gst } = form;
+    const weight = parseFloat(form.weight);
+    const mcPercent = parseFloat(form.makingCharges);
+    const gstPercent = parseFloat(form.gst);
+    const rate = getRatePerGram();
 
-    if (!weight || isNaN(weight)) {
-      alert("Please enter a valid weight");
+    if (!rate || isNaN(weight)) {
+      alert("कृपया सही वजन और शुद्धता चुनें");
       return;
     }
 
-    const baseRate = rates[type][purity];
-    const basePrice = baseRate * parseFloat(weight);
-
-    const makingChargeAmt =
-      (basePrice * (parseFloat(makingCharges) || 0)) / 100;
-
-    const subtotal = basePrice + makingChargeAmt;
-
-    const gstAmt = (subtotal * parseFloat(gst)) / 100;
-
-    const finalPrice = subtotal + gstAmt;
+    const basePrice = weight * rate;
+    const makingCharges = (mcPercent / 100) * basePrice;
+    const totalBeforeGst = basePrice + makingCharges;
+    const gstAmount = (gstPercent / 100) * totalBeforeGst;
+    const finalPrice = totalBeforeGst + gstAmount;
 
     setPrice(finalPrice.toFixed(2));
   };
 
   return (
-    <div className="max-w-lg mx-auto p-6 bg-white shadow-lg rounded-2xl">
-      <h2 className="text-2xl font-bold mb-4 text-center">
-        Jewellery Price Calculator
-      </h2>
+    <div className="max-w-lg mx-auto p-6 bg-white dark:bg-gray-900 shadow-lg rounded-2xl">
+      <h2 className="text-2xl font-bold mb-4 text-center">ज्वेलरी प्राइस कैलकुलेटर</h2>
 
-      {/* Type */}
-      <label className="block mb-2 font-medium">Type</label>
+      {/* Category */}
+      <label className="block mb-2 font-medium">आभूषण का प्रकार</label>
       <select
-        name="type"
-        value={form.type}
+        name="category"
+        value={form.category}
         onChange={handleChange}
-        className="w-full border rounded p-2 mb-4"
+        className="bg-white dark:bg-gray-900 w-full border rounded p-2 mb-4"
       >
-        <option value="gold">Gold</option>
-        <option value="silver">Silver</option>
+        <option value="gold">सोना</option>
+        <option value="silver">चाँदी</option>
       </select>
 
       {/* Purity */}
-      <label className="block mb-2 font-medium">Purity</label>
+      <label className="block mb-2 font-medium">शुद्धता</label>
       <select
         name="purity"
         value={form.purity}
         onChange={handleChange}
-        className="w-full border rounded p-2 mb-4"
+        className="dark:bg-gray-900 w-full border rounded p-2 mb-4"
       >
-        {Object.keys(rates[form.type]).map((p) => (
+        {purityOptions.map((p) => (
           <option key={p} value={p}>
-            {p}
+            {purityLabels[p]}
           </option>
         ))}
       </select>
 
       {/* Weight */}
-      <label className="block mb-2 font-medium">Weight (grams)</label>
+      <label className="block mb-2 font-medium">वज़न (grams)</label>
       <input
         type="number"
         name="weight"
         value={form.weight}
         onChange={handleChange}
         className="w-full border rounded p-2 mb-4"
-        placeholder="Enter weight in grams"
       />
 
       {/* Making Charges */}
-      <label className="block mb-2 font-medium">Making Charges (%)</label>
+      <label className="block mb-2 font-medium">आभूषण बनाने का शुल्क (%)</label>
       <input
         type="number"
         name="makingCharges"
         value={form.makingCharges}
         onChange={handleChange}
         className="w-full border rounded p-2 mb-4"
-        placeholder="e.g. 10"
       />
 
       {/* GST */}
@@ -113,7 +137,7 @@ const Calculator = () => {
         name="gst"
         value={form.gst}
         onChange={handleChange}
-        className="w-full border rounded p-2 mb-4"
+        className="w-full border rounded p-2 mb-4 bg-white text-black dark:bg-gray-900 dark:text-white"
       >
         <option value="3">3%</option>
         <option value="5">5%</option>
@@ -123,12 +147,12 @@ const Calculator = () => {
         onClick={calculatePrice}
         className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
       >
-        Calculate
+        कैलकुलेट
       </button>
 
       {price && (
         <div className="mt-6 p-4 bg-green-100 border border-green-300 rounded-lg text-center">
-          <h3 className="text-lg font-semibold">Final Price</h3>
+          <h3 className="text-lg font-semibold text-black">कुल कीमत</h3>
           <p className="text-2xl font-bold text-green-800">₹ {price}</p>
         </div>
       )}

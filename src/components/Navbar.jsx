@@ -16,7 +16,7 @@ export default function Navbar() {
             <img
               src="/logo.png"
               alt="Sapna Shri Jewellers Nagda | सपना श्री ज्वैलर्स, नागदा"
-              className="h-24 w-auto"
+              className="h-30 w-auto logo"
             />
           </Link>
         </div>
@@ -53,7 +53,7 @@ export default function Navbar() {
             </span>
             <span>
               चाँदी(जेवर):
-              <IndianRupeeRate rate={(rates.silver * 1000) * (0.75)} />
+              <IndianRupeeRate rate={(rates.silver * 1000) * (0.92)} />
             </span>
           </div>
         </div>

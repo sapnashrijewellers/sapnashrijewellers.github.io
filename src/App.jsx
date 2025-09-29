@@ -1,4 +1,4 @@
-// src/App.jsx
+
 import React, { useState } from 'react';
 import { DataProvider } from "./context/DataContext";
 import { Routes, Route } from "react-router-dom";
@@ -14,7 +14,7 @@ export default function App() {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const MY_PHONE_NUMBER = '917999215256';
-  const QR_IMAGE_URL = "/images/qr/qr.jpeg";
+  const QR_IMAGE_URL = "/images/qr/ssj_qr.png";
   const whatsappUrl = `https://wa.me/${MY_PHONE_NUMBER}?text=Hello!%20I%20have%20a%20question%20about%20your%20service.`;
 
   return (
@@ -25,7 +25,7 @@ export default function App() {
         {/* 1. QR Trigger Button: Uses state manager's click handler */}
         <button
           onClick={() => setIsModalOpen(true)}
-          class={`p-4 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-105 active:scale-95 items-center justify-center bg-indigo-500 hover:bg-indigo-600 text-white`}
+          className={`p-4 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-105 active:scale-95 items-center justify-center bg-indigo-500 hover:bg-indigo-600 text-white`}
           title="Open QR Code To Make Payment">
           <FaQrcode size={28} />
         </button>

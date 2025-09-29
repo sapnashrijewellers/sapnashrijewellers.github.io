@@ -10,7 +10,7 @@ export default function ProductCard({ product }) {
               src={`./images/${product.images[0]}`}
               loading="lazy"
               alt={product.name}
-              className="h-[250px] object-cover rounded-2xl "
+              className="h-[150px] object-cover rounded-2xl "
             />
           </div>
           <div className="p-3">

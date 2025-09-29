@@ -7,7 +7,7 @@ export default function Navbar() {
   if (!rates) return null;
 
   return (
-    <nav className="text-white p-3 shadow-md w-full bg-black">
+    <nav className="text-white p-2 shadow-md w-full bg-black">
       <div className="mx-auto max-w-7xl flex justify-between items-start">
 
         {/* Left: Logo */}
@@ -16,7 +16,7 @@ export default function Navbar() {
             <img
               src="/logo.png"
               alt="Sapna Shri Jewellers Nagda | सपना श्री ज्वैलर्स, नागदा"
-              className="h-30 w-auto logo"
+              className="h-24 w-auto logo"
             />
           </Link>
         </div>

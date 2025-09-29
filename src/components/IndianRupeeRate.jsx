@@ -3,30 +3,26 @@ import React from 'react';
 /**
  * Renders a rate formatted for the Indian locale (en-IN) as currency (INR) 
  * without any decimal places.
- * * @param {object} props
+ * @param {object} props
  * @param {number} props.rate - The numerical value to be formatted and displayed.
+ * @param {string} [props.className] - Optional CSS class to apply to the container element.
  */
-const IndianRupeeRate = ({ rate }) => {
+const IndianRupeeRate = ({ rate, className = "" }) => {
   if (typeof rate !== 'number' || isNaN(rate)) {
-    // Optional: Return a placeholder if the rate is invalid
-    return <span>--</span>; 
+    return <span className={className}>--</span>; 
   }
 
-  // 1. Define the formatter outside the return statement for cleaner JSX
   const formatter = new Intl.NumberFormat('en-IN', {
     style: 'currency',
     currency: 'INR',
-    // Key settings to achieve no decimals
-    minimumFractionDigits: 0, 
+    minimumFractionDigits: 0,
     maximumFractionDigits: 0,
   });
 
-  // 2. Format the rate
   const formattedRate = formatter.format(rate);
 
   return (
-    // You can wrap it in a span or div, depending on your layout
-    <span className="rupee-rate text-green-500">
+    <span className={`rupee-rate ${className}`}>
       {formattedRate}
     </span>
   );

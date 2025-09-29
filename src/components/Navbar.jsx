@@ -36,24 +36,24 @@ export default function Navbar() {
             <span className="flex items-center gap-1">
               <span className="animate-pulse w-3 h-3 bg-red-500 rounded-full inline-block"></span>
               <span>
-                सोना (24K): <IndianRupeeRate rate={rates.gold24K * 10} />
+                सोना (24K): <IndianRupeeRate rate={rates.gold24K * 10}  className="text-green-500"/>
 
               </span>
             </span>
             <span>
-              चाँदी (99.9): <IndianRupeeRate rate={rates.silver * 1000} />
+              चाँदी (99.9): <IndianRupeeRate rate={rates.silver * 1000}  className="text-green-500"/>
             </span>
           </div>
           <div className="flex justify-end gap-4">
             <span className="flex items-center gap-1">
               <span className="animate-pulse w-3 h-3 bg-red-500 rounded-full inline-block"></span>
               <span>
-                सोना (22K): <IndianRupeeRate rate={rates.gold22K * 10} />
+                सोना (22K): <IndianRupeeRate rate={rates.gold22K * 10} className="text-green-500" />
               </span>
             </span>
             <span>
               चाँदी(जेवर):
-              <IndianRupeeRate rate={(rates.silver * 1000) * (0.92)} />
+              <IndianRupeeRate rate={(rates.silver * 1000) * (0.92)}  className="text-green-500"/>
             </span>
           </div>
         </div>

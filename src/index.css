@@ -1,70 +1,66 @@
 @import "tailwindcss";
-
 @import "tailwindcss/utilities";
 
+/* Global font & smoothing */
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  font-family: 'Noto Sans Devanagari', Mangal, Arial, sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  color-scheme: light dark; /* allow system theme switching */
 }
 
-html, body {
-  overflow-x: hidden;
-  font-family: 'Noto Sans Devanagari', Mangal, Arial, sans-serif;
+/* Light theme */
+html {
+  color: #213547;
+  background-color: #ffffff;
 }
 
-
+/* Dark theme overrides */
+html.dark {
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
 
 a {
   font-weight: 500;
   color: #FFD700;
   text-decoration: inherit;
 }
+
 a:hover {
-  color: #FFD700;
+  color: #747bff;
 }
 
-body {
-  margin: 0;
-  /* display: flex; */
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+button {
+  transition: all 0.2s;
 }
-.swiper-container {
-  width: 100% !important;
-  max-width: 100vw !important;
-  box-sizing: border-box;
+
+button:hover {
+  opacity: 0.9;
 }
+
+/* Swiper / root */
 #root {
   max-width: 1280px;
   margin: 0 auto;
 }
 
-.logo {
-  height: 6em;  
-  will-change: filter;
-  transition: filter 300ms;
+/* Make inputs/selects visible in light and dark modes */
+input, select, textarea {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #cbd5e1; /* gray-300 */
+  border-radius: 0.5rem;
+  padding: 0.5rem;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+html.dark input,
+html.dark select,
+html.dark textarea {
+  background-color: #1f2937; /* gray-800 */
+  color: #ffffff;
+  border: 1px solid #374151; /* gray-700 */
 }

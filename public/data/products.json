@@ -1,310 +1,134 @@
 [
   {
-    "id": "79aba6da-25c1-4bdb-bcf5-0635a90ecaee",
-    "name": "गोल्ड लटकन ",
+    "id": 1,
+    "name": "Gold Sui Dhaga | ",
     "category": "gold",
-    "weight": 8.760,
+    "weight": 5.04,
     "purity": "22K",
-    "makingCharges": 10,
     "images": [
-      "latkan.jpeg",
-      "placeholder.webp",
-      "placeholder.webp"
+      "IMG-20250930-WA0112.jpg"
     ],
     "highlights": [
-      "हस्तनिर्मित पारंपरिक डिजाइन",
-      "शादियों और त्योहारों के लिए बिल्कुल सही",
-      "टिकाऊ और लंबे समय तक चलने वाली फ़िनिश"
+      "पेश हैं 22 कैरेट (916 हॉलमार्क) सोने के ये ट्रेंडी और स्टाइलिश 'सुई धागा' इयररिंग्स। इनका नया और लंबा डिज़ाइन इन्हें एक बेहद एलिगेंट (शालीन) लुक देता है।"
     ],
     "handpicked": true,
     "newArrival": false
-  },
-  {
-    "id": "89aba6da-25c1-4bdb-bcf5-0635a90ecaee",
-    "name": "लाइट वेट गोल्ड लटकन 1",
-    "category": "gold",
-    "weight": 7.840,
-    "purity": "22K",
-    "makingCharges": 10,
-    "images": [
-      "latkan1.jpeg",
-      "placeholder.webp",
-      "placeholder.webp"
-    ],
-    "highlights": [
-      "हस्तनिर्मित पारंपरिक डिजाइन",
-      "शादियों और त्योहारों के लिए बिल्कुल सही",
-      "टिकाऊ और लंबे समय तक चलने वाली फ़िनिश"
-    ],
-    "handpicked": true,
-    "newArrival": false
-  },
-  {
-    "id": "99aba6da-25c1-4bdb-bcf5-0635a90ecaee",
-    "name": "झुमकी",
-    "category": "gold",
-    "weight": 12.5,
-    "purity": "22K",
-    "makingCharges": 10,
-    "images": [
-      "jhumki.jpeg",
-      "placeholder.webp",
-      "placeholder.webp"
-    ],
-    "highlights": [
-      "हस्तनिर्मित पारंपरिक डिजाइन",
-      "शादियों और त्योहारों के लिए बिल्कुल सही",
-      "टिकाऊ और लंबे समय तक चलने वाली फ़िनिश"
-    ],
-    "handpicked": true,
-    "newArrival": false
-  },
-  {
-    "id": 31,
-    "name": "Gold Bar 10 gm",
-    "category": "gold",
-    "weight": 10,
-    "purity": "22K",
-    "makingCharges": 10,
-    "images": [
-      "goldbar10.png",
-      "placeholder.webp",
-      "placeholder.webp"
-    ],
-    "highlights": [
-      "हस्तनिर्मित पारंपरिक डिजाइन",
-      "शादियों और त्योहारों के लिए बिल्कुल सही",
-      "टिकाऊ और लंबे समय तक चलने वाली फ़िनिश"
-    ],
-    "handpicked": true,
-    "newArrival": false
-  },
-  {
-    "id": 32,
-    "name": "Gold Bar 100 gm",
-    "category": "gold",
-    "weight": 100,
-    "purity": "22K",
-    "makingCharges": 10,
-    "images": [
-      "MMTC100G.webp",
-      "placeholder.webp",
-      "placeholder.webp"
-    ],
-    "highlights": [
-      "हस्तनिर्मित पारंपरिक डिजाइन",
-      "शादियों और त्योहारों के लिए बिल्कुल सही",
-      "टिकाऊ और लंबे समय तक चलने वाली फ़िनिश"
-    ],
-    "handpicked": true,
-    "newArrival": false
-  },
-  {
-    "id": 33,
-    "name": "Silver Bar 100 gm",
-    "category": "silver",
-    "weight": 100,
-    "purity": "पाठ की चाँदी",
-    "makingCharges": 10,
-    "images": [
-      "silver-100.png",
-      "placeholder.webp",
-      "placeholder.webp"
-    ],
-    "highlights": [
-      "हस्तनिर्मित पारंपरिक डिजाइन",
-      "शादियों और त्योहारों के लिए बिल्कुल सही",
-      "टिकाऊ और लंबे समय तक चलने वाली फ़िनिश"
-    ],
-    "handpicked": true,
-    "newArrival": false
-  },
-  {
-    "id": 25,
-    "name": "क्लासिक सोने की चूड़ी",
-    "category": "gold",
-    "weight": 12.5,
-    "purity": "22K",
-    "makingCharges": 10,
-    "images": [
-      "gold-choodi1-2.webp",
-      "placeholder.webp",
-      "placeholder.webp"
-    ],
-    "highlights": [
-      "हस्तनिर्मित पारंपरिक डिजाइन",
-      "शादियों और त्योहारों के लिए बिल्कुल सही",
-      "टिकाऊ और लंबे समय तक चलने वाली फ़िनिश"
-    ],
-    "handpicked": true,
-    "newArrival": true
-  },
-  {
-    "id": 26,
-    "name": "क्लासिक सोने की चूड़ी",
-    "category": "gold",
-    "weight": 12.5,
-    "purity": "22K",
-    "makingCharges": 10,
-    "images": [
-      "gold-choodi1-3.webp",
-      "placeholder.webp",
-      "placeholder.webp"
-    ],
-    "highlights": [
-      "हस्तनिर्मित पारंपरिक डिजाइन",
-      "शादियों और त्योहारों के लिए बिल्कुल सही",
-      "टिकाऊ और लंबे समय तक चलने वाली फ़िनिश"
-    ],
-    "handpicked": true
-  },
-  {
-    "id": 21,
-    "name": "क्लासिक सोने की चूड़ी",
-    "category": "gold",
-    "weight": 12.5,
-    "purity": "22K",
-    "makingCharges": 10,
-    "images": [
-      "gold-bangle1-2.jpeg",
-      "placeholder.webp",
-      "placeholder.webp"
-    ],
-    "highlights": [
-      "हस्तनिर्मित पारंपरिक डिजाइन",
-      "शादियों और त्योहारों के लिए बिल्कुल सही",
-      "टिकाऊ और लंबे समय तक चलने वाली फ़िनिश"
-    ],
-    "handpicked": true
-  },
-  {
-    "id": 22,
-    "name": "क्लासिक सोने की चूड़ी",
-    "category": "gold",
-    "weight": 12.5,
-    "purity": "22K",
-    "makingCharges": 10,
-    "images": [
-      "gold-bangle1-3.jpg",
-      "placeholder.webp",
-      "placeholder.webp"
-    ],
-    "highlights": [
-      "हस्तनिर्मित पारंपरिक डिजाइन",
-      "शादियों और त्योहारों के लिए बिल्कुल सही",
-      "टिकाऊ और लंबे समय तक चलने वाली फ़िनिश"
-    ],
-    "handpicked": true,
-    "newArrival": true
   },
   {
     "id": 2,
-    "name": "Silver Payal (Anklet)",
-    "category": "silver",
-    "weight": 35,
-    "purity": "चाँदी जेवर",
-    "makingCharges": 10,
+    "name": "FANCY Tops 22K916",
+    "category": "gold",
+    "weight": 3.26,
+    "purity": "22K",
     "images": [
-      "silver-payal1-1.jpeg",
-      "placeholder.webp"
+      "IMG-20250930-WA0114.jpg"
     ],
     "highlights": [
-      "घुंघरू के साथ खूबसूरत पायल",
-      "दैनिक पहनने के लिए आरामदायक",
-      "हाई पॉलिश फ़िनिश"
+      "पेश हैं 22 कैरेट सोने के ये स्टाइलिश और आधुनिक टॉप्स, जो रोज़मर्रा के उपयोग और ऑफिस वियर के लिए एकदम सही हैं। इनका डिज़ाइन ट्रेंडी और हल्का-फुल्का है।"
     ],
-    "handpicked": true
-  },
-  {
-    "id": 12,
-    "name": "नेकलेस",
-    "category": "silver",
-    "weight": 20,
-    "purity": "चाँदी जेवर",
-    "makingCharges": 10,
-    "images": [
-      "imitation.jpeg",
-      "placeholder.webp"
-    ],
-    "highlights": [
-      "घुंघरू के साथ खूबसूरत पायल",
-      "दैनिक पहनने के लिए आरामदायक",
-      "हाई पॉलिश फ़िनिश"
-    ],
-    "handpicked": true
+    "handpicked": true,
+    "newArrival": false
   },
   {
     "id": 3,
-    "name": "Gold Chain with Locket",
+    "name": "Fancy Tops 22K916",
     "category": "gold",
-    "weight": 9.2,
-    "purity": "18K",
-    "makingCharges": 10,
+    "weight": 3.09,
+    "purity": "22K",
     "images": [
-      "gold-chain1-1.webp",
-      "placeholder.webp"
+      "IMG-20250930-WA0113.jpg"
     ],
     "highlights": [
-      "Modern lightweight design",
-      "Locket included",
-      "Ideal for gifting"
+      "पेश हैं 22 कैरेट (916 शुद्धता) सोने के ये मनमोहक ड्रॉप इयररिंग्स, जिनमें बारीक कारीगरी और भव्य डिज़ाइन का संगम है। ये किसी भी खास फंक्शन के लिए एकदम सही हैं।"
     ],
     "handpicked": true,
-    "newArrival": true
-  },
-  {
-    "id": 24,
-    "name": "Gold Chain with Locket",
-    "category": "gold",
-    "weight": 9.2,
-    "purity": "22K",
-    "makingCharges": 10,
-    "images": [
-      "gold-chain-2.avif",
-      "placeholder.webp"
-    ],
-    "highlights": [
-      "Modern lightweight design",
-      "Locket included",
-      "Ideal for gifting"
-    ],
-    "handpicked": true
+    "newArrival": false
   },
   {
     "id": 4,
-    "name": "Silver Toe Ring (Bichiya)",
-    "category": "silver",
-    "weight": 5,
-    "purity": "चाँदी जेवर",
-    "makingCharges": 10,
+    "name": "Gold Latkan",
+    "category": "gold",
+    "weight": 8.67,
+    "purity": "22K",
     "images": [
-      "silver-bichiya1-1.jpeg",
-      "placeholder.webp"
+      "IMG-20250930-WA0109.jpg"
     ],
     "highlights": [
-      "Traditional bichiya design",
-      "Adjustable size",
-      "Comfortable for everyday wear"
+      "पेश है यह शानदार और आकर्षक 22 कैरेट (916 HUID हॉलमार्क) सोने के लटकन, जो पारंपरिक कारीगरी का एक बेहतरीन नमूना हैं। ",
+      "ये झुमके आपकी सुंदरता को एक शाही और क्लासिक लुक देंगे।"
     ],
-    "handpicked": false
+    "handpicked": true,
+    "newArrival": false
   },
   {
     "id": 5,
-    "name": "Designer Gold Choodi",
+    "name": "Gold Jhumki",
     "category": "gold",
-    "weight": 15,
+    "weight": 7.84,
     "purity": "22K",
-    "makingCharges": 10,
     "images": [
-      "gold-choodi1-1.jpg",
-      "placeholder.webp",
-      "placeholder.webp"
+      "IMG-20250930-WA0110.jpg"
     ],
     "highlights": [
-      "Designer collection exclusive",
-      "Intricate meenakari work",
-      "Premium festive wear"
+      "पेश है यह बेहद खूबसूरत 22 कैरेट (916 HUID हॉलमार्क) सोने की झुमकी। इसका वजन 7.840 ग्राम है। ",
+      "यह झुमकी पारंपरिक और आधुनिक डिज़ाइन का एक शानदार मेल है, जो आपकी सुंदरता में चार चाँद लगा देगी। ",
+      "खास मौकों के लिए एकदम सही।"
     ],
-    "handpicked": true
+    "handpicked": true,
+    "newArrival": false
+  },
+  {
+    "id": 6,
+    "name": "MangalSutra Pandle",
+    "category": "gold",
+    "weight": 7.06,
+    "purity": "22K",
+    "images": [
+      "WhatsApp Image 2025-09-30 at 16.05.38_1c770fe1.jpg"
+    ],
+    "highlights": [
+      "पेश है यह अद्भुत **पारंपरिक डिज़ाइन** वाला **22 कैरेट (916 HUID हॉलमार्क शुद्धता)** सोने का पेंडेंट।# डिज़ाइन की विशेषताएँ",
+      "1.  **भव्य रूप:** पेंडेंट का आकार **हार्ट-शेप** या **त्रिकोणीय** है, जिसके केंद्र में एक **बड़ा खिला हुआ फूल** बना है।",
+      "2.  **बारीक कारीगरी:** इसमें **टेम्पल ज्वेलरी** जैसी बारीक और परतदार कारीगरी (लेयर्ड वर्क) का काम है, जो इसे **3D लुक** देता है।",
+      "3.  **रंग का स्पर्श:** ऊपरी कोनों पर **लाल या गहरे रंग की मीनाकारी** (या नगों) का हल्का उपयोग किया गया है, जो सोने की चमक को और भी ज़्यादा उभारता है।",
+      "4.  **लटकन (ड्रॉप):** पेंडेंट के नीचे **छोटी सोने की चेन की लड़ियाँ** (टैसेल/झालर) लगी हैं, जो इसे एक बेहतरीन मूवमेंट और सुंदर फिनिश देती हैं।",
+      "5.  **उपयोग:** यह पेंडेंट भारी चेन या मंगलसूत्र के साथ पहनने के लिए एकदम सही है, और शादी-त्योहारों जैसे **खास मौकों** के लिए एक **आदर्श आभूषण** है।",
+      "यह पेंडेंट **आधुनिकता और परंपरा का एक बेजोड़ संगम** है।"
+    ],
+    "handpicked": false,
+    "newArrival": true
+  },
+  {
+    "id": 7,
+    "name": "MangalSutra Pandle",
+    "category": "gold",
+    "weight": 8.92,
+    "purity": "22K",
+    "images": [
+      "Banana.jpg"
+    ],
+    "highlights": [
+      "पेश है यह अद्भुत पारंपरिक डिज़ाइन वाला 22 कैरेट (916 शुद्धता) सोने का पेंडेंट। यह न केवल शुद्धता (HUID हॉलमार्क) की गारंटी देता है, बल्कि अपनी उत्कृष्ट कारीगरी से आपकी सुंदरता को एक नया आयाम देगा।  ",
+      "सोने की शुद्धता        22 कैरेट (91.6%)",
+      "हॉलमार्किंग        916 HUID (उच्च शुद्धता गारंटी)",
+      "डिज़ाइन        आकर्षक फूल (Floral) और पत्ते की नक्काशी"
+    ],
+    "handpicked": false,
+    "newArrival": true
+  },
+  {
+    "id": 8,
+    "name": "Ladies Ring 916",
+    "category": "gold",
+    "weight": 3.92,
+    "purity": "22K",
+    "images": [
+      "WhatsApp Image 2025-09-30 at 16.23.36_fbab066e.jpg"
+    ],
+    "highlights": [
+      "22K 916 सोने की फ्लोरल (पुष्प) डिज़ाइन वाली अंगूठी"
+    ],
+    "handpicked": false,
+    "newArrival": true
   }
 ]

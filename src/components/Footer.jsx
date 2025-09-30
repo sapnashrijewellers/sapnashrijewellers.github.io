@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto space-y-4">
         {/* About Us */}
         <div>
-          <p className="italic text-xs text-gray-700">
+          <p className="italic text-xs ">
             “कीमतें बाजार दर के अनुसार बदलती रहती हैं। कृपया अंतिम कीमत और उत्पाद का अनुभव करने के लिए दुकान पर अवश्य आएँ। दी गई कीमतें केवल संकेतात्मक हैं।”
 
           </p>

@@ -59,7 +59,7 @@ export default function ProductDetail() {
       {/* Details */}
       <div className="p-2 w-full">
         <h1 className="text-2xl md:text-3xl font-bold mb-2">{product.name}</h1>
-        <p className="text-gray-600 mb-4">{product.purity}</p>
+        <p className=""><b>शुद्धता:</b> {product.purity}</p>
         <p><b>वज़न:</b> {product.weight} g</p>
         {/* <p><b>आभूषण बनाने का शुल्क:</b> ₹{product.makingCharges}</p>
         <p><b>GST:</b> {rates.gstPercent}%</p>

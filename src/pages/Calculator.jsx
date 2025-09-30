@@ -96,7 +96,9 @@ const Calculator = () => {
       </select>
 
       {/* Purity */}
-      <label className="block mb-2 font-medium">शुद्धता</label>
+      <label className="block mb-2 font-medium">
+        शुद्धता
+      </label>
       <select
         name="purity"
         value={form.purity}
@@ -152,7 +154,7 @@ const Calculator = () => {
       {price !== null && (
         <div className="mt-6 p-4 bg-green-100 border border-green-300 rounded-lg text-center">
           <h3 className="text-lg font-semibold text-black">कुल कीमत</h3>
-          
+
           <IndianRupeeRate rate={Number(price)} className="text-2xl font-bold text-green-800" /> {/* ✅ ensure number */}
         </div>
       )}

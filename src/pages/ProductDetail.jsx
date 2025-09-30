@@ -1,9 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { useData } from "../context/DataContext";
-//import { calculatePrice } from "../utils/calrate";
-
-
 import { FaWhatsapp } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -22,7 +19,7 @@ export default function ProductDetail() {
   const product = products.find(p => p.id.toString() === id);
   if (!product) return <p>Product not found</p>;
 
-  const phone = "917999215256"; // India country code + number
+  const phone = "918234042231"; // India country code + number
   const message = encodeURIComponent(
     `Hi, I want more details and discount on https://sapnashrijewellers.github.io/#/product/${product.id}`
   );

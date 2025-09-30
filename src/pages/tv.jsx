@@ -62,7 +62,7 @@ export default function ProductDetail() {
             onClick={() => window.open(whatsappUrl, "_blank")}
           />
           <span className="text-2xl text-gray-400">
-            अधिक जानकारी के लिए <a className="text-4xl" href="tel:7999215256">7999215256</a> पर संपर्क करें...
+            अधिक जानकारी के लिए <a className="text-4xl" href="tel:8234042231">8234042231</a> पर संपर्क करें...
           </span>
         </div>
 

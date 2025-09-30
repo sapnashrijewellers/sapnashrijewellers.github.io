@@ -7,7 +7,7 @@
   "start_url": "/index.html",
   "scope": "/",
   "display": "standalone",
-  "orientation": "portrait",
+  "orientation": "any",
   "background_color": "#000000",
   "theme_color": "#FFD700",
   "categories": ["shopping", "lifestyle", "business"],

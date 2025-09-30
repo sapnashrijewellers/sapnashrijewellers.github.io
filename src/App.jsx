@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Category from "./pages/Category";
 import ProductDetail from "./pages/ProductDetail";
+import TV from "./pages/tv";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import QrCodeModal from './components/QrCodeModal'
@@ -56,6 +57,7 @@ export default function App() {
             <Route path="/category/:category" element={<Category />} />
             <Route path="/product/:id" element={<ProductDetail />} />
             <Route path="/calculator" element={<Calculator />} />
+            <Route path="/tv" element={<TV />} />
           </Routes>
         </div>
         <Footer />

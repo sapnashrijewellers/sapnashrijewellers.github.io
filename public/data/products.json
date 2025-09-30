@@ -1,13 +1,13 @@
 [
   {
     "id": "79aba6da-25c1-4bdb-bcf5-0635a90ecaee",
-    "name": "क्लासिक सोने की चूड़ी",
+    "name": "गोल्ड लटकन ",
     "category": "gold",
-    "weight": 12.5,
+    "weight": 8.760,
     "purity": "22K",
     "makingCharges": 10,
     "images": [
-      "gold-bangle1-1.webp",
+      "latkan.jpeg",
       "placeholder.webp",
       "placeholder.webp"
     ],
@@ -17,7 +17,47 @@
       "टिकाऊ और लंबे समय तक चलने वाली फ़िनिश"
     ],
     "handpicked": true,
-    "newArrival":false
+    "newArrival": false
+  },
+  {
+    "id": "89aba6da-25c1-4bdb-bcf5-0635a90ecaee",
+    "name": "लाइट वेट गोल्ड लटकन 1",
+    "category": "gold",
+    "weight": 7.840,
+    "purity": "22K",
+    "makingCharges": 10,
+    "images": [
+      "latkan1.jpeg",
+      "placeholder.webp",
+      "placeholder.webp"
+    ],
+    "highlights": [
+      "हस्तनिर्मित पारंपरिक डिजाइन",
+      "शादियों और त्योहारों के लिए बिल्कुल सही",
+      "टिकाऊ और लंबे समय तक चलने वाली फ़िनिश"
+    ],
+    "handpicked": true,
+    "newArrival": false
+  },
+  {
+    "id": "99aba6da-25c1-4bdb-bcf5-0635a90ecaee",
+    "name": "झुमकी",
+    "category": "gold",
+    "weight": 12.5,
+    "purity": "22K",
+    "makingCharges": 10,
+    "images": [
+      "jhumki.jpeg",
+      "placeholder.webp",
+      "placeholder.webp"
+    ],
+    "highlights": [
+      "हस्तनिर्मित पारंपरिक डिजाइन",
+      "शादियों और त्योहारों के लिए बिल्कुल सही",
+      "टिकाऊ और लंबे समय तक चलने वाली फ़िनिश"
+    ],
+    "handpicked": true,
+    "newArrival": false
   },
   {
     "id": 31,
@@ -37,7 +77,7 @@
       "टिकाऊ और लंबे समय तक चलने वाली फ़िनिश"
     ],
     "handpicked": true,
-    "newArrival":false
+    "newArrival": false
   },
   {
     "id": 32,
@@ -57,7 +97,7 @@
       "टिकाऊ और लंबे समय तक चलने वाली फ़िनिश"
     ],
     "handpicked": true,
-    "newArrival":false
+    "newArrival": false
   },
   {
     "id": 33,
@@ -77,7 +117,7 @@
       "टिकाऊ और लंबे समय तक चलने वाली फ़िनिश"
     ],
     "handpicked": true,
-    "newArrival":false
+    "newArrival": false
   },
   {
     "id": 25,
@@ -97,7 +137,7 @@
       "टिकाऊ और लंबे समय तक चलने वाली फ़िनिश"
     ],
     "handpicked": true,
-    "newArrival":true
+    "newArrival": true
   },
   {
     "id": 26,
@@ -155,7 +195,7 @@
       "टिकाऊ और लंबे समय तक चलने वाली फ़िनिश"
     ],
     "handpicked": true,
-    "newArrival":true
+    "newArrival": true
   },
   {
     "id": 2,
@@ -175,7 +215,6 @@
     ],
     "handpicked": true
   },
-  
   {
     "id": 12,
     "name": "नेकलेस",
@@ -211,7 +250,7 @@
       "Ideal for gifting"
     ],
     "handpicked": true,
-    "newArrival":true
+    "newArrival": true
   },
   {
     "id": 24,

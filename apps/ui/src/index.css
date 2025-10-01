@@ -1,0 +1,81 @@
+@import "tailwindcss";
+@import "tailwindcss/utilities";
+
+/* Global font & smoothing */
+:root {
+  font-family: 'Noto Sans Devanagari', Mangal, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  color-scheme: light dark; /* allow system theme switching */
+}
+
+/* Light theme */
+html {
+  color: #213547;
+  background-color: #ffffff;
+}
+
+/* Dark theme overrides */
+html.dark {
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+
+a {
+  font-weight: 500;
+  color: #FFD700;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #FFD700;
+}
+
+button {
+  transition: all 0.2s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+
+
+/* Make inputs/selects visible in light and dark modes */
+input, select, textarea {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #cbd5e1; /* gray-300 */
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+html.dark input,
+html.dark select,
+html.dark textarea {
+  background-color: #1f2937; /* gray-800 */
+  color: #ffffff;
+  border: 1px solid #374151; /* gray-700 */
+}
+
+@keyframes gold-shimmer {
+  0%, 100% {
+    text-shadow: 
+      0 0 0.1rem #4a3400, 
+      0.1rem 0.1rem 0.1rem #fff, 
+      0 0 0.5rem rgba(255, 237, 74, 0.4); /* Normal glow */
+  }
+  50% {
+    text-shadow: 
+      0 0 0.1rem #2e2000, /* Darker depth */
+      0.1rem 0.1rem 0.2rem #fff, /* Brighter, wider highlight */
+      0 0 0.8rem rgba(255, 237, 74, 0.8); /* Brighter glow */
+  }
+}
+
+.shimmer-gold {
+  animation: gold-shimmer 4s ease-in-out infinite; /* Slow, repeating animation */
+}

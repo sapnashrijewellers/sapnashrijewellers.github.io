@@ -4,11 +4,12 @@
   "private": true,
   "workspaces": [
     "apps/*",
-    "packages/*"
+    "apps/*/*",
+    "packages/*"    
   ],
   "scripts": {
     "build": "turbo run build",
-    "deploy": "turbo run deploy --filter=@sapnashrijewellers/ui",
+    "deploy": "turbo run deploy --filter=@ssj/ui",
     "dev": "turbo run dev"
   },
   "devDependencies": {

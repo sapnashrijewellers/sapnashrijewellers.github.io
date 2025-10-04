@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import QrCodeModal from "../components/QrCodeModal";
 import { useState } from "react";
 import { FaQrcode, FaWhatsapp } from "react-icons/fa";
-
+import Ticker from "../components/Ticker"
 export default function DefaultLayout() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const MY_PHONE_NUMBER = "918234042231";
@@ -42,6 +42,7 @@ export default function DefaultLayout() {
       {/* Main Content */}
       <div className="container mx-auto">
         <Navbar />
+         <Ticker />
         <div className="p-4 max-w-6xl mx-auto">
           <Outlet />
         </div>

@@ -20,10 +20,10 @@ const Ticker = () => {
   return (
     <div className="relative w-full bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-2 overflow-hidden shadow-md">
       <div className="flex items-center gap-3 px-4">
-        <FaBullhorn className="text-yellow-300 text-lg animate-pulse flex-shrink-0" />
+        <FaBullhorn className="text-yellow-300 text-2xl animate-pulse flex-shrink-0" />
         <div className="w-full overflow-hidden">
           <motion.div
-            className="whitespace-nowrap text-sm sm:text-base font-semibold tracking-wide"
+            className="text-2xl whitespace-nowrap  font-semibold tracking-wide"
             animate={{ x: ["100%", "-100%"] }}
             transition={{
               repeat: Infinity,

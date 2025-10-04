@@ -1,13 +1,13 @@
 import { Outlet } from "react-router-dom";
 import LogoHeader from "../components/LogoHeader";
 import RatesPanel from "../components/RatesPanel";
-
+import Ticker from "../components/Ticker"
 export default function TvLayout() {
   return (
     <div className="w-screen h-screen bg-black text-white flex flex-col p-2 overflow-hidden">
       {/* Top bar */}
       <LogoHeader className="flex-none" />
-
+<Ticker />
       {/* 2-column layout */}
       <div className="flex-1 grid grid-cols-1 md:grid-cols-[3fr_1fr] gap-2 h-full">
         {/* Left: Product slideshow */}

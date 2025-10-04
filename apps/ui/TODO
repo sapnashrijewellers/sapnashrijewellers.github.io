@@ -8,4 +8,6 @@ Todo:
   ✔ Lazy  loading of images @done(25-09-26 13:21)
   ✔ Image upload @done(25-09-27 10:25)
   ✔ Product admin UI @done(25-09-27 10:25)
-  Should be able to change orientation portrait and landscape PWA
+  ✔ Should be able to change orientation portrait and landscape PWA @done(25-10-02 14:25)
+  ☐ Ticker implementation on TV and home page
+  ☐ Remove highlights from TV page

@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "IMG-20250930-WA0110",
+    "category": "gold",
+    "weight": null,
+    "purity": null,
+    "images": [
+      "IMG-20250930-WA0110.jpg"
+    ],
+    "highlights": [
+      "पेश हैं 22K सोने के IMG-20250930-WA0110, जो स्टाइलिश और आधुनिक लुक के लिए एकदम सही हैं।"
+    ],
+    "handpicked": true,
+    "newArrival": false
+  },
+  {
+    "id": 2,
+    "name": "IMG-20250930-WA0109",
+    "category": "gold",
+    "weight": 8.67,
+    "purity": "916",
+    "images": [
+      "IMG-20250930-WA0109.jpg"
+    ],
+    "highlights": [
+      "पेश हैं 916 सोने के IMG-20250930-WA0109, जो स्टाइलिश और आधुनिक लुक के लिए एकदम सही हैं।"
+    ],
+    "handpicked": true,
+    "newArrival": false
+  }
+]

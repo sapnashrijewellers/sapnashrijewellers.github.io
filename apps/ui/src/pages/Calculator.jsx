@@ -7,7 +7,7 @@ const Calculator = () => {
 
   const initialProd = {
     category: "gold",
-    purity: "gold24K",
+    purity: "gold22K",
     weight: 10,
     makingCharges: 10,
     gst: 3,
@@ -18,9 +18,9 @@ const Calculator = () => {
   const [price, setPrice] = useState(null);
 
   // map for user-friendly labels
-  const purityLabels = {
-    gold24K: "सोना (24K)",
+  const purityLabels = {    
     gold22K: "सोना (22K)",
+    gold24K: "सोना (24K)",
     gold18K: "सोना (18K)",
     silver: "चाँदी (99.9)",
     silverJewellery: "चाँदी (जेवर)",

@@ -1,6 +1,8 @@
-import { FaFacebookF, FaInstagram, FaYoutube, FaTwitter } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaYoutube, FaTwitter, FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
+  const phone = "918234042231"; // India country code + number
+  const whatsappUrl = `https://wa.me/${phone}`;
   return (
     <footer className="bg-gray-900 text-white p-6 mt-12">
       <div className="max-w-6xl mx-auto space-y-4">
@@ -10,12 +12,12 @@ export default function Footer() {
             “कीमतें बाजार दर के अनुसार बदलती रहती हैं। कृपया अंतिम कीमत और उत्पाद का अनुभव करने के लिए दुकान पर अवश्य आएँ। दी गई कीमतें केवल संकेतात्मक हैं।”
 
           </p>
-          <br/>
+          <br />
           <h2 className="font-bold text-lg">हमारी पहचान</h2>
           <p className="text-gray-300">
             सपना श्री ज्वैलर्स एक बहुमुखी सोने के आभूषण निर्माता और रिटेलर है। हमारे सभी उत्पादों के साथ गारंटी दी जाती है — नेकलेस और हारम के लिए 1 वर्ष और अन्य दैनिक पहनने वाले उत्पादों के लिए 6 महीने।
 
-35 वर्षों से अधिक के अनुभव के साथ, हम सभी प्रकार के गोल्ड प्लेटेड ज्वैलरी उत्पादों का व्यापार करते हैं, जिनमें शामिल हैं: चेन, नेकलेस, हारम, चूड़ियाँ, मंगलसूत्र, अंगूठियाँ, शुभ धागे, थाली डिज़ाइन, पेंडेंट सेट, हिप चेन, झुमके, कान की बाली, कंगन, सोने और चाँदी की पायल।
+            35 वर्षों से अधिक के अनुभव के साथ, हम सभी प्रकार के गोल्ड प्लेटेड ज्वैलरी उत्पादों का व्यापार करते हैं, जिनमें शामिल हैं: चेन, नेकलेस, हारम, चूड़ियाँ, मंगलसूत्र, अंगूठियाँ, शुभ धागे, थाली डिज़ाइन, पेंडेंट सेट, हिप चेन, झुमके, कान की बाली, कंगन, सोने और चाँदी की पायल।
 
 
           </p>
@@ -26,8 +28,8 @@ export default function Footer() {
         <div>
           <h2 className="font-bold text-lg">दुकान का स्थान</h2>
           <p className="text-gray-300">
-            सपना श्री ज्वैलर्स, 
-            रेलवे स्टेशन मेन रोड, जैन मंदिर के पास 
+            सपना श्री ज्वैलर्स,
+            रेलवे स्टेशन मेन रोड, जैन मंदिर के पास
             नागदा, जिला उज्जैन
           </p>
         </div>
@@ -35,18 +37,20 @@ export default function Footer() {
         {/* Social Media */}
         <div>
           <h2 className="font-bold text-lg">Follow Us</h2>
-          <div className="flex gap-4 mt-2 text-gray-300">
-            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+          <div className="flex gap-4 mt-2 text-gray-300 text-3xl">
+            <a href="https://www.facebook.com/share/14JjQReswYv/" target="_blank" rel="noopener noreferrer">
               <FaFacebookF className="hover:text-blue-500" />
             </a>
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/sapna_shri_jewllers/" target="_blank" rel="noopener noreferrer">
               <FaInstagram className="hover:text-pink-500" />
             </a>
-            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.youtube.com/@SapnaShriJewellers-b1f/shorts" target="_blank" rel="noopener noreferrer">
               <FaYoutube className="hover:text-red-500" />
             </a>
-            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
-              <FaTwitter className="hover:text-blue-400" />
+            <a target="_blank"
+              onClick={() => window.open(whatsappUrl, "_blank")}
+              rel="noopener noreferrer">
+              <FaWhatsapp className="hover:text-blue-400" />
             </a>
           </div>
         </div>

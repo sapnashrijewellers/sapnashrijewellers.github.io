@@ -20,11 +20,7 @@ export default function ProductCard({ product }) {
             <div className="flex justify-between text-xs ">
               <span>{product.purity}</span>
               <span>{product.weight} gm</span>
-            </div>
-
-            {/* <p className="mt-2 font-bold text-yellow-700 text-sm md:text-base">
-              ₹ {Number(price).toLocaleString('en-IN')}
-            </p> */}
+            </div>            
           </div>
         </div>
       </Link>

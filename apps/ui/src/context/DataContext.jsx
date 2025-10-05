@@ -13,6 +13,7 @@ export function DataProvider({ children }) {
       try {
         const [ratesData, productsData] = await Promise.all([
           fetch("https://tight-sky-9fb5.vipul81.workers.dev/").then(r => r.json()),          
+          //fetch("http://localhost:8787/").then(r => r.json()),          
           fetch("/data/products.json").then(r => r.json())
         ]);
 

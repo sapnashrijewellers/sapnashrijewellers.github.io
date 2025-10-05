@@ -9,7 +9,7 @@ const Calculator = () => {
     category: "gold",
     purity: "gold22K",
     weight: 10,
-    makingCharges: 10,
+    makingCharges: 7,
     gst: 3,
   };
 
@@ -78,7 +78,7 @@ const Calculator = () => {
   };
 
   return (
-    <div className="max-w-lg mx-auto p-6 bg-white dark:bg-gray-900 shadow-lg rounded-2xl">
+    <div className="max-w-lg mx-auto p-6 bg-gray-900 shadow-lg rounded-2xl">
       <h2 className="text-2xl font-bold mb-4 text-center">
         ज्वेलरी प्राइस कैलकुलेटर
       </h2>

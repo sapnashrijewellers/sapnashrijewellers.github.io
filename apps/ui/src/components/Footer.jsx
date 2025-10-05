@@ -1,4 +1,4 @@
-import { FaFacebookF, FaInstagram, FaYoutube, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaYoutube, FaTv, FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
   const phone = "918234042231"; // India country code + number
@@ -51,6 +51,9 @@ export default function Footer() {
               onClick={() => window.open(whatsappUrl, "_blank")}
               rel="noopener noreferrer">
               <FaWhatsapp className="hover:text-blue-400" />
+            </a>
+            <a href="https://sapnashrijewellers.github.io/#/tv" target="_blank" rel="noopener noreferrer">
+              <FaTv className="hover:text-yellow-400 hover:scale-110 transform transition duration-200" />
             </a>
           </div>
         </div>

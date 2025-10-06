@@ -1,21 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { FaBullhorn } from "react-icons/fa";
 import { motion } from "framer-motion";
-
+import { useData } from "../context/DataContext";
 const Ticker = () => {
-  const [messages, setMessages] = useState([]);
-
-  useEffect(() => {
-    fetch("/data/tickerData.json")
-      .then((res) => res.json())
-      .then((data) => setMessages(data))
-      .catch((err) => console.error("Error loading ticker data:", err));
-  }, []);
-
-  if (messages.length === 0) return null;
+  const { ticker } = useData();
+  if (ticker.length === 0) return null;
 
   // Join messages into one long string with separators
-  const tickerText = messages.join("  •  ");
+  const tickerText = ticker.join("  •  ");
 
   return (
     <div className="relative w-full bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-2 overflow-hidden shadow-md">

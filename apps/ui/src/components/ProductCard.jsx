@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 export default function ProductCard({ product }) {
+  const driveURL = 'https://sapnashrijewellers.github.io/static/img/';
   return (
     <Link
       to={`/product/${product.id}`}
@@ -11,7 +12,7 @@ export default function ProductCard({ product }) {
         <div className="w-full flex items-center justify-center overflow-hidden rounded-t-2xl bg-gray-50" 
              style={{ maxHeight: "220px", minHeight: "180px" }}>
           <img
-            src={`./images/${product.images[0]}`}
+            src={`${driveURL}${product.images[0]}`}
             loading="lazy"
             alt={product.name}
             className="w-full h-full object-cover rounded-t-2xl"

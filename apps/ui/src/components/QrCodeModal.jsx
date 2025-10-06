@@ -11,8 +11,7 @@ export const QrCodeModal = ({ qrImageUrl, onClose }) => {
                 className="bg-white rounded-xl shadow-2xl p-1 w-full max-w-sm transform transition-all duration-300 scale-100"
                 onClick={(e) => e.stopPropagation()} // Prevents closing when clicking inside
             >
-                <div className="flex justify-center">
-                    {/* NOTE: Replace this URL with your actual WhatsApp QR Code image URL */}
+                <div className="flex justify-center">                    
                     <img
                         src={qrImageUrl}
                         alt="Payment QR Code"

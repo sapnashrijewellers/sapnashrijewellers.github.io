@@ -28,8 +28,8 @@ export function DataProvider({ children }) {
         return;
       }
 
-      //const sURL = "https://tight-sky-9fb5.ssjn.workers.dev/"; // or localhost
-      const sURL = "http://localhost:8787"; // or localhost
+      const sURL = "https://tight-sky-9fb5.ssjn.workers.dev/"; // or localhost
+      //const sURL = "http://localhost:8787"; // or localhost
 
       try {
         const [ratesData, productsData, tickerData] = await Promise.all([

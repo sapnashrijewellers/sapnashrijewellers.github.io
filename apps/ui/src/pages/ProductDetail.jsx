@@ -24,8 +24,9 @@ export default function ProductDetail() {
     `Hi, I want more details and discount on https://sapnashrijewellers.github.io/#/product/${product.id}`
   );
   const whatsappUrl = `https://wa.me/${phone}?text=${message}`;
-
+const driveURL = 'https://sapnashrijewellers.github.io/static/img/';
   return (
+    
     <div className="space-y-6 max-w-6xl mx-auto flex flex-col md:grid md:grid-cols-2 gap-2 w-full max-w-full">
       {/* Images */}
       <div className="w-full">
@@ -42,7 +43,7 @@ export default function ProductDetail() {
             <SwiperSlide key={i}>
               <div className="w-full max-w-full">
                 <img
-                  src={`./images/${img}`}
+                  src={`${driveURL}${img}`}
                   alt={product.name}
                   className="w-full h-[350px] object-contain rounded-xl mx-auto cursor-pointer"
                   onClick={() => setActiveImage(img)}

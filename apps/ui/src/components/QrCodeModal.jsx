@@ -1,5 +1,6 @@
 import React from 'react';
 export const QrCodeModal = ({ qrImageUrl, onClose }) => {
+    const driveURL = 'https://sapnashrijewellers.github.io/static/img/';
     return (
         // Modal backdrop
         <div
@@ -13,7 +14,7 @@ export const QrCodeModal = ({ qrImageUrl, onClose }) => {
             >
                 <div className="flex justify-center">                    
                     <img
-                        src={qrImageUrl}
+                        src={`${driveURL}${qrImageUrl}`}
                         alt="Payment QR Code"
                         className="w-max h-max border-4 border-gray-100 rounded-lg shadow-md"
                         // Fallback image source

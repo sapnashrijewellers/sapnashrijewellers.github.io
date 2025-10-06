@@ -8,7 +8,7 @@ import Ticker from "../components/Ticker"
 export default function DefaultLayout() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const MY_PHONE_NUMBER = "918234042231";
-  const QR_IMAGE_URL = "/images/qr/ssj_qr.png";
+  const QR_IMAGE_URL = "qr/ssj_qr.png";
   const whatsappUrl = `https://wa.me/${MY_PHONE_NUMBER}?text=Hello!%20I%20have%20a%20question%20about%20your%20service.`;
 
   return (

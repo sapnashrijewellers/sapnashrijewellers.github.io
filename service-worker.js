@@ -12,8 +12,8 @@ const ASSETS_TO_CACHE = [
   "/icons/apple-touch-icon-v1.png"
 ];
 
-//const baseURL = "https://tight-sky-9fb5.ssjn.workers.dev/";
-const baseURL = "http://localhost:8787/";
+const baseURL = "https://tight-sky-9fb5.ssjn.workers.dev/";
+//const baseURL = "http://localhost:8787/";
 
 // ✅ Install: Pre-cache static assets
 self.addEventListener("install", (event) => {

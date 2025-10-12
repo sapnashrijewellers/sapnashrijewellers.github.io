@@ -10,8 +10,7 @@ import DefaultLayout from "./layouts/DefaultLayout";
 import TvLayout from "./layouts/TvLayout";
 export default function App() {
 
-
-  return (
+return (
 
 
     <DataProvider>

@@ -11,4 +11,9 @@ Todo:
   ✔ Should be able to change orientation portrait and landscape PWA @done(25-10-02 14:25)
   ✔ Ticker implementation on TV and home page @done(25-10-04 10:57)
   ✔ Remove highlights from TV page @done(25-10-04 10:57)
-  
+  ✔ Fix image issue on TV page. @done(25-10-11 13:14)
+  ✔ Replace string in footer @done(25-10-11 13:14)
+  ☐ test cases for all apps
+  ☐ Push notification
+  ☐ Popup to install App
+

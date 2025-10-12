@@ -14,7 +14,9 @@ export default function RatesPanel() {
 
   return (
     <div className="flex flex-col gap-6 p-6 w-full bg-gray-900 rounded-2xl">
-      {rateItems.map((item, idx) => (
+      {rateItems
+      .filter((item) => item.value > 0) 
+      .map((item, idx) => (
         <div
           key={idx}
           className="flex justify-between items-center text-3xl border-b border-yellow-700 pb-2"
@@ -26,6 +28,9 @@ export default function RatesPanel() {
           <IndianRupeeRate rate={item.value} className="text-green-500" />
         </div>
       ))}
+      <div>
+        {rates.asOn}
+      </div>
     </div>
   );
 }

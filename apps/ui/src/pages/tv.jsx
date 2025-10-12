@@ -23,10 +23,7 @@ export default function TV() {
   if (!products || products.length === 0 || !rates) return <p>Loading...</p>;
 
   const product = products[currentIndex];
-  const whatsappUrl = `https://wa.me/918234042231?text=${encodeURIComponent(
-    `Hi, I want more details on https://sapnashrijewellers.github.io/#/product/${product.id}`
-  )}`;
-
+  const driveURL = 'https://sapnashrijewellers.github.io/static/img/';
   return (
     <div
       className={`transition-opacity duration-1000 fade-in flex flex-col md:grid md:grid-cols-2 gap-2 w-full h-full p-2 overflow-hidden`}
@@ -34,7 +31,7 @@ export default function TV() {
       {/* Image panel */}
       <div className="w-full h-full flex justify-start items-start">
         <img
-          src={`./images/${product.images[0]}`}
+          src={`${driveURL}${product.images[0]}`}
           alt={product.name}
           className="w-full h-auto object-contain rounded-2xl"
         />
@@ -53,9 +50,9 @@ export default function TV() {
           <p>
             <b>वज़न:</b> {product.weight} g
           </p>
-        </div>        
+        </div>
 
-        
+
       </div>
     </div>
   );

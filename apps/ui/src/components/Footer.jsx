@@ -9,7 +9,7 @@ export default function Footer() {
         {/* About Us */}
         <div>
           <p className="italic text-xs ">
-            “कीमतें बाजार दर के अनुसार बदलती रहती हैं। कृपया अंतिम कीमत और उत्पाद का अनुभव करने के लिए दुकान पर अवश्य आएँ। दी गई कीमतें केवल संकेतात्मक हैं।”
+            कीमतें बाजार दर के अनुसार बदलती रहती हैं। कृपया अंतिम कीमत और उत्पाद का अनुभव करने के लिए दुकान पर अवश्य आएँ। दी गई कीमतें केवल संकेतात्मक हैं,मेकिंग चार्ज एवं GST एक्स्ट्रा" *नियम एवं शर्ते लागू .किसी भी विवाद की स्थिति में न्यायिक क्षेत्र नागदा जंक्शन रहेगा|
 
           </p>
           <br />
@@ -55,7 +55,7 @@ export default function Footer() {
               rel="noopener noreferrer">
               <FaWhatsapp className="hover:text-blue-400" />
             </a>
-            <a href="https://sapnashrijewellers.github.io/#/tv" target="_blank" rel="noopener noreferrer">
+            <a href="/#/tv" target="_blank" rel="noopener noreferrer">
               <FaTv className="hover:text-yellow-400 hover:scale-110 transform transition duration-200" />
             </a>
           </div>

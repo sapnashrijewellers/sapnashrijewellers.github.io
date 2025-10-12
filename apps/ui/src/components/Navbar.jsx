@@ -28,36 +28,34 @@ export default function Navbar() {
             <Link className="hover:underline" to="/">होम</Link>
             <Link className="hover:underline" to="/category/gold">सोना</Link>
             <Link className="hover:underline" to="/category/silver">चाँदी</Link>
-            <Link className="hover:underline" to="/calculator">कैलकुलेटर</Link>            
+            <Link className="hover:underline" to="/calculator">कैलकुलेटर</Link>
           </div>
 
           {/* Bottom row: Live rates */}
-          <div className="flex justify-end gap-4">
+          {rates.gold24K > 0 && (
+            <div className="flex justify-end gap-4">
+              <span className="flex items-center gap-1">
+                <span className="animate-pulse w-3 h-3 bg-red-500 rounded-full inline-block"></span>
+                <span>सोना (24K):<IndianRupeeRate rate={rates.gold24K * 10} className="text-green-500" />
+                </span>
+              </span>
+              <span>सोना (22K):<IndianRupeeRate rate={rates.gold22K * 10} className="text-green-500" />              </span>
+            </div>
+          )}
+          {rates.silver > 0 && (<div className="flex justify-end gap-4">
             <span className="flex items-center gap-1">
               <span className="animate-pulse w-3 h-3 bg-red-500 rounded-full inline-block"></span>
-              <span>
-                सोना (24K): <IndianRupeeRate rate={rates.gold24K * 10}  className="text-green-500"/>
-
-              </span>
+              <span>चाँदी (99.9): <IndianRupeeRate rate={rates.silver * 1000} className="text-green-500" />            </span>
             </span>
+            <span>चाँदी(जेवर): <IndianRupeeRate rate={(rates.silver * 1000) * (0.92)} className="text-green-500" />
+            </span>
+          </div>)}
+          <div className="flex justify-start gap-4">
             <span>
-              चाँदी (99.9): <IndianRupeeRate rate={rates.silver * 1000}  className="text-green-500"/>
-            </span>
-          </div>
-          <div className="flex justify-end gap-4">
-            <span className="flex items-center gap-1">
-              <span className="animate-pulse w-3 h-3 bg-red-500 rounded-full inline-block"></span>
-              <span>
-                सोना (22K): <IndianRupeeRate rate={rates.gold22K * 10} className="text-green-500" />
-              </span>
-            </span>
-            <span>
-              चाँदी(जेवर):
-              <IndianRupeeRate rate={(rates.silver * 1000) * (0.92)}  className="text-green-500"/>
+              {rates.asOn}
             </span>
           </div>
         </div>
-
       </div>
     </nav>
   );

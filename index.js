@@ -31,7 +31,7 @@ window.addEventListener("beforeinstallprompt", (e) => {
 // Register Service Worker
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker
-    .register("/service-worker.js")
+    .register("/service-worker.js", { type: 'module' })
     .then(() => console.log("✅ Service Worker registered"))
     .catch((err) => console.error("Service Worker registration failed:", err));
 }

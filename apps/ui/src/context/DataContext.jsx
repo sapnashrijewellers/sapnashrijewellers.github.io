@@ -7,8 +7,8 @@ export function DataProvider({ children }) {
   const [products, setProducts] = useState(null);
   const [ticker, setTicker] = useState(null);
   const [isLoading, setIsLoading] = useState(true); // <--- NEW STATE
-  //const baseURL = "https://tight-sky-9fb5.ssjn.workers.dev/";
-  const baseURL = "http://localhost:8787/";
+  const baseURL = "https://tight-sky-9fb5.ssjn.workers.dev/";
+  //const baseURL = "http://localhost:8787/";
 
   // Trigger SW sync every minute
   useEffect(() => {

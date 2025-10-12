@@ -15,5 +15,6 @@ Todo:
   ✔ Replace string in footer @done(25-10-11 13:14)
   ☐ test cases for all apps
   ☐ Push notification
-  ☐ Popup to install App
+  ✔ Popup to install App @done(25-10-12 13:51)
+  ☐ Too many configuration for localhost and live, need environment specific config
 

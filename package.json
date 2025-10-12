@@ -1,6 +1,7 @@
 {
   "name": "sapnashrijewellers.github.io",
   "version": "1.0.0",
+  "homepage": "https://sapnashrijewellers.github.io/", 
   "private": true,
   "workspaces": [
     "apps/*",

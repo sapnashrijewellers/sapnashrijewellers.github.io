@@ -12,7 +12,8 @@ import { StaleWhileRevalidate } from 'workbox-strategies';
 precacheAndRoute(self.__WB_MANIFEST || []);
 
 const DATA_CACHE = "ssj-data-cache-v1";
-const baseURL = "http://localhost:8787/";
+//const baseURL = "http://localhost:8787/";
+const baseURL = "https://tight-sky-9fb5.ssjn.workers.dev/";
 const baseOrigin = new URL(baseURL).origin;
 const API_CACHE = "api-runtime-cache-v1"; // 💡 New, dedicated cache name for Workbox runtime data
 

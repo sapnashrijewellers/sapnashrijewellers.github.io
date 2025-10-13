@@ -1,79 +1,119 @@
-import { createContext, useContext, useState, useEffect } from "react";
+// src/context/DataContext.jsx
+
+import { createContext, useContext, useState, useEffect, useCallback } from "react";
 import { subscribe } from "./../utils/pubsub";
+
 const DataContext = createContext(null);
+
+// Utility function to request data from the Service Worker and await a response
+const requestDataFromSW = (swController) => {
+  return new Promise((resolve, reject) => {
+      // ⚠️ IMPORTANT: Now accepts the controller
+      if (!swController) {
+          return reject(new Error("Service Worker controller unavailable."));
+      }
+
+      const messageChannel = new MessageChannel();
+      
+      messageChannel.port1.onmessage = (event) => {
+          if (event.data?.type === 'dataResponse') {
+              resolve(event.data.data);
+          } else if (event.data?.type === 'dataError') {
+              reject(new Error(event.data.message || 'SW data fetch failed'));
+          }
+          messageChannel.port1.close();
+      };
+
+      swController.postMessage({ type: 'dataRequest' }, [messageChannel.port2]);
+  });
+};
+
 
 export function DataProvider({ children }) {
   const [rates, setRates] = useState(null);
   const [products, setProducts] = useState(null);
   const [ticker, setTicker] = useState(null);
-  const [isLoading, setIsLoading] = useState(true); // <--- NEW STATE
-  const baseURL = "https://tight-sky-9fb5.ssjn.workers.dev/";
-  //const baseURL = "http://localhost:8787/";
+  const [isLoading, setIsLoading] = useState(true); 
 
-  // Trigger SW sync every minute
+  // ✅ 1. DEFINE: Define this function BEFORE the useEffect hooks
+  // This function is defined first so the hooks can use it without a ReferenceError.
+  const updateDataState = useCallback((data) => {
+    // Check if data is valid before setting state
+    if (data && data.rates) {
+        setRates(data.rates);
+        setProducts(data.products);
+        setTicker(data.ticker);
+    }
+  }, []);
+
+  
+  // ------------------------------------------------------------------
+  // ✅ 2. USE: The useEffect hooks now safely use the defined function
+  // ------------------------------------------------------------------
+
+  // ✅ Trigger SW sync every minute (for background refresh)
   useEffect(() => {
     const interval = setInterval(() => {
       if (navigator.serviceWorker.controller) {
-        navigator.serviceWorker.controller.postMessage("syncData");
+        navigator.serviceWorker.controller.postMessage({ type: "syncData" });
       }
     }, 60 * 1000);
     return () => clearInterval(interval);
   }, []);
 
-  // Listen for updates from SW
+  // ✅ Listen for background updates from SW
   useEffect(() => {
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.addEventListener("message", (event) => {
+      const handler = (event) => {
         if (event.data?.type === "dataUpdated") {
-          const { rates, products, ticker } = event.data.data;
-          console.log("App: received updated data from SW");
-          setRates(rates);
-          setProducts(products);
-          setTicker(ticker);
+          console.log("App: received background updated data from SW");
+          updateDataState(event.data.data); // Safely called here
         }
-      });
+      };
+      navigator.serviceWorker.addEventListener("message", handler);
+      return () => navigator.serviceWorker.removeEventListener("message", handler);
     }
-  }, []);
+  }, [updateDataState]);
 
-  // Initial load directly from network
+
+  // ✅ Initial Load: Request data from SW (Cache First, Awaiting Response)
   useEffect(() => {
-    async function load() {
-      setIsLoading(true);
-      try {
+    async function loadFromCacheOrNetwork(swController) {
+        setIsLoading(true);
+        try {
+            // WAIT for the SW to return data 
+            const data = await requestDataFromSW(swController);
+            
+            updateDataState(data); // Safely called here
 
-        const [ratesData, productsData, tickerData] = await Promise.all([
-          fetch(baseURL).then((r) => r.json()),
-          fetch(baseURL + "?type=products").then((r) => r.json()),
-          fetch(baseURL + "?type=ticker").then((r) => r.json()),
-        ]);
-        
-        setRates(ratesData);
-        setProducts(productsData);
-        setTicker(tickerData);
-      } catch (err) {
-        console.error("Failed to load data:", err);
-        setRates({
-          asOn: null,
-          "24K": 0,
-          "22K": 0,
-          "18K": 0,
-          silver: 0
-        });
-      } finally {
-        // 3. Stop loading in all cases
-        setIsLoading(false); // <--- IMPORTANT: Stop loading after try/catch
-      }
+        } catch (err) {
+            console.error("Failed to load initial data via Service Worker:", err);
+            // Fallback to minimal data state
+            updateDataState({
+              rates: { asOn: null, "24K": 0, "22K": 0, "18K": 0, silver: 0 },
+              products: null,
+              ticker: null,
+            });
+        } finally {
+            setIsLoading(false); 
+        }
     }
-
-    load();
-  }, []);
-
-  // Request notification permission and subscribe after 2 sec
-  // useEffect(() => {
-  //   const timer = setTimeout(() => subscribe(baseURL), 2000);
-
-  //   return () => clearTimeout(timer);
-  // }, []);
+    
+    if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.ready.then((registration) => {
+            if (registration.active) {
+                // Pass the active controller to the loading function
+                loadFromCacheOrNetwork(registration.active); 
+            } else {
+                console.error("SW ready, but no active controller.");
+                setIsLoading(false);
+            }
+        });
+    } else {
+        setIsLoading(false);
+    }
+    
+  }, [updateDataState]);
 
 
   if (!rates) return <div>Loading rates...</div>;

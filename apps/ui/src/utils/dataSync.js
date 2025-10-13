@@ -1,83 +1,101 @@
-export async function getSetCache(event, baseURL, DATA_CACHE) {
-    
-    const url = new URL(event.request.url);
+// src/utils/dataSync.js
 
-    // Return cached API data for known endpoints
-    if (url.origin === baseURL) {
-        event.respondWith(
-            (async () => {
-                const key =
-                    url.searchParams.get("type") === "products"
-                        ? "products"
-                        : url.searchParams.get("type") === "ticker"
-                            ? "ticker"
-                            : "rates";
+// 💡 We only need the defaults and syncData now.
+const ratesDefault = {
+    "asOn": null,
+    gold24K: 0,
+    gold22K: 0,
+    gold18K: 0,
+    silver: 0,
+    silverJewelry: 0 
+};
 
-                const dataCache = await caches.open(DATA_CACHE);
-                const cached = await dataCache.match(key);
-                if (cached) return cached;
+const DATA_ENDPOINTS = [
+    { type: "rates", url: (baseURL) => baseURL, default: ratesDefault },
+    { type: "products", url: (baseURL) => baseURL + "?type=products", default: [] },
+    { type: "ticker", url: (baseURL) => baseURL + "?type=ticker", default: {} },
+];
 
-                // fallback: fetch fresh
-                const response = await fetch(url);
-                const clone = response.clone();
-                await dataCache.put(key, clone);
-                return response;
-            })()
-        );
+
+/**
+ * Helper to fetch data, relying on Workbox to handle caching (Stale-While-Revalidate).
+ * @param {string} url - The URL to fetch.
+ * @param {any} defaultValue - Default value on network failure.
+ * @returns {Promise<any>}
+ */
+async function fetchWithWorkbox(url, defaultValue) {
+    try {
+        // 💡 Workbox Strategy (StaleWhileRevalidate) is configured in service-worker.ts.
+        // Calling fetch() here will trigger the SW's 'fetch' listener, where Workbox 
+        // intercepts and applies the cache-first logic, returning the fastest available response.
+        const res = await fetch(url); 
+        
+        if (!res.ok) {
+            throw new Error(`Network fetch failed for ${url}: ${res.status}`);
+        }
+        
+        return await res.json();
+        
+    } catch (e) {
+        // If the fetch fails and Workbox (or the browser) has no cache, 
+        // we return the application-level default.
+        console.warn(`SW: Fetch failed for ${url}. Returning default value.`, e.message);
+        return defaultValue;
     }
 }
 
-export // ✅ Periodic sync function
-    async function syncData(DATA_CACHE, baseURL) {
-    const ratesDefault = {
-        "asOn": null,
-        gold24K: 0,
-        gold22K: 0,
-        gold18K: 0,
-        silver: 0,
-        silverJewelry: 0
-    };
 
-    const [ratesData, productsData, tickerData] = await Promise.all([
-        fetchWithCache(baseURL, "rates", ratesDefault),
-        fetchWithCache(baseURL + "?type=products", "products", []),
-        fetchWithCache(baseURL + "?type=ticker", "ticker", {}),
-    ]);
+/**
+ * Fetches data from network (via Workbox), updates cache implicitly, and notifies clients.
+ * This is used for both initial data reply and background sync.
+ * @param {string} DATA_CACHE - The name of the cache (no longer strictly needed but kept for signature).
+ * @param {string} baseURL - The base API URL.
+ * @param {object} options - Options object.
+ * @param {boolean} [options.returnData=false] - If true, returns the fetched data.
+ * @returns {Promise<{rates: any, products: any, ticker: any}>}
+ */
+export async function syncData(DATA_CACHE, baseURL, options = {}) {
+    const DATA_ENDPOINTS = [
+    { type: "rates", url: (baseURL) => baseURL+ "?type=rate", default: ratesDefault },
+    { type: "products", url: (baseURL) => baseURL + "?type=products", default: [] },
+    { type: "ticker", url: (baseURL) => baseURL + "?type=ticker", default: {} },
+];
+    const data = {};
 
-    const dataCache = await caches.open(DATA_CACHE);
-    await dataCache.put("rates", new Response(JSON.stringify(ratesData), { headers: { "Content-Type": "application/json" } }));
-    await dataCache.put("products", new Response(JSON.stringify(productsData), { headers: { "Content-Type": "application/json" } }));
-    await dataCache.put("ticker", new Response(JSON.stringify(tickerData), { headers: { "Content-Type": "application/json" } }));
-    await dataCache.put("lastSync", new Response(JSON.stringify({ timestamp: Date.now() })));
+    // Fetch all data points concurrently
+    const fetchPromises = DATA_ENDPOINTS.map(endpoint => 
+        fetchWithWorkbox(endpoint.url(baseURL), endpoint.default)
+            .then(result => data[endpoint.type] = result)
+            .catch(e => {
+                // Should be caught by fetchWithWorkbox, but defensive catch here.
+                data[endpoint.type] = endpoint.default;
+            })
+    );
+    
+    await Promise.all(fetchPromises);
 
-    console.log("SW: Data synced successfully");
+    const fullData = { rates: data.rates, products: data.products, ticker: data.ticker };
 
-    // Notify clients
+    console.log("SW: Data sync/retrieval complete.");
+    
+    // 1. If requested for initial load, return immediately
+    if (options.returnData) {
+        return fullData;
+    }
+    
+    // 2. Otherwise, notify clients for background updates
     const clients = await self.clients.matchAll();
     for (const client of clients) {
         client.postMessage({
             type: "dataUpdated",
-            data: { rates: ratesData, products: productsData, ticker: tickerData },
+            data: fullData,
         });
     }
+
+    return fullData; 
 }
 
-// ✅ Fetch wrapper with fallback to cache
-async function fetchWithCache(url, cacheKey, defaultValue, DATA_CACHE) {
-    
-    try {
-        const res = await fetch(url, { cache: "no-store" });
-        if (!res.ok) throw new Error("Network error");
-        const data = await res.clone().json();
-
-        const dataCache = await caches.open(DATA_CACHE);
-        await dataCache.put(cacheKey, new Response(JSON.stringify(data), { headers: { "Content-Type": "application/json" } }));
-        
-        return data;
-    } catch {
-        const dataCache = await caches.open(DATA_CACHE);
-        const cached = await dataCache.match(cacheKey);
-        if (cached) return await cached.json();
-        return defaultValue;
-    }
-}
+// ⚠️ retrieveAllCachedData is no longer strictly needed because Workbox handles 
+// the cache check when 'fetch' is called, but you can keep it if you need 
+// direct cache access outside of a fetch event.
+// For this optimized setup, we rely on Workbox and fetch() inside syncData.

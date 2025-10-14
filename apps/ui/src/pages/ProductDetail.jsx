@@ -85,8 +85,8 @@ const driveURL = 'https://sapnashrijewellers.github.io/static/img/';
           className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50"
           onClick={() => setActiveImage(null)}
         >
-          <img
-            src={`./images/${activeImage}`}
+          <img          
+            src={`${driveURL}${activeImage}`}
             alt="zoomed"
             className="max-h-full max-w-full object-contain"
           />

@@ -1,96 +1,94 @@
-// src/utils/dataSync.js
+// src/utils/dataSync.js - REVISED
 
-// 💡 We only need the defaults and syncData now.
-const ratesDefault = {
-    "asOn": null,
-    gold24K: 0,
-    gold22K: 0,
-    gold18K: 0,
-    silver: 0,
-    silverJewelry: 0
-};
-
+// Define a simple structure for endpoints, removing the 'default' key
 const DATA_ENDPOINTS = [
-    { type: "rates", url: (baseURL) => baseURL, default: ratesDefault },
-    { type: "products", url: (baseURL) => baseURL + "?type=products", default: [] },
-    { type: "ticker", url: (baseURL) => baseURL + "?type=ticker", default: {} },
+    { type: "rates", url: (baseURL) => baseURL + "?type=rate" },
+    { type: "products", url: (baseURL) => baseURL + "?type=products" },
+    { type: "ticker", url: (baseURL) => baseURL + "?type=ticker" },
 ];
 
+const API_CACHE = "api-runtime-cache-v1"; // Must match service-worker.js
 
 /**
- * Helper to fetch data, relying on Workbox to handle caching (Stale-While-Revalidate).
+ * Helper to attempt network fetch or fall back to cache on failure (Stale-If-Error).
+ * It will throw a Network error if both network and cache fail.
  * @param {string} url - The URL to fetch.
- * @param {any} defaultValue - Default value on network failure.
  * @returns {Promise<any>}
  */
-async function fetchWithWorkbox(url, defaultValue) {
+async function fetchOrCache(url) {
+    const cache = await caches.open(API_CACHE);
+
     try {
-        // 💡 Workbox Strategy (StaleWhileRevalidate) is configured in service-worker.ts.
-        // Calling fetch() here will trigger the SW's 'fetch' listener, where Workbox 
-        // intercepts and applies the cache-first logic, returning the fastest available response.
+        // 1. Attempt Network Fetch
         const res = await fetch(url);
 
         if (!res.ok) {
-            throw new Error(`Network fetch failed for ${url}: ${res.status}`);
+            throw new Error(`Network fetch failed: ${res.status}`);
         }
 
+        // 2. Network Success: Update Cache & Return Data
+        // Clone response before caching because a response body can only be read once.
+        await cache.put(url, res.clone());
         return await res.json();
 
     } catch (e) {
-        // If the fetch fails and Workbox (or the browser) has no cache, 
-        // we return the application-level default.
-        console.warn(`SW: Fetch failed for ${url}. Returning default value.`, e.message);
-        return defaultValue;
+        // 3. Network Failure: Fall back to Cache
+        console.warn(`SW: Network fetch failed for ${url}. Attempting cache fallback.`, e.message);
+
+        const cachedResponse = await cache.match(url);
+
+        if (cachedResponse) {
+            console.log(`SW: Cache HIT for ${url}. Returning cached data.`);
+            return await cachedResponse.json();
+        }
+
+        // 4. Cache Miss: Re-throw the error. The caller must handle it.
+        console.error(`SW: Cache MISS and Network failed for ${url}.`, e.message);
+        throw new Error(`Failed to retrieve data for ${url}.`);
     }
 }
 
 
 /**
- * Fetches data from network (via Workbox), updates cache implicitly, and notifies clients.
+ * Fetches data from network/cache, and notifies clients.
  * This is used for both initial data reply and background sync.
- * @param {string} DATA_CACHE - The name of the cache (no longer strictly needed but kept for signature).
+ * @param {string} DATA_CACHE - The name of the cache (ignored).
  * @param {string} baseURL - The base API URL.
  * @param {object} options - Options object.
  * @param {boolean} [options.returnData=false] - If true, returns the fetched data.
  * @returns {Promise<{rates: any, products: any, ticker: any}>}
  */
 export async function syncData(DATA_CACHE, baseURL, options = {}) {
-    const DATA_ENDPOINTS = [
-        { type: "rates", url: (baseURL) => baseURL + "?type=rate", default: ratesDefault },
-        { type: "products", url: (baseURL) => baseURL + "?type=products", default: [] },
-        { type: "ticker", url: (baseURL) => baseURL + "?type=ticker", default: {} },
-    ];
     const data = {};
+    const failedTypes = [];
 
     // Fetch all data points concurrently
     const fetchPromises = DATA_ENDPOINTS.map(endpoint =>
-        fetchWithWorkbox(endpoint.url(baseURL), endpoint.default)
+        fetchOrCache(endpoint.url(baseURL))
             .then(result => data[endpoint.type] = result)
             .catch(e => {
-                // Should be caught by fetchWithWorkbox, but defensive catch here.
-                data[endpoint.type] = endpoint.default;
+                console.warn(`SW: Failed to get data for ${endpoint.type}. Setting to null.`);
+                data[endpoint.type] = null; // Set to null on failure
+                failedTypes.push(endpoint.type);
             })
     );
 
     await Promise.all(fetchPromises);
 
-    const fullData = { rates: data.rates, products: data.products, ticker: data.ticker };
+    const fullData = {
+        rates: data.rates,
+        products: data.products,
+        ticker: data.ticker
+    };
 
-    console.log("SW: Data sync/retrieval complete.");
+    console.log("SW: Data sync/retrieval complete. Failed (" + failedTypes.length + "): " + failedTypes.join(', '));
 
-    // 1. If requested for initial load, return immediately
-    if (options.returnData) {
-        return fullData;
-    }
-
-    // 2. Otherwise, notify clients for background updates
     const clients = await self.clients.matchAll();
     for (const client of clients) {
         client.postMessage({
             type: "dataUpdated",
-            data: fullData,
+            data: fullData, // Contains any new data + any old cached data
         });
     }
-
     return fullData;
 }

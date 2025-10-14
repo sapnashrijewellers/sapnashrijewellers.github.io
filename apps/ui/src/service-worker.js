@@ -12,8 +12,8 @@ precacheAndRoute(self.__WB_MANIFEST || []);
 
 const DATA_CACHE = "ssj-data-cache-v1";
 const API_CACHE = "api-runtime-cache-v1";
-//const baseURL = "https://localhost:8787/";
-const baseURL = "https://tight-sky-9fb5.ssjn.workers.dev/";
+const baseURL = "https://localhost:8787/";
+//const baseURL = "https://tight-sky-9fb5.ssjn.workers.dev/";
 const baseOrigin = new URL(baseURL).origin;
 
 // Runtime caching for API requests
@@ -66,6 +66,7 @@ self.addEventListener("push", (event) => {
   event.waitUntil(
     (async () => {
       console.log("Push received!", event);
+      console.log("Push received!", event.data);
 
       // Fetch latest rates
       const data = await syncData(DATA_CACHE, baseURL, { returnData: true });

@@ -1,5 +1,4 @@
 
-import React, { useEffect } from 'react';
 import { DataProvider } from "./context/DataContext";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
@@ -12,16 +11,12 @@ import TvLayout from "./layouts/TvLayout";
 import { useRegisterSW } from 'virtual:pwa-register/react';
 import { subscribeUser } from "./utils/pubsub.js";
 export default function App() {
-  const BASE_URL = "https://tight-sky-9fb5.ssjn.workers.dev/";
-  // This return value primarily contains state and the update function, 
-  // but we only need to call the hook to ensure the registration logic runs.
-  // We'll pass the callback directly in the config object.
-  const { } = useRegisterSW({
-    // 💡 The callback is defined HERE in the options object.
+  //const BASE_URL = "https://tight-sky-9fb5.ssjn.workers.dev/";
+  const BASE_URL = "https://localhost:8787/";
+  useRegisterSW({    
     onRegisteredSW(registration) {
       if (registration) {
-        console.log("Vite PWA Service Worker Registered/Ready.");
-        // Call your subscribe function here
+        console.log("Vite PWA Service Worker Registered/Ready.");        
         subscribeUser(BASE_URL);
       }
     },

@@ -24,7 +24,7 @@ function urlBase64ToUint8Array(base64String) {
 // It must be the raw, uncompressed 65-byte point string. 
 // Your previous key format was incorrect. I've left it here as a placeholder 
 // for where you need to put the corrected string.
-const VAPID_PUBLIC_KEY = "BCJblePkWmsdbH6QQWeU1LrPU9hvPUpAP0Ej_7RHv436FR_YECFpcN1oQiNeXmQ1LzT6MBfE_vDqSt2-Vw5Fk2M"; 
+const VAPID_PUBLIC_KEY = "BKX0C-dcKvSLhEunwNiaOJA2hY1yh4PTCSFngeKPbiWjJaC1Tm_JXKi7Cjtq8KENLaXcr07RKGO27ZqkDiSV4v4"; 
 
 /**
  * Handles notification permission, checks for an existing subscription, 

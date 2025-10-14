@@ -7,7 +7,7 @@ const ratesDefault = {
     gold22K: 0,
     gold18K: 0,
     silver: 0,
-    silverJewelry: 0 
+    silverJewelry: 0
 };
 
 const DATA_ENDPOINTS = [
@@ -28,14 +28,14 @@ async function fetchWithWorkbox(url, defaultValue) {
         // 💡 Workbox Strategy (StaleWhileRevalidate) is configured in service-worker.ts.
         // Calling fetch() here will trigger the SW's 'fetch' listener, where Workbox 
         // intercepts and applies the cache-first logic, returning the fastest available response.
-        const res = await fetch(url); 
-        
+        const res = await fetch(url);
+
         if (!res.ok) {
             throw new Error(`Network fetch failed for ${url}: ${res.status}`);
         }
-        
+
         return await res.json();
-        
+
     } catch (e) {
         // If the fetch fails and Workbox (or the browser) has no cache, 
         // we return the application-level default.
@@ -56,14 +56,14 @@ async function fetchWithWorkbox(url, defaultValue) {
  */
 export async function syncData(DATA_CACHE, baseURL, options = {}) {
     const DATA_ENDPOINTS = [
-    { type: "rates", url: (baseURL) => baseURL+ "?type=rate", default: ratesDefault },
-    { type: "products", url: (baseURL) => baseURL + "?type=products", default: [] },
-    { type: "ticker", url: (baseURL) => baseURL + "?type=ticker", default: {} },
-];
+        { type: "rates", url: (baseURL) => baseURL + "?type=rate", default: ratesDefault },
+        { type: "products", url: (baseURL) => baseURL + "?type=products", default: [] },
+        { type: "ticker", url: (baseURL) => baseURL + "?type=ticker", default: {} },
+    ];
     const data = {};
 
     // Fetch all data points concurrently
-    const fetchPromises = DATA_ENDPOINTS.map(endpoint => 
+    const fetchPromises = DATA_ENDPOINTS.map(endpoint =>
         fetchWithWorkbox(endpoint.url(baseURL), endpoint.default)
             .then(result => data[endpoint.type] = result)
             .catch(e => {
@@ -71,18 +71,18 @@ export async function syncData(DATA_CACHE, baseURL, options = {}) {
                 data[endpoint.type] = endpoint.default;
             })
     );
-    
+
     await Promise.all(fetchPromises);
 
     const fullData = { rates: data.rates, products: data.products, ticker: data.ticker };
 
     console.log("SW: Data sync/retrieval complete.");
-    
+
     // 1. If requested for initial load, return immediately
     if (options.returnData) {
         return fullData;
     }
-    
+
     // 2. Otherwise, notify clients for background updates
     const clients = await self.clients.matchAll();
     for (const client of clients) {
@@ -92,10 +92,5 @@ export async function syncData(DATA_CACHE, baseURL, options = {}) {
         });
     }
 
-    return fullData; 
+    return fullData;
 }
-
-// ⚠️ retrieveAllCachedData is no longer strictly needed because Workbox handles 
-// the cache check when 'fetch' is called, but you can keep it if you need 
-// direct cache access outside of a fetch event.
-// For this optimized setup, we rely on Workbox and fetch() inside syncData.

@@ -11,8 +11,8 @@ import TvLayout from "./layouts/TvLayout";
 import { useRegisterSW } from 'virtual:pwa-register/react';
 import { subscribeUser } from "./utils/pubsub.js";
 export default function App() {
-  //const BASE_URL = "https://tight-sky-9fb5.ssjn.workers.dev/";
-  const BASE_URL = "https://localhost:8787/";
+  const BASE_URL = "https://tight-sky-9fb5.ssjn.workers.dev/";
+  //const BASE_URL = "https://localhost:8787/";
   useRegisterSW({    
     onRegisteredSW(registration) {
       if (registration) {

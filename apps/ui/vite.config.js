@@ -27,6 +27,10 @@ export default defineConfig({
       devOptions: {
         enabled: true,
         type: 'module',
+      },
+      workbox: {
+        clientsClaim: true,
+        skipWaiting: true
       }
     }),
   ]

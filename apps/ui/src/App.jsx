@@ -1,4 +1,5 @@
 
+import React, { useEffect } from 'react';
 import { DataProvider } from "./context/DataContext";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
@@ -8,9 +9,27 @@ import TV from "./pages/tv";
 import Calculator from './pages/Calculator.jsx'
 import DefaultLayout from "./layouts/DefaultLayout";
 import TvLayout from "./layouts/TvLayout";
+import { useRegisterSW } from 'virtual:pwa-register/react';
+import { subscribeUser } from "./utils/pubsub.js";
 export default function App() {
-
-return (
+  const BASE_URL = "https://tight-sky-9fb5.ssjn.workers.dev/";
+  // This return value primarily contains state and the update function, 
+  // but we only need to call the hook to ensure the registration logic runs.
+  // We'll pass the callback directly in the config object.
+  const { } = useRegisterSW({
+    // 💡 The callback is defined HERE in the options object.
+    onRegisteredSW(registration) {
+      if (registration) {
+        console.log("Vite PWA Service Worker Registered/Ready.");
+        // Call your subscribe function here
+        subscribeUser(BASE_URL);
+      }
+    },
+    // You can also add other useful handlers here:
+    // onOfflineReady() { console.log('App ready for offline use'); },
+    // onNeedRefresh() { console.log('New content available, please refresh!'); }
+  });
+  return (
 
 
     <DataProvider>

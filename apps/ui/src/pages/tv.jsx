@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import { useData } from "../context/DataContext";
-import IndianRupeeRate from "../components/IndianRupeeRate";
-import { FaWhatsapp } from "react-icons/fa";
 
 export default function TV() {
   const { products, rates } = useData();

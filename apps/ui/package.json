@@ -35,7 +35,7 @@
     "globals": "^16.4.0",
     "tailwindcss": "^4.1.13",
     "vite": "^7.1.7",
-    "vite-plugin-pwa": "^1.0.3",
+    "vite-plugin-pwa": "^1.1.0",
     "workbox-core": "^7.3.0",
     "workbox-precaching": "^7.3.0"
   },

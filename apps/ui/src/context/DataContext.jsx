@@ -1,8 +1,4 @@
-// src/context/DataContext.jsx
-
 import { createContext, useContext, useState, useEffect, useCallback } from "react";
-import { subscribe } from "./../utils/pubsub";
-
 const DataContext = createContext(null);
 
 // Utility function to request data from the Service Worker and await a response
@@ -61,6 +57,7 @@ export function DataProvider({ children }) {
     return () => clearInterval(interval);
   }, []);
 
+  
   // ✅ Listen for background updates from SW
   useEffect(() => {
     if ("serviceWorker" in navigator) {

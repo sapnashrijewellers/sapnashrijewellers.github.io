@@ -29,7 +29,7 @@ export default function RatesPanel() {
         </div>
       ))}
       <div>
-        {rates.asOn}
+        अंतिम अपडेट: {rates.asOn}
       </div>
     </div>
   );

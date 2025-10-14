@@ -52,7 +52,7 @@ export default function Navbar() {
           </div>)}
           <div className="flex justify-start gap-4">
             <span>
-              {rates.asOn}
+              अंतिम अपडेट: {rates.asOn}
             </span>
           </div>
         </div>

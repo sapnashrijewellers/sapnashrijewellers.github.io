@@ -12,7 +12,7 @@
  * Learn more at https://developers.cloudflare.com/workers/
  */
 import { extract as extractRates } from './extractors/Arihanspot_extractor';
-import { deleteSubs, listSubs, sendPushToSubscription } from "./utils/sendPush.js";
+import { sendPushToSubscription } from "./utils/sendPush.js";
 
 const SHEET_URL = "https://script.google.com/macros/s/AKfycbwNQ9fFmV0MqVEKg6pk-x56FsCw-xOnV__A3l6hqrlUVukKyx6gf31DpiO4hn4Vep6U5w/exec";
 
@@ -182,4 +182,56 @@ async function sendAll(env) {
 		}
 	}
 	return new Response("Done", { status: 200 });
+}
+
+/**
+ * Retrieves all push subscriptions from the provided KV store.
+ * NOTE: This function requires the KV Namespace binding to be passed in.
+ * @param {KVNamespace} USER_SUBSCRIPTIONS - The KV namespace binding (e.g., env.USER_SUBSCRIPTIONS).
+ * @returns {Promise<Response>} A JSON response containing the list of subscriptions.
+ */
+export async function listSubs(USER_SUBSCRIPTIONS) {
+  const keys = await USER_SUBSCRIPTIONS.list();
+  const subscriptions = [];
+
+  // Fetch the value for each key
+  for (const k of keys.keys) {
+	const subString = await USER_SUBSCRIPTIONS.get(k.name);
+	try {
+	  if (subString) {
+		// Parse the stored subscription string
+		const sub = JSON.parse(subString);
+		// Include the key (user ID) alongside the subscription data
+		subscriptions.push({ userId: k.name, subscription: sub });
+	  }
+	} catch (e) {
+	  console.error(`Failed to parse subscription for key ${k.name}:`, e);
+	}
+  }
+
+  // Return a JSON response with the collected subscriptions
+  return new Response(JSON.stringify(subscriptions, null, 2), {
+	headers: { 'Content-Type': 'application/json' },
+	status: 200
+  });
+}
+
+/**
+ * Deletes a specific subscription key from the KV store.
+ * This is useful for manually removing expired or invalid subscriptions (like the 403 failure case).
+ * @param {KVNamespace} USER_SUBSCRIPTIONS - The KV namespace binding.
+ * @param {string} subscriptionId - The key associated with the subscription (e.g., the full endpoint URL).
+ * @returns {Promise<Response>} A JSON response confirming deletion.
+ */
+export async function deleteSubs(USER_SUBSCRIPTIONS) {
+  const keys = await USER_SUBSCRIPTIONS.list();
+
+  // Fetch the value for each key
+  for (const k of keys.keys) {
+	await USER_SUBSCRIPTIONS.delete(k.name);
+  }
+  return new Response(JSON.stringify({ message: `Successfully deleted all subscriptions` }), {
+	headers: { 'Content-Type': 'application/json' },
+	status: 200
+  });
 }

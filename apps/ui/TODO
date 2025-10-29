@@ -1,0 +1,20 @@
+
+Todo:
+  ✔ Fix width issue in detail page @done(25-09-25 10:03)
+  ✔ Fix image scroll issue on product detail page @done(25-09-25 10:03)
+  ✔ Ticker for like gold rate @started(25-09-25 10:53) @done(25-09-25 17:04) @lasted(6h11m39s)
+  ✔ WhatsApp integration @started(25-09-25 12:36) @done(25-09-25 17:04) @lasted(4h28m43s)
+  ✔ update gold rate every 10 min @started(25-09-25 17:05) @done(25-09-26 00:27) @lasted(7h22m5s)
+  ✔ Lazy  loading of images @done(25-09-26 13:21)
+  ✔ Image upload @done(25-09-27 10:25)
+  ✔ Product admin UI @done(25-09-27 10:25)
+  ✔ Should be able to change orientation portrait and landscape PWA @done(25-10-02 14:25)
+  ✔ Ticker implementation on TV and home page @done(25-10-04 10:57)
+  ✔ Remove highlights from TV page @done(25-10-04 10:57)
+  ✔ Fix image issue on TV page. @done(25-10-11 13:14)
+  ✔ Replace string in footer @done(25-10-11 13:14)
+  ☐ test cases for all apps
+  ☐ Push notification
+  ✔ Popup to install App @done(25-10-12 13:51)
+  ☐ Too many configuration for localhost and live, need environment specific config
+

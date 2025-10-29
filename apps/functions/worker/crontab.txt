@@ -1,0 +1,1 @@
+*/5 * * * * /app/run-5-min-task.sh >> /var/log/cron.log 2>&1

@@ -12,6 +12,10 @@ const DATA_URL = "/static/data.json"; // or /data.json if you switched format
 // self.__WB_MANIFEST will be injected by VitePWA at build time
 precacheAndRoute(self.__WB_MANIFEST);
 
+cleanupOutdatedCaches();
+
+skipWaiting();
+clientsClaim();
 // Cache images dynamically
 registerRoute(
   ({ request, url }) =>
@@ -28,17 +32,14 @@ registerRoute(
 );
 
 // Install
-self.addEventListener("install", (event) => {
-  console.log("Service Worker: Installing...");
-  skipWaiting(); // activate new SW immediately
+self.addEventListener("install", (event) => {  
+  
 });
 
 // Activate
-self.addEventListener("activate", (event) => {
-  console.log("Service Worker: Activating...");
+self.addEventListener("activate", (event) => {  
   event.waitUntil(
-    (async () => {
-      cleanupOutdatedCaches();
+    (async () => {      
       clientsClaim(); // take control of pages immediately
 
       const keys = await caches.keys();
@@ -57,8 +58,7 @@ self.addEventListener("activate", (event) => {
         const cache = await caches.open(DATA_CACHE);
         const res = await fetch(DATA_URL, { cache: "no-cache" });
         if (res.ok) {
-          await cache.put(DATA_URL, res.clone());
-          console.log("Cached fresh data.json during activate");
+          await cache.put(DATA_URL, res.clone());          
         }
       } catch (err) {
         console.warn("Failed to pre-cache data.js:", err);
@@ -131,7 +131,7 @@ self.addEventListener("fetch", (event) => {
         } catch (err) {
           console.warn("Network failed, serving cached data.js");
           const cached = await cache.match(event.request);
-          return cached || new Response("{}", { headers: { "Content-Type": "application/json" } });
+          return cached || new Response("{}", { headers: { "Content-Type": "application/json; charset=utf-8" } });
         }
       })()
     );

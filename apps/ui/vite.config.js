@@ -21,7 +21,51 @@ export default defineConfig({
       injectManifest: {
         injectionPoint: undefined,
       },
-      manifest: false,
+      manifest: {
+        name: "Sapna Shri Jewellers",
+        short_name: "SSJ",
+        description: "सपना श्री ज्वैलर्स, नागदा की आधिकारिक वेबसाइट। हमारे नवीनतम आभूषण संग्रह देखें।",
+        lang: "en",
+        dir: "ltr",
+        start_url: "/index.html",
+        scope: "/",
+        display: "standalone",
+        orientation: "any",
+        background_color: "#000000",
+        theme_color: "#FFD700",
+        categories: ["shopping", "lifestyle", "business"],
+        icons: [
+          { src: "/icons/android-chrome-192x192-v1.png", sizes: "192x192", type: "image/png", purpose: "any maskable" },
+          { src: "/icons/android-chrome-512x512-v1.png", sizes: "512x512", type: "image/png", purpose: "any maskable" },
+          { src: "/icons/apple-touch-icon-v1.png", sizes: "180x180", type: "image/png" },
+          { src: "/icons/favicon-16x16-v1.png", sizes: "16x16", type: "image/png" },
+          { src: "/icons/favicon-32x32-v1.png", sizes: "32x32", type: "image/png" },
+          { src: "/icons/favicon-v1.ico", sizes: "48x48", type: "image/x-icon" },
+          { src: "/icons/favicon-v1.svg", sizes: "any", type: "image/svg+xml" },
+        ],
+        shortcuts: [
+          {
+            name: "Gold Jewellery",
+            short_name: "Gold",
+            description: "Explore our gold jewellery collection",
+            url: "/#/category/gold",
+            icons: [{ src: "/icons/android-chrome-192x192-v1.png", sizes: "192x192", type: "image/png" }],
+          },
+          {
+            name: "Silver Jewellery",
+            short_name: "Silver",
+            description: "Explore our silver jewellery collection",
+            url: "/#/category/silver",
+            icons: [{ src: "/icons/android-chrome-192x192-v1.png", sizes: "192x192", type: "image/png" }],
+          },
+        ],
+        screenshots: [
+          { src: "/screenshots/homepage.png", sizes: "1080x1920", type: "image/png", label: "Homepage" },
+          { src: "/screenshots/product-detail.png", sizes: "1080x1920", type: "image/png", label: "Product Detail Page" },
+        ],
+        prefer_related_applications: false,
+        related_applications: [],
+      },
       injectRegister: 'auto',
       registerType: 'autoUpdate',
       devOptions: {
@@ -30,8 +74,19 @@ export default defineConfig({
       },
       workbox: {
         clientsClaim: true,
-        skipWaiting: true
+        skipWaiting: true,
+        globPatterns: ['**/*.{js,css,html,png,svg,ico,json}'],
+        runtimeCaching: [
+          {
+            urlPattern: ({ url }) => url.pathname.startsWith('/static/img'),
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'static-images-cache-v1',
+              expiration: { maxEntries: 100, maxAgeSeconds: 30 * 24 * 60 * 60 },
+            },
+          },
+        ]
       }
     }),
-  ]  
+  ]
 });

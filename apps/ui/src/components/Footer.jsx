@@ -58,6 +58,9 @@ export default function Footer() {
             <a href="/#/tv" target="_blank" rel="noopener noreferrer">
               <FaTv className="hover:text-yellow-400 hover:scale-110 transform transition duration-200" />
             </a>
+            <a href="/privacy-policy.html">
+              privacy policy
+            </a>
           </div>
         </div>
 

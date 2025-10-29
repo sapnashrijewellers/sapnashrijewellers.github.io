@@ -1,0 +1,107 @@
+# .gitignore (at the root)
+
+# Dependency directories (essential to exclude)
+**/node_modules
+
+# Build outputs (applies to all packages with a 'dist' folder)
+**/dist
+
+# Turborepo cache and configuration
+.turbo/
+
+# Logs
+*.log
+
+# Local environment variables
+.env
+.env.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+static/
+# === Bubblewrap / Android TWA ===
+# Ignore build artifacts and Gradle cache
+/build/
+**/build/
+.gradle/
+local.properties
+*.iml
+.idea/
+captures/
+.gradle/
+.DS_Store
+.classpath
+.project
+.settings/
+*.apk
+*.aab
+*.apks
+*.log
+
+# === Node / NPM stuff (if you used it during init) ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+pnpm-lock.yaml
+
+# === Keystore & signing files ===
+*.keystore
+*.jks
+*.p12
+*.pem
+*.key
+*.csr
+# Don't ever expose these on GitHub!
+
+# === Android SDK / Tools ===
+/android/
+.cxx/
+*.so
+*.dex
+*.class
+
+# === Bubblewrap cache / temp ===
+.bubblewrap/
+output.json
+twa-manifest.json.bak
+
+# === OS-generated junk ===
+*.swp
+*~
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# === VSCode / JetBrains ===
+.vscode/
+.idea/
+
+# === Build cache ===
+/app/build/
+app/release/
+app/debug/

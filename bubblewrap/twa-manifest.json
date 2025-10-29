@@ -1,0 +1,55 @@
+{
+  "packageId": "io.github.sapnashrijewellers.twa",
+  "host": "sapnashrijewellers.github.io",
+  "name": "Sapna Shri Jewellers",
+  "launcherName": "SSJ",
+  "display": "standalone",
+  "themeColor": "#FFD700",
+  "themeColorDark": "#000000",
+  "navigationColor": "#000000",
+  "navigationColorDark": "#000000",
+  "navigationDividerColor": "#000000",
+  "navigationDividerColorDark": "#000000",
+  "backgroundColor": "#000000",
+  "enableNotifications": true,
+  "startUrl": "/",
+  "iconUrl": "https://sapnashrijewellers.github.io/icons/android-chrome-512x512-v1.png",
+  "maskableIconUrl": "https://sapnashrijewellers.github.io/icons/android-chrome-512x512-v1.png",
+  "monochromeIconUrl": "https://sapnashrijewellers.github.io/icons/android-chrome-512x512-v1.png",
+  "splashScreenFadeOutDuration": 300,
+  "signingKey": {
+    "path": "/home/big/vipul/ssj/bubblewrap/android.keystore",
+    "alias": "ssjkey"
+  },
+  "appVersionName": "1",
+  "appVersionCode": 1,
+  "shortcuts": [
+    {
+      "name": "Jewellery",
+      "shortName": "Gold",
+      "url": "https://sapnashrijewellers.github.io/#/",
+      "chosenIconUrl": "https://sapnashrijewellers.github.io/icons/android-chrome-192x192-v1.png"
+    }
+  ],
+  "generatorApp": "bubblewrap-cli",
+  "webManifestUrl": "https://sapnashrijewellers.github.io/manifest.webmanifest",
+  "fallbackType": "customtabs",
+  "features": {},
+  "alphaDependencies": {
+    "enabled": false
+  },
+  "enableSiteSettingsShortcut": true,
+  "isChromeOSOnly": false,
+  "isMetaQuest": false,
+  "fullScopeUrl": "https://sapnashrijewellers.github.io/",
+  "minSdkVersion": 21,
+  "orientation": "any",
+  "fingerprints": [],
+  "additionalTrustedOrigins": [],
+  "retainedBundles": [],
+  "protocolHandlers": [],
+  "fileHandlers": [],
+  "launchHandlerClientMode": "",
+  "displayOverride": [],
+  "appVersion": "1"
+}

@@ -15,6 +15,7 @@ export default defineConfig({
     // 👈 PWA Configuration
     VitePWA({
       // Use injectManifest to keep your custom event listeners (fetch, message)
+      id: "https://sapnashrijewellers.github.io/",
       strategies: 'injectManifest',
       srcDir: 'src',
       filename: 'service-worker.js',
@@ -27,7 +28,7 @@ export default defineConfig({
         description: "सपना श्री ज्वैलर्स, नागदा की आधिकारिक वेबसाइट। हमारे नवीनतम आभूषण संग्रह देखें।",
         lang: "en",
         dir: "ltr",
-        start_url: "/index.html",
+        start_url: "/#/",
         scope: "/",
         display: "standalone",
         orientation: "any",

@@ -46,23 +46,16 @@ export default defineConfig({
         ],
         shortcuts: [
           {
-            name: "Gold Jewellery",
+            name: "Jewellery",
             short_name: "Gold",
             description: "Explore our gold jewellery collection",
-            url: "/#/category/gold",
+            url: "/#/",
             icons: [{ src: "/icons/android-chrome-192x192-v1.png", sizes: "192x192", type: "image/png" }],
-          },
-          {
-            name: "Silver Jewellery",
-            short_name: "Silver",
-            description: "Explore our silver jewellery collection",
-            url: "/#/category/silver",
-            icons: [{ src: "/icons/android-chrome-192x192-v1.png", sizes: "192x192", type: "image/png" }],
-          },
+          }
         ],
         screenshots: [
-          { src: "/screenshots/homepage.png", sizes: "1080x1920", type: "image/png", label: "Homepage" },
-          { src: "/screenshots/product-detail.png", sizes: "1080x1920", type: "image/png", label: "Product Detail Page" },
+          { src: "/screenshots/homepage.jpeg", sizes: "738X1600", type: "image/jpeg", label: "Homepage" },
+          { src: "/screenshots/product-detail.jpeg", sizes: "738X1600", type: "image/jpeg", label: "Product Detail Page" },
         ],
         prefer_related_applications: false,
         related_applications: [],

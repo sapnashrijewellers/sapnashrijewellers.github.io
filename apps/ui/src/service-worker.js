@@ -1,3 +1,6 @@
+import { registerRoute } from "workbox-routing";
+import { CacheFirst } from "workbox-strategies";
+import { ExpirationPlugin } from "workbox-expiration";
 import { precacheAndRoute, cleanupOutdatedCaches } from "workbox-precaching";
 import { clientsClaim, skipWaiting } from "workbox-core";
 
@@ -8,7 +11,20 @@ const DATA_URL = "/static/data.json"; // or /data.json if you switched format
 // --- Precache app shell (HTML, JS, CSS, icons, etc.) ---
 precacheAndRoute(self.__WB_MANIFEST || []);
 
-const API_CACHE = "api-runtime-cache-v1";
+// Cache images dynamically
+registerRoute(
+  ({ request, url }) =>
+    request.destination === "image" && url.pathname.startsWith("/static/img"),
+  new CacheFirst({
+    cacheName: "static-images-cache-v1",
+    plugins: [
+      new ExpirationPlugin({
+        maxEntries: 100, // limit to 100 images
+        maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days
+      }),
+    ],
+  })
+);
 
 // Install
 self.addEventListener("install", (event) => {
@@ -26,16 +42,22 @@ self.addEventListener("activate", (event) => {
 
       const keys = await caches.keys();
       await Promise.all(
-        keys.filter((k) => k !== DATA_CACHE && !k.startsWith("workbox-precache"))
+        keys
+          .filter(
+            (k) =>
+              !["workbox-precache", DATA_CACHE, "static-images-cache-v1"].some(prefix =>
+                k.startsWith(prefix)
+              )
+          )
           .map((k) => caches.delete(k))
       );
-      // Prime cache with current data.js
+      
       try {
         const cache = await caches.open(DATA_CACHE);
         const res = await fetch(DATA_URL, { cache: "no-cache" });
         if (res.ok) {
           await cache.put(DATA_URL, res.clone());
-          console.log("Cached fresh data.js during activate");
+          console.log("Cached fresh data.json during activate");
         }
       } catch (err) {
         console.warn("Failed to pre-cache data.js:", err);

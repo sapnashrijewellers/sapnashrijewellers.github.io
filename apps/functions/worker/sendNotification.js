@@ -25,6 +25,7 @@ await sendAll(webpush, payload);
 
 async function sendAll(webpush, payload) {
   const keys = await getAllSubscriptions();
+  
 
   // Create an array of Promises
   const sendPromises = keys.map(async (key) => {

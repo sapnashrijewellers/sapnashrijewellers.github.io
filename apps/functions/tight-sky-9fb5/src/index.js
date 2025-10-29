@@ -13,9 +13,9 @@
  */
 
 export default {
-  async fetch(request, env, ctx) {
-    return handleRequest(request, env);
-  },
+	async fetch(request, env, ctx) {
+		return handleRequest(request, env);
+	},
 };
 
 async function handleRequest(request, env) {
@@ -32,20 +32,67 @@ async function handleRequest(request, env) {
 	try {
 		const url = new URL(request.url);
 		if (url.pathname === "/subscribe" && request.method === "POST") {
-			const sub = await request.json();
-			await env.USER_SUBSCRIPTIONS.put(sub.endpoint, JSON.stringify(sub));
-			return new Response("Subscribed", { headers });
-		}		
+			return await subscribeUser(request, env, headers);
+		}
+
 		if (url.pathname === "/subscriptions") {
-			return await listSubs(env.SER_SUBSCRIPTIONS);
-		}		
+			return await listSubs(env.USER_SUBSCRIPTIONS);
+		}
+		return new Response(JSON.stringify({ error: "Invalid request" }), { headers, status: 400 });
+	}
 
-		return new Response(JSON.stringify({ error: "Invalid type parameter" }), { headers, status: 400 });
-
-	} catch (err) {
+	catch (err) {
 		return new Response(JSON.stringify({ error: err.message }), { headers, status: 500 });
 	}
 }
+
+async function subscribeUser(request, env, headers) {
+	try {
+		const body = await request.json();
+
+		// Validate payload
+		if (!body || !body.endpoint) {
+			return new Response(
+				JSON.stringify({ error: "Missing or invalid subscription object" }),
+				{ headers, status: 400 }
+			);
+		}
+
+		const key = body.endpoint;
+		const existing = await env.USER_SUBSCRIPTIONS.get(key);
+
+		if (!existing) {
+			// New subscription
+			await env.USER_SUBSCRIPTIONS.put(key, JSON.stringify(body));
+			return new Response(JSON.stringify({ message: "Subscribed successfully" }), {
+				headers,
+				status: 201,
+			});
+		}
+
+		// Compare existing subscription data (ignore if identical)
+		const existingObj = JSON.parse(existing);
+		if (JSON.stringify(existingObj) === JSON.stringify(body)) {
+			return new Response(JSON.stringify({ message: "Already subscribed" }), {
+				headers,
+				status: 200,
+			});
+		}
+
+		// Update if changed
+		await env.USER_SUBSCRIPTIONS.put(key, JSON.stringify(body));
+		return new Response(JSON.stringify({ message: "Subscription updated" }), {
+			headers,
+			status: 200,
+		});
+	} catch (err) {
+		return new Response(JSON.stringify({ error: err.message }), {
+			headers,
+			status: 500,
+		});
+	}
+}
+
 
 /**
  * Retrieves all push subscriptions from the provided KV store.
@@ -53,7 +100,7 @@ async function handleRequest(request, env) {
  * @param {KVNamespace} USER_SUBSCRIPTIONS - The KV namespace binding (e.g., env.USER_SUBSCRIPTIONS).
  * @returns {Promise<Response>} A JSON response containing the list of subscriptions.
  */
-export async function listSubs(USER_SUBSCRIPTIONS) {
+async function listSubs(USER_SUBSCRIPTIONS) {
 	const keys = await USER_SUBSCRIPTIONS.list();
 	const subscriptions = [];
 

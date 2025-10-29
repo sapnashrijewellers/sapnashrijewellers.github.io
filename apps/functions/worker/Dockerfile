@@ -14,9 +14,6 @@ COPY . .
 
 # # Copy crontab
 COPY crontab.txt /etc/cron.d/generator-cron
-# COPY generateData.js /app/generateData.js
-# COPY entrypoint.sh /app/entrypoint.sh
-# COPY run-5-min-task.sh /app/run-5-min-task.sh
 
 # Apply cron permissions
 RUN chmod 0644 /etc/cron.d/generator-cron && \

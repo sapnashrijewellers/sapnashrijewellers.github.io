@@ -9,7 +9,8 @@ const DATA_CACHE = "ssj-data-cache-v2";
 const DATA_URL = "/static/data.json"; // or /data.json if you switched format
 
 // --- Precache app shell (HTML, JS, CSS, icons, etc.) ---
-precacheAndRoute(self.__WB_MANIFEST || []);
+// self.__WB_MANIFEST will be injected by VitePWA at build time
+precacheAndRoute(self.__WB_MANIFEST);
 
 // Cache images dynamically
 registerRoute(

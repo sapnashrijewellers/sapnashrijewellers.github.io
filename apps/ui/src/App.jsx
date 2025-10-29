@@ -14,8 +14,7 @@ export default function App() {
   //const BASE_URL = "http://localhost:8787/";
   useRegisterSW({    
     onRegisteredSW(registration) {
-      if (registration) {
-        console.log("Vite PWA Service Worker Registered/Ready.");         
+      if (registration) {        
         subscribeUser(BASE_URL);
       }
     },

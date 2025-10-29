@@ -19,7 +19,7 @@ export default defineConfig({
       srcDir: 'src',
       filename: 'service-worker.js',
       injectManifest: {
-        injectionPoint: undefined,
+        injectionPoint: 'self.__WB_MANIFEST',
       },
       manifest: {
         name: "Sapna Shri Jewellers",

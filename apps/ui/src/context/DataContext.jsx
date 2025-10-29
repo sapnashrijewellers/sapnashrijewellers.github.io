@@ -46,8 +46,7 @@ export function DataProvider({ children }) {
   // --- Background refresh when tab becomes visible ---
   useEffect(() => {
     const handleVisibilityChange = () => {
-      if (document.visibilityState === "visible") {
-        console.log("Tab active — refreshing data");
+      if (document.visibilityState === "visible") {        
         fetchAndProcessData();
       }
     };

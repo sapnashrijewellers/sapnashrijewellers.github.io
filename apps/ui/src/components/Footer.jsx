@@ -58,13 +58,15 @@ export default function Footer() {
             <a href="/#/tv" target="_blank" rel="noopener noreferrer">
               <FaTv className="hover:text-yellow-400 hover:scale-110 transform transition duration-200" />
             </a>
-            <a href="/privacy-policy.html">
-              privacy policy
-            </a>
+            
           </div>
         </div>
-
+ <div className="flex gap-4 ">
         <p className="text-gray-500 text-sm mt-4">&copy; {new Date().getFullYear()} Sapna Shri Jewellers. All rights reserved.</p>
+      <a href="/#/privacy" className="text-sm mt-4">
+              privacy policy
+            </a>
+            </div>
       </div>
     </footer>
   );

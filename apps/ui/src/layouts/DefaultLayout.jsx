@@ -1,7 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import QrCodeModal from "../components/QrCodeModal";
 import { useState } from "react";
 import { FaQrcode, FaWhatsapp } from "react-icons/fa";
 import Ticker from "../components/Ticker"
@@ -15,14 +14,6 @@ export default function DefaultLayout() {
     <>
       {/* Floating Buttons */}
       <div className="fixed bottom-6 right-6 sm:bottom-10 sm:right-10 z-50 flex flex-col items-end space-y-3">
-        <button
-          onClick={() => setIsModalOpen(true)}
-          className="p-4 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-105 active:scale-95 bg-indigo-500 hover:bg-indigo-600 text-white"
-          title="Open QR Code To Make Payment"
-        >
-          <FaQrcode size={28} />
-        </button>
-
         <button
           className="p-4 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-105 active:scale-95 bg-green-500 hover:bg-green-600 text-white"
           title={`Chat on WhatsApp: +${MY_PHONE_NUMBER}`}

@@ -61,15 +61,15 @@ export default function Navbar() {
         <div className="flex flex-col justify-between w-full sm:w-auto ml-4">
           {/* Top row: Menu links */}
           <div className="flex flex-wrap justify-end gap-4 mb-1">
-            <Link className="hover:underline" to="/">होम</Link>
-            <Link className="hover:underline" to="/calculator">कैलकुलेटर</Link>
-            <Link className="hover:underline" to="/Qr">
+            <Link className="hover:underline" to="/" title="Home Page">होम</Link>
+            <Link className="hover:underline" to="/calculator" title="Price Calculator">कैलकुलेटर</Link>
+            <Link className="hover:underline" to="/Qr" title="Payment QR Code">
               <FaQrcode size="20" />
             </Link>
             {showInstallButton && (
               <Link
                 onClick={handleInstallClick}
-                className="hover:underline"
+                className="hover:underline" title="Install App"
               >
                 <FaDownload size="20"/>
               </Link>)}

@@ -14,20 +14,38 @@ import { subscribeUser } from "./utils/pubsub.js";
 export default function App() {
   const BASE_URL = "https://tight-sky-9fb5.ssjn.workers.dev/";
   //const BASE_URL = "http://localhost:8787/";
-  useRegisterSW({    
+  useRegisterSW({
     onRegisteredSW(registration) {
-      if (registration) {        
-        subscribeUser(BASE_URL);
-      }
-    }
-    // You can also add other useful handlers here:
+      if (!registration) return;
+      (async () => {
+        // Wait for Chrome ↔ TWA permission delegation to settle
+        await new Promise((resolve) => setTimeout(resolve, 1500));
+
+        // Check notification permission before prompting
+        if (Notification.permission === "default") {
+          // Ask once only if not already prompted
+          if (!localStorage.getItem("notifPrompted")) {
+            localStorage.setItem("notifPrompted", "yes");
+            await subscribeUser(BASE_URL);
+          }
+        } else if (Notification.permission === "granted") {
+          // Already granted — ensure subscription exists
+          const existing = await registration.pushManager.getSubscription();
+          if (!existing) await subscribeUser(BASE_URL);
+        } else {
+          console.log("Notifications previously denied by user.");
+        }
+      })();
+    },
+
+    // Optional: useful lifecycle handlers
     // onOfflineReady() { console.log('App ready for offline use'); },
     // onNeedRefresh() { console.log('New content available, please refresh!'); }
   });
 
-   window.addEventListener("beforeinstallprompt", () => {
-  console.log("✅ beforeinstallprompt fired");
-});
+  window.addEventListener("beforeinstallprompt", () => {
+    console.log("✅ beforeinstallprompt fired");
+  });
   return (
 
 

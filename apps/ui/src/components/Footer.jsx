@@ -41,21 +41,27 @@ export default function Footer() {
         <div>
           <h2 className="font-bold text-lg">Follow Us</h2>
           <div className="flex gap-4 mt-2 text-gray-300 text-3xl">
-            <a href="https://www.facebook.com/share/14JjQReswYv/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/share/14JjQReswYv/" 
+            target="_blank" rel="noopener noreferrer"
+            title="Facebook">
               <FaFacebookF className="hover:text-blue-500" />
             </a>
-            <a href="https://www.instagram.com/sapna_shri_jewllers/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/sapna_shri_jewllers/" 
+            target="_blank" rel="noopener noreferrer"
+            title="Instagram">
               <FaInstagram className="hover:text-pink-500" />
             </a>
-            <a href="https://www.youtube.com/@SapnaShriJewellers-b1f/shorts" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.youtube.com/@SapnaShriJewellers-b1f/shorts" 
+            target="_blank" rel="noopener noreferrer"
+            title="YouTube">
               <FaYoutube className="hover:text-red-500" />
             </a>
             <a target="_blank"
               onClick={() => window.open(whatsappUrl, "_blank")}
-              rel="noopener noreferrer">
+              rel="noopener noreferrer" title="WatsApp">
               <FaWhatsapp className="hover:text-green-500" />
             </a>
-            <a href="/#/tv" target="_blank" rel="noopener noreferrer">
+            <a href="/#/tv" target="_blank" rel="noopener noreferrer" title="TV">
               <FaTv className="hover:text-yellow-400 hover:scale-110 transform transition duration-200" />
             </a>
             

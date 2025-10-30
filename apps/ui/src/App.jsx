@@ -43,11 +43,7 @@ export default function App() {
     // Optional: useful lifecycle handlers
     // onOfflineReady() { console.log('App ready for offline use'); },
     // onNeedRefresh() { console.log('New content available, please refresh!'); }
-  });
-
-  window.addEventListener("beforeinstallprompt", () => {
-    console.log("✅ beforeinstallprompt fired");
-  });
+  });  
   return (
 
 

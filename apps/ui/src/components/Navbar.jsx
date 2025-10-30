@@ -5,42 +5,7 @@ import IndianRupeeRate from './IndianRupeeRate';
 import { FaQrcode, FaDownload } from "react-icons/fa";
 export default function Navbar() {
 
-  //===========
-  const [deferredPrompt, setDeferredPrompt] = useState(null);
-  const [showInstallButton, setShowInstallButton] = useState(false);
   const { rates } = useData();
-  useEffect(() => {
-    const handleBeforeInstallPrompt = (e) => {
-      e.preventDefault();
-      console.log("📲 beforeinstallprompt captured");
-      setDeferredPrompt(e);
-      setShowInstallButton(true);
-    };
-
-    window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
-
-    return () => {
-      window.removeEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
-    };
-  }, []);
-
-
-
-  const handleInstallClick = async () => {
-    if (!deferredPrompt) return;
-    deferredPrompt.prompt();
-
-    const { outcome } = await deferredPrompt.userChoice;
-    console.log(`User ${outcome} the install prompt`);
-
-    // Clear state
-    setDeferredPrompt(null);
-    setShowInstallButton(false);
-  };
-
-
-  //==========
-
 
   return (
     <nav className="text-white p-2 shadow-md w-full bg-black">
@@ -67,14 +32,6 @@ export default function Navbar() {
             <Link className="hover:underline" to="/Qr" title="Payment QR Code">
               <FaQrcode size="20" />
             </Link>
-            {showInstallButton && (
-              <Link
-                onClick={handleInstallClick}
-                className="hover:underline" title="Install App"
-              >
-                <FaDownload size="20"/>
-              </Link>)}
-            
           </div>
           {(rates.gold24K > 0 || rates.silver > 0) &&
             <div className="flex justify-start gap-4">

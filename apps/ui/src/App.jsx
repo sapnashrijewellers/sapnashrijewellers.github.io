@@ -8,6 +8,7 @@ import Calculator from './pages/Calculator.jsx';
 import QrCode from './pages/QrCode.jsx';
 import PrivacyPolicy from './pages/PrivacyPolicy.jsx';
 import HUIDInfo from "./pages/HUIDInfo.jsx";
+import AboutUs from "./pages/AboutUs.jsx";
 import DefaultLayout from "./layouts/DefaultLayout";
 import TvLayout from "./layouts/TvLayout";
 import { useRegisterSW } from 'virtual:pwa-register/react';
@@ -61,6 +62,7 @@ export default function App() {
           <Route path="/qr" element={<QrCode />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/huid" element={<HUIDInfo />} />
+          <Route path="/about-us" element={<AboutUs />} />
         </Route>
         {/* TV Layout Route */}
         <Route element={<TvLayout />}>

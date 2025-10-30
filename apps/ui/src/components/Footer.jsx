@@ -67,13 +67,18 @@ export default function Footer() {
             
           </div>
         </div>
+        
  <div className="flex gap-4 ">
-        <p className="text-gray-500 text-sm mt-4">&copy; {new Date().getFullYear()} Sapna Shri Jewellers. All rights reserved.</p>
+        
       <a href="/#/privacy" className="text-sm mt-4">
               privacy policy
             </a>
+            <a href="/#/about-us" className="text-sm mt-4 gap-4">
+              हमारी पहचान
+            </a>
             </div>
       </div>
+      <p className="text-gray-500 text-sm mt-4">&copy; {new Date().getFullYear()} Sapna Shri Jewellers. All rights reserved.</p>
     </footer>
   );
 }

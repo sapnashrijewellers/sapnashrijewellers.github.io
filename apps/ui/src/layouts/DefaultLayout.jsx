@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import FooterTrust from "../components/FooterTrust";
 import { useState } from "react";
 import { FaQrcode, FaWhatsapp } from "react-icons/fa";
 import Ticker from "../components/Ticker"
@@ -33,10 +34,11 @@ export default function DefaultLayout() {
       {/* Main Content */}
       <div className="container mx-auto">
         <Navbar />
-         <Ticker />
+        <Ticker />
         <div className="p-4 max-w-6xl mx-auto">
           <Outlet />
-        </div>
+        </div>        
+        <FooterTrust />
         <Footer />
       </div>
     </>

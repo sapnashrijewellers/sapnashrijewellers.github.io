@@ -19,13 +19,32 @@ export default function HUIDInfo() {
         <li>हर ज्वेलरी का अलग HUID नंबर होता है — जैसे आपकी पहचान का आधार नंबर।</li>
         <li>यह BIS डेटाबेस में दर्ज रहता है, जिससे नकली या मिलावटी ज्वेलरी का खतरा कम होता है।</li>
         <li>HUID से खरीदार को पूरी पारदर्शिता और भरोसा मिलता है।</li>
+        <li>2 ग्राम से ज़्यादा वज़न वाले सभी सोने के गहनों की हॉलमार्किंग अनिवार्य है।</li>
+        <li>2 ग्राम से कम वज़न वाले सोने के गहनों को हॉलमार्किंग से छूट है।</li>
       </ul>
 
       <p className="text-gray-800 font-medium">
-        अगली बार जब आप सोना या चांदी खरीदें, तो <strong>HUID हॉलमार्क</strong> ज़रूर देखें — 
+        अगली बार जब आप सोना या चांदी खरीदें, तो <strong>HUID हॉलमार्क</strong> ज़रूर देखें —
         यही असली और सुरक्षित निवेश की पहचान है।
       </p>
+
+      <div className="bg-white border border-yellow-100 rounded-xl p-4">
+        <h3 className="text-yellow-700 font-semibold mb-2">
+          हॉलमार्क कहाँ देखें:
+        </h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <figure className="text-center">
+            <img
+              src="/img/hallmark-sample1.png"
+              alt="सोने की चूड़ी पर हॉलमार्क स्थान"
+              className="rounded-lg shadow-sm mx-auto"
+            />
+          </figure>
+        </div>
+      </div>
     </div>
+
+
   );
 }
 

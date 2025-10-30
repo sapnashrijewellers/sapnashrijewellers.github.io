@@ -63,6 +63,7 @@ export default function Navbar() {
           <div className="flex flex-wrap justify-end gap-4 mb-1">
             <Link className="hover:underline" to="/" title="Home Page">होम</Link>
             <Link className="hover:underline" to="/calculator" title="Price Calculator">कैलकुलेटर</Link>
+            <Link className="hover:underline" to="/huid" title="HUID हॉलमार्किंग क्यों ज़रूरी है?">हॉलमार्किंग</Link>
             <Link className="hover:underline" to="/Qr" title="Payment QR Code">
               <FaQrcode size="20" />
             </Link>

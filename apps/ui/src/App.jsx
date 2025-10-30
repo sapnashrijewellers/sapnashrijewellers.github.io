@@ -4,9 +4,10 @@ import Home from "./pages/Home";
 import Category from "./pages/Category";
 import ProductDetail from "./pages/ProductDetail";
 import TV from "./pages/tv";
-import Calculator from './pages/Calculator.jsx'
-import QrCode from './pages/QrCode.jsx'
-import PrivacyPolicy from './pages/PrivacyPolicy.jsx'
+import Calculator from './pages/Calculator.jsx';
+import QrCode from './pages/QrCode.jsx';
+import PrivacyPolicy from './pages/PrivacyPolicy.jsx';
+import HUIDInfo from "./pages/HUIDInfo.jsx";
 import DefaultLayout from "./layouts/DefaultLayout";
 import TvLayout from "./layouts/TvLayout";
 import { useRegisterSW } from 'virtual:pwa-register/react';
@@ -59,12 +60,13 @@ export default function App() {
           <Route path="/calculator" element={<Calculator />} />
           <Route path="/qr" element={<QrCode />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/huid" element={<HUIDInfo />} />
         </Route>
         {/* TV Layout Route */}
         <Route element={<TvLayout />}>
           <Route path="/tv" element={<TV />} />
         </Route>
       </Routes>
-    </DataProvider>
+    </DataProvider >
   );
 }

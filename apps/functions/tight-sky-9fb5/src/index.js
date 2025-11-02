@@ -35,6 +35,10 @@ async function handleRequest(request, env) {
 			return await subscribeUser(request, env, headers);
 		}
 
+		if (url.pathname === "/subscription" && request.method === "DELETE") {
+			return deleteSubscription(request, env);
+		}
+
 		if (url.pathname === "/subscriptions") {
 			return await listSubs(env.USER_SUBSCRIPTIONS);
 		}
@@ -124,4 +128,24 @@ async function listSubs(USER_SUBSCRIPTIONS) {
 		headers: { 'Content-Type': 'application/json' },
 		status: 200
 	});
+}
+
+async function deleteSubscription(request, env) {
+
+	const key = await request.text();
+	//console.log("deleting: ",key);
+
+	if (!key) {
+		return new Response(
+			JSON.stringify({ error: "Missing subscription key in request body" }),
+			{ headers, status: 400 }
+		);
+	}
+
+	await env.USER_SUBSCRIPTIONS.delete(key);
+
+	return new Response(
+		JSON.stringify({ success: true, message: "Subscription deleted" }),
+		{ headers: { 'Content-Type': 'application/json' }, status: 200 }
+	);
 }

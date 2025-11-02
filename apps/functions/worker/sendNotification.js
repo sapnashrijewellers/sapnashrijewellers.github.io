@@ -19,22 +19,34 @@ webpush.setVapidDetails(
 );
 
 // 4. Payload (this will be encrypted)
-const payload = getNotificationMessage();
+const payload = await getNotificationMessage();
 
 await sendAll(webpush, payload);
 
 async function sendAll(webpush, payload) {
   const keys = await getAllSubscriptions();
-  
+
 
   // Create an array of Promises
-  const sendPromises = keys.map(async (key) => {
+  const sendPromises = keys.map(async (keyPair) => {
     try {
       const response = await webpush.sendNotification(
-        key.subscription, JSON.stringify(payload));
+        keyPair.subscription, JSON.stringify(payload));
       console.log("Push sent successfully:", response.statusCode);
     } catch (err) {
-      console.error("Push failed:", err.statusCode, err.body);
+      const status = err?.statusCode || err?.status || 0;
+
+      if (status === 410) {        
+        try {
+          await deleteSubscription(keyPair.userId);
+          console.log("Deleted expired subscription successfully.", keyPair);
+        } catch (deleteErr) {
+          console.error("Failed to delete expired subscription:", deleteErr);
+        }
+      } else {
+        console.error("Push failed:", status, err?.body || err?.message);
+      }
+
     }
   });
 
@@ -42,8 +54,9 @@ async function sendAll(webpush, payload) {
   await Promise.all(sendPromises);
 }
 
-function getNotificationMessage() {
-  const data = JSON.parse(readFileSync('data.json', 'utf8'));
+async function getNotificationMessage() {
+  const response = await fetch('https://sapnashrijewellers.github.io/static/data.json');
+  const data = await response.json();
 
   const body =
     `🙏 जय श्री कृष्णा - जय जिनेंद्र 🙏
@@ -64,13 +77,29 @@ function getNotificationMessage() {
 
   const options = {
     title: "भाव - सपना श्री ज्वैलर्स",
-    body: body,    
+    body: body,
 
   };
   return options;
 }
 
-async function getAllSubscriptions() {  
+async function getAllSubscriptions() {
   const res = await fetch("https://tight-sky-9fb5.ssjn.workers.dev/subscriptions");
   return await res.json()
+}
+
+async function deleteSubscription(userId) {
+  const res = await fetch("https://tight-sky-9fb5.ssjn.workers.dev/subscription", {
+    //const res = await fetch("http://localhost:8787/subscription", {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: userId,
+  });
+
+  if (!res.ok) {
+    throw new Error(`Failed to delete subscription: ${res.status}`);
+  }
+  return await res.json();
 }

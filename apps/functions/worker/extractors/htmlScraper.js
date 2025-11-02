@@ -28,12 +28,8 @@ export async function extractByClass(url, className) {
         }
 
         const dataHandler = {
-            element(element) {
-                // Set a flag to confirm we entered the element
-                elementFound = true;
-                // NOTE: We do not want to use element.remove() on children, 
-                // as that would rewrite the stream, which is not what we want 
-                // when only extracting.
+            element(element) {                
+                elementFound = true;                
             },
 
             // Called for every text chunk inside the selected element

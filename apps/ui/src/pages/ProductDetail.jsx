@@ -22,7 +22,7 @@ export default function ProductDetail() {
 
   const phone = "918234042231"; // India country code + number
   const message = encodeURIComponent(
-    `Hi, I want more details and discount on https://sapnashrijewellers.github.io/#/product/${product.id}`
+    `Hi, I want more details and discount on https://sapnashrijewellers.github.io/#/product/${category}/${product.id}`
   );
   const whatsappUrl = `https://wa.me/${phone}?text=${message}`;
   const driveURL = 'https://sapnashrijewellers.github.io/static/img/';

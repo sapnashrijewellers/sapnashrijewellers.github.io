@@ -1,7 +1,9 @@
 @import "tailwindcss";
 @import "tailwindcss/utilities";
 
-/* Global font & smoothing */
+/* ============================
+   GLOBAL FONT + BASE SETTINGS
+============================ */
 :root {
   font-family: 'Noto Sans Devanagari', Mangal, Arial, sans-serif;
   font-synthesis: none;
@@ -9,73 +11,168 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  color-scheme: light dark; /* allow system theme switching */
+  color-scheme: light dark;
+
+  /* === Default (Light Theme) Variables === */
+  --color-bg: #ffffff;
+  --color-text: #213547;
+  --color-primary: #FFD700;
+  --color-primary-dark: #B8860B;
+  --color-surface: #f5f5f5;
+  --color-border: #cbd5e1;
+  --color-accent: #fef3c7;
 }
 
-/* Light theme */
+/* ============================
+   THEME: DARK
+============================ */
+html.theme-dark {
+  --color-bg: #121212;
+  --color-text: rgba(255, 255, 255, 0.87);
+  --color-primary: #FFD700;
+  --color-primary-dark: #eab308;  
+  --color-surface: #1e1e1e;
+  --color-border: #3f3f3f;
+  --color-accent: #2a2a2a;
+}
+
+/* ============================
+   THEME: ROSE
+============================ */
+html.theme-rose {
+  --color-bg: #fff5f7;
+  --color-text: #4a001f;
+  --color-primary: #e11d48;
+  --color-primary-dark: #9f1239;
+  --color-surface: #ffe4e6;
+  --color-border: #fecdd3;
+  --color-accent: #fff1f2;
+}
+
+/* ============================
+   THEME: GOLD
+============================ */
+html.theme-gold {
+  --color-bg: #faf7f0;
+  --color-text: #3b2f1d;
+  --color-primary: #d4af37;
+  --color-primary-dark: #b8860b;
+  --color-surface: #fffbea;
+  --color-border: #facc15;
+  --color-accent: #fff3cd;
+}
+
+/* ============================
+   THEME: BLUE
+============================ */
+html.theme-blue {
+  --color-bg: #f0f8ff;
+  --color-text: #0f172a;
+  --color-primary: #1d4ed8;
+  --color-primary-dark: #1e40af;
+  --color-surface: #e0f2fe;
+  --color-border: #93c5fd;
+  --color-accent: #dbeafe;
+}
+
+/* ============================
+   THEME: PINK
+============================ */
+html.theme-pink {
+  --color-bg: #fff0f5;
+  --color-text: #3f0a1e;
+  --color-primary: #ec4899;
+  --color-primary-dark: #be185d;
+  --color-surface: #fce7f3;
+  --color-border: #f9a8d4;
+  --color-accent: #fbcfe8;
+}
+
+/* ============================
+   BASE ELEMENT STYLING
+============================ */
 html {
-  color: #213547;
-  background-color: #ffffff;
-}
-
-/* Dark theme overrides */
-html.dark {
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {
   font-weight: 500;
-  color: #FFD700;
+  color: var(--color-primary);
   text-decoration: inherit;
 }
-
 a:hover {
-  color: #FFD700;
+  color: var(--color-primary-dark);
 }
 
 button {
   transition: all 0.2s;
 }
-
 button:hover {
   opacity: 0.9;
 }
 
-
-
-/* Make inputs/selects visible in light and dark modes */
+/* ============================
+   INPUTS & FORMS
+============================ */
 input, select, textarea {
-  background-color: #ffffff;
-  color: #000000;
-  border: 1px solid #cbd5e1; /* gray-300 */
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
   border-radius: 0.5rem;
   padding: 0.5rem;
 }
 
-html.dark input,
-html.dark select,
-html.dark textarea {
-  background-color: #1f2937; /* gray-800 */
-  color: #ffffff;
-  border: 1px solid #374151; /* gray-700 */
+/* ============================
+   HEADINGS & CUSTOM CLASSES
+============================ */
+.au-h2 {
+  @apply text-3xl font-bold mb-8 text-center;
+  color: var(--color-primary-dark);
 }
 
+/* ============================
+   GOLD SHIMMER EFFECT
+============================ */
 @keyframes gold-shimmer {
   0%, 100% {
     text-shadow: 
       0 0 0.1rem #4a3400, 
       0.1rem 0.1rem 0.1rem #fff, 
-      0 0 0.5rem rgba(255, 237, 74, 0.4); /* Normal glow */
+      0 0 0.5rem rgba(255, 237, 74, 0.4);
   }
   50% {
     text-shadow: 
-      0 0 0.1rem #2e2000, /* Darker depth */
-      0.1rem 0.1rem 0.2rem #fff, /* Brighter, wider highlight */
-      0 0 0.8rem rgba(255, 237, 74, 0.8); /* Brighter glow */
+      0 0 0.1rem #2e2000,
+      0.1rem 0.1rem 0.2rem #fff,
+      0 0 0.8rem rgba(255, 237, 74, 0.8);
   }
 }
 
 .shimmer-gold {
-  animation: gold-shimmer 4s ease-in-out infinite; /* Slow, repeating animation */
+  animation: gold-shimmer 4s ease-in-out infinite;
+}
+
+/* ============================
+   UTILITY CLASSES FOR SURFACES
+============================ */
+.bg-surface {
+  background-color: var(--color-surface);
+}
+
+.bg-accent {
+  background-color: var(--color-accent);
+}
+
+.border-theme {
+  border-color: var(--color-border);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-primary-dark {
+  color: var(--color-primary-dark);
 }

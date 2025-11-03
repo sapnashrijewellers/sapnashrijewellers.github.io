@@ -36,10 +36,10 @@ export default function TV() {
       </div>
 
       {/* Details panel */}
-      <div className="flex flex-col gap-3 p-2 text-[2vw] md:text-[1.5vw] leading-tight overflow-hidden">
+      <div className="flex flex-col gap-3 p-2 text-2xl leading-tight overflow-hidden">
         {/* Product details */}
         <div>
-          <h1 className="font-extrabold mb-2 text-[3vw] md:text-[2.5vw]">
+          <h1 className="font-extrabold mb-2">
             {product.name}
           </h1>
           <p>

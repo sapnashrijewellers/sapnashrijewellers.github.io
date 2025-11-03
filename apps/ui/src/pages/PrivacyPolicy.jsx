@@ -2,194 +2,148 @@ import React from "react";
 
 export default function PrivacyPolicy() {
   return (
-    <div className="flex justify-center py-10 px-4">
-      <main className="max-w-[900px] w-full p-6 shadow-lg rounded-2xl">
-        <header className="mb-6">
-          <h1 className="text-2xl font-semibold mb-1">Privacy Policy</h1>
-          <p className="">
-            Sapna Shri Jewellers — Effective date: October 29, 2025
+    <div className="flex justify-center">
+      <main className="max-w-3xl w-full">
+        {/* Header */}
+        <header className="mb-6 border-b border-border pb-3">
+          <h1 className="text-3xl font-bold mb-1">Privacy Policy</h1>
+          <p className="text-sm text-muted-foreground">
+            Sapna Shri Jewellers — Effective date: <time dateTime="2025-10-29">October 29, 2025</time>
           </p>
         </header>
 
-        <section className="leading-relaxed mb-5">
-          <p>
-            This Privacy Policy explains how <strong>Sapna Shri Jewellers</strong>{" "}
-            ("we", "us", or "our") collects, uses, stores and discloses information
-            when you use our Progressive Web App (PWA) and the Android app (TWA)
-            that wraps it. Our website and app are intended as a public catalogue
-            of products; we do <strong>not</strong> collect personal information
-            except for push notification subscription details as described below.
-          </p>
-        </section>
-
-        <h2 className="text-xl font-semibold mt-5 mb-2 text-gray-800">
-          Summary (short)
-        </h2>
-        <section className="leading-relaxed mb-5">
-          <ul className="list-disc ml-5 space-y-1">
+        {/* Summary */}
+        <Section title="Summary (short)">
+          <ul className="list-disc pl-6 space-y-1">
             <li>We only collect push notification subscription data.</li>
+            <li>We do <strong>not</strong> use cookies, analytics, or user tracking.</li>
             <li>
-              We do <strong>not</strong> use cookies, analytics, or user tracking.
+              Hosting: GitHub Pages and Cloudflare Workers & KV (free tier) are used to serve
+              the site and store push subscription objects.
             </li>
-            <li>
-              Hosting: GitHub Pages and Cloudflare Workers & KV (free tier) are
-              used to serve the site and store push subscription objects.
-            </li>
-            <li>
-              You can unsubscribe from push notifications at any time via the app
-              or your browser settings.
-            </li>
+            <li>You can unsubscribe from push notifications at any time via the app or browser.</li>
           </ul>
-        </section>
+        </Section>
+
+        {/* Intro */}
+        <Section>
+          <p>
+            This Privacy Policy explains how <strong>Sapna Shri Jewellers</strong> ("we", "us", or "our")
+            collects, uses, stores, and discloses information when you use our Progressive Web App (PWA)
+            and Android Trusted Web Activity (TWA). We do <strong>not</strong> collect personal
+            information except for minimal push notification subscription data.
+          </p>
+        </Section>
 
         <Section title="Information we collect">
           <p>
-            <strong>Push subscription data only.</strong> When you opt in to receive
-            push notifications we will store the minimal subscription information
-            required to send pushes. This typically includes:
+            <strong>Push subscription data only:</strong> When you opt in to receive notifications,
+            we store only the minimal subscription information required to send them. This includes:
           </p>
-          <ul className="list-disc ml-5 space-y-1">
+          <ul className="list-disc pl-6 space-y-1 mt-2">
+            <li><strong>Endpoint URL</strong> — The browser-managed push service URL.</li>
             <li>
-              <strong>Endpoint URL</strong> — the push service endpoint (a URL
-              managed by the browser or platform).
+              <strong>Public cryptographic keys</strong> (<code className="bg-muted px-1 rounded">p256dh</code>,
+              <code className="bg-muted px-1 rounded">auth</code>) for encrypted delivery.
             </li>
-            <li>
-              <strong>Public key / cryptographic keys</strong> (e.g.{" "}
-              <code className="bg-gray-500 px-1 rounded">p256dh</code> and{" "}
-              <code className="bg-gray-500 px-1 rounded">auth</code> tokens) used
-              for encrypted push delivery.
-            </li>
-            <li>
-              <strong>Optional metadata</strong> such as subscription timestamp and
-              platform (e.g. "android" or "web").
-            </li>
+            <li><strong>Optional metadata</strong> — timestamp and platform info.</li>
           </ul>
-          <p>
-            We do <strong>not</strong> collect your name, email, phone number,
-            location, payment information, or any other personal identifiers as
-            part of normal site usage.
+          <p className="mt-2">
+            We do <strong>not</strong> collect names, emails, phone numbers, locations, or payment details.
           </p>
         </Section>
 
         <Section title="How we use the information">
-          <p>Subscription data is used solely to deliver push notifications you opted into. Examples:</p>
-          <ul className="list-disc ml-5 space-y-1">
+          <p>Subscription data is used <strong>only</strong> to deliver the notifications you opted into, e.g.:</p>
+          <ul className="list-disc pl-6 space-y-1 mt-2">
             <li>Announcements about new collections or offers.</li>
-            <li>Order or service related messages (if opted in).</li>
+            <li>Service-related alerts (if enabled).</li>
           </ul>
-          <p>We do not use subscription data for profiling, advertising, or third-party marketing.</p>
+          <p className="mt-2">
+            We never use subscription data for profiling, advertising, or third-party marketing.
+          </p>
         </Section>
 
         <Section title="Storage & hosting">
           <p>
-            Your subscription data is stored on Cloudflare Workers and KV (free
-            tier) that we operate. Cloudflare may process or cache requests per
-            their policies. Hosting is provided by GitHub Pages.
+            Subscription data is stored securely on <strong>Cloudflare Workers and KV (free tier)</strong>.
+            Hosting is provided by GitHub Pages. Cloudflare may temporarily cache requests as per their
+            privacy policies.
           </p>
-          <p>
-            <strong>Important:</strong> We retain push subscription entries only as
-            long as necessary to send notifications and until you unsubscribe.
+          <p className="mt-2">
+            We retain subscription entries <strong>only as long as needed</strong> to deliver notifications
+            and remove them upon unsubscription.
           </p>
         </Section>
 
         <Section title="Cookies & tracking">
           <p>
-            We do <strong>not</strong> use cookies for analytics or tracking. We
-            do not embed third-party analytics or advertising scripts. Any future
-            third-party additions will be disclosed.
+            We do <strong>not</strong> use cookies, analytics tools, or third-party trackers. Any
+            future additions will be clearly disclosed and optional.
           </p>
         </Section>
 
         <Section title="Third parties">
           <p>
-            We may use third-party services (GitHub Pages, Cloudflare) to host or
-            deliver content. They only process minimal data to serve the app. We do
-            not share subscription data with advertisers or analytics companies.
+            We use GitHub Pages and Cloudflare solely for hosting and delivery. They process minimal
+            data necessary to serve content and <strong>do not</strong> have access to push subscription data.
           </p>
         </Section>
 
         <Section title="Your rights & choices">
-          <p>
-            <strong>Unsubscribe from push notifications:</strong> You can revoke
-            push permission in multiple ways:
-          </p>
-          <ul className="list-disc ml-5 space-y-1">
-            <li>Use unsubscribe controls in the app/site (if available).</li>
-            <li>
-              From your browser or Android settings, disable notifications for
-              Sapna Shri Jewellers.
-            </li>
+          <p><strong>To unsubscribe from notifications:</strong></p>
+          <ul className="list-disc pl-6 space-y-1 mt-2">
+            <li>Use unsubscribe controls in the app or website (if available).</li>
+            <li>Disable notifications for Sapna Shri Jewellers in your browser or device settings.</li>
             <li>Uninstall the app or clear site permissions.</li>
           </ul>
-          <p>
-            To request deletion of your stored data, contact us at{" "}
-            <a
-              href="mailto:privacy@sapnashrijewellers.in"
-              className="underline text-gray-800"
-            >
+          <p className="mt-2">
+            For deletion requests, contact us at{" "}
+            <a href="mailto:privacy@sapnashrijewellers.in" className="text-accent underline">
               privacy@sapnashrijewellers.in
-            </a>
-            .
+            </a>.
           </p>
         </Section>
 
         <Section title="Security">
           <p>
-            We use reasonable technical and organizational measures to protect
-            stored subscription data. Access is restricted to authorized systems.
-            However, no internet transmission is 100% secure — contact us at{" "}
-            <a
-              href="mailto:privacy@sapnashrijewellers.in"
-              className="underline text-gray-800"
-            >
+            We apply reasonable technical and organizational safeguards to protect stored data.
+            However, no system is entirely secure. If you suspect unauthorized access, contact us at{" "}
+            <a href="mailto:privacy@sapnashrijewellers.in" className="text-accent underline">
               privacy@sapnashrijewellers.in
-            </a>{" "}
-            if you believe your data has been compromised.
+            </a>.
           </p>
         </Section>
 
         <Section title="Children">
           <p>
-            Our site and app are for general audiences and not directed toward
-            children under 13. If a child has provided data, contact us for
-            removal.
+            Our site is for general audiences and not directed to children under 13. If a child’s data
+            has been submitted, contact us for prompt deletion.
           </p>
         </Section>
 
         <Section title="Changes to this policy">
           <p>
-            We may update this policy periodically. The “Effective date” above
-            shows the latest revision. Continued use means acceptance of changes.
+            We may update this Privacy Policy periodically. The “Effective date” above reflects the
+            latest version. Continued use signifies acceptance of the updated terms.
           </p>
         </Section>
 
         <Section title="Contact">
-          <p>
-            If you have questions or requests regarding this policy, contact:
-          </p>
-          <p>
+          <p>For questions or requests regarding this policy, contact:</p>
+          <address className="not-italic mt-2">
             <strong>Sapna Shri Jewellers</strong>
             <br />
             Email:{" "}
-            <a
-              href="mailto:privacy@sapnashrijewellers.in"
-              className="underline text-gray-800"
-            >
+            <a href="mailto:privacy@sapnashrijewellers.in" className="text-accent underline">
               privacy@sapnashrijewellers.in
-            </a>
-            <br />
-            Hosted on: GitHub Pages and Cloudflare Workers & KV (free tier)
-          </p>
-          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 rounded-md text-yellow-900">
-            Please replace{" "}
-            <code className="bg-gray-100 px-1 rounded">
-              privacy@sapnashrijewellers.in
-            </code>{" "}
-            with your real contact email before publishing this page.
-          </div>
+            </a>          
+          </address>
+
+          
         </Section>
 
-        <footer className="mt-8 text-sm text-gray-600">
+        <footer className="mt-10 text-xs text-muted-foreground border-t border-border pt-3">
           <p>Last updated: October 29, 2025</p>
         </footer>
       </main>
@@ -199,10 +153,8 @@ export default function PrivacyPolicy() {
 
 function Section({ title, children }) {
   return (
-    <section className="leading-relaxed mb-5">
-      {title && (
-        <h2 className="text-xl font-semibold mt-5 mb-2 text-gray-800">{title}</h2>
-      )}
+    <section className="leading-relaxed mb-6">
+      {title && <h2 className="text-xl font-semibold mt-6 mb-3 text-foreground">{title}</h2>}
       {children}
     </section>
   );

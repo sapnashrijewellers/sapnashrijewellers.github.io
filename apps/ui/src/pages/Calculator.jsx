@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import IndianRupeeRate from "../components/IndianRupeeRate";
 import { useData } from "../context/DataContext";
 
-const Calculator = () => {
+export default function Calculator() {
   const { rates } = useData();
 
-  const initialProd = {
+  const initialState = {
     category: "gold",
     purity: "gold22K",
     weight: 10,
@@ -13,29 +13,27 @@ const Calculator = () => {
     gst: 3,
   };
 
-  const [form, setForm] = useState(initialProd);
+  const [form, setForm] = useState(initialState);
   const [purityOptions, setPurityOptions] = useState([]);
   const [price, setPrice] = useState(null);
 
-  // map for user-friendly labels
-  const purityLabels = {    
-    gold22K: "सोना (22K)",
+  // user-friendly purity labels
+  const purityLabels = {
     gold24K: "सोना (24K)",
+    gold22K: "सोना (22K)",
     gold18K: "सोना (18K)",
     silver: "चाँदी (99.9)",
     silverJewellery: "चाँदी (जेवर)",
   };
 
-  // Update purity dropdown when category changes
+  // dynamically update purity options on category change
   useEffect(() => {
     if (!rates) return;
 
-    let options = [];
-    if (form.category === "gold") {
-      options = ["gold24K", "gold22K", "gold18K"];
-    } else {
-      options = ["silver", "silverJewellery"];
-    }
+    const options =
+      form.category === "gold"
+        ? ["gold24K", "gold22K", "gold18K"]
+        : ["silver", "silverJewellery"];
 
     setPurityOptions(options);
 
@@ -51,10 +49,9 @@ const Calculator = () => {
 
   const getRatePerGram = () => {
     if (!rates) return 0;
-    if (form.purity === "silverJewellery") {
-      return rates.silver * 0.92;
-    }
-    return rates[form.purity] || 0;
+    return form.purity === "silverJewellery"
+      ? rates.silver * 0.92
+      : rates[form.purity] || 0;
   };
 
   const calculatePrice = () => {
@@ -63,7 +60,7 @@ const Calculator = () => {
     const gstPercent = parseFloat(form.gst);
     const rate = getRatePerGram();
 
-    if (!rate || isNaN(weight)) {
+    if (!rate || isNaN(weight) || weight <= 0) {
       alert("कृपया सही वजन और शुद्धता चुनें");
       return;
     }
@@ -74,36 +71,39 @@ const Calculator = () => {
     const gstAmount = (gstPercent / 100) * totalBeforeGst;
     const finalPrice = totalBeforeGst + gstAmount;
 
-    setPrice(finalPrice); // ✅ keep as number
+    setPrice(finalPrice);
   };
 
+  const inputClasses =
+    "w-full border border-border bg-background text-foreground rounded-lg px-3 py-2 focus:ring-2 focus:ring-accent focus:outline-none transition";
+
+  const labelClasses = "block mb-1 font-medium text-muted-foreground";
+
   return (
-    <div className="max-w-lg mx-auto p-6 bg-gray-900 shadow-lg rounded-2xl">
-      <h2 className="text-2xl font-bold mb-4 text-center">
+    <div className="max-w-lg mx-auto p-6 bg-card text-card-foreground shadow-lg rounded-2xl">
+      <h2 className="text-2xl font-bold mb-6 text-center text-accent">
         ज्वेलरी प्राइस कैलकुलेटर
       </h2>
 
       {/* Category */}
-      <label className="block mb-2 font-medium">आभूषण का प्रकार</label>
+      <label className={labelClasses}>आभूषण का प्रकार</label>
       <select
         name="category"
         value={form.category}
         onChange={handleChange}
-        className="bg-white text-black dark:bg-gray-900 dark:text-white w-full border rounded p-2 mb-4"
+        className={`${inputClasses} mb-4`}
       >
         <option value="gold">सोना</option>
         <option value="silver">चाँदी</option>
       </select>
 
       {/* Purity */}
-      <label className="block mb-2 font-medium">
-        शुद्धता
-      </label>
+      <label className={labelClasses}>शुद्धता</label>
       <select
         name="purity"
         value={form.purity}
         onChange={handleChange}
-        className="bg-white text-black dark:bg-gray-900 dark:text-white w-full border rounded p-2 mb-4"
+        className={`${inputClasses} mb-4`}
       >
         {purityOptions.map((p) => (
           <option key={p} value={p}>
@@ -113,53 +113,59 @@ const Calculator = () => {
       </select>
 
       {/* Weight */}
-      <label className="block mb-2 font-medium">वज़न (grams)</label>
+      <label className={labelClasses}>वज़न (ग्राम में)</label>
       <input
         type="number"
         name="weight"
         value={form.weight}
         onChange={handleChange}
-        className="bg-white text-black dark:bg-gray-900 dark:text-white w-full border rounded p-2 mb-4"
+        className={`${inputClasses} mb-4`}
       />
 
       {/* Making Charges */}
-      <label className="block mb-2 font-medium">आभूषण बनाने का शुल्क (%)</label>
+      <label className={labelClasses}>आभूषण बनाने का शुल्क (%)</label>
       <input
         type="number"
         name="makingCharges"
         value={form.makingCharges}
         onChange={handleChange}
-        className="bg-white text-black dark:bg-gray-900 dark:text-white w-full border rounded p-2 mb-4"
+        className={`${inputClasses} mb-4`}
       />
 
       {/* GST */}
-      <label className="block mb-2 font-medium">GST (%)</label>
+      <label className={labelClasses}>GST (%)</label>
       <select
         name="gst"
         value={form.gst}
         onChange={handleChange}
-        className="bg-white text-black dark:bg-gray-900 dark:text-white w-full border rounded p-2 mb-4"
+        className={`${inputClasses} mb-6`}
       >
         <option value="3">3%</option>
         <option value="5">5%</option>
       </select>
 
+      {/* Calculate Button */}
       <button
         onClick={calculatePrice}
-        className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
+        className="
+          w-full bg-accent text-accent-foreground font-semibold
+          py-2 rounded-lg shadow-md hover:shadow-lg hover:bg-accent/90
+          transition
+        "
       >
-        कैलकुलेट
+        कैलकुलेट करें
       </button>
 
+      {/* Result Section */}
       {price !== null && (
-        <div className="mt-6 p-4 bg-green-100 border border-green-300 rounded-lg text-center">
-          <h3 className="text-lg font-semibold text-black">कुल कीमत</h3>
-
-          <IndianRupeeRate rate={Number(price)} className="text-2xl font-bold text-green-800" /> {/* ✅ ensure number */}
+        <div className="mt-6 p-4 bg-muted border border-border rounded-lg text-center">
+          <h3 className="text-lg font-semibold mb-2">कुल कीमत</h3>
+          <IndianRupeeRate
+            rate={Number(price)}
+            className="text-2xl font-bold text-accent"
+          />
         </div>
       )}
     </div>
   );
-};
-
-export default Calculator;
+}

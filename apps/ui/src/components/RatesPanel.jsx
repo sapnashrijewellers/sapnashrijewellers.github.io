@@ -13,7 +13,7 @@ export default function RatesPanel() {
   ];
 
   return (
-    <div className="flex flex-col gap-6 p-6 w-full bg-gray-900 rounded-2xl">
+    <div className="mt-3 flex flex-col gap-6 p-6 w-full bg-accent border rounded-2xl">
       <div>
         <span className="animate-pulse w-3 h-3 bg-red-500 rounded-full inline-block p-1"></span>&nbsp;
         लाइव रेट * {new Date(rates.asOn).toLocaleString("en-IN", {
@@ -30,15 +30,14 @@ export default function RatesPanel() {
         .map((item, idx) => (
           <div
             key={idx}
-            className="flex justify-between items-center text-3xl border-b border-yellow-700 pb-2"
+            className="flex justify-between items-center text-3xl border-b pb-2"
           >
-            <span className="flex items-center gap-2">              
+            <span className="text-primary flex items-center gap-2">
               {item.label}:
             </span>
-            <IndianRupeeRate rate={item.value} className="text-green-500" />
+            <IndianRupeeRate rate={item.value} className="" />
           </div>
         ))}
-
     </div>
   );
 }

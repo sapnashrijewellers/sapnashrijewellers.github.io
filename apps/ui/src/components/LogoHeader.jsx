@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function LogoHeader() {
   return (
-    <div className="w-full flex items-center justify-between p-4 bg-black">
+    <div className="w-full flex items-center justify-between p-4">
       {/* Left: Logo */}
       <Link to="/" className="flex items-center">
         <img
@@ -14,7 +14,7 @@ export default function LogoHeader() {
 
       {/* Right: Shop Name */}
       <h1
-        className="text-5xl sm:text-7xl font-bold text-yellow-400 shimmer-gold text-right"
+        className="text-5xl sm:text-7xl font-bold text-primary shimmer-gold text-right"
         style={{
           textShadow: `0 0 0.1rem #4a3400,
                        0.1rem 0.1rem 0.1rem #fff,

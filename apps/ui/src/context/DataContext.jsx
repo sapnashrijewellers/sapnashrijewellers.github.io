@@ -1,33 +1,59 @@
 import { createContext, useContext, useState, useEffect, useCallback } from "react";
 
 const DataContext = createContext(null);
-const dataURL ="https://sapnashrijewellers.github.io/static/data.json";
+
+const PRODUCTS_URL = "https://sapnashrijewellers.github.io/static/data.json";
+const RATES_URL = "https://sapnashrijewellers.github.io/static/rates.json";
 
 export function DataProvider({ children }) {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState({ products: null, rates: null });
   const [isLoading, setIsLoading] = useState(true);
 
   // --- Core Fetch Function ---
   const fetchAndProcessData = useCallback(async () => {
     try {
-      const res = await fetch(dataURL, { cache: "no-cache" });
-      if (!res.ok) throw new Error(`Failed to fetch data.json: ${res.status}`);
+      // Fetch both data.json and rates.json in parallel
+      const [productsRes, ratesRes] = await Promise.all([
+        fetch(PRODUCTS_URL, { cache: "no-cache" }),
+        fetch(RATES_URL, { cache: "no-cache" }),
+      ]);
 
-      const rawData = await res.json();
-      
-      setData(rawData);
+      if (!productsRes.ok) throw new Error(`Failed to fetch data.json: ${productsRes.status}`);
+      if (!ratesRes.ok) throw new Error(`Failed to fetch rates.json: ${ratesRes.status}`);
+
+      const [productsData, ratesData] = await Promise.all([
+        productsRes.json(),
+        ratesRes.json(),
+      ]);
+
+      const mergedData = { products: productsData, rates: ratesData };
+      setData(mergedData);
       setIsLoading(false);
+
+      // Update cache
+      if ("caches" in window) {
+        const cache = await caches.open("ssj-data-cache-v3");
+        await cache.put(PRODUCTS_URL, new Response(JSON.stringify(productsData)));
+        await cache.put(RATES_URL, new Response(JSON.stringify(ratesData)));
+      }
+
     } catch (err) {
       console.error("Data fetch failed:", err);
 
       // Attempt to load from cache (offline fallback)
       try {
         if ("caches" in window) {
-          const cache = await caches.open("ssj-data-cache-v2");
-          const cachedRes = await cache.match(dataURL);
-          if (cachedRes) {
-            const cachedData = await cachedRes.json();            
-            setData(cachedData);
+          const cache = await caches.open("ssj-data-cache-v3");
+          const [cachedProducts, cachedRates] = await Promise.all([
+            cache.match(PRODUCTS_URL),
+            cache.match(RATES_URL),
+          ]);
+
+          const cachedProductsData = cachedProducts ? await cachedProducts.json() : null;
+          const cachedRatesData = cachedRates ? await cachedRates.json() : null;
+
+          if (cachedProductsData || cachedRatesData) {
+            setData({ products: cachedProductsData, rates: cachedRatesData });
           }
         }
       } catch (cacheErr) {
@@ -43,10 +69,10 @@ export function DataProvider({ children }) {
     fetchAndProcessData();
   }, [fetchAndProcessData]);
 
-  // --- Background refresh when tab becomes visible ---
+  // --- Refresh when tab becomes visible ---
   useEffect(() => {
     const handleVisibilityChange = () => {
-      if (document.visibilityState === "visible") {        
+      if (document.visibilityState === "visible") {
         fetchAndProcessData();
       }
     };
@@ -54,14 +80,14 @@ export function DataProvider({ children }) {
     return () => document.removeEventListener("visibilitychange", handleVisibilityChange);
   }, [fetchAndProcessData]);
 
-  // --- Periodic refresh 
+  // --- Periodic refresh every minute ---
   useEffect(() => {
     const interval = setInterval(fetchAndProcessData, 60 * 1000);
     return () => clearInterval(interval);
   }, [fetchAndProcessData]);
 
   if (isLoading) return <div>Loading latest data...</div>;
-  if (!data) return <div>Data not available. Please try again later.</div>;
+  if (!data.products && !data.rates) return <div>Data not available. Please try again later.</div>;
 
   return (
     <DataContext.Provider value={{ ...data, isLoading }}>

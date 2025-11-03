@@ -52,22 +52,58 @@ export default function AboutUs() {
   ];
 
   const popularSearches = [
-    "Gold bangles designs",
-    "Diamond rings for engagement",
-    "Kalyan gold coins for Akshaya Tritiya",
-    "Bridal jewellery sets India",
-    "Lightweight gold chains for men",
-    "Temple jewellery collections",
-    "Daily wear gold rings",
-    "Silver jewellery online",
-    "Platinum couple bands",
-  ];
+  { search: "Gold bangles designs", category: "सोने की चूड़ी" },
+  { search: "Diamond rings for engagement", category: "गोल्ड लेडीज रिंग" },
+  { search: "Gold coins for Akshaya Tritiya", category: "गोल्ड कॉइन और बार" },
+  { search: "Bridal jewellery sets India", category: "सोने का हार" },
+  { search: "Lightweight gold chains for men", category: "सोने की चैन" },
+  { search: "Temple jewellery collections", category: "सांवरिया सेठ रिंग" },
+  { search: "Daily wear gold rings", category: "गोल्ड जेंट्स रिंग" },
+  { search: "Silver jewellery online", category: "silver fancy jewellery" }  
+];
 
   const faqs = [
-    { q: "मैं अपना ऑर्डर कैसे ट्रैक कर सकता हूँ?", a: "आप हमारे ऑर्डर ट्रैकिंग पेज पर जाकर या ऑर्डर नंबर दर्ज करके अपने ऑर्डर की स्थिति देख सकते हैं।" },
-    { q: "रिंग साइज गाइड क्या है?", a: "हमारी वेबसाइट पर रिंग साइज चार्ट उपलब्ध है। आप अपने पुराने रिंग को मापकर सही साइज चुन सकते हैं।" },
-    { q: "क्या सपना श्री ज्वेलर्स नागदा में BIS हॉलमार्किंग उपलब्ध है?", a: "हाँ, हमारे सभी सोने के गहने BIS 916 हॉलमार्क शुद्धता के प्रमाण के साथ आते हैं।" },
-  ];
+  { 
+    q: "मैं अपना ऑर्डर कैसे ट्रैक कर सकता हूँ?", 
+    a: "आप हमारे ऑर्डर ट्रैकिंग पेज पर जाकर या ऑर्डर नंबर दर्ज करके अपने ऑर्डर की स्थिति देख सकते हैं।" 
+  },
+  { 
+    q: "रिंग साइज गाइड क्या है?", 
+    a: "हमारी वेबसाइट पर रिंग साइज चार्ट उपलब्ध है। आप अपने पुराने रिंग को मापकर सही साइज चुन सकते हैं।" 
+  },
+  { 
+    q: "क्या सपना श्री ज्वेलर्स नागदा में BIS हॉलमार्किंग उपलब्ध है?", 
+    a: "हाँ, हमारे सभी सोने के गहने BIS 916 हॉलमार्क शुद्धता के प्रमाण के साथ आते हैं।" 
+  },
+  {
+    q: "क्या नागदा में सपना श्री ज्वेलर्स का शो रूम 300 मीटर के भीतर है?",
+    a: "हाँ, हमारा शो रूम रेलवे स्टेशन के बहुत पास है — पैदल चलकर आसानी से पहुँचा जा सकता है।"
+  },
+  {
+    q: "क्या सपना श्री ज्वेलर्स के नागदा शो रूम परिवार के लिए उपयुक्त हैं?",
+    a: "बिलकुल, हमारे शो रूम पूरी तरह परिवार-अनुकूल हैं। यहाँ आरामदायक वातावरण और सभी आयु वर्ग के ग्राहकों के लिए सुविधाएँ उपलब्ध हैं।"
+  },
+  {
+    q: "क्या मैं नागदा के मेट्रो स्टेशन या बस स्टॉप से सपना श्री ज्वेलर्स तक पैदल जा सकता हूँ?",
+    a: "हाँ, हमारा शो रूम प्रमुख बस स्टॉप और रेलवे स्टेशन से पैदल दूरी पर ही है, इसलिए आसानी से पहुँचा जा सकता है।"
+  },
+  {
+    q: "मैं नागदा में सबसे नज़दीकी सपना श्री ज्वेलर्स शो रूम कैसे ढूँढ सकता हूँ?",
+    a: "आप हमारी वेबसाइट या गूगल मैप्स पर 'Sapna Shri Jewellers Nagda' सर्च करके सबसे नज़दीकी शाखा का पता और दिशा-निर्देश प्राप्त कर सकते हैं।"
+  },
+  {
+    q: "क्या मैं आने से पहले ऑनलाइन प्रोडक्ट्स देख सकता हूँ?",
+    a: "हाँ, हमारे सभी नए उत्पाद हमारी वेबसाइट पर सूचीबद्ध हैं। हालाँकि, हमारे ऑफलाइन शो रूम में इससे भी अधिक कलेक्शन उपलब्ध हैं।"
+  },
+  {
+    q: "क्या नागदा स्टोर्स में गोल्ड कॉइन और ब्राइडल सेट उपलब्ध हैं?",
+    a: "हाँ, हमारे यहाँ 22 कैरेट और 24 कैरेट गोल्ड के साथ-साथ 99.9% शुद्धता वाले गोल्ड और सिल्वर बार व कॉइन उपलब्ध हैं।"
+  },
+  {
+    q: "क्या इंदौर के स्टोर्स में BIS हॉलमार्किंग उपलब्ध है?",
+    a: "हाँ, इंदौर के सभी स्टोर्स में 2 ग्राम से अधिक वज़न वाले सभी सोने के गहने HUID प्रमाणित और BIS हॉलमार्क वाले हैं।"
+  }
+];
 
   const certificates = [
     {
@@ -209,10 +245,10 @@ export default function AboutUs() {
         <h2 className="au-h2">लोकप्रिय खोजें – Sapna Shri Jewellers पर</h2>
         <div className="flex flex-wrap justify-center gap-3">
           {popularSearches.map((item, index) => {
-            const link = `/category/${encodeURIComponent(item.toLowerCase().replace(/\s+/g, "-"))}`;
+            const link = `/#/category/${encodeURIComponent(item.category)}`;
             return (
               <a key={index} href={link} className="px-4 py-2 bg-accent border border-theme rounded-full text-sm md:text-base font-medium hover:opacity-80 transition-all">
-                {item}
+                {item.search}
               </a>
             );
           })}

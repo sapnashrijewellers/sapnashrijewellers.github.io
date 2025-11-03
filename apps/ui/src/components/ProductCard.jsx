@@ -41,10 +41,10 @@ export default function ProductCard({ product }) {
 
         {/* Product Info */}
         <div className="p-3">
-          <h2 className="font-semibold text-sm md:text-base truncate">
+          <h2 className="">
             {product.name}
           </h2>
-          <div className="flex justify-between text-xs font-medium mt-1">
+          <div className="flex justify-between font-medium mt-1">
             <span>{product.purity}</span>
             <span>{product.weight} gm</span>
           </div>

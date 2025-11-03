@@ -79,7 +79,7 @@ export default function Navbar() {
                   सोना (24K):
                   <IndianRupeeRate
                     rate={rates.gold24K * 10}
-                    className="text-success"
+                    className="text-primary"
                   />
                 </span>
               </span>
@@ -87,7 +87,7 @@ export default function Navbar() {
                 सोना (22K):
                 <IndianRupeeRate
                   rate={rates.gold22K * 10}
-                  className="text-success"
+                  className="text-primary"
                 />
               </span>
             </div>
@@ -100,7 +100,7 @@ export default function Navbar() {
                   चाँदी (99.9):
                   <IndianRupeeRate
                     rate={rates.silver * 1000}
-                    className="text-success"
+                    className="text-primary"
                   />
                 </span>
               </span>
@@ -108,7 +108,7 @@ export default function Navbar() {
                 चाँदी (जेवर):
                 <IndianRupeeRate
                   rate={rates.silver * 1000 * 0.92}
-                  className="text-success"
+                  className="text-primary"
                 />
               </span>
             </div>

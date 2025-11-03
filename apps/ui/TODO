@@ -16,39 +16,25 @@ Todo:
   ✔ Push notification @done(25-11-02 08:56)
   ✔ Popup to install App @done(25-10-12 13:51)
   ✔ Too many configuration for localhost and live, need environment specific config @done(25-11-02 08:56)
-  ☐ test cases for all apps
-  ☐ Add multiple color themes, festival theme
-  ☐ Share --> WhatsApp, Telegram, SnapChat, Instagram
-  ☐ Like products, delete liked products
-  ☐ Wish list  
-  ☐ Browsing history, clear browsing history
-  ☐ Show Liked products
-  ☐ Auto login using google and facebook, continue as
-  ☐ Product added date for new products
-  ☐ Remove hash routing
-  ☐ Product search, voice search integration
-  ☐ Staging website to demo
-  ☐ Today's deals
-  ☐ Bestsellers
-  ☐ Send as gift
+ 
   ✔ FAQs: @done(25-11-03 07:40)
-    ☐ Is there a jewellery showroom within 300 meters in Nagda? answer must say its very close to railway station, walkable distance
-    ☐ Are sapna shri Jewellers showrooms in Nagda family-friendly?
-    ☐ Can I walk to a sapna shri Jewellers showroom from metro stations or bus stops in Nagda?
-    ☐ How can I find the nearest sapna shri Jewellers showroom in Nagda?
-    ☐ Can I view products online before visiting? answer on below lnes: all new products are listed on website, offline have even more collections
-    ☐ Do Nagda stores carry gold coins and bridal sets? answer must be based on: yeshave 22K and 24K and 99.9% purity gold and silver bar and coins
-    ☐ Is BIS hallmarking available in Indore stores? Answer must be based on below lines: all gold jewelleries above 2 gms are HUID certified 
-  ☐ Popular Jewellery Searches on Kalyan Jewellers @started(25-11-03 09:18)
-    ☐ Gold bangles designs | @started(25-11-03 09:18)
-    ☐ Diamond rings for engagement | @started(25-11-03 09:18)
-    ☐ Kalyan gold coins for Akshaya Tritiya | @started(25-11-03 09:18)
-    ☐ Bridal jewellery sets India | @started(25-11-03 09:18)
-    ☐ Lightweight gold chains for men | @started(25-11-03 09:18)
-    ☐ Temple jewellery collections | @started(25-11-03 09:18)
-    ☐ Daily wear gold rings | @started(25-11-03 09:18)
-    ☐ Silver jewellery online | @started(25-11-03 09:18)
-    ☐ Platinum couple bands | @started(25-11-03 09:18)
+    ✔ Is there a jewellery showroom within 300 meters in Nagda? answer must say its very close to railway station, walkable distance @done(25-11-03 14:41)
+    ✔ Are sapna shri Jewellers showrooms in Nagda family-friendly? @done(25-11-03 14:41)
+    ✔ Can I walk to a sapna shri Jewellers showroom from metro stations or bus stops in Nagda? @done(25-11-03 14:41)
+    ✔ How can I find the nearest sapna shri Jewellers showroom in Nagda? @done(25-11-03 14:41)
+    ✔ Can I view products online before visiting? answer on below lnes: all new products are listed on website, offline have even more collections @done(25-11-03 14:41)
+    ✔ Do Nagda stores carry gold coins and bridal sets? answer must be based on: yeshave 22K and 24K and 99.9% purity gold and silver bar and coins @done(25-11-03 14:41)
+    ✔ Is BIS hallmarking available in Indore stores? Answer must be based on below lines: all gold jewelleries above 2 gms are HUID certified @done(25-11-03 14:41)
+  ✔ Popular Jewellery Searches on Sapna shri Jewellers @started(25-11-03 09:18) @done(25-11-03 14:42) @lasted(5h24m12s)
+    ✔ Gold bangles designs | @started(25-11-03 09:18) @done(25-11-03 14:41) @lasted(5h24m)
+    ✔ Diamond rings for engagement | @started(25-11-03 09:18) @done(25-11-03 14:41) @lasted(5h24m)
+    ✔ Kalyan gold coins for Akshaya Tritiya | @started(25-11-03 09:18) @done(25-11-03 14:41) @lasted(5h24m)
+    ✔ Bridal jewellery sets India | @started(25-11-03 09:18) @done(25-11-03 14:41) @lasted(5h24m)
+    ✔ Lightweight gold chains for men | @started(25-11-03 09:18) @done(25-11-03 14:41) @lasted(5h24m)
+    ✔ Temple jewellery collections | @started(25-11-03 09:18) @done(25-11-03 14:41) @lasted(5h24m)
+    ✔ Daily wear gold rings | @started(25-11-03 09:18) @done(25-11-03 14:41) @lasted(5h24m)
+    ✔ Silver jewellery online | @started(25-11-03 09:18) @done(25-11-03 14:41) @lasted(5h24m)
+    ✔ Platinum couple bands | @started(25-11-03 09:18) @done(25-11-03 14:41) @lasted(5h24m)
   ✔ Services Available @done(25-11-03 08:13)
     ✔ Gold Polishing | @done(25-11-03 08:13)
     ✔ Diamond Replacement | @done(25-11-03 08:13)
@@ -66,9 +52,7 @@ Todo:
   ✔ At Malabar Gold & Diamonds, we value transparency, reliability, and integrity. Our diamond jewellery undergoes 28 rigorous internal quality test, offering unparalleled assurance that you are receiving only the finest diamonds. @done(25-11-03 08:08)
   ✔ With our Certificate Check feature, you can easily verify that the details on your report matches the records in Malabar Gold & Diamonds database. @done(25-11-03 08:08)
 ✔ Clients testimonials @done(25-11-03 08:08)
-☐ N K Bullions Rate integration
-☐ Fix NavBar issue when no internet
-☐ Auto product creation by uploading photos
+
 ✔ Store Promises @done(25-11-03 08:08)
   ✔ Your Jewellery is Insured @done(25-11-03 08:08)
   ✔ Assured Lifetime Maintenance @done(25-11-03 08:08)
@@ -84,11 +68,19 @@ Todo:
   ✔ Track my order @done(25-11-03 08:08)
   ✔ Ring size guide @done(25-11-03 08:08)
   ✔ Bangle size guide @done(25-11-03 08:08)
-☐ Site Map
+✔ Add multiple color themes, festival theme @started(25-11-03 15:15) @done(25-11-03 15:15) @lasted(15s)
 ✔ Send Notification download data.json first @started(25-11-02 20:08) @done(25-11-02 20:09) @lasted(1m3s)
-☐ Another cron for send notifications
+✔ Another cron for send notifications @done(25-11-03 15:10)
 ✔ Auto remove unsubscribed users @started(25-11-02 20:09) @done(25-11-02 20:09) @lasted(29s)
-☐ Make it static website
+
+☐ Make it static website &  remove hash routes
+☐ Share --> WhatsApp, Telegram, SnapChat, Instagram @started(25-11-03 15:31)
+☐ Site Map
+☐ N K Bullions Rate integration
+☐ test cases for all apps
+☐ Product search, voice search integration
+☐ Staging website to demo
+☐ Auto product creation by uploading photos
 
 
 

@@ -55,12 +55,12 @@ async function sendAll(webpush, payload) {
 }
 
 async function getNotificationMessage() {
-  const response = await fetch('https://sapnashrijewellers.github.io/static/data.json');
+  const response = await fetch('https://sapnashrijewellers.github.io/static/rates.json');
   const data = await response.json();
 
   const body =
     `🙏 जय श्री कृष्णा - जय जिनेंद्र 🙏
-दिनांक: ${new Date(data.rates.asOn).toLocaleString("en-IN", {
+दिनांक: ${new Date(data.asOn).toLocaleString("en-IN", {
       day: "2-digit",
       month: "short",
       hour: "2-digit",
@@ -68,9 +68,9 @@ async function getNotificationMessage() {
       hour12: true,
       timeZone: "Asia/Kolkata"
     })}
-• चाँदी पाट (99.9%): ${parseFloat(data.rates.silver * 1000).toFixed(2)} ₹
-• सोना (24K 99.9%): ${parseFloat(data.rates.gold24K * 10).toFixed(2)} ₹
-• सोना जेवर (22K): ${parseFloat(data.rates.gold22K * 10).toFixed(2)} ₹
+• चाँदी पाट (99.9%): ${parseFloat(data.silver * 1000).toFixed(2)} ₹
+• सोना (24K 99.9%): ${parseFloat(data.gold24K * 10).toFixed(2)} ₹
+• सोना जेवर (22K): ${parseFloat(data.gold22K * 10).toFixed(2)} ₹
 • Gst 3% Extra*
 • 📞 FOR BOOKING: 🤙🏻 8234042231
 ✨ आपका दिन मंगलमय रहें!`;

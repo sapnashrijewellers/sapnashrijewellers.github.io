@@ -22,7 +22,7 @@ fi
 # Go to app folder and run your script
 cd /app
 echo "Running products.js..."
-node products.js
+node ./NodeScripts/products.js
 
 # Copy generated file into repo
 cp /app/data.json "$WORKDIR/data.json"

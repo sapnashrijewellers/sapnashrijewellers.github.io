@@ -12,6 +12,6 @@ WORKDIR="/app"
 # Go to app folder and run your script
 cd /app
 echo "Running sendNotification.js..."
-node sendNotification.js
+node ./NodeScripts/sendNotification.js
 
 echo "[$(date)] Task completed."

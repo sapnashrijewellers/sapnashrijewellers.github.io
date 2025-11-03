@@ -21,7 +21,7 @@ cd /app/repo
 
 # --- Run task immediately once before starting cron ---
 echo "Running immediate data generation..."
-bash /app/run-5-min-task.sh || echo "Initial run failed, continuing..."
+bash /app/ShellScripts/update-rates.sh || echo "Initial run failed, continuing..."
 
 # --- Install crontab dynamically ---
 echo "Installing cron schedule..."

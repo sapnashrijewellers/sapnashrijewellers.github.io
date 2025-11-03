@@ -17,9 +17,9 @@ COPY crontab.txt /etc/cron.d/generator-cron
 
 # Apply cron permissions
 RUN chmod 0644 /etc/cron.d/generator-cron && \
-    chmod +x /app/entrypoint.sh && \
-    chmod +x /app/update-rates.sh && \
-    chmod +x /app/send-rate-notification.sh && \
-    chmod +x /app/products.sh
+    chmod +x /app/ShellScripts/entrypoint.sh && \
+    chmod +x /app/ShellScripts/update-rates.sh && \
+    chmod +x /app/ShellScripts/send-rate-notification.sh && \
+    chmod +x /app/ShellScripts/products.sh
 
-ENTRYPOINT ["/app/entrypoint.sh"]
+ENTRYPOINT ["/app/ShellScripts/entrypoint.sh"]

@@ -21,15 +21,15 @@ fi
 
 # Go to app folder and run your script
 cd /app
-echo "Running generateData.js..."
-node generateRatesData.js
+echo "Running rates.json..."
+node ./NodeScripts/rates.js
 
 # Copy generated file into repo
-cp /app/data.json "$WORKDIR/data.json"
+cp /app/rates.json "$WORKDIR/rates.json"
 
 # Commit and push if changes exist
 cd "$WORKDIR"
-git add data.json
+git add rates.json
 
 if git diff --cached --quiet; then
   echo "[$(date)] No changes in data.json. Skipping commit."

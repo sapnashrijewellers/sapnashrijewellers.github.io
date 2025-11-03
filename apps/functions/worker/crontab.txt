@@ -1,10 +1,10 @@
 # update rates every 5 minutes
-*/5 * * * * root /app/update-rates.sh >> /var/log/rates.log 2>&1
+*/5 * * * * root /app/ShellScripts/update-rates.sh >> /var/log/rates.log 2>&1
 
 # Run notification sender every hour between 9 AM and 7 PM
-0 9-19 * * * root /app/send-rate-notification.sh >> /var/log/notification.log 2>&1
+0 9-19 * * * root /app/ShellScripts/send-rate-notification.sh >> /var/log/notification.log 2>&1
 
 # Generate products data every hour
-0 9-19 * * * root /app/products.sh >> /var/log/products.log 2>&1
+0 9-19 * * * root /app/ShellScripts/products.sh >> /var/log/products.log 2>&1
 
 # Important: empty line at end of file required by cron

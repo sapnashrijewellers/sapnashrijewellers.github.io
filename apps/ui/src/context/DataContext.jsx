@@ -6,7 +6,7 @@ const PRODUCTS_URL = "https://sapnashrijewellers.github.io/static/data.json";
 const RATES_URL = "https://sapnashrijewellers.github.io/static/rates.json";
 
 export function DataProvider({ children }) {
-  const [data, setData] = useState({ products: null, rates: null });
+  const [data, setData] = useState({ products: null, rates: null, ticker: null });
   const [isLoading, setIsLoading] = useState(true);
 
   // --- Core Fetch Function ---
@@ -26,7 +26,7 @@ export function DataProvider({ children }) {
         ratesRes.json(),
       ]);
 
-      const mergedData = { products: productsData, rates: ratesData };
+      const mergedData = { categorizedProducts: productsData.categorizedProducts, sub_categories: productsData.sub_categories, rates: ratesData, ticker: productsData.ticker };
       setData(mergedData);
       setIsLoading(false);
 

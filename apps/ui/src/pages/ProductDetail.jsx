@@ -21,7 +21,8 @@ export default function ProductDetail() {
 
   const driveURL = "https://sapnashrijewellers.github.io/static/img/";
   const phone = "918234042231";
-  const baseProductUrl = `https://sapnashrijewellers.github.io/#/product/${category}/${id}`;
+  const baseProductUrl = `https://sapnashrijewellers.github.io/#/product/${encodeURIComponent(category)}/${encodeURIComponent(id)}`;
+
 
   // Memoized product lookup
   const product = useMemo(() => {

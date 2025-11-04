@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 export default function ProductCard({ product }) {
-  const driveURL = "https://sapnashrijewellers.github.io/static/img/";
+  const driveURL = "https://sapnashrijewellers.github.io/static/img/thumbnail/";
 
   const cardHighlightClass = product.newArrival
     ? "border-2 border-accent shadow-md hover:shadow-xl bg-accent text-accent-foreground"

@@ -10,10 +10,12 @@ const __dirname = path.dirname(__filename);
 // --- Configuration ---
 const IMG_DIR = path.join("/app/repo", "img");
 const OPTIMIZED_IMG_DIR = path.join(IMG_DIR, "optimized");
+const THUMBNAIL_DIR = path.join(IMG_DIR, "thumbnail");
 const TRACKER_FILE = path.join(IMG_DIR, "optimized_images.json");
 
 console.log("Image directory:", IMG_DIR);
 console.log("Optimized directory:", OPTIMIZED_IMG_DIR);
+console.log("Thumbnail directory:", THUMBNAIL_DIR);
 
 /**
  * Reads the list of already optimized image filenames from the tracker file.
@@ -43,11 +45,10 @@ async function updateOptimizedTracker(trackerSet) {
  * Optimize a single image into WebP format if not already processed.
  */
 async function optimizeImage(inputPath, filename, trackerSet) {
-    // Skip if already optimized
     if (trackerSet.has(filename)) return;
 
     const ext = path.extname(filename).toLowerCase();
-    if (ext === ".webp") return; // Skip .webp files entirely
+    if (ext === ".webp") return;
 
     const baseName = path.parse(filename).name;
     const outputPath = path.join(OPTIMIZED_IMG_DIR, `${baseName}.webp`);
@@ -65,46 +66,66 @@ async function optimizeImage(inputPath, filename, trackerSet) {
 }
 
 /**
+ * Create a 400x400 thumbnail maintaining aspect ratio.
+ */
+async function createThumbnail(inputPath, filename) {
+    const baseName = path.parse(filename).name;
+    const thumbPath = path.join(THUMBNAIL_DIR, `${baseName}.webp`);
+
+    try {
+        await sharp(inputPath)
+            .resize(400, 400, {
+                fit: 'inside', // maintain aspect ratio
+                withoutEnlargement: true
+            })
+            .webp({ quality: 80 })
+            .toFile(thumbPath);
+
+        console.log(`🖼️  Thumbnail created: ${filename} -> ${path.basename(thumbPath)}`);
+    } catch (error) {
+        console.error(`❌ Failed to create thumbnail for ${filename}:`, error.message);
+    }
+}
+
+/**
  * Main optimization logic.
  */
 async function runOptimization() {
     console.log(`--- Starting Image Optimization at ${new Date().toISOString()} ---`);
 
     await fs.mkdir(OPTIMIZED_IMG_DIR, { recursive: true });
+    await fs.mkdir(THUMBNAIL_DIR, { recursive: true });
 
     const trackerSet = await getOptimizedTracker();
     console.log(`Tracker currently has ${trackerSet.size} entries.`);
 
     const files = await fs.readdir(IMG_DIR, { withFileTypes: true });
-    console.log("All entries in folder:", files.map(f => f.name));
-    console.log("runOptimization: ",IMG_DIR);
     const imageFiles = files
         .filter(
-            (f) => {                
-                return f.isFile() &&
-                    !f.name.startsWith(".") &&
-                    !f.name.endsWith(".webp") &&
-                    !f.name.endsWith(path.basename(TRACKER_FILE)) &&
-                    ["jpg", "jpeg", "png", "gif"].includes(
-                        path.extname(f.name).slice(1).toLowerCase()
-                    );
-            }
+            (f) =>
+                f.isFile() &&
+                !f.name.startsWith(".") &&
+                !f.name.endsWith(".webp") &&
+                !f.name.endsWith(path.basename(TRACKER_FILE)) &&
+                ["jpg", "jpeg", "png", "gif"].includes(
+                    path.extname(f.name).slice(1).toLowerCase()
+                )
         )
         .map((f) => f.name);
 
     console.log(`Found ${imageFiles.length} image files to process.`);
 
-    // If tracker is empty, process all eligible images
-    if (trackerSet.size === 0) {
-        console.log("Tracker empty — optimizing all non-WebP images...");
-    }
-
     let processedCount = 0;
     for (const file of imageFiles) {
+        const fullPath = path.join(IMG_DIR, file);
+
         if (!trackerSet.has(file)) {
-            await optimizeImage(path.join(IMG_DIR, file), file, trackerSet);
+            await optimizeImage(fullPath, file, trackerSet);
             processedCount++;
         }
+
+        // Always create/update thumbnail
+        await createThumbnail(fullPath, file);
     }
 
     await updateOptimizedTracker(trackerSet);

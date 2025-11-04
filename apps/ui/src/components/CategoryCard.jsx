@@ -8,7 +8,7 @@ export default function CategoryCard({ category, products }) {
 
   if (!products || products.length === 0) return null;
 
-  const driveURL = "https://sapnashrijewellers.github.io/static/img/optimized/";
+  const driveURL = "https://sapnashrijewellers.github.io/static/img/thumbnail/";
   const currentProduct = products[currentProductIndex];
   const effectiveNextProductIndex = nextProductIndex % products.length;
   const nextProduct = products[effectiveNextProductIndex];

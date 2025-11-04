@@ -19,7 +19,7 @@ export default function ProductDetail() {
   const { categorizedProducts } = useData();
   const [activeImage, setActiveImage] = useState(null);
 
-  const driveURL = "https://sapnashrijewellers.github.io/static/img/";
+  const driveURL = "https://sapnashrijewellers.github.io/static/img/optimized/";
   const phone = "918234042231";
   const baseProductUrl = `https://sapnashrijewellers.github.io/#/product/${encodeURIComponent(category)}/${encodeURIComponent(id)}`;
 

@@ -83,6 +83,13 @@ export default defineConfig({
       }
     }),
   ],
+  build: {
+    target: 'es2020', // ✅ modern output (no legacy transforms)
+    modulePreload: true,
+    cssCodeSplit: true,
+    minify: 'esbuild',
+    sourcemap: false,
+  },
   server: {
     host: 'localhost',
     port: 5173,

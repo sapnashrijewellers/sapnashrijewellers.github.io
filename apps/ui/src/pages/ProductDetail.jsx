@@ -108,14 +108,18 @@ export default function ProductDetail() {
   return (
     <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-6 py-6 px-3">
       {/* Image Gallery */}
-      <div className="relative w-full">
+      <div className="relative w-full overflow-hidden">
         <Swiper
           modules={[Navigation, Pagination]}
           navigation
           pagination={{ clickable: true }}
-          spaceBetween={10}
+          spaceBetween={0}
           slidesPerView={1}
+          centeredSlides={true}
           className="rounded-xl overflow-hidden"
+          onResize={swiper => swiper.update()}
+          observer={true}
+          observeParents={true}
         >
           {product.images.map((img, i) => (
             <SwiperSlide key={i}>
@@ -124,7 +128,7 @@ export default function ProductDetail() {
                 alt={`${product.name} ${i + 1}`}
                 loading="lazy"
                 onClick={() => handleImageClick(img)}
-                className="w-full h-[350px] object-contain rounded-xl cursor-pointer hover:scale-[1.02] transition-transform duration-300"
+                className="w-full h-[350px] object-contain rounded-xl cursor-pointer md:hover:scale-[1.02] transition-transform duration-300"
               />
             </SwiperSlide>
           ))}

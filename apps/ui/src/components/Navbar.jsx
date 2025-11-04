@@ -58,13 +58,13 @@ export default function Navbar() {
               <span>
                 <span className="animate-pulse w-3 h-3 bg-red-500 rounded-full inline-block p-1"></span>&nbsp;
                 
-                &nbsp; लाइव रेट *{" "}
+                लाइव रेट *{" "}
                 {new Date(rates.asOn).toLocaleString("en-IN", {
                   day: "2-digit",
                   month: "short",
                   hour: "2-digit",
                   minute: "2-digit",
-                  hour12: true,
+                  hour12: false,
                   timeZone: "Asia/Kolkata",
                 })}
               </span>

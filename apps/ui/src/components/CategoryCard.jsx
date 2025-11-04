@@ -8,7 +8,7 @@ export default function CategoryCard({ category, products }) {
 
   if (!products || products.length === 0) return null;
 
-  const driveURL = "https://sapnashrijewellers.github.io/static/img/";
+  const driveURL = "https://sapnashrijewellers.github.io/static/img/optimized/";
   const currentProduct = products[currentProductIndex];
   const effectiveNextProductIndex = nextProductIndex % products.length;
   const nextProduct = products[effectiveNextProductIndex];
@@ -27,7 +27,7 @@ export default function CategoryCard({ category, products }) {
   }, [products.length]);
 
   // Preload current image
-  useEffect(() => {
+  useEffect(() => {    
     const image = new Image();
     image.src = `${driveURL}${currentProduct.images[0]}`;
     image.onload = () => setIsReady(true);

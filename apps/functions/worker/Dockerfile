@@ -1,30 +1,49 @@
+# -------------------------------
+# Stage 1 — Build stage
+# -------------------------------
+FROM node:22-bookworm AS builder
+WORKDIR /app
+
+# Install dependencies only once (cache-friendly)
+COPY package*.json ./
+RUN npm install --omit=dev
+
+# Copy the rest of the application
+COPY . .
+
+# -------------------------------
+# Stage 2 — Runtime image
+# -------------------------------
 FROM node:22-slim
 
-# Install cron and git
+# Install only minimal runtime dependencies
 RUN apt-get update && apt-get install -y \
-bash curl git cron && rm -rf /var/lib/apt/lists/*
+    bash \
+    curl \
+    git \
+    cron \
+    ca-certificates \
+    --no-install-recommends && \
+    rm -rf /var/lib/apt/lists/*
 
 # Set timezone to IST
-RUN ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime && \
-    echo "Asia/Kolkata" > /etc/timezone && \
+ENV TZ=Asia/Kolkata
+RUN ln -sf /usr/share/zoneinfo/$TZ /etc/localtime && \
+    echo "$TZ" > /etc/timezone && \
     dpkg-reconfigure -f noninteractive tzdata
-    
+
 # Create working directory
 WORKDIR /app
 
-# Copy files
-COPY package*.json ./
-RUN npm install --omit=dev || true   # optional if you use dependencies
-COPY . .
+# Copy from build stage — only what’s needed
+COPY --from=builder /app /app
 
-# # Copy crontab
+# Copy crontab
 COPY crontab.txt /etc/cron.d/generator-cron
 
-# Apply cron permissions
+# Apply permissions
 RUN chmod 0644 /etc/cron.d/generator-cron && \
-    chmod +x /app/ShellScripts/entrypoint.sh && \
-    chmod +x /app/ShellScripts/update-rates.sh && \
-    chmod +x /app/ShellScripts/send-rate-notification.sh && \
-    chmod +x /app/ShellScripts/products.sh
+    chmod +x /app/ShellScripts/*.sh
 
+# Run entrypoint
 ENTRYPOINT ["/app/ShellScripts/entrypoint.sh"]

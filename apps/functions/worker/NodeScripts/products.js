@@ -5,6 +5,7 @@ const SHEET_URL = "https://script.google.com/macros/s/AKfycbwNQ9fFmV0MqVEKg6pk-x
 const data = await fetchAndProcess();
 if (data) {	
 try {
+    data.products = convertImagesToWebp(data.products);
     const preProcData = preProcessData(data.products || []);
 
     const fullData = {        
@@ -52,4 +53,13 @@ function preProcessData(products) {
     }, {});
 
     return { sub_categories, categorizedProducts };
+}
+
+function convertImagesToWebp(products) {
+  return products.map(product => ({
+    ...product,
+    images: product.images.map(image =>
+      image.replace(/\.[^.]+$/, '.webp') // replace extension with .webp
+    ),
+  }));
 }

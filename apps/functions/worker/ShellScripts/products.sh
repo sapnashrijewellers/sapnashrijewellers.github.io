@@ -23,13 +23,15 @@ fi
 cd /app
 echo "Running products.js..."
 node ./NodeScripts/products.js
+echo "Running image optimization..."
+node ./NodeScripts/optimize_images.js
 
 # Copy generated file into repo
 cp /app/data.json "$WORKDIR/data.json"
 
 # Commit and push if changes exist
 cd "$WORKDIR"
-git add data.json
+git add .
 
 if git diff --cached --quiet; then
   echo "[$(date)] No changes in data.json. Skipping commit."

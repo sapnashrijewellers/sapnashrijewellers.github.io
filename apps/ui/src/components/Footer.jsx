@@ -1,5 +1,5 @@
 import { FaFacebookF, FaInstagram, FaYoutube, FaTv, FaWhatsapp } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 export default function Footer() {
   const phone = "918234042231";
   const whatsappUrl = `https://wa.me/${phone}`;
@@ -79,7 +79,14 @@ export default function Footer() {
             >
               <FaWhatsapp />
             </a>
-            <a
+            <Link
+              to="/tv"
+              title="TV"
+              className="hover:text-accent hover:scale-110 transform transition duration-200"
+            >
+              <FaTv />
+            </Link>
+            {/* <a
               href="/#/tv"
               target="_blank"
               rel="noopener noreferrer"
@@ -87,7 +94,7 @@ export default function Footer() {
               className="hover:text-accent hover:scale-110 transform transition duration-200"
             >
               <FaTv />
-            </a>
+            </a> */}
           </div>
         </div>
 

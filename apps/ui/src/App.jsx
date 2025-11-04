@@ -19,20 +19,22 @@ export default function App() {
   useRegisterSW({
     onRegisteredSW(registration) {
       if (!registration) return;
+
       (async () => {
         // Wait for Chrome ↔ TWA permission delegation to settle
         await new Promise((resolve) => setTimeout(resolve, 1500));
 
+        // Ensure service worker is ready
+        const swReg = await navigator.serviceWorker.ready;
+
         // Check notification permission before prompting
         if (Notification.permission === "default") {
-          // Ask once only if not already prompted
           if (!localStorage.getItem("notifPrompted")) {
             localStorage.setItem("notifPrompted", "yes");
             await subscribeUser(BASE_URL);
           }
         } else if (Notification.permission === "granted") {
-          // Already granted — ensure subscription exists
-          const existing = await registration.pushManager.getSubscription();
+          const existing = await swReg.pushManager.getSubscription();
           if (!existing) await subscribeUser(BASE_URL);
         } else {
           console.log("Notifications previously denied by user.");
@@ -43,7 +45,7 @@ export default function App() {
     // Optional: useful lifecycle handlers
     // onOfflineReady() { console.log('App ready for offline use'); },
     // onNeedRefresh() { console.log('New content available, please refresh!'); }
-  });  
+  });
   return (
 
 

@@ -4,6 +4,11 @@ FROM node:22-slim
 RUN apt-get update && apt-get install -y \
 bash curl git cron && rm -rf /var/lib/apt/lists/*
 
+# Set timezone to IST
+RUN ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime && \
+    echo "Asia/Kolkata" > /etc/timezone && \
+    dpkg-reconfigure -f noninteractive tzdata
+    
 # Create working directory
 WORKDIR /app
 

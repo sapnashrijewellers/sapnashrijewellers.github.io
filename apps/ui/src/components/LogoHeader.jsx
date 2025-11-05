@@ -1,16 +1,15 @@
-import { Link } from "react-router-dom";
-
 export default function LogoHeader() {
   return (
-    <div className="w-full flex items-center justify-between p-4">
+    <header className="w-full flex items-center justify-between p-4" role="banner">
       {/* Left: Logo */}
-      <Link to="/" className="flex items-center">
+      <a href="/" className="flex items-center" aria-label="Go to homepage">
         <img
           src="/logo.png"
           alt="Sapna Shri Jewellers Nagda | सपना श्री ज्वैलर्स, नागदा"
           className="h-28 sm:h-36 object-contain"
+          itemProp="logo"
         />
-      </Link>
+      </a>
 
       {/* Right: Shop Name */}
       <h1
@@ -20,9 +19,10 @@ export default function LogoHeader() {
                        0.1rem 0.1rem 0.1rem #fff,
                        0 0 0.5rem rgba(255, 237, 74, 0.6)`,
         }}
+        itemProp="name"
       >
         सपना श्री ज्वैलर्स
       </h1>
-    </div>
+    </header>
   );
 }

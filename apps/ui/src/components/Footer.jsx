@@ -1,5 +1,7 @@
-import { FaFacebookF, FaInstagram, FaYoutube, FaTv, FaWhatsapp, FaLocationArrow, FaMapPin, 
-  FaMapMarkerAlt, FaPhoneAlt, FaLink,FaUserTie, FaShieldAlt, FaExclamationCircle, FaBoxOpen } from "react-icons/fa";
+import {
+  FaFacebookF, FaInstagram, FaYoutube, FaTv, FaWhatsapp, FaLocationArrow, FaMapPin,
+  FaMapMarkerAlt, FaPhoneAlt, FaLink, FaUserTie, FaShieldAlt, FaExclamationCircle, FaBoxOpen
+} from "react-icons/fa";
 import { Link } from "react-router-dom";
 export default function Footer() {
   const phone = "918234042231";
@@ -11,7 +13,7 @@ export default function Footer() {
         {/* Disclaimer */}
         <div className="flex gap-2 text-xl">
           <FaExclamationCircle className="text-primary-dark mt-[1px]" />
-          <p className=" italic text-xs text-muted-foreground">            
+          <p className=" italic text-xs text-muted-foreground">
             अस्वीकरण: कीमतें बाजार दर के अनुसार बदलती रहती हैं। सभी दरें लगभग 5 मिनट की देरी से प्रदर्शित हैं। कृपया अंतिम कीमत और उत्पाद का अनुभव करने के लिए दुकान पर अवश्य आएँ। दी गई कीमतें केवल संकेतात्मक हैं, मेकिंग चार्ज एवं GST एक्स्ट्रा। *नियम एवं शर्तें लागू। किसी भी विवाद की स्थिति में न्यायिक क्षेत्र नागदा जंक्शन रहेगा।
           </p>
         </div>
@@ -19,17 +21,20 @@ export default function Footer() {
         {/* About Us */}
         <div>
           <h2 className="flex items-center gap-2 font-bold text-lg mt-4">
-  <FaUserTie className="text-primary-dark mt-[1px]" />
-  हमारी पहचान / About Us
-</h2>
+            <FaUserTie className="text-primary-dark mt-[1px]" />
+            हमारी पहचान / About Us
+          </h2>
           <p className="text-muted-foreground">
             सपना श्री ज्वेलर्स पिछले 35 वर्षों से सोने और चांदी के गहनों के क्षेत्र में अपनी उत्कृष्ट कला, भरोसेमंद सेवा और उच्च गुणवत्ता के लिए जाना जाता है।
             हमारी पहचान है — ख़ूबसूरती, विश्वसनीयता और पारदर्शिता।
-            <br /><br />
-            <div className="flex gap-2">
-            <FaBoxOpen className="text-emerald-600 mt-[1px]" />
-            यहाँ आपको मिलेंगे – 
-            </div>            
+          </p>
+          
+            <br />
+            <p className="flex gap-2">
+              <FaBoxOpen className="text-emerald-600 mt-[1px]" />
+              यहाँ आपको मिलेंगे –
+            </p>
+          <p >
             ✨ शुद्ध 22 कैरेट सोने के गहने <br />
             ✨ आकर्षक चांदी के आभूषण <br />
             ✨ मनपसंद कस्टम डिज़ाइन – आपकी पसंद के अनुसार बनाए गए <br />
@@ -47,12 +52,12 @@ export default function Footer() {
           <p className="text-muted-foreground">
             सपना श्री ज्वैलर्स,<br />
             रेलवे स्टेशन मेन रोड, जैन मंदिर के पास,<br />
-            नागदा, जिला उज्जैन<br />
-            <p className="flex items-center gap-2 mt-1 text-muted-foreground">
+            नागदा, जिला उज्जैन            
+          </p>
+          <p className="flex items-center gap-2 mt-1 text-muted-foreground">
               <FaPhoneAlt className="text-primary-dark mt-[1px]" />
               8234042231
             </p>
-          </p>
         </div>
 
         {/* Social Media */}
@@ -125,7 +130,7 @@ export default function Footer() {
           <Link to="/about-us" className="flex items-center gap-2 font-bold text-lg mt-4 hover:text-foreground transition-colors">
             <FaUserTie className="text-primary-dark mt-[1px]" />
             हमारी पहचान / About Us
-          </Link>            
+          </Link>
         </div>
       </div>
 

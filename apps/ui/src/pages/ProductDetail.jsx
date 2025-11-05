@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
-import { useState, useMemo, useEffect } from "react";
-import  data  from "../data/data.json";
+import { useState } from "react";
+import { setSEOTags } from "../utils/seo";
+import data from "../data/data.json";
 import {
   FaWhatsapp,
   FaTelegramPlane,
@@ -15,7 +16,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 export default function ProductDetail() {
-  const { id, category } = useParams();  
+  const { id, category } = useParams();
   const [activeImage, setActiveImage] = useState(null);
 
   const driveURL = "https://sapnashrijewellers.github.io/static/img/optimized/";
@@ -23,15 +24,10 @@ export default function ProductDetail() {
   const baseProductUrl = `https://sapnashrijewellers.github.io/#/product/${encodeURIComponent(category)}/${encodeURIComponent(id)}`;
 
 
-  // Memoized product lookup
-  const product = useMemo(() => {
-    if (!data.categorizedProducts?.[category]) return null;
-    return data.categorizedProducts[category].find(
-      (p) => p.id.toString() === id.toString()
-    );
-  }, [data.categorizedProducts, category, id]);
 
-  if (!data.categorizedProducts) return <p>Loading...</p>;
+  const product = data.categorizedProducts?.[category]?.find(
+    (p) => p.id.toString() === id.toString());
+
   if (!product) return <p>Product not found.</p>;
 
   const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(
@@ -65,44 +61,11 @@ export default function ProductDetail() {
   };
 
   // ✅ Dynamic Open Graph + Twitter meta tags
-  useEffect(() => {
-    const title = `${product.name} | Sapna Shri Jewellers`;
-    const description = `Explore ${product.name} — pure ${product.purity}, weighing ${product.weight}g.`;
-    const imageUrl = `${driveURL}${product.images?.[0]}`;
-    const url = baseProductUrl;
 
-    document.title = title;
-
-    const metaConfig = [
-      // Open Graph tags
-      { property: "og:title", content: title },
-      { property: "og:description", content: description },
-      { property: "og:image", content: imageUrl },
-      { property: "og:url", content: url },
-      { property: "og:type", content: "product" },
-      { property: "og:site_name", content: "Sapna Shri Jewellers" },
-
-      // Twitter Card tags
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: title },
-      { name: "twitter:description", content: description },
-      { name: "twitter:image", content: imageUrl },
-    ];
-
-    metaConfig.forEach(({ property, name, content }) => {
-      const selector = property
-        ? `meta[property='${property}']`
-        : `meta[name='${name}']`;
-      let tag = document.querySelector(selector);
-      if (!tag) {
-        tag = document.createElement("meta");
-        if (property) tag.setAttribute("property", property);
-        if (name) tag.setAttribute("name", name);
-        document.head.appendChild(tag);
-      }
-      tag.setAttribute("content", content);
-    });
-  }, [product, baseProductUrl]);
+  const title = `${product.name} | Sapna Shri Jewellers`;
+  const description = `Explore ${product.name} — pure ${product.purity}, weighing ${product.weight}g.`;
+  const imageUrl = `${driveURL}${product.images?.[0]}`;
+  setSEOTags(title, description, imageUrl, baseProductUrl);
 
   return (
     <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-6 py-6 px-3">

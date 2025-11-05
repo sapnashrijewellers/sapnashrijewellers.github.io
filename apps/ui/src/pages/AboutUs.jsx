@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Helmet } from "react-helmet";
 import { ChevronDown } from "lucide-react";
+import { setSEOTags } from "../utils/seo";
 
 export default function AboutUs() {
   const [years, setYears] = useState(0);
@@ -44,7 +44,7 @@ export default function AboutUs() {
     {
       title: "गोल्ड एक्सचेंज (Gold Exchange)",
       text: "अपने पुराने सोने के गहनों को नई डिज़ाइनों में बदलवाएँ बिना किसी झंझट के। हम 'ज़ीरो डिडक्शन गोल्ड एक्सचेंज' नीति के तहत पूरा मूल्य प्रदान करते हैं।",
-    },    
+    },
   ];
 
   const popularSearches = [
@@ -130,12 +130,16 @@ export default function AboutUs() {
     },
   ];
 
+  // ✅ Dynamic Open Graph + Twitter meta tags
+
+  const title = `Sapna Shri Jewellers Nagda | सपना श्री ज्वेलर्स नागदा - 35 वर्षों का विश्वास`;
+  const description = `Sapna Shri Jewellers Nagda - सोने और चांदी के आभूषणों में 35+ वर्षों का अनुभव। BIS 916 हॉलमार्क गोल्ड, सर्टिफाइड डायमंड और पारदर्शी सेवा।`;
+  const imageUrl = `/img/shop.png`;
+  setSEOTags(title, description, imageUrl, "/about-us");
+
   return (
+
     <div className="py-10 px-6 md:px-20 leading-relaxed bg-surface transition-colors duration-300">
-      <Helmet>
-        <title>Sapna Shri Jewellers Nagda | सपना श्री ज्वेलर्स नागदा - 35 वर्षों का विश्वास</title>
-        <meta name="description" content="Sapna Shri Jewellers Nagda - सोने और चांदी के आभूषणों में 35+ वर्षों का अनुभव। BIS 916 हॉलमार्क गोल्ड, सर्टिफाइड डायमंड और पारदर्शी सेवा।" />
-      </Helmet>
 
       {/* ===== HEADING ===== */}
       <div className="text-center mb-8">
@@ -176,16 +180,31 @@ export default function AboutUs() {
           { img: "/img/blgang.png", name: "श्री भवरलाल गांग", title: "संस्थापक" },
           { img: "/img/amish.png", name: "अमीश कुमार गांग", title: "स्वामी / उत्तराधिकारी" },
         ].map((owner, i) => (
-          <div whileHover={{ scale: 1.05 }} className="text-center" key={i}>
+          <div
+            key={i}
+            className="text-center transform transition-transform duration-300 hover:scale-105"
+          >
             <img
               src={owner.img}
               alt={owner.name}
               className="rounded-2xl shadow-lg w-64 h-64 object-cover mx-auto border-2 border-theme"
             />
             <h3 className="mt-3 text-xl font-semibold text-primary-dark">{owner.name}</h3>
-            <p className="">{owner.title}</p>
+            <p>{owner.title}</p>
           </div>
         ))}
+      </div>
+
+      {/* Shop Photo */}
+      <div className="text-center mt-12">
+        <img
+          src="/img/shop.png"
+          alt="Sapna Shri Jewellers Shop - Nagda"
+          className="rounded-3xl shadow-2xl mx-auto border-4 border-yellow-500 w-full max-w-3xl"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6 }}
+        />
       </div>
 
       {/* ===== MAP ===== */}

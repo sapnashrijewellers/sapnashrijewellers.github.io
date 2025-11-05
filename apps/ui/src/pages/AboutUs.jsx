@@ -145,6 +145,19 @@ export default function AboutUs() {
         description,
         imageUrl,
         `${baseURL}/about-us`,
+        `Sapna Shri Jewellers Nagda,
+सपना श्री ज्वेलर्स नागदा,
+सपना श्री ज्वैलर्स नागदा उज्जैन,
+Silver Jewellery Nagda,
+Gold Jewellery Showroom Nagda,
+Jewellery Shop near Railway Station Nagda,
+Jewellery Shop near Bus Stand Nagda,
+Gold Exchange Nagda,
+BIS 916 Hallmarked Jewellery Nagda,
+Trusted Jewellers of Nagda Ujjain District,
+35 years of trust,
+Sapna Shri Jewellers Nagda Location,
+Sapna Shri Jewellers Nagda Contact Number`,
         baseURL,
         null
       )}
@@ -209,7 +222,7 @@ export default function AboutUs() {
           <img
             src="/img/shop.png"
             alt="Sapna Shri Jewellers Shop - Nagda"
-            className="rounded-3xl shadow-2xl mx-auto border-4 border-yellow-500 w-full max-w-3xl"            
+            className="rounded-3xl shadow-2xl mx-auto border-4 border-yellow-500 w-full max-w-3xl"
           />
         </div>
 

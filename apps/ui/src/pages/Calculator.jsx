@@ -2,12 +2,11 @@ import React, { useState, useEffect } from "react";
 import IndianRupeeRate from "../components/IndianRupeeRate";
 import { useData } from "../context/DataContext";
 import { renderSEOTags } from "../utils/SEO";
-
 // ✅ Dynamic Open Graph + Twitter meta tags
 
 const title = `ज्वेलरी प्राइस कैलकुलेटर`;
-const description = `ज्वेलरी प्राइस कैलकुलेटर | Jewellery Price Calculator | Sapna Shri Jewellers`;
-const baseURL = "https://sapnashrijewellers.github.io";  
+const description = `ज्वेलरी प्राइस कैलकुलेटर | online Jewellery Price Calculator by Sapna Shri Jewellers`;
+const baseURL = "https://sapnashrijewellers.github.io";
 const imageUrl = `${baseURL}/logo.png`;
 
 
@@ -94,97 +93,110 @@ export default function Calculator() {
         title,
         description,
         imageUrl,
-        `${baseURL}/about-us`,
+        `${baseURL}/calculator`,
+        `ज्वेलरी प्राइस कैलकुलेटर, 
+        online Jewellery price calculator by Sapna Shri Jewellers, 
+        22K gold jewellery price calculator, 
+        Making charges calculator
+        `,
         baseURL,
         null
       )}
-    <div className="max-w-lg mx-auto p-6 bg-card text-card-foreground shadow-lg rounded-2xl">
-      <h2 className="text-2xl font-bold mb-6 text-center text-accent">
-        ज्वेलरी प्राइस कैलकुलेटर
-      </h2>
+      
+      <div className="max-w-lg mx-auto p-6 bg-card text-card-foreground shadow-lg rounded-2xl">
+        <h2 className="text-2xl font-bold mb-6 text-center text-accent">
+          ज्वेलरी प्राइस कैलकुलेटर
+        </h2>
 
-      {/* Category */}
-      <label className={labelClasses}>आभूषण का प्रकार</label>
-      <select
-        name="category"
-        value={form.category}
-        onChange={handleChange}
-        className={`${inputClasses} mb-4`}
-      >
-        <option value="gold">सोना</option>
-        <option value="silver">चाँदी</option>
-      </select>
+        {/* Category */}
+        <label className={labelClasses}>आभूषण का प्रकार</label>
+        <select
+          name="category"
+          value={form.category}
+          onChange={handleChange}
+          className={`${inputClasses} mb-4`}
+        >
+          <option value="gold">सोना</option>
+          <option value="silver">चाँदी</option>
+        </select>
 
-      {/* Purity */}
-      <label className={labelClasses}>शुद्धता</label>
-      <select
-        name="purity"
-        value={form.purity}
-        onChange={handleChange}
-        className={`${inputClasses} mb-4`}
-      >
-        {purityOptions.map((p) => (
-          <option key={p} value={p}>
-            {purityLabels[p]}
-          </option>
-        ))}
-      </select>
+        {/* Purity */}
+        <label className={labelClasses}>शुद्धता</label>
+        <select
+          name="purity"
+          value={form.purity}
+          onChange={handleChange}
+          className={`${inputClasses} mb-4`}
+        >
+          {purityOptions.map((p) => (
+            <option key={p} value={p}>
+              {purityLabels[p]}
+            </option>
+          ))}
+        </select>
 
-      {/* Weight */}
-      <label className={labelClasses}>वज़न (ग्राम में)</label>
-      <input
-        type="number"
-        name="weight"
-        value={form.weight}
-        onChange={handleChange}
-        className={`${inputClasses} mb-4`}
-      />
+        {/* Weight */}
+        <label className={labelClasses}>वज़न (ग्राम में)</label>
+        <input
+          type="number"
+          name="weight"
+          value={form.weight}
+          onChange={handleChange}
+          className={`${inputClasses} mb-4`}
+        />
 
-      {/* Making Charges */}
-      <label className={labelClasses}>आभूषण बनाने का शुल्क (%)</label>
-      <input
-        type="number"
-        name="makingCharges"
-        value={form.makingCharges}
-        onChange={handleChange}
-        className={`${inputClasses} mb-4`}
-      />
+        {/* Making Charges */}
+        <label className={labelClasses}>आभूषण बनाने का शुल्क (%)</label>
+        <input
+          type="number"
+          name="makingCharges"
+          value={form.makingCharges}
+          onChange={handleChange}
+          className={`${inputClasses} mb-4`}
+        />
 
-      {/* GST */}
-      <label className={labelClasses}>GST (%)</label>
-      <select
-        name="gst"
-        value={form.gst}
-        onChange={handleChange}
-        className={`${inputClasses} mb-6`}
-      >
-        <option value="3">3%</option>
-        <option value="5">5%</option>
-      </select>
+        {/* GST */}
+        <label className={labelClasses}>GST (%)</label>
+        <select
+          name="gst"
+          value={form.gst}
+          onChange={handleChange}
+          className={`${inputClasses} mb-6`}
+        >
+          <option value="3">3%</option>
+          <option value="5">5%</option>
+        </select>
 
-      {/* Calculate Button */}
-      <button
-        onClick={calculatePrice}
-        className="
+        {/* Calculate Button */}
+        <button
+          onClick={calculatePrice}
+          className="
           w-full bg-accent text-accent-foreground font-semibold
           py-2 rounded-lg shadow-md hover:shadow-lg hover:bg-accent/90
           transition
         "
-      >
-        कैलकुलेट करें
-      </button>
+        >
+          कैलकुलेट करें
+        </button>
 
-      {/* Result Section */}
-      {price !== null && (
-        <div className="mt-6 p-4 bg-muted border border-border rounded-lg text-center">
-          <h3 className="text-lg font-semibold mb-2">कुल कीमत</h3>
-          <IndianRupeeRate
-            rate={Number(price)}
-            className="text-2xl font-bold text-accent"
-          />
-        </div>
-      )}
-    </div>
+        {/* Result Section */}
+        {price !== null && (
+          <div className="mt-6 p-4 bg-muted border border-border rounded-lg text-center">
+            <h3 className="text-lg font-semibold mb-2">कुल कीमत</h3>
+            <IndianRupeeRate
+              rate={Number(price)}
+              className="text-2xl font-bold text-accent"
+            />
+          </div>
+        )}
+      </div>
+      <div className="mt-8 text-center text-sm text-muted-foreground">
+        <p>
+          Sapna Shri Jewellers Nagda offers trusted BIS 916 gold and silver jewellery.
+          Use our <strong>Jewellery Price Calculator</strong> to calculate real-time prices
+          with making charges and GST. Visit our showroom near Railway Station, Nagda.
+        </p>
+      </div>
     </>
   );
 }

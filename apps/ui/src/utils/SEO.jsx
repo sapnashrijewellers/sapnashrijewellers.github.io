@@ -1,6 +1,6 @@
 import React from "react";
 
-export function renderSEOTags(title, description, imageUrl, productUrl, baseUrl, product) {
+export function renderSEOTags(title, description, imageUrl, productUrl, keywords, baseUrl, product) {
   // Construct meta configuration
   const metaConfig = [
     // Open Graph
@@ -8,8 +8,10 @@ export function renderSEOTags(title, description, imageUrl, productUrl, baseUrl,
     { property: "og:description", content: description },
     { property: "og:image", content: imageUrl },
     { property: "og:url", content: productUrl },
-    { property: "og:type", content: "product" },
+    { property: "og:type", content: product ? "product" : "website" },
     { property: "og:site_name", content: "Sapna Shri Jewellers" },
+    { property: "og:locale", content: "hi_IN" },
+    { property: "og:image:alt", content: title },
 
     // Twitter
     { name: "twitter:card", content: "summary_large_image" },
@@ -19,36 +21,57 @@ export function renderSEOTags(title, description, imageUrl, productUrl, baseUrl,
 
     // General SEO
     { name: "description", content: description },
-    { name: "keywords", content: `${title}, jewellery, gold, silver` },
+    { name: "keywords", content: keywords },
   ];
 
-  // Structured data (if product available)
-  const ldJson =
-    product && {
-      "@context": "https://schema.org/",
-      "@type": "Product",
-      name: product.name,
-      image: product.images?.map((img) => `${baseUrl}/static/img/optimized/${img}`),
-      description,
-      brand: {
-        "@type": "Organization",
-        name: "Sapna Shri Jewellers",
-      },
-      offers: {
-        "@type": "Offer",
+  // Structured data
+  const ldJson = product
+    ? {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        name: product.name,
+        image: product.images?.map((img) => `${baseUrl}/static/img/optimized/${img}`),
+        description,
+        brand: {
+          "@type": "Brand",
+          name: "Sapna Shri Jewellers",
+        },
+        offers: {
+          "@type": "Offer",
+          url: productUrl,
+          priceCurrency: "INR",
+          itemCondition: "https://schema.org/NewCondition",
+          availability: "https://schema.org/InStock",
+        },
+      }
+    : {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: title,
         url: productUrl,
-        priceCurrency: "INR",
-        itemCondition: "https://schema.org/NewCondition",
-        availability: "https://schema.org/InStock",
-      },
-    };
+        description,
+        publisher: {
+          "@type": "JewelryStore",
+          name: "Sapna Shri Jewellers Nagda",
+          image: "https://sapnashrijewellers.github.io/logo.png",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Railway Station Main Road, Near Jain Mandir",
+            addressLocality: "Nagda",
+            addressRegion: "Ujjain",
+            postalCode: "456335",
+            addressCountry: "IN",
+          },
+          telephone: "+91-8234042231",
+        },
+      };
 
-  // Render head tags (for SSR/SSG)
+  // Render tags (for SSR/SSG)
   return (
     <>
       <title>{title}</title>
 
-      {/* Canonical link */}
+      {/* Canonical */}
       <link rel="canonical" href={productUrl} />
 
       {/* Meta tags */}
@@ -61,12 +84,10 @@ export function renderSEOTags(title, description, imageUrl, productUrl, baseUrl,
       )}
 
       {/* Structured data */}
-      {product && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(ldJson, null, 2) }}
-        />
-      )}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(ldJson, null, 2) }}
+      />
     </>
   );
 }

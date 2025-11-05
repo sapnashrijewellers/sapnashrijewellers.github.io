@@ -2,39 +2,25 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export default function CategoryCard({ category, products }) {
-  const [currentProductIndex, setCurrentProductIndex] = useState(0);
-  const [nextProductIndex, setNextProductIndex] = useState(1);
-  const [isReady, setIsReady] = useState(false);
-
   if (!products || products.length === 0) return null;
 
   const driveURL = "https://sapnashrijewellers.github.io/static/img/thumbnail/";
-  const currentProduct = products[currentProductIndex];
-  const effectiveNextProductIndex = nextProductIndex % products.length;
-  const nextProduct = products[effectiveNextProductIndex];
+  const firstProduct = products[0]; // for SSG / SEO
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Image rotation
+  // Rotate images client-side (only for UX)
   useEffect(() => {
     if (products.length <= 1) return;
 
     const intervalId = setInterval(() => {
-      setCurrentProductIndex((prev) => (prev + 1) % products.length);
-      setNextProductIndex((prev) => (prev + 2) % products.length);
-      setIsReady(false);
+      setCurrentIndex((prev) => (prev + 1) % products.length);
     }, 2000);
 
     return () => clearInterval(intervalId);
   }, [products.length]);
 
-  // Preload current image
-  useEffect(() => {    
-    const image = new Image();
-    image.src = `${driveURL}${currentProduct.images[0]}`;
-    image.onload = () => setIsReady(true);
-    return () => (image.onload = null);
-  }, [currentProduct.name, driveURL, currentProduct.images]);
+  const currentProduct = products[currentIndex];
 
-  // Thematic card styles
   const cardHighlightClass = currentProduct.newArrival
     ? "border-2 border-destructive shadow-md hover:shadow-xl bg-accent text-primary-dark"
     : "border border-border shadow hover:shadow-lg";
@@ -65,22 +51,27 @@ export default function CategoryCard({ category, products }) {
             </div>
           )}
 
+          {/* Use firstProduct image for SSG + SEO */}
           <img
-            key={currentProduct.name}
-            src={`${driveURL}${currentProduct.images[0]}`}
-            alt={currentProduct.name}
-            className={`
-              absolute inset-0 w-full h-full object-cover
-              transition-opacity duration-500 ease-in-out
-              ${isReady ? "opacity-100" : "opacity-0"}
-            `}
+            src={`${driveURL}${firstProduct.images[0]}`}
+            alt={firstProduct.name}
+            className="absolute inset-0 w-full h-full object-cover"
             loading="eager"
           />
 
+          {/* Overlay rotated image client-side */}
+          {products.length > 1 && currentIndex !== 0 && (
+            <img
+              src={`${driveURL}${currentProduct.images[0]}`}
+              alt={currentProduct.name}
+              className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500"
+            />
+          )}
+
           {/* Preload next image */}
           <img
-            src={`${driveURL}${nextProduct.images[0]}`}
-            alt={`Preloading ${nextProduct.name}`}
+            src={`${driveURL}${products[(currentIndex + 1) % products.length].images[0]}`}
+            alt={`Preloading ${products[(currentIndex + 1) % products.length].name}`}
             className="hidden"
             loading="lazy"
           />

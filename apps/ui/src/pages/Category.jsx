@@ -1,16 +1,10 @@
 import { useParams } from "react-router-dom";
-import { useData } from "../context/DataContext";
 import ProductCard from "../components/ProductCard";
-
-
+import data from "../data/data.json";
 
 export default function Category() {
-  const { category } = useParams();
-  const { categorizedProducts } = useData();
-
-  if (!categorizedProducts) return <p>Loading...</p>;
-
-  const filtered = categorizedProducts[category];
+  const { category } = useParams();  
+  const filtered = data.categorizedProducts[category];
 
   return (
     <div className="space-y-6 max-w-6xl mx-auto">

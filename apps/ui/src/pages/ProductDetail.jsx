@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useState, useMemo, useEffect } from "react";
-import { useData } from "../context/DataContext";
+import  data  from "../data/data.json";
 import {
   FaWhatsapp,
   FaTelegramPlane,
@@ -15,8 +15,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 export default function ProductDetail() {
-  const { id, category } = useParams();
-  const { categorizedProducts } = useData();
+  const { id, category } = useParams();  
   const [activeImage, setActiveImage] = useState(null);
 
   const driveURL = "https://sapnashrijewellers.github.io/static/img/optimized/";
@@ -26,13 +25,13 @@ export default function ProductDetail() {
 
   // Memoized product lookup
   const product = useMemo(() => {
-    if (!categorizedProducts?.[category]) return null;
-    return categorizedProducts[category].find(
+    if (!data.categorizedProducts?.[category]) return null;
+    return data.categorizedProducts[category].find(
       (p) => p.id.toString() === id.toString()
     );
-  }, [categorizedProducts, category, id]);
+  }, [data.categorizedProducts, category, id]);
 
-  if (!categorizedProducts) return <p>Loading...</p>;
+  if (!data.categorizedProducts) return <p>Loading...</p>;
   if (!product) return <p>Product not found.</p>;
 
   const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(

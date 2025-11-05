@@ -5,7 +5,17 @@ import IndianRupeeRate from "./IndianRupeeRate";
 import { FaQrcode } from "react-icons/fa";
 
 export default function Navbar() {
-  const { rates } = useData();
+  let { rates } = useData();
+  if (!rates) {
+    rates = {
+      "asOn": "2025-11-05T04:30:08.483Z",
+      "gold24K": 0,
+      "gold22K": 0,
+      "gold18K": 0,
+      "silver": 0,
+      "silverJewelry": 0
+    };
+  }
 
   return (
     <nav
@@ -57,7 +67,7 @@ export default function Navbar() {
             <div className="flex justify-start gap-4">
               <span>
                 <span className="animate-pulse w-3 h-3 bg-red-500 rounded-full inline-block p-1"></span>&nbsp;
-                
+
                 लाइव रेट *{" "}
                 {new Date(rates.asOn).toLocaleString("en-IN", {
                   day: "2-digit",

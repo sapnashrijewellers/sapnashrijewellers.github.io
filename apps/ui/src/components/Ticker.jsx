@@ -1,12 +1,11 @@
 import React, { useRef, useEffect, useState } from "react";
 import { FaBullhorn } from "react-icons/fa";
-import { useData } from "../context/DataContext";
+import data  from "../data/data.json";
 
-const Ticker = () => {
-  const { ticker } = useData();
-  if (ticker.length === 0) return null;
+const Ticker = () => {  
+  if (data.ticker.length === 0) return null;
 
-  const tickerText = ticker.join("  •  ");
+  const tickerText = data.ticker.join("  •  ");
   const containerRef = useRef(null);
   const textRef = useRef(null);
   const [offset, setOffset] = useState(0);

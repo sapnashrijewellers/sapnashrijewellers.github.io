@@ -1,27 +1,28 @@
 import { useEffect, useState } from "react";
+import  data  from "../data/data.json";
 import { useData } from "../context/DataContext";
 
-export default function TV() {
-  const { categorizedProducts, sub_categories, rates } = useData();
+export default function TV() {  
+  const { rates } = useData();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fade, setFade] = useState(true);
 
   useEffect(() => {
-    if (!sub_categories || sub_categories.length === 0) return;
+    if (!data.sub_categories || data.sub_categories.length === 0) return;
     const interval = setInterval(() => {
       setFade(false);
       setTimeout(() => {
-        setCurrentIndex((prev) => (prev + 1) % sub_categories.length);
+        setCurrentIndex((prev) => (prev + 1) % data.sub_categories.length);
         setFade(true);
       }, 1000);
     }, 10000);
     return () => clearInterval(interval);
-  }, [sub_categories]);
+  }, [data.sub_categories]);
+  
 
-  if (!categorizedProducts || !rates) return <p>Loading...</p>;
-
-  const product = categorizedProducts[sub_categories[currentIndex]][0];
-  const driveURL = 'https://sapnashrijewellers.github.io/static/img/';
+  const product = data.categorizedProducts[data.sub_categories[currentIndex]][0];
+  
+  const driveURL = 'https://sapnashrijewellers.github.io/static/img/optimized/';
   return (
     <div
       className={`transition-opacity duration-1000 fade-in flex flex-col md:grid md:grid-cols-2 gap-2 w-full h-full p-2 overflow-hidden`}

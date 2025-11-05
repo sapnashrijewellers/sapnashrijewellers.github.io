@@ -137,6 +137,27 @@ export default function AboutUs() {
   const description = `Sapna Shri Jewellers Nagda - सोने और चांदी के आभूषणों में 35+ वर्षों का अनुभव। BIS 916 हॉलमार्क गोल्ड, सर्टिफाइड डायमंड और पारदर्शी सेवा।`;
   const baseURL = "https://sapnashrijewellers.github.io";
   const imageUrl = `${baseURL}/img/shop.png`;
+  const ldjson ={
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: title,
+        url: `${baseURL}/about-us`,
+        description,
+        publisher: {
+          "@type": "JewelryStore",
+          name: "Sapna Shri Jewellers Nagda",
+          image: "https://sapnashrijewellers.github.io/logo.png",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Railway Station Main Road, Near Jain Mandir",
+            addressLocality: "Nagda",
+            addressRegion: "Ujjain",
+            postalCode: "456335",
+            addressCountry: "IN",
+          },
+          telephone: "+91-8234042231",
+        },
+      }
 
   return (
     <>
@@ -158,8 +179,7 @@ Trusted Jewellers of Nagda Ujjain District,
 35 years of trust,
 Sapna Shri Jewellers Nagda Location,
 Sapna Shri Jewellers Nagda Contact Number`,
-        baseURL,
-        null
+        ldjson
       )}
       <div className="py-10 px-6 md:px-20 leading-relaxed bg-surface transition-colors duration-300">
 

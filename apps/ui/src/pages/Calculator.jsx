@@ -2,13 +2,41 @@ import React, { useState, useEffect } from "react";
 import IndianRupeeRate from "../components/IndianRupeeRate";
 import { useData } from "../context/DataContext";
 import { renderSEOTags } from "../utils/SEO";
-// ✅ Dynamic Open Graph + Twitter meta tags
+
 
 const title = `ज्वेलरी प्राइस कैलकुलेटर`;
 const description = `ज्वेलरी प्राइस कैलकुलेटर | online Jewellery Price Calculator by Sapna Shri Jewellers`;
 const baseURL = "https://sapnashrijewellers.github.io";
 const imageUrl = `${baseURL}/logo.png`;
-
+const ldjson = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": title,
+  "url": `${baseURL}/calculator`,
+  "description": description,
+  "publisher": {
+    "@type": "JewelryStore",
+    "name": "Sapna Shri Jewellers Nagda",
+    "image": `${baseURL}/logo.png`,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Railway Station Main Road, Near Jain Mandir",
+      "addressLocality": "Nagda",
+      "addressRegion": "Ujjain",
+      "postalCode": "456335",
+      "addressCountry": "IN"
+    },
+    "telephone": "+91-8234042231"
+  },
+  "mainEntity": {
+    "@type": "ComputeAction",
+    "name": "Jewellery Price Calculator",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": `${baseURL}/calculator`
+    }
+  }
+};
 
 export default function Calculator() {
   const { rates } = useData();
@@ -95,14 +123,14 @@ export default function Calculator() {
         imageUrl,
         `${baseURL}/calculator`,
         `ज्वेलरी प्राइस कैलकुलेटर, 
-        online Jewellery price calculator by Sapna Shri Jewellers, 
-        22K gold jewellery price calculator, 
-        Making charges calculator
+        online Jewellery price calculator, 
+        22K gold jewellery price calculator,         
+        24K gold jewellery price calculator",
+        Silver jewellery price",    
         `,
-        baseURL,
-        null
+        ldjson
       )}
-      
+
       <div className="max-w-lg mx-auto p-6 bg-card text-card-foreground shadow-lg rounded-2xl">
         <h2 className="text-2xl font-bold mb-6 text-center text-accent">
           ज्वेलरी प्राइस कैलकुलेटर
@@ -191,6 +219,14 @@ export default function Calculator() {
         )}
       </div>
       <div className="mt-8 text-center text-sm text-muted-foreground">
+        <p>
+          यह आभूषण मूल्य कैलकुलेटर आपको वजन, शुद्धता, निर्माण शुल्क और जीएसटी के आधार पर सोने और चांदी के आभूषणों की कीमत की गणना करने में मदद करता है। बस आभूषण के प्रकार का चयन करें, वजन और शुल्क दर्ज करें, और अंतिम कीमत प्राप्त करने के लिए गणना पर क्लिक करें।
+        </p><br/>
+        <p>
+          This Jewellery Price Calculator helps you compute the price of gold and silver jewellery
+          based on weight, purity, making charges, and GST. Simply select the type of jewellery,
+          enter the weight and charges, and click calculate to get the final price.
+        </p><br/>
         <p>
           Sapna Shri Jewellers Nagda offers trusted BIS 916 gold and silver jewellery.
           Use our <strong>Jewellery Price Calculator</strong> to calculate real-time prices

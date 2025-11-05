@@ -18,7 +18,6 @@
   },
   "packageManager": "npm@10.9.3",
   "dependencies": {
-    "idb": "^8.0.3",
     "workbox-cacheable-response": "^7.3.0"
   }
 }

@@ -74,6 +74,7 @@ Todo:
 ✔ Auto remove unsubscribed users @started(25-11-02 20:09) @done(25-11-02 20:09) @lasted(29s)
 ✔ Image optimization & thumbnail generation @done(25-11-04 17:12)
 ✔ Share --> WhatsApp, Telegram, SnapChat, Instagram @started(25-11-03 15:31) @done(25-11-04 09:43) @lasted(18h12m11s)
+✔ clean NPM packages @started(25-11-05 07:44) @done(25-11-05 07:44) @lasted(44s)
 ☐ Make it static website &  remove hash routes @started(25-11-04 09:43)
 ☐ Site Map
 ☐ N K Bullions Rate integration

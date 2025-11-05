@@ -157,7 +157,7 @@ export default function AboutUs() {
           },
           telephone: "+91-8234042231",
         },
-      }
+      };
 
   return (
     <>

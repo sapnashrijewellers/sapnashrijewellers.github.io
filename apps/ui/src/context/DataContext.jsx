@@ -4,51 +4,42 @@ const DataContext = createContext(null);
 const RATES_URL = "https://sapnashrijewellers.github.io/static/rates.json";
 
 export function DataProvider({ children }) {
-  const [data, setData] = useState({ rates: null });
-  const [isLoading, setIsLoading] = useState(true);
+  const [rates, setRates] = useState(null);
   const [error, setError] = useState(null);
 
-  // --- Fetch latest rates ---
-  const fetchAndProcessData = useCallback(async () => {
+  const fetchRates = useCallback(async () => {
     try {
       setError(null);
       const response = await fetch(RATES_URL, { cache: "no-store" });
       if (!response.ok) throw new Error(`Failed to fetch rates.json: ${response.status}`);
-
-      const ratesData = await response.json();
-      setData({ rates: ratesData });
+      const data = await response.json();
+      setRates(data);
     } catch (err) {
       console.error("Rates fetch failed:", err);
-      setData({ rates: null }); // ensure null if fetch failed
+      setRates(null);
       setError(err.message);
-    } finally {
-      setIsLoading(false);
     }
   }, []);
 
-  // --- Initial load ---
   useEffect(() => {
-    fetchAndProcessData();
-  }, [fetchAndProcessData]);
+    fetchRates();
+  }, [fetchRates]);
 
-  // --- Refresh when tab becomes visible ---
   useEffect(() => {
     const handleVisibilityChange = () => {
-      if (document.visibilityState === "visible") fetchAndProcessData();
+      if (document.visibilityState === "visible") fetchRates();
     };
     document.addEventListener("visibilitychange", handleVisibilityChange);
     return () => document.removeEventListener("visibilitychange", handleVisibilityChange);
-  }, [fetchAndProcessData]);
+  }, [fetchRates]);
 
-  // --- Periodic refresh every minute ---
   useEffect(() => {
-    const interval = setInterval(fetchAndProcessData, 60 * 1000);
+    const interval = setInterval(fetchRates, 60 * 1000);
     return () => clearInterval(interval);
-  }, [fetchAndProcessData]);
+  }, [fetchRates]);
 
-  // --- Always render children; consumer decides handling ---
   return (
-    <DataContext.Provider value={{ ...data, isLoading, error }}>
+    <DataContext.Provider value={{ rates, error }}>
       {children}
     </DataContext.Provider>
   );
@@ -56,7 +47,6 @@ export function DataProvider({ children }) {
 
 export function useData() {
   const ctx = useContext(DataContext);
-  if (ctx === null)
-    throw new Error("useData must be used within a DataProvider");
+  if (ctx === null) throw new Error("useData must be used within a DataProvider");
   return ctx;
 }

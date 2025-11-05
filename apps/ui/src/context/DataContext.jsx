@@ -1,7 +1,7 @@
 import { createContext, useContext, useState, useEffect, useCallback } from "react";
 
 const DataContext = createContext(null);
-const RATES_URL = "https://sapnashrijewellers.github.io/static/rates1.json";
+const RATES_URL = "https://sapnashrijewellers.github.io/static/rates.json";
 
 export function DataProvider({ children }) {
   const [data, setData] = useState({ rates: null });

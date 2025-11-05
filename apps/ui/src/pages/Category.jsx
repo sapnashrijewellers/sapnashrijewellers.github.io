@@ -14,10 +14,9 @@ export default function Category() {
   const baseURL = "https://sapnashrijewellers.github.io";
   const driveURL = `${baseURL}/static/img/optimized/`;
   const imageUrl = filtered.length ? `${driveURL}${filtered[0].images[0]}` : `${baseURL}/logo.png`;
-  const keywords =
-    filtered.length > 0
-      ? filtered.slice(0, 10).map(p => p.name).join(", ")
-      : "";
+  const keywords = filtered.length > 0
+  ? [category, ...filtered.slice(0, 10).map(p => p.name)].join(", ")
+  : category;
   const ldjson = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -43,7 +42,10 @@ export default function Category() {
       )}
       <div className="space-y-6 max-w-6xl mx-auto">
         <h1 className="text-xl md:text-2xl font-bold capitalize">{category}</h1>
-
+<p className="text-sm text-muted-foreground mb-4">
+    Explore our exclusive collection of {category} at Sapna Shri Jewellers Nagda. 
+    High-quality gold & silver jewellery with BIS 916 certification.
+  </p>
         {filtered.length === 0 ? (
           <p className="">इस श्रेणी में कोई उत्पाद नहीं मिला.</p>
         ) : (

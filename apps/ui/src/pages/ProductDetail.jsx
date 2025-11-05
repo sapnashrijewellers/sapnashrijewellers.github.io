@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useState } from "react";
-import { setSEOTags } from "../utils/seo";
+import { renderSEOTags } from "../utils/SEO";
 import data from "../data/data.json";
 import {
   FaWhatsapp,
@@ -18,10 +18,10 @@ import "swiper/css/pagination";
 export default function ProductDetail() {
   const { id, category } = useParams();
   const [activeImage, setActiveImage] = useState(null);
-
+  const baseURL = "https://sapnashrijewellers.github.io";
   const driveURL = "https://sapnashrijewellers.github.io/static/img/optimized/";
   const phone = "918234042231";
-  const baseProductUrl = `https://sapnashrijewellers.github.io/#/product/${encodeURIComponent(category)}/${encodeURIComponent(id)}`;
+  const baseProductUrl = `https://sapnashrijewellers.github.io/product/${encodeURIComponent(category)}/${encodeURIComponent(id)}`;
 
 
 
@@ -65,9 +65,13 @@ export default function ProductDetail() {
   const title = `${product.name} | Sapna Shri Jewellers`;
   const description = `Explore ${product.name} — pure ${product.purity}, weighing ${product.weight}g.`;
   const imageUrl = `${driveURL}${product.images?.[0]}`;
-  setSEOTags(title, description, imageUrl, baseProductUrl);
-
+  
+  injectProductLDJson(product, baseURL)
   return (
+    <>
+      {/* 👇 These tags will be statically embedded during SSG */}
+      {renderSEOTags(title, description, imageUrl, baseProductUrl)}
+      {renderSEOTags(title, description, imageUrl, baseProductUrl)}
     <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-6 py-6 px-3">
       {/* Image Gallery */}
       <div className="relative w-full overflow-hidden">
@@ -188,5 +192,6 @@ export default function ProductDetail() {
         </div>
       )}
     </div>
+    </>
   );
 }

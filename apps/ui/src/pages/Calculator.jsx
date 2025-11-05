@@ -1,6 +1,15 @@
 import React, { useState, useEffect } from "react";
 import IndianRupeeRate from "../components/IndianRupeeRate";
 import { useData } from "../context/DataContext";
+import { renderSEOTags } from "../utils/SEO";
+
+// ✅ Dynamic Open Graph + Twitter meta tags
+
+const title = `ज्वेलरी प्राइस कैलकुलेटर`;
+const description = `ज्वेलरी प्राइस कैलकुलेटर | Jewellery Price Calculator | Sapna Shri Jewellers`;
+const baseURL = "https://sapnashrijewellers.github.io";  
+const imageUrl = `${baseURL}/logo.png`;
+
 
 export default function Calculator() {
   const { rates } = useData();
@@ -80,6 +89,15 @@ export default function Calculator() {
   const labelClasses = "block mb-1 font-medium text-muted-foreground";
 
   return (
+    <>
+      {renderSEOTags(
+        title,
+        description,
+        imageUrl,
+        `${baseURL}/about-us`,
+        baseURL,
+        null
+      )}
     <div className="max-w-lg mx-auto p-6 bg-card text-card-foreground shadow-lg rounded-2xl">
       <h2 className="text-2xl font-bold mb-6 text-center text-accent">
         ज्वेलरी प्राइस कैलकुलेटर
@@ -167,5 +185,6 @@ export default function Calculator() {
         </div>
       )}
     </div>
+    </>
   );
 }

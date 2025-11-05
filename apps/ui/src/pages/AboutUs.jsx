@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import { setSEOTags } from "../utils/seo";
+import { renderSEOTags } from "../utils/SEO";
 
 export default function AboutUs() {
-  const [years, setYears] = useState(0);
-  const [customers, setCustomers] = useState(0);
+  const [years, setYears] = useState(35);
+  const [customers, setCustomers] = useState(5000);
   const [openIndex, setOpenIndex] = useState(null);
 
   useEffect(() => {
@@ -134,183 +135,217 @@ export default function AboutUs() {
 
   const title = `Sapna Shri Jewellers Nagda | सपना श्री ज्वेलर्स नागदा - 35 वर्षों का विश्वास`;
   const description = `Sapna Shri Jewellers Nagda - सोने और चांदी के आभूषणों में 35+ वर्षों का अनुभव। BIS 916 हॉलमार्क गोल्ड, सर्टिफाइड डायमंड और पारदर्शी सेवा।`;
-  const imageUrl = `/img/shop.png`;
-  setSEOTags(title, description, imageUrl, "/about-us");
+  const baseURL = "https://sapnashrijewellers.github.io";
+  const imageUrl = `${baseURL}/img/shop.png`;
 
   return (
+    <>
+      {renderSEOTags(
+        title,
+        description,
+        imageUrl,
+        `${baseURL}/about-us`,
+        baseURL,
+        null
+      )}
+      <div className="py-10 px-6 md:px-20 leading-relaxed bg-surface transition-colors duration-300">
 
-    <div className="py-10 px-6 md:px-20 leading-relaxed bg-surface transition-colors duration-300">
+        {/* ===== HEADING ===== */}
+        <div className="text-center mb-8">
+          <h1
+            className="text-4xl md:text-5xl font-bold shimmer-gold text-primary mb-4 text-primary-dark"
 
-      {/* ===== HEADING ===== */}
-      <div className="text-center mb-8">
-        <h1
-          className="text-4xl md:text-5xl font-bold shimmer-gold text-primary mb-4 text-primary-dark"
-
-        >
-          हमारी पहचान
-        </h1>
-        <p className="text-lg md:text-xl">
-          सपना श्री ज्वेलर्स पिछले{" "}
-          <span className="text-primary-dark text-primary font-semibold">{years}+</span> वर्षों से विश्वास का प्रतीक रहा है,{" "}
-          और{" "}
-          <span className="text-primary-dark text-primary font-semibold">{customers}+</span> खुश ग्राहकों का परिवार बन चुका है।
-        </p>
-      </div>
-
-      {/* ===== DESCRIPTION ===== */}
-      <div className="max-w-5xl mx-auto text-justify space-y-4">
-        <p>
-          सपना श्री ज्वेलर्स पिछले 35 वर्षों से सोने और चांदी के गहनों के क्षेत्र में अपनी उत्कृष्ट कला, भरोसेमंद सेवा
-          और उच्च गुणवत्ता के लिए जाना जाता है। हमारी पहचान है — <span className="text-primary-dark">ख़ूबसूरती, विश्वसनीयता और पारदर्शिता।</span>
-        </p>
-        <p>
-          यहाँ आपको मिलेंगे – ✨ शुद्ध 22 कैरेट सोने के गहने ✨ आकर्षक चांदी के आभूषण ✨
-          मनपसंद कस्टम डिज़ाइन ✨ धार्मिक और पारंपरिक डिज़ाइन में आधुनिकता का संगम।
-        </p>
-        <p>💠 सपना श्री ज्वेलर्स – जहां हर गहना एक कहानी कहता है। 💠</p>
-        <p>
-          श्री <span className="text-primary-dark">भवरलाल गांग</span> द्वारा स्थापित यह व्यवसाय अब
-          <span className="text-primary-dark"> अमीश कुमार गांग</span> के नेतृत्व में 35+ वर्षों की गौरवशाली विरासत रखता है।
-        </p>
-      </div>
-
-      {/* ===== OWNERS ===== */}
-      <div className="flex flex-col md:flex-row justify-center items-center gap-8 mt-12">
-        {[
-          { img: "/img/blgang.png", name: "श्री भवरलाल गांग", title: "संस्थापक" },
-          { img: "/img/amish.png", name: "अमीश कुमार गांग", title: "स्वामी / उत्तराधिकारी" },
-        ].map((owner, i) => (
-          <div
-            key={i}
-            className="text-center transform transition-transform duration-300 hover:scale-105"
           >
-            <img
-              src={owner.img}
-              alt={owner.name}
-              className="rounded-2xl shadow-lg w-64 h-64 object-cover mx-auto border-2 border-theme"
-            />
-            <h3 className="mt-3 text-xl font-semibold text-primary-dark">{owner.name}</h3>
-            <p>{owner.title}</p>
+            हमारी पहचान
+          </h1>
+          <p className="text-lg md:text-xl">
+            सपना श्री ज्वेलर्स पिछले{" "}
+            <span className="text-primary-dark text-primary font-semibold">{years}+</span> वर्षों से विश्वास का प्रतीक रहा है,{" "}
+            और{" "}
+            <span className="text-primary-dark text-primary font-semibold">{customers}+</span> खुश ग्राहकों का परिवार बन चुका है।
+          </p>
+        </div>
+
+        {/* ===== DESCRIPTION ===== */}
+        <div className="max-w-5xl mx-auto text-justify space-y-4">
+          <p>
+            सपना श्री ज्वेलर्स पिछले 35 वर्षों से सोने और चांदी के गहनों के क्षेत्र में अपनी उत्कृष्ट कला, भरोसेमंद सेवा
+            और उच्च गुणवत्ता के लिए जाना जाता है। हमारी पहचान है — <span className="text-primary-dark">ख़ूबसूरती, विश्वसनीयता और पारदर्शिता।</span>
+          </p>
+          <p>
+            यहाँ आपको मिलेंगे – ✨ शुद्ध 22 कैरेट सोने के गहने ✨ आकर्षक चांदी के आभूषण ✨
+            मनपसंद कस्टम डिज़ाइन ✨ धार्मिक और पारंपरिक डिज़ाइन में आधुनिकता का संगम।
+          </p>
+          <p>💠 सपना श्री ज्वेलर्स – जहां हर गहना एक कहानी कहता है। 💠</p>
+          <p>
+            श्री <span className="text-primary-dark">भवरलाल गांग</span> द्वारा स्थापित यह व्यवसाय अब
+            <span className="text-primary-dark"> अमीश कुमार गांग</span> के नेतृत्व में 35+ वर्षों की गौरवशाली विरासत रखता है।
+          </p>
+        </div>
+
+        {/* ===== OWNERS ===== */}
+        <div className="flex flex-col md:flex-row justify-center items-center gap-8 mt-12">
+          {[
+            { img: "/img/blgang.png", name: "श्री भवरलाल गांग", title: "संस्थापक" },
+            { img: "/img/amish.png", name: "अमीश कुमार गांग", title: "स्वामी / उत्तराधिकारी" },
+          ].map((owner, i) => (
+            <div
+              key={i}
+              className="text-center transform transition-transform duration-300 hover:scale-105"
+            >
+              <img
+                src={owner.img}
+                alt={owner.name}
+                className="rounded-2xl shadow-lg w-64 h-64 object-cover mx-auto border-2 border-theme"
+              />
+              <h3 className="mt-3 text-xl font-semibold text-primary-dark">{owner.name}</h3>
+              <p>{owner.title}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Shop Photo */}
+        <div className="text-center mt-12">
+          <img
+            src="/img/shop.png"
+            alt="Sapna Shri Jewellers Shop - Nagda"
+            className="rounded-3xl shadow-2xl mx-auto border-4 border-yellow-500 w-full max-w-3xl"            
+          />
+        </div>
+
+        {/* ===== MAP ===== */}
+        <div className="mt-12 text-center">
+          <h2 className="au-h2">हमसे संपर्क करें</h2>
+          <p className="mb-4">सपना श्री ज्वैलर्स, रेलवे स्टेशन मेन रोड, जैन मंदिर के पास नागदा, जिला उज्जैन</p>
+          <div className="w-full max-w-4xl mx-auto rounded-2xl overflow-hidden border-2 border-theme shadow-lg">
+            <iframe
+              title="Sapna Shri Jewellers Map"
+              src="https://www.google.com/maps?q=सपना+श्री+ज्वैलर्स,+रेलवे+स्टेशन+मेन+रोड,+जैन+मंदिर+के+पास+नागदा,+जिला+उज्जैन&output=embed"
+              width="100%"
+              height="400"
+              loading="lazy"
+            ></iframe>
           </div>
-        ))}
-      </div>
-
-      {/* Shop Photo */}
-      <div className="text-center mt-12">
-        <img
-          src="/img/shop.png"
-          alt="Sapna Shri Jewellers Shop - Nagda"
-          className="rounded-3xl shadow-2xl mx-auto border-4 border-yellow-500 w-full max-w-3xl"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.6 }}
-        />
-      </div>
-
-      {/* ===== MAP ===== */}
-      <div className="mt-12 text-center">
-        <h2 className="au-h2">हमसे संपर्क करें</h2>
-        <p className="mb-4">सपना श्री ज्वैलर्स, रेलवे स्टेशन मेन रोड, जैन मंदिर के पास नागदा, जिला उज्जैन</p>
-        <div className="w-full max-w-4xl mx-auto rounded-2xl overflow-hidden border-2 border-theme shadow-lg">
-          <iframe
-            title="Sapna Shri Jewellers Map"
-            src="https://www.google.com/maps?q=सपना+श्री+ज्वैलर्स,+रेलवे+स्टेशन+मेन+रोड,+जैन+मंदिर+के+पास+नागदा,+जिला+उज्जैन&output=embed"
-            width="100%"
-            height="400"
-            loading="lazy"
-          ></iframe>
         </div>
-      </div>
 
-      {/* ===== PROMISES ===== */}
-      <div className="mt-12 text-center">
-        <h2 className="au-h2">हमारे वादे (Store Promises)</h2>
-        <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-6 max-w-6xl mx-auto">
-          {promises.map((p, i) => (
-            <div key={i}
-              className="bg-accent border border-theme rounded-2xl p-6 shadow-md hover:shadow-lg transition-transform transform hover:scale-105">
-              <div className="text-4xl mb-3">{p.icon}</div>
-              <h3 className="text-xl font-semibold text-primary-dark mb-2">{p.title}</h3>
-              <p className="text-sm">{p.text}</p>
-            </div>
-          ))}
+        {/* ===== PROMISES ===== */}
+        <div className="mt-12 text-center">
+          <h2 className="au-h2">हमारे वादे (Store Promises)</h2>
+          <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-6 max-w-6xl mx-auto">
+            {promises.map((p, i) => (
+              <div key={i}
+                className="bg-accent border border-theme rounded-2xl p-6 shadow-md hover:shadow-lg transition-transform transform hover:scale-105">
+                <div className="text-4xl mb-3">{p.icon}</div>
+                <h3 className="text-xl font-semibold text-primary-dark mb-2">{p.title}</h3>
+                <p className="text-sm">{p.text}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
 
-      {/* ===== SERVICES ===== */}
-      <div className="mt-12 text-center">
-        <h2 className="au-h2">सेवाएँ उपलब्ध हैं</h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          {services.map((srv, i) => (
-            <div key={i} className="bg-accent p-6 rounded-2xl border border-theme shadow-md hover:shadow-lg transition">
-              <h3 className="text-xl font-semibold text-primary-dark mb-3">{srv.title}</h3>
-              <p className="leading-relaxed">{srv.text}</p>
-            </div>
-          ))}
+        {/* ===== SERVICES ===== */}
+        <div className="mt-12 text-center">
+          <h2 className="au-h2">सेवाएँ उपलब्ध हैं</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {services.map((srv, i) => (
+              <div key={i} className="bg-accent p-6 rounded-2xl border border-theme shadow-md hover:shadow-lg transition">
+                <h3 className="text-xl font-semibold text-primary-dark mb-3">{srv.title}</h3>
+                <p className="leading-relaxed">{srv.text}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
 
-      {/* ===== POPULAR SEARCHES ===== */}
-      <div className="mt-12 text-center">
-        <h2 className="au-h2">लोकप्रिय खोजें – Sapna Shri Jewellers पर</h2>
-        <div className="flex flex-wrap justify-center gap-3">
-          {popularSearches.map((item, index) => {
-            const link = `/#/category/${encodeURIComponent(item.category)}`;
-            return (
-              <a key={index} href={link} className="px-4 py-2 bg-accent border border-theme rounded-full text-sm md:text-base font-medium hover:opacity-80 transition-all">
-                {item.search}
-              </a>
-            );
-          })}
+        {/* ===== POPULAR SEARCHES ===== */}
+        <div className="mt-12 text-center">
+          <h2 className="au-h2">लोकप्रिय खोजें – Sapna Shri Jewellers पर</h2>
+          <div className="flex flex-wrap justify-center gap-3">
+            {popularSearches.map((item, index) => {
+              const link = `/#/category/${encodeURIComponent(item.category)}`;
+              return (
+                <a key={index} href={link} className="px-4 py-2 bg-accent border border-theme rounded-full text-sm md:text-base font-medium hover:opacity-80 transition-all">
+                  {item.search}
+                </a>
+              );
+            })}
+          </div>
         </div>
-      </div>
 
-      {/* ===== FAQ ===== */}
-      <div className="mt-12">
-        <h2 className="au-h2">अक्सर पूछे जाने वाले प्रश्न (FAQ)</h2>
-        <div className="space-y-4">
-          {faqs.map((item, i) => (
-            <div key={i} className="border border-theme rounded-2xl bg-surface shadow-md overflow-hidden">
-              <button
-                className="flex justify-between items-center w-full text-left px-5 py-4 hover:text-primary-dark"
-                onClick={() => setOpenIndex(openIndex === i ? null : i)}
-              >
-                <span className="font-medium">{item.q}</span>
-                <ChevronDown className={`w-5 h-5 transition-transform ${openIndex === i ? "rotate-180" : ""}`} />
-              </button>
-              {openIndex === i && (
-                <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} className="px-5 pb-4">
+        {/* ===== FAQ ===== */}
+        <div className="mt-12">
+          <h2 className="au-h2">अक्सर पूछे जाने वाले प्रश्न (FAQ)</h2>
+          <div className="space-y-4">
+            {faqs.map((item, i) => (
+              <div key={i} className="border border-theme rounded-2xl bg-surface shadow-md overflow-hidden">
+                <button
+                  className="flex justify-between items-center w-full text-left px-5 py-4 hover:text-primary-dark"
+                  onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                >
+                  <span className="font-medium">{item.q}</span>
+                  <ChevronDown className={`w-5 h-5 transition-transform ${openIndex === i ? "rotate-180" : ""}`} />
+                </button>
+
+                <div
+                  className={`px-5 pb-4 transition-all duration-300 ${openIndex === i ? "max-h-screen opacity-100" : "max-h-0 opacity-0 overflow-hidden"
+                    }`}
+                >
                   {item.a}
-                </motion.div>
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
+                </div>
+              </div>
+            ))}
 
-      {/* ===== CERTIFICATES ===== */}
-      <div className="mt-12 text-center">
-        <h2 className="au-h2">सोने (HUID) का प्रमाणपत्र जाँच</h2>
-        {certificates.map((cert, i) => (
-          <div key={i} className="mb-10">
-            {/* <h3 className="mt-3 text-2xl font-semibold text-primary">{cert.title}</h3> */}
-            <p className="mt-4 font-medium leading-relaxed">{cert.text}</p>
+            <noscript>
+              {faqs.map(f => (
+                <div key={f.q}>
+                  <strong>{f.q}</strong> — {f.a}
+                </div>
+              ))}
+            </noscript>
+
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "FAQPage",
+                  "mainEntity": faqs.map(f => ({
+                    "@type": "Question",
+                    "name": f.q,
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": f.a
+                    }
+                  }))
+                })
+              }}
+            />
           </div>
-        ))}
-      </div>
+        </div>
 
-      {/* ===== TESTIMONIALS ===== */}
-      <div className="mt-12 text-center">
-        <h2 className="au-h2">हमारे खुश ग्राहक क्या कहते हैं</h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          {testimonials.map((t, i) => (
-            <div key={i} className="p-4 border-l-4 border-theme rounded-lg shadow-sm bg-accent">
-              <p className="italic">“{t.text}”</p>
-              <p className="mt-2 font-semibold text-right text-primary">– {t.name}</p>
+        {/* ===== CERTIFICATES ===== */}
+        <div className="mt-12 text-center">
+          <h2 className="au-h2">सोने (HUID) का प्रमाणपत्र जाँच</h2>
+          {certificates.map((cert, i) => (
+            <div key={i} className="mb-10">
+              {/* <h3 className="mt-3 text-2xl font-semibold text-primary">{cert.title}</h3> */}
+              <p className="mt-4 font-medium leading-relaxed">{cert.text}</p>
             </div>
           ))}
         </div>
+
+        {/* ===== TESTIMONIALS ===== */}
+        <div className="mt-12 text-center">
+          <h2 className="au-h2">हमारे खुश ग्राहक क्या कहते हैं</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {testimonials.map((t, i) => (
+              <div key={i} className="p-4 border-l-4 border-theme rounded-lg shadow-sm bg-accent">
+                <p className="italic">“{t.text}”</p>
+                <p className="mt-2 font-semibold text-right text-primary">– {t.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 }

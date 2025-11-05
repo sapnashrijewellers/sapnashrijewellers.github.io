@@ -24,17 +24,23 @@ export default function ProductDetail() {
   if (!product) return <p>Product not found.</p>;
 
   const [activeImage, setActiveImage] = useState(null);
-  
+
   const baseURL = "https://sapnashrijewellers.github.io";
   const driveURL = "https://sapnashrijewellers.github.io/static/img/optimized/";
   const phone = "918234042231";
   const baseProductUrl = `${baseURL}/product/${encodeURIComponent(category)}/${encodeURIComponent(id)}`;
+  // ✅ Dynamic Open Graph + Twitter meta tags
+
+  const title = `${product.name} | Sapna Shri Jewellers`;
+  const description = `Explore ${product.name} — pure ${product.purity}, weighing ${product.weight}g.`;
+  const imageUrl = `${driveURL}${product.images?.[0]}`;
+  const keywords = [product.name, product.purity, product.sub_category, product.highlights.join(",")].join(",")
   const ldJson = {
     "@context": "https://schema.org/",
     "@type": "Product",
     name: product.name,
-    image: product.images?.map((img) => `${baseURLrl}/static/img/optimized/${img}`),
-    description,
+    image: product.images?.map((img) => `${baseURL}/static/img/optimized/${img}`),
+    description: description,
     brand: {
       "@type": "Brand",
       name: "Sapna Shri Jewellers",
@@ -74,7 +80,6 @@ export default function ProductDetail() {
           url: baseProductUrl,
         });
       } catch (err) {
-        { renderSEOTags(title, description, imageUrl, baseProductUrl) }
         console.error("Share failed:", err);
       }
     } else {
@@ -82,16 +87,12 @@ export default function ProductDetail() {
     }
   };
 
-  // ✅ Dynamic Open Graph + Twitter meta tags
 
-  const title = `${product.name} | Sapna Shri Jewellers`;
-  const description = `Explore ${product.name} — pure ${product.purity}, weighing ${product.weight}g.`;
-  const imageUrl = `${driveURL}${product.images?.[0]}`;
 
   return (
     <>
 
-      {renderSEOTags(title, description, imageUrl, baseProductUrl, ldJson)}
+      {renderSEOTags(title, description, imageUrl, baseProductUrl, keywords, ldJson)}
       <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-6 py-6 px-3">
         {/* Image Gallery */}
         <div className="relative w-full overflow-hidden">

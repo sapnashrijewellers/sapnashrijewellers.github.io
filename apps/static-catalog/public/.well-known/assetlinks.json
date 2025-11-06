@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "io.github.sapnashrijewellers.twa",
+      "sha256_cert_fingerprints": [
+        "FD:1E:93:4E:39:57:58:D4:10:B0:79:E7:F4:0F:6D:92:7C:37:7C:A8:D2:49:99:46:B4:4C:F8:C2:D7:82:DA:6A"
+      ]
+    }
+  }
+]

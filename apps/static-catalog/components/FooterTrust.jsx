@@ -15,20 +15,20 @@ export default function FooterTrust() {
     >
       {/* Years of Trust */}
       <div className="text-center">
-        <h2 className="text-7xl md:text-8xl font-extrabold text-primary drop-shadow-sm">
+        <h2 className="text-7xl md:text-8xl  text-primary drop-shadow-sm">
           {yearsOfTrust}+
         </h2>
-        <p className="mt-2 text-2xl md:text-3xl font-semibold tracking-wide text-muted-foreground">
+        <p className="mt-2 text-2xl md:text-3xl tracking-wide text-muted-foreground">
           वर्षों का विश्वास
         </p>
       </div>
 
       {/* Happy Customers */}
       <div className="text-center">
-        <h2 className="text-7xl md:text-8xl font-extrabold text-primary drop-shadow-sm">
+        <h2 className="text-7xl md:text-8xl text-primary drop-shadow-sm">
           {happyCustomers}+
         </h2>
-        <p className="mt-2 text-2xl md:text-3xl font-semibold tracking-wide text-muted-foreground">
+        <p className="mt-2 text-2xl md:text-3xl tracking-wide text-muted-foreground">
           खुश ग्राहक
         </p>
       </div>

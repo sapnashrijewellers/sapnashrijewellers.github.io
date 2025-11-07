@@ -41,7 +41,7 @@ export default function ProductCard({ product }) {
           src={`${driveURL}${product.images[0]}`}
           loading="lazy"
           alt={product.name}
-          className="w-full h-full object-cover rounded-t-2xl"
+          className="w-full h-full object-cover"
           width={220}
           height={180}
           itemProp="image"
@@ -50,10 +50,10 @@ export default function ProductCard({ product }) {
 
       {/* Product Info */}
       <div className="p-3">
-        <h2 className="text-lg font-semibold" itemProp="name">
+        <h2 className="text-lg" itemProp="name">
           {product.name}
         </h2>
-        <div className="flex justify-between font-medium mt-1">
+        <div className="flex justify-between text-sm mt-1 text-normal">
           <span itemProp="material">{product.purity}</span>
           <span itemProp="weight">{product.weight} gm</span>
         </div>

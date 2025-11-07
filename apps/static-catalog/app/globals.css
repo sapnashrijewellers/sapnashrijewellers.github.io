@@ -1,10 +1,7 @@
 /* ==============From index.css */
 @import "tailwindcss";
-@import "tailwindcss/utilities";
 
-/* ============================
-   GLOBAL FONT + BASE SETTINGS
-============================ */
+
 :root {
   font-family: 'Noto Sans Devanagari', Mangal, Arial, sans-serif;
   font-synthesis: none;
@@ -24,9 +21,6 @@
   --color-accent: #fef3c7;
 }
 
-/* ============================
-   THEME: DARK
-============================ */
 html.theme-dark {
   --color-bg: #121212;
   --color-text: rgba(255, 255, 255, 0.87);
@@ -37,9 +31,7 @@ html.theme-dark {
   --color-accent: #2a2a2a;
 }
 
-/* ============================
-   THEME: ROSE
-============================ */
+
 html.theme-rose {
   --color-bg: #fff5f7;
   --color-text: #4a001f;
@@ -125,39 +117,11 @@ input, select, textarea {
   padding: 0.5rem;
 }
 
-/* ============================
-   HEADINGS & CUSTOM CLASSES
-============================ */
 .au-h2 {
   @apply text-3xl font-bold mb-8 text-center;
   color: var(--color-primary-dark);
 }
 
-/* ============================
-   GOLD SHIMMER EFFECT
-============================ */
-@keyframes gold-shimmer {
-  0%, 100% {
-    text-shadow: 
-      0 0 0.1rem #4a3400, 
-      0.1rem 0.1rem 0.1rem #fff, 
-      0 0 0.5rem rgba(255, 237, 74, 0.4);
-  }
-  50% {
-    text-shadow: 
-      0 0 0.1rem #2e2000,
-      0.1rem 0.1rem 0.2rem #fff,
-      0 0 0.8rem rgba(255, 237, 74, 0.8);
-  }
-}
-
-.shimmer-gold {
-  animation: gold-shimmer 4s ease-in-out infinite;
-}
-
-/* ============================
-   UTILITY CLASSES FOR SURFACES
-============================ */
 .bg-surface {
   background-color: var(--color-surface);
 }
@@ -173,43 +137,46 @@ input, select, textarea {
 .text-primary {
   color: var(--color-primary);
 }
+.text-normal {
+  color: var(--color-text);
+}
 
 .text-primary-dark {
   color: var(--color-primary-dark);
 }
 /* ======================== */
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/*Ticker*/
+.ticker-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.ticker-content {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: ticker 45s linear infinite;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* space between duplicate copies */
+.ticker-content span {
+  padding-right: 4rem;
 }
 
-@keyframes scroll {
+/* seamless scroll keyframes */
+@keyframes ticker {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
-.animate-scroll {
-  animation: scroll 20s linear infinite;
+/* ✅ Pause the animation on hover */
+.ticker-container:hover .ticker-content {
+  animation-play-state: paused;
 }
 
-
+/*Ticker*/

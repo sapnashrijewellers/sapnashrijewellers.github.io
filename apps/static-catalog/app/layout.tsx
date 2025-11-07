@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Noto_Sans_Devanagari } from "next/font/google";
 // import { DataProvider } from "@/context/DataContext";
@@ -6,12 +6,18 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FooterTrust from "@/components/FooterTrust";
 import Ticker from "@/components/Ticker";
-import WhatsAppContact from "@/components/WhatsAppContact";
 import Script from "next/script";
+import  FloatingWhatsAppButton  from "@/components/FloatingWhatsAppButton";
 
 const notoDevanagari = Noto_Sans_Devanagari({
   subsets: ["latin", "devanagari"],
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#ffffff",
+};
 
 export const metadata: Metadata = {
   title: "सपना श्री ज्वैलर्स, नागदा | Sapna Shri Jewellers Nagda |",
@@ -27,32 +33,31 @@ export const metadata: Metadata = {
   },
   authors: [{ name: "Sapna Shri Jewellers" }],
   robots: "index, follow",
-  viewport: "width=device-width, initial-scale=1.0",
 };
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
-}) {
-  const MY_PHONE_NUMBER = "918234042231";
+}) {  
 
   return (
     <html lang="en" className="theme-dark">
       <body className={notoDevanagari.className}>
-        
-          {/* Floating WhatsApp & QR */}
-          <WhatsAppContact phone={MY_PHONE_NUMBER} />
 
-          {/* Main layout */}
-          <div className="container mx-auto">
-            <Navbar />
-            <Ticker />
-            <div className="p-4 max-w-6xl mx-auto">{children}</div>
-            <FooterTrust />
-            <Footer />
-          </div>
         
+        {/* Floating WhatsApp Button */}
+        <FloatingWhatsAppButton />
+
+        {/* Main layout */}
+        <div className="container mx-auto">
+          <Navbar />
+          <Ticker />
+          <div className="p-4 max-w-6xl mx-auto">{children}</div>
+          <FooterTrust />
+          <Footer />
+        </div>
+
 
         {/* optional: register SW or external scripts */}
         <Script src="/register-sw.js" strategy="afterInteractive" />

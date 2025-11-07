@@ -33,16 +33,23 @@ export async function generateStaticParams() {
 export async function generateMetadata(
   props: { params: Promise<{ category: string; id: string }> }
 ): Promise<Metadata> {
-  const params = await props.params; // ✅ unwrap the async params
+  //const params = await props.params; // ✅ unwrap the async params
+  const { category: categorySlug, id } = await props.params;
+  const decodedSlug = decodeURIComponent(categorySlug);
 
-  const product = data.categorizedProducts?.[params.category]?.find(
-    (p) => p.id.toString() === params.id.toString()
+  // Find the category name that matches the slug
+  const categoryName = data.sub_categories.find(
+    (cat) => toSlug(cat) === decodedSlug
+  );
+
+  const product = data.categorizedProducts?.[categoryName]?.find(
+    (p) => p.id.toString() === id
   );
 
   if (!product) return {};
 
   const baseProductUrl = 
-  `${baseURL}/product/${toSlug(params.category)}/${params.id}`;
+  `${baseURL}/product/${toSlug(categoryName)}/${id}`;
 
   const driveURL = `${baseURL}/static/img/optimized/`;
   const title = `${product.name} | Sapna Shri Jewellers`;
@@ -52,8 +59,8 @@ export async function generateMetadata(
     product.name,
     product.purity,
     product.sub_category,
-    product.highlights.join(","),
-  ].join(",");
+    product.highlights.join(", "),
+  ].join(", ");
 
   return {
     title,
@@ -63,7 +70,7 @@ export async function generateMetadata(
       title,
       description,
       url: baseProductUrl,
-      type: "product",
+      type: "website",
       images: [{ url: imageUrl }],
     },
     twitter: {
@@ -116,9 +123,33 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
     const telegramShare = `https://t.me/share/url?url=${encodedUrl}&text=${encodedText}`;
     const snapchatShare = `https://www.snapchat.com/scan?attachmentUrl=${encodedUrl}`;
     const instagramShare = `https://www.instagram.com/?url=${encodedUrl}`;
-
+const ldjson = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.name,
+    image: product.images,
+    description: product.description,
+    sku: product.id,
+    brand: {
+      "@type": "Brand",
+      name: "Sapna Shri Jewellers",
+    },
+    offers: {
+      "@type": "Offer",
+      priceCurrency: "INR",
+      price: product.price,
+      availability: "https://schema.org/InStock",
+      url: product.url,
+    },
+  };
+    
     return (
+        
         <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-6 py-6 px-3">
+            <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(ldjson) }}
+      />
             {/* ✅ Client-side gallery */}
             <ProductGallery product={product} driveURL={driveURL} />
 

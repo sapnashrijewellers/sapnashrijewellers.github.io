@@ -24,7 +24,7 @@ export default function Footer() {
 
         {/* About Us */}
         <div>
-          <h2 className="flex items-center gap-2 font-bold text-lg mt-4">
+          <h2 className="flex items-center gap-2 text-lg mt-4">
             <FaUserTie className="text-primary-dark mt-[1px]" />
             हमारी पहचान / About Us
           </h2>
@@ -34,9 +34,8 @@ export default function Footer() {
           </p>
 
           <br />
-          <p className="flex gap-2">
-            <FaBoxOpen className="text-emerald-600 mt-[1px]" />
-            यहाँ आपको मिलेंगे –
+          <p className="flex gap-2">            
+            🎁 यहाँ आपको मिलेंगे –
           </p>
           <p>
             ✨ शुद्ध 22 कैरेट सोने के गहने <br />
@@ -48,24 +47,32 @@ export default function Footer() {
         </div>
 
         {/* Store Location */}
-        <div>
-          <h2 className="flex items-center gap-2 font-bold text-lg">
-            <FaMapMarkerAlt className="text-red-500 mt-[1px]" />
-            दुकान का स्थान
+        <address className="">
+          <h2 className="flex items-center gap-2 text-lg">
+            📌 सपना श्री ज्वैलर्स,
           </h2>
-          <address className="text-muted-foreground not-italic">
-            सपना श्री ज्वैलर्स,<br />
+          <h3>
             रेलवे स्टेशन मेन रोड, जैन मंदिर के पास,<br />
-            नागदा, जिला उज्जैन<br />
+            नागदा जंक्शन, जिला उज्जैन<br />
             📞 8234042231
-          </address>
-        </div>
+          </h3>
+        </address>
+        <address className="">
+          <h2 className="flex items-center gap-2 text-lg">
+            📌 Sapna Shri Jewellers,
+          </h2>
+          <h3>
+            Near Railway Station, M G Road,<br />
+            Nagda Junction, District: Ujjain<br />
+            📞 8234042231
+          </h3>
+        </address>
+
 
         {/* Social Media */}
         <div>
-          <h2 className="flex items-center gap-2 font-bold text-lg mt-4">
-            <FaLink className="text-blue-600 mt-[1px]" />
-            हमसे जुड़ें / Follow Us
+          <h2 className="flex items-center gap-2 text-lg mt-4">            
+            🔗 हमसे जुड़ें / Follow Us
           </h2>
 
           <div className="flex gap-4 mt-2 text-xl sm:text-2xl md:text-3xl text-muted-foreground">
@@ -73,7 +80,7 @@ export default function Footer() {
               href="https://www.facebook.com/share/14JjQReswYv/"
               target="_blank"
               rel="noopener noreferrer"
-              title="Facebook"
+              title="Connect with us on Facebook"
               className="hover:!text-blue-600 transition-colors"
             >
               <FaFacebookF />
@@ -83,7 +90,7 @@ export default function Footer() {
               href="https://www.instagram.com/sapna_shri_jewllers/"
               target="_blank"
               rel="noopener noreferrer"
-              title="Instagram"
+              title="Connect with us on Instagram"
               className="hover:!text-pink-600 transition-colors"
             >
               <FaInstagram />
@@ -93,7 +100,7 @@ export default function Footer() {
               href="https://www.youtube.com/@SapnaShriJewellers-b1f/shorts"
               target="_blank"
               rel="noopener noreferrer"
-              title="YouTube"
+              title="Connect with us on YouTube"
               className="hover:!text-red-600 transition-colors"
             >
               <FaYoutube />
@@ -103,7 +110,7 @@ export default function Footer() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              title="WhatsApp"
+              title="Connect with us on WhatsApp"
               className="hover:!text-green-600 transition-colors text-primary"
             >
               <FaWhatsapp />
@@ -111,7 +118,7 @@ export default function Footer() {
 
             <Link
               href="/tv"
-              title="TV"
+              title="TV advertisement"
               className="hover:text-accent hover:scale-110 transform transition duration-200"
               prefetch={false}
             >
@@ -126,6 +133,7 @@ export default function Footer() {
             href="/privacy"
             className="flex items-center gap-2 font-bold text-lg mt-4 hover:text-foreground transition-colors"
             prefetch={false}
+            title="privacy policy"
           >
             <FaShieldAlt className="text-primary-dark mt-[1px]" />
             Privacy Policy
@@ -135,6 +143,7 @@ export default function Footer() {
             href="/about-us"
             className="flex items-center gap-2 font-bold text-lg mt-4 hover:text-foreground transition-colors"
             prefetch={false}
+            title="Know more about Sapna Shri Jewellers"
           >
             <FaUserTie className="text-primary-dark mt-[1px]" />
             हमारी पहचान / About Us

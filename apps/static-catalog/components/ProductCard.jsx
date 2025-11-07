@@ -17,6 +17,7 @@ export default function ProductCard({ product }) {
       {/* Image Section */}
       <Link
         href={`/product/${toSlug(product.sub_category)}/${product.id}`}
+        title={`${product.sub_category} | ${product.name}`}
         className="flex relative w-full items-center justify-center overflow-hidden rounded-t-2xl bg-muted"
         style={{ maxHeight: "220px", minHeight: "180px" }}
         itemProp="url"

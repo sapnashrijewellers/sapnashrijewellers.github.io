@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { renderSEOTags } from "../../utils/SEO";
 
 export const metadata = {
   title: "HUID Hallmarking Info - Sapna Shri Jewellers Nagda",
@@ -79,17 +78,7 @@ export default function HUIDInfo() {
     },
   ];
 
-  return (
-    <>
-      {renderSEOTags(
-        title,
-        description,
-        imageUrl,
-        baseURL,
-        metadata.keywords,
-        ldjson
-      )}
-
+  return ( 
       <div className="max-w-3xl mx-auto mt-10 p-6 bg-card text-card-foreground border border-border rounded-2xl shadow-md">
         {/* Header */}
         <div className="flex items-center gap-3 mb-4">
@@ -179,7 +168,6 @@ export default function HUIDInfo() {
             </div>
           ))}
         </div>
-      </div>
-    </>
+      </div>    
   );
 }

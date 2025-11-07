@@ -41,7 +41,7 @@ export default function Navbar() {
       <div className="mx-auto max-w-7xl flex justify-between items-start">
         {/* Left: Logo */}
         <div className="flex-shrink-0 flex items-center">
-          <Link href="/" className="flex items-center">
+          <Link href="/" title="Go to Home Page of Sapna Shri Jewellers" className="flex items-center">
             <img
               src="/logo.png"
               alt="Sapna Shri Jewellers Nagda | सपना श्री ज्वैलर्स, नागदा"
@@ -54,10 +54,10 @@ export default function Navbar() {
         <div className="flex flex-col justify-between w-full sm:w-auto ml-4">
           {/* Top row: Menu links */}
           <div className="flex flex-wrap justify-end gap-4 mb-1">
-            <Link className="hover:underline" href="/" title="Home Page">
+            <Link className="hover:underline" href="/" title="Go to Home Page of Sapna Shri Jewellers">
               होम
             </Link>
-            <Link className="hover:underline" href="/calculator" title="Price Calculator">
+            <Link className="hover:underline" href="/calculator" title="Jewellery Price Calculator">
               कैलकुलेटर
             </Link>
             <Link className="hover:underline" href="/huid" title="HUID हॉलमार्किंग क्यों ज़रूरी है?">

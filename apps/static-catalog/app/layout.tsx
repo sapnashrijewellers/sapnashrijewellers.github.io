@@ -6,7 +6,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FooterTrust from "@/components/FooterTrust";
 import Ticker from "@/components/Ticker";
-import Script from "next/script";
 import  FloatingWhatsAppButton  from "@/components/FloatingWhatsAppButton";
 
 const notoDevanagari = Noto_Sans_Devanagari({
@@ -56,11 +55,7 @@ export default function RootLayout({
           <div className="p-4 max-w-6xl mx-auto">{children}</div>
           <FooterTrust />
           <Footer />
-        </div>
-
-
-        {/* optional: register SW or external scripts */}
-        <Script src="/register-sw.js" strategy="afterInteractive" />
+        </div>        
       </body>
     </html>
   );

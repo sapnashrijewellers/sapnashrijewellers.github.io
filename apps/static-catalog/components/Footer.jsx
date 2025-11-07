@@ -74,7 +74,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               title="Facebook"
-              className="hover:text-blue-600 transition-colors"
+              className="hover:!text-blue-600 transition-colors"
             >
               <FaFacebookF />
             </a>
@@ -84,7 +84,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               title="Instagram"
-              className="hover:text-pink-600 transition-colors"
+              className="hover:!text-pink-600 transition-colors"
             >
               <FaInstagram />
             </a>
@@ -94,7 +94,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               title="YouTube"
-              className="hover:text-red-600 transition-colors"
+              className="hover:!text-red-600 transition-colors"
             >
               <FaYoutube />
             </a>
@@ -104,7 +104,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               title="WhatsApp"
-              className="hover:text-green-600 transition-colors text-primary"
+              className="hover:!text-green-600 transition-colors text-primary"
             >
               <FaWhatsapp />
             </a>

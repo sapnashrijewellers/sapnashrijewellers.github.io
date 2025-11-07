@@ -1,5 +1,5 @@
 // utils/slug.js
-export function toSlugKeepUnicode(text) {
+export function toSlug(text) {
   if (!text) return "";
   // normalize spaces, trim
   text = String(text).trim();

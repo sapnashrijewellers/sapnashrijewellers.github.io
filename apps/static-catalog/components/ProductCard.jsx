@@ -1,7 +1,5 @@
-/**
- * ProductCard Component
- * Optimized for SSG, SEO, and accessibility.
- */
+import Link from "next/link";
+import {toSlug} from "../utils/slug"
 export default function ProductCard({ product }) {
   const driveURL = "https://sapnashrijewellers.github.io/static/img/thumbnail/";
 
@@ -17,9 +15,9 @@ export default function ProductCard({ product }) {
       aria-label={`Product: ${product.name}`}
     >
       {/* Image Section */}
-      <a
-        href={`/product/${encodeURIComponent(product.sub_category)}/${product.id}`}
-        className="block relative w-full flex items-center justify-center overflow-hidden rounded-t-2xl bg-muted"
+      <Link
+        href={`/product/${toSlug(product.sub_category)}/${product.id}`}
+        className="flex relative w-full items-center justify-center overflow-hidden rounded-t-2xl bg-muted"
         style={{ maxHeight: "220px", minHeight: "180px" }}
         itemProp="url"
       >
@@ -28,7 +26,7 @@ export default function ProductCard({ product }) {
             className="
               absolute top-2 left-2 z-10
               bg-accent text-accent-foreground
-              text-xs font-bold px-2 py-1 rounded-full shadow-lg
+              text-xs px-2 py-1 rounded-full shadow-lg
               transform -rotate-3
             "
             aria-label="New Arrival"
@@ -46,7 +44,7 @@ export default function ProductCard({ product }) {
           height={180}
           itemProp="image"
         />
-      </a>
+      </Link>
 
       {/* Product Info */}
       <div className="p-3">

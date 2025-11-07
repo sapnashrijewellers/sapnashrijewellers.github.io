@@ -1,6 +1,6 @@
 // components/CategoryCard.jsx
 import Link from "next/link";
-import { toSlugKeepUnicode } from "../utils/slug";
+import { toSlug } from "../utils/slug";
 
 export default function CategoryCard({ category, products }) {
   if (!products || products.length === 0) return null;
@@ -15,7 +15,7 @@ export default function CategoryCard({ category, products }) {
 
   return (
     <Link      
-      href={`/category/${toSlugKeepUnicode(category)}`}
+      href={`/category/${toSlug(category)}`}
       className="block transition-transform duration-300 hover:scale-105"
       prefetch={false} // optional: skip prefetch for large catalogs
     >

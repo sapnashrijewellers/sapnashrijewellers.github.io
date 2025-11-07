@@ -1,14 +1,14 @@
 import ProductCard from "../../../components/ProductCard";
 import data from "../../../data/data.json";
 import { renderSEOTags } from "../../../utils/SEO";
-import { toSlugKeepUnicode } from "../../../utils/slug";
+import { toSlug } from "../../../utils/slug";
 import { notFound } from "next/navigation";
 
 // ---- STATIC PARAM GENERATION ----
 export async function generateStaticParams() {
     // make it sync (no await needed)
     return data.sub_categories.map((cat) => ({
-        category: toSlugKeepUnicode(cat),
+        category: toSlug(cat),
     }));
 }
 
@@ -17,7 +17,7 @@ export async function generateMetadata({ params }) {
     const { category: slug } = await params; // ✅ no await needed here, params already resolved
     const decodedSlug = decodeURIComponent(slug);
     const category = data.sub_categories.find(
-        (cat) => toSlugKeepUnicode(cat) === decodedSlug
+        (cat) => toSlug(cat) === decodedSlug
     );
     if (!category) return {};
 
@@ -55,7 +55,7 @@ export default async function CategoryPage({ params }) { // ✅ make it async
     const { category: slug } = await params; // ✅ no await needed here either
     const decodedSlug = decodeURIComponent(slug);
     const category = data.sub_categories.find(
-        (cat) => toSlugKeepUnicode(cat) === decodedSlug
+        (cat) => toSlug(cat) === decodedSlug
     );
 
     if (!category) notFound();

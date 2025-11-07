@@ -118,7 +118,7 @@ input, select, textarea {
 }
 
 .au-h2 {
-  @apply text-3xl font-bold mb-8 text-center;
+  @apply text-3xl mb-8 text-center;
   color: var(--color-primary-dark);
 }
 

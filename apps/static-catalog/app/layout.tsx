@@ -6,7 +6,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FooterTrust from "@/components/FooterTrust";
 import Ticker from "@/components/Ticker";
-import  FloatingWhatsAppButton  from "@/components/FloatingWhatsAppButton";
+import FloatingWhatsAppButton from "@/components/FloatingWhatsAppButton";
+import RegisterSW from "./registerSW";
 
 const notoDevanagari = Noto_Sans_Devanagari({
   subsets: ["latin", "devanagari"],
@@ -38,13 +39,13 @@ export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
-}) {  
+}) {
 
   return (
     <html lang="en" className="theme-dark">
       <body className={notoDevanagari.className}>
+        <RegisterSW />
 
-        
         {/* Floating WhatsApp Button */}
         <FloatingWhatsAppButton />
 
@@ -55,7 +56,7 @@ export default function RootLayout({
           <div className="p-4 max-w-6xl mx-auto">{children}</div>
           <FooterTrust />
           <Footer />
-        </div>        
+        </div>
       </body>
     </html>
   );

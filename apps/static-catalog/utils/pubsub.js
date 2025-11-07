@@ -32,7 +32,7 @@ const VAPID_PUBLIC_KEY = "BKX0C-dcKvSLhEunwNiaOJA2hY1yh4PTCSFngeKPbiWjJaC1Tm_JXK
  * subscription if one doesn't exist).
  * @param {string} baseURL - The base URL for the subscription server endpoint.
  */
-export async function subscribeUser(baseURL) {
+export async function subscribeUser(baseURL, registration) {
     if (!("serviceWorker" in navigator) || !("PushManager" in window)) {
         console.warn("Push notifications not supported in this environment.");
         return;
@@ -46,7 +46,7 @@ export async function subscribeUser(baseURL) {
             console.log("Notification permission not granted. Subscription skipped.");
             return;
         }        
-        const registration = await navigator.serviceWorker.ready;
+        //const registration = await navigator.serviceWorker.ready;
         
         // 2. Check for an existing subscription using the current key
         let subscription = await registration.pushManager.getSubscription();       

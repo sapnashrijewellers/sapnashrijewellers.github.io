@@ -4,7 +4,7 @@ import { ChevronDown } from "lucide-react";
 
 // ✅ Dynamic Open Graph + Twitter meta tags
 
-const title = `Sapna Shri Jewellers Nagda | सपना श्री ज्वेलर्स नागदा - 35 वर्षों का विश्वास`;
+const title = `Sapna Shri Jewellers Nagda | सपना श्री ज्वेलर्स नागदा`;
 const description = `Sapna Shri Jewellers Nagda - सोने और चांदी के आभूषणों में 35+ वर्षों का अनुभव। BIS 916 हॉलमार्क गोल्ड, सर्टिफाइड डायमंड और पारदर्शी सेवा।`;
 const keywords = `Sapna Shri Jewellers Nagda,
 सपना श्री ज्वेलर्स नागदा,
@@ -188,7 +188,7 @@ export default function AboutUsPage() {
       {/* ===== Heading ===== */}
       <div className="text-center mb-8">
         <h1 className="text-4xl md:text-5xl text-primary-dark mb-4">
-          हमारी पहचान
+          सपना श्री ज्वेलर्स
         </h1>
         <p className="text-lg md:text-xl">
           सपना श्री ज्वेलर्स पिछले{" "}
@@ -285,7 +285,7 @@ export default function AboutUsPage() {
           {popularSearches.map((item) => (
             <a
               key={item.search}
-              href={`/#/category/${encodeURIComponent(item.category)}`}
+              href={`/category/${(item.category)}`}
               className="px-4 py-2 bg-accent border border-theme rounded-full text-sm md:text-base hover:opacity-80"
             >
               {item.search}

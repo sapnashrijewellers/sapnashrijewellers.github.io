@@ -1,19 +1,29 @@
+import type { CatalogData, Product } from "@/types/catalog";
+import dataRaw from "../../../data/data.json";
 import ProductCard from "../../../components/ProductCard";
-import data from "../../../data/data.json";
+
 import { toSlug } from "../../../utils/slug";
 import { notFound } from "next/navigation";
 
+const data = dataRaw as CatalogData;
+
+interface CategoryPageProps {
+    params: {
+        category: string;
+    };
+}
+
 let ldjson = {};
 // ---- STATIC PARAM GENERATION ----
-export async function generateStaticParams() {    
+export async function generateStaticParams() {
     return data.sub_categories.map((cat) => ({
-        category: toSlug(cat),
+        category: (toSlug(cat)),
     }));
 }
 
 // ---- METADATA ----
-export async function generateMetadata({ params }) {
-    const { category: slug } = await params; // ✅ no await needed here, params already resolved
+export async function generateMetadata({ params }: CategoryPageProps) {
+    const { category: slug } = await params;
     const decodedSlug = decodeURIComponent(slug);
     const category = data.sub_categories.find(
         (cat) => toSlug(cat) === decodedSlug
@@ -33,7 +43,7 @@ export async function generateMetadata({ params }) {
 
     const keywords =
         filtered.length > 0
-            ? [category, ...filtered.slice(0, 10).map((p) => p.name)].join(", ")
+            ? [category, ...filtered.slice(0, 10).map((p: Product) => p.name)].join(", ")
             : category;
 
     ldjson = {
@@ -42,7 +52,7 @@ export async function generateMetadata({ params }) {
         name: `${category} by Sapna Shri Jewellers`,
         description,
         url: `${baseURL}/category/${slug}`,
-        mainEntity: filtered.map((p) => ({
+        mainEntity: filtered.map((p:Product) => ({
             "@type": "Product",
             name: p.name,
             image: `${driveURL}${p.images[0]}`,
@@ -73,9 +83,10 @@ export async function generateMetadata({ params }) {
 }
 
 // ---- MAIN PAGE ----
-export default async function CategoryPage({ params }) { // ✅ make it async
+export default async function CategoryPage({ params }: CategoryPageProps) { // ✅ make it async
     const { category: slug } = await params; // ✅ no await needed here either
     const decodedSlug = decodeURIComponent(slug);
+    console.log(decodedSlug);
     const category = data.sub_categories.find(
         (cat) => toSlug(cat) === decodedSlug
     );
@@ -101,7 +112,7 @@ export default async function CategoryPage({ params }) { // ✅ make it async
                 <p>इस श्रेणी में कोई उत्पाद नहीं मिला.</p>
             ) : (
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-                    {filtered.map((p) => (
+                    {filtered.map((p:Product) => (
                         <ProductCard key={p.id} product={p} />
                     ))}
                 </div>

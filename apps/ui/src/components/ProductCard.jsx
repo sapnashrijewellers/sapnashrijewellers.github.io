@@ -1,7 +1,3 @@
-/**
- * ProductCard Component
- * Optimized for SSG, SEO, and accessibility.
- */
 export default function ProductCard({ product }) {
   const driveURL = "https://sapnashrijewellers.github.io/static/img/thumbnail/";
 
@@ -18,7 +14,7 @@ export default function ProductCard({ product }) {
     >
       {/* Image Section */}
       <a
-        href={`/product/${encodeURIComponent(product.sub_category)}/${product.id}`}
+        href={`/product/${product.sub_category}/${product.id}`}
         className="block relative w-full flex items-center justify-center overflow-hidden rounded-t-2xl bg-muted"
         style={{ maxHeight: "220px", minHeight: "180px" }}
         itemProp="url"

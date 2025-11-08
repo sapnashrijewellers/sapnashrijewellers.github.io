@@ -28,7 +28,7 @@ export default function ProductDetail() {
   const baseURL = "https://sapnashrijewellers.github.io";
   const driveURL = "https://sapnashrijewellers.github.io/static/img/optimized/";
   const phone = "918234042231";
-  const baseProductUrl = `${baseURL}/product/${encodeURIComponent(category)}/${encodeURIComponent(id)}`;
+  const baseProductUrl = `${baseURL}/product/${(category)}/${(id)}`;
   // ✅ Dynamic Open Graph + Twitter meta tags
 
   const title = `${product.name} | Sapna Shri Jewellers`;
@@ -57,12 +57,12 @@ export default function ProductDetail() {
 
 
 
-  const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(
+  const whatsappUrl = `https://wa.me/${phone}?text=${(
     `Hi, I want more details and discount on ${baseProductUrl}`
   )}`;
 
-  const encodedUrl = encodeURIComponent(baseProductUrl);
-  const encodedText = encodeURIComponent(`Check out this product: ${product.name}`);
+  const encodedUrl = (baseProductUrl);
+  const encodedText = (`Check out this product: ${product.name}`);
   const whatsappShare = `https://wa.me/?text=${encodedText}%20${encodedUrl}`;
   const telegramShare = `https://t.me/share/url?url=${encodedUrl}&text=${encodedText}`;
   const snapchatShare = `https://www.snapchat.com/scan?attachmentUrl=${encodedUrl}`;

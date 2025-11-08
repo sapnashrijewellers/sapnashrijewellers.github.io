@@ -1,5 +1,8 @@
+import type { CatalogData, Product } from "@/types/catalog";
 import CategoryCard from "../components/CategoryCard";
-import data from "../data/data.json";
+import dataRaw from "../data/data.json";
+
+const data = dataRaw as CatalogData;
 
 const title = `Sapna Shri Jewellers`;
 const description = `Explore out latest products at Sapna Shri Jewellers Nagda. High-quality gold & silver jewellery with BIS 916 certification.`;

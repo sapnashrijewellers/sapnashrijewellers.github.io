@@ -77,9 +77,9 @@ export default async function CalculatorPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(ldjson) }}
       />     
 
-      <h2 className="text-2xl mb-6 text-center text-primary">
+      <h1 className="text-2xl mb-6 text-center text-primary">
         ज्वेलरी प्राइस कैलकुलेटर
-      </h2>
+      </h1>
 
       <Calculator rates={rates} />
     </div>

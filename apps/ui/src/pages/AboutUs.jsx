@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { renderSEOTags } from "../utils/SEO";
 
@@ -294,7 +293,7 @@ Sapna Shri Jewellers Nagda Contact Number`,
           <h2 className="au-h2">लोकप्रिय खोजें – Sapna Shri Jewellers पर</h2>
           <div className="flex flex-wrap justify-center gap-3">
             {popularSearches.map((item, index) => {
-              const link = `/#/category/${encodeURIComponent(item.category)}`;
+              const link = `/#/category/${(item.category)}`;
               return (
                 <a key={index} href={link} className="px-4 py-2 bg-accent border border-theme rounded-full text-sm md:text-base font-medium hover:opacity-80 transition-all">
                   {item.search}

@@ -64,7 +64,7 @@ export default function Home() {
       />
       <p className="text-center mb-6">
         Discover our exclusive categories of gold & silver jewellery.
-        High-quality craftsmanship with BIS 916 certification.
+        High-quality craftsmanship with BIS 916 certified gold.
       </p>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
 

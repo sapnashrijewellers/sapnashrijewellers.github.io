@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { FaQrcode } from "react-icons/fa";
 import IndianRupeeRate from "./IndianRupeeRate";
+import Image from "next/image";
 
 const RATES_URL = "https://sapnashrijewellers.github.io/static/rates.json ";
 
@@ -37,81 +38,66 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="bg-background text-foreground p-2 shadow-md w-full border-b border-border">
-      <div className="mx-auto max-w-7xl flex justify-between items-start">
+    <nav className="pt-2 shadow-md">
+      <div className="flex justify-between items-start">
         {/* Left: Logo */}
         <div className="flex-shrink-0 flex items-center">
-          <Link href="/" title="Go to Home Page of Sapna Shri Jewellers" className="flex items-center">
-            <img
+          <Link href="/" title="Go to Home Page of Sapna Shri Jewellers" className="flex items-start">
+            <Image
               src="/logo.png"
               alt="Sapna Shri Jewellers Nagda | सपना श्री ज्वैलर्स, नागदा"
               className="h-24 w-auto logo"
+              width="150"
+              height="150"
             />
           </Link>
         </div>
 
         {/* Right: Menu + Rates */}
-        <div className="flex flex-col justify-between w-full sm:w-auto ml-4">
+        <div className="flex flex-col p-1">
           {/* Top row: Menu links */}
-          <div className="flex flex-wrap justify-end gap-4 mb-1">
+          <div className="flex flex-wrap items-end justify-end gap-4">
             <Link className="hover:underline" href="/" title="Go to Home Page of Sapna Shri Jewellers">
               होम
             </Link>
-            <Link className="hover:underline" href="/calculator" title="Jewellery Price Calculator">
+            <Link className="hover:underline" href="/calculator" title="Jewelry Price Calculator">
               कैलकुलेटर
             </Link>
             <Link className="hover:underline" href="/huid" title="HUID हॉलमार्किंग क्यों ज़रूरी है?">
-              हॉलमार्किंग
+              हॉलमार्क
             </Link>
             <Link className="hover:text-primary" href="/qr" title="Payment QR Code">
-              <FaQrcode size="20" />
+              {/* <FaQrcode size="20" /> */}
+              QR
             </Link>
           </div>
 
           {/* Live rate timestamp */}
           {(rates.gold24K > 0 || rates.silver > 0) && (
-            <div className="flex justify-start gap-4">
+            <div className="flex items-end justify-end gap-4 text-sm">
               <span>
-                <span className="animate-pulse w-3 h-3 bg-red-500 rounded-full inline-block p-1"></span>&nbsp;
+                <span className="animate-pulse w-3 h-3 bg-red-500 rounded-full inline-block p-1 text-sm"></span>&nbsp;
                 लाइव रेट *{" "}
                 {new Date(rates.asOn).toLocaleString("en-IN", {
                   day: "2-digit",
                   month: "short",
                   hour: "2-digit",
                   minute: "2-digit",
-                  hour12: false,
+                  hour12: true,
                   timeZone: "Asia/Kolkata",
                 })}
               </span>
             </div>
           )}
 
-          {/* Bottom row: Live rates */}
-          {rates.gold24K > 0 && (
-            <div className="flex justify-start gap-4">
-              <span className="flex items-center gap-1">
-                सोना (24K):{" "}
-                <IndianRupeeRate rate={rates.gold24K * 10} className="text-primary" />
-              </span>
-              <span>
-                सोना (22K):{" "}
-                <IndianRupeeRate rate={rates.gold22K * 10} className="text-primary" />
-              </span>
-            </div>
-          )}
+          {/* Bottom rates section */}
+<div className="grid grid-cols-2 gap-x-3 gap-y-1 text-right text-sm">
+  <div>सोना-24K <IndianRupeeRate rate={rates.gold24K * 10} className="text-primary" /></div>
+  <div>सोना-22K <IndianRupeeRate rate={rates.gold22K * 10} className="text-primary" /></div>
+  <div>चाँदी(पाठ) <IndianRupeeRate rate={rates.silver * 1000} className="text-primary" /></div>
+  <div>चाँदी(जेवर) <IndianRupeeRate rate={rates.silver * 1000 * 0.92} className="text-primary" /></div>
+</div>
 
-          {rates.silver > 0 && (
-            <div className="flex justify-start gap-4">
-              <span className="flex items-center gap-1">
-                चाँदी (99.9):{" "}
-                <IndianRupeeRate rate={rates.silver * 1000} className="text-primary" />
-              </span>
-              <span>
-                चाँदी (जेवर):{" "}
-                <IndianRupeeRate rate={rates.silver * 1000 * 0.92} className="text-primary" />
-              </span>
-            </div>
-          )}
         </div>
       </div>
     </nav>

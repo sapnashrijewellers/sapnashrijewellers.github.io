@@ -3,31 +3,21 @@ import PropTypes from 'prop-types';
 
 /**
  * Renders a rate formatted for the Indian locale (en-IN) as currency (INR) 
- * without any decimal places.
- * Optimized for SSG and SEO.
+ * without any decimal places. 
  *
  * @param {object} props
- * @param {number} props.rate - The numerical value to be formatted and displayed.
- * @param {string} [props.className] - Optional CSS class to apply to the container element.
+ * @param {number} props.rate 
+ * @param {string} [props.className]
  */
-const IndianRupeeRate = ({ rate, className = '' }) => {
-  // Validate rate early for SEO-friendly static content
-  if (typeof rate !== 'number' || isNaN(rate)) {
-    return <span className={className} aria-label="Rate not available">--</span>;
-  }
-
-  // Memoize formatter for performance (avoids creating a new object each render)
+const IndianRupeeRate = ({ rate, className = '' }) => { 
   const formattedRate = useMemo(() => {
-    return new Intl.NumberFormat('en-IN', {
-      style: 'currency',
-      currency: 'INR',
+    return new Intl.NumberFormat('en-IN', {      
       minimumFractionDigits: 0,
       maximumFractionDigits: 0,
     }).format(rate);
   }, [rate]);
 
-  return (
-    // Use semantic span with proper microdata for SEO
+  return (    
     <span
       className={`rupee-rate ${className}`}
       itemProp="price"

@@ -54,7 +54,7 @@ export default function RootLayout({
         <div className="container mx-auto">
           <Navbar />
           <Ticker />
-          <div className="p-4 max-w-6xl mx-auto">{children}</div>
+          <div className="p-2 max-w-6xl mx-auto">{children}</div>
           <FooterTrust />
           <Footer />
         </div>

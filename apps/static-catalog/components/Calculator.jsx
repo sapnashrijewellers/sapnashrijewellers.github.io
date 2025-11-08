@@ -1,9 +1,9 @@
-"use client"; // ✅ Must be the first line
+"use client"; // ✅ Must be first
 
 import { useState } from "react";
 import IndianRupeeRate from "@/components/IndianRupeeRate";
 
-export default function Calculator({ rates }) {
+export default function Calculator() {
   const [form, setForm] = useState({
     category: "gold",
     purity: "gold22K",
@@ -12,6 +12,7 @@ export default function Calculator({ rates }) {
     gst: 3,
   });
   const [price, setPrice] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const purityLabels = {
     gold24K: "सोना (24K)",
@@ -31,24 +32,47 @@ export default function Calculator({ rates }) {
     setForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  const getRatePerGram = () => {
-    if (!rates) return 0;
-    return form.purity === "silverJewellery"
-      ? rates.silver * 0.92
-      : rates[form.purity] || 0;
+  // ✅ Fetch fresh rates each time before calculation
+  const fetchRates = async () => {
+    try {
+      const res = await fetch("https://sapnashrijewellers.github.io/static/rates.json", { cache: "no-store" }); // prevent caching
+      if (!res.ok) throw new Error("Failed to load rates");
+      const data = await res.json();
+      return data;
+    } catch (err) {
+      console.error("Rate fetch error:", err);
+      alert("रेट्स लोड करने में समस्या हुई। कृपया बाद में पुनः प्रयास करें।");
+      return null;
+    }
   };
 
-  const calculatePrice = () => {
-    const weight = parseFloat(form.weight);
-    const mcPercent = parseFloat(form.makingCharges);
-    const gstPercent = parseFloat(form.gst);
-    const rate = getRatePerGram();
+  const calculatePrice = async () => {
+    setLoading(true);
+    setPrice(null);
 
-    if (!rate || isNaN(weight) || weight <= 0) {
-      alert("कृपया सही वजन और शुद्धता चुनें");
+    const rates = await fetchRates();
+    if (!rates) {
+      setLoading(false);
       return;
     }
 
+    const weight = parseFloat(form.weight);
+    const mcPercent = parseFloat(form.makingCharges);
+    const gstPercent = parseFloat(form.gst);
+
+    // pick correct rate
+    const rate =
+      form.purity === "silverJewellery"
+        ? rates.silver * 0.92
+        : rates[form.purity] || 0;
+
+    if (!rate || isNaN(weight) || weight <= 0) {
+      alert("कृपया सही वजन और शुद्धता चुनें");
+      setLoading(false);
+      return;
+    }
+
+    // calculation
     const basePrice = weight * rate;
     const makingCharges = (mcPercent / 100) * basePrice;
     const totalBeforeGst = basePrice + makingCharges;
@@ -56,6 +80,7 @@ export default function Calculator({ rates }) {
     const finalPrice = totalBeforeGst + gstAmount;
 
     setPrice(finalPrice);
+    setLoading(false);
   };
 
   const inputClasses =
@@ -125,9 +150,10 @@ export default function Calculator({ rates }) {
 
       <button
         onClick={calculatePrice}
-        className="w-full bg-accent text-accent-foreground font-semibold py-2 rounded-lg shadow-md hover:shadow-lg hover:bg-accent/90 transition"
+        disabled={loading}
+        className="w-full bg-accent text-accent-foreground font-semibold py-2 rounded-lg shadow-md hover:shadow-lg hover:bg-accent/90 transition disabled:opacity-70"
       >
-        कैलकुलेट करें
+        {loading ? "कैलकुलेट किया जा रहा है..." : "कैलकुलेट करें"}
       </button>
 
       {price !== null && (

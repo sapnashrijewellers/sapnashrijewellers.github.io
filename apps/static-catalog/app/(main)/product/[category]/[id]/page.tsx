@@ -22,17 +22,23 @@ const phone = "918234042231";
 // ✅ Generate all static paths
 export async function generateStaticParams() {
   const categories = Object.keys(data.categorizedProducts || {});
-  const params: { category: string; id: string }[] = [];
+  const params = [];
 
-  for (let category of categories) {
-    const products = data.categorizedProducts[category];
+  for (const category of categories) {
+    const products = data.categorizedProducts[category] || [];
+    const encodedCategory = (toSlug(category)); // ✅ encode once here
+
     for (const p of products) {
-      category = (toSlug(category));
-      params.push({ category, id: p.id.toString() });
+      params.push({
+        category: encodedCategory,
+        id: p.id.toString(),
+      });
     }
   }
+
   return params;
 }
+
 
 export async function generateMetadata(
   props: { params: Promise<{ category: string; id: string }> }
@@ -235,7 +241,10 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
             >
               <FaInstagram />
             </a>
-            <NativeShare />
+            <NativeShare
+              productName={product.name} 
+              productUrl = {baseProductUrl}
+              phone = "8234042231" />
           </div>
         </div>
       </div>

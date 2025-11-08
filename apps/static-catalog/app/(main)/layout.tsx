@@ -20,6 +20,8 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  manifest: '/manifest.json',
+  themeColor: '#FFD700',
   title: "सपना श्री ज्वैलर्स, नागदा | Sapna Shri Jewellers Nagda |",
   description:
     "Official website of Sapna Shri Jewellers, Nagda — trusted jewellery shop offering gold and silver ornaments.",

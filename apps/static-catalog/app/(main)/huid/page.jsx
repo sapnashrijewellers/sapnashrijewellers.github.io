@@ -1,9 +1,8 @@
 import Image from "next/image";
 
 const baseURL = "https://sapnashrijewellers.github.io";
-  const title = metadata.title;
-  const description = metadata.description;
-  const imageUrl = `${baseURL}/logo.png`;
+
+const imageUrl = `${baseURL}/logo.png`;
 
 
 export const metadata = {
@@ -34,11 +33,11 @@ export const metadata = {
 
 
 export default function HUIDInfo() {
-  
+const description = metadata.description;
   const ldjson = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: title,
+    name: metadata.title,
     url: `${baseURL}/huid`,
     description,
     publisher: {

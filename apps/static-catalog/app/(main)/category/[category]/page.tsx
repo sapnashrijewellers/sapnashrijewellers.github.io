@@ -1,8 +1,8 @@
 import type { CatalogData, Product } from "@/types/catalog";
-import dataRaw from "../../../data/data.json";
-import ProductCard from "../../../components/ProductCard";
+import dataRaw from "@/data/data.json";
+import ProductCard from "@/components/ProductCard";
 
-import { toSlug } from "../../../utils/slug";
+import { toSlug } from "@/utils/slug";
 import { notFound } from "next/navigation";
 
 const data = dataRaw as CatalogData;

@@ -23,9 +23,11 @@ export const metadata: Metadata = {
   title: "सपना श्री ज्वैलर्स, नागदा | Sapna Shri Jewellers Nagda |",
   description:
     "Official website of Sapna Shri Jewellers, Nagda — trusted jewellery shop offering gold and silver ornaments.",
-  icons: {
-    icon: [
-      { url: "/icons/favicon-96x96-v1.png", sizes: "96x96", type: "image/png" },
+  manifest: "/manifest.webmanifest",
+    icons: {
+    icon: [      
+      { url: "/icons/favicon-32x32-v1.png", sizes: "32x32", type: "image/png" },
+      { url: "/icons/favicon-16x16-v1.png", sizes: "16x16", type: "image/png" },
       { url: "/icons/favicon-v1.svg", type: "image/svg+xml" },
       { url: "/icons/favicon-v1.ico", rel: "shortcut icon" },
     ],
@@ -45,7 +47,6 @@ export default function RootLayout({
     <html lang="en" className="theme-dark">
       <body className={notoDevanagari.className}>
         <RegisterSW />
-
         {/* Floating WhatsApp Button */}
         <FloatingWhatsAppButton />
 

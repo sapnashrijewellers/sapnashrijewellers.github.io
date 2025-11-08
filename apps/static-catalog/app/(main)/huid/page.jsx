@@ -1,5 +1,11 @@
 import Image from "next/image";
 
+const baseURL = "https://sapnashrijewellers.github.io";
+  const title = metadata.title;
+  const description = metadata.description;
+  const imageUrl = `${baseURL}/logo.png`;
+
+
 export const metadata = {
   title: "HUID Hallmarking Info - Sapna Shri Jewellers Nagda",
   description:
@@ -13,7 +19,7 @@ export const metadata = {
     url: "https://sapnashrijewellers.github.io/huid",
     images: [
       {
-        url: "https://sapnashrijewellers.github.io/logo.png",
+        url: imageUrl,
         width: 800,
         height: 600,
         alt: "Sapna Shri Jewellers Logo",
@@ -28,11 +34,7 @@ export const metadata = {
 
 
 export default function HUIDInfo() {
-  const baseURL = "https://sapnashrijewellers.github.io";
-  const title = metadata.title;
-  const description = metadata.description;
-  const imageUrl = `${baseURL}/logo.png`;
-
+  
   const ldjson = {
     "@context": "https://schema.org",
     "@type": "WebPage",

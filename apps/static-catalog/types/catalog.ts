@@ -24,3 +24,11 @@ export interface CatalogData {
   ticker?: string[];
   sub_categories: string[];
 }
+export interface Rates {
+  asOn: Date;
+  gold24K: number;
+  gold22K: number;
+  gold18K: number;
+  silver: number;
+  silverJewelry: number;
+}

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import "./globals.css";
+import "@/app/globals.css";
 import { Noto_Sans_Devanagari } from "next/font/google";
 // import { DataProvider } from "@/context/DataContext";
 import Navbar from "@/components/Navbar";
@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import FooterTrust from "@/components/FooterTrust";
 import Ticker from "@/components/Ticker";
 import FloatingWhatsAppButton from "@/components/FloatingWhatsAppButton";
-import RegisterSW from "./registerSW";
+import RegisterSW from "@/components/registerSW";
 
 const notoDevanagari = Noto_Sans_Devanagari({
   subsets: ["latin", "devanagari"],

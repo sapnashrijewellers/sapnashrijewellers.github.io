@@ -1,0 +1,72 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import type { CatalogData, Product } from "@/types/catalog";
+import dataRaw from "@/data/data.json";
+
+const data = dataRaw as CatalogData;
+const baseURL = "https://sapnashrijewellers.github.io";
+const driveURL = `${baseURL}/static/img/optimized/`;
+
+export default function TV() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [fade, setFade] = useState(true);
+
+  useEffect(() => {
+    if (!data.sub_categories || data.sub_categories.length === 0) return;
+
+    const interval = setInterval(() => {
+      setFade(false);
+
+      // delay before switching image
+      setTimeout(() => {
+        setCurrentIndex((prev) => (prev + 1) % data.sub_categories.length);
+        setFade(true);
+      }, 1000);
+    }, 10000); // switch every 10s
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const subCategory = data.sub_categories[currentIndex];
+  const productList = data.categorizedProducts[subCategory];
+  const product: Product = productList ? productList[0] : ({} as Product);
+
+  if (!product) return <div>Loading product...</div>;
+
+  return (
+    <div
+      className={`transition-opacity duration-1000 ${
+        fade ? "opacity-100" : "opacity-0"
+      } flex flex-col md:grid md:grid-cols-2 gap-2 w-full h-full p-2 overflow-hidden`}
+    >
+      {/* Image panel */}
+      <div className="w-full h-full flex justify-start items-start">
+        {product.images?.[0] && (
+          <Image
+            src={`${driveURL}${product.images[0]}`}
+            alt={product.name}
+            width={800}
+            height={800}
+            className="w-full h-auto object-contain rounded-2xl"
+            priority
+          />
+        )}
+      </div>
+
+      {/* Details panel */}
+      <div className="flex flex-col gap-3 p-2 text-2xl leading-tight overflow-hidden">
+        <div>
+          <h1 className="mb-2">{product.name}</h1>
+          <p>
+            <b>शुद्धता:</b> {product.purity}
+          </p>
+          <p>
+            <b>वज़न:</b> {product.weight} g
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}

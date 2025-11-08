@@ -1,5 +1,6 @@
 /* ==============From index.css */
 @import "tailwindcss";
+@import "tailwindcss/utilities";
 
 
 :root {

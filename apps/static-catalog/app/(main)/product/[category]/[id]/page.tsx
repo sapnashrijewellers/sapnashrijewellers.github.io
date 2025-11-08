@@ -5,7 +5,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ProductGallery from "@/components/ProductGallery";
 import NativeShare from "@/components/NativeShare";
-import { toSlug } from "../../../../utils/slug";
+import { toSlug } from "../../../../../utils/slug";
 import {
   FaWhatsapp,
   FaTelegramPlane,

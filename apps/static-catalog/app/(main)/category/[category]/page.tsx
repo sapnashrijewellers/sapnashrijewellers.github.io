@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: CategoryPageProps) {
     const filtered = data.categorizedProducts[category] || [];
 
     const title = `${category} by Sapna Shri Jewellers`;
-    const description = `Explore ${filtered.length} ${category} at Sapna Shri Jewellers Nagda. High-quality gold & silver jewellery with BIS 916 certification.`;
+    const description = `Explore ${filtered.length} ${category} at Sapna Shri Jewellers Nagda Junction. High-quality gold & silver jewelry with BIS 916 certified gold.`;
     const baseURL = "https://sapnashrijewellers.github.io";
     const driveURL = `${baseURL}/static/img/optimized/`;
     const imageUrl =

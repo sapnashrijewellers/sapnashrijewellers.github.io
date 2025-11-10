@@ -83,7 +83,7 @@ export default function Footer() {
         <div className="flex flex-wrap gap-4 mt-4">
           <Link
             href="/about-us"
-            className="flex items-center gap-2 font-bold text-lg mt-4 hover:text-foreground transition-colors"
+            className="flex items-center gap-2 mt-4 transition-colors"
             prefetch={false}
             title="Know more about Sapna Shri Jewellers"
           >
@@ -92,7 +92,7 @@ export default function Footer() {
           </Link>
           <Link
             href="/privacy"
-            className="flex items-center gap-2 font-bold text-lg mt-4 hover:text-foreground transition-colors"
+            className="flex items-center gap-2 mt-4 transition-colors"
             prefetch={false}
             title="privacy policy"
           >
@@ -101,7 +101,7 @@ export default function Footer() {
           </Link>
 
           
-          <Link className="flex items-center gap-2 font-bold text-lg mt-4 hover:text-foreground transition-colors hover:underline" href="/huid" title="HUID हॉलमार्किंग क्यों ज़रूरी है?">
+          <Link className="flex items-center gap-2 mt-4 transition-colors" href="/huid" title="HUID हॉलमार्किंग क्यों ज़रूरी है?">
               <img src="/img/hallmark.png" height="30px" width="25px"></img>
               हॉलमार्क
             </Link>

@@ -4,11 +4,9 @@
 FROM node:22-bookworm AS builder
 WORKDIR /app
 
-# Install dependencies only once (cache-friendly)
+# Install dependencies (both runtime + dev, since you need gh-pages)
 COPY package*.json ./
 RUN npm install
-RUN npm install -g gh-pages
-RUN npm install react-icons
 
 # Copy the rest of the application
 COPY . .
@@ -37,7 +35,7 @@ RUN ln -sf /usr/share/zoneinfo/$TZ /etc/localtime && \
 # Create working directory
 WORKDIR /app
 
-# Copy from build stage — only what’s needed
+# Copy from build stage
 COPY --from=builder /app /app
 
 # Copy crontab

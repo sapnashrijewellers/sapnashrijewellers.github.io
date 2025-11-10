@@ -250,7 +250,7 @@ export default function AboutUsPage() {
       <div className="mt-12">
         <h2 className="au-h2">हमसे संपर्क करें</h2>
         {/* Store Location */}
-        <div className="grid grid-cols-2 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-6 max-w-6xl mx-auto">
           {/* Hindi Address */}
           <address className="bg-accent border border-theme rounded-2xl p-6 shadow-md">
             <h3 className="text-lg font-semibold">

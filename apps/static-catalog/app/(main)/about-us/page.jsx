@@ -303,7 +303,7 @@ Here’s why:
       {/* ===== Services ===== */}
       <div className="mt-12 text-center">
         <h2 className="au-h2">सेवाएँ उपलब्ध हैं</h2>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {services.map((srv) => (
             <div key={srv.title} className="bg-accent p-6 rounded-2xl border border-theme shadow-md">
               <h3 className="text-xl text-primary-dark mb-3">{srv.title}</h3>

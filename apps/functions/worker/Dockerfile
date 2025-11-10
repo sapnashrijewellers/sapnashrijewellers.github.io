@@ -6,7 +6,9 @@ WORKDIR /app
 
 # Install dependencies only once (cache-friendly)
 COPY package*.json ./
-RUN npm install --omit=dev
+RUN npm install
+RUN npm install -g gh-pages
+RUN npm install react-icons
 
 # Copy the rest of the application
 COPY . .

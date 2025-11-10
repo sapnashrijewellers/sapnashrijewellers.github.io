@@ -1,5 +1,4 @@
 // /app/about-us/page.jsx
-import { ChevronDown } from "lucide-react";
 import  Image  from "next/image"
 
 
@@ -236,7 +235,11 @@ export default function AboutUsPage() {
           </div>
         ))}
       </div>
+ question — strictly speaking, no, you are not using lucide-react in that file, even though you’re importing from it.
 
+Here’s why:
+
+✅ What your code does
       {/* ===== Shop Photo ===== */}
       <div className="text-center mt-12">
         <Image

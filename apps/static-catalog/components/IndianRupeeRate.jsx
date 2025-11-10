@@ -11,7 +11,9 @@ import PropTypes from 'prop-types';
  */
 const IndianRupeeRate = ({ rate, className = '' }) => { 
   const formattedRate = useMemo(() => {
-    return new Intl.NumberFormat('en-IN', {      
+    return new Intl.NumberFormat('en-IN', {   
+      style: 'currency',
+      currency: 'INR',   
       minimumFractionDigits: 0,
       maximumFractionDigits: 0,
     }).format(rate);

@@ -39,15 +39,6 @@ Todo:
     ✔ Gold Polishing | @done(25-11-03 08:13)
     ✔ Diamond Replacement | @done(25-11-03 08:13)
     ✔ Gold Exchange @done(25-11-03 08:13)
-  ☐ Policies
-    ☐ Refund Policy
-    ☐ Buyback Policy
-    ☐ Exchange Policy
-    ☐ Shipping Policy
-    ☐ Cancellation Policy
-    ☐ Privacy Policy
-    ☐ Make To Order
-    ☐ Terms of Service
 ✔ CERTIFICATE CHECK @done(25-11-03 08:08)
   ✔ At Malabar Gold & Diamonds, we value transparency, reliability, and integrity. Our diamond jewellery undergoes 28 rigorous internal quality test, offering unparalleled assurance that you are receiving only the finest diamonds. @done(25-11-03 08:08)
   ✔ With our Certificate Check feature, you can easily verify that the details on your report matches the records in Malabar Gold & Diamonds database. @done(25-11-03 08:08)
@@ -75,8 +66,10 @@ Todo:
 ✔ Image optimization & thumbnail generation @done(25-11-04 17:12)
 ✔ Share --> WhatsApp, Telegram, SnapChat, Instagram @started(25-11-03 15:31) @done(25-11-04 09:43) @lasted(18h12m11s)
 ✔ clean NPM packages @started(25-11-05 07:44) @done(25-11-05 07:44) @lasted(44s)
-☐ Make it static website &  remove hash routes @started(25-11-04 09:43)
-☐ Site Map
+✔ Make it static website &  remove hash routes @started(25-11-04 09:43) @done(25-11-09 19:31) @lasted(5d9h48m56s)
+✔ Site Map @done(25-11-09 19:32)
+✔ Robots.txt @done(25-11-09 19:32)
+☐ Site update automation @started(25-11-09 19:32)
 ☐ N K Bullions Rate integration
 ☐ test cases for all apps
 ☐ Product search, voice search integration

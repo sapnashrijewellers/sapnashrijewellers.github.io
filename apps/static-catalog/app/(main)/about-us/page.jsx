@@ -321,7 +321,7 @@ Here’s why:
             <a
               key={item.search}
               href={`/category/${(item.category)}`}
-              className="px-4 py-2 bg-accent border border-theme rounded-full text-sm md:text-base hover:opacity-80"
+              className="px-4 py-2 bg-accent border border-theme rounded-full hover:opacity-80"
             >
               {item.search}
             </a>

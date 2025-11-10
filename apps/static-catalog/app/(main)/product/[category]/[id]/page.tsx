@@ -66,7 +66,7 @@ export async function generateMetadata(
 
   const driveURL = `${baseURL}/static/img/optimized/`;
   const title = `${product.name} ${product.id} | Sapna Shri Jewellers`;
-  const description = `Explore ${product.name} — pure ${product.purity}, weighing ${product.weight}g.`;
+  const description = `Explore ${product.name} — pure ${product.purity}, weighing ${product.weight}g. ${product.highlights[0]}`;
   const imageUrl = `${driveURL}${product.images?.[0]}`;
   const keywords = [
     product.name,

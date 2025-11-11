@@ -52,7 +52,7 @@ export default function Home() {
         "@type": "Product",
         "name": product.name,
         "image": `${driveURL}${product.images[0]}`,
-        "url": `${baseURL}/product/${product.id}`
+        "url": `${baseURL}/product/${product.sub_category}/${product.id}`
       }))
   };
   return (

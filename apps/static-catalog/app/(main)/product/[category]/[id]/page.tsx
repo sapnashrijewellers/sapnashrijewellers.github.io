@@ -148,7 +148,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
     offers: {
       "@type": "Offer",
       priceCurrency: "INR",
-      price: 0,
+      price: 10,
       availability: "https://schema.org/InStock",
       url: baseProductUrl,
     },

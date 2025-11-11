@@ -6,7 +6,8 @@ import { toSlug } from "@/utils/slug";
 import { notFound } from "next/navigation";
 
 const data = dataRaw as CatalogData;
-
+const baseURL = "https://sapnashrijewellers.github.io";
+const driveURL = `${baseURL}/static/img/optimized/`;
 interface CategoryPageProps {
     params: {
         category: string;
@@ -34,8 +35,7 @@ export async function generateMetadata({ params }: CategoryPageProps) {
 
     const title = `${category} by Sapna Shri Jewellers`;
     const description = `Explore ${filtered.length} ${category} at Sapna Shri Jewellers Nagda Junction. High-quality gold & silver jewelry with BIS 916 certified gold.`;
-    const baseURL = "https://sapnashrijewellers.github.io";
-    const driveURL = `${baseURL}/static/img/optimized/`;
+
     const imageUrl =
         filtered.length > 0
             ? `${driveURL}${filtered[0].images[0]}`
@@ -52,11 +52,11 @@ export async function generateMetadata({ params }: CategoryPageProps) {
         name: `${category} by Sapna Shri Jewellers`,
         description,
         url: `${baseURL}/category/${slug}`,
-        mainEntity: filtered.map((p:Product) => ({
+        mainEntity: filtered.map((p: Product) => ({
             "@type": "Product",
             name: p.name,
             image: `${driveURL}${p.images[0]}`,
-            url: `${baseURL}/product/${p.id}`,
+            url: `${baseURL}/product/${p.sub_category}/${p.id}`,
         })),
     };
 
@@ -112,7 +112,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) { // �
                 <p>इस श्रेणी में कोई उत्पाद नहीं मिला.</p>
             ) : (
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-                    {filtered.map((p:Product) => (
+                    {filtered.map((p: Product) => (
                         <ProductCard key={p.id} product={p} />
                     ))}
                 </div>

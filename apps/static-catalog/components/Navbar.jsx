@@ -93,22 +93,22 @@ export default function Navbar() {
             {/* Each row uses flex to align coin + rate vertically centered */}
             <div className="flex items-center justify-between gap-2">
               <Coin text="24K" type="gold" size={30} title="Gold 24K Spot Rate" />
-              <IndianRupeeRate rate={rates.gold24K * 10} className="text-primary" />
+              <IndianRupeeRate rate={rates.gold24K * 10} className="text-primary" itemName="Gold 24K" />
             </div>
 
             <div className="flex items-center justify-between">
               <Coin text="22K" type="gold" size={30} title="Gold 22K Spot Rate"/>
-              <IndianRupeeRate rate={rates.gold22K * 10} className="text-primary" />
+              <IndianRupeeRate rate={rates.gold22K * 10} className="text-primary" itemName="Gold 22K" />
             </div>
 
             <div className="flex items-center justify-between">
               <Coin text="99" type="silver" size={30} title="Silver 99.9% (Path ki Chandi) Spot Rate"/>
-              <IndianRupeeRate rate={rates.silver * 1000} className="text-primary" />
+              <IndianRupeeRate rate={rates.silver * 1000} className="text-primary" itemName="Silver 99.9%" />
             </div>
 
             <div className="flex items-center justify-between">
               <Coin text="जेवर" type="silver" size={30} title="Silver Jewelry Spot Rate"/>
-              <IndianRupeeRate rate={rates.silver * 1000 * 0.92} className="text-primary" />
+              <IndianRupeeRate rate={rates.silver * 1000 * 0.92} className="text-primary" itemName="Silver Jewelry" />
             </div>
           </div>
 

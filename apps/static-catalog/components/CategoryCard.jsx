@@ -47,6 +47,7 @@ export default function CategoryCard({ category, products }) {
             alt={firstProduct.name}
             className="absolute inset-0 w-full h-full object-cover"
             loading="eager"
+            title={firstProduct.name}
           />
         </div>
 

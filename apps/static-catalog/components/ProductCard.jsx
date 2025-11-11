@@ -9,8 +9,7 @@ export default function ProductCard({ product }) {
 
   return (
     <article
-      className={`rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-105 ${cardHighlightClass}`}
-      aria-label={`Product: ${product.name}`}
+      className={`rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-105 ${cardHighlightClass}`}      
     >
       
       {/* Image Section */}

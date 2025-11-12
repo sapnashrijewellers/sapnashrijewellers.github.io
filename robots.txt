@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sapnashrijewellers.github.io/sitemap.xml
+Sitemap: https://sapnashrijewellers.in/sitemap.xml

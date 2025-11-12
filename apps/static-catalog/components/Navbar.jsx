@@ -3,11 +3,10 @@
 import { useState, useEffect } from "react";
 import Coin from "@/components/coin"
 import Link from "next/link";
-import { FaQrcode } from "react-icons/fa";
 import IndianRupeeRate from "./IndianRupeeRate";
 import Image from "next/image";
 
-const RATES_URL = "https://sapnashrijewellers.github.io/static/rates.json ";
+const RATES_URL = `${process.env.NEXT_PUBLIC_BASE_URL}/static/rates.json`;
 
 export default function Navbar() {
   const [rates, setRates] = useState({
@@ -22,6 +21,7 @@ export default function Navbar() {
   // Fetch function
   const fetchRates = async () => {
     try {
+      console.log(RATES_URL);
       const res = await fetch(RATES_URL, { cache: "no-store" });
       if (!res.ok) throw new Error(`Failed to fetch rates: ${res.status}`);
       const data = await res.json();

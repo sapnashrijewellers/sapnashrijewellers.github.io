@@ -1,7 +1,7 @@
 import Link from "next/link";
 import {toSlug} from "../utils/slug"
 export default function ProductCard({ product }) {
-  const driveURL = "https://sapnashrijewellers.github.io/static/img/thumbnail/";
+  const driveURL = `${process.env.NEXT_PUBLIC_BASE_URL}/static/img/thumbnail/`;
 
   const cardHighlightClass = product.newArrival
     ? "border-2 border-accent shadow-md hover:shadow-xl bg-accent text-primary"

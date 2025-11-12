@@ -19,7 +19,7 @@ Trusted Jewellers of Nagda Ujjain District,
 35 years of trust,
 Sapna Shri Jewellers Nagda Location,
 Sapna Shri Jewellers Nagda Contact Number`;
-const baseURL = "https://sapnashrijewellers.github.io";
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 const imageUrl = `${baseURL}/img/shop.png`;
 const ldjson = {
   "@context": "https://schema.org",
@@ -30,7 +30,7 @@ const ldjson = {
   publisher: {
     "@type": "JewelryStore",
     name: "Sapna Shri Jewellers Nagda",
-    image: "https://sapnashrijewellers.github.io/logo.png",
+    image: `${baseURL}/logo.png`,
     address: {
       "@type": "PostalAddress",
       streetAddress: "Railway Station Main Road, Near Jain Mandir",

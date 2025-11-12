@@ -34,8 +34,10 @@ export default function Calculator() {
 
   // ✅ Fetch fresh rates each time before calculation
   const fetchRates = async () => {
-    try {
-      const res = await fetch("https://sapnashrijewellers.github.io/static/rates.json", { cache: "no-store" }); // prevent caching
+    try { 
+      const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+      const res = await fetch(`${baseUrl}/static/rates.json`, 
+        { cache: "no-store" }); // prevent caching
       if (!res.ok) throw new Error("Failed to load rates");
       const data = await res.json();
       return data;

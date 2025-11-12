@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const baseURL = "https://sapnashrijewellers.github.io";
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
 const imageUrl = `${baseURL}/logo.png`;
 
@@ -15,7 +15,7 @@ export const metadata = {
     title: "HUID Hallmarking Info - Sapna Shri Jewellers Nagda",
     description:
       "BIS प्रमाणित HUID हॉलमार्किंग का महत्व जानें। असली और सुरक्षित निवेश के लिए जरूरी जानकारी।",
-    url: "https://sapnashrijewellers.github.io/huid",
+    url: "$/huid",
     images: [
       {
         url: imageUrl,

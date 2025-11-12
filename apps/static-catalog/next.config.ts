@@ -5,6 +5,9 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  env: {
+    NEXT_PUBLIC_BASE_URL: 'https://sapnashrijewellers.in',
+  },
   trailingSlash: true,
   assetPrefix: "/",
   basePath: "",

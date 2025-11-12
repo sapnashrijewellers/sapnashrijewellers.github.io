@@ -15,7 +15,7 @@ import {
 } from "react-icons/fa";
 const data = dataRaw as CatalogData;
 
-const baseURL = "https://sapnashrijewellers.github.io";
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 const driveURL = `${baseURL}/static/img/optimized/`;
 const phone = "918234042231";
 

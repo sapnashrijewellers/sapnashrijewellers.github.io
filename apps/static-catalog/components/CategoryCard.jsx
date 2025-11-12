@@ -5,7 +5,7 @@ import { toSlug } from "../utils/slug";
 export default function CategoryCard({ category, products }) {
   if (!products || products.length === 0) return null;
 
-  const driveURL = "https://sapnashrijewellers.github.io/static/img/thumbnail/";
+  const driveURL = `${process.env.NEXT_PUBLIC_BASE_URL}/static/img/thumbnail/`;
   const firstProduct = products[0]; // use static first product for SSG / SEO
 
   // Highlight if the first product is a new arrival

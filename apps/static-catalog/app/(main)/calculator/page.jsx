@@ -3,7 +3,7 @@ import Calculator from "@/components/Calculator";
 
 const title = `ज्वेलरी प्राइस कैलकुलेटर`;
   const description = `ज्वेलरी प्राइस कैलकुलेटर | online Jewellery Price Calculator by Sapna Shri Jewellers`;
-  const baseURL = "https://sapnashrijewellers.github.io";
+  const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
   const imageUrl = `${baseURL}/logo.png`;
   const keywords = "ज्वेलरी प्राइस कैलकुलेटर, Jewellery price calculator, 22K gold jewellery price calculator, Silver jewellery price";
   const ldjson = {
@@ -62,13 +62,6 @@ const title = `ज्वेलरी प्राइस कैलकुलेट
   }
 
 export default async function CalculatorPage() {
-  const res = await fetch("https://sapnashrijewellers.github.io/static/rates.json", {
-    next: { revalidate: 60 },
-  });
-  const rates = await res.json();
-
-  
-
   return (
     <div className="max-w-lg mx-auto p-6 bg-card text-card-foreground shadow-lg rounded-2xl">
       {/* ✅ JSON-LD Structured Data */}
@@ -81,7 +74,7 @@ export default async function CalculatorPage() {
         ज्वेलरी प्राइस कैलकुलेटर
       </h1>
 
-      <Calculator rates={rates} />
+      <Calculator />
     </div>
   );
 }

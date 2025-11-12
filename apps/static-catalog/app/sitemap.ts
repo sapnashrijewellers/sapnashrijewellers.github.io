@@ -8,7 +8,7 @@ import dataRaw from "@/data/data.json";
 const data = dataRaw as CatalogData;
 
 export default async function sitemap() {
-  const baseUrl = "https://sapnashrijewellers.github.io";
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
   // --- Category URLs ---
   const categoryUrls = data.sub_categories.map((cat: string) => ({

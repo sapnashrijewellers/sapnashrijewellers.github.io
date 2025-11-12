@@ -6,7 +6,7 @@ const data = dataRaw as CatalogData;
 
 const title = `Sapna Shri Jewellers`;
 const description = `Explore out latest products at Sapna Shri Jewellers Nagda. High-quality gold & silver jewellery with BIS 916 certification.`;
-const baseURL = "https://sapnashrijewellers.github.io";
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 const driveURL = `${baseURL}/static/img/optimized/`;
 const imageUrl = `${baseURL}/logo.png`;
 const keywords = data.sub_categories.slice(0, 10).join(", ");

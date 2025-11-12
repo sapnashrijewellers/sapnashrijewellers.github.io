@@ -6,7 +6,7 @@ import { toSlug } from "@/utils/slug";
 import { notFound } from "next/navigation";
 
 const data = dataRaw as CatalogData;
-const baseURL = "https://sapnashrijewellers.github.io";
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 const driveURL = `${baseURL}/static/img/optimized/`;
 interface CategoryPageProps {
     params: {

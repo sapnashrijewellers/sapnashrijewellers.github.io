@@ -1,5 +1,5 @@
-// Helper to fetch rate from MMTc
-async function fetchRate(url, rateConfig) {
+export const RateConfigKey="arihant_spot";
+async function fetchRate(url) {
     const res = await fetch(url,
         {
             method: "GET",
@@ -21,7 +21,7 @@ async function fetchRate(url, rateConfig) {
 }
 
 export async function extract(rateConfig) {
-    
+
     const goldURL = 'https://bcast.arihantspot.com:7768/VOTSBroadcastStreaming/Services/xml/GetLiveRateByTemplateID/arihant?_=';
     const silverURL = 'https://bcast.arihantspot.com:7768/VOTSBroadcastStreaming/Services/xml/GetLiveRateByTemplateID/arihantsilver?_=';
 
@@ -38,26 +38,23 @@ export async function extract(rateConfig) {
     // 3. Parsing: Use the efficient Maps for lookups.
     const goldRate = parseGold(goldDataMap, rateConfig);
     const silverRate = parseSilver(silverDataMap, rateConfig);
-    
+
     // The original `|| 0` logic in fetchRate is now handled by `getValue` returning 0.
     return [goldRate, silverRate];
 }
 
-function parseGold(inputData, rateConfig) {    
-    
-    let price = getValue(inputData, 2728, 3);    
-    price = price + (price * (rateConfig.gold.diff/100)) 
-    return (price + rateConfig.gold.absolute) / 10;
+function parseGold(inputData, rateConfig) {
+
+    let price = getValue(inputData, 2728, 3);
+    return (price) / 10;
 }
 
 function parseSilver(inputData, rateConfig) {
     let price = getValue(inputData, 2719, 3);
-    price = price + (price * (rateConfig.silver.diff/100))
     if (price <= 0) {
         price = getValue(inputData, 2591, 3);
-        price = price + (price * (rateConfig.silver.costing/100))
     }
-    return (price + rateConfig.silver.absolute) / 1000;
+    return price / 1000;
 }
 
 /**
@@ -74,7 +71,7 @@ function getValue(dataMap, rowId, colIndex) {
     if (cells && cells[colIndex] !== undefined) {
         const value = parseFloat(cells[colIndex]);
         // Return 0 if NaN, as per original logic, otherwise the number
-        return isNaN(value) ? 0 : value; 
+        return isNaN(value) ? 0 : value;
     }
 
     return 0; // Return 0 if row/cell not found
@@ -83,14 +80,14 @@ function getValue(dataMap, rowId, colIndex) {
 function preProcessData(textData) {
     const dataMap = new Map();
     // Trim and split by newline to get lines
-    const lines = textData.trim().split("\n").filter(line => line.length > 0); 
+    const lines = textData.trim().split("\n").filter(line => line.length > 0);
 
     for (const line of lines) {
         // Use a robust regex to handle one or more tabs as separator
-        const cells = line.trim().split(/\t+/); 
+        const cells = line.trim().split(/\t+/);
         if (cells.length > 0) {
             // The first cell is the row ID
-            dataMap.set(cells[0], cells); 
+            dataMap.set(cells[0], cells);
         }
     }
     return dataMap;

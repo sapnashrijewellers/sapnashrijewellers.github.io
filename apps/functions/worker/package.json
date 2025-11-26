@@ -11,16 +11,18 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
-    "sharp": "^0.34.4",
-    "web-push": "^3.6.7",
     "axios": "^1.13.2",
     "fs-extra": "^11.3.2",
     "next": "16.0.1",
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "react-icons": "^5.5.0",
-    "sitemap": "^9.0.0",    
-    "swiper": "^12.0.3" 
+    "sharp": "^0.34.4",
+    "sitemap": "^9.0.0",
+    "socket.io-client": "^4.8.1",
+    "swiper": "^12.0.3",
+    "undici": "^7.16.0",
+    "web-push": "^3.6.7"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
@@ -29,8 +31,8 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.0.1",
+    "gh-pages": "^6.3.0",
     "tailwindcss": "^4",
-    "typescript": "^5",
-    "gh-pages": "^6.3.0"
+    "typescript": "^5"
   }
 }

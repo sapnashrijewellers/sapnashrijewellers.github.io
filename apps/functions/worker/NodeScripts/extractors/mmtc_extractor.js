@@ -1,4 +1,4 @@
-// Helper to fetch rate from MMTc
+export const RateConfigKey="mmtc";
 async function fetchRate(currencyPair) {
     const res = await fetch("https://cem.mmtcpamp.com/pvt/getNonExecutableQuote",
         {
@@ -18,14 +18,14 @@ async function fetchRate(currencyPair) {
             body: JSON.stringify({ currencyPair, type: "BUY" }),
         });
 
-    const data = await res.json();    
+    const data = await res.json();
     return parseFloat(data.totalAmount) || 0;
 }
 
 export async function extract() {
-      const [goldRate, silverRate] = await Promise.all([
-		fetchRate("XAU/INR"),
-		fetchRate("XAG/INR")
-	  ]);	      
+    const [goldRate, silverRate] = await Promise.all([
+        fetchRate("XAU/INR"),
+        fetchRate("XAG/INR")
+    ]);    
     return [goldRate, silverRate];
 }

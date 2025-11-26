@@ -1,4 +1,4 @@
-// Helper to fetch rate from MMTc
+export const RateConfigKey="metalpriceapi";
 async function fetchRate(currencyPair) {
     const res = await fetch("https://api.metalpriceapi.com/v1/latest?api_key=dc3e2e6d03dc8db18554797a1539174f&base=INR&currencies=XAU,XAG",
         {
@@ -20,7 +20,7 @@ async function fetchRate(currencyPair) {
     
     gPrice = gPrice / 31.1035;
     sPrice = sPrice / 31.1035;
-    return [gPrice, sPrice];
+    return [gPrice*10, sPrice];
 
 }
 

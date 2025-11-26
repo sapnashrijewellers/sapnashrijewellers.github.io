@@ -1,76 +1,33 @@
-// Helper to fetch rate from MMTc
-export async function fetchSilverRate1(currencyPair) {
-    //let url = 'https://priceapi.moneycontrol.com/pricefeed/mcx/commodityfutures/SILVER?';
-
-    await getNearestExpiryDate();
-    //const res = await get(url);
-   
-    //const data = await res.json();
+export const RateConfigKey = "mcx";
+export async function extract() {
+    const mcxTickerData = await getMCXTicker();
     
-    // Always include error handling for data.data being undefined/null
-    //return parseFloat(data?.data?.lastPrice) || 0;
-    return 50000;
-}
-
-export async function fetchSilverRate(currencyPair) {
-    await getNearestExpiryDate();
+    let goldRate = mcxTickerData.find(x => x.Symbol === "GOLD").LTP;
+    let silverRate = mcxTickerData.find(x => x.Symbol === "SILVER").LTP;
     
-    return 50000;
+    goldRate = parseFloat(goldRate) || 0
+    silverRate = parseFloat(silverRate) || 0
+    silverRate = silverRate / 1000;
+    
+    return [goldRate, silverRate];
 }
 
-export async function fetchGoldRate(currencyPair) {
-    return 10000;
-}
-
-async function get(url) {
-    const res = await fetch(url,
+async function getMCXTicker() {
+    const res = await fetch("https://www.mcxindia.com/BackPage.aspx/GetTicker",
         {
-            method: "GET",
+            method: "POST",
             headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*//*;q=0.8',
-                'Origin': 'https://www.moneycontrol.com',
-                'Sec-CH-UA': '"Not=A?Brand";v="24", "Chromium";v="140"',
-                'Sec-CH-UA-Mobile': '?0',
-                'Sec-CH-UA-Platform': '"Linux"',
-                'Sec-Fetch-Dest': 'empty',
-                'Sec-Fetch-Mode': 'cors',
-                'Sec-Fetch-Site': 'same-site',
-                'referer': 'https://www.moneycontrol.com/',
+                'Accept': '*/*',
+                'Content-Type': 'application/json; charset=UTF-8',
+                'Origin': 'https://www.mcxindia.com',
+                'referer': 'https://www.mcxindia.com/',
                 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36'
-            }
-        });        
-    return await res;
+            },
+            body: JSON.stringify({})
+        });
+
+    const ticker = await res.json();
+    const result = ticker.d.Data.filter(item =>
+        ["GOLD", "SILVER"].includes(item.Symbol));
+    return result;
 }
-
-// The function to fetch the URL and extract the date
-async function getNearestExpiryDate() {
-let url ='https://www.moneycontrol.com/commodity/mcx-silver-price/?type=futures&';
-    // By default, fetch() has 'redirect: "follow"', which is what we want.
-    const response = await get(url);
-
-    if (!response.ok) {
-        // Handle HTTP errors (e.g., 404, 500)
-        throw new Error(`HTTP Error: ${response.status}`);
-    }
-
-    // 1. CAPTURE THE FINAL URL
-    const finalUrl = response.url;
-
-    // 2. EXTRACT THE DATE
-    const urlObject = new URL(finalUrl);
-    const expiryDate = urlObject.searchParams.get('exp');
-
-    if (expiryDate) {
-        console.log(`Initial URL: ${initialUrl}`);
-        console.log(`Final Redirected URL: ${finalUrl}`);
-        console.log(`Captured Expiry Date: ${expiryDate}`);
-        return expiryDate;
-    } else {
-        // This case might mean the redirect worked, but the server didn't include the 'exp' parameter.
-        console.warn("Redirect successful, but 'exp' parameter not found in the final URL's query string.");
-        return null;
-    }
-
-}
-

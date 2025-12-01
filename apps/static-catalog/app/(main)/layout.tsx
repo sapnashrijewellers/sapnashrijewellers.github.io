@@ -8,6 +8,7 @@ import FooterTrust from "@/components/FooterTrust";
 import Ticker from "@/components/Ticker";
 import FloatingWhatsAppButton from "@/components/FloatingWhatsAppButton";
 import RegisterSW from "@/components/registerSW";
+import Script from "next/script"
 
 const notoDevanagari = Noto_Sans_Devanagari({
   subsets: ["latin", "devanagari"],
@@ -57,6 +58,14 @@ export default function RootLayout({
           <div className="p-2 max-w-6xl mx-auto">{children}</div>
           <FooterTrust />
           <Footer />
+          <a id="powered-by-mehtalogy"
+   href="https://mehtalogy.in"
+   target="_blank" title="Powered by Mehtalogy LABS">
+  Mehtalogy LABS
+</a>
+        
+<Script src="https://mehtalogy.in/pb/v1.js" 
+        strategy="afterInteractive" />
         </div>
       </body>
     </html>

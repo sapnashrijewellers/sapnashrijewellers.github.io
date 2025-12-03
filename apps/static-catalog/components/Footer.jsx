@@ -2,7 +2,7 @@
 import {
   FaFacebookF, FaInstagram, FaYoutube, FaTv, FaWhatsapp,
   FaUserTie, FaShieldAlt,
-  FaExclamationCircle,
+  FaExclamationCircle,FaMapMarkerAlt
 } from "react-icons/fa";
 import Link from "next/link";
 
@@ -21,6 +21,34 @@ export default function Footer() {
             अस्वीकरण: कीमतें बाजार दर के अनुसार बदलती रहती हैं। सभी दरें लगभग 5 मिनट की देरी से प्रदर्शित हैं। कृपया अंतिम कीमत और उत्पाद का अनुभव करने के लिए दुकान पर अवश्य आएँ। दी गई कीमतें केवल संकेतात्मक हैं, मेकिंग चार्ज एवं GST एक्स्ट्रा। *नियम एवं शर्तें लागू। किसी भी विवाद की स्थिति में न्यायिक क्षेत्र नागदा जंक्शन रहेगा।
           </p>
         </div>     
+        {/* Store Location */}
+        <div>
+          <h2 className="flex items-center gap-2 font-bold text-lg">
+            <FaMapMarkerAlt className="text-red-500 mt-[1px]" />
+            दुकान का स्थान
+          </h2>
+          {/* Store Location */}
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-6 max-w-6xl mx-auto">
+          {/* Hindi Address */}
+          <address className="bg-accent border border-theme rounded-2xl p-6 shadow-md">
+            <h3 className="text-lg font-semibold">
+              📌 सपना श्री ज्वैलर्स,
+            </h3>
+            रेलवे स्टेशन मेन रोड, जैन मंदिर के पास,<br />
+            नागदा जंक्शन, जिला उज्जैन<br />
+            📞 8234042231
+          </address>
+          {/* English Address */}
+          <address className="bg-accent border border-theme rounded-2xl p-6 shadow-md">
+            <h2 className="text-lg font-semibold">
+              📌 Sapna Shri Jewellers,
+            </h2>
+            Near Railway Station, M G Road,<br />
+            Nagda Junction, District: Ujjain<br />
+            📞 8234042231
+          </address>
+        </div>
+        </div>
         {/* Social Media */}
         <div>
           <h2 className="flex items-center gap-2 text-lg mt-4">            

@@ -1,4 +1,4 @@
-import { extract as extractRates, RateConfigKey } from './extractors/bullionscoin_extractor.js';
+import { extract as extractRates, RateConfigKey } from './extractors/mcx_extractor.js';
 import { writeFile } from "fs/promises";
 const SHEET_URL = "https://script.google.com/macros/s/AKfycbwNQ9fFmV0MqVEKg6pk-x56FsCw-xOnV__A3l6hqrlUVukKyx6gf31DpiO4hn4Vep6U5w/exec";
 

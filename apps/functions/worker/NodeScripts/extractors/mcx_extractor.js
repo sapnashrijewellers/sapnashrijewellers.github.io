@@ -7,6 +7,8 @@ export async function extract() {
     
     goldRate = parseFloat(goldRate) || 0
     silverRate = parseFloat(silverRate) || 0
+
+    goldRate = goldRate/10;
     silverRate = silverRate / 1000;
     
     return [goldRate, silverRate];
@@ -29,5 +31,6 @@ async function getMCXTicker() {
     const ticker = await res.json();
     const result = ticker.d.Data.filter(item =>
         ["GOLD", "SILVER"].includes(item.Symbol));
+
     return result;
 }

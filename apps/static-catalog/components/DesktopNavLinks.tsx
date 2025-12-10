@@ -28,6 +28,13 @@ const DesktopTopLinks: FC = () => {
         Hallmarking
       </Link>
 
+<Link
+        className="hover:underline"
+        href="/wishlist"
+        title="Show all wishlist jewelry"
+      >
+        Wishlist
+      </Link>
       <Link
         className="hover:text-primary"
         href="/search"

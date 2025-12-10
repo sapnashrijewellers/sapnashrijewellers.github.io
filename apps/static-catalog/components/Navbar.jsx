@@ -1,10 +1,10 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Coin from "@/components/coin"
 import Link from "next/link";
 import IndianRupeeRate from "./IndianRupeeRate";
 import Image from "next/image";
+import DesktopTopLinks from "./DesktopNavLinks";
 
 const RATES_URL = `${process.env.NEXT_PUBLIC_BASE_URL}/static/rates.json`;
 
@@ -57,25 +57,14 @@ export default function Navbar() {
         {/* Right: Menu + Rates */}
         <div className="flex flex-col p-1">
           {/* Top row: Menu links */}
-          <div className="flex flex-wrap items-end justify-end gap-4">
-            <Link className="hover:underline" href="/" title="Go to Home Page of Sapna Shri Jewellers">
-              होम
-            </Link>
-            <Link className="hover:underline" href="/calculator" title="Jewelry Price Calculator">
-              कैलकुलेटर
-            </Link>            
-            <Link className="hover:text-primary" href="/qr" title="Payment QR Code">
-              {/* <FaQrcode size="20" /> */}
-              QR
-            </Link>
-          </div>
+         <DesktopTopLinks/>
 
           {/* Live rate timestamp */}
           {(rates.gold24K > 0 || rates.silver > 0) && (
-            <div className="flex items-end justify-end gap-4 ">
+            <div className="flex items-end justify-end gap-4 text-xs">
               <span>
                 <span className="animate-pulse w-3 h-3 bg-red-500 rounded-full inline-block p-1"></span>&nbsp;
-                लाइव रेट *{" "}
+                Live Rates *{" "}
                 {new Date(rates.asOn).toLocaleString("en-IN", {
                   day: "2-digit",
                   month: "short",
@@ -89,25 +78,25 @@ export default function Navbar() {
           )}
 
           {/* Bottom rates section */}
-          <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-right">
-            {/* Each row uses flex to align coin + rate vertically centered */}
-            <div className="flex items-center justify-between gap-2">
-              <Coin text="24K" type="gold" size={30} title="Gold 24K Spot Rate" />
+          <div className="grid grid-cols-1 md:grid-cols-2 md:gap-2 text-right justify-end">
+            
+            <div className="flex justify-end">
+            सोना-24K:
               <IndianRupeeRate rate={rates.gold24K * 10} className="text-primary" itemName="Gold 24K" />
             </div>
 
-            <div className="flex items-center justify-between">
-              <Coin text="22K" type="gold" size={30} title="Gold 22K Spot Rate"/>
+            <div className="flex justify-end">
+            सोना-22K:
               <IndianRupeeRate rate={rates.gold22K * 10} className="text-primary" itemName="Gold 22K" />
             </div>
 
-            <div className="flex items-center justify-between">
-              <Coin text="99" type="silver" size={30} title="Silver 99.9% (Path ki Chandi) Spot Rate"/>
+            <div className="flex justify-end">
+            चाँदी: 
               <IndianRupeeRate rate={rates.silver * 1000} className="text-primary" itemName="Silver 99.9%" />
             </div>
 
-            <div className="flex items-center justify-between">
-              <Coin text="जेवर" type="silver" size={30} title="Silver Jewelry Spot Rate"/>
+            <div className="flex justify-end">
+            चाँदी जेवर: 
               <IndianRupeeRate rate={rates.silver * 1000 * 0.92} className="text-primary" itemName="Silver Jewelry" />
             </div>
           </div>

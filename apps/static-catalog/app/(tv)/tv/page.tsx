@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import type { NewCatalog, Product } from "@/types/catalog";
-import dataRaw from "@/data/data1.json";
+import dataRaw from "@/data/catalog.json";
 
 const data = dataRaw as NewCatalog;
 const baseURL = process.env.NEXT_PUBLIC_BASE_URL;

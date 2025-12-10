@@ -13,7 +13,7 @@ export interface Product {
   type: string[],
   for: string,
   keywords: string,
-  slug:string
+  slug: string  
 }
 
 export interface Category {
@@ -23,6 +23,12 @@ export interface Category {
   slug: string,
   keywords: string,
   marketing_text: string
+}
+
+export interface SearchFilters {    
+    minWeight?: number;
+    maxWeight?: number;
+    forWhom?: string;
 }
 
 

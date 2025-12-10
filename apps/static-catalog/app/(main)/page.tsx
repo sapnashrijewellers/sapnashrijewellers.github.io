@@ -1,6 +1,6 @@
 import type { NewCatalog } from "@/types/catalog";
 import CategoryCard from "@/components/CategoryCard";
-import dataRaw from "@/data/data1.json";
+import dataRaw from "@/data/catalog.json";
 
 const data = dataRaw as NewCatalog;
 

@@ -9,6 +9,7 @@ import Ticker from "@/components/Ticker";
 import FloatingWhatsAppButton from "@/components/FloatingWhatsAppButton";
 import RegisterSW from "@/components/registerSW";
 import Script from "next/script"
+import MobileNavbar from "@/components/MobileNavbar"
 
 const notoDevanagari = Noto_Sans_Devanagari({
   subsets: ["latin", "devanagari"],
@@ -55,10 +56,11 @@ export default function RootLayout({
         <FloatingWhatsAppButton />
 
         {/* Main layout */}
-        <div className="container mx-auto">
+        <div className="container mx-auto mb-15 md:mb-0">
           <Navbar />
           <Ticker />
           <div className="p-2 max-w-6xl mx-auto">{children}</div>
+          <MobileNavbar/>
           <FooterTrust />
           <Footer />
           <a id="powered-by-mehtalogy"

@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import type { NewCatalog, Product, Category } from "@/types/catalog";
-import dataRaw from "@/data/data1.json";
+import dataRaw from "@/data/catalog.json";
 import ProductCard from "@/components/ProductCard";
 import { notFound } from "next/navigation";
 

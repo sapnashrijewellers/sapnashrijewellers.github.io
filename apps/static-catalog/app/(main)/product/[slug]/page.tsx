@@ -1,68 +1,41 @@
-import type { CatalogData, Product } from "@/types/catalog";
-import dataRaw from "@/data/data.json";
-
 import { Metadata } from "next";
+import type { NewCatalog, Product } from "@/types/catalog";
+import dataRaw from "@/data/data1.json";
 import { notFound } from "next/navigation";
 import ProductGallery from "@/components/ProductGallery";
 import NativeShare from "@/components/NativeShare";
-import { toSlug } from "../../../../../utils/slug";
+
 import {
   FaWhatsapp,
   FaTelegramPlane,
   FaSnapchatGhost,
-  FaInstagram,
-  FaShareAlt,
+  FaInstagram,  
 } from "react-icons/fa";
-const data = dataRaw as CatalogData;
+const data = dataRaw as NewCatalog;
 
 const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 const driveURL = `${baseURL}/static/img/optimized/`;
 const phone = "918234042231";
 
-// ✅ Generate all static paths
+
 export async function generateStaticParams() {
-  const categories = Object.keys(data.categorizedProducts || {});
-  const params = [];
-
-  for (const category of categories) {
-    const products = data.categorizedProducts[category] || [];
-    const encodedCategory = (toSlug(category)); // ✅ encode once here
-
-    for (const p of products) {
-      params.push({
-        category: encodedCategory,
-        id: p.id.toString(),
-      });
-    }
-  }
-
-  return params;
+  return data.products.map((p: Product) => ({
+    slug: p.slug
+  }));
 }
 
 
-export async function generateMetadata(
-  props: { params: Promise<{ category: string; id: string }> }
-): Promise<Metadata> {
-  //const params = await props.params; // ✅ unwrap the async params
-  const { category: categorySlug, id } = await props.params;
-  const decodedSlug = decodeURIComponent(categorySlug);
-
-  // Find the category name that matches the slug
-  const categoryName = data.sub_categories.find(
-    (cat) => toSlug(cat) === decodedSlug
-  );
-
-  let product: Product | undefined;
-  if (categoryName) {
-    product = data.categorizedProducts?.[categoryName]?.find(
-      (p: Product) => p.id.toString() === id
-    );
-  }
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {    
+  const  slug  = await params; 
+  
+  const product = data.products.find(
+    (p:Product) => p.slug === slug.slug
+  ); 
 
   if (!product) return {};
 
   const baseProductUrl =
-    `${baseURL}/product/${toSlug(categoryName)}/${id}`;
+    `${baseURL}/product/${product.slug}`;
 
   const driveURL = `${baseURL}/static/img/optimized/`;
   const title = `${product.name} ${product.id} | Sapna Shri Jewellers`;
@@ -71,8 +44,8 @@ export async function generateMetadata(
   const keywords = [
     product.name,
     product.purity,
-    product.sub_category,
-    product.highlights.join(", "),
+    product.category,
+    product.keywords,
   ].join(", ");
 
   return {
@@ -98,32 +71,17 @@ export async function generateMetadata(
   };
 }
 
-export default async function ProductDetailPage({ params }: { params: Promise<{ category: string; id: string }> }) {
-  const { category: categorySlug, id } = await params;
-
-  const decodedSlug = decodeURIComponent(categorySlug);
-
-  // Find the category name that matches the slug
-  const categoryName = data.sub_categories.find(
-    (cat) => toSlug(cat) === decodedSlug
+export default async function ProductDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const product = data.products.find(
+    (p: Product) => p.slug === slug
   );
 
-  if (!categoryName) {
-    console.warn("❌ Category not found for slug:", decodedSlug);
+  if (!product) {    
     return notFound();
   }
 
-  // Find product within that category
-  const product = data.categorizedProducts?.[categoryName]?.find(
-    (p: Product) => p.id.toString() === id.toString()
-  );
-
-  if (!product) {
-    console.warn("❌ Product not found in category:", categoryName, "for id:", id);
-    return notFound();
-  }
-
-  const baseProductUrl = `${baseURL}/product/${(categoryName)}/${id}`;
+  const baseProductUrl = `${baseURL}/product/${product.slug}`;
 
   const whatsappUrl = `https://wa.me/${phone}?text=${(
     `Hi, I want more details and discount on ${baseProductUrl}`
@@ -139,7 +97,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
     "@type": "Product",
     name: product.name,
     image: product.images[0],
-    description: `${product.name} ${product.sub_category} ${product.highlights.join(",")}`,
+    description: `${product.name} ${product.category} ${product.highlights.join(",")}`,
     sku: product.id,
     brand: {
       "@type": "Brand",
@@ -242,9 +200,9 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
               <FaInstagram />
             </a>
             <NativeShare
-              productName={product.name} 
-              productUrl = {baseProductUrl}
-              phone = "8234042231" />
+              productName={product.name}
+              productUrl={baseProductUrl}
+              phone="8234042231" />
           </div>
         </div>
       </div>

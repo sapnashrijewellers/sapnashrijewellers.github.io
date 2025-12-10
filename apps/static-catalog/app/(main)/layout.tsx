@@ -20,13 +20,13 @@ export const viewport: Viewport = {
   themeColor: "#ffffff",
 };
 
-export const metadata: Metadata = {    
+export const metadata: Metadata = {
   title: "सपना श्री ज्वैलर्स, नागदा | Sapna Shri Jewellers Nagda |",
   description:
     "Official website of Sapna Shri Jewellers, Nagda — trusted jewellery shop offering gold and silver ornaments.",
   manifest: "/manifest.webmanifest",
-    icons: {
-    icon: [      
+  icons: {
+    icon: [
       { url: "/icons/favicon-32x32-v1.png", sizes: "32x32", type: "image/png" },
       { url: "/icons/favicon-16x16-v1.png", sizes: "16x16", type: "image/png" },
       { url: "/icons/favicon-v1.svg", type: "image/svg+xml" },
@@ -36,6 +36,9 @@ export const metadata: Metadata = {
   },
   authors: [{ name: "Sapna Shri Jewellers" }],
   robots: "index, follow",
+  other: {
+    "color-scheme": "light dark",
+  },
 };
 
 export default function RootLayout({
@@ -45,7 +48,7 @@ export default function RootLayout({
 }) {
 
   return (
-    <html lang="en" className="theme-dark">
+    <html lang="en" className="">      
       <body className={notoDevanagari.className}>
         <RegisterSW />
         {/* Floating WhatsApp Button */}
@@ -59,13 +62,13 @@ export default function RootLayout({
           <FooterTrust />
           <Footer />
           <a id="powered-by-mehtalogy"
-   href="https://mehtalogy.in"
-   target="_blank" title="Powered by Mehtalogy LABS">
-  Mehtalogy LABS
-</a>
-        
-<Script src="https://mehtalogy.in/pb/v1.js" 
-        strategy="afterInteractive" />
+            href="https://mehtalogy.in"
+            target="_blank" title="Powered by Mehtalogy LABS">
+            Mehtalogy LABS
+          </a>
+
+          <Script src="https://mehtalogy.in/pb/v1.js"
+            strategy="afterInteractive" />
         </div>
       </body>
     </html>

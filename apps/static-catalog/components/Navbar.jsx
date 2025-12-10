@@ -47,7 +47,7 @@ export default function Navbar() {
             <Image
               src="/icons/favicon-v1.svg"
               alt="Sapna Shri Jewellers Nagda | सपना श्री ज्वैलर्स, नागदा"
-              className="h-24 w-auto logo"
+              className="h-24 w-auto logo bg-black rounded-xl"
               width="150"
               height="150"
             />

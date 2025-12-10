@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import type { CatalogData, Product } from "@/types/catalog";
-import dataRaw from "@/data/data.json";
+import type { NewCatalog, Product } from "@/types/catalog";
+import dataRaw from "@/data/data1.json";
 
-const data = dataRaw as CatalogData;
+const data = dataRaw as NewCatalog;
 const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 const driveURL = `${baseURL}/static/img/optimized/`;
 
@@ -14,14 +14,14 @@ export default function TV() {
   const [fade, setFade] = useState(true);
 
   useEffect(() => {
-    if (!data.sub_categories || data.sub_categories.length === 0) return;
+    if (!data.categories || data.categories.length === 0) return;
 
     const interval = setInterval(() => {
       setFade(false);
 
       // delay before switching image
       setTimeout(() => {
-        setCurrentIndex((prev) => (prev + 1) % data.sub_categories.length);
+        setCurrentIndex((prev) => (prev + 1) % data.categories.length);
         setFade(true);
       }, 1000);
     }, 10000); // switch every 10s
@@ -29,8 +29,8 @@ export default function TV() {
     return () => clearInterval(interval);
   }, []);
 
-  const subCategory = data.sub_categories[currentIndex];
-  const productList = data.categorizedProducts[subCategory];
+  const subCategory = data.categories[currentIndex];
+  const productList = data.products.filter(p=> p.category==subCategory.name);
   const product: Product = productList ? productList[0] : ({} as Product);
 
   if (!product) return <div>Loading product...</div>;

@@ -1,39 +1,33 @@
-import type { CatalogData, Product } from "@/types/catalog";
-import dataRaw from "@/data/data.json";
+import { Metadata } from "next";
+import type { NewCatalog, Product, Category } from "@/types/catalog";
+import dataRaw from "@/data/data1.json";
 import ProductCard from "@/components/ProductCard";
-
-import { toSlug } from "@/utils/slug";
 import { notFound } from "next/navigation";
 
-const data = dataRaw as CatalogData;
+const data = dataRaw as NewCatalog;
 const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 const driveURL = `${baseURL}/static/img/optimized/`;
-interface CategoryPageProps {
-    params: {
-        category: string;
-    };
-}
+
 
 let ldjson = {};
 // ---- STATIC PARAM GENERATION ----
 export async function generateStaticParams() {
-    return data.sub_categories.map((cat) => ({
-        category: (toSlug(cat)),
+    return data.categories.map((cat:Category) => ({
+        slug: cat.slug,
     }));
 }
 
 // ---- METADATA ----
-export async function generateMetadata({ params }: CategoryPageProps) {
-    const { category: slug } = await params;
-    const decodedSlug = decodeURIComponent(slug);
-    const category = data.sub_categories.find(
-        (cat) => toSlug(cat) === decodedSlug
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+    const { slug } = await params;    
+    const category = data.categories.find(
+        (cat:Category) => cat.slug === slug
     );
     if (!category) return {};
 
-    const filtered = data.categorizedProducts[category] || [];
+    const filtered = data.products.filter((p:Product)=>p.category === category.name);
 
-    const title = `${category} by Sapna Shri Jewellers`;
+    const title = `${category.name} by Sapna Shri Jewellers`;
     const description = `Explore ${filtered.length} ${category} at Sapna Shri Jewellers Nagda Junction. High-quality gold & silver jewelry with BIS 916 certified gold.`;
 
     const imageUrl =
@@ -43,8 +37,8 @@ export async function generateMetadata({ params }: CategoryPageProps) {
 
     const keywords =
         filtered.length > 0
-            ? [category, ...filtered.slice(0, 10).map((p: Product) => p.name)].join(", ")
-            : category;
+            ? [category.name, ...filtered.slice(0, 10).map((p: Product) => p.name)].join(", ")
+            : category.name;
 
     ldjson = {
         "@context": "https://schema.org",
@@ -56,7 +50,7 @@ export async function generateMetadata({ params }: CategoryPageProps) {
             "@type": "Product",
             name: p.name,
             image: `${driveURL}${p.images[0]}`,
-            url: `${baseURL}/product/${p.sub_category}/${p.id}`,
+            url: `${baseURL}/product/${p.slug}}`,
         })),
     };
 
@@ -83,17 +77,15 @@ export async function generateMetadata({ params }: CategoryPageProps) {
 }
 
 // ---- MAIN PAGE ----
-export default async function CategoryPage({ params }: CategoryPageProps) { // ✅ make it async
-    const { category: slug } = await params; // ✅ no await needed here either
-    const decodedSlug = decodeURIComponent(slug);
-    console.log(decodedSlug);
-    const category = data.sub_categories.find(
-        (cat) => toSlug(cat) === decodedSlug
+export default async function CategoryPage( { params }: { params: { slug: string } }){
+    const { slug } = await params;        
+    console.log(slug);
+    const category = data.categories.find(
+        (cat:Category) => cat.slug === slug
     );
-
     if (!category) notFound();
 
-    const filtered = data.categorizedProducts[category] || [];
+    const filtered = data.products.filter((p:Product)=> p.category===category.name);
 
     return (
         <div className="space-y-6 max-w-6xl mx-auto">
@@ -102,9 +94,9 @@ export default async function CategoryPage({ params }: CategoryPageProps) { // �
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(ldjson) }}
             />
-            <h1 className="text-xl md:text-2xl">{category}</h1>
+            <h1 className="text-xl md:text-2xl">{category.name}</h1>
             <p className="text-sm text-muted-foreground mb-4">
-                Explore our exclusive collection of {category} at Sapna Shri Jewellers
+                Explore our exclusive collection of {category.name} at Sapna Shri Jewellers
                 Nagda. High-quality gold & silver jewellery with BIS 916 certification.
             </p>
 

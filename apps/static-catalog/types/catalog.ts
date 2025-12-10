@@ -9,7 +9,20 @@ export interface Product {
   images: string[];
   highlights: string[];
   newArrival: boolean;
-  sub_category: string;
+  category: string;
+  type: string[],
+  for: string,
+  keywords: string,
+  slug:string
+}
+
+export interface Category {
+  name: string;
+  category: string,
+  rank: number,
+  slug: string,
+  keywords: string,
+  marketing_text: string
 }
 
 
@@ -20,9 +33,15 @@ export type CategorizedProducts = Record<string, Product[]>;
 
 /** Root data structure for data.json */
 export interface CatalogData {
-  categorizedProducts: CategorizedProducts;  
+  categorizedProducts: CategorizedProducts;
   ticker?: string[];
   sub_categories: string[];
+}
+
+export interface NewCatalog {
+  products: Product[];
+  ticker?: string[];
+  categories: Category[];
 }
 export interface Rates {
   asOn: Date;

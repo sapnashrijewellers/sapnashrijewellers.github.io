@@ -1,21 +1,26 @@
 import Link from "next/link";
-import {toSlug} from "../utils/slug"
-export default function ProductCard({ product }) {
+import Image from "next/image"
+import {Product} from "@/types/catalog"
+export default function ProductCard({  
+  product,
+}: {  
+  product: Product;
+}) {
   const driveURL = `${process.env.NEXT_PUBLIC_BASE_URL}/static/img/thumbnail/`;
 
   const cardHighlightClass = product.newArrival
-    ? "border-2 border-accent shadow-md hover:shadow-xl bg-accent text-primary"
-    : "border border-border shadow hover:shadow-lg bg-card text-primary-dark  ";
+    ? "shadow-md hover:shadow-xl"
+    : "shadow hover:shadow-lg bg-card";
 
   return (
     <article
-      className={`rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-105 ${cardHighlightClass}`}      
+      className={`rounded-2xl bg-accent overflow-hidden transition-transform duration-300 hover:scale-105 ${cardHighlightClass}`}      
     >
       
       {/* Image Section */}
       <Link
-        href={`/product/${toSlug(product.sub_category)}/${product.id}`}
-        title={`${product.sub_category} | ${product.name}`}
+        href={`/product/${(product.slug)}`}
+        title={`${product.category} | ${product.name}`}
         className="flex relative w-full items-center justify-center overflow-hidden rounded-t-2xl bg-muted"
         style={{ maxHeight: "220px", minHeight: "180px" }}        
       >
@@ -25,8 +30,7 @@ export default function ProductCard({ product }) {
               absolute top-2 left-2 z-10
               bg-accent text-accent-foreground
               text-xs px-2 py-1 rounded-full shadow-lg
-              transform -rotate-3
-            ">
+              transform -rotate-3">
             ✨ NEW ARRIVAL
           </span>
         )}
@@ -44,10 +48,10 @@ export default function ProductCard({ product }) {
 
       {/* Product Info */}
       <div className="p-3">
-        <h2 className="text-lg">
+        <h2 className="text-sm">
           {product.name}
         </h2>
-        <div className="flex justify-between text-sm mt-1 text-normal">
+        <div className="flex justify-between text-xs mt-1">
           <span>{product.purity}</span>
           <span>{product.weight} gm</span>
         </div>

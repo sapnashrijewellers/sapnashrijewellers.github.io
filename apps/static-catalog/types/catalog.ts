@@ -1,4 +1,4 @@
-// /types/catalog.ts
+import { LucideIcon } from "lucide-react";
 
 /** Represents a single jewelry product item */
 export interface Product {
@@ -31,7 +31,20 @@ export interface SearchFilters {
     forWhom?: string;
 }
 
-
+export interface BannerItem {
+  id: string;
+  title: string;
+  subtitle?: string;
+  icon?: LucideIcon | string; // JSON uses string
+  textColor?: string;
+  bgType: "solid" | "gradient" | "dual";
+  bgColor?: string;
+  gradientFrom?: string;
+  gradientTo?: string;
+  dualLeft?: string;
+  dualRight?: string;
+  link: string;
+}
 
 /** Represents categorized product data keyed by category name */
 export type CategorizedProducts = Record<string, Product[]>;

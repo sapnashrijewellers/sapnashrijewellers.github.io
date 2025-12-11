@@ -1,6 +1,8 @@
-/* ==============From index.css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Cormorant+Garamond:wght@400;500;600&family=Cinzel:wght@400;600;700&family=Great+Vibes&display=swap');
 @import "tailwindcss";
 @import "tailwindcss/utilities";
+
+
 
 
 :root {
@@ -20,6 +22,11 @@
   --color-surface: #fffdf9;      /* Light cream card background */
   --color-border: #e5d8c6;       /* Warm beige border */
   --color-accent: #f7efe3;       /* Soft gold-toned accent area */
+
+  --font-playfair: 'Playfair Display', serif;
+  --font-cormorant: 'Cormorant Garamond', serif;
+  --font-cinzel: 'Cinzel', serif;
+  --font-vibes: 'Great Vibes', cursive;
 }
 
 /* Dark theme (auto applied using system preference) */
@@ -34,6 +41,22 @@
     --color-accent: #2a2a2a;
   }
 }
+
+@layer utilities {
+  .font-playfair {
+    font-family: var(--font-playfair);
+  }
+  .font-cormorant {
+    font-family: var(--font-cormorant);
+  }
+  .font-cinzel {
+    font-family: var(--font-cinzel);
+  }
+  .font-vibes {
+    font-family: var(--font-vibes);
+  }
+}
+
 
 /* ============================
    BASE ELEMENT STYLING

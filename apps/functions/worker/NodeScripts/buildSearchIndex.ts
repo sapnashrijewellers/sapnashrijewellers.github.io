@@ -2,6 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import MiniSearch from 'minisearch'
+import { Product } from "../types/catalog"
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -11,7 +12,7 @@ const catalogPath = path.join(__dirname, '../input/catalog.json')
 const catalog = JSON.parse(fs.readFileSync(catalogPath, 'utf-8'))
 
 
-const normalize = s =>
+const normalize = (s: string) =>
   (s || '')
     .toString()
     .normalize("NFC")  // keeps matras properly connected
@@ -19,7 +20,78 @@ const normalize = s =>
     .replace(/[^0-9a-zA-Z\u0900-\u097F]+/gu, ' ')
     .trim();
 
-const productsForIndex = catalog.products.map(p => ({
+function normalizeTerm(term: string): string {
+  if (!term) return ""
+
+  // Base normalization
+  let t = term.normalize("NFKC").toLowerCase().trim()
+
+  // Remove nukta only
+  t = t.replace(/\u093C/g, "")
+
+  // ----------------------------------------------------
+  // 1. Direct dictionary mapping (English + Hindi)
+  // ----------------------------------------------------
+  const map: Record<string, string> = {
+    // English singular forms
+    "bangles": "bangle",
+    "bracelets": "bracelet",
+    "chains": "chain",
+    "rings": "ring",
+    "earrings": "earring",
+    "pendants": "pendant",
+    "necklaces": "necklace",
+    "anklets": "anklet",
+
+    // Common variants
+    "chudiya": "bangle",
+    "chudia": "bangle",
+    "chudi": "bangle",
+    "chudiyao": "bangle",
+
+    // Hindi plural → singular
+    "चूड़ियाँ": "चूड़ी",
+    "चूड़ियों": "चूड़ी",
+    "चूड़ि": "चूड़ी",
+
+    "अंगूठियाँ": "अंगूठी",
+    "अंगूठियों": "अंगूठी",
+
+    "बिछियाँ": "बिछिया",
+    "बिछियों": "बिछिया",
+  }
+
+  if (map[t]) return map[t]
+
+  // ----------------------------------------------------
+  // 2. English safe stemming (protected exceptions)
+  // ----------------------------------------------------
+  const english = /^[a-z]+$/.test(t)
+
+  if (english) {
+    const protectedWords = [
+      "bangle", "bangles",
+      "ring", "rings",
+      "chain", "chains",
+      "bracelet", "bracelets",
+      "earring", "earrings",
+      "pendant", "pendants",
+      "necklace", "necklaces"
+    ]
+
+    if (protectedWords.includes(t)) return t.endsWith("s") ? t.slice(0, -1) : t
+
+    // Generic safe rules (only if not protected)
+    if (t.endsWith("ies") && t.length > 4) return t.slice(0, -3) + "y"
+    if (t.endsWith("es") && t.length > 4) return t.slice(0, -2)
+    if (t.endsWith("s") && t.length > 3) return t.slice(0, -1)
+  }
+
+  return t
+}
+
+
+const productsForIndex = catalog.products.map((p: Product) => ({
   ...p,
   searchableName: normalize(p.name.replace(/\|\s*/g, ' ')),
   keywords: normalize(p.keywords),
@@ -81,7 +153,8 @@ const miniSearch = new MiniSearch({
       .match(/[0-9a-zA-Z\u0900-\u097F]+/gu) || [];
   },
 
-  processTerm: term => term.toLowerCase()
+  //processTerm: term => term.toLowerCase()
+  processTerm: (term) => normalizeTerm(term)
 });
 
 miniSearch.addAll(productsForIndex)

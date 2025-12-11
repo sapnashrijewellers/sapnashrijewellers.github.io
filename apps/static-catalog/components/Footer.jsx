@@ -12,11 +12,11 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-background text-foreground py-4">
+    <footer className="bg-background text-foreground p-4">
       <div className="max-w-6xl mx-auto space-y-6">
         {/* Disclaimer */}
-        <div className="flex gap-2 text-xl">
-          <FaExclamationCircle className="text-primary-dark mt-[1px]" />
+        <div className="flex gap-2 text-xl">      
+          <FaExclamationCircle className="text-primary-dark mt-[1px]" />    
           <p className="italic text-xs text-muted-foreground">
             अस्वीकरण: कीमतें बाजार दर के अनुसार बदलती रहती हैं। सभी दरें लगभग 5 मिनट की देरी से प्रदर्शित हैं। कृपया अंतिम कीमत और उत्पाद का अनुभव करने के लिए दुकान पर अवश्य आएँ। दी गई कीमतें केवल संकेतात्मक हैं, मेकिंग चार्ज एवं GST एक्स्ट्रा। *नियम एवं शर्तें लागू। किसी भी विवाद की स्थिति में न्यायिक क्षेत्र नागदा जंक्शन रहेगा।
           </p>

@@ -10,7 +10,7 @@ export default function FooterTrust() {
       className="
         bg-accent text-card-foreground
         py-16 flex flex-col md:flex-row items-center justify-center gap-16
-        shadow-md mt-6 rounded-2xl
+        shadow-md mt-6 
       "
     >
       {/* Years of Trust */}

@@ -44,6 +44,8 @@ export interface BannerItem {
   dualLeft?: string;
   dualRight?: string;
   link: string;
+  fontFamily:string;
+  bgImage:string;
 }
 
 /** Represents categorized product data keyed by category name */

@@ -1,7 +1,7 @@
 import type { NewCatalog } from "@/types/catalog";
 import CategoryCard from "@/components/CategoryCard";
 import dataRaw from "@/data/catalog.json";
-import RotatingBanner from "@/components/RotatingBanner";
+import RotatingBanner from "@/components/banners/RotatingBanner";
 import banners from "@/data/banner-data.json";
 
 const data = dataRaw as NewCatalog;

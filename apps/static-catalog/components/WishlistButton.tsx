@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Heart } from "lucide-react";
 
 function safeReadWishlist(): string[] {
@@ -24,25 +24,31 @@ export default function WishlistButton({
   const [isWishlisted, setIsWishlisted] = useState(false);
   const ref = useRef<HTMLButtonElement | null>(null);
 
-  const refreshStatus = () => {
+  // Stable function to update internal UI state
+  const refreshStatus = useCallback(() => {
     const stored = safeReadWishlist();
     setIsWishlisted(stored.includes(slug));
-  };
-
-  // initial load + when slug changes
-  useEffect(() => {
-    refreshStatus();
   }, [slug]);
 
-  // Listen for cross-tab 'storage' event & in-tab custom event
+  //
+  // 1️⃣ INITIAL LOAD
+  //
+  useEffect(() => {
+    // Defer setState to avoid "setState inside effect" warning
+    queueMicrotask(() => {
+      refreshStatus();
+    });
+  }, [refreshStatus]);
+
+  //
+  // 2️⃣ LISTEN TO LOCALSTORAGE + CUSTOM EVENT
+  //
   useEffect(() => {
     const onStorage = (e: StorageEvent) => {
       if (e.key === "wishlist") refreshStatus();
     };
-    const onCustom = (e: Event) => {
-      // optionally, could read detail if you dispatch it
-      refreshStatus();
-    };
+
+    const onCustom = () => refreshStatus();
 
     window.addEventListener("storage", onStorage);
     window.addEventListener("wishlist-updated", onCustom);
@@ -51,64 +57,54 @@ export default function WishlistButton({
       window.removeEventListener("storage", onStorage);
       window.removeEventListener("wishlist-updated", onCustom);
     };
-  }, [slug]);
+  }, [refreshStatus]);
 
-  // IntersectionObserver to refresh when visible + fallbacks
+  //
+  // 3️⃣ REFRESH WHEN BUTTON BECOMES VISIBLE
+  //
   useEffect(() => {
     let observer: IntersectionObserver | null = null;
-    let didObserve = false;
 
     if (ref.current && "IntersectionObserver" in window) {
       observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              didObserve = true;
-              refreshStatus();
-            }
+            if (entry.isIntersecting) refreshStatus();
           });
         },
-        { threshold: 0.1, rootMargin: "50px" }
+        { threshold: 0.1 }
       );
       observer.observe(ref.current);
     }
 
-    const onVisibility = () => {
-      // Called when tab visibility changes or window focus - useful fallback
-      if (document.visibilityState === "visible") refreshStatus();
-    };
+    const onVisibility = () => refreshStatus();
+    const onFocus = () => refreshStatus();
 
     window.addEventListener("visibilitychange", onVisibility);
-    window.addEventListener("focus", onVisibility);
+    window.addEventListener("focus", onFocus);
 
     return () => {
       if (observer && ref.current) observer.unobserve(ref.current);
       window.removeEventListener("visibilitychange", onVisibility);
-      window.removeEventListener("focus", onVisibility);
+      window.removeEventListener("focus", onFocus);
     };
-  }, [slug]);
+  }, [refreshStatus]);
 
-  // Toggle wishlist (updates localStorage + notify)
+  //
+  // 4️⃣ TOGGLE WISHLIST
+  //
   const toggleWishlist = () => {
     const stored = safeReadWishlist();
     const exists = stored.includes(slug);
-    let next: string[];
-    if (exists) {
-      next = stored.filter((s) => s !== slug);
-      setIsWishlisted(false);
-    } else {
-      next = [...stored, slug];
-      setIsWishlisted(true);
-    }
 
-    try {
-      localStorage.setItem("wishlist", JSON.stringify(next));
-    } catch (err) {
-      console.error("Failed to write wishlist to localStorage", err);
-    }
+    const next = exists
+      ? stored.filter((s) => s !== slug)
+      : [...stored, slug];
 
-    // dispatch custom event for same-tab listeners (use CustomEvent)
-    window.dispatchEvent(new CustomEvent("wishlist-updated", { bubbles: true }));
+    localStorage.setItem("wishlist", JSON.stringify(next));
+    setIsWishlisted(!exists);
+
+    window.dispatchEvent(new CustomEvent("wishlist-updated"));
   };
 
   return (

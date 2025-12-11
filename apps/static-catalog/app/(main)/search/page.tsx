@@ -1,172 +1,296 @@
 "use client"
-import { useState, useEffect, useMemo } from 'react'
-import MiniSearch from 'minisearch'
+
+import { useSearchParams, useRouter } from "next/navigation"
+import { useEffect, useMemo, useRef, useState } from "react"
+import MiniSearch from "minisearch"
 import ProductCard from "@/components/ProductCard"
 import { Product, SearchFilters } from "@/types/catalog"
+import { Funnel, ArrowUpDown, Search, Mic } from "lucide-react"
 
 
 export default function JewelrySearch() {
+    const searchParams = useSearchParams()
+    const router = useRouter()
+    const urlQuery = decodeURIComponent(searchParams.get("q") || "").trim()
+
+    const [query, setQuery] = useState(urlQuery)
     const [searchIndex, setSearchIndex] = useState<MiniSearch<Product> | null>(null)
-    const [query, setQuery] = useState('')
     const [filters, setFilters] = useState<SearchFilters>({})
+    const [sortBy, setSortBy] = useState("best-match")
     const [isLoading, setIsLoading] = useState(true)
 
-    // Initialize search index
+    const [showFilters, setShowFilters] = useState(false)
+    const [showSort, setShowSort] = useState(false)
+
+    const filterRef = useRef<HTMLDivElement>(null)
+    const sortRef = useRef<HTMLDivElement>(null)
+    const filterBtnRef = useRef<HTMLButtonElement>(null)
+    const sortBtnRef = useRef<HTMLButtonElement>(null)
+
+    useEffect(() => setQuery(urlQuery), [urlQuery])
+
+    const handleQueryChange = (value: string) => {
+        setQuery(value)
+        router.replace(`/search?q=${encodeURIComponent(value.trim())}`)
+    }
+
+    // Load search index
     useEffect(() => {
-        const initializeSearch = async () => {
+        const loadIndex = async () => {
             try {
                 setIsLoading(true)
-
-                // In production, fetch from your generated index file:
-                const response = await fetch('/data/search-index.json')
+                const response = await fetch("/data/search-index.json")
                 const indexString = await response.text()
-
-                const miniSearch = MiniSearch.loadJSON<Product>(indexString, {
-                    fields: ['name', 'keywords', 'type', 'category', 'for', 'purity', 'highlights']
+                const mini = MiniSearch.loadJSON<Product>(indexString, {
+                    fields: ["name", "keywords", "type", "category", "for", "purity", "highlights"]
                 })
-                setSearchIndex(miniSearch)
-            } catch (error) {
-                console.error('Failed to load search index:', error)
+                setSearchIndex(mini)
             } finally {
                 setIsLoading(false)
             }
         }
-
-        initializeSearch()
+        loadIndex()
     }, [])
 
-    // Search and filter products - computed from searchIndex and inputs
+    // Close panels on outside click or Esc
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (filterRef.current && !filterRef.current.contains(event.target as Node) && filterBtnRef.current && !filterBtnRef.current.contains(event.target as Node)) {
+                setShowFilters(false)
+            }
+            if (sortRef.current && !sortRef.current.contains(event.target as Node) && sortBtnRef.current && !sortBtnRef.current.contains(event.target as Node)) {
+                setShowSort(false)
+            }
+        }
+        const handleEsc = (event: KeyboardEvent) => {
+            if (event.key === "Escape") {
+                setShowFilters(false)
+                setShowSort(false)
+            }
+        }
+        document.addEventListener("mousedown", handleClickOutside)
+        document.addEventListener("keydown", handleEsc)
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside)
+            document.removeEventListener("keydown", handleEsc)
+        }
+    }, [])
+
     const results = useMemo(() => {
         if (!searchIndex) return []
 
-        let products: Product[]
+        let items: Product[] = []
 
         if (query.trim()) {
-            // Perform search - MiniSearch returns SearchResult with all storeFields
-            const searchResults = searchIndex.search(query)
-            console.log(searchResults);
-            // Extract the product data from search results
-            products = searchResults.map(result => {
-                const product: Product = {
-                    id: result.id as number,
-                    name: result.name as string,
-                    weight: result.weight as number,
-                    purity: result.purity as string,
-                    images: result.images as string[],
-                    category: result.category as string,
-                    slug: result.slug as string,
-                    for: result.for as string,
-                    type: result.type as string | string[],
-                    newArrival: result.newArrival as boolean
-                }
-                return product
-            })
-        } else {
-            // No query - return all products
-            products = [];
+            const res = searchIndex.search(query)
+            items = res.map(r => ({
+                id: r.id as number,
+                name: r.name as string,
+                weight: r.weight as number,
+                purity: r.purity as string,
+                images: r.images as string[],
+                category: r.category as string,
+                slug: r.slug as string,
+                for: r.for as string,
+                type: r.type as string[],
+                newArrival: r.newArrival as boolean,
+                highlights:["",""],
+                keywords:""
+            }))
         }
 
-        if (filters.minWeight !== undefined && filters.minWeight > 0) {
-            products = products.filter(p => p.weight >= filters.minWeight!)
+        if (filters.minWeight) items = items.filter(p => p.weight >= filters.minWeight!)
+        if (filters.maxWeight) items = items.filter(p => p.weight <= filters.maxWeight!)
+        if (filters.forWhom) items = items.filter(p => p.for === filters.forWhom)
+
+        switch (sortBy) {
+            case "name-asc":
+                items = items.sort((a, b) => a.name.localeCompare(b.name))
+                break
+            case "name-desc":
+                items = items.sort((a, b) => b.name.localeCompare(a.name))
+                break
+            case "weight-asc":
+                items = items.sort((a, b) => a.weight - b.weight)
+                break
+            case "weight-desc":
+                items = items.sort((a, b) => b.weight - a.weight)
+                break
+            case "best-match":
+            default:
+                break
         }
 
-        if (filters.maxWeight !== undefined && filters.maxWeight > 0) {
-            products = products.filter(p => p.weight <= filters.maxWeight!)
-        }
-        if (filters.forWhom) {
-            products = products.filter(p => p.for === filters.forWhom)
-        }
-
-        return products
-    }, [searchIndex, query, filters])
+        return items
+    }, [searchIndex, query, filters, sortBy])
 
     const updateFilter = (key: keyof SearchFilters, value: any) => {
         setFilters(prev => ({ ...prev, [key]: value }))
     }
 
-    if (isLoading) {
-        return (
-            <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-yellow-50 to-orange-50">
-                <div className="text-center">
-                    <div className="w-16 h-16 border-4 border-yellow-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-                    <div className="text-lg text-gray-600">Loading jewelry catalog...</div>
-                </div>
-            </div>
-        )
+    const startSpeechRecognition = () => {
+        if (!("webkitSpeechRecognition" in window || "SpeechRecognition" in window)) {
+            alert("Speech recognition is not supported in this browser.")
+            return
+        }
+
+        const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition
+        const recognition = new SpeechRecognition()
+        recognition.lang = "en-US"
+        recognition.interimResults = false
+        recognition.maxAlternatives = 1
+
+        recognition.onresult = (event: any) => {
+            const spokenText = event.results[0][0].transcript
+            handleQueryChange(spokenText)
+        }
+
+        recognition.start()
     }
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-yellow-50 to-orange-50">
-            <div className="container mx-auto p-6 max-w-7xl">
+        <div className="min-h-screen bg-surface relative">
+            <div className="container mx-auto">
 
-                {/* Search Bar */}
-                <div className="mb-6">
-                    <div className="relative">
+                {/* Search + Buttons Row */}
+                <div className="flex items-center gap-2 mb-4 relative">
+                    <div className="flex items-center border-2 border-primary rounded-xl bg-accent px-3 py-0 w-full max-w-lg">
+                        {/* Left Search Icon */}
+                        <Search className="text-normal mr-2 shrink-0" size={16} />
+
+                        {/* Text Input */}
                         <input
                             type="text"
-                            placeholder="Search jewelry (e.g., सोने की चूड़ी, bangles, चांदी, ring)"
                             value={query}
-                            onChange={(e) => setQuery(e.target.value)}
-                            className="w-full p-4 pr-12 text-lg border-2 border-yellow-400 rounded-xl focus:border-yellow-500 focus:outline-none shadow-lg"
+                            onChange={(e) => handleQueryChange(e.target.value)}
+                            placeholder="Search jewelry..."
+                            className="flex-1 min-w-0 bg-transparent outline-none text-normal placeholder:text-normal"
                         />
-                        <svg className="absolute right-4 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
+
+                        {/* Mic Button */}
+                        <button
+                            onClick={startSpeechRecognition}
+                            aria-label="Speak your search"
+                            className="ml-2 text-normal shrink-0"
+                        >
+                            <Mic size={16} />
+                        </button>
+
+                        {/* Filter Button */}
+                        <button
+                            ref={filterBtnRef}
+                            onClick={() => { setShowFilters(!showFilters); setShowSort(false) }}
+                            className="ml-2 text-normal shrink-0" title="Filter search results"
+                        >
+                            <Funnel size={16} />
+                        </button>
+
+                        {/* Sort Button */}
+                        <button
+                            ref={sortBtnRef}
+                            onClick={() => { setShowSort(!showSort); setShowFilters(false) }}
+                            className="ml-2 text-normal shrink-0" title="Sort search results"
+                        >
+                            <ArrowUpDown size={16} />
+                        </button>
                     </div>
+
+
+
+                    {/* FILTER PANEL */}
+                    {showFilters && (
+                        <div
+                            ref={filterRef}
+                            className="absolute right-0 top-full mt-2 w-72 bg-surface border border-theme rounded-xl shadow-lg z-50 p-4"
+                        >
+                            <h3 className="font-semibold mb-3 text-primary">Filters</h3>
+                            <div className="grid grid-cols-1 gap-3">
+                                <input
+                                    type="number"
+                                    placeholder="Min Weight (g)"
+                                    value={filters.minWeight || ""}
+                                    onChange={(e) => updateFilter("minWeight", e.target.value ? parseFloat(e.target.value) : undefined)}
+                                    className="p-2 border border-theme rounded bg-accent text-normal"
+                                />
+                                <input
+                                    type="number"
+                                    placeholder="Max Weight (g)"
+                                    value={filters.maxWeight || ""}
+                                    onChange={(e) => updateFilter("maxWeight", e.target.value ? parseFloat(e.target.value) : undefined)}
+                                    className="p-2 border border-theme rounded bg-accent text-normal"
+                                />
+                                <select
+                                    value={filters.forWhom || ""}
+                                    onChange={(e) => updateFilter("forWhom", e.target.value || undefined)}
+                                    className="p-2 border border-theme rounded bg-accent text-normal"
+                                >
+                                    <option value="">For Everyone</option>
+                                    <option value="her">For Her</option>
+                                    <option value="him">For Him</option>
+                                    <option value="kids">For Kids</option>
+                                    <option value="unisex">Unisex</option>
+                                </select>
+                            </div>
+                        </div>
+                    )}
+
+                    {/* SORT PANEL */}
+                    {showSort && (
+                        <div
+                            ref={sortRef}
+                            className="absolute right-0 top-full mt-2 w-72 bg-surface border border-theme rounded-xl shadow-lg z-50 p-4"
+                        >
+                            <h3 className="font-semibold mb-3 text-primary">Sort By</h3>
+                            <div className="grid grid-cols-1 gap-2">
+                                <button
+                                    onClick={() => setSortBy("best-match")}
+                                    className={`p-2 border border-theme rounded ${sortBy === "best-match" ? "bg-accent text-primary" : "bg-surface text-normal"}`}
+                                >
+                                    Best Match
+                                </button>
+                                <button
+                                    onClick={() => setSortBy("name-asc")}
+                                    className={`p-2 border border-theme rounded ${sortBy === "name-asc" ? "bg-accent text-primary" : "bg-surface text-normal"}`}
+                                >
+                                    Product Name A–Z
+                                </button>
+                                <button
+                                    onClick={() => setSortBy("name-desc")}
+                                    className={`p-2 border border-theme rounded ${sortBy === "name-desc" ? "bg-accent text-primary" : "bg-surface text-normal"}`}
+                                >
+                                    Product Name Z–A
+                                </button>
+                                <button
+                                    onClick={() => setSortBy("weight-asc")}
+                                    className={`p-2 border border-theme rounded ${sortBy === "weight-asc" ? "bg-accent text-primary" : "bg-surface text-normal"}`}
+                                >
+                                    Weight Low → High
+                                </button>
+                                <button
+                                    onClick={() => setSortBy("weight-desc")}
+                                    className={`p-2 border border-theme rounded ${sortBy === "weight-desc" ? "bg-accent text-primary" : "bg-surface text-normal"}`}
+                                >
+                                    Weight High → Low
+                                </button>
+                            </div>
+                        </div>
+                    )}
                 </div>
 
-                {/* Filters */}
-                <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-6">
-                    <input
-                        type="number"
-                        placeholder="Min Weight (g)"
-                        value={filters.minWeight || ''}
-                        onChange={(e) => updateFilter('minWeight', e.target.value ? parseFloat(e.target.value) : undefined)}
-                        className="p-3 border-2 border-gray-200 rounded-lg focus:border-yellow-400 focus:outline-none"
-                    />
-
-                    <input
-                        type="number"
-                        placeholder="Max Weight (g)"
-                        value={filters.maxWeight || ''}
-                        onChange={(e) => updateFilter('maxWeight', e.target.value ? parseFloat(e.target.value) : undefined)}
-                        className="p-3 border-2 border-gray-200 rounded-lg focus:border-yellow-400 focus:outline-none"
-                    />
-                    <select
-                        value={filters.forWhom || ''}
-                        onChange={(e) => setFilters({ ...filters, forWhom: e.target.value || undefined })}
-                        className="p-2 border rounded"
-                    >
-                        <option value="">For Everyone</option>
-                        <option value="her">For Her</option>
-                        <option value="him">For Him</option>
-                        <option value="kids">For Kids</option>
-                        <option value="unisex">Unisex</option>
-                    </select>
-                </div>
-
-                {/* Results Count */}
-                <div className="mb-4 text-gray-700 font-medium">
-                    {query && <span className="text-yellow-600">Search: "{query}" - </span>}
+                {/* Results */}
+                <div className="mb-4 text-normal font-medium">
+                    {query && <span className="text-primary">Search: "{query}" — </span>}
                     {results.length} products found
                 </div>
 
-                {/* Products Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
                     {results.map(product => (
-                        <ProductCard key={product.id}
-                            product={product}
-                        />
+                        <ProductCard key={product.id} product={product} />
                     ))}
                 </div>
 
-                {/* No Results */}
-                {results.length === 0 && !isLoading && (
-                    <div className="text-center py-20">
-                        <div className="text-6xl mb-4">🔍</div>
-                        <p className="text-xl text-gray-600 mb-2">No products found</p>
-                        <p className="text-gray-400">Try adjusting your search or filters</p>
-                    </div>
+                {!isLoading && results.length === 0 && (
+                    <div className="text-center py-20 text-normal">No results found.</div>
                 )}
             </div>
         </div>

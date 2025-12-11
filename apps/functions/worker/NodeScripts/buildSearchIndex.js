@@ -48,6 +48,7 @@ const miniSearch = new MiniSearch({
     'purity',
     'images',
     'category',
+    'for',
     'slug',
     'newArrival'
   ],

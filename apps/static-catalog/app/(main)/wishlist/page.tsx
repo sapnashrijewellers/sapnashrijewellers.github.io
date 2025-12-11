@@ -40,7 +40,7 @@ export default function WishlistPage() {
     );
 
     return (
-        <section className="container mx-auto px-4 py-10">
+        <section className="container mx-auto">
             <h1 className="text-2xl  mb-6">My Wishlist ❤️</h1>
 
             {wishlistProducts.length === 0 ? (

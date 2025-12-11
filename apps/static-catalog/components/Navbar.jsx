@@ -78,7 +78,7 @@ export default function Navbar() {
           )}
 
           {/* Bottom rates section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 md:gap-2 text-right justify-end">
+          <div className="grid grid-cols-1 md:grid-cols-4 md:gap-2 text-right justify-end">
             
             <div className="flex justify-end">
             सोना-24K:

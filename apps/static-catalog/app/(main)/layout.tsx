@@ -59,7 +59,7 @@ export default function RootLayout({
         <div className="container mx-auto mb-15 md:mb-0">
           <Navbar />
           <Ticker />
-          <div className="p-2 max-w-6xl mx-auto">{children}</div>
+          <div className="px-2 max-w-6xl mx-auto py-4">{children}</div>
           <MobileNavbar/>
           <FooterTrust />
           <Footer />

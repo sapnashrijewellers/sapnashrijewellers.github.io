@@ -88,7 +88,7 @@ export default async function CategoryPage( { params }: { params: { slug: string
     const filtered = data.products.filter((p:Product)=> p.category===category.name);
 
     return (
-        <div className="space-y-6 max-w-6xl mx-auto">
+        <div className="container mx-auto">
             {/* ✅ JSON-LD Structured Data */}
             <script
                 type="application/ld+json"

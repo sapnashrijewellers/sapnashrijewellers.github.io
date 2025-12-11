@@ -67,8 +67,8 @@ export default function JewelrySearch() {
   // RENDER
   // ------------------------------------------------------
   return (
-    <div className="min-h-screen">
-      <div className="container mx-auto py-6">
+    <div className="">
+      <div className="container mx-auto">
 
         {/* CENTERED Search Bar */}
         <div className="flex justify-center">

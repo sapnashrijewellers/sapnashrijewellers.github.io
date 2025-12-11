@@ -40,7 +40,7 @@ export async function generateMetadata() {
 
 export default function Home() {  
   return (
-    <div className="space-y-6 max-w-6xl mx-auto">
+    <div className="container mx-auto">
       <p className="text-center mb-6">
         Discover our exclusive categories of gold & silver jewellery.
         High-quality craftsmanship with BIS 916 certified gold.

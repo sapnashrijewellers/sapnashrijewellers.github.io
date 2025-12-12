@@ -28,7 +28,12 @@ export function useSearch(searchIndex: MiniSearch<Product> | null, query: string
                 type: r.type as string[],
                 newArrival: r.newArrival as boolean,
                 highlights: ["", ""],
-                keywords: ""
+                keywords: "",
+                metaDescription:"",
+                active:true,
+                englishHighlights:[],
+                makingCharges:0,
+                gst:0
             }));
     }
 

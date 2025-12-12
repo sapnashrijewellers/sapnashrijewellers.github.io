@@ -3,10 +3,10 @@
 import { useEffect, useState } from "react";
 import ProductCard from "@/components/ProductCard";
 import type { NewCatalog, Category } from "@/types/catalog";
-import dataRaw from "@/data/catalog.json";
+import products from "@/data/catalog.json";
 
 export default function WishlistPage() {
-    const catalog = dataRaw as NewCatalog;
+    
     const [wishlist, setWishlist] = useState<string[]>([]);
 
 
@@ -35,7 +35,7 @@ export default function WishlistPage() {
 
 
 
-    const wishlistProducts = catalog.products.filter((p) =>
+    const wishlistProducts = products.filter((p) =>
         wishlist.includes(p.slug)
     );
 
@@ -48,7 +48,7 @@ export default function WishlistPage() {
                     Your wishlist is empty. Browse products and add some!
                 </p>
             ) : (
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-4">
                     {wishlistProducts.map((product) => (
                         <ProductCard key={product.slug} product={product} />
                     ))}

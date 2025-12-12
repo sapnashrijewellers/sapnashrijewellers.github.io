@@ -4,16 +4,18 @@ import products from "@/data/catalog.json";
 import { notFound } from "next/navigation";
 import ProductGallery from "@/components/ProductGallery";
 import NativeShare from "@/components/NativeShare";
+import { HighlightsTabs } from "@/components/Highlights";
+import WhatsappClick from "@/components/WhatAppClick";
 
 import {
   FaWhatsapp,
   FaTelegramPlane,
   FaSnapchatGhost,
-  FaInstagram,  
+  FaInstagram,
 } from "react-icons/fa";
 
-
 const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
+
 const driveURL = `${baseURL}/static/img/optimized/`;
 const phone = "918234042231";
 
@@ -25,12 +27,12 @@ export async function generateStaticParams() {
 }
 
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {    
-  const  slug  = await params; 
-  
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const slug = await params;
+
   const product = products.find(
-    (p:Product) => p.slug === slug.slug
-  ); 
+    (p: Product) => p.slug === slug.slug
+  );
 
   if (!product) return {};
 
@@ -72,7 +74,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
     (p: Product) => p.slug === slug && p.active
   );
 
-  if (!product) {    
+  if (!product) {
     return notFound();
   }
 
@@ -131,33 +133,10 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
         </div>
 
         {/* Contact */}
-        <div className="flex items-center gap-4 mb-4">
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-4xl md:text-5xl !text-green-500 hover:text-green-600 transition-transform hover:scale-110"
-          >
-            <FaWhatsapp />
-          </a>
-          <span>
-            अधिक जानकारी के लिए{" "}
-            <a href="tel:8234042231" className="underline font-medium">
-              8234042231
-            </a>{" "}
-            पर संपर्क करें...
-          </span>
-        </div>
+        <WhatsappClick product={product} />
 
-        {/* Highlights */}
-        {product.highlights?.length > 0 && (
-          <ul className="list-disc list-inside space-y-1 mb-4">
-            {product.highlights.map((point: string, i: number) => (
-              <li key={i}>{point}</li>
-            ))}
-          </ul>
-        )}
-
+        {/* Highlights Tabs */}
+        <HighlightsTabs product={product} />
         {/* Share */}
         <div className="border-t pt-4 mt-4">
           <h2 className="text-lg  mb-3">Share this product</h2>

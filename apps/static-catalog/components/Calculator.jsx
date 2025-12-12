@@ -13,6 +13,10 @@ export default function Calculator() {
   });
   const [price, setPrice] = useState(null);
   const [loading, setLoading] = useState(false);
+  const defaultPurityByCategory = {
+    gold: "gold22K",
+    silver: "silver",
+  };
 
   const purityLabels = {
     gold24K: "सोना (24K)",
@@ -29,14 +33,26 @@ export default function Calculator() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setForm((prev) => ({ ...prev, [name]: value }));
+
+    setForm((prev) => {
+      // 🔑 when category changes, reset purity
+      if (name === "category") {
+        return {
+          ...prev,
+          category: value,
+          purity: defaultPurityByCategory[value],
+        };
+      }
+
+      return { ...prev, [name]: value };
+    });
   };
 
   // ✅ Fetch fresh rates each time before calculation
   const fetchRates = async () => {
-    try { 
+    try {
       const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-      const res = await fetch(`${baseUrl}/static/rates.json`, 
+      const res = await fetch(`${baseUrl}/static/rates.json`,
         { cache: "no-store" }); // prevent caching
       if (!res.ok) throw new Error("Failed to load rates");
       const data = await res.json();
@@ -49,6 +65,12 @@ export default function Calculator() {
   };
 
   const calculatePrice = async () => {
+
+    if (!purityOptions.includes(form.purity)) {
+      alert("शुद्धता चयन अमान्य है। कृपया पुनः चुनें।");
+      setLoading(false);
+      return;
+    }
     setLoading(true);
     setPrice(null);
 

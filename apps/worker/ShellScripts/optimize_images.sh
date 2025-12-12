@@ -21,13 +21,10 @@ fi
 
 # Go to app folder and run your script
 cd /app
-echo "Running products.js..."
-node ./NodeScripts/products.js
+
 echo "Running image optimization..."
 node ./NodeScripts/optimize_images.js
 
-# Copy generated file into repo
-cp /app/data.json "$WORKDIR/data.json"
 
 # Commit and push if changes exist
 cd "$WORKDIR"

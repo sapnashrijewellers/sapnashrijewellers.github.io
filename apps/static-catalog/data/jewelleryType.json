@@ -1,0 +1,58 @@
+[
+  {
+    "Type": "Wedding",
+    "Icon": "HeartHandshake"
+  },
+  {
+    "Type": "Kundan",
+    "Icon": "Gem"
+  },
+  {
+    "Type": "Gajara",
+    "Icon": "CircleDot"
+  },
+  {
+    "Type": "Daily Wear",
+    "Icon": "Sparkle"
+  },
+  {
+    "Type": "Investment",
+    "Icon": "Coins"
+  },
+  {
+    "Type": "Religious",
+    "Icon": "HandsPraying"
+  },
+  {
+    "Type": "Traditional",
+    "Icon": "Feather"
+  },
+  {
+    "Type": "Modern",
+    "Icon": "Shapes"
+  },
+  {
+    "Type": "Gift",
+    "Icon": "Gift"
+  },
+  {
+    "Type": "Bridal",
+    "Icon": "Crown"
+  },
+  {
+    "Type": "Wedding Wear",
+    "Icon": "Diamond"
+  },
+  {
+    "Type": "Kids Wear",
+    "Icon": "Baby"
+  },
+  {
+    "Type": "Rajputani",
+    "Icon": "Crown"
+  },
+  {
+    "Type": "Rajputi",
+    "Icon": "Shield"
+  }
+]

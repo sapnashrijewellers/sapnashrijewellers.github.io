@@ -1,11 +1,11 @@
 // components/Ticker.jsx
 import { FaBullhorn } from "react-icons/fa";
-import data from "../data/data.json";
+import data from "@/data/ticker.json";
 
 export default function Ticker() {
   if (!data?.ticker?.length) return null;
 
-  const tickerText = data.ticker.join("  •  ");
+  const tickerText = data.join("  •  ");
 
   return (
     <div className="relative w-full bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-2 overflow-hidden shadow-md">

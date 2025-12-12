@@ -8,12 +8,17 @@ export interface Product {
   purity: string;
   images: string[];
   highlights: string[];
+  englishHighlights: string[];
   newArrival: boolean;
   category: string;
   type: string[],
   for: string,
   keywords: string,
-  slug: string  
+  slug: string,
+  active: boolean,
+  metaDescription: string,
+  makingCharges: number,
+  gst: number
 }
 
 export interface Category {
@@ -22,19 +27,22 @@ export interface Category {
   rank: number,
   slug: string,
   keywords: string,
-  marketing_text: string
+  marketingText: string,  
+  active: boolean
 }
 
-export interface SearchFilters {    
-    minWeight?: number;
-    maxWeight?: number;
-    forWhom?: string;
+export interface SearchFilters {
+  minWeight?: number;
+  maxWeight?: number;
+  forWhom?: string;
 }
 
 export interface BannerItem {
   id: string;
   title: string;
   subtitle?: string;
+  subtitle1: string;
+  subtitle2: string;
   icon?: LucideIcon | string; // JSON uses string
   textColor?: string;
   bgType: "solid" | "gradient" | "dual";
@@ -44,19 +52,10 @@ export interface BannerItem {
   dualLeft?: string;
   dualRight?: string;
   link: string;
-  fontFamily:string;
-  bgImage:string;
-}
-
-/** Represents categorized product data keyed by category name */
-export type CategorizedProducts = Record<string, Product[]>;
-
-
-/** Root data structure for data.json */
-export interface CatalogData {
-  categorizedProducts: CategorizedProducts;
-  ticker?: string[];
-  sub_categories: string[];
+  fontFamily: string;
+  bgImage: string;
+  rank: number;
+  active: boolean;
 }
 
 export interface NewCatalog {
@@ -71,4 +70,14 @@ export interface Rates {
   gold18K: number;
   silver: number;
   silverJewelry: number;
+}
+
+export interface Type {
+  type: string,
+  rank: number,
+  slug: string,
+  keywords: string,
+  metaDescription: string,
+  icon: string,
+  active: boolean
 }

@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import type { NewCatalog, Product } from "@/types/catalog";
-import dataRaw from "@/data/catalog.json";
+import products from "@/data/catalog.json";
 import { notFound } from "next/navigation";
 import ProductGallery from "@/components/ProductGallery";
 import NativeShare from "@/components/NativeShare";
@@ -11,7 +11,7 @@ import {
   FaSnapchatGhost,
   FaInstagram,  
 } from "react-icons/fa";
-const data = dataRaw as NewCatalog;
+
 
 const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 const driveURL = `${baseURL}/static/img/optimized/`;
@@ -19,7 +19,7 @@ const phone = "918234042231";
 
 
 export async function generateStaticParams() {
-  return data.products.map((p: Product) => ({
+  return products.map((p: Product) => ({
     slug: p.slug
   }));
 }
@@ -28,7 +28,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {    
   const  slug  = await params; 
   
-  const product = data.products.find(
+  const product = products.find(
     (p:Product) => p.slug === slug.slug
   ); 
 
@@ -38,15 +38,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     `${baseURL}/product/${product.slug}`;
 
   const driveURL = `${baseURL}/static/img/optimized/`;
-  const title = `${product.name} ${product.id} | Sapna Shri Jewellers`;
-  const description = `Explore ${product.name} — pure ${product.purity}, weighing ${product.weight}g. ${product.highlights[0]}`;
+  const title = `${product.name} | ${product.metaDescription} by Sapna Shri Jewellers`;
+  const description = `${product.metaDescription}`;
   const imageUrl = `${driveURL}${product.images?.[0]}`;
-  const keywords = [
-    product.name,
-    product.purity,
-    product.category,
-    product.keywords,
-  ].join(", ");
+  const keywords = product.keywords;
 
   return {
     title,
@@ -73,8 +68,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function ProductDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const product = data.products.find(
-    (p: Product) => p.slug === slug
+  const product = products.find(
+    (p: Product) => p.slug === slug && p.active
   );
 
   if (!product) {    
@@ -97,7 +92,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
     "@type": "Product",
     name: product.name,
     image: product.images[0],
-    description: `${product.name} ${product.category} ${product.highlights.join(",")}`,
+    description: `${product.metaDescription}`,
     sku: product.id,
     brand: {
       "@type": "Brand",

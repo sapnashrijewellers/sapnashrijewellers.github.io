@@ -1,10 +1,10 @@
-import type { NewCatalog } from "@/types/catalog";
 import CategoryCard from "@/components/CategoryCard";
-import dataRaw from "@/data/catalog.json";
+import categories from "@/data/categories.json";
+import products from "@/data/catalog.json";
 import RotatingBanner from "@/components/banners/RotatingBanner";
-import banners from "@/data/banner-data.json";
 
-const data = dataRaw as NewCatalog;
+
+//const categories = dataRaw as NewCatalog;
 
 const title = `Sapna Shri Jewellers`;
 const description = `Explore out latest products at Sapna Shri Jewellers Nagda. High-quality gold & silver jewellery with BIS 916 certification.`;
@@ -45,17 +45,15 @@ export default function Home() {
   return (
     <div className="container mx-auto">
       <div className="mb-6">
-        <RotatingBanner items={banners} />
+        <RotatingBanner />
       </div>      
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
 
-        {data.categories.map(cat => {
-          const productsForCategory = data.products.filter(p => p.category == cat.name) || [];
+        {categories.sort((a, b) => a.rank - b.rank).map(cat => {
+          const productsForCategory = products.filter(p => p.category == cat.name) || [];
           if (productsForCategory.length === 0) {
             return null;
           }
-
-
           return (
             <CategoryCard
               key={cat.name}

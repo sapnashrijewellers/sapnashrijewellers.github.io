@@ -1,6 +1,6 @@
 1:"$Sreact.fragment"
-2:I[85437,["/_next/static/chunks/93faeb7c50ed88dd.js","/_next/static/chunks/b498127078146f17.js"],"Image"]
+2:I[85437,["/_next/static/chunks/97ba1d2077297432.js","/_next/static/chunks/b498127078146f17.js"],"Image"]
 3:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/21ad8010c390012b.js"],"OutletBoundary"]
 4:"$Sreact.suspense"
-0:{"buildId":"PJlsiXP95OQaiuFrEmITe","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"flex justify-center items-center min-h-screen bg-gray-50","children":["$","div",null,{"className":"rounded-xl shadow-2xl p-4 w-full max-w-sm transform transition-all duration-300 scale-100 bg-white","children":["$","div",null,{"className":"flex justify-center","children":["$","$L2",null,{"src":"/img/qr/image.png","alt":"Payment QR Code","width":300,"height":300,"className":"border-4 border-gray-100 rounded-lg shadow-md","priority":true}]}]}]}],null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
+0:{"buildId":"_YG8iW3oTtBVasHedWHJ2","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"flex justify-center items-center min-h-screen bg-gray-50","children":["$","div",null,{"className":"rounded-xl shadow-2xl p-4 w-full max-w-sm transform transition-all duration-300 scale-100 bg-white","children":["$","div",null,{"className":"flex justify-center","children":["$","$L2",null,{"src":"/img/qr/image.png","alt":"Payment QR Code","width":300,"height":300,"className":"border-4 border-gray-100 rounded-lg shadow-md","priority":true}]}]}]}],null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
 5:null

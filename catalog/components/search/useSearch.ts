@@ -1,7 +1,9 @@
 import MiniSearch from "minisearch";
-import queryMap from "@/data/query-map.json";
+import rawQueryMap from "@/data/queryMap.json";
 import {Product} from "@/types/catalog"
 import { SearchFilters } from "@/types/catalog";
+
+const queryMap: Record<string, string> = rawQueryMap;
 
 export function useSearch(searchIndex: MiniSearch<Product> | null, query: string, filters: SearchFilters, sortBy: string) {
   

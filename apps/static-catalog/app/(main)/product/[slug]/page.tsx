@@ -110,7 +110,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(ldjson) }}
       />
       {/* ✅ Client-side gallery */}
-      <ProductGallery product={product} driveURL={driveURL} />
+      <ProductGallery product={product}  />
 
       {/* ✅ Product Details */}
       <div className="p-2">

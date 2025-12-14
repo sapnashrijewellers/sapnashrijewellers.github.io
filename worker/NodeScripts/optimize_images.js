@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // --- Configuration ---
-const IMG_DIR = path.join("/app/repo", "img");
+const IMG_DIR = path.join("../catalog/public/img/products/");
 const OPTIMIZED_IMG_DIR = path.join(IMG_DIR, "optimized");
 const THUMBNAIL_DIR = path.join(IMG_DIR, "thumbnail");
 const TRACKER_FILE = path.join(IMG_DIR, "optimized_images.json");

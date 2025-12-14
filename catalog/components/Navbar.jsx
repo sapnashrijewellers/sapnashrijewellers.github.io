@@ -6,7 +6,7 @@ import IndianRupeeRate from "./IndianRupeeRate";
 import Image from "next/image";
 import DesktopTopLinks from "./DesktopNavLinks";
 
-const RATES_URL = `${process.env.NEXT_PUBLIC_BASE_URL}/static/rates.json`;
+const RATES_URL = `${process.env.NEXT_PUBLIC_BASE_URL}/rate/rates.json`;
 
 export default function Navbar() {
   const [rates, setRates] = useState({

@@ -131,7 +131,7 @@ export default function Footer() {
 
           
           <Link className="flex items-center gap-2 mt-4 transition-colors" href="/huid" title="HUID हॉलमार्किंग क्यों ज़रूरी है?">
-              <Image src="/img/hallmark.png" height="30px" width="25px" fill
+              <Image src="/img/hallmark.png" height="30" width="25" 
               alt="HUID हॉलमार्किंग क्यों ज़रूरी है?"/>
               हॉलमार्क
             </Link>

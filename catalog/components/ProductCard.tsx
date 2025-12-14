@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Product } from "@/types/catalog";
 import WishlistButton from "@/components/WishlistButton";
 
-export default function ProductCard({ product }: { product: Product }) {
-  const driveURL = `${process.env.NEXT_PUBLIC_BASE_URL}/img/products/thumbnail/`;
+export default function ProductCard({ product }: { product: Product }) {  
 
   const cardHighlightClass = product.newArrival
     ? "shadow-md hover:shadow-xl"
@@ -40,7 +40,7 @@ export default function ProductCard({ product }: { product: Product }) {
             </span>
           )}
 
-          <img
+          <Image
             src={`/img/products/thumbnail/${product.images[0]}`}
             loading="lazy"
             alt={product.name}

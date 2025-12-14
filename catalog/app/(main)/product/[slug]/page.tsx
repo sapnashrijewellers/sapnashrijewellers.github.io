@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import type { NewCatalog, Product } from "@/types/catalog";
+import type { Product } from "@/types/catalog";
 import products from "@/data/catalog.json";
 import { notFound } from "next/navigation";
 import ProductGallery from "@/components/ProductGallery";
@@ -17,9 +17,6 @@ import {
 const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
 const driveURL = `${baseURL}/img/products/optimized/`;
-const phone = "918234042231";
-
-
 export async function generateStaticParams() {
   return products.map((p: Product) => ({
     slug: p.slug

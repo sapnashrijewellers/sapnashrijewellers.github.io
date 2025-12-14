@@ -4,8 +4,7 @@
   "homepage": "https://sapnashrijewellers.github.io/",
   "private": true,
   "workspaces": [
-    "apps/*",
-    "apps/*/*",
+    "catalog/*",    
     "packages/*"
   ],
   "scripts": {

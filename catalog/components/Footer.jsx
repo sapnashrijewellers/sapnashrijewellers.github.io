@@ -5,6 +5,7 @@ import {
   FaExclamationCircle,FaMapMarkerAlt
 } from "react-icons/fa";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   const phone = "918234042231";
@@ -130,7 +131,8 @@ export default function Footer() {
 
           
           <Link className="flex items-center gap-2 mt-4 transition-colors" href="/huid" title="HUID हॉलमार्किंग क्यों ज़रूरी है?">
-              <img src="/img/hallmark.png" height="30px" width="25px"></img>
+              <Image src="/img/hallmark.png" height="30px" width="25px" fill
+              alt="HUID हॉलमार्किंग क्यों ज़रूरी है?"/>
               हॉलमार्क
             </Link>
         </div>

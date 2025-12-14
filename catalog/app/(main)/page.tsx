@@ -1,6 +1,6 @@
 import CategoryCard from "@/components/CategoryCard";
 import categories from "@/data/categories.json";
-import products from "@/data/catalog.json";
+import products from "@/data/products.json";
 import RotatingBanner from "@/components/banners/RotatingBanner";
 
 

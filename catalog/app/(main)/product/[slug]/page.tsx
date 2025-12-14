@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import type { Product } from "@/types/catalog";
-import products from "@/data/catalog.json";
+import products from "@/data/products.json";
 import { notFound } from "next/navigation";
 import ProductGallery from "@/components/ProductGallery";
 import NativeShare from "@/components/NativeShare";

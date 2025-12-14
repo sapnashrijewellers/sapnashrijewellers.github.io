@@ -1,7 +1,7 @@
 {
   "gajara": "bangle",
   "churi": "bangle",
-  "chudiya": "bangle",  
+  "chudiya": "bangle",
   "chudi": "bangle",
   "choori": "bangle",
   "jhumka": "jhumka",
@@ -9,8 +9,7 @@
   "rings": "ring",
   "necklace": "necklace",
   "haar": "necklace",
-  "armlet":"bajuband",
+  "armlet": "bajuband",
   "bajubandh": "bajuband",
-  "rajputi":"rajputani"
-
+  "rajputi": "rajputani"
 }

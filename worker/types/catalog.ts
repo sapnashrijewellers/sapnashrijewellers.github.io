@@ -1,5 +1,3 @@
-// /types/catalog.ts
-
 /** Represents a single jewelry product item */
 export interface Product {
   id: number;
@@ -16,39 +14,6 @@ export interface Product {
   slug: string  
 }
 
-export interface Category {
-  name: string;
-  category: string,
-  rank: number,
-  slug: string,
-  keywords: string,
-  marketing_text: string
-}
-
-export interface SearchFilters {    
-    minWeight?: number;
-    maxWeight?: number;
-    forWhom?: string;
-}
-
-
-
-/** Represents categorized product data keyed by category name */
-export type CategorizedProducts = Record<string, Product[]>;
-
-
-/** Root data structure for data.json */
-export interface CatalogData {
-  categorizedProducts: CategorizedProducts;
-  ticker?: string[];
-  sub_categories: string[];
-}
-
-export interface NewCatalog {
-  products: Product[];
-  ticker?: string[];
-  categories: Category[];
-}
 export interface Rates {
   asOn: Date;
   gold24K: number;

@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import type { Product } from "@/types/catalog";
-import products from "@/data/catalog.json";
+import products from "@/data/products.json";
 import categories from "@/data/categories.json";
 
 

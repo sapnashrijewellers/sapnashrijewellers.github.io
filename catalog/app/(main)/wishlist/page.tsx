@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import ProductCard from "@/components/ProductCard";
 import type { NewCatalog, Category } from "@/types/catalog";
-import products from "@/data/catalog.json";
+import products from "@/data/products.json";
 
 export default function WishlistPage() {
     

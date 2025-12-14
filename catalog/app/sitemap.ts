@@ -3,7 +3,7 @@ export const dynamic = "force-static";
 // app/sitemap.ts
 import { toSlug } from "@/utils/slug";
 import type { Product,Category } from "@/types/catalog";
-import products from "@/data/catalog.json";
+import products from "@/data/products.json";
 import categories from "@/data/categories.json";
 
 export default async function sitemap() {

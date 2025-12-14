@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import type { Product, Category } from "@/types/catalog";
-import products from "@/data/catalog.json";
+import products from "@/data/products.json";
 import categories from "@/data/categories.json";
 import ProductCard from "@/components/ProductCard";
 import { notFound } from "next/navigation";

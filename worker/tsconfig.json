@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    // 1. Set the module system for Node.js (Fixes TS1192, TS1259, TS1343)
+    "module": "NodeNext",
+    // 2. Set the module resolution strategy (Fixes TS1259, TS5097)
+    "moduleResolution": "NodeNext", 
+    // 3. Allow default imports from CommonJS modules (Fixes TS1259 for 'path' and 'fs')
+    "esModuleInterop": true,
+    // 4. Target a modern environment (Fixes TS1501 for regex flags)
+    "target": "ES2022",
+    // 5. Allow imports ending in .ts (Fixes TS5097)
+    "allowImportingTsExtensions": true,
+    
+    // Add other necessary options (e.g., outDir, strict, etc.)
+    "strict": true, 
+    "outDir": "./dist"
+  },
+  "include": [
+    "**/*.ts"
+, "NodeScripts/buildSearchIndex.js"  ]
+}

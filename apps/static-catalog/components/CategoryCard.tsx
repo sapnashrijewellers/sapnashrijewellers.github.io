@@ -1,4 +1,4 @@
-import type { NewCatalog, Category, Product } from "@/types/catalog";
+import type { Category, Product } from "@/types/catalog";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -15,7 +15,7 @@ export default function CategoryCard({
   
   if (!products || products.length === 0) return null;
 
-  const driveURL = `${process.env.NEXT_PUBLIC_BASE_URL}/static/img/thumbnail/`;
+  const driveURL = `${process.env.NEXT_PUBLIC_BASE_URL}/img/products/thumbnail/`;
   const firstProduct = products[0]; // use static first product for SSG / SEO
 //console.log("products:",firstProduct.images[0]);
   // Highlight if the first product is a new arrival
@@ -52,12 +52,13 @@ export default function CategoryCard({
           )}
 
           {/* Use only first product image for SSG & SEO */}
-          <img
-            src={`${driveURL}${firstProduct.images[0]}`}
+          <Image
+            src={`/img/products/thumbnail/${firstProduct.images[0]}`}
             alt={firstProduct.name}
             className="absolute inset-0 w-full h-full object-cover"
             loading="eager"            
             title={firstProduct.name}
+            fill
           />
         </div>
       </div>

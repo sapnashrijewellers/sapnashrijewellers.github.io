@@ -5,7 +5,7 @@ import { Product } from "@/types/catalog";
 import WishlistButton from "@/components/WishlistButton";
 
 export default function ProductCard({ product }: { product: Product }) {
-  const driveURL = `${process.env.NEXT_PUBLIC_BASE_URL}/static/img/thumbnail/`;
+  const driveURL = `${process.env.NEXT_PUBLIC_BASE_URL}/img/products/thumbnail/`;
 
   const cardHighlightClass = product.newArrival
     ? "shadow-md hover:shadow-xl"
@@ -41,7 +41,7 @@ export default function ProductCard({ product }: { product: Product }) {
           )}
 
           <img
-            src={`${driveURL}${product.images[0]}`}
+            src={`/img/products/thumbnail/${product.images[0]}`}
             loading="lazy"
             alt={product.name}
             className="w-full h-full object-cover"

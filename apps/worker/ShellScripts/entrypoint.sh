@@ -22,7 +22,7 @@ cd /app/repo
 # --- Run task immediately once before starting cron ---
 echo "Running immediate data generation..."
 bash /app/ShellScripts/update-rates.sh || echo "Initial rate update failed, continuing..."
-bash /app/ShellScripts/optimize_images.sh || echo "Initial site publish failed, continuing..."
+
 
 # --- Install crontab dynamically ---
 echo "Installing cron schedule..."

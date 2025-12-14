@@ -16,7 +16,7 @@ import {
 
 const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
-const driveURL = `${baseURL}/static/img/optimized/`;
+const driveURL = `${baseURL}/img/products/optimized/`;
 const phone = "918234042231";
 
 
@@ -36,10 +36,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   if (!product) return {};
 
-  const baseProductUrl =
-    `${baseURL}/product/${product.slug}`;
-
-  const driveURL = `${baseURL}/static/img/optimized/`;
+  const baseProductUrl = `${baseURL}/product/${product.slug}`;
   const title = `${product.name} | ${product.metaDescription} by Sapna Shri Jewellers`;
   const description = `${product.metaDescription}`;
   const imageUrl = `${driveURL}${product.images?.[0]}`;
@@ -79,10 +76,6 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
   }
 
   const baseProductUrl = `${baseURL}/product/${product.slug}`;
-
-  const whatsappUrl = `https://wa.me/${phone}?text=${(
-    `Hi, I want more details and discount on ${baseProductUrl}`
-  )}`;
   const encodedUrl = (baseProductUrl);
   const encodedText = (`Check out this product: ${product.name}`);
   const whatsappShare = `https://wa.me/?text=${encodedText}%20${encodedUrl}`;

@@ -9,7 +9,7 @@ import RotatingBanner from "@/components/banners/RotatingBanner";
 const title = `Sapna Shri Jewellers`;
 const description = `Explore out latest products at Sapna Shri Jewellers Nagda. High-quality gold & silver jewellery with BIS 916 certification.`;
 const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
-const driveURL = `${baseURL}/static/img/optimized/`;
+const driveURL = `${baseURL}/img/products/optimized/`;
 const imageUrl = `${baseURL}/logo.png`;
 const keywords = "Sapna Shri Jewellers Nagda. High-quality gold & silver jewellery with BIS 916 certification";
 

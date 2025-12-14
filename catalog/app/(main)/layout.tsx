@@ -42,14 +42,10 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children, }: { children: React.ReactNode; }) {
 
   return (
-    <html lang="en" className="">      
+    <html lang="en" className="">
       <body className={notoDevanagari.className}>
         <RegisterSW />
         {/* Floating WhatsApp Button */}
@@ -60,7 +56,7 @@ export default function RootLayout({
           <Navbar />
           <Ticker />
           <div className="px-2 max-w-6xl mx-auto py-4">{children}</div>
-          <MobileNavbar/>
+          <MobileNavbar />
           <FooterTrust />
           <Footer />
           <a id="powered-by-mehtalogy"

@@ -3,7 +3,7 @@ import { FaBullhorn } from "react-icons/fa";
 import data from "@/data/ticker.json";
 
 export default function Ticker() {
-  if (!data?.ticker?.length) return null;
+  if (!data?.length) return null;
 
   const tickerText = data.join("  •  ");
 

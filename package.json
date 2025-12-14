@@ -4,8 +4,8 @@
   "homepage": "https://sapnashrijewellers.github.io/",
   "private": true,
   "workspaces": [
-    "catalog/*",
-    "packages/*"
+    "catalog"
+    
   ],
   "scripts": {
     "build": "turbo run build",

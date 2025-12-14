@@ -19,7 +19,12 @@ export default function Footer() {
         <div className="flex gap-2 text-xl">      
           <FaExclamationCircle className="text-primary-dark mt-[1px]" />    
           <p className="italic text-xs text-muted-foreground">
-            अस्वीकरण: कीमतें बाजार दर के अनुसार बदलती रहती हैं। सभी दरें लगभग 5 मिनट की देरी से प्रदर्शित हैं। कृपया अंतिम कीमत और उत्पाद का अनुभव करने के लिए दुकान पर अवश्य आएँ। दी गई कीमतें केवल संकेतात्मक हैं, मेकिंग चार्ज एवं GST एक्स्ट्रा। *नियम एवं शर्तें लागू। * The indicated rates are for Gold per 10 grams and Silver per kilogram only. किसी भी विवाद की स्थिति में न्यायिक क्षेत्र नागदा जंक्शन रहेगा।
+            अस्वीकरण: कीमतें बाजार दर के अनुसार बदलती रहती हैं। सभी दरें लगभग 5 मिनट की देरी से प्रदर्शित हैं। कृपया अंतिम कीमत और उत्पाद का अनुभव करने के लिए दुकान पर अवश्य आएँ। 
+            दी गई कीमतें केवल संकेतात्मक हैं, मेकिंग चार्ज एवं GST एक्स्ट्रा। *नियम एवं शर्तें लागू। * 
+            The indicated rates are for Gold per 10 grams and Silver per kilogram only. 
+            *Rates are for reference purpose only, rates may sometimes vary due to high volatility in the market. 
+            Actual product design may vary slightly from the images shown.
+            किसी भी विवाद की स्थिति में न्यायिक क्षेत्र नागदा जंक्शन रहेगा।
           </p>
         </div>     
         {/* Store Location */}

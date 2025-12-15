@@ -45,7 +45,7 @@ export function HighlightsTabs({ product }: { product: Product }) {
 
       {/* Tab Content */}
       {activeTab === "hindi" && hasHindi && (
-        <ul className="list-disc list-inside space-y-1 text-sm mb-4">
+        <ul className="list-disc space-y-1 text-sm mb-4">
           {product.highlights.map((point, i) => (
             <li key={i}>{point}</li>
           ))}
@@ -53,7 +53,7 @@ export function HighlightsTabs({ product }: { product: Product }) {
       )}
 
       {activeTab === "english" && hasEnglish && (
-        <ul className="list-disc list-inside space-y-1 text-sm mb-4">
+        <ul className="list-disc space-y-1 text-sm mb-4">
           {product.englishHighlights.map((point, i) => (
             <li key={i}>{point}</li>
           ))}

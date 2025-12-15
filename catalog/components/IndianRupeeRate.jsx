@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
  * @param {string} [props.itemName='Gold 22K'] - Product name
  * @param {string} [props.className] - CSS class
  */
-const IndianRupeeRate = ({ rate, itemName = 'Gold 22K', className = '' }) => {
+const IndianRupeeRate = ({ rate, itemName = 'Gold 22K', className = '', itemTitle = '' }) => {
   const formattedRate = useMemo(() => {
     return new Intl.NumberFormat('en-IN', {
       style: 'currency',
@@ -21,13 +21,13 @@ const IndianRupeeRate = ({ rate, itemName = 'Gold 22K', className = '' }) => {
   }, [rate]);
 
   return (
-    <span itemScope itemType="https://schema.org/Product">
+    <span itemScope itemType="https://schema.org/Product" className='font-cinzel text-xs text-primary font-semibold' >
       <meta itemProp="name" content={`${itemName} Spot Price`} />
       <meta
         itemProp="description"
         content={`Current spot price for ${itemName} in India`}
       />
-
+      {itemName}
       <span itemProp="offers" itemScope itemType="https://schema.org/Offer">
         <meta itemProp="priceCurrency" content="INR" />
         <meta itemProp="availability" content="https://schema.org/InStock" />
@@ -37,8 +37,9 @@ const IndianRupeeRate = ({ rate, itemName = 'Gold 22K', className = '' }) => {
           itemProp="priceSpecification"
           itemScope
           itemType="https://schema.org/PriceSpecification"
-          className={`rupee-rate ${className}`}
+          className={`rupee-rate ${className} font-cinzel text-sm text-normal font-normal`}
           aria-label={`Price: ${formattedRate}`}
+          title={`${itemTitle}`}
         >
           <meta itemProp="price" content={rate} />
           <meta itemProp="priceCurrency" content="INR" />

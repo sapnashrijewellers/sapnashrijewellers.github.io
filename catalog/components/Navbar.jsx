@@ -81,23 +81,23 @@ export default function Navbar() {
           <div className="grid grid-cols-1 md:grid-cols-4 md:gap-2 text-right justify-end">
             
             <div className="flex justify-end">
-            सोना-24K:
-              <IndianRupeeRate rate={rates.gold24K * 10} className="text-primary" itemName="Gold 24K" />
+            
+              <IndianRupeeRate rate={rates.gold24K * 10} className="text-primary" itemName="Gold 24K" itemTitle="10g" />
             </div>
 
             <div className="flex justify-end">
-            सोना-22K:
-              <IndianRupeeRate rate={rates.gold22K * 10} className="text-primary" itemName="Gold 22K" />
+            
+              <IndianRupeeRate rate={rates.gold22K * 10} className="text-primary" itemName="Gold 22K" itemTitle="10g"/>
             </div>
 
             <div className="flex justify-end">
-            चाँदी: 
-              <IndianRupeeRate rate={rates.silver * 1000} className="text-primary" itemName="Silver 99.9%" />
+            
+              <IndianRupeeRate rate={rates.silver * 1000} className="text-primary" itemName="Silver 99.9%" itemTitle="1kg"/>
             </div>
 
             <div className="flex justify-end">
-            चाँदी जेवर: 
-              <IndianRupeeRate rate={rates.silver * 1000 * 0.92} className="text-primary" itemName="Silver Jewelry" />
+            
+              <IndianRupeeRate rate={rates.silver * 1000 * 0.92} className="text-primary" itemName="Silver Jewelry" itemTitle="1kg"/>
             </div>
           </div>
 

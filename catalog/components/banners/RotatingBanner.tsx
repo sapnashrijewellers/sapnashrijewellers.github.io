@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import * as Icons from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { BannerItem } from "@/types/catalog";
 import banners from "@/data/banners.json";
 
 interface Props {  

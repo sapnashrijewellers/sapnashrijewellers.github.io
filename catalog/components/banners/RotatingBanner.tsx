@@ -11,7 +11,7 @@ interface Props {
   interval?: number;
   height?: string;
 }
-
+const baseURL = process.env.BASE_URL;
 export default function RotatingBanner({  
   interval = 15000,
   height = "h-96"
@@ -50,7 +50,7 @@ export default function RotatingBanner({
         <>
           {/* Background Image */}
           <Image
-            src={current.bgImage}
+            src={`${baseURL}/static/${current.bgImage}`}
             alt={current.title}
             fill
             className="object-cover object-right opacity-95"

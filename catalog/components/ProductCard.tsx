@@ -6,14 +6,14 @@ import { Product } from "@/types/catalog";
 import WishlistButton from "@/components/WishlistButton";
 
 export default function ProductCard({ product }: { product: Product }) {  
-
+const baseURL = process.env.BASE_URL;
   const cardHighlightClass = product.newArrival
-    ? "shadow-md hover:shadow-xl"
-    : "shadow hover:shadow-lg bg-card";
+    ? "shadow-md hover:shadow-xl bg-accent"
+    : "shadow hover:shadow-lg text-primary-dark";
 
   return (
     <article
-      className={`rounded-2xl bg-accent overflow-hidden transition-transform duration-300 hover:scale-105 ${cardHighlightClass}`}
+      className={`rounded-2xl  overflow-hidden transition-transform duration-300 hover:scale-105 ${cardHighlightClass}`}
     >
       {/* Image Section */}
       <div className="relative">
@@ -41,7 +41,7 @@ export default function ProductCard({ product }: { product: Product }) {
           )}
 
           <Image
-            src={`/img/products/thumbnail/${product.images[0]}`}
+            src={`${baseURL}/static/img/products/thumbnail/${product.images[0]}`}
             loading="lazy"
             alt={product.name}
             className="w-full h-full object-cover"

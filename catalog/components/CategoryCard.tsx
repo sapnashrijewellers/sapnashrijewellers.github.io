@@ -8,11 +8,12 @@ export default function CategoryCard({ category, products, }: {
 
   if (!products || products.length === 0) return null;
 
+const baseURL = process.env.BASE_URL;
 
   const firstProduct = products[0];
   const cardHighlightClass = firstProduct.newArrival
-    ? "shadow-md hover:shadow-xl bg-accent text-primary-dark"
-    : "shadow hover:shadow-lg";
+    ? "shadow-md hover:shadow-xl bg-accent"
+    : "shadow hover:shadow-lg text-primary-dark";
 
   return (
     <Link
@@ -29,13 +30,13 @@ export default function CategoryCard({ category, products, }: {
               <div
                 className="
                 absolute top-2 left-2 z-10 bg-accent
-                text-primary text-xs px-2 py-1 
+                text-xs px-2 py-1 
                 rounded-full shadow-lg transform -rotate-3">
                 ✨ NEW ARRIVAL
               </div>
             )}
           <Image
-            src={`/img/products/thumbnail/${firstProduct.images[0]}`}
+            src={`${baseURL}/static/img/products/thumbnail/${firstProduct.images[0]}`}
             alt={firstProduct.name}
             className="absolute inset-0 w-full h-full object-cover rounded-t-2xl"
             loading="eager"
@@ -43,7 +44,7 @@ export default function CategoryCard({ category, products, }: {
             fill
           />
         </div>
-        <h2 className="p-3 text-center text-primary">
+        <h2 className="p-3 text-center ">
           {category.name}
         </h2>
       </div>

@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
+const baseURL = process.env.BASE_URL;
 
 const imageUrl = `${baseURL}/logo.png`;
 
@@ -141,7 +141,7 @@ const description = metadata.description;
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <figure className="text-center">
             <Image
-              src="/img/hallmark-sample1.png"
+              src={`${baseURL}/static/img/hallmark-sample1.png`}
               alt="सोने की चूड़ी पर हॉलमार्क स्थान"
               width={400}
               height={250}

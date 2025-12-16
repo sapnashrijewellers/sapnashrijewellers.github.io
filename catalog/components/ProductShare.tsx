@@ -10,7 +10,7 @@ import {
 
 
 export default function ProductShare({ product }: { product: Product }) {
-    const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
+    const baseURL = process.env.BASE_URL;
     const baseProductUrl = `${baseURL}/product/${product.slug}`;
     const encodedUrl = (baseProductUrl);
     const encodedText = (`Check out this product: ${product.name}`);

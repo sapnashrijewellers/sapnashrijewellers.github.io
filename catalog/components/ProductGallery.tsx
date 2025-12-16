@@ -54,7 +54,7 @@ export default function ProductGallery({ product }: { product: Product }) {
   /* ---------------- Hi-res preload ---------------- */
   useEffect(() => {
     const img = new window.Image();
-    img.src = `/img/products/hires/${activeImage}`;
+    img.src = `${process.env.BASE_URL}/static/img/products/hires/${activeImage}`;
   }, [activeImage]);
 
   return (
@@ -68,7 +68,7 @@ export default function ProductGallery({ product }: { product: Product }) {
         className="relative h-[260px] sm:h-[340px] md:h-[380px] rounded-2xl overflow-hidden border bg-white cursor-zoom-in"
         style={{
           backgroundImage: zoomStyle.backgroundPosition
-            ? `url(/img/products/optimized/${activeImage})`
+            ? `url(${process.env.BASE_URL}/static/img/products/optimized/${activeImage})`
             : undefined,
           backgroundSize: zoomStyle.backgroundPosition ? "200%" : undefined,
           backgroundRepeat: "no-repeat",
@@ -81,7 +81,7 @@ export default function ProductGallery({ product }: { product: Product }) {
         */}
         {!zoomStyle.backgroundPosition && ( // <-- Added conditional rendering here
           <Image
-            src={`/img/products/optimized/${activeImage}`}
+            src={`${process.env.BASE_URL}/static/img/products/optimized/${activeImage}`}
             alt={product.name}
             fill
             priority
@@ -107,7 +107,7 @@ export default function ProductGallery({ product }: { product: Product }) {
               ${i === activeIndex ? "ring-2 ring-accent" : "opacity-70 hover:opacity-100"}`}
           >
             <Image
-              src={`/img/products/optimized/${img}`}
+              src={`${process.env.BASE_URL}/static/img/products/optimized/${img}`}
               alt={`${product.name} thumbnail ${i + 1}`}
               fill
               className="object-contain"
@@ -128,7 +128,7 @@ export default function ProductGallery({ product }: { product: Product }) {
             onTouchEnd={handleTap}
           >
             <Image
-              src={`/img/products/thumbnail/${activeImage}`}
+              src={`${process.env.BASE_URL}/static/img/products/thumbnail/${activeImage}`}
               alt="Zoomed product"
               fill
               className="object-contain"

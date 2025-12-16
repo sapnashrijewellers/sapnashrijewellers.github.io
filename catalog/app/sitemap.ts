@@ -7,7 +7,7 @@ import products from "@/data/products.json";
 import categories from "@/data/categories.json";
 
 export default async function sitemap() {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = process.env.BASE_URL;
 
   // --- Category URLs ---
   const categoryUrls = categories.map((cat: Category) => ({

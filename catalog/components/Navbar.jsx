@@ -6,7 +6,7 @@ import IndianRupeeRate from "./IndianRupeeRate";
 import Image from "next/image";
 import DesktopTopLinks from "./DesktopNavLinks";
 
-const RATES_URL = `${process.env.NEXT_PUBLIC_BASE_URL}/rate/rates.json`;
+const RATES_URL = `${process.env.BASE_URL}/rate/rates.json`;
 
 export default function Navbar() {
   const [rates, setRates] = useState({
@@ -39,8 +39,8 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="p-2 shadow-md">
-      <div className="flex justify-between items-center">
+    <nav className="p-2 shadow-md bg-highlight">
+      <div className="flex justify-between items-center ">
         {/* Left: Logo */}
         <div className="flex-shrink-0 flex items-center">
           <Link href="/" title="Go to Home Page of Sapna Shri Jewellers" className="flex items-start">

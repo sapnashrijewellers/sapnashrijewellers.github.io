@@ -21,7 +21,7 @@ const IndianRupeeRate = ({ rate, itemName = 'Gold 22K', className = '', itemTitl
   }, [rate]);
 
   return (
-    <span itemScope itemType="https://schema.org/Product" className='font-cinzel text-xs text-normal font-semibold' >
+    <span itemScope itemType="https://schema.org/Product" className='font-cinzel text-xs text-primary-dark font-semibold' >
       <meta itemProp="name" content={`${itemName} Spot Price`} />
       <meta
         itemProp="description"

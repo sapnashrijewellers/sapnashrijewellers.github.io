@@ -3,7 +3,7 @@ import Calculator from "@/components/Calculator";
 
 const title = `ज्वेलरी प्राइस कैलकुलेटर`;
   const description = `ज्वेलरी प्राइस कैलकुलेटर | online Jewellery Price Calculator by Sapna Shri Jewellers`;
-  const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseURL = process.env.BASE_URL;
   const imageUrl = `${baseURL}/logo.png`;
   const keywords = "ज्वेलरी प्राइस कैलकुलेटर, Jewellery price calculator, 22K gold jewellery price calculator, Silver jewellery price";
   const ldjson = {

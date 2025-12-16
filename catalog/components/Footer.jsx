@@ -6,7 +6,7 @@ import {
 } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
-
+const baseURL = process.env.BASE_URL;
 export default function Footer() {
   const phone = "918234042231";
   const whatsappUrl = `https://wa.me/${phone}`;
@@ -28,9 +28,9 @@ export default function Footer() {
         </div>     
         {/* Store Location */}
         <div>
-          <h2 className="flex items-center gap-2 font-bold text-lg">
+          <h2 className="flex items-center gap-2 font-bold text-lg font-cinzel">
             <FaMapMarkerAlt className="text-red-500 mt-[1px]" />
-            दुकान का स्थान
+            Store Address
           </h2>
           {/* Store Location */}
         <div className="grid md:grid-cols-2 grid-cols-1 gap-6 max-w-6xl mx-auto text-primary">
@@ -44,7 +44,7 @@ export default function Footer() {
             📞 8234042231
           </address>
           {/* English Address */}
-          <address className="bg-accent border border-theme rounded-2xl p-6 shadow-md">
+          <address className="bg-accent border border-theme rounded-2xl p-6 shadow-md font-cinzel">
             <h2 className="text-lg font-semibold">
               📌 Sapna Shri Jewellers,
             </h2>
@@ -56,8 +56,8 @@ export default function Footer() {
         </div>
         {/* Social Media */}
         <div>
-          <h2 className="flex items-center gap-2 text-lg mt-4">            
-            🔗 हमसे जुड़ें / Follow Us
+          <h2 className="flex items-center gap-2 text-lg mt-4 font-cinzel">            
+            🔗 Follow Us
           </h2>
 
           <div className="flex gap-4 mt-2 text-xl sm:text-2xl md:text-3xl text-muted-foreground">
@@ -113,7 +113,7 @@ export default function Footer() {
         </div>
 
         {/* Footer Links */}
-        <div className="flex flex-wrap gap-4 mt-4">
+        <div className="flex flex-wrap gap-4 mt-4 font-cinzel">
           <Link
             href="/about-us"
             className="flex items-center gap-2 mt-4 transition-colors"
@@ -121,7 +121,7 @@ export default function Footer() {
             title="Know more about Sapna Shri Jewellers"
           >
             <FaUserTie className="text-primary-dark mt-[1px]" />
-            हमारी पहचान / About Us
+            About Us
           </Link>
           <Link
             href="/privacy"
@@ -135,9 +135,9 @@ export default function Footer() {
 
           
           <Link className="flex items-center gap-2 mt-4 transition-colors" href="/huid" title="HUID हॉलमार्किंग क्यों ज़रूरी है?">
-              <Image src="/img/hallmark.png" height="30" width="25" 
+              <Image src={`${baseURL}/static/img/hallmark.png`} height="30" width="25" 
               alt="HUID हॉलमार्किंग क्यों ज़रूरी है?"/>
-              हॉलमार्क
+              Hallmark
             </Link>
         </div>
       </div>

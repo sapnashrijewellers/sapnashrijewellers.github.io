@@ -19,8 +19,8 @@ Trusted Jewellers of Nagda Ujjain District,
 35 years of trust,
 Sapna Shri Jewellers Nagda Location,
 Sapna Shri Jewellers Nagda Contact Number`;
-const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
-const imageUrl = `${baseURL}/img/shop.png`;
+const baseURL = process.env.BASE_URL;
+const imageUrl = `${baseURL}/static/img/shop.png`;
 const ldjson = {
   "@context": "https://schema.org",
   "@type": "JewelryStore",
@@ -175,7 +175,7 @@ export default function AboutUsPage() {
   ];
 
   return (
-    <div className="py-10 px-6 md:px-20 leading-relaxed bg-surface">
+    <div className="py-10 px-6 md:px-20 leading-relaxed">
       {/* ✅ JSON-LD Structured Data */}
       <script
         type="application/ld+json"
@@ -183,21 +183,21 @@ export default function AboutUsPage() {
       />
       {/* ===== Heading ===== */}
       <div className="text-center mb-8">
-        <h1 className="text-4xl md:text-5xl text-primary-dark mb-4">
+        <h1 className="text-4xl md:text-5xl text-primary mb-4">
           सपना श्री ज्वेलर्स
         </h1>
         <p className="text-lg md:text-xl">
           सपना श्री ज्वेलर्स पिछले{" "}
-          <span className="text-primary ">{years}+</span> वर्षों से विश्वास का प्रतीक रहा है,{" "}
+          <span className="text-primary-dark ">{years}+</span> वर्षों से विश्वास का प्रतीक रहा है,{" "}
           और{" "}
-          <span className="text-primary ">{customers}+</span> खुश ग्राहकों का परिवार बन चुका है।
+          <span className="text-primary-dark ">{customers}+</span> खुश ग्राहकों का परिवार बन चुका है।
         </p>
       </div>
 
       {/* ===== Description ===== */}
       <div className="max-w-5xl mx-auto text-justify space-y-4">
         <p>
-          सपना श्री ज्वेलर्स पिछले 35 वर्षों से सोने और चांदी के गहनों के क्षेत्र में अपनी उत्कृष्ट कला, भरोसेमंद सेवा और उच्च गुणवत्ता के लिए जाना जाता है। हमारी पहचान है — <span className="text-primary">ख़ूबसूरती, विश्वसनीयता और पारदर्शिता।</span>
+          सपना श्री ज्वेलर्स पिछले 35 वर्षों से सोने और चांदी के गहनों के क्षेत्र में अपनी उत्कृष्ट कला, भरोसेमंद सेवा और उच्च गुणवत्ता के लिए जाना जाता है। हमारी पहचान है — <span className="text-primary-dark">ख़ूबसूरती, विश्वसनीयता और पारदर्शिता।</span>
         </p>
         
         <p className="flex gap-2">
@@ -224,7 +224,7 @@ export default function AboutUsPage() {
         ].map((owner) => (
           <div key={owner.name} className="text-center">
             <Image
-              src={owner.img}
+              src={`${process.env.BASE_URL}/static/${owner.img}`}
               alt={owner.name}
               className="rounded-2xl shadow-lg h-64 object-cover mx-auto border-2 border-theme"
               width="300"
@@ -238,7 +238,7 @@ export default function AboutUsPage() {
       {/* ===== Shop Photo ===== */}
       <div className="text-center mt-12">
         <Image
-          src="/img/shop.png"
+          src={`${process.env.BASE_URL}/static/img/shop.png`}
           alt="Sapna Shri Jewellers Shop - Nagda"
           className="rounded-3xl shadow-2xl mx-auto border-4 border-yellow-500 w-full max-w-3xl"
           width="300"
@@ -250,7 +250,7 @@ export default function AboutUsPage() {
       <div className="mt-12">
         <h2 className="au-h2">हमसे संपर्क करें</h2>
         {/* Store Location */}
-        <div className="grid md:grid-cols-2 grid-cols-1 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-6 max-w-6xl mx-auto text-primary">
           {/* Hindi Address */}
           <address className="bg-accent border border-theme rounded-2xl p-6 shadow-md">
             <h3 className="text-lg font-semibold">
@@ -282,14 +282,14 @@ export default function AboutUsPage() {
       </div>
 
       {/* ===== Promises ===== */}
-      <div className="mt-12 text-center">
+      <div className="mt-12 text-center ">
         <h2 className="au-h2">हमारे वादे (Store Promises)</h2>
         <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-6 max-w-6xl mx-auto">
           {promises.map((p) => (
             <div key={p.title} className="bg-accent border border-theme rounded-2xl p-6 shadow-md">
               <div className="text-4xl mb-3">{p.icon}</div>
-              <h3 className="text-xl  text-primary-dark mb-2">{p.title}</h3>
-              <p className="text-sm">{p.text}</p>
+              <h3 className="text-xl   mb-2">{p.title}</h3>
+              <p className="text-sm ">{p.text}</p>
             </div>
           ))}
         </div>
@@ -301,8 +301,8 @@ export default function AboutUsPage() {
         <div className="grid md:grid-cols-2 gap-8">
           {services.map((srv) => (
             <div key={srv.title} className="bg-accent p-6 rounded-2xl border border-theme shadow-md">
-              <h3 className="text-xl text-primary-dark mb-3">{srv.title}</h3>
-              <p className="leading-relaxed">{srv.text}</p>
+              <h3 className="text-xl  mb-3">{srv.title}</h3>
+              <p className="leading-relaxed ">{srv.text}</p>
             </div>
           ))}
         </div>
@@ -316,7 +316,7 @@ export default function AboutUsPage() {
             <a
               key={item.search}
               href={`/category/${(item.category)}`}
-              className="px-4 py-2 bg-accent border border-theme rounded-full hover:opacity-80"
+              className="px-4 py-2 bg-accent border border-theme rounded-full"
             >
               {item.search}
             </a>
@@ -358,8 +358,7 @@ export default function AboutUsPage() {
       <div className="mt-12 text-center">
         <h2 className="au-h2">सोने (HUID) का प्रमाणपत्र जाँच</h2>
         {certificates.map((cert, i) => (
-          <div key={i} className="mb-10">
-            {/* <h3 className="mt-3 text-2xl  text-primary">{cert.title}</h3> */}
+          <div key={i} className="mb-10">            
             <p className="mt-4 font-medium leading-relaxed">{cert.text}</p>
           </div>
         ))}
@@ -370,8 +369,8 @@ export default function AboutUsPage() {
         <div className="grid md:grid-cols-2 gap-8">
           {testimonials.map((t) => (
             <div key={t.name} className="p-4 border-l-4 border-theme rounded-lg shadow-sm bg-accent">
-              <p className="italic">“{t.text}”</p>
-              <p className="mt-2 text-right text-primary">– {t.name}</p>
+              <p className="italic ">“{t.text}”</p>
+              <p className="mt-2 text-right">– {t.name}</p>
             </div>
           ))}
         </div>

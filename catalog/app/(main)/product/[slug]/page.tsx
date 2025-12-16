@@ -8,7 +8,7 @@ import { HighlightsTabs } from "@/components/Highlights";
 import WhatsappClick from "@/components/WhatAppClick";
 import Image from "next/image"
 
-const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
+const baseURL = process.env.BASE_URL;
 const driveURL = `${baseURL}/img/products/optimized/`;
 
 export async function generateStaticParams() {
@@ -93,7 +93,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
   return (
 <div>
    <Image
-        src="/img/before-buy-banner.png"
+        src={`${process.env.BASE_URL}/static/img/before-buy-banner.png`}
         alt="before-buy"
         className="object-cover text-center items-center justify-center w-full h-full"
         loading="eager"

@@ -13,33 +13,17 @@
   -moz-osx-font-smoothing: grayscale;
 
   color-scheme: light dark;
-
-  /* === Light Theme (Luxury Heritage Gold - Inspired by Sapna Shri Jewellers) === */
-  --color-bg: #FEF8DE;           /* Soft ivory / premium neutral (Retained: Good base) */
-  --color-text: #2A1F05;         /* Deep warm charcoal (Retained: Deep and readable) */
-
-  /* Primary color shifted to a richer, more traditional Indian Gold */
-  --color-primary: #A37F2C;      /* Richer, traditional Antique Gold */
-
-  /* Stronger primary for hover/focus, leaning slightly into bronze/dark gold */
-  --color-primary-dark: #7F5C1A; /* Stronger Antique Gold/Bronze for hover */
-
-  /* Surface remains a light cream for contrast and elegance */
-  --color-surface: #FFFDF9;      /* Light cream card background */
-
-  /* Border color refined to complement the rich gold */
-  --color-border: #E5D8C6;       /* Warm beige border (Retained: Subtle and warm) */
-
-  /* Accent color is now a strong, luxurious Navy/Deep Blue, reflecting the brand's top banner/logo. This adds contrast and depth. */
-  --color-accent: #0D2D5E;       /* Deep Luxurious Navy Blue (From the Brand Banner) */
-
-  /* --- Font Enhancements for Luxury and Heritage --- */
-  /* 'Cinzel' or 'Cormorant' works well for headings/titles, conveying luxury/heritage. */
-  --font-heading: 'Cinzel', var(--font-cormorant), serif;
-  /* 'Playfair Display' or 'Cormorant' for slightly more readable titles/text. */
-  --font-body: var(--font-playfair), var(--font-cormorant), serif;
-  /* 'Great Vibes' can be used sparingly for special, signature elements. */
-  --font-signature: 'Great Vibes', cursive;
+  --color-bg: #FEF8DE;
+  --color-text: #2A1F05;
+  --color-primary: #A37F2C;
+  --color-primary-dark: #713f06;
+  --color-surface: #FFFDF9;
+  --color-border: #E5D8C6;
+  --color-accent: #051e45;
+  --font-playfair: 'Playfair Display', serif;
+  --font-cormorant: 'Cormorant Garamond', serif;
+  --font-cinzel: 'Cinzel', serif;
+  --font-vibes: 'Great Vibes', cursive;
 }
 
 /* Dark theme (auto applied using system preference) */
@@ -59,12 +43,15 @@
   .font-playfair {
     font-family: var(--font-playfair);
   }
+
   .font-cormorant {
     font-family: var(--font-cormorant);
   }
+
   .font-cinzel {
     font-family: var(--font-cinzel);
   }
+
   .font-vibes {
     font-family: var(--font-vibes);
   }
@@ -75,7 +62,7 @@
    BASE ELEMENT STYLING
 ============================ */
 html {
-  background-color: var(--color-bg);
+  background-color: var(--color-bg-surface);
   color: var(--color-text);
   transition: background-color 0.3s ease, color 0.3s ease;
   font-family: var(--font-playfair);
@@ -85,6 +72,7 @@ a {
   color: var(--color-primary);
   text-decoration: inherit;
 }
+
 a:hover {
   color: var(--color-primary-dark);
 }
@@ -92,6 +80,7 @@ a:hover {
 button {
   transition: all 0.2s;
 }
+
 button:hover {
   opacity: 0.9;
 }
@@ -99,7 +88,9 @@ button:hover {
 /* ============================
    INPUTS & FORMS
 ============================ */
-input, select, textarea {
+input,
+select,
+textarea {
   background-color: var(--color-surface);
   color: var(--color-text);
   /* border: 1px solid var(--color-border); */
@@ -112,17 +103,23 @@ input, select, textarea {
   color: var(--color-primary-dark);
 }
 
+.bg-highlight {
+  background-color: var(--color-bg);
+}
+
 .bg-surface {
   background-color: var(--color-surface);
 }
 
 .bg-accent {
   background-color: var(--color-accent);
+  color: #FFFFFF
 }
 
 .border-theme {
   border-color: var(--color-border);
 }
+
 .border-accent {
   border-color: var(--color-accent);
 }
@@ -134,6 +131,7 @@ input, select, textarea {
 .text-primary {
   color: var(--color-primary);
 }
+
 .text-normal {
   color: var(--color-text);
 }
@@ -141,6 +139,7 @@ input, select, textarea {
 .text-primary-dark {
   color: var(--color-primary-dark);
 }
+
 /* ======================== */
 
 /*Ticker*/
@@ -166,6 +165,7 @@ input, select, textarea {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }

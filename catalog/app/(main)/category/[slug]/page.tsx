@@ -6,8 +6,8 @@ import ProductCard from "@/components/ProductCard";
 import { notFound } from "next/navigation";
 
 
-const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
-const driveURL = `${baseURL}/img/products/thumbnail/`;
+const baseURL = process.env.BASE_URL;
+const driveURL = `${baseURL}/static/img/products/thumbnail/`;
 
 
 let ldjson = {};

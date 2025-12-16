@@ -17,21 +17,19 @@ export default function CategoryCard({ category, products, }: {
   return (
     <Link
       href={`/category/${category.slug}`} title={`${category.name}`}
-      className="block transition-transform duration-300 hover:scale-105"
+      className="block transition-transform duration-300 hover:scale-105 rounded-2xl"
       prefetch={false} // optional: skip prefetch for large catalogs
     >
-      <div className={` flex flex-col h-full bg-card text-primary ${cardHighlightClass}`}>
-        <h2 className="p-3 text-center text-normal">
-          {category.name}
-        </h2>
-        <div className="relative w-full overflow-hidden flex-grow pt-[100%]">
+      <div className={` flex flex-col h-full bg-card ${cardHighlightClass} rounded-2xl`}>
+        
+        <div className="relative w-full overflow-hidden grow pt-[100%]">
           {
 
             firstProduct.newArrival && (
               <div
                 className="
                 absolute top-2 left-2 z-10 bg-accent
-                text-normal text-xs px-2 py-1 
+                text-primary text-xs px-2 py-1 
                 rounded-full shadow-lg transform -rotate-3">
                 ✨ NEW ARRIVAL
               </div>
@@ -39,12 +37,15 @@ export default function CategoryCard({ category, products, }: {
           <Image
             src={`/img/products/thumbnail/${firstProduct.images[0]}`}
             alt={firstProduct.name}
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover rounded-t-2xl"
             loading="eager"
             title={firstProduct.name}
             fill
           />
         </div>
+        <h2 className="p-3 text-center text-primary">
+          {category.name}
+        </h2>
       </div>
     </Link>
   );

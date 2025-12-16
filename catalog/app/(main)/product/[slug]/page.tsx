@@ -6,6 +6,7 @@ import ProductGallery from "@/components/ProductGallery";
 import ProductShare from "@/components/ProductShare";
 import { HighlightsTabs } from "@/components/Highlights";
 import WhatsappClick from "@/components/WhatAppClick";
+import Image from "next/image"
 
 const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 const driveURL = `${baseURL}/img/products/optimized/`;
@@ -90,8 +91,18 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
   };
 
   return (
-
+<div>
+   <Image
+        src="/img/before-buy-banner.png"
+        alt="before-buy"
+        className="object-cover text-center items-center justify-center w-full h-full"
+        loading="eager"
+        title="Points to consider before you buy jewellery"
+        height="500"
+        width="500"
+      />
     <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-6 py-6 px-3">
+     
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(ldjson) }}
@@ -101,7 +112,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 
       {/* ✅ Product Details */}
       <div className="p-2">
-        <h1 className="text-2xl md:text-3xl mb-2 font-cinzel">{product.name}</h1>
+        <h1 className="text-2xl md:text-3xl mb-2 font-cinzel text-primary-dark font-semibold">{product.name}</h1>
 
         <div className="space-y-1 mb-4">
           <p>
@@ -114,15 +125,16 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 
         {/* Contact */}
         <WhatsappClick product={product} />
-{/* Highlights Tabs */}
-      <HighlightsTabs product={product} />
+        {/* Highlights Tabs */}
+        <HighlightsTabs product={product} />
 
 
 
       </div>
-      
+
       {/* Share */}
       <ProductShare product={product} />
+    </div>
     </div>
   );
 }

@@ -16,8 +16,7 @@ export default function Footer() {
     <footer className="bg-background text-foreground p-4">
       <div className="max-w-6xl mx-auto space-y-6">
         {/* Disclaimer */}
-        <div className="flex gap-2 text-xl">      
-          <FaExclamationCircle className="text-primary-dark mt-[1px]" />    
+        <div className="flex gap-2 text-xl">                
           <p className="italic text-xs text-muted-foreground">
             अस्वीकरण: कीमतें बाजार दर के अनुसार बदलती रहती हैं। सभी दरें लगभग 5 मिनट की देरी से प्रदर्शित हैं। कृपया अंतिम कीमत और उत्पाद का अनुभव करने के लिए दुकान पर अवश्य आएँ। 
             दी गई कीमतें केवल संकेतात्मक हैं, मेकिंग चार्ज एवं GST एक्स्ट्रा। *नियम एवं शर्तें लागू। * 
@@ -34,10 +33,10 @@ export default function Footer() {
             दुकान का स्थान
           </h2>
           {/* Store Location */}
-        <div className="grid md:grid-cols-2 grid-cols-1 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-6 max-w-6xl mx-auto text-primary">
           {/* Hindi Address */}
           <address className="bg-accent border border-theme rounded-2xl p-6 shadow-md">
-            <h3 className="text-lg font-semibold">
+            <h3 className="text-lg font-semibold ">
               📌 सपना श्री ज्वैलर्स,
             </h3>
             रेलवे स्टेशन मेन रोड, जैन मंदिर के पास,<br />

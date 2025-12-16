@@ -3,16 +3,27 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import * as Icons from "lucide-react";
+import type { LucideProps } from "lucide-react";
+import type { ComponentType } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import banners from "@/data/banners.json";
 
-interface Props {  
+interface Props {
   interval?: number;
   height?: string;
 }
 const baseURL = process.env.BASE_URL;
-export default function RotatingBanner({  
+const iconMap = Icons as unknown as Record<
+  string,
+  ComponentType<LucideProps>
+>;
+
+function resolveLucideIcon(name?: string) {
+  if (!name) return null;
+  return iconMap[name] ?? null;
+}
+export default function RotatingBanner({
   interval = 15000,
   height = "h-96"
 }: Props) {
@@ -27,66 +38,35 @@ export default function RotatingBanner({
   }, [items.length, interval]);
 
   const current = items[index];
-  const Icon = current.icon
-    ? (Icons[current.icon as keyof typeof Icons] as any)
-    : null;
+  const Icon = resolveLucideIcon(current.icon);
 
-  const bgClass =
-    current.bgType === "solid"
-      ? current.bgColor
-      : current.bgType === "gradient"
-      ? `bg-gradient-to-r ${current.gradientFrom} ${current.gradientTo}`
-      : "";
+
+  const bgClass = `bg-gradient-to-r from-black/70 via-black/40 to-transparent`;
 
   return (
     <div className={`relative w-full overflow-hidden rounded-2xl shadow-lg ${height}`}>
-      
-      {/* ---------------------- */}
-      {/* BACKGROUND LOGIC START */}
-      {/* ---------------------- */}
+      {/* Background Image */}
+      <Image
+        src={`${baseURL}/static/${current.bgImage}`}
+        alt={current.title}
+        fill
+        className="object-cover object-right opacity-95"
+        priority
+      />
 
-      {/* If bgImage exists → IMAGE + GRADIENT OVERLAY */}
-      {current.bgImage ? (
-        <>
-          {/* Background Image */}
-          <Image
-            src={`${baseURL}/static/${current.bgImage}`}
-            alt={current.title}
-            fill
-            className="object-cover object-right opacity-95"
-            priority
-          />
-
-          {/* Left-side gradient overlay to ensure readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
-        </>
-      ) : (
-        /* ELSE → fallback to existing color logic */
-        <>
-          {current.bgType !== "dual" ? (
-            <div className={`absolute inset-0 ${bgClass}`} />
-          ) : (
-            <div className="absolute inset-0 grid grid-cols-2">
-              <div className={`${current.dualLeft}`} />
-              <div className={`${current.dualRight}`} />
-            </div>
-          )}
-        </>
-      )}
-
-      {/* -------------------- */}
-      {/* BACKGROUND LOGIC END */}
-      {/* -------------------- */}
+      {/* Left-side gradient overlay to ensure readability */}
+      {/* <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" /> */}
+      <div className={`absolute inset-0  ${bgClass}`} />
 
       {/* Animated text content */}
       <AnimatePresence mode="wait">
         <motion.div
-          key={current.id}
+          key={current.link}
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -40 }}
           transition={{ duration: 0.5 }}
-          className="relative z-10 flex flex-col justify-center h-full p-8"
+          className="relative z-10 flex flex-col justify-end h-full p-8"
         >
           <Link href={current.link}>
             <div className="flex items-center gap-4 mb-4">
@@ -97,18 +77,13 @@ export default function RotatingBanner({
             </div>
 
             {current.subtitle && (
-              <p className={`text-lg md:text-xl ${current.textColor} opacity-90`}>
+              <p className={`text-lg md:text-xl ${current.textColor} opacity-90 font-yatra`}>
                 {current.subtitle}
               </p>
             )}
             {current.subtitle1 && (
               <p className={`text-lg md:text-xl ${current.textColor} opacity-90`}>
                 {current.subtitle1}
-              </p>
-            )}
-            {current.subtitle2 && (
-              <p className={`text-lg md:text-xl ${current.textColor} opacity-90`}>
-                {current.subtitle2}
               </p>
             )}
           </Link>
@@ -121,9 +96,8 @@ export default function RotatingBanner({
           <button
             key={i}
             onClick={() => setIndex(i)}
-            className={`w-3 h-3 rounded-full transition ${
-              i === index ? "bg-light scale-125" : "bg-white/50"
-            }`}
+            className={`w-3 h-3 rounded-full transition ${i === index ? "bg-white scale-125" : "bg-black"
+              }`}
           />
         ))}
       </div>

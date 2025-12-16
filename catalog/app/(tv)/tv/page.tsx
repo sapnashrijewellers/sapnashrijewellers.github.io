@@ -8,7 +8,7 @@ import categories from "@/data/categories.json";
 
 
 const baseURL = process.env.BASE_URL;
-const driveURL = `${baseURL}/img/products/optimized/`;
+const driveURL = `${baseURL}/static/img/products/optimized/`;
 
 export default function TV() {
   const [currentIndex, setCurrentIndex] = useState(0);

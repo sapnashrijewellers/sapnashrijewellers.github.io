@@ -11,14 +11,15 @@ export interface Product {
   englishHighlights: string[];
   newArrival: boolean;
   category: string;
-  type: string[],
-  for: string,
-  keywords: string,
-  slug: string,
-  active: boolean,
-  metaDescription: string,
-  makingCharges: number,
-  gst: number
+  type: string[];
+  for: string;
+  keywords: string;
+  slug: string;
+  active: boolean;
+  metaDescription: string;
+  makingCharges: number;
+  gst: number;
+  available?:boolean;
 }
 
 export interface Category {
@@ -41,21 +42,16 @@ export interface BannerItem {
   id: string;
   title: string;
   subtitle?: string;
-  subtitle1: string;
-  subtitle2: string;
+  subtitle1?: string;  
   icon?: LucideIcon | string; // JSON uses string
-  textColor?: string;
-  bgType: "solid" | "gradient" | "dual";
-  bgColor?: string;
+  textColor?: string;  
   gradientFrom?: string;
-  gradientTo?: string;
-  dualLeft?: string;
-  dualRight?: string;
+  gradientTo?: string;  
   link: string;
   fontFamily: string;
   bgImage: string;
   rank: number;
-  active: boolean;
+  active: boolean;  
 }
 
 export interface NewCatalog {

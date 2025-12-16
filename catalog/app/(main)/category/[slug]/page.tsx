@@ -82,7 +82,19 @@ export default async function CategoryPage({ params }: { params: { slug: string 
     );
     if (!category) notFound();
 
-    const filtered = products.filter((p: Product) => p.category === category.name && p.active);
+    const filtered = products.filter((p: Product) => p.category === category.name && p.active)
+        .sort((a: Product, b: Product) => {
+            // If 'a' is available and 'b' is not, 'a' comes first (negative number)
+            if (a.available && !b.available) {
+                return -1;
+            }
+            // If 'b' is available and 'a' is not, 'b' comes first (positive number)
+            if (!a.available && b.available) {
+                return 1;
+            }
+            // Otherwise, maintain relative order or treat them as equal
+            return 0;
+        });
 
     return (
         <div className="container mx-auto">
@@ -93,7 +105,7 @@ export default async function CategoryPage({ params }: { params: { slug: string 
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(ldjson) }}
             />
             <div className="pl-4 border-l-4 border-primary/70 mb-4">
-                <h1 className="text-2xl md:text-3xl font-cinzel font-bold text-primary-dark">
+                <h1 className="text-2xl md:text-3xl font-yatra font-bold text-primary-dark">
                     {category.name} | {category.category}
                 </h1>
                 <p className="mt-1 text-sm md:text-base text-muted-foreground/90 leading-relaxed font-playfair">

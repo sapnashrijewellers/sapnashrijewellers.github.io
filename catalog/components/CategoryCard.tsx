@@ -44,7 +44,7 @@ const baseURL = process.env.BASE_URL;
             fill
           />
         </div>
-        <h2 className="p-3 text-center ">
+        <h2 className="p-3 text-center font-yatra">
           {category.name}
         </h2>
       </div>

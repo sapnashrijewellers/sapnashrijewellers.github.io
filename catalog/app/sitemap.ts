@@ -1,17 +1,22 @@
 export const dynamic = "force-static";
-
-// app/sitemap.ts
-import { toSlug } from "@/utils/slug";
-import type { Product,Category } from "@/types/catalog";
+import type { Product,Category,Type } from "@/types/catalog";
 import products from "@/data/products.json";
 import categories from "@/data/categories.json";
+import types from "@/data/types.json"
 
 export default async function sitemap() {
   const baseUrl = process.env.BASE_URL;
 
   // --- Category URLs ---
   const categoryUrls = categories.map((cat: Category) => ({
-    url: `${baseUrl}/category/${toSlug(cat.slug)}`,
+    url: `${baseUrl}/category/${cat.slug}`,
+    lastModified: new Date().toISOString(),
+    changeFrequency: "weekly",
+    priority: 0.8,
+  }));
+
+  const typesUrls = types.map((t: Type) => ({
+    url: `${baseUrl}/jewelry-type/${t.slug}`,
     lastModified: new Date().toISOString(),
     changeFrequency: "weekly",
     priority: 0.8,
@@ -40,5 +45,5 @@ export default async function sitemap() {
   }));
 
   // --- Combine all ---
-  return [...staticUrls, ...categoryUrls, ...productUrls];
+  return [...staticUrls, ...categoryUrls, ...productUrls, ...typesUrls];
 }

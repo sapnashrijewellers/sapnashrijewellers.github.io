@@ -36,6 +36,7 @@ async function fetchAndSaveData() {
 
     // 3. Iterate over the top-level keys and write each one to a separate file
     const keys = Object.keys(apiResponse);
+    keys = keys.filter(p=> p.name?.length > 4 && p.category?.length>0 && p.active && p.weight >0 && p.slug.length>4);
     let successCount = 0;
 
     for (const key of keys) {

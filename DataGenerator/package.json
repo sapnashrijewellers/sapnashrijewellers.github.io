@@ -1,0 +1,12 @@
+{
+  "name": "datagenerator",
+  "version": "1.0.0",
+  "description": "Retrive data in JSON format and build search index",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "type":"module"
+}

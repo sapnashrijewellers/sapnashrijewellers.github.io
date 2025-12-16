@@ -1,6 +1,9 @@
-import MiniSearch from "minisearch";
+import MiniSearch, {
+  type Options as MiniSearchIndexOptions,
+  type SearchOptions as MiniSearchSearchOptions
+} from "minisearch";
    
-export const miniSearchIndexOptions: MiniSearch.Options = {
+export const miniSearchIndexOptions: MiniSearchIndexOptions = {
   fields: [
     "name",
     "highlights",
@@ -40,7 +43,7 @@ export const miniSearchIndexOptions: MiniSearch.Options = {
 /* ---------------------------------------
    SEARCH options (used ONLY in .search)
 --------------------------------------- */
-export const miniSearchQueryOptions: MiniSearch.SearchOptions = {
+export const miniSearchQueryOptions: MiniSearchSearchOptions = {
   fuzzy: 0.2,
   prefix: true,
   combineWith: "OR",
@@ -68,7 +71,7 @@ function normalizeTerm(term: string) {
   let t = term.normalize('NFKC').toLowerCase().trim()
   t = t.replace(/\u093C/g, '') // nukta removal
 
-  const map = {
+  const map: Record<string, string>= {
     bangles: 'bangle',
     bracelets: 'bracelet',
     chains: 'chain',

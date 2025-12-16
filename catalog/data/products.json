@@ -1019,7 +1019,8 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "sawariya-seth-gold-ring-32",
-    "active": true
+    "active": true,
+    "available":true
   },
   {
     "id": 33,

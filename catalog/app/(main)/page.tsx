@@ -2,7 +2,7 @@ import CategoryCard from "@/components/CategoryCard";
 import categories from "@/data/categories.json";
 import products from "@/data/products.json";
 import RotatingBanner from "@/components/banners/RotatingBanner";
-
+import JewelleryTypeBar from "@/components/JewelleryType"
 
 //const categories = dataRaw as NewCatalog;
 
@@ -45,7 +45,10 @@ export default function Home() {
     <div className="container mx-auto">
       <div className="mb-6">
         <RotatingBanner />
-      </div>      
+      </div>    
+      <div>
+        <JewelleryTypeBar />
+        </div>  
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
 
         {categories.sort((a, b) => a.rank - b.rank).map(cat => {

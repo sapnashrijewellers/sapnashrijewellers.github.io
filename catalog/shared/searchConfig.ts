@@ -25,7 +25,7 @@ export const miniSearchOptions: MiniSearch.Options = {
     "type"
   ],
 
-  tokenize(text) {
+  tokenize(text:string) {
     return (
       text
         ?.normalize("NFC")
@@ -34,7 +34,7 @@ export const miniSearchOptions: MiniSearch.Options = {
     );
   },
 
-  processTerm(term) {
+  processTerm(term:string) {
     if (!term) return "";
     return term
       .normalize("NFKC")

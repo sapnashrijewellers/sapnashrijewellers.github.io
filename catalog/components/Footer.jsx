@@ -2,7 +2,7 @@
 import {
   FaFacebookF, FaInstagram, FaYoutube, FaTv, FaWhatsapp,
   FaUserTie, FaShieldAlt,
-  FaExclamationCircle,FaMapMarkerAlt
+  FaExclamationCircle, FaMapMarkerAlt
 } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
@@ -16,16 +16,16 @@ export default function Footer() {
     <footer className="bg-background text-foreground p-4">
       <div className="max-w-6xl mx-auto space-y-6">
         {/* Disclaimer */}
-        <div className="flex gap-2 text-xl">                
+        <div className="flex gap-2 text-xl">
           <p className="italic text-xs text-muted-foreground">
-            अस्वीकरण: कीमतें बाजार दर के अनुसार बदलती रहती हैं। सभी दरें लगभग 5 मिनट की देरी से प्रदर्शित हैं। कृपया अंतिम कीमत और उत्पाद का अनुभव करने के लिए दुकान पर अवश्य आएँ। 
-            दी गई कीमतें केवल संकेतात्मक हैं, मेकिंग चार्ज एवं GST एक्स्ट्रा। *नियम एवं शर्तें लागू। * 
-            The indicated rates are for Gold per 10 grams and Silver per kilogram only. 
-            *Rates are for reference purpose only, rates may sometimes vary due to high volatility in the market. 
+            अस्वीकरण: कीमतें बाजार दर के अनुसार बदलती रहती हैं। सभी दरें लगभग 5 मिनट की देरी से प्रदर्शित हैं। कृपया अंतिम कीमत और उत्पाद का अनुभव करने के लिए दुकान पर अवश्य आएँ।
+            दी गई कीमतें केवल संकेतात्मक हैं, मेकिंग चार्ज एवं GST एक्स्ट्रा। *नियम एवं शर्तें लागू। *
+            The indicated rates are for Gold per 10 grams and Silver per kilogram only.
+            *Rates are for reference purpose only, rates may sometimes vary due to high volatility in the market.
             Actual product design may vary slightly from the images shown.
             किसी भी विवाद की स्थिति में न्यायिक क्षेत्र नागदा जंक्शन रहेगा।
           </p>
-        </div>     
+        </div>
         {/* Store Location */}
         <div>
           <h2 className="flex items-center gap-2 font-bold text-lg font-cinzel">
@@ -33,30 +33,30 @@ export default function Footer() {
             Store Address
           </h2>
           {/* Store Location */}
-        <div className="grid md:grid-cols-2 grid-cols-1 gap-6 max-w-6xl mx-auto text-primary">
-          {/* Hindi Address */}
-          <address className="bg-accent border border-theme rounded-2xl p-6 shadow-md">
-            <h3 className="text-lg font-semibold ">
-              📌 सपना श्री ज्वैलर्स,
-            </h3>
-            रेलवे स्टेशन मेन रोड, जैन मंदिर के पास,<br />
-            नागदा जंक्शन, जिला उज्जैन<br />
-            📞 8234042231
-          </address>
-          {/* English Address */}
-          <address className="bg-accent border border-theme rounded-2xl p-6 shadow-md font-cinzel">
-            <h2 className="text-lg font-semibold">
-              📌 Sapna Shri Jewellers,
-            </h2>
-            Near Railway Station, M G Road,<br />
-            Nagda Junction, District: Ujjain<br />
-            📞 8234042231
-          </address>
-        </div>
+          <div className="grid md:grid-cols-2 grid-cols-1 gap-6 max-w-6xl mx-auto text-primary">
+            {/* Hindi Address */}
+            <address className="bg-accent border border-theme rounded-2xl p-6 shadow-md">
+              <h3 className="text-lg font-semibold ">
+                📌 सपना श्री ज्वैलर्स,
+              </h3>
+              रेलवे स्टेशन मेन रोड, जैन मंदिर के पास,<br />
+              नागदा जंक्शन, जिला उज्जैन<br />
+              📞 8234042231
+            </address>
+            {/* English Address */}
+            <address className="bg-accent border border-theme rounded-2xl p-6 shadow-md font-cinzel">
+              <h2 className="text-lg font-semibold">
+                📌 Sapna Shri Jewellers,
+              </h2>
+              Near Railway Station, M G Road,<br />
+              Nagda Junction, District: Ujjain<br />
+              📞 8234042231
+            </address>
+          </div>
         </div>
         {/* Social Media */}
         <div>
-          <h2 className="flex items-center gap-2 text-lg mt-4 font-cinzel">            
+          <h2 className="flex items-center gap-2 text-lg mt-4 font-cinzel">
             🔗 Follow Us
           </h2>
 
@@ -133,12 +133,20 @@ export default function Footer() {
             Privacy Policy
           </Link>
 
-          
-          <Link className="flex items-center gap-2 mt-4 transition-colors" href="/huid" title="HUID हॉलमार्किंग क्यों ज़रूरी है?">
-              <Image src={`${baseURL}/static/img/hallmark.png`} height="30" width="25" 
-              alt="HUID हॉलमार्किंग क्यों ज़रूरी है?"/>
-              Hallmark
-            </Link>
+          <Link
+            className="flex items-center gap-2 mt-4 transition-colors"
+            href="/huid"
+            title="HUID हॉलमार्किंग क्यों ज़रूरी है?"
+          >
+            <Image
+              src={`${baseURL}/static/img/hallmark.png`}
+              width={25}
+              height={30}
+              alt="HUID हॉलमार्किंग क्यों ज़रूरी है?"
+              style={{ height: "auto" }}   // 👈 fix
+            />
+            Hallmark
+          </Link>
         </div>
       </div>
 

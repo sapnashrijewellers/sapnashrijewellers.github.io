@@ -1,5 +1,7 @@
 // ✅ Server Component
 import Calculator from "@/components/Calculator";
+import Breadcrumb from "@/components/BreadcrumbItem";
+
 
 const title = `ज्वेलरी प्राइस कैलकुलेटर`;
   const description = `ज्वेलरी प्राइस कैलकुलेटर | online Jewellery Price Calculator by Sapna Shri Jewellers`;
@@ -63,15 +65,16 @@ const title = `ज्वेलरी प्राइस कैलकुलेट
 
 export default async function CalculatorPage() {
   return (
-    <div className="max-w-lg mx-auto p-6 bg-card text-card-foreground shadow-lg rounded-2xl">
+    <div className="">
+      <Breadcrumb items={[{ name: "Home", href: "/" }, { name: "Calculator" }]} />
       {/* ✅ JSON-LD Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(ldjson) }}
       />     
 
-      <h1 className="text-2xl mb-6 text-center text-primary">
-        ज्वेलरी प्राइस कैलकुलेटर
+      <h1 className="text-2xl mb-6 text-primary-dark font-cinzel ">
+        Jewellery Price Calculator
       </h1>
 
       <Calculator />

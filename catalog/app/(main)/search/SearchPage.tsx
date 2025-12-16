@@ -8,6 +8,8 @@ import { Product, SearchFilters } from "@/types/catalog";
 import SearchBar from "@/components/search/SearchBar";
 import { useSearch } from "@/components/search/useSearch";
 import { miniSearchOptions } from "@/shared/searchConfig";
+import Breadcrumb from "@/components/BreadcrumbItem";
+
 
 export default function JewelrySearch() {
   const router = useRouter();
@@ -52,6 +54,7 @@ export default function JewelrySearch() {
 
   return (
     <div className="container mx-auto">
+      <Breadcrumb items={[{ name: "Home", href: "/" }, { name: "Search" }]} />
       <SearchBar
         query={inputQuery}
         onQueryChange={handleQueryChange}

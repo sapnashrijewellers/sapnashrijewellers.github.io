@@ -1,6 +1,6 @@
 // /app/about-us/page.jsx
 import  Image  from "next/image"
-
+import Breadcrumb from "@/components/BreadcrumbItem";
 
 // ✅ Dynamic Open Graph + Twitter meta tags
 
@@ -157,7 +157,7 @@ export default function AboutUsPage() {
 
   const testimonials = [
     {
-      text: "सपना श्री ज्वेलर्स से खरीदे गए हीरे के झुमके बेहद खूबसूरत और असली हैं। प्रमाणपत्र जाँच से मुझे पूरा भरोसा मिला कि मेरा निवेश सुरक्षित है।",
+      text: "सपना श्री ज्वेलर्स से खरीदे गए हीरे के झुम☐ Type page, component & sitemapके बेहद खूबसूरत और असली हैं। प्रमाणपत्र जाँच से मुझे पूरा भरोसा मिला कि मेरा निवेश सुरक्षित है।",
       name: "नेहा शर्मा, जयपुर",
     },
     {
@@ -175,12 +175,14 @@ export default function AboutUsPage() {
   ];
 
   return (
-    <div className="py-10 px-6 md:px-20 leading-relaxed">
+    <div className="leading-relaxed">
       {/* ✅ JSON-LD Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(ldjson) }}
       />
+      <Breadcrumb items={[{ name: "Home", href: "/" }, { name: "About Us" }]} />
+
       {/* ===== Heading ===== */}
       <div className="text-center mb-8">
         <h1 className="text-4xl md:text-5xl text-primary mb-4">

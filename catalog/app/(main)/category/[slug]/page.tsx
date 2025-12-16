@@ -4,6 +4,7 @@ import products from "@/data/products.json";
 import categories from "@/data/categories.json";
 import ProductCard from "@/components/ProductCard";
 import { notFound } from "next/navigation";
+import Breadcrumb from "@/components/BreadcrumbItem";
 
 
 const baseURL = process.env.BASE_URL;
@@ -85,6 +86,7 @@ export default async function CategoryPage({ params }: { params: { slug: string 
 
     return (
         <div className="container mx-auto">
+            <Breadcrumb items={[{ name: "Home", href: "/" }, { name: category.name }]} />
             {/* ✅ JSON-LD Structured Data */}
             <script
                 type="application/ld+json"

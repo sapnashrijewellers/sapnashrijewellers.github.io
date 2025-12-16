@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from "react";
 import ProductCard from "@/components/ProductCard";
-import type { NewCatalog, Category } from "@/types/catalog";
 import products from "@/data/products.json";
+import Breadcrumb from "@/components/BreadcrumbItem";
+
 
 export default function WishlistPage() {
     
@@ -41,7 +42,8 @@ export default function WishlistPage() {
 
     return (
         <section className="container mx-auto">
-            <h1 className="text-2xl  mb-6">My Wishlist ❤️</h1>
+            <Breadcrumb items={[{ name: "Home", href: "/" }, { name: "Wish-list" }]} />
+            <h1 className="text-2xl  mb-6 font-cinzel text-primary-dark">My Wishlist ❤️</h1>
 
             {wishlistProducts.length === 0 ? (
                 <p className="text-muted-foreground text-sm">

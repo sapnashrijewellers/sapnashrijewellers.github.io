@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Breadcrumb from "@/components/BreadcrumbItem";
+
 
 const baseURL = process.env.BASE_URL;
 
@@ -84,7 +86,8 @@ const description = metadata.description;
   ];
 
   return (
-    <div className="max-w-3xl mx-auto mt-10 p-6 bg-card text-card-foreground border border-border rounded-2xl shadow-md">
+    <div className="">
+      <Breadcrumb items={[{ name: "Home", href: "/" }, { name: "Hallmark" }]} />
       {/* Header */}
       <div className="flex items-center gap-3 mb-4">
         <span className="text-2xl text-accent">ℹ️</span>

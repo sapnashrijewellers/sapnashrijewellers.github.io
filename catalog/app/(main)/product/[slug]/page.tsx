@@ -1,12 +1,15 @@
 import { Metadata } from "next";
 import type { Product } from "@/types/catalog";
 import products from "@/data/products.json";
+import categories from "@/data/categories.json";
 import { notFound } from "next/navigation";
 import ProductGallery from "@/components/ProductGallery";
 import ProductShare from "@/components/ProductShare";
 import { HighlightsTabs } from "@/components/Highlights";
 import WhatsappClick from "@/components/WhatAppClick";
 import Image from "next/image"
+import Breadcrumb from "@/components/BreadcrumbItem";
+
 
 const baseURL = process.env.BASE_URL;
 const driveURL = `${baseURL}/img/products/optimized/`;
@@ -89,9 +92,10 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
       url: baseProductUrl,
     },
   };
-
+const category = categories.find(c=> c.name===product.category);
   return (
 <div>
+<Breadcrumb items={[{ name: "Home", href: "/" }, { name: product.category, href:`/category/${category?.slug}` },{name:product.name}]} />
    <Image
         src={`${process.env.BASE_URL}/static/img/before-buy-banner.png`}
         alt="Points to consider before you buy jewellery"

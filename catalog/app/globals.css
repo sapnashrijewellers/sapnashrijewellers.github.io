@@ -14,19 +14,32 @@
 
   color-scheme: light dark;
 
-  /* === Light Theme (Luxury Neutral) === */
-  --color-bg: #FEF8DE;           /* Soft ivory / premium neutral */
-  --color-text: #2a1f05;         /* Deep warm charcoal */
-  --color-primary: #b8860b;      /* Rich antique gold */
-  --color-primary-dark: #8c6d07; /* Strong gold for hover */
-  --color-surface: #fffdf9;      /* Light cream card background */
-  --color-border: #e5d8c6;       /* Warm beige border */
-  --color-accent: #0D2d5e;       /* Soft gold-toned accent area */
+  /* === Light Theme (Luxury Heritage Gold - Inspired by Sapna Shri Jewellers) === */
+  --color-bg: #FEF8DE;           /* Soft ivory / premium neutral (Retained: Good base) */
+  --color-text: #2A1F05;         /* Deep warm charcoal (Retained: Deep and readable) */
 
-  --font-playfair: 'Playfair Display', serif;
-  --font-cormorant: 'Cormorant Garamond', serif;
-  --font-cinzel: 'Cinzel', serif;
-  --font-vibes: 'Great Vibes', cursive;
+  /* Primary color shifted to a richer, more traditional Indian Gold */
+  --color-primary: #A37F2C;      /* Richer, traditional Antique Gold */
+
+  /* Stronger primary for hover/focus, leaning slightly into bronze/dark gold */
+  --color-primary-dark: #7F5C1A; /* Stronger Antique Gold/Bronze for hover */
+
+  /* Surface remains a light cream for contrast and elegance */
+  --color-surface: #FFFDF9;      /* Light cream card background */
+
+  /* Border color refined to complement the rich gold */
+  --color-border: #E5D8C6;       /* Warm beige border (Retained: Subtle and warm) */
+
+  /* Accent color is now a strong, luxurious Navy/Deep Blue, reflecting the brand's top banner/logo. This adds contrast and depth. */
+  --color-accent: #0D2D5E;       /* Deep Luxurious Navy Blue (From the Brand Banner) */
+
+  /* --- Font Enhancements for Luxury and Heritage --- */
+  /* 'Cinzel' or 'Cormorant' works well for headings/titles, conveying luxury/heritage. */
+  --font-heading: 'Cinzel', var(--font-cormorant), serif;
+  /* 'Playfair Display' or 'Cormorant' for slightly more readable titles/text. */
+  --font-body: var(--font-playfair), var(--font-cormorant), serif;
+  /* 'Great Vibes' can be used sparingly for special, signature elements. */
+  --font-signature: 'Great Vibes', cursive;
 }
 
 /* Dark theme (auto applied using system preference) */

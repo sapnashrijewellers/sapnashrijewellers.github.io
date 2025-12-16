@@ -49,7 +49,7 @@ export function FilterPanel({ filters, onChange, triggerRef }: FilterPanelProps)
     };
   }, [triggerRef]);
 
-  /** FIX: Show panel with visibility instead of unmounting */
+  
   return (
     <div
       ref={panelRef}
@@ -69,7 +69,7 @@ export function FilterPanel({ filters, onChange, triggerRef }: FilterPanelProps)
           onChange={(e) =>
             onChange("minWeight", e.target.value ? parseFloat(e.target.value) : undefined)
           }
-          className="p-2 border border-theme rounded bg-accent text-normal"
+          className="p-2 border border-theme rounded"
         />
 
         <input
@@ -79,13 +79,13 @@ export function FilterPanel({ filters, onChange, triggerRef }: FilterPanelProps)
           onChange={(e) =>
             onChange("maxWeight", e.target.value ? parseFloat(e.target.value) : undefined)
           }
-          className="p-2 border border-theme rounded bg-accent text-normal"
+          className="p-2 border border-theme rounded "
         />
 
         <select
           value={filters.forWhom ?? ""}
           onChange={(e) => onChange("forWhom", e.target.value || undefined)}
-          className="p-2 border border-theme rounded bg-accent text-normal"
+          className="p-2 border border-theme rounded "
         >
           <option value="">For Everyone</option>
           <option value="her">For Her</option>

@@ -1,8 +1,8 @@
 "use client";
 
 import { Search, Mic, Funnel, ArrowUpDown } from "lucide-react";
-import { FilterPanel } from "@/components/search/FilterPanel";
-import { SortPanel } from "@/components/search/SortPanel";
+import { FilterPanel } from "@/search/FilterPanel";
+import { SortPanel } from "@/search/SortPanel";
 import { SearchFilters } from "@/types/catalog";
 import { useRef } from "react";
 
@@ -50,7 +50,7 @@ export default function SearchBar({
 
     return (
         <div className="relative w-full">
-            <div className="flex items-center border-2 border-primary rounded-xl bg-accent px-3 py-1 w-full gap-2">
+            <div className="flex items-center border-2 border-primary rounded-xl bg-highlight px-3 py-1 w-full gap-2">
     <Search className="text-normal shrink-0" size={16} />
 
     <input

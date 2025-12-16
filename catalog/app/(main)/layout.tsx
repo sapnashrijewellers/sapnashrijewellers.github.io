@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "@/app/globals.css";
 import { Noto_Sans_Devanagari } from "next/font/google";
-// import { DataProvider } from "@/context/DataContext";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FooterTrust from "@/components/FooterTrust";

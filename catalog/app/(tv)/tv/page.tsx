@@ -31,16 +31,16 @@ export default function TV() {
   }, []);
 
   const subCategory = categories[currentIndex];
-  const productList = products.filter(p=> p.category==subCategory.name);
+  const productList = products.filter(p => p.category == subCategory.name && p.active);
   const product: Product = productList ? productList[0] : ({} as Product);
 
   if (!product) return <div>Loading product...</div>;
 
   return (
     <div
-      className={`transition-opacity duration-1000 ${
-        fade ? "opacity-100" : "opacity-0"
-      } flex flex-col md:grid md:grid-cols-2 gap-2 w-full h-full p-2 overflow-hidden`}
+      className={`transition-opacity duration-1000 
+        ${fade ? "opacity-100" : "opacity-0"} 
+      flex flex-col md:grid md:grid-cols-2 gap-2 w-full h-full p-2 overflow-hidden`}
     >
       {/* Image panel */}
       <div className="w-full h-full flex justify-start items-start">

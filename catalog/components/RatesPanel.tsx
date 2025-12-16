@@ -51,7 +51,7 @@ const rateUrl = `${process.env.BASE_URL}/rate/rates.json`
   });
 
   return (
-    <div className="mt-3 flex flex-col gap-6 p-6 w-full bg-accent border rounded-2xl">
+    <div className="mt-2 flex flex-col gap-6 p-6  w-full bg-accent border rounded-2xl">
       <div>
         <span className="animate-pulse w-3 h-3 bg-red-500 rounded-full inline-block p-1"></span>
         &nbsp; लाइव रेट * {formattedDate}
@@ -64,7 +64,7 @@ const rateUrl = `${process.env.BASE_URL}/rate/rates.json`
             key={idx}
             className="flex justify-between items-center text-3xl border-b pb-2"
           >
-            <span className="text-primary flex items-center gap-2">
+            <span className=" flex items-center gap-2">
               {item.label}:
             </span>
             <IndianRupeeRate rate={item.value} className="" />

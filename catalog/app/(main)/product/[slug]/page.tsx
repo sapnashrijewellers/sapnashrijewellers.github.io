@@ -94,7 +94,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 <div>
    <Image
         src={`${process.env.BASE_URL}/static/img/before-buy-banner.png`}
-        alt="before-buy"
+        alt="Points to consider before you buy jewellery"
         className="object-cover text-center items-center justify-center w-full h-full"
         loading="eager"
         title="Points to consider before you buy jewellery"

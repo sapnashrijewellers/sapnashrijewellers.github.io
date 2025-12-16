@@ -78,26 +78,26 @@ export default function Navbar() {
           )}
 
           {/* Bottom rates section */}
-          <div className="grid grid-cols-1 md:grid-cols-4 md:gap-2 text-right justify-end">
+          <div className="grid grid-cols-1 md:grid-cols-4 md:gap-2 text-right justify-end font-cinzel text-xs font-semibold">
             
             <div className="flex justify-end">
-            
-              <IndianRupeeRate rate={rates.gold24K * 10} className="text-primary" itemName="Gold 24K" itemTitle="10g" />
+            Gold 24K:&nbsp;
+              <IndianRupeeRate rate={rates.gold24K * 10} className="text-primary-dark  text-sm" itemName="Gold 24K" itemTitle="10g" />
             </div>
 
             <div className="flex justify-end">
-            
-              <IndianRupeeRate rate={rates.gold22K * 10} className="text-primary" itemName="Gold 22K" itemTitle="10g"/>
+            Gold 22K:&nbsp;
+              <IndianRupeeRate rate={rates.gold22K * 10} className="text-primary-dark text-sm" itemName="Gold 22K" itemTitle="10g"/>
             </div>
 
             <div className="flex justify-end">
-            
-              <IndianRupeeRate rate={rates.silver * 1000} className="text-primary" itemName="Silver 99.9%" itemTitle="1kg"/>
+            Silver 99.9%:&nbsp;
+              <IndianRupeeRate rate={rates.silver * 1000} className="text-primary-dark text-sm" itemName="Silver 99.9%" itemTitle="1kg"/>
             </div>
 
             <div className="flex justify-end">
-            
-              <IndianRupeeRate rate={rates.silver * 1000 * 0.92} className="text-primary" itemName="Silver Jewelry" itemTitle="1kg"/>
+            Silver Jewelry:&nbsp;
+              <IndianRupeeRate rate={rates.silver * 1000 * 0.92} className="text-primary-dark textsm" itemName="Silver Jewelry" itemTitle="1kg"/>
             </div>
           </div>
 

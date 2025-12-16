@@ -4,7 +4,8 @@ import { Noto_Sans_Devanagari } from "next/font/google";
 import LogoHeader from "@/components/LogoHeader";
 import RatesPanel from "@/components/RatesPanel";
 import WhatsAppContact from "@/components/WhatsAppContact";
-import Ticker from "@/components/Ticker";
+import Image from "next/image"
+
 
 const notoDevanagari = Noto_Sans_Devanagari({
   subsets: ["latin", "devanagari"],
@@ -42,25 +43,36 @@ export default function TVLayout({
     <html lang="en" className="theme-dark">
       <body className={notoDevanagari.className}>
         {/* Main layout */}
-       <div className="min-h-screen flex flex-col p-2 overflow-hidden">
-      
-      <LogoHeader />
-      <Ticker />
-      {/* 2-column layout */}
-      <div className="grid grid-cols-[2fr_1fr] gap-2 flex-1 h-full">
-        {/* Left: Product slideshow */}
-        <div className="flex justify-center items-center">
-          {children}
-        </div>
+        <div className="min-h-screen flex flex-col overflow-hidden">
 
-        {/* Right: Rates panel */}
-        <div className="flex flex-col">
-          <RatesPanel />
-          {/* WhatsApp Contact */}
-        <WhatsAppContact />
-        </div>        
-      </div>
-    </div>
+          <LogoHeader />
+
+          {/* 2-column layout */}
+          <div className="grid grid-cols-[2fr_1fr] gap-2 flex-1 h-full">
+            {/* Left: Product slideshow */}
+            <div className="flex justify-center items-center">
+              {children}
+            </div>
+
+            {/* Right: Rates panel */}
+            <div className="flex flex-col pr-2">
+              <RatesPanel />
+              {/* WhatsApp Contact */}
+              <WhatsAppContact />
+              <div>
+              <Image
+                      src={`${process.env.BASE_URL}/static/img/before-buy-banner.png`}
+                      alt="Points to consider before you buy jewellery"
+                      className="object-cover text-center items-center justify-center w-full h-full"
+                      loading="eager"
+                      title="Points to consider before you buy jewellery"
+                      height="500"
+                      width="500"
+                    />
+              </div>
+            </div>
+          </div>
+        </div>
       </body>
     </html>
   );

@@ -21,13 +21,12 @@ const IndianRupeeRate = ({ rate, itemName = 'Gold 22K', className = '', itemTitl
   }, [rate]);
 
   return (
-    <span itemScope itemType="https://schema.org/Product" className='font-cinzel text-xs text-primary-dark font-semibold' >
+    <span itemScope itemType="https://schema.org/Product" className='font-cinzel  font-semibold' >
       <meta itemProp="name" content={`${itemName} Spot Price`} />
       <meta
         itemProp="description"
         content={`Current spot price for ${itemName} in India`}
-      />
-      {itemName}&nbsp;
+      />      
       <span itemProp="offers" itemScope itemType="https://schema.org/Offer">
         <meta itemProp="priceCurrency" content="INR" />
         <meta itemProp="availability" content="https://schema.org/InStock" />
@@ -37,7 +36,7 @@ const IndianRupeeRate = ({ rate, itemName = 'Gold 22K', className = '', itemTitl
           itemProp="priceSpecification"
           itemScope
           itemType="https://schema.org/PriceSpecification"
-          className={`rupee-rate ${className} font-cinzel text-sm text-normal font-normal font-semibold`}
+          className={`rupee-rate ${className} font-cinzel font-semibold`}
           aria-label={`Price: ${formattedRate}`}
           title={`${itemTitle}`}
         >

@@ -3,9 +3,10 @@ import type { Product } from "@/types/catalog";
 import products from "@/data/products.json";
 import categories from "@/data/categories.json";
 import { notFound } from "next/navigation";
-import ProductGallery from "@/components/product/ProductGallery";
+
 import ProductShare from "@/components/product/ProductShare";
 import { HighlightsTabs } from "@/components/product/Highlights";
+import ProductGallery from "@/components/product/ProductGallery";
 import WhatsappClick from "@/components/product/WhatAppClick";
 import Image from "next/image"
 import Breadcrumb from "@/components/navbar/BreadcrumbItem";

@@ -80,7 +80,7 @@ export default async  function JewelryTypePage(
 
       <div className="pl-4 border-l-4 border-primary/70 mb-4">
         <h1 className="text-3xl font-yatra font-bold">
-          {t.type} collection
+          {t.type} jewellery collection
         </h1>
         <p className="font-playfair text-muted-foreground">
           {t.description}

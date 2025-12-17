@@ -36,15 +36,23 @@ async function fetchAndSaveData() {
 
     // 3. Iterate over the top-level keys and write each one to a separate file
     const keys = Object.keys(apiResponse);
-    keys = keys.filter(p=> p.name?.length > 4 && p.category?.length>0 && p.active && p.weight >0 && p.slug.length>4);
     let successCount = 0;
 
     for (const key of keys) {
+
         // Construct the output filename (e.g., 'ticker.json')
         const fileName = path.join(DtaFolder, `${key}.json`);
 
         // Get the value for the current key
-        const data = apiResponse[key];
+        let data = apiResponse[key];
+        if (key === "products") {
+            data = data.filter(p => p.name?.length > 4
+                && p.category?.length > 0
+                && p.active
+                && p.weight > 0
+                && p.slug.length > 4
+            );
+        }
 
         // Convert the JavaScript object/array into a nicely formatted JSON string
         // The third argument (2) specifies 2 spaces for indentation (pretty print)

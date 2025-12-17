@@ -2,15 +2,15 @@ import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import MiniSearch from 'minisearch'
-import { miniSearchIndexOptions, normalize } from "../catalog/search/shared.js";
+import { miniSearchIndexOptions, normalize } from "../catalog/search/shared.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const catalogPath = path.join(__dirname, '../../catalog/data/products.json');
+const catalogPath = path.join(__dirname, '../catalog/data/products.json');
 const catalog = JSON.parse(fs.readFileSync(catalogPath, 'utf-8'));
 
 const productsForIndex = catalog
-   .filter(p => p.active && p.name?.length > 3)
+   .filter(p => p.active && p.name?.length > 3 && p.weight > 0)
    .map(p => ({
       id: p.id,
       name: normalize(p.name),
@@ -18,7 +18,7 @@ const productsForIndex = catalog
       englishHighlights: normalize(p.englishHighlights?.join(' ')),
       category: normalize(p.category),
       keywords: normalize(p.keywords),
-      metaDescription: normalize(p.metaDescription),
+      description: normalize(p.description),
       type: normalize(p.type?.join(' ')),
       for: normalize(p.for),
       purity: normalize(p.purity),

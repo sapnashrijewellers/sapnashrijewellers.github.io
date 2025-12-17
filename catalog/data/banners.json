@@ -1,50 +1,50 @@
 [
   {
     "title": "Sapna Shri Jewellers",
-    "subtitle": "सोने के भाव के साथ होलसेल रेट में रिटेल ज्वेलरी आपके लिए..",    
-    "subtitle1": "Affordable pricing, making charge starts From 3.5%",
-    "bgImage": "/img/banner/ssj.jpg",
+    "subtitle": "Trusted by a Family of 5,000+ Delighted Customers",
+    "subtitle1": "High-quality craftsmanship with BIS 916 certified gold.",
     "link": "/about-us",
     "icon": "Crown",
-    "textColor": "text-white",    
-    "fontFamily": "font-playfair",    
+    "textColor": "text-white",
+    "fontFamily": "font-playfair",
     "rank": 1,
-    "active": true
+    "active": true,
+    "bgImage": "/img/banner/ssj.jpg"
   },
   {
     "title": "Rajputani Jewellery",
     "subtitle": "Timeless royal designs inspired by heritage",
-    "subtitle1": "",    
-    "bgImage": "/img/banner/bajuband.png",
+    "subtitle1": "",
     "link": "category/rajputani-gold-jewellery/",
     "icon": "Crown",
-    "textColor": "text-white",    
-    "fontFamily": "font-playfair",    
+    "textColor": "text-white",
+    "fontFamily": "font-playfair",
     "rank": 2,
-    "active": true
+    "active": true,
+    "bgImage": "/img/banner/bajuband.png"
   },
   {
     "title": "Bridal Collection",
     "subtitle": "Exquisite jewellery for your big day",
-    "subtitle1": "",      
-    "bgImage": "/img/banner/bride.jpg",
+    "subtitle1": "",
     "link": "/search/?q=bridal",
     "icon": "Diamond",
-    "textColor": "text-white",    
-    "fontFamily": "font-playfair",    
-    "rank": 5,
-    "active": true
+    "textColor": "text-white",
+    "fontFamily": "font-playfair",
+    "rank": 3,
+    "active": true,
+    "bgImage": "/img/banner/bride.jpg"
   },
   {
     "title": "Customize Jewellery",
     "subtitle": "Design your unique jewellery piece",
-    "subtitle1": "",      
-    "bgImage": "/img/banner/custom.png",
+    "subtitle1": "",
     "link": "/customize",
     "icon": "Sparkles",
-    "textColor": "text-White",    
-    "fontFamily": "font-playfair",   
-    "rank": 6,
-    "active": true
+    "textColor": "text-White",
+    "fontFamily": "font-playfair",
+    "rank": 4,
+    "active": true,
+    "bgImage": "/img/banner/custom.png"
   }
 ]

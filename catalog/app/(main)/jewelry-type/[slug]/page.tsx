@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import type { Product, Type } from "@/types/catalog";
+import type { Type } from "@/types/catalog";
 import products from "@/data/products.json";
 import types from "@/data/types.json";
 import Breadcrumb from "@/components/navbar/BreadcrumbItem";
@@ -15,29 +15,23 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata(
-  { params }: { params: { slug: string } }
-): Promise<Metadata> {
-  const t = types.find(t => t.slug === params.slug);
-  if (!t) return {};
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const t = types.find(t => t.slug === slug);
+  if (!t) return {};  
 
-  const filtered = products.filter(p => p.type.includes(t.type));
-
-  const imageUrl =
-    filtered.length > 0
-      ? `${driveURL}${filtered[0].images[0]}`
-      : `${baseURL}/logo.png`;
-
+  const imageUrl = `${baseURL}/logo.png`;
+  
   return {
     title: `${t.type} jewelry collection by Sapna Shri Jewellers`,
-    description: t.metaDescription,
+    description: t.description,
     keywords: t.keywords,
     alternates: {
-      canonical: `${baseURL}/jewelry-type/${params.slug}`,
+      canonical: `${baseURL}/jewelry-type/${slug}`,
     },
     openGraph: {
       title: t.type,
-      description: t.metaDescription,
+      description: t.description,
       images: [{ url: imageUrl }],
     },
   };
@@ -62,7 +56,7 @@ export default async  function JewelryTypePage(
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     name: `${t.type} by Sapna Shri Jewellers`,
-    description: t.metaDescription,
+    description: t.description,
     url: `${baseURL}/jewelry-type/${params.slug}`,
     mainEntity: baseProducts.map(p => ({
       "@type": "Product",
@@ -89,7 +83,7 @@ export default async  function JewelryTypePage(
           {t.type} collection
         </h1>
         <p className="font-playfair text-muted-foreground">
-          {t.metaDescription}
+          {t.description}
         </p>
       </div>
 

@@ -49,22 +49,23 @@ export default function Calculator() {
     if (!productId || Number.isNaN(productId)) return undefined;
     return products.find((p) => p.id === productId);
   }, [productId]);
+  const [price, setPrice] = useState<number | null>(null);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [showMakingChargeNotice, setShowMakingChargeNotice] = useState(false);
 
   /* ----------------------- Form State ----------------------- */
+  const lockProductFields = Boolean(product);
 
   const [form, setForm] = useState<CalculatorForm>({
     category: "gold",
     purity: "gold22K",
     weight: 10,
-    makingCharges: 7,
+    makingCharges: lockProductFields ? 0 : 7,
     gst: 3,
   });
 
-  const [price, setPrice] = useState<number | null>(null);
-  const [loading, setLoading] = useState<boolean>(false);
-
   /* ----------------------- Constants ----------------------- */
-  const lockProductFields = Boolean(product);
+
   const defaultPurityByCategory: Record<Category, Purity> = {
     gold: "gold22K",
     silver: "silver",
@@ -96,7 +97,7 @@ export default function Calculator() {
   /* ----------------------- Handlers ----------------------- */
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    
+
     const { name, value } = e.target;
     if (lockProductFields && (name === "category" || name === "purity")) {
       return;
@@ -151,6 +152,13 @@ export default function Calculator() {
       return;
     }
 
+    if (lockProductFields && form.makingCharges === 0) {
+      setShowMakingChargeNotice(true);
+      return;
+    } else {
+      setShowMakingChargeNotice(false);
+    }
+
     setLoading(true);
     setPrice(null);
 
@@ -187,7 +195,10 @@ export default function Calculator() {
   const labelClasses = "block mb-1 font-medium text-muted-foreground";
 
   useEffect(() => {
-    if (!product ) return;
+    if (!product || !product.active || product.available === false) {
+      setShowMakingChargeNotice(false);
+      return;
+    }
 
     const mappedPurity = productPurityMap[product.purity];
 
@@ -202,9 +213,12 @@ export default function Calculator() {
       category: derivedCategory,
       purity: mappedPurity,
       weight: product.weight,
-      makingCharges: product.makingCharges,
-      gst: product.gst,
+      makingCharges: lockProductFields ? 0 : 7, // 🔒 forced
+      gst: 3,
     });
+
+    // ✅ show notice ONLY for product-based calculator
+    setShowMakingChargeNotice(true);
   }, [product]);
 
   /* ----------------------- UI ----------------------- */
@@ -212,7 +226,7 @@ export default function Calculator() {
   return (
     <div className="container mx-auto px-4">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-        
+
 
         {/* ---------------- Calculator Section ---------------- */}
         <div>
@@ -269,8 +283,19 @@ export default function Calculator() {
             className={`${inputClasses} mb-6`}
           >
             <option value={3}>3%</option>
-            <option value={5}>5%</option>
           </select>
+
+          {showMakingChargeNotice && (
+            <div className="mb-4 p-4 rounded-lg text-sm bg-accent">
+              <p className="font-medium mb-1">
+                मेकिंग चार्ज हर आभूषण में अलग होता है
+              </p>
+              <p className="mb-2">
+                सटीक मेकिंग चार्ज जानने के लिए कृपया हमसे WhatsApp पर संपर्क करें।
+              </p>
+              <WhatsappClick product={product} />
+            </div>
+          )}
 
           <button
             onClick={calculatePrice}
@@ -280,7 +305,7 @@ export default function Calculator() {
             {loading ? "कैलकुलेट हो रहा है..." : "कैलकुलेट करें"}
           </button>
 
-          {price !== null && (
+          {price !== null && !showMakingChargeNotice && (
             <div className="mt-6 p-4 bg-muted rounded-lg text-center">
               <h3 className="font-semibold mb-2">कुल कीमत</h3>
               <IndianRupeeRate
@@ -298,7 +323,6 @@ export default function Calculator() {
             <ProductGallery product={product} />
             <WhatsappClick product={product} />
             <HighlightsTabs product={product} />
-
           </div>
         )}
       </div>

@@ -17,7 +17,7 @@ const normalizeQuery = (q: unknown): string => {
 };
 
 export function useSearch(
-  searchIndex: MiniSearch<Product> | null,  
+  searchIndex: MiniSearch<Product> | null,
   rawQuery: string,
   filters: SearchFilters,
   sortBy: string
@@ -51,7 +51,7 @@ export function useSearch(
       englishHighlights: [],
       active: true,
       keywords: "",
-      metaDescription: "",
+      description: "",
       makingCharges: 0,
       gst: 0
 
@@ -70,6 +70,10 @@ export function useSearch(
     case "weight-asc": items.sort((a, b) => a.weight - b.weight); break;
     case "weight-desc": items.sort((a, b) => b.weight - a.weight); break;
   }
-
+  items = items.filter(
+    p => p.active
+      //&& p.weight > 0
+      //&& p.slug.length > 4
+  );
   return items;
 }

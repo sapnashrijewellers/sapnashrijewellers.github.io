@@ -10,7 +10,7 @@ export const miniSearchIndexOptions: MiniSearchIndexOptions = {
     "englishHighlights",
     "category",
     "keywords",
-    "metaDescription",
+    "description",
     "type",
     "for",
     "purity"
@@ -54,7 +54,7 @@ export const miniSearchQueryOptions: MiniSearchSearchOptions = {
     englishHighlights: 3,
     category: 2.5,
     keywords: 2.5,
-    metaDescription: 2,
+    description: 2,
     type: 1.3,
     for: 1.2,
     purity: 1.1
@@ -109,5 +109,5 @@ export const normalize = (s = '') =>
     .toString()
     .normalize('NFC')
     .toLowerCase()
-    .replace(/[^0-9a-zA-Z\u0900-\u097F]+/gu, ' ')
+    //.replace(/[^0-9a-zA-Z\u0900-\u097F]+/gu, ' ')
     .trim()

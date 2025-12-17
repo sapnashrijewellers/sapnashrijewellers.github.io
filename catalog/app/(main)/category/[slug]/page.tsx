@@ -26,10 +26,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     );
     if (!category) return {};
 
-    const filtered = products.filter((p: Product) => p.category === category.name);
+    const filtered = products.filter((p: Product) =>
+        p.category === category.name &&
+        p.active
+        && p.weight > 0
+        && p.name.length > 4);
 
-    const title = `${category.name} | ${category.category}`;
-    const description = category.marketingText;
+    const title = `${category.name} | ${category.englishName} by Sapna Shri Jewellers`;
+    const description = category.description;
 
     const imageUrl =
         filtered.length > 0
@@ -41,7 +45,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     ldjson = {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
-        name: `${category.name} | ${category.category} `,
+        name: `${category.name} | ${category.englishName} `,
         description,
         url: `${baseURL}/category/${slug}`,
         mainEntity: filtered.map((p: Product) => ({
@@ -106,10 +110,10 @@ export default async function CategoryPage({ params }: { params: { slug: string 
             />
             <div className="pl-4 border-l-4 border-primary/70 mb-4">
                 <h1 className="text-2xl md:text-3xl font-yatra font-bold text-primary-dark">
-                    {category.name} | {category.category}
+                    {category.name} | {category.englishName}
                 </h1>
                 <p className="mt-1 text-sm md:text-base text-muted-foreground/90 leading-relaxed font-playfair">
-                    {category.marketingText}
+                    {category.description}
                 </p>
             </div>
             {filtered.length === 0 ? (

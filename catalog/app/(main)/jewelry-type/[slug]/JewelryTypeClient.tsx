@@ -26,7 +26,9 @@ export default function JewelryTypeClient(
             case "weight-asc": items.sort((a, b) => a.weight - b.weight); break;
             case "weight-desc": items.sort((a, b) => b.weight - a.weight); break;
         }
-
+        items = items.filter(p => p.active
+            && p.weight > 0
+            && p.name.length > 4);
         return items;
     }, [products, filters, sortBy]);
 

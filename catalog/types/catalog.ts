@@ -16,7 +16,7 @@ export interface Product {
   keywords: string;
   slug: string;
   active: boolean;
-  metaDescription: string;
+  description: string;
   makingCharges: number;
   gst: number;
   available?:boolean;
@@ -24,11 +24,11 @@ export interface Product {
 
 export interface Category {
   name: string;
-  category: string,
+  englishName: string,
   rank: number,
   slug: string,
   keywords: string,
-  marketingText: string,  
+  description: string,  
   active: boolean
 }
 
@@ -54,11 +54,11 @@ export interface BannerItem {
   active: boolean;  
 }
 
-export interface NewCatalog {
-  products: Product[];
-  ticker?: string[];
-  categories: Category[];
-}
+// export interface NewCatalog {
+//   products: Product[];
+//   ticker?: string[];
+//   categories: Category[];
+// }
 export interface Rates {
   asOn: Date;
   gold24K: number;
@@ -73,7 +73,7 @@ export interface Type {
   rank: number,
   slug: string,
   keywords: string,
-  metaDescription: string,
+  description: string,
   icon: string,
   active: boolean
 }

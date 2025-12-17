@@ -1,67 +1,77 @@
 // ✅ Server Component
 import Calculator from "@/components/Calculator";
 import Breadcrumb from "@/components/navbar/BreadcrumbItem";
+import { Suspense } from "react";
 
 
 const title = `ज्वेलरी प्राइस कैलकुलेटर`;
-  const description = `ज्वेलरी प्राइस कैलकुलेटर | online Jewellery Price Calculator by Sapna Shri Jewellers`;
-  const baseURL = process.env.BASE_URL;
-  const imageUrl = `${baseURL}/logo.png`;
-  const keywords = "ज्वेलरी प्राइस कैलकुलेटर, Jewellery price calculator, 22K gold jewellery price calculator, Silver jewellery price";
-  const ldjson = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": title,
-    "url": `${baseURL}/calculator`,
-    "description": description,
-    "publisher": {
-      "@type": "JewelryStore",
-      "name": "Sapna Shri Jewellers Nagda",
-      "image": `${baseURL}/logo.png`,
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Railway Station Main Road, Near Jain Mandir",
-        "addressLocality": "Nagda",
-        "addressRegion": "Ujjain",
-        "postalCode": "456335",
-        "addressCountry": "IN"
-      },
-      "telephone": "+91-8234042231"
+const description = `ज्वेलरी प्राइस कैलकुलेटर | online Jewellery Price Calculator by Sapna Shri Jewellers`;
+const baseURL = process.env.BASE_URL;
+const imageUrl = `${baseURL}/logo.png`;
+const keywords = "ज्वेलरी प्राइस कैलकुलेटर, Jewellery price calculator, 22K gold jewellery price calculator, Silver jewellery price";
+const ldjson = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": title,
+  "url": `${baseURL}/calculator`,
+  "description": description,
+  "publisher": {
+    "@type": "JewelryStore",
+    "name": "Sapna Shri Jewellers Nagda",
+    "image": `${baseURL}/logo.png`,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Railway Station Main Road, Near Jain Mandir",
+      "addressLocality": "Nagda",
+      "addressRegion": "Ujjain",
+      "postalCode": "456335",
+      "addressCountry": "IN"
     },
-    "mainEntity": {
-      "@type": "ComputeAction",
-      "name": "Jewellery Price Calculator",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": `${baseURL}/calculator`
-      }
+    "telephone": "+91-8234042231"
+  },
+  "mainEntity": {
+    "@type": "ComputeAction",
+    "name": "Jewellery Price Calculator",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": `${baseURL}/calculator`
     }
-  };
+  }
+};
 
-  export async function generateMetadata() {
-    return {
+export async function generateMetadata() {
+  return {
+    title,
+    description,
+    keywords,
+    openGraph: {
       title,
       description,
-      keywords,
-      openGraph: {
-        title,
-        description,
-        url: `${baseURL}/calculator`,
-        type: "website",
-        images: [{ url: imageUrl }],
-      },
-      twitter: {
-        card: "summary_large_image",
-        title,
-        description,
-        images: [imageUrl],
-      },
-      alternates: {
-        canonical: `${baseURL}/calculator`,
-      },
-    };
-  
-  }
+      url: `${baseURL}/calculator`,
+      type: "website",
+      images: [{ url: imageUrl }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [imageUrl],
+    },
+    alternates: {
+      canonical: `${baseURL}/calculator`,
+    },
+  };
+
+}
+function CalculatorSkeleton() {
+  return (
+    <div className="animate-pulse space-y-4">
+      <div className="h-6 bg-muted rounded w-1/3" />
+      <div className="h-64 bg-muted rounded" />
+      <div className="h-10 bg-muted rounded" />
+    </div>
+  );
+}
 
 export default async function CalculatorPage() {
   return (
@@ -71,13 +81,15 @@ export default async function CalculatorPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(ldjson) }}
-      />     
+      />
 
       <h1 className="text-2xl mb-6 text-primary-dark font-cinzel ">
         Jewellery Price Calculator
       </h1>
 
-      <Calculator />
+      <Suspense fallback={<CalculatorSkeleton />}>
+        <Calculator />
+      </Suspense>
     </div>
   );
 }

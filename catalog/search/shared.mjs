@@ -5,7 +5,7 @@ export const miniSearchIndexOptions = {
     "englishHighlights",
     "category",
     "keywords",
-    "metaDescription",
+    "description",
     "type",
     "for",
     "purity"
@@ -14,8 +14,8 @@ export const miniSearchIndexOptions = {
   storeFields: [
     "id",
     "slug",
-    "images",
-    "category",
+    "name",
+    "images",    
     "purity",
     "newArrival",
     "weight",
@@ -49,7 +49,7 @@ export const miniSearchQueryOptions = {
     englishHighlights: 3,
     category: 2.5,
     keywords: 2.5,
-    metaDescription: 2,
+    description: 2,
     type: 1.3,
     for: 1.2,
     purity: 1.1

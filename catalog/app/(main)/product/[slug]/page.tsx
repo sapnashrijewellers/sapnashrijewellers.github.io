@@ -18,7 +18,9 @@ const driveURL = `${baseURL}/img/products/optimized/`;
 
 export async function generateStaticParams() {
   return products
-    .filter((p: Product) => p.active && p.slug.length >= 5)
+    .filter((p: Product) => p.active && p.slug.length >= 5
+      && p.active
+      && p.weight > 0)
     .map((p: Product) => ({
       slug: p.slug
     }));
@@ -34,8 +36,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!product) return {};
 
   const baseProductUrl = `${baseURL}/product/${product.slug}`;
-  const title = `${product.name} | ${product.metaDescription} by Sapna Shri Jewellers`;
-  const description = `${product.metaDescription}`;
+  const title = `${product.name} by Sapna Shri Jewellers`;
+  const description = `${product.description}`;
   const imageUrl = `${driveURL}${product.images?.[0]}`;
   const keywords = product.keywords;
 
@@ -80,7 +82,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
     "@type": "Product",
     name: product.name,
     image: product.images[0],
-    description: `${product.metaDescription}`,
+    description: `${product.description}`,
     sku: product.id,
     brand: {
       "@type": "Brand",
@@ -94,11 +96,11 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
       url: baseProductUrl,
     },
   };
-const category = categories.find(c=> c.name===product.category);
+  const category = categories.find(c => c.name === product.category);
   return (
-<div>
-<Breadcrumb items={[{ name: "Home", href: "/" }, { name: product.category, href:`/category/${category?.slug}` },{name:product.name}]} />
-   <Image
+    <div>
+      <Breadcrumb items={[{ name: "Home", href: "/" }, { name: product.category, href: `/category/${category?.slug}` }, { name: product.name }]} />
+      <Image
         src={`${process.env.BASE_URL}/static/img/before-buy-banner.png`}
         alt="Points to consider before you buy jewellery"
         className="object-cover text-center items-center justify-center w-full h-full"
@@ -107,41 +109,44 @@ const category = categories.find(c=> c.name===product.category);
         height="500"
         width="500"
       />
-    <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-6 py-6 px-3">
-     
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(ldjson) }}
-      />
-      {/* ✅ Client-side gallery */}
-      <ProductGallery product={product} />
+      <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-6 py-6 px-3">
 
-      {/* ✅ Product Details */}
-      <div className="p-2">
-        <h1 className="text-2xl md:text-3xl mb-2 font-cinzel text-primary-dark font-semibold">{product.name}</h1>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(ldjson) }}
+        />
+        {/* ✅ Client-side gallery */}
+        <ProductGallery product={product} />
 
-        <div className="space-y-1 mb-4">
-          <p>
-            Purity: {product.purity}
-          </p>
-          <p>
-            Weight: {product.weight} g
-          </p>
+        {/* ✅ Product Details */}
+        <div className="p-2">
+          <h1 className="text-2xl md:text-3xl mb-2 font-cinzel text-primary-dark font-semibold">{product.name}</h1>
+
+          <div className="space-y-1 mb-4">
+            <p>
+              {product.description}
+            </p>
+            <p>
+              Purity: {product.purity}
+            </p>
+            <p>
+              Weight: {product.weight} g
+            </p>
+          </div>
+
+          {/* Contact */}
+          <WhatsappClick product={product} />
+          <CalculatePrice product={product} />
+          {/* Highlights Tabs */}
+          <HighlightsTabs product={product} />
+
+
+
         </div>
 
-        {/* Contact */}
-        <WhatsappClick product={product} />
-        <CalculatePrice product={product} />
-        {/* Highlights Tabs */}
-        <HighlightsTabs product={product} />
-
-
-
+        {/* Share */}
+        <ProductShare product={product} />
       </div>
-
-      {/* Share */}
-      <ProductShare product={product} />
-    </div>
     </div>
   );
 }

@@ -60,7 +60,7 @@ export default function SearchBar({
     return (
 
         <div className="relative w-full">
-            <div className="flex items-center border-2 border-primary rounded-xl bg-highlight w-full p-0.5">
+            <div className="flex items-center border-2 border-primary rounded-xl bg-highlight w-full gap-1 p-0.5">
                 <input
                     type="search"
                     value={query}

@@ -25,13 +25,9 @@ export default function SearchBar({
     return (
         <div className="relative ">
             <div className="flex items-center border-2 border-primary rounded-xl bg-highlight px-3 py-1 w-full gap-2">
-
-
-
-
                 <div className="relative">
                     <button ref={filterBtnRef}
-                        className="text-normal shrink-0 flex items-center justify-center"
+                        className="ssj-btn text-normal shrink-0 flex items-center justify-center"
                         title="Filter results">
                         <Funnel size={16} />
                     </button>
@@ -44,7 +40,7 @@ export default function SearchBar({
 
                 <div className="relative">
                     <button ref={sortBtnRef}
-                        className="text-normal shrink-0 flex items-center justify-center"
+                        className="ssj-btn text-normal shrink-0 flex items-center justify-center"
                         title="Sort results">
                         <ArrowUpDown size={16} />
                     </button>

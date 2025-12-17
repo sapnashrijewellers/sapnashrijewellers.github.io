@@ -10,24 +10,32 @@ import { motion, AnimatePresence } from "framer-motion";
 interface SearchBarProps {
     query: string;
     onQueryChange: (q: string) => void;
-    onMicClick: () => void;
+    onSearch: () => void;
     filters: SearchFilters;
-    onFilterChange: (key: keyof SearchFilters, value: any) => void;
+    onFilterChange: (k: keyof SearchFilters, v: any) => void;
     sortBy: string;
-    onSortChange: (sort: string) => void;
+    onSortChange: (v: string) => void;
+    onMicClick?: () => void;
 }
 
 export default function SearchBar({
     query,
     onQueryChange,
-    onMicClick,
+    onSearch,
     filters,
     onFilterChange,
     sortBy,
-    onSortChange
+    onSortChange,
+    onMicClick
 }: SearchBarProps) {
     const filterBtnRef = useRef<HTMLButtonElement>(null);
     const sortBtnRef = useRef<HTMLButtonElement>(null);
+    const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === "Enter") {
+            e.preventDefault();
+            onSearch();
+        }
+    };
 
     const startSpeechRecognition = () => {
         if (!("webkitSpeechRecognition" in window || "SpeechRecognition" in window)) {
@@ -50,53 +58,62 @@ export default function SearchBar({
     };
 
     return (
-        <AnimatePresence>
-            <motion.div className="relative w-full backdrop-blur-sm"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 20 }}>
-                <div className="flex items-center border-2 border-primary rounded-xl bg-highlight px-3 py-1 w-full gap-2">
+
+        <div className="relative w-full">
+            <div className="flex items-center border-2 border-primary rounded-xl bg-highlight w-full p-0.5">
+                <input
+                    type="search"
+                    value={query}
+                    onChange={e => onQueryChange(e.target.value)}
+                    onKeyDown={handleKeyDown}
+                    placeholder="Search jewellery..."
+                    inputMode="search"
+                    className="rounded-2xl flex-1 min-w-0 outline-none text-normal placeholder:text-normal focus:outline-none focus:ring-1 focus:ring-purple-500"
+
+                />
+
+                <button onClick={onMicClick || startSpeechRecognition}
+                    className="ssj-btn text-normal shrink-0" title="Speak to search">
+                    <Mic size={16} />
+                </button>
+                {/* Search Button (inside input) */}
+                <button
+                    type="button"
+                    className="ssj-btn"
+                    onClick={onSearch}
+                    aria-label="Search"
+                    title="Click to search"
+                >
                     <Search className="text-normal shrink-0" size={16} />
+                </button>
 
-                    <input
-                        type="text"
-                        value={query}
-                        onChange={(e) => onQueryChange(e.target.value)}
-                        placeholder="Search jewelry..."
-                        className="flex-1 min-w-0 bg-transparent outline-none text-normal placeholder:text-normal focus:outline-none focus:ring-2 focus:ring-purple-500"
-                    />
-
-                    <button onClick={onMicClick || startSpeechRecognition} className="text-normal shrink-0">
-                        <Mic size={16} />
+                <div className="relative">
+                    <button ref={filterBtnRef}
+                        className="ssj-btn text-normal shrink-0 flex items-center justify-center"
+                        title="Filter search results">
+                        <Funnel size={16} />
                     </button>
-
-                    <div className="relative">
-                        <button ref={filterBtnRef}
-                            className="text-normal shrink-0 flex items-center justify-center"
-                            title="Filter search results">
-                            <Funnel size={16} />
-                        </button>
-                        <FilterPanel
-                            filters={filters}
-                            onChange={onFilterChange}
-                            triggerRef={filterBtnRef}
-                        />
-                    </div>
-
-                    <div className="relative">
-                        <button ref={sortBtnRef}
-                            className="text-normal shrink-0 flex items-center justify-center"
-                            title="Sort search results">
-                            <ArrowUpDown size={16} />
-                        </button>
-                        <SortPanel
-                            sortBy={sortBy}
-                            onSortChange={onSortChange}
-                            triggerRef={sortBtnRef}
-                        />
-                    </div>
+                    <FilterPanel
+                        filters={filters}
+                        onChange={onFilterChange}
+                        triggerRef={filterBtnRef}
+                    />
                 </div>
-            </motion.div>
-        </AnimatePresence>
+
+                <div className="relative">
+                    <button ref={sortBtnRef}
+                        className="ssj-btn text-normal shrink-0 flex items-center justify-center"
+                        title="Sort search results">
+                        <ArrowUpDown size={16} />
+                    </button>
+                    <SortPanel
+                        sortBy={sortBy}
+                        onSortChange={onSortChange}
+                        triggerRef={sortBtnRef}
+                    />
+                </div>
+            </div>
+        </div>
+
     );
 }

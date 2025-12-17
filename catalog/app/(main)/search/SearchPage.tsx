@@ -12,12 +12,13 @@ import Breadcrumb from "@/components/navbar/BreadcrumbItem";
 
 export default function JewelrySearch() {
   const searchParams = useSearchParams();
-
-  // 🔹 Read URL query ONCE
   const initialQuery = decodeURIComponent(searchParams.get("q") || "");
 
-  // 🔹 Local, uncontrolled-by-URL input
+  // 🔹 Typing state
   const [inputQuery, setInputQuery] = useState(initialQuery);
+
+  // 🔹 Submitted (actual search) state
+  const [submittedQuery, setSubmittedQuery] = useState(initialQuery);
 
   const [filters, setFilters] = useState<SearchFilters>({});
   const [sortBy, setSortBy] = useState("best-match");
@@ -25,21 +26,20 @@ export default function JewelrySearch() {
   const [isLoading, setIsLoading] = useState(true);
 
   /* ----------------------------
-     Load MiniSearch index ONLY
+     Load MiniSearch index
   ----------------------------- */
   useEffect(() => {
     let cancelled = false;
 
     async function loadIndex() {
       setIsLoading(true);
-
       const res = await fetch("/data/search-index.json");
       const indexJSON = await res.text();
-
       if (cancelled) return;
 
-      const mini = MiniSearch.loadJSON(indexJSON, miniSearchIndexOptions);
-      setSearchIndex(mini);
+      setSearchIndex(
+        MiniSearch.loadJSON(indexJSON, miniSearchIndexOptions)
+      );
       setIsLoading(false);
     }
 
@@ -48,14 +48,18 @@ export default function JewelrySearch() {
   }, []);
 
   /* ----------------------------
-     Search execution
+     Search runs ONLY on submit
   ----------------------------- */
   const results = useSearch(
     searchIndex,
-    inputQuery,
+    submittedQuery,
     filters,
     sortBy
   );
+
+  const handleSearchSubmit = () => {
+    setSubmittedQuery(inputQuery.trim());
+  };
 
   return (
     <div className="container mx-auto">
@@ -66,7 +70,8 @@ export default function JewelrySearch() {
 
       <SearchBar
         query={inputQuery}
-        onQueryChange={setInputQuery}   
+        onQueryChange={setInputQuery}
+        onSearch={handleSearchSubmit}
         filters={filters}
         onFilterChange={(k, v) =>
           setFilters(p => ({ ...p, [k]: v }))
@@ -77,9 +82,9 @@ export default function JewelrySearch() {
       />
 
       <div className="m-4 font-medium">
-        {inputQuery && (
+        {submittedQuery && (
           <span className="text-primary">
-            Search: “{inputQuery}” —{" "}
+            Search: “{submittedQuery}” —{" "}
           </span>
         )}
         {results.length} products found

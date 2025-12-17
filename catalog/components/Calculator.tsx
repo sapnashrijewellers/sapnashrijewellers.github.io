@@ -286,14 +286,15 @@ export default function Calculator() {
           </select>
 
           {showMakingChargeNotice && (
-            <div className="mb-4 p-4 rounded-lg text-sm bg-accent">
+            <div className="mb-4 p-4 rounded-lg text-sm bg-highlight" 
+            title="Making charges vary from product to product. Please contact us on WhatsApp for exact making charges.">
               <p className="font-medium mb-1">
-                मेकिंग चार्ज हर आभूषण में अलग होता है
+                मेकिंग चार्ज हर आभूषण में अलग होता है। यह डिज़ाइन, कारीगरी और वज़न पर निर्भर करता है।
               </p>
               <p className="mb-2">
                 सटीक मेकिंग चार्ज जानने के लिए कृपया हमसे WhatsApp पर संपर्क करें।
               </p>
-              <WhatsappClick product={product} />
+              {product && <WhatsappClick product={product} />}
             </div>
           )}
 

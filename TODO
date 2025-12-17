@@ -13,22 +13,19 @@ Todo:
   ✔ Haar photo @started(25-12-16 15:22) @done(25-12-16 15:22) @lasted(21s)
   ✔ search page fix @started(25-12-16 09:42) @done(25-12-16 19:02) @lasted(9h20m19s)
   ✔ Type page, component & sitemap @started(25-12-17 00:27) @done(25-12-17 00:27) @lasted(39s)  
-  ✔ Hindi font style @started(25-12-16 22:13) @done(25-12-16 22:13) @lasted(2s)
-  ☐ Product Page page -- Banner - Holesale rate mai retail jewellery + HUID + Making Charge @started(25-12-16 11:17)
+  ✔ Hindi font style @started(25-12-16 22:13) @done(25-12-16 22:13) @lasted(2s)  
   ✔ fix banner always bgIamge and bgIamge will come from slug name remove tow other style @started(25-12-16 19:54) @done(25-12-16 22:13) @lasted(2h19m42s)
   ✔ bring Available items on top @started(25-12-16 22:22) @done(25-12-16 22:22) @lasted(9s)
   ☐ Fix Live rate issue
-  ☐ extract rates from Arihant spot
-  Change image on huid page
-  test whatsapp integration
-  fix search issues
-  tag line
-  populate type for product
-  upload new products
-  Available on order text change
-  ☐ App on play store
-  ☐ Calculate price of product link on product page
-  ☐ Add wishlist button on product page
+  ☐ extract rates from Arihant spot  
+  ✔ test whatsapp integration @done(25-12-17 16:06)
+  ✔ fix search issues @done(25-12-17 16:06)
+  ✔ Calculate price of product link on product page @done(25-12-17 16:07)
+  ☐ App on play store  
+  ✔ Add wishlist button on product page @done(25-12-17 16:28)
+  ☐ Shanu: Available on order text change
+  ☐ Shanu: tag line
+  ☐ Shanu:Change image on huid page
 
 
 

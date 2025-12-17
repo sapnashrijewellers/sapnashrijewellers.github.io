@@ -8,7 +8,7 @@ import { Product } from "@/types/catalog";
 import { HighlightsTabs } from "@/components/product/Highlights";
 import ProductGallery from "@/components/product/ProductGallery";
 import WhatsappClick from "@/components/product/WhatAppClick";
-import { CalculatorForm, Rates, Purity, MetalCategory } from "@/types/catalog"
+import { CalculatorForm, CalcRates, Purity, MetalCategory } from "@/types/catalog"
 
 /* ----------------------------- Types ----------------------------- */
 
@@ -83,7 +83,7 @@ export default function Calculator() {
 
     setForm((prev) => {
       if (name === "category") {
-        const category = value as Category;
+        const category = value as MetalCategory;
         return {
           ...prev,
           category,
@@ -110,11 +110,11 @@ export default function Calculator() {
 
   /* ----------------------- Rates ----------------------- */
 
-  const fetchRates = async (): Promise<Rates | null> => {
+  const fetchRates = async (): Promise<CalcRates | null> => {
     try {
       const res = await fetch(`${process.env.BASE_URL}/rate/rates.json`, { cache: "no-store" });
       if (!res.ok) throw new Error("Failed to load rates");
-      return (await res.json()) as Rates;
+      return (await res.json()) as CalcRates;
     } catch (err) {
       console.error(err);
       alert("रेट्स लोड करने में समस्या हुई।");
@@ -149,7 +149,7 @@ export default function Calculator() {
     const rate =
       form.purity === "silverJewellery"
         ? rates.silver * 0.92
-        : rates[form.purity as keyof Rates];
+        : rates[form.purity as keyof CalcRates];
 
     if (!rate || form.weight <= 0) {
       alert("कृपया सही वजन चुनें");

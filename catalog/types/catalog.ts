@@ -86,13 +86,13 @@ export interface CalculatorForm {
   gst: number;
 }
 
-// export interface Rates {
-//   gold24K: number;
-//   gold22K: number;
-//   gold18K: number;
-//   silver: number;
-//   silverJewellery: number;
-// }
+export interface CalcRates {
+  gold24K: number;
+  gold22K: number;
+  gold18K: number;
+  silver: number;
+  silverJewellery: number;
+}
 
 export type MetalCategory = "gold" | "silver";
 

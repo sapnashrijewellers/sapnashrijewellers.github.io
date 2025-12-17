@@ -77,3 +77,28 @@ export interface Type {
   icon: string,
   active: boolean
 }
+
+export interface CalculatorForm {
+  category: MetalCategory;
+  purity: Purity;
+  weight: number;
+  makingCharges: number;
+  gst: number;
+}
+
+// export interface Rates {
+//   gold24K: number;
+//   gold22K: number;
+//   gold18K: number;
+//   silver: number;
+//   silverJewellery: number;
+// }
+
+export type MetalCategory = "gold" | "silver";
+
+export type Purity =
+  | "gold24K"
+  | "gold22K"
+  | "gold18K"
+  | "silver"
+  | "silverJewellery";

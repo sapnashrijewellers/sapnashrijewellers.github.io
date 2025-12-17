@@ -17,7 +17,7 @@
   --color-primary: #A37F2C;
   --color-primary-dark: #713f06;
   --color-surface: #FFFDF9;
-  --color-border: #E5D8C6;
+  --color-border: #051e45;
   --color-accent: #051e45;
   --font-playfair: 'Playfair Display', serif;
   --font-cormorant: 'Cormorant Garamond', serif;
@@ -89,6 +89,19 @@
   .ssj-btn:active {
     transform: scale(0.95);
   }
+  .inputClasses {
+    /* @apply w-full rounded-lg px-3 py-2;  */
+    /* background-color: var(--color-surface); */
+    color: var(--color-text);
+    border-color: var(--color-border);
+    width:100%
+
+  }
+  .labelClasses{
+    @apply block mb-1 font-medium;
+    color: var(--color-text);
+    opacity: 0.85;
+  }
 }
 
 /* ============================
@@ -130,7 +143,7 @@ select,
 textarea {
   background-color: var(--color-surface);
   color: var(--color-text);
-  /* border: 1px solid var(--color-border); */
+  border: 1px solid var(--color-border);
   border-radius: 0.5rem;
   padding: 0.5rem;
 }

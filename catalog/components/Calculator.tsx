@@ -8,33 +8,12 @@ import { Product } from "@/types/catalog";
 import { HighlightsTabs } from "@/components/product/Highlights";
 import ProductGallery from "@/components/product/ProductGallery";
 import WhatsappClick from "@/components/product/WhatAppClick";
+import { CalculatorForm, Rates, Purity, MetalCategory } from "@/types/catalog"
 
 /* ----------------------------- Types ----------------------------- */
 
-type Category = "gold" | "silver";
 
-type Purity =
-  | "gold24K"
-  | "gold22K"
-  | "gold18K"
-  | "silver"
-  | "silverJewellery";
 
-interface CalculatorForm {
-  category: Category;
-  purity: Purity;
-  weight: number;
-  makingCharges: number;
-  gst: number;
-}
-
-interface Rates {
-  gold24K: number;
-  gold22K: number;
-  gold18K: number;
-  silver: number;
-  silverJewellery: number;
-}
 
 /* --------------------------- Component --------------------------- */
 
@@ -52,21 +31,11 @@ export default function Calculator() {
   const [price, setPrice] = useState<number | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [showMakingChargeNotice, setShowMakingChargeNotice] = useState(false);
-
-  /* ----------------------- Form State ----------------------- */
   const lockProductFields = Boolean(product);
-
-  const [form, setForm] = useState<CalculatorForm>({
-    category: "gold",
-    purity: "gold22K",
-    weight: 10,
-    makingCharges: lockProductFields ? 0 : 7,
-    gst: 3,
-  });
 
   /* ----------------------- Constants ----------------------- */
 
-  const defaultPurityByCategory: Record<Category, Purity> = {
+  const defaultPurityByCategory: Record<MetalCategory, Purity> = {
     gold: "gold22K",
     silver: "silver",
   };
@@ -78,8 +47,22 @@ export default function Calculator() {
     silverJewellery: "silverJewellery",
   };
 
-  const categoryFromPurity = (purity: Purity): Category =>
+  const categoryFromPurity = (purity: Purity): MetalCategory =>
     purity.startsWith("gold") ? "gold" : "silver";
+
+  const [form, setForm] = useState<CalculatorForm>({
+    
+    category: (product && lockProductFields) ? (product.purity.startsWith("चाँदी") ? "silver" : "gold") : "gold",
+    purity: (product && lockProductFields) ? productPurityMap[product.purity] : "gold22K",
+    weight: (product && lockProductFields) ? product.weight : 10,
+    makingCharges: lockProductFields ? 0 : 7,
+    gst: 3,
+  });  
+
+  const purityOptions: Purity[] =
+    form.category === "gold"
+      ? ["gold24K", "gold22K", "gold18K"]
+      : ["silver", "silverJewellery"];
 
   const purityLabels: Record<Purity, string> = {
     gold24K: "सोना (24K)",
@@ -88,11 +71,6 @@ export default function Calculator() {
     silver: "चाँदी (99.9)",
     silverJewellery: "चाँदी (जेवर)",
   };
-
-  const purityOptions: Purity[] =
-    form.category === "gold"
-      ? ["gold24K", "gold22K", "gold18K"]
-      : ["silver", "silverJewellery"];
 
   /* ----------------------- Handlers ----------------------- */
 
@@ -188,14 +166,9 @@ export default function Calculator() {
     setLoading(false);
   };
 
-  /* ----------------------- Styles ----------------------- */
 
-  const inputClasses =
-    "w-full border border-border rounded-lg px-3 py-2 bg-background";
-  const labelClasses = "block mb-1 font-medium text-muted-foreground";
-
-  useEffect(() => {
-    if (!product || !product.active || product.available === false) {
+  function setFormFields() {
+    if (!product) {
       setShowMakingChargeNotice(false);
       return;
     }
@@ -219,6 +192,12 @@ export default function Calculator() {
 
     // ✅ show notice ONLY for product-based calculator
     setShowMakingChargeNotice(true);
+  }
+
+  //setFormFields();
+
+  useEffect(() => {
+    setFormFields();
   }, [product]);
 
   /* ----------------------- UI ----------------------- */
@@ -226,29 +205,27 @@ export default function Calculator() {
   return (
     <div className="container mx-auto px-4">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-
-
         {/* ---------------- Calculator Section ---------------- */}
         <div>
-          <label className={labelClasses}>आभूषण का प्रकार</label>
+          <label className="labelClasses">आभूषण का प्रकार</label>
           <select
             name="category"
             value={form.category}
             onChange={handleChange}
             disabled={lockProductFields}
-            className={`${inputClasses} mb-4`}
+            className={`inputClasses mb-4`}
           >
             <option value="gold">सोना</option>
             <option value="silver">चाँदी</option>
           </select>
 
-          <label className={labelClasses}>शुद्धता</label>
+          <label className={`labelClasses`}>शुद्धता</label>
           <select
             name="purity"
             value={form.purity}
             onChange={handleChange}
             disabled={lockProductFields}
-            className={`${inputClasses} mb-4`}
+            className={`inputClasses mb-4`}
           >
             {purityOptions.map((p) => (
               <option key={p} value={p}>
@@ -257,46 +234,44 @@ export default function Calculator() {
             ))}
           </select>
 
-          <label className={labelClasses}>वज़न (ग्राम)</label>
+          <label className={`labelClasses`}>वज़न (ग्राम)</label>
           <input
             type="number"
             name="weight"
             value={form.weight}
             onChange={handleChange}
-            className={`${inputClasses} mb-4`}
+            className={`inputClasses mb-4`}
           />
 
-          <label className={labelClasses}>मेकिंग चार्ज (%)</label>
+          <label className={`labelClasses`}>मेकिंग चार्ज (%)</label>
           <input
             type="number"
             name="makingCharges"
             value={form.makingCharges}
             onChange={handleChange}
-            className={`${inputClasses} mb-4`}
+            className={`inputClasses mb-4`}
           />
 
-          <label className={labelClasses}>GST (%)</label>
+          <label className={`labelClasses`}>GST (%)</label>
           <select
             name="gst"
             value={form.gst}
             onChange={handleChange}
-            className={`${inputClasses} mb-6`}
+            className={`inputClasses mb-6`}
           >
             <option value={3}>3%</option>
           </select>
 
-          {showMakingChargeNotice && (
-            <div className="mb-4 p-4 rounded-lg text-sm bg-highlight" 
+          <div className="mb-4 p-4 rounded-lg text-sm bg-highlight"
             title="Making charges vary from product to product. Please contact us on WhatsApp for exact making charges.">
-              <p className="font-medium mb-1">
-                मेकिंग चार्ज हर आभूषण में अलग होता है। यह डिज़ाइन, कारीगरी और वज़न पर निर्भर करता है।
-              </p>
-              <p className="mb-2">
-                सटीक मेकिंग चार्ज जानने के लिए कृपया हमसे WhatsApp पर संपर्क करें।
-              </p>
-              {product && <WhatsappClick product={product} />}
-            </div>
-          )}
+            <p className="font-medium mb-1">
+              मेकिंग चार्ज हर आभूषण में अलग होता है। यह डिज़ाइन, कारीगरी और वज़न पर निर्भर करता है।
+            </p>
+            <p className="mb-2">
+              सटीक मेकिंग चार्ज जानने के लिए कृपया हमसे WhatsApp पर संपर्क करें।
+            </p>
+            {product && <WhatsappClick product={product} />}
+          </div>
 
           <button
             onClick={calculatePrice}
@@ -322,7 +297,6 @@ export default function Calculator() {
           <div className="space-y-4">
             <h2 className="text-2xl font-semibold">Calculate price of {product.name}</h2>
             <ProductGallery product={product} />
-            <WhatsappClick product={product} />
             <HighlightsTabs product={product} />
           </div>
         )}

@@ -16,13 +16,15 @@ Todo:
   ✔ Hindi font style @started(25-12-16 22:13) @done(25-12-16 22:13) @lasted(2s)  
   ✔ fix banner always bgIamge and bgIamge will come from slug name remove tow other style @started(25-12-16 19:54) @done(25-12-16 22:13) @lasted(2h19m42s)
   ✔ bring Available items on top @started(25-12-16 22:22) @done(25-12-16 22:22) @lasted(9s)
-  ☐ Fix Live rate issue
-  ☐ extract rates from Arihant spot  
   ✔ test whatsapp integration @done(25-12-17 16:06)
   ✔ fix search issues @done(25-12-17 16:06)
   ✔ Calculate price of product link on product page @done(25-12-17 16:07)
-  ☐ App on play store  
   ✔ Add wishlist button on product page @done(25-12-17 16:28)
+  ✔ Image blur issue on mobile zoom @started(25-12-17 16:32) @done(25-12-17 16:32) @lasted(58s)
+  ☐ App on play store  
+  ☐ Fix Live rate issue
+  ☐ extract rates from Arihant spot  
+  
   ☐ Shanu: Available on order text change
   ☐ Shanu: tag line
   ☐ Shanu:Change image on huid page

@@ -54,7 +54,7 @@ export default function ProductGallery({ product }: { product: Product }) {
   /* ---------------- Hi-res preload ---------------- */
   useEffect(() => {
     const img = new window.Image();
-    img.src = `${process.env.BASE_URL}/static/img/products/hires/${activeImage}`;
+    img.src = `${process.env.BASE_URL}/static/img/products/optimized/${activeImage}`;
   }, [activeImage]);
 
   return (
@@ -128,7 +128,7 @@ export default function ProductGallery({ product }: { product: Product }) {
             onTouchEnd={handleTap}
           >
             <Image
-              src={`${process.env.BASE_URL}/static/img/products/thumbnail/${activeImage}`}
+              src={`${process.env.BASE_URL}/static/img/products/optimized/${activeImage}`}
               alt="Zoomed product"
               fill
               className="object-contain"

@@ -1,7 +1,7 @@
 "use client"; // ✅ Must be first
 
 import { useState } from "react";
-import IndianRupeeRate from "@/components/IndianRupeeRate";
+import IndianRupeeRate from "@/components/common/IndianRupeeRate";
 
 export default function Calculator() {
   const [form, setForm] = useState({

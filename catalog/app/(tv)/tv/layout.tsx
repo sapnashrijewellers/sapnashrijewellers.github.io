@@ -1,9 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import "@/app/globals.css";
 import { Noto_Sans_Devanagari } from "next/font/google";
-import LogoHeader from "@/components/LogoHeader";
-import RatesPanel from "@/components/RatesPanel";
-import WhatsAppContact from "@/components/WhatsAppContact";
+import LogoHeader from "@/components/tv/LogoHeader";
+import RatesPanel from "@/components/tv/RatesPanel";
+import WhatsAppContact from "@/components/tv/WhatsAppContact";
 import Image from "next/image"
 
 

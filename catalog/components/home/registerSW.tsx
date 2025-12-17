@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { subscribeUser } from "../utils/pubsub.js";
+import { subscribeUser } from "@/utils/pubsub.js";
 
 const workerURL = "https://tight-sky-9fb5.ssjn.workers.dev/";
 export default function RegisterSW() {

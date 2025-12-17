@@ -3,12 +3,12 @@ import type { Product } from "@/types/catalog";
 import products from "@/data/products.json";
 import categories from "@/data/categories.json";
 import { notFound } from "next/navigation";
-import ProductGallery from "@/components/ProductGallery";
-import ProductShare from "@/components/ProductShare";
-import { HighlightsTabs } from "@/components/Highlights";
-import WhatsappClick from "@/components/WhatAppClick";
+import ProductGallery from "@/components/product/ProductGallery";
+import ProductShare from "@/components/product/ProductShare";
+import { HighlightsTabs } from "@/components/product/Highlights";
+import WhatsappClick from "@/components/product/WhatAppClick";
 import Image from "next/image"
-import Breadcrumb from "@/components/BreadcrumbItem";
+import Breadcrumb from "@/components/navbar/BreadcrumbItem";
 
 
 const baseURL = process.env.BASE_URL;

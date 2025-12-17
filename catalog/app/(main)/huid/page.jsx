@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Breadcrumb from "@/components/BreadcrumbItem";
+import Breadcrumb from "@/components/navbar/BreadcrumbItem";
 
 
 const baseURL = process.env.BASE_URL;

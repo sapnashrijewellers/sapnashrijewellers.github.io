@@ -1,8 +1,8 @@
-import CategoryCard from "@/components/CategoryCard";
+import CategoryCard from "@/components/home/CategoryCard";
 import categories from "@/data/categories.json";
 import products from "@/data/products.json";
 import RotatingBanner from "@/components/banners/RotatingBanner";
-import JewelleryTypeBar from "@/components/JewelleryType"
+import JewelleryTypeBar from "@/components/home/JewelleryType"
 
 //const categories = dataRaw as NewCatalog;
 

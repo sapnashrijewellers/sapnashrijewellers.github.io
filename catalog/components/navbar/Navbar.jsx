@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import IndianRupeeRate from "./IndianRupeeRate";
+import IndianRupeeRate from "../common/IndianRupeeRate";
 import Image from "next/image";
 import DesktopTopLinks from "./DesktopNavLinks";
 

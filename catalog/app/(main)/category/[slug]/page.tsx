@@ -2,9 +2,9 @@ import { Metadata } from "next";
 import type { Product, Category } from "@/types/catalog";
 import products from "@/data/products.json";
 import categories from "@/data/categories.json";
-import ProductCard from "@/components/ProductCard";
+import ProductCard from "@/components/product/ProductCard";
 import { notFound } from "next/navigation";
-import Breadcrumb from "@/components/BreadcrumbItem";
+import Breadcrumb from "@/components/navbar/BreadcrumbItem";
 
 
 const baseURL = process.env.BASE_URL;

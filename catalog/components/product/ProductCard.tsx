@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Product } from "@/types/catalog";
-import WishlistButton from "@/components/WishlistButton";
+import WishlistButton from "@/components/common/WishlistButton";
 
 export default function ProductCard({ product }: { product: Product }) {  
 const baseURL = process.env.BASE_URL;

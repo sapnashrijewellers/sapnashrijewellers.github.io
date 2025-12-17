@@ -3,12 +3,12 @@
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import MiniSearch from "minisearch";
-import ProductCard from "@/components/ProductCard";
+import ProductCard from "@/components/product/ProductCard";
 import { SearchFilters } from "@/types/catalog";
 import SearchBar from "@/search/SearchBar";
 import { useSearch } from "@/search/useSearch";
 import { miniSearchIndexOptions } from "@/search/shared";
-import Breadcrumb from "@/components/BreadcrumbItem";
+import Breadcrumb from "@/components/navbar/BreadcrumbItem";
 
 export default function JewelrySearch() {
   const searchParams = useSearchParams();

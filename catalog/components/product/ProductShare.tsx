@@ -1,5 +1,5 @@
 "use client";
-import NativeShare from "@/components/NativeShare";
+import NativeShare from "@/components/product/NativeShare";
 import { Product } from "@/types/catalog"
 import {
   FaWhatsapp,

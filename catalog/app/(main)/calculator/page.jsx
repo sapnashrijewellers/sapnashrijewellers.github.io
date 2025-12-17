@@ -1,6 +1,6 @@
 // ✅ Server Component
 import Calculator from "@/components/Calculator";
-import Breadcrumb from "@/components/BreadcrumbItem";
+import Breadcrumb from "@/components/navbar/BreadcrumbItem";
 
 
 const title = `ज्वेलरी प्राइस कैलकुलेटर`;

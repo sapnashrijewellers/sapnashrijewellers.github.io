@@ -1,6 +1,6 @@
 // /app/about-us/page.jsx
 import  Image  from "next/image"
-import Breadcrumb from "@/components/BreadcrumbItem";
+import Breadcrumb from "@/components/navbar/BreadcrumbItem";
 
 // ✅ Dynamic Open Graph + Twitter meta tags
 

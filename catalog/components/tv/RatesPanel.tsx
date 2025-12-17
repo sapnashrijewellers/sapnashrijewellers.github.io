@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import IndianRupeeRate from "./IndianRupeeRate";
+import IndianRupeeRate from "@/components/common/IndianRupeeRate";
 
 type Rates = {
   asOn: string;

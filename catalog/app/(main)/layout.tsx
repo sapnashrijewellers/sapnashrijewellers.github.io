@@ -1,14 +1,14 @@
 import type { Metadata, Viewport } from "next";
 import "@/app/globals.css";
 import { Noto_Sans_Devanagari } from "next/font/google";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import FooterTrust from "@/components/FooterTrust";
-import Ticker from "@/components/Ticker";
-import FloatingWhatsAppButton from "@/components/FloatingWhatsAppButton";
-import RegisterSW from "@/components/registerSW";
+import Navbar from "@/components/navbar/Navbar";
+import Footer from "@/components/home/Footer";
+import FooterTrust from "@/components/home/FooterTrust";
+import Ticker from "@/components/home/Ticker";
+import FloatingWhatsAppButton from "@/components/home/FloatingWhatsAppButton";
+import RegisterSW from "@/components/home/registerSW";
 import Script from "next/script"
-import MobileNavbar from "@/components/MobileNavbar"
+import MobileNavbar from "@/components/navbar/MobileNavbar"
 
 const notoDevanagari = Noto_Sans_Devanagari({
   subsets: ["latin", "devanagari"],

@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import ProductCard from "@/components/ProductCard";
+import ProductCard from "@/components/product/ProductCard";
 import products from "@/data/products.json";
-import Breadcrumb from "@/components/BreadcrumbItem";
+import Breadcrumb from "@/components/navbar/BreadcrumbItem";
 
 
 export default function WishlistPage() {

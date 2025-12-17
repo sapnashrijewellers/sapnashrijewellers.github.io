@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import type { Product, Type } from "@/types/catalog";
 import products from "@/data/products.json";
 import types from "@/data/types.json";
-import Breadcrumb from "@/components/BreadcrumbItem";
+import Breadcrumb from "@/components/navbar/BreadcrumbItem";
 import JewelryTypeClient from "./JewelryTypeClient";
 
 const baseURL = process.env.BASE_URL!;

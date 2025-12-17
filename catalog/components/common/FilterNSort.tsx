@@ -1,8 +1,8 @@
 "use client";
 
 import { Funnel, ArrowUpDown } from "lucide-react";
-import { FilterPanel } from "@/search/FilterPanel";
-import { SortPanel } from "@/search/SortPanel";
+import { FilterPanel } from "@/components/common/FilterPanel";
+import { SortPanel } from "@/components/common/SortPanel";
 import { SearchFilters } from "@/types/catalog";
 import { useRef } from "react";
 

@@ -3,8 +3,8 @@
 import { useMemo, useState } from "react";
 import type { Product } from "@/types/catalog";
 import { SearchFilters } from "@/types/catalog";
-import FilterNSort from "@/components/FilterNSort";
-import ProductCard from "@/components/ProductCard";
+import FilterNSort from "@/components/common/FilterNSort";
+import ProductCard from "@/components/product/ProductCard";
 
 export default function JewelryTypeClient(
     { products }: { products: Product[] }

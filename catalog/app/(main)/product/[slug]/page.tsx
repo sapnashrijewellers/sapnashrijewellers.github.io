@@ -8,6 +8,7 @@ import ProductShare from "@/components/product/ProductShare";
 import { HighlightsTabs } from "@/components/product/Highlights";
 import ProductGallery from "@/components/product/ProductGallery";
 import WhatsappClick from "@/components/product/WhatAppClick";
+import CalculatePrice from "@/components/product/CalculatePriceButton";
 import Image from "next/image"
 import Breadcrumb from "@/components/navbar/BreadcrumbItem";
 
@@ -130,6 +131,7 @@ const category = categories.find(c=> c.name===product.category);
 
         {/* Contact */}
         <WhatsappClick product={product} />
+        <CalculatePrice product={product} />
         {/* Highlights Tabs */}
         <HighlightsTabs product={product} />
 

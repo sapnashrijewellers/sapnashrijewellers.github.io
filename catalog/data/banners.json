@@ -1,20 +1,5 @@
 [
   {
-    "rank": 0,
-    "title": "",
-    "subtitle": "",
-    "subtitle1": "",
-    "link": "/#",
-    "icon": "",
-    "textColor": "",
-    "fontFamily": "",
-    "active": true,
-    "position": "bottom-left",
-    "textAnimation": "reveal-up",
-    "imageAnimation": "fade",
-    "bgImage": "/img/before-buy-banner.png"
-  },
-  {
     "rank": 3,
     "title": "Rajputani Jewellery",
     "subtitle": "Timeless royal designs inspired by heritage",
@@ -25,7 +10,7 @@
     "fontFamily": "font-playfair",
     "active": true,
     "position": "bottom-left",
-    "textAnimation": "fade-slide",
+    "textAnimation": "slide-up",
     "imageAnimation": "pan-right",
     "bgImage": "/img/banner/bajuband.png"
   },
@@ -40,7 +25,7 @@
     "fontFamily": "font-playfair",
     "active": true,
     "position": "top-right",
-    "textAnimation": "zoom-fade",
+    "textAnimation": "slide-down",
     "imageAnimation": "subtle-zoom",
     "bgImage": "/img/banner/bride.jpg"
   },
@@ -55,7 +40,7 @@
     "fontFamily": "font-playfair",
     "active": true,
     "position": "top-left",
-    "textAnimation": "flip-soft",
+    "textAnimation": "fade",
     "imageAnimation": "pan-right",
     "bgImage": "/img/banner/custom.png"
   },
@@ -70,7 +55,7 @@
     "fontFamily": "font-yatra",
     "active": true,
     "position": "bottom-left",
-    "textAnimation": "reveal-up",
+    "textAnimation": "zoom-fade",
     "imageAnimation": "fade",
     "bgImage": "/img/products/optimized/IMG_20251003_062204.webp"
   }

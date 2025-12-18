@@ -33,10 +33,10 @@ function resolveLucideIcon(name?: string) {
    Position map
 --------------------------------------------- */
 const positionMap: Record<string, string> = {
-  "top-left": "top-3 left-3 items-start text-left",
-  "top-right": "top-3 right-3 items-end text-right",
-  "bottom-left": "bottom-3 left-3 items-start text-left",
-  "bottom-right": "bottom-3 right-3 items-end text-right"
+  "top-left": "top-0 left-0 items-start text-left",
+  "top-right": "top-0 right-0 items-end text-right",
+  "bottom-left": "bottom-0 left-0 items-start text-left",
+  "bottom-right": "bottom-0 right-0 items-end text-right"
 };
 
 /* --------------------------------------------
@@ -81,7 +81,7 @@ const textAnimationMap = {
   }
 } as const;
 
-type TextAnimationKey = keyof typeof textAnimationMap;
+
 
 
 /* --------------------------------------------
@@ -110,14 +110,14 @@ const imageAnimationMap = {
   }
 } as const;
 
-type ImageAnimationKey = keyof typeof imageAnimationMap;
+
 
 /* --------------------------------------------
    Component
 --------------------------------------------- */
 export default function RotatingBanner({
   interval = 15000,
-  height = "h-96"
+  height = "h-120"
 }: Props) {
   const items = banners
     .filter(b => b.active)
@@ -126,15 +126,7 @@ export default function RotatingBanner({
   const [index, setIndex] = useState(0);
 
   const reducedMotion = useReducedMotion();
-  const bannerRef = useRef<HTMLDivElement | null>(null);
-
-  const inView = useInView(bannerRef, {
-    once: true,
-    margin: "-120px"
-  });
-
-  const isFirstBanner = index === 0;
-  const shouldAnimate = !reducedMotion && (!isFirstBanner || inView);
+  const bannerRef = useRef<HTMLDivElement | null>(null);  
 
   /* --------------------------------------------
      Rotation timer

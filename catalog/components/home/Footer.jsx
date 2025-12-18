@@ -1,18 +1,26 @@
-// components/Footer.jsx
+"use client";
+
 import {
   FaFacebookF, FaInstagram, FaYoutube, FaTv, FaWhatsapp,
   FaUserTie, FaShieldAlt,
-  FaExclamationCircle, FaMapMarkerAlt
+  FaMapMarkerAlt
 } from "react-icons/fa";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import JewelleryTipsWidget from "@/components/common/JewelleryTipsWidget";
+
 const baseURL = process.env.BASE_URL;
+
 export default function Footer() {
+  const [tipsOpen, setTipsOpen] = useState(false);
+
   const phone = "918234042231";
   const whatsappUrl = `https://wa.me/${phone}`;
   const currentYear = new Date().getFullYear();
 
   return (
+    
     <footer className="bg-background text-foreground p-4">
       <div className="max-w-6xl mx-auto space-y-6">
         {/* Disclaimer */}
@@ -123,6 +131,11 @@ export default function Footer() {
             <FaUserTie className="text-primary-dark mt-[1px]" />
             About Us
           </Link>
+          <button
+          onClick={() => setTipsOpen(true)}
+          className="ssj-btn flex items-center gap-2 mt-4 transition-colors text-primary underline hover:text-primary-dark"
+        >          Jewellery Buying Tips
+        </button>
           <Link
             href="/privacy"
             className="flex items-center gap-2 mt-4 transition-colors"
@@ -153,6 +166,11 @@ export default function Footer() {
       <p className="text-center text-xs text-muted-foreground mt-6">
         &copy; {currentYear} Sapna Shri Jewellers. All rights reserved.
       </p>
+      <JewelleryTipsWidget
+        isOpen={tipsOpen}
+        onOpen={() => setTipsOpen(true)}
+        onClose={() => setTipsOpen(false)}
+      />
     </footer>
   );
 }

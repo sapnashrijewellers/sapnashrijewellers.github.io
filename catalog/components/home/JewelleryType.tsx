@@ -17,7 +17,7 @@ function resolveLucideIcon(name?: string) {
 }
 export default function JewelleryTypeBar() {
   return (
-    <section className="relative w-full py-6">
+    <section className="relative w-full py-1">
       <div className="flex gap-4 overflow-x-auto p-4 no-scrollbar">
         {types
           .filter((t: Type) => t.active)

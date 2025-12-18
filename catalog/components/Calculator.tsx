@@ -8,11 +8,7 @@ import { Product } from "@/types/catalog";
 import { HighlightsTabs } from "@/components/product/Highlights";
 import ProductGallery from "@/components/product/ProductGallery";
 import WhatsappClick from "@/components/product/WhatAppClick";
-import { CalculatorForm, CalcRates, Purity, MetalCategory } from "@/types/catalog"
-
-/* ----------------------------- Types ----------------------------- */
-
-
+import { CalculatorForm, CalcRates } from "@/types/catalog"
 
 
 /* --------------------------- Component --------------------------- */
@@ -35,77 +31,31 @@ export default function Calculator() {
 
   /* ----------------------- Constants ----------------------- */
 
-  const defaultPurityByCategory: Record<MetalCategory, Purity> = {
-    gold: "gold22K",
-    silver: "silver",
-  };
-  const productPurityMap: Record<string, Purity> = {
-    "22K": "gold22K",
-    "24K": "gold24K",
-    "18K": "gold18K",
-    silver: "silver",
-    silverJewellery: "silverJewellery",
-  };
-
-  const categoryFromPurity = (purity: Purity): MetalCategory =>
-    purity.startsWith("gold") ? "gold" : "silver";
-
   const [form, setForm] = useState<CalculatorForm>({
-    
-    category: (product && lockProductFields) ? (product.purity.startsWith("चाँदी") ? "silver" : "gold") : "gold",
-    purity: (product && lockProductFields) ? productPurityMap[product.purity] : "gold22K",
-    weight: (product && lockProductFields) ? product.weight : 10,
-    makingCharges: lockProductFields ? 0 : 7,
+    purity: product ? product.purity : "gold22K",
+    weight: product ? product.weight : 10,
+    makingCharges: product ? "" : 7, // ✅ blank if product-based
     gst: 3,
-  });  
-
-  const purityOptions: Purity[] =
-    form.category === "gold"
-      ? ["gold24K", "gold22K", "gold18K"]
-      : ["silver", "silverJewellery"];
-
-  const purityLabels: Record<Purity, string> = {
-    gold24K: "सोना (24K)",
-    gold22K: "सोना (22K)",
-    gold18K: "सोना (18K)",
-    silver: "चाँदी (99.9)",
-    silverJewellery: "चाँदी (जेवर)",
-  };
+  });
 
   /* ----------------------- Handlers ----------------------- */
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     const { name, value } = e.target;
-    if (lockProductFields && (name === "category" || name === "purity")) {
-      return;
-    }
 
-    setForm((prev) => {
-      if (name === "category") {
-        const category = value as MetalCategory;
-        return {
-          ...prev,
-          category,
-          purity: defaultPurityByCategory[category],
-        };
-      }
+    if (lockProductFields && name === "purity") return;
 
-      if (name === "purity") {
-        const purity = value as Purity;
-        return {
-          ...prev,
-          purity,
-          category: categoryFromPurity(purity),
-        };
-      }
-
-      return {
-        ...prev,
-        [name]:
-          e.target.type === "number" ? Number(value) : (value as Purity),
-      };
-    });
+    setForm(prev => ({
+      ...prev,
+      [name]:
+        name === "makingCharges"
+          ? value === "" ? "" : Number(value)
+          : e.target.type === "number"
+            ? Number(value)
+            : value,
+    }));
   };
 
   /* ----------------------- Rates ----------------------- */
@@ -125,26 +75,17 @@ export default function Calculator() {
   /* ----------------------- Calculation ----------------------- */
 
   const calculatePrice = async () => {
-    if (!purityOptions.includes(form.purity)) {
-      alert("अमान्य शुद्धता चयन");
-      return;
-    }
-
-    if (lockProductFields && form.makingCharges === 0) {
+    if (lockProductFields && form.makingCharges === "") {
       setShowMakingChargeNotice(true);
       return;
-    } else {
-      setShowMakingChargeNotice(false);
     }
 
+    setShowMakingChargeNotice(false);
     setLoading(true);
     setPrice(null);
 
     const rates = await fetchRates();
-    if (!rates) {
-      setLoading(false);
-      return;
-    }
+    if (!rates) return setLoading(false);
 
     const rate =
       form.purity === "silverJewellery"
@@ -157,8 +98,9 @@ export default function Calculator() {
       return;
     }
 
+    const makingPercent = Number(form.makingCharges);
     const base = form.weight * rate;
-    const making = (form.makingCharges / 100) * base;
+    const making = (makingPercent / 100) * base;
     const subtotal = base + making;
     const gstAmount = (form.gst / 100) * subtotal;
 
@@ -167,37 +109,17 @@ export default function Calculator() {
   };
 
 
-  function setFormFields() {
-    if (!product) {
-      setShowMakingChargeNotice(false);
-      return;
-    }
-
-    const mappedPurity = productPurityMap[product.purity];
-
-    if (!mappedPurity) {
-      console.warn("Unsupported product purity:", product.purity);
-      return;
-    }
-
-    const derivedCategory = categoryFromPurity(mappedPurity);
+  useEffect(() => {
+    if (!product) return;
 
     setForm({
-      category: derivedCategory,
-      purity: mappedPurity,
+      purity: product.purity,
       weight: product.weight,
-      makingCharges: lockProductFields ? 0 : 7, // 🔒 forced
+      makingCharges: "", // ✅ blank
       gst: 3,
     });
 
-    // ✅ show notice ONLY for product-based calculator
-    setShowMakingChargeNotice(true);
-  }
-
-  //setFormFields();
-
-  useEffect(() => {
-    setFormFields();
+    setShowMakingChargeNotice(false);
   }, [product]);
 
   /* ----------------------- UI ----------------------- */
@@ -207,19 +129,7 @@ export default function Calculator() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
         {/* ---------------- Calculator Section ---------------- */}
         <div>
-          <label className="labelClasses">आभूषण का प्रकार</label>
-          <select
-            name="category"
-            value={form.category}
-            onChange={handleChange}
-            disabled={lockProductFields}
-            className={`inputClasses mb-4`}
-          >
-            <option value="gold">सोना</option>
-            <option value="silver">चाँदी</option>
-          </select>
-
-          <label className={`labelClasses`}>शुद्धता</label>
+          <label className={`labelClasses`}>Purity</label>
           <select
             name="purity"
             value={form.purity}
@@ -227,37 +137,46 @@ export default function Calculator() {
             disabled={lockProductFields}
             className={`inputClasses mb-4`}
           >
-            {purityOptions.map((p) => (
-              <option key={p} value={p}>
-                {purityLabels[p]}
-              </option>
-            ))}
+            <option value="gold22K">Gold 22K</option>
+            <option value="gold24K">Gold 24K</option>
+            <option value="gold18K">Gold 18K</option>
+            <option value="silver">Silver 99%</option>
+            <option value="silverJewellery">Silver Jewellery</option>
+
           </select>
 
-          <label className={`labelClasses`}>वज़न (ग्राम)</label>
+          <label className={`labelClasses`}>Weight (gm)</label>
           <input
             type="number"
             name="weight"
             value={form.weight}
             onChange={handleChange}
+            disabled={lockProductFields}
             className={`inputClasses mb-4`}
           />
 
-          <label className={`labelClasses`}>मेकिंग चार्ज (%)</label>
+          <label className={`labelClasses`}>Making Charges (%)</label>
           <input
             type="number"
             name="makingCharges"
             value={form.makingCharges}
             onChange={handleChange}
-            className={`inputClasses mb-4`}
+            placeholder="WhatsApp for charges"
+            className="inputClasses mb-4"
+            min="0"
+            max="100"
           />
-
+          {showMakingChargeNotice && (
+            <p className="text-sm text-red-600 mt-2">
+              * Please contact on WhatsApp to get exact making changes.
+            </p>
+          )}
           <label className={`labelClasses`}>GST (%)</label>
           <select
             name="gst"
             value={form.gst}
             onChange={handleChange}
-            className={`inputClasses mb-6`}
+            className={`inputClasses mb-6`}            
           >
             <option value={3}>3%</option>
           </select>

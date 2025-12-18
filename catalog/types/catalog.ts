@@ -79,10 +79,9 @@ export interface Type {
 }
 
 export interface CalculatorForm {
-  category: MetalCategory;
-  purity: Purity;
+  purity: string;
   weight: number;
-  makingCharges: number;
+  makingCharges: number | ""; // ← key fix
   gst: number;
 }
 
@@ -94,11 +93,11 @@ export interface CalcRates {
   silverJewellery: number;
 }
 
-export type MetalCategory = "gold" | "silver";
+//export type MetalCategory = "gold" | "silver";
 
-export type Purity =
-  | "gold24K"
-  | "gold22K"
-  | "gold18K"
-  | "silver"
-  | "silverJewellery";
+// export type Purity =
+//   | "gold24K"
+//   | "gold22K"
+//   | "gold18K"
+//   | "silver"
+//   | "silverJewellery";

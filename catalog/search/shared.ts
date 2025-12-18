@@ -1,4 +1,4 @@
-import MiniSearch, {
+import {
   type Options as MiniSearchIndexOptions,
   type SearchOptions as MiniSearchSearchOptions
 } from "minisearch";
@@ -19,6 +19,7 @@ export const miniSearchIndexOptions: MiniSearchIndexOptions = {
   storeFields: [
     "id",
     "slug",
+    "name",
     "images",
     "category",
     "purity",

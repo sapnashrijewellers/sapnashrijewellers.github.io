@@ -11,13 +11,9 @@ export interface BannerItem {
   title: string;
   subtitle?: string;
   icon?: LucideIcon;
-  textColor?: string; // e.g. "text-white"
-  bgType: "solid" | "gradient" | "dual";
-  bgColor?: string; // for solid
+  textColor?: string; // e.g. "text-white"    
   gradientFrom?: string; // for gradient
   gradientTo?: string;   // for gradient
-  dualLeft?: string; // for dual background
-  dualRight?: string;
 }
 
 interface BannerProps {
@@ -38,34 +34,10 @@ export default function RotatingBanner({ items, interval = 5000, height = "h-64"
 
   const current = items[index];
 
-  const renderBackground = () => {
-    if (current.bgType === "solid") {
-      return `${current.bgColor}`;
-    }
-
-    if (current.bgType === "gradient") {
-      return `bg-gradient-to-r from-${current.gradientFrom} to-${current.gradientTo}`;
-    }
-
-    if (current.bgType === "dual") {
-      return "";
-    }
-
-    return "bg-gray-800";
-  };
+ 
 
   return (
-    <div className={`relative w-full overflow-hidden rounded-2xl shadow-lg ${height}`}>
-      {/* Background */}
-      {current.bgType !== "dual" ? (
-        <div className={`absolute inset-0 ${renderBackground()}`} />
-      ) : (
-        <div className="absolute inset-0 grid grid-cols-2">
-          <div className={`${current.dualLeft}`} />
-          <div className={`${current.dualRight}`} />
-        </div>
-      )}
-
+    <div className={`relative w-full overflow-hidden rounded-2xl shadow-lg ${height}`}> 
       {/* Content */}
       <motion.div
         key={current.id}

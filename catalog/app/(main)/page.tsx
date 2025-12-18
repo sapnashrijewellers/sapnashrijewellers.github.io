@@ -71,7 +71,9 @@ export default function Home() {
         <h2 className="text-2xl p-2">Our Signature Collections</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
 
-          {categories.sort((a, b) => a.rank - b.rank).map(cat => {
+          {categories
+          .filter(c=> c.active)
+          .sort((a, b) => a.rank - b.rank).map(cat => {
             const productsForCategory = products.filter(p => p.category == cat.name) || [];
             if (productsForCategory.length === 0) {
               return null;

@@ -1,106 +1,291 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { motion, AnimatePresence, useInView, useReducedMotion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
 import * as Icons from "lucide-react";
 import type { LucideProps } from "lucide-react";
 import type { ComponentType } from "react";
-import Link from "next/link";
-import Image from "next/image";
+
 import banners from "@/data/banners.json";
 
 interface Props {
   interval?: number;
   height?: string;
 }
-const baseURL = process.env.BASE_URL;
+
+const baseURL = process.env.BASE_URL ?? "";
+
+/* --------------------------------------------
+   Icon resolver
+--------------------------------------------- */
 const iconMap = Icons as unknown as Record<
   string,
   ComponentType<LucideProps>
 >;
 
 function resolveLucideIcon(name?: string) {
-  if (!name) return null;
-  return iconMap[name] ?? null;
+  return name && iconMap[name] ? iconMap[name] : null;
 }
+
+/* --------------------------------------------
+   Position map
+--------------------------------------------- */
+const positionMap: Record<string, string> = {
+  "top-left": "top-3 left-3 items-start text-left",
+  "top-right": "top-3 right-3 items-end text-right",
+  "bottom-left": "bottom-3 left-3 items-start text-left",
+  "bottom-right": "bottom-3 right-3 items-end text-right"
+};
+
+/* --------------------------------------------
+   Text animation map
+--------------------------------------------- */
+const textAnimationMap = {
+  "fade-slide": {
+    initial: { opacity: 0, x: 40 },
+    animate: { opacity: 1, x: 0 },
+    exit: { opacity: 0, x: -40 }
+  },
+  "slide-up": {
+    initial: { opacity: 0, y: 40 },
+    animate: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: -20 }
+  },
+  "slide-down": {
+    initial: { opacity: 0, y: -40 },
+    animate: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: 20 }
+  },
+  fade: {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    exit: { opacity: 0 }
+  },
+  "zoom-fade": {
+    initial: { opacity: 0, scale: 0.92 },
+    animate: { opacity: 1, scale: 1 },
+    exit: { opacity: 0, scale: 1.05 }
+  },
+  "reveal-up": {
+    initial: { opacity: 0, y: 60 },
+    animate: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: -40 }
+  },
+
+  "flip-soft": {
+    initial: { opacity: 0, rotateX: 18, y: 30 },
+    animate: { opacity: 1, rotateX: 0, y: 0 },
+    exit: { opacity: 0, rotateX: -12, y: -20 }
+  }
+} as const;
+
+type TextAnimationKey = keyof typeof textAnimationMap;
+
+
+/* --------------------------------------------
+   Image animation map
+--------------------------------------------- */
+const imageAnimationMap = {
+  none: {
+    initial: {},
+    animate: {},
+    exit: {}
+  },
+  "subtle-zoom": {
+    initial: { scale: 1.08 },
+    animate: { scale: 1 },
+    exit: { scale: 1.05 }
+  },
+  fade: {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    exit: { opacity: 0 }
+  },
+  "pan-right": {
+    initial: { scale: 1.1, x: -30 },
+    animate: { scale: 1, x: 0 },
+    exit: { scale: 1.05, x: 30 }
+  }
+} as const;
+
+type ImageAnimationKey = keyof typeof imageAnimationMap;
+
+/* --------------------------------------------
+   Component
+--------------------------------------------- */
 export default function RotatingBanner({
   interval = 15000,
   height = "h-96"
 }: Props) {
-  const items = banners;
+  const items = banners
+    .filter(b => b.active)
+    .sort((a, b) => a.rank - b.rank);
+
   const [index, setIndex] = useState(0);
 
+  const reducedMotion = useReducedMotion();
+  const bannerRef = useRef<HTMLDivElement | null>(null);
+
+  const inView = useInView(bannerRef, {
+    once: true,
+    margin: "-120px"
+  });
+
+  const isFirstBanner = index === 0;
+  const shouldAnimate = !reducedMotion && (!isFirstBanner || inView);
+
+  /* --------------------------------------------
+     Rotation timer
+  --------------------------------------------- */
   useEffect(() => {
-    const id = setInterval(() => {
-      setIndex(i => (i + 1) % items.length);
-    }, interval);
+    if (items.length <= 1) return;
+
+    const id = setInterval(
+      () => setIndex(i => (i + 1) % items.length),
+      interval
+    );
+
     return () => clearInterval(id);
   }, [items.length, interval]);
 
   const current = items[index];
   const Icon = resolveLucideIcon(current.icon);
+  const contentPosition = positionMap[current.position ?? "bottom-left"];
 
+  /* --------------------------------------------
+     Resolve animations safely
+  --------------------------------------------- */
 
-  const bgClass = `bg-gradient-to-r from-black/70 via-black/40 to-transparent`;
+  const textAnimationKey =
+    current.textAnimation in textAnimationMap
+      ? (current.textAnimation as keyof typeof textAnimationMap)
+      : "slide-up";
 
+  const imageAnimationKey =
+    current.imageAnimation in imageAnimationMap
+      ? (current.imageAnimation as keyof typeof imageAnimationMap)
+      : "pan-right";
+
+const textMotion =
+  textAnimationMap[textAnimationKey];
+
+const imageMotion =
+  reducedMotion
+    ? imageAnimationMap.fade
+    : imageAnimationMap[imageAnimationKey];
+
+  /* --------------------------------------------
+     Render
+  --------------------------------------------- */
   return (
-    <div className={`relative w-full overflow-hidden rounded-2xl shadow-lg ${height}`}>
-      {/* Background Image */}
-      <Image
-        src={`${baseURL}/static/${current.bgImage}`}
-        alt={current.title}
-        fill
-        className="object-cover object-right opacity-95"
-        priority
-      />
+    <div className="w-full">
+      <div
+        ref={bannerRef}
+        className={`relative w-full overflow-hidden rounded-2xl shadow-lg ${height}`}
+      >
+        {/* ================= Image ================= */}
+        <AnimatePresence mode="wait">
+          <motion.div
+             key={`${current.bgImage}-${imageAnimationKey}`}
+            className="absolute inset-0"
+            initial={imageMotion.initial}
+            animate={imageMotion.animate}
+            exit={imageMotion.exit}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+          >
+            <Image
+              src={`${baseURL}/static/${current.bgImage}`}
+              alt={current.title ?? "Banner"}
+              fill
+              priority
+              className="object-cover opacity-95"
+            />
+          </motion.div>
+        </AnimatePresence>
 
-      {/* Left-side gradient overlay to ensure readability */}
-      {/* <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" /> */}
-      <div className={`absolute inset-0  ${bgClass}`} />
+        {/* ================= Text ================= */}
+        <AnimatePresence initial={false}>
+          <motion.div
+             key={`${current.link}-${textAnimationKey}`}
+            initial={textMotion.initial}
+            animate={textMotion.animate}
+            exit={textMotion.exit}
+            transition={{
+              duration: 0.7,
+              ease: [0.22, 1, 0.36, 1]
+            }}
+            className="absolute inset-0"
+          >
+            {current.title && (
+              <Link
+                href={current.link}
+                className={`absolute z-10 max-w-[480px] ${contentPosition}`}
+              >
+                {/* Feathered background */}
+                <div
+                  className="
+                    absolute inset-0
+                bg-gradient-to-r from-black/80 via-black/55 to-transparent
+                rounded-xl
+                blur-[1px]
+                opacity-95
+                -z-10
+                [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]
+                  "
+                />
 
-      {/* Animated text content */}
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={current.link}
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -40 }}
-          transition={{ duration: 0.5 }}
-          className="relative z-10 flex flex-col justify-end h-full p-8"
-        >
-          <Link href={current.link}>
-            <div className="flex items-center gap-4 mb-4">
-              {Icon && <Icon className={`w-12 h-12 ${current.textColor}`} />}
-              <h2 className={`font-cinzel text-3xl md:text-4xl font-semibold ${current.textColor}`}>
-                {current.title}
-              </h2>
-            </div>
+                <div className="p-5 md:p-6">
+                  <div className="flex items-center gap-3 mb-3">
+                    {Icon && (
+                      <Icon className={`w-10 h-10 ${current.textColor}`} />
+                    )}
+                    <h2
+                      className={`font-cinzel text-2xl md:text-3xl font-semibold ${current.textColor}`}
+                    >
+                      {current.title}
+                    </h2>
+                  </div>
 
-            {current.subtitle && (
-              <p className={`text-lg md:text-xl ${current.textColor} opacity-90 font-yatra`}>
-                {current.subtitle}
-              </p>
+                  {current.subtitle && (
+                    <p
+                      className={`text-base md:text-lg ${current.textColor} opacity-90 font-yatra`}
+                    >
+                      {current.subtitle}
+                    </p>
+                  )}
+
+                  {current.subtitle1 && (
+                    <p
+                      className={`text-base md:text-lg ${current.textColor} opacity-90`}
+                    >
+                      {current.subtitle1}
+                    </p>
+                  )}
+                </div>
+              </Link>
             )}
-            {current.subtitle1 && (
-              <p className={`text-lg md:text-xl ${current.textColor} opacity-90`}>
-                {current.subtitle1}
-              </p>
-            )}
-          </Link>
-        </motion.div>
-      </AnimatePresence>
-
-      {/* Pagination dots */}
-      <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-20">
-        {items.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setIndex(i)}
-            className={`w-3 h-3 rounded-full transition ${i === index ? "bg-white scale-125" : "bg-black"
-              }`}
-          />
-        ))}
+          </motion.div>
+        </AnimatePresence>
       </div>
+
+      {/* ================= Pagination ================= */}
+      {items.length > 1 && (
+        <div className="mt-4 flex justify-center gap-2">
+          {items.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setIndex(i)}
+              aria-label={`Go to banner ${i + 1}`}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${i === index
+                ? "bg-black scale-125"
+                : "bg-black/30 hover:bg-black/50"
+                }`}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

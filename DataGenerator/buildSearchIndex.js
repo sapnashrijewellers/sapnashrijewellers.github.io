@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import MiniSearch from 'minisearch'
-import { miniSearchIndexOptions, normalize } from "../catalog/search/shared.mjs";
+import { miniSearchIndexOptions, normalize } from "../catalog/search/shared.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -17,11 +17,12 @@ const productsForIndex = catalog
       highlights: normalize(p.highlights?.join(' ')),
       englishHighlights: normalize(p.englishHighlights?.join(' ')),
       category: normalize(p.category),
-      keywords: normalize(p.keywords),
+      keywords: p.keywords,
       description: normalize(p.description),
-      type: normalize(p.type?.join(' ')),
-      for: normalize(p.for),
-      purity: normalize(p.purity),
+      type: p.type?.join(' '),
+      for: p.for,
+      weight:p.weight,
+      purity: p.purity,
       slug: p.slug,
       images: p.images,
       newArrival: p.newArrival

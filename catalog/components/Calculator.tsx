@@ -197,12 +197,12 @@ export default function Calculator() {
             disabled={loading}
             className="w-full bg-accent text-accent-foreground py-2 rounded-lg"
           >
-            {loading ? "कैलकुलेट हो रहा है..." : "कैलकुलेट करें"}
+            {loading ? "कैलकुलेट हो रहा है..." : "Calculate Final Price"}
           </button>
 
           {price !== null && !showMakingChargeNotice && (
             <div className="mt-6 p-4 bg-muted rounded-lg text-center">
-              <h3 className="font-semibold mb-2">कुल कीमत</h3>
+              <h3 className="font-semibold mb-2">Final Price</h3>
               <IndianRupeeRate
                 rate={price}
                 className="text-2xl font-bold text-accent"

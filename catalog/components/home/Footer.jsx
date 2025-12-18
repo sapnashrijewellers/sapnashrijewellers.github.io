@@ -2,7 +2,7 @@
 
 import {
   FaFacebookF, FaInstagram, FaYoutube, FaTv, FaWhatsapp,
-  FaUserTie, FaShieldAlt,
+  FaUserTie, FaShieldAlt,FaLightbulb,
   FaMapMarkerAlt
 } from "react-icons/fa";
 import { useState } from "react";
@@ -134,7 +134,8 @@ export default function Footer() {
           <button
           onClick={() => setTipsOpen(true)}
           className="ssj-btn flex items-center gap-2 mt-4 transition-colors text-primary underline hover:text-primary-dark"
-        >          Jewellery Buying Tips
+        >     <FaLightbulb className="text-primary-dark mt-[1px]"/>
+             Jewellery Buying Tips
         </button>
           <Link
             href="/privacy"

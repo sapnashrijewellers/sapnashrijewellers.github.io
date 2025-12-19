@@ -12,47 +12,19 @@ import CalculatePrice from "@/components/product/CalculatePriceButton";
 import Image from "next/image"
 import Breadcrumb from "@/components/navbar/BreadcrumbItem";
 import WishlistButton from "@/components/common/WishlistButton";
-
+import ProductRating from "@/components/product/ProductRating";
 import WishListBar from "@/components/product/WishlistBar";
+import ProductRatingInput from "@/components/product/ProductRatingInput";
 
 
 
 const baseURL = process.env.BASE_URL;
 const driveURL = `${baseURL}/img/products/optimized/`;
 
-export async function generateStaticParams() {
-  return products
-    .filter(p => p.active && p.weight > 0 && p.slug.length >= 5)
-    .flatMap(p => {
-      const categorySlug = encodeURIComponent(
-        p.category.replace(/\s+/g, "-")
-      );
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const slug = await params;
+  const product = products.find((p: Product) => p.slug === slug.slug && p.active);
 
-      return [
-        // /product/slug
-        { slug: [p.slug] },
-
-        // /product/category/id
-        { slug: [categorySlug, String(p.id)] },
-
-      ];
-    });
-}
-
-export async function generateMetadata({ params }: { params: Promise<{ slug: string[] }> }): Promise<Metadata> {
-  const slug1 = await params;
-  const slug = slug1.slug;
-
-  let productSlug: string | undefined;
-  if (slug.length === 1) {
-    // /product/some-slug
-    productSlug = slug[0];
-  } else if (slug.length === 2) {
-    // /product/ring/112
-    // assume last part is product id
-    productSlug = slug[1];
-  }
-  const product = products.find((p: Product) => (p.slug === productSlug || String(p.id) === productSlug) && p.active);
   if (!product) return {};
 
   const baseProductUrl = `${baseURL}/product/${product.slug}`;
@@ -84,22 +56,33 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-export default async function ProductDetailPage({ params }: { params: Promise<{ slug: string[] }> }) {
-  const { slug } = await params;
-  let productSlug: string | undefined;
-  if (slug.length === 1) {
-    // /product/some-slug
-    productSlug = slug[0];
-  } else if (slug.length === 2) {
-    // /product/ring/112
-    // assume last part is product id
-    productSlug = slug[1];
-  }
-  const product = products.find((p: Product) => (p.slug === productSlug || String(p.id) === productSlug) && p.active);
 
-  if (!product) {
-    return notFound();
-  }
+export async function generateStaticParams() {
+  return products
+    .filter((p: Product) => p.active
+      && p.slug.length >= 5
+      && p.category.length > 3
+      && p.active
+      && p.weight > 0)
+    .map((p: Product) => ({
+      slug: p.slug
+    }));
+}
+
+
+
+
+export default async function ProductDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+
+  const product = products.find(
+    (p: Product) =>
+      p.active &&
+      p.slug === slug
+  );
+
+  if (!product) notFound();
+
   const newArrivals = products
     .filter(p => p.active && p.newArrival)
     .sort((a, b) => Number(b.available) - Number(a.available))
@@ -117,11 +100,16 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
     "@type": "Product",
     name: product.name,
     image: product.images[0],
-    description: `${product.description}`,
+    description: product.description,
     sku: product.id,
     brand: {
       "@type": "Brand",
       name: "Sapna Shri Jewellers",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: product.rating ?? 4.6,
+      reviewCount: product.ratingCount ?? 12,
     },
     offers: {
       "@type": "Offer",
@@ -133,6 +121,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
       url: baseProductUrl,
     },
   };
+
   const category = categories.find(c => c.name === product.category);
   return (
     <div>
@@ -168,14 +157,29 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
             <h1 className="text-2xl md:text-3xl font-cinzel text-primary-dark font-semibold mb-1">
               {product.name}
             </h1>
-          </div>
 
+          </div>
+          <ProductRating
+            rating={product.rating ?? 4.6}
+            count={product.ratingCount ?? 12}
+          />
+
+          <div className="pt-2">
+            <p className="text-xs text-muted-foreground">
+              Rate this jewellery
+            </p>
+            <ProductRatingInput
+              productId={product.id}              
+            />
+          </div>
           {!product.available && (
-            <div className="inline-flex items-center gap-2 rounded-full bg-surface text-primary-dark px-3 py-1 text-xs font-medium border ">
+            <div className="inline-flex items-center gap-2 rounded-full bg-surface text-primary-dark px-3 py-1 my-2 text-xs font-medium border ">
               <span className="h-2 w-2 rounded-full bg-accent animate-pulse" />
               Made to Order · Available on Request
             </div>
           )}
+
+
           <ProductShare product={product} />
           {/* Description */}
           <p className="text-muted-foreground py-2">

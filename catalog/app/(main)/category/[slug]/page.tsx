@@ -13,19 +13,11 @@ const driveURL = `${baseURL}/static/img/products/thumbnail/`;
 
 let ldjson = {};
 export async function generateStaticParams() {
-    return categories
-        .filter((c: Category) => c.active)
-        .flatMap((cat: Category) => {
-            const nameSlug = encodeURIComponent(
-                cat.name.replace(/\s+/g, "-")
-            );
-
-            return [
-                { slug: cat.slug },   // /category/rings
-                { slug: nameSlug },   // /category/सोने-की-चूड़ी
-            ];
-        });
+    return categories.filter(c => c.active).map((cat: Category) => ({
+        slug: cat.slug,
+    }));
 }
+
 
 // ---- METADATA ----
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -90,17 +82,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 // ---- MAIN PAGE ----
 export default async function CategoryPage({ params }: { params: { slug: string } }) {
     const { slug } = await params;
-    let category = categories.find(
+    const category = categories.find(
         (cat: Category) => cat.slug === slug && cat.active
     );
 
-    if (!category) {
-        category = categories.find(
-            (c: Category) =>
-                c.active &&
-                c.name === decodeURIComponent(slug).replace(/-/g, " ")
-        );
-    }
+    
     if (!category) notFound();
 
     const filtered = products.filter((p: Product) => p.category === category.name && p.active)

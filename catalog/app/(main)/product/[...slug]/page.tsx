@@ -22,21 +22,27 @@ const driveURL = `${baseURL}/img/products/optimized/`;
 
 export async function generateStaticParams() {
   return products
-    .filter((p: Product) => p.active && p.slug.length >= 5
-      && p.active
-      && p.weight > 0)
-    .map((p: Product) => ({
-      slug: p.slug
-    }));
+    .filter(p => p.active && p.weight > 0 && p.slug.length >= 5)
+    .flatMap(p => [
+      { slug: [p.slug] },
+      { slug: [p.category.replace(" ","-"), String(p.id)] }
+    ]);
 }
 
+export async function generateMetadata({ params }: { params: Promise<{ slug: string[] }> }): Promise<Metadata> {
+  const slug1 = await params;
+  const slug = slug1.slug;
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const slug = await params;
-  const product = products.find(
-    (p: Product) => p.slug === slug.slug
-  );
-
+  let productSlug: string | undefined;
+  if (slug.length === 1) {
+    // /product/some-slug
+    productSlug = slug[0];
+  } else if (slug.length === 2) {
+    // /product/ring/112
+    // assume last part is product id
+    productSlug = slug[1];
+  }
+  const product = products.find((p: Product) => (p.slug === productSlug || String(p.id) === productSlug) && p.active);
   if (!product) return {};
 
   const baseProductUrl = `${baseURL}/product/${product.slug}`;
@@ -68,11 +74,18 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-export default async function ProductDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function ProductDetailPage({ params }: { params: Promise<{ slug: string[] }> }) {
   const { slug } = await params;
-  const product = products.find(
-    (p: Product) => p.slug === slug && p.active
-  );
+  let productSlug: string | undefined;
+  if (slug.length === 1) {
+    // /product/some-slug
+    productSlug = slug[0];
+  } else if (slug.length === 2) {
+    // /product/ring/112
+    // assume last part is product id
+    productSlug = slug[1];
+  }
+  const product = products.find((p: Product) => (p.slug === productSlug || String(p.id) === productSlug) && p.active);
 
   if (!product) {
     return notFound();
@@ -105,8 +118,8 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
       priceCurrency: "INR",
       price: 10,
       availability: product.available
-    ? "https://schema.org/InStock"
-    : "https://schema.org/PreOrder",
+        ? "https://schema.org/InStock"
+        : "https://schema.org/PreOrder",
       url: baseProductUrl,
     },
   };

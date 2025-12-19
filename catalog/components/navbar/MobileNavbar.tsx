@@ -17,7 +17,7 @@ export default function MobileNavbar() {
   return (
     <>
       {/* Navbar */}
-      <nav className="fixed bottom-0 left-0 w-full z-30 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-xl border-t border-neutral-200 dark:border-neutral-700 md:hidden">
+      <nav className="fixed bottom-0 left-0 w-full z-30  backdrop-blur-xl border-t md:hidden">
         <div className="grid grid-cols-5 text-center py-2">
           {navItems.map((item, index) => (
             <Link

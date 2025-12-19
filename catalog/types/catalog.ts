@@ -19,7 +19,9 @@ export interface Product {
   description: string;
   makingCharges: number;
   gst: number;
-  available?:boolean;
+  available?: boolean;
+  rating: number;
+  ratingCount: number
 }
 
 export interface Category {
@@ -28,7 +30,7 @@ export interface Category {
   rank: number,
   slug: string,
   keywords: string,
-  description: string,  
+  description: string,
   active: boolean
 }
 
@@ -42,16 +44,16 @@ export interface BannerItem {
   id: string;
   title: string;
   subtitle?: string;
-  subtitle1?: string;  
+  subtitle1?: string;
   icon?: LucideIcon | string; // JSON uses string
-  textColor?: string;  
+  textColor?: string;
   gradientFrom?: string;
-  gradientTo?: string;  
+  gradientTo?: string;
   link: string;
   fontFamily: string;
   bgImage: string;
   rank: number;
-  active: boolean;  
+  active: boolean;
 }
 
 // export interface NewCatalog {
@@ -92,12 +94,9 @@ export interface CalcRates {
   silver: number;
   silverJewellery: number;
 }
-
-//export type MetalCategory = "gold" | "silver";
-
-// export type Purity =
-//   | "gold24K"
-//   | "gold22K"
-//   | "gold18K"
-//   | "silver"
-//   | "silverJewellery";
+type NavItem = {
+  label: string;
+  href: string;
+  title: string;
+  icon: React.ReactNode;
+};

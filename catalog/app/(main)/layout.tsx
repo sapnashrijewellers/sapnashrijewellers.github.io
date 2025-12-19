@@ -8,7 +8,7 @@ import Ticker from "@/components/home/Ticker";
 import FloatingWhatsAppButton from "@/components/home/FloatingWhatsAppButton";
 import RegisterSW from "@/components/home/registerSW";
 import Script from "next/script"
-import MobileNavbar from "@/components/navbar/MobileNavbar"
+import { AuthProvider } from "@/context/AuthContext";
 
 const notoDevanagari = Noto_Sans_Devanagari({
   subsets: ["latin", "devanagari"],
@@ -46,6 +46,7 @@ export default function RootLayout({ children, }: { children: React.ReactNode; }
   return (
     <html lang="en" className="">
       <body className={notoDevanagari.className}>
+        <AuthProvider>
         <RegisterSW />
         {/* Floating WhatsApp Button */}
         <FloatingWhatsAppButton />
@@ -55,9 +56,10 @@ export default function RootLayout({ children, }: { children: React.ReactNode; }
           <Navbar />
           <Ticker />
           <div className="px-2 max-w-6xl mx-auto py-4">{children}</div>
-          <MobileNavbar />
+          
           <FooterTrust />
           <Footer />
+          
           <a id="powered-by-mehtalogy"
             href="https://mehtalogy.in"
             target="_blank" title="Powered by Mehtalogy LABS">
@@ -67,6 +69,7 @@ export default function RootLayout({ children, }: { children: React.ReactNode; }
           <Script src="https://mehtalogy.in/pb/v1.js"
             strategy="afterInteractive" />
         </div>
+        </AuthProvider>
       </body>
     </html>
   );

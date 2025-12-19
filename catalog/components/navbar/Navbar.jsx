@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import IndianRupeeRate from "../common/IndianRupeeRate";
 import Image from "next/image";
-import DesktopTopLinks from "./DesktopNavLinks";
+import ResponsiveNavbar from "@/components/navbar/ResponsiveNavbar"
 
 const RATES_URL = `${process.env.BASE_URL}/rate/rates.json`;
 
@@ -40,6 +40,7 @@ export default function Navbar() {
 
   return (
     <nav className="p-2 shadow-md bg-highlight">
+      
       <div className="flex justify-between items-center ">
         {/* Left: Logo */}
         <div className="flex-shrink-0 flex items-center">
@@ -57,9 +58,10 @@ export default function Navbar() {
         {/* Right: Menu + Rates */}
         <div className="flex flex-col p-1">
           {/* Top row: Menu links */}
-          <DesktopTopLinks />
+          {/* <DesktopTopLinks /> */}
+          <ResponsiveNavbar/>
           {/* Bottom rates section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 md:gap-2 text-right justify-end font-cinzel text-xs font-semibold">
+          <div className="grid grid-cols-1 md:grid-cols-4 md:gap-4 text-right justify-end font-cinzel text-xs font-semibold">
             <div className="flex justify-end" title={new Date(rates.asOn).toLocaleString("en-IN", {
               day: "2-digit",
               month: "short",

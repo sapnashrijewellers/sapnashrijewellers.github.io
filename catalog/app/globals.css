@@ -19,6 +19,7 @@
   --color-surface: #FFFDF9;
   --color-border: #051e45;
   --color-accent: #051e45;
+  --color-highlight: #A855F7;
   --font-playfair: 'Playfair Display', serif;
   --font-cormorant: 'Cormorant Garamond', serif;
   --font-cinzel: 'Cinzel', serif;
@@ -186,6 +187,9 @@ h3 {
 
 .text-primary {
   color: var(--color-primary);
+}
+.text-highlight{
+  color:var(--color-highlight);
 }
 
 .text-normal {

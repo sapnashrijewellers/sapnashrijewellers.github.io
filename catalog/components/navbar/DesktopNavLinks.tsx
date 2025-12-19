@@ -17,7 +17,7 @@ const DesktopTopLinks: FC = () => {
             <Link
               key={index}
               href={item.href}
-              className="flex flex-col items-center gap-1 text-neutral-700 dark:text-neutral-200 hover:text-purple-600 dark:hover:text-purple-400 transition"
+              className="flex flex-col items-center gap-1  transition"
               title={item.title}
             >
               {item.icon}

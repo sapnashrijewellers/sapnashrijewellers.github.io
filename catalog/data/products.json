@@ -31,7 +31,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gold-bangles-1",
-    "active": true
+    "active": true,
+    "rating": 3.5,
+    "ratingCount": 12
   },
   {
     "id": 2,
@@ -64,7 +66,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "silver-bar-2",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 3,
@@ -97,7 +101,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gold-bar-3",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 4,
@@ -134,7 +140,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "sawariya-seth-silver-ring-4",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 5,
@@ -166,7 +174,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "silver-frame-5",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 6,
@@ -198,7 +208,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "silver-frame-6",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 7,
@@ -229,7 +241,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "fancy-silver-churi-gold-polish-7",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 8,
@@ -261,7 +275,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-chain-8",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 9,
@@ -294,7 +310,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gold-necklace-9",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 10,
@@ -327,7 +345,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "silver-haar-10",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 11,
@@ -360,7 +380,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "naharmukhi-kada-11",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 12,
@@ -396,7 +418,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gents-ring-12",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 13,
@@ -428,7 +452,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "silver-bar-13",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 14,
@@ -460,7 +486,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "mangalsutra-pandle-14",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 15,
@@ -492,7 +520,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "silver-bar-15",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 16,
@@ -523,7 +553,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "silver-bar-16",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 17,
@@ -555,7 +587,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "silver-bar-17",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 18,
@@ -589,7 +623,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "silver-chain-18",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 19,
@@ -624,7 +660,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "silver-chain-19",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 20,
@@ -656,7 +694,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "silver-nariyal-20",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 21,
@@ -688,7 +728,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "silver-plate-21",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 22,
@@ -721,7 +763,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "sui-dhaga-22",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 23,
@@ -758,7 +802,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "sawariya-seth-silver-ring-23",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 24,
@@ -795,7 +841,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "sawariya-seth-silver-ring-24",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 25,
@@ -827,7 +875,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "silver-boys-ring-25",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 26,
@@ -858,7 +908,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-ring-916-26",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 27,
@@ -890,7 +942,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "studs-for-girls-27",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 28,
@@ -922,7 +976,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "studs-for-girls-28",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 29,
@@ -953,7 +1009,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "silver-925-bali-29",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 30,
@@ -984,7 +1042,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "sui-dhaga-30",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 31,
@@ -1016,11 +1076,13 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "studs-31",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 32,
-    "name": "Sawariya Seth Gold Ring | सांवरिया सेठ",
+    "name": "Sawariya Seth Gold Ring | सांवरिया सेठ रिंग",
     "category": "सांवरिया सेठ रिंग",
     "highlights": [
       "बहुमूल्य सोने में 'सांवरिया सेठ' जी की अंगूठी",
@@ -1051,7 +1113,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "sawariya-seth-gold-ring-32",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 33,
@@ -1083,7 +1147,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "fancy-dulhan-payal-33",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 34,
@@ -1115,7 +1181,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "bichiya-34",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 35,
@@ -1147,7 +1215,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "bichiya-35",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 36,
@@ -1177,7 +1247,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "angutha-bichiya-seth-36",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 37,
@@ -1208,7 +1280,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "silver-girls-ring-37",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 38,
@@ -1240,7 +1314,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "silver-boys-ring-38",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 39,
@@ -1272,7 +1348,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "silver-boys-ring-39",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 40,
@@ -1303,7 +1381,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "silver-girls-ring-40",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 41,
@@ -1334,7 +1414,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "guchcha-41",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 42,
@@ -1365,7 +1447,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "kandora-42",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 43,
@@ -1396,7 +1480,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "kandora-43",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 44,
@@ -1427,7 +1513,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "guchcha-44",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 45,
@@ -1459,7 +1547,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gold-latkan-45",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 46,
@@ -1491,7 +1581,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "fancy-silver-churi-gajra-46",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 47,
@@ -1516,7 +1608,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "bracelet-silver-47",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 48,
@@ -1550,7 +1644,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "bracelet-silver-48",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 49,
@@ -1586,7 +1682,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gold-jhumki-49",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 50,
@@ -1620,7 +1718,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "jodha-payal-50",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 51,
@@ -1653,7 +1753,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gents-gold-chain-51",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 52,
@@ -1686,7 +1788,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gold-mangalsutra-52",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 53,
@@ -1718,7 +1822,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "rakhdi-53",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 54,
@@ -1750,7 +1856,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gold-bali-916-54",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 55,
@@ -1784,7 +1892,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "bracelet-silver-55",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 56,
@@ -1817,7 +1927,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gold-chain-for-kids-56",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 57,
@@ -1850,7 +1962,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "fancy-tops-22k916-57",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 58,
@@ -1883,7 +1997,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "tika-58",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 59,
@@ -1915,7 +2031,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-ring-59",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 60,
@@ -1947,7 +2065,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gents-ring-60",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 61,
@@ -1980,7 +2100,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "fancy-dulhan-payal-61",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 62,
@@ -2013,7 +2135,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "puri-kamar-kandora-62",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 63,
@@ -2046,7 +2170,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "fancy-tops-63",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 64,
@@ -2079,7 +2205,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-ring-64",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 65,
@@ -2112,7 +2240,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "mangalsutra-pandle-65",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 66,
@@ -2144,7 +2274,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "silver-glass-66",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 67,
@@ -2176,7 +2308,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gents-chain-67",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 68,
@@ -2210,7 +2344,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "fancy-tops-68",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 69,
@@ -2243,7 +2379,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-chain-69",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 70,
@@ -2275,7 +2413,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gold-murki-70",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 71,
@@ -2313,7 +2453,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "bajuband-71",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 72,
@@ -2350,7 +2492,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "bajuband-72",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 73,
@@ -2387,7 +2531,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "bajuband-73",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 74,
@@ -2425,7 +2571,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "bajuband-74",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 75,
@@ -2463,7 +2611,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "bajuband-75",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 76,
@@ -2499,7 +2649,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "bajuband-76",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 77,
@@ -2535,7 +2687,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "bajuband-77",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 78,
@@ -2571,7 +2725,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "bajuband-78",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 79,
@@ -2606,7 +2762,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "bajuband-79",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 80,
@@ -2641,7 +2799,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "bajuband-80",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 81,
@@ -2677,7 +2837,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gents-gold-chain-81",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 82,
@@ -2711,7 +2873,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gents-gold-chain-82",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 83,
@@ -2745,7 +2909,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gents-gold-chain-83",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 84,
@@ -2777,7 +2943,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gents-gold-chain-84",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 85,
@@ -2810,7 +2978,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gents-gold-chain-85",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 86,
@@ -2843,7 +3013,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gents-gold-chain-86",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 87,
@@ -2876,7 +3048,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gents-gold-chain-87",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 88,
@@ -2908,7 +3082,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gents-gold-chain-88",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 89,
@@ -2940,7 +3116,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gents-gold-chain-89",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 90,
@@ -2972,7 +3150,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gents-gold-chain-90",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 91,
@@ -3005,7 +3185,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gents-gold-chain-91",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 92,
@@ -3038,7 +3220,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gents-gold-chain-92",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 93,
@@ -3071,7 +3255,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gents-gold-chain-93",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 94,
@@ -3102,7 +3288,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-ring-94",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 95,
@@ -3135,7 +3323,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-ring-95",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 96,
@@ -3168,7 +3358,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-ring-96",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 97,
@@ -3201,7 +3393,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-ring-97",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 98,
@@ -3234,7 +3428,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-ring-98",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 99,
@@ -3267,7 +3463,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-ring-99",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 100,
@@ -3300,7 +3498,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-ring-100",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 101,
@@ -3333,7 +3533,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-ring-101",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 102,
@@ -3366,7 +3568,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-ring-102",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 103,
@@ -3399,7 +3603,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-ring-103",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 104,
@@ -3430,7 +3636,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gents-ring-104",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 105,
@@ -3463,7 +3671,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gents-ring-105",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 106,
@@ -3496,7 +3706,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gents-ring-106",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 107,
@@ -3529,7 +3741,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gents-ring-107",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 108,
@@ -3562,7 +3776,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gents-ring-108",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 109,
@@ -3595,7 +3811,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gents-ring-109",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 110,
@@ -3628,7 +3846,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gents-ring-110",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 111,
@@ -3661,7 +3881,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gents-ring-111",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 112,
@@ -3694,7 +3916,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gents-ring-112",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 113,
@@ -3727,7 +3951,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gents-ring-113",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 114,
@@ -3760,7 +3986,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "mangalsutra-pandle-114",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 115,
@@ -3793,7 +4021,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "mangalsutra-pandle-115",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 116,
@@ -3826,7 +4056,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "mangalsutra-pandle-116",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 117,
@@ -3859,7 +4091,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-ring-117",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 118,
@@ -3892,7 +4126,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-ring-118",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 119,
@@ -3925,7 +4161,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-ring-119",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 120,
@@ -3958,7 +4196,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-ring-120",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 121,
@@ -3991,7 +4231,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gold-haar-121",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 122,
@@ -4024,7 +4266,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gold-haar-122",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 123,
@@ -4062,7 +4306,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gold-necklace-123",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 124,
@@ -4095,7 +4341,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gold-necklace-124",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 125,
@@ -4128,7 +4376,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gold-necklace-125",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 126,
@@ -4160,7 +4410,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "silver-chain-126",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 127,
@@ -4193,7 +4445,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "silver-chain-127",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 128,
@@ -4226,7 +4480,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "silver-chain-128",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 129,
@@ -4259,7 +4515,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "silver-chain-129",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 130,
@@ -4292,7 +4550,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "silver-chain-130",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 131,
@@ -4326,7 +4586,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "fancy-dulhan-payal-131",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 132,
@@ -4359,7 +4621,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "fancy-dulhan-payal-132",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 133,
@@ -4393,7 +4657,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "fancy-dulhan-payal-133",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 134,
@@ -4425,7 +4691,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "fancy-dulhan-payal-134",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 135,
@@ -4457,7 +4725,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "fancy-dulhan-payal-135",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 136,
@@ -4490,7 +4760,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "mangalsutra-pandle-136",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 137,
@@ -4523,7 +4795,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "mangalsutra-pandle-137",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 138,
@@ -4556,7 +4830,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "mangalsutra-pandle-138",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 139,
@@ -4589,7 +4865,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "mangalsutra-pandle-139",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 140,
@@ -4622,7 +4900,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "mangalsutra-pandle-140",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 141,
@@ -4655,7 +4935,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "mangalsutra-pandle-141",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 142,
@@ -4688,7 +4970,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "mangalsutra-pandle-142",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 143,
@@ -4721,7 +5005,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-ring-143",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 144,
@@ -4754,7 +5040,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-ring-144",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 145,
@@ -4787,7 +5075,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-ring-145",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 146,
@@ -4820,7 +5110,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-ring-146",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 147,
@@ -4853,7 +5145,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-ring-147",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 148,
@@ -4886,7 +5180,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-ring-148",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 149,
@@ -4919,7 +5215,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-ring-149",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 150,
@@ -4952,7 +5250,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-ring-150",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 151,
@@ -4985,7 +5285,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-ring-151",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 152,
@@ -5018,7 +5320,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-ring-152",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 153,
@@ -5051,7 +5355,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-ring-153",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 154,
@@ -5084,7 +5390,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-ring-154",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 155,
@@ -5117,7 +5425,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-ring-155",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 156,
@@ -5150,7 +5460,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-ring-156",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 157,
@@ -5183,7 +5495,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-ring-157",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 158,
@@ -5216,7 +5530,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-chain-158",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 159,
@@ -5249,7 +5565,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-chain-159",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 160,
@@ -5282,7 +5600,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gents-gold-chain-160",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 162,
@@ -5315,7 +5635,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gents-gold-chain-162",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 163,
@@ -5348,7 +5670,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-chain-163",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 164,
@@ -5381,7 +5705,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-chain-164",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 165,
@@ -5414,7 +5740,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-chain-165",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 166,
@@ -5447,7 +5775,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-chain-166",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 167,
@@ -5480,7 +5810,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-chain-167",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 168,
@@ -5513,7 +5845,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gents-gold-chain-168",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 169,
@@ -5546,7 +5880,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gents-gold-chain-169",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 170,
@@ -5579,7 +5915,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-chain-170",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 171,
@@ -5612,7 +5950,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "common-chain-171",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 172,
@@ -5645,7 +5985,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-chain-172",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 173,
@@ -5678,7 +6020,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "common-chain-173",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 174,
@@ -5711,7 +6055,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-chain-174",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 175,
@@ -5744,7 +6090,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "common-chain-175",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 176,
@@ -5777,7 +6125,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-chain-176",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 177,
@@ -5810,7 +6160,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-chain-177",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 178,
@@ -5843,7 +6195,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-chain-178",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 179,
@@ -5876,7 +6230,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-chain-179",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 180,
@@ -5909,7 +6265,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-chain-180",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 181,
@@ -5942,7 +6300,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "ladies-chain-181",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 182,
@@ -5975,7 +6335,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gents-gold-chain-182",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 183,
@@ -6008,7 +6370,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "gents-gold-chain-183",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 184,
@@ -6042,7 +6406,9 @@
     "makingCharges": 7,
     "gst": 5,
     "slug": "silver-chain-184",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 185,
@@ -6076,7 +6442,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-185",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 186,
@@ -6110,7 +6478,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-186",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 187,
@@ -6139,7 +6509,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-187",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 188,
@@ -6168,7 +6540,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-188",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 189,
@@ -6197,7 +6571,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-189",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 190,
@@ -6226,7 +6602,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-190",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 191,
@@ -6255,7 +6633,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-191",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 192,
@@ -6284,7 +6664,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-192",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 193,
@@ -6313,7 +6695,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-193",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 194,
@@ -6342,7 +6726,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-194",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 195,
@@ -6371,7 +6757,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-195",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 196,
@@ -6400,7 +6788,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-196",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 197,
@@ -6429,7 +6819,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-197",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 198,
@@ -6458,7 +6850,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-198",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 199,
@@ -6487,7 +6881,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-199",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 200,
@@ -6516,7 +6912,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-200",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 201,
@@ -6545,7 +6943,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-201",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 202,
@@ -6574,7 +6974,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-202",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 203,
@@ -6603,7 +7005,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-203",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 204,
@@ -6632,7 +7036,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-204",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 205,
@@ -6661,7 +7067,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-205",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 206,
@@ -6690,7 +7098,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-206",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 207,
@@ -6719,7 +7129,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-207",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 208,
@@ -6748,7 +7160,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-208",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 209,
@@ -6777,7 +7191,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-209",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 210,
@@ -6806,7 +7222,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-210",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 211,
@@ -6835,7 +7253,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-211",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 212,
@@ -6864,7 +7284,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-212",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 213,
@@ -6893,7 +7315,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-213",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 214,
@@ -6922,7 +7346,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-214",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 215,
@@ -6951,7 +7377,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-215",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 216,
@@ -6980,7 +7408,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-216",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 217,
@@ -7009,7 +7439,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-217",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 218,
@@ -7038,7 +7470,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-218",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 219,
@@ -7067,7 +7501,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-219",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 220,
@@ -7096,7 +7532,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-220",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 221,
@@ -7125,7 +7563,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-221",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 222,
@@ -7154,7 +7594,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-222",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 223,
@@ -7183,7 +7625,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-223",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 224,
@@ -7212,7 +7656,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-224",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 225,
@@ -7241,7 +7687,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-225",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 226,
@@ -7270,7 +7718,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-226",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 227,
@@ -7299,7 +7749,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-227",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 228,
@@ -7328,7 +7780,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-228",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 229,
@@ -7357,7 +7811,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-229",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 230,
@@ -7386,7 +7842,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-230",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 231,
@@ -7415,7 +7873,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-231",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 232,
@@ -7444,7 +7904,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-232",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 233,
@@ -7473,7 +7935,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-233",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 234,
@@ -7502,7 +7966,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-234",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 235,
@@ -7531,7 +7997,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-235",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 236,
@@ -7560,7 +8028,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-236",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 237,
@@ -7589,7 +8059,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-237",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 238,
@@ -7618,7 +8090,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-238",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 239,
@@ -7647,7 +8121,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-239",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 240,
@@ -7676,7 +8152,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-240",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 241,
@@ -7705,7 +8183,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-241",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 242,
@@ -7734,7 +8214,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-242",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 243,
@@ -7763,7 +8245,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-243",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 244,
@@ -7792,7 +8276,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-244",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 245,
@@ -7821,7 +8307,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-245",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 246,
@@ -7850,7 +8338,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-246",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 247,
@@ -7879,7 +8369,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-247",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 248,
@@ -7908,7 +8400,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-248",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 249,
@@ -7937,7 +8431,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-249",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 250,
@@ -7966,7 +8462,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-250",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 251,
@@ -7995,7 +8493,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-251",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 252,
@@ -8024,7 +8524,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-252",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 253,
@@ -8053,7 +8555,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-253",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 254,
@@ -8082,19 +8586,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-bangles-254",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 255,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "आकर्षक 22K गोल्ड रोप चेन, रोज़ाना की सुंदरता के लिए बेहतरीन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Sleek 22K gold rope chain, perfect for daily elegance."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -8113,19 +8617,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-255",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 256,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "आकर्षक 22K गोल्ड रोप चेन, रोज़ाना की सुंदरता के लिए बेहतरीन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Sleek 22K gold rope chain, perfect for daily elegance."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -8144,19 +8648,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-256",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 257,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "हाई-पॉलिश फिनिश के साथ हल्के वजन वाली 916 शुद्धता की बॉक्स चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Lightweight 916 purity box chain with a high-polish finish."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -8175,19 +8679,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-257",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 258,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "हाई-पॉलिश फिनिश के साथ हल्के वजन वाली 916 शुद्धता की बॉक्स चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Lightweight 916 purity box chain with a high-polish finish."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -8206,7 +8710,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-258",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 259,
@@ -8237,7 +8743,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-259",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 260,
@@ -8268,19 +8776,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-260",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 261,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "साधारण लुक के लिए HUID-मार्क वाली मिनिमलिस्ट केबल चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Minimalist HUID-marked cable chain for a subtle look."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -8299,19 +8807,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-261",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 262,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "साधारण लुक के लिए HUID-मार्क वाली मिनिमलिस्ट केबल चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Minimalist HUID-marked cable chain for a subtle look."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -8330,19 +8838,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-262",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 263,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "रोज़ाना पहनने के लिए मजबूत 22ct गोल्ड कर्ब चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Durable 22ct gold curb chain, ideal for everyday wear."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -8361,19 +8869,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-263",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 264,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "रोज़ाना पहनने के लिए मजबूत 22ct गोल्ड कर्ब चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Durable 22ct gold curb chain, ideal for everyday wear."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -8392,19 +8900,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-264",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 265,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "916 शुद्धता की गारंटी के साथ क्लासिक पतली सोने की चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Classic thin gold wire chain with guaranteed 916 purity."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -8423,19 +8931,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-265",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 266,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "916 शुद्धता की गारंटी के साथ क्लासिक पतली सोने की चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Classic thin gold wire chain with guaranteed 916 purity."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -8454,19 +8962,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-266",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 267,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "HUID सुरक्षा के साथ पुरुषों के लिए बोल्ड 22K गोल्ड फिगारो चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Bold and masculine 22K gold Figaro chain with HUID security."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -8485,19 +8993,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-267",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 268,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "HUID सुरक्षा के साथ पुरुषों के लिए बोल्ड 22K गोल्ड फिगारो चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Bold and masculine 22K gold Figaro chain with HUID security."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -8516,19 +9024,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-268",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 269,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "भारी वजन वाली 916 हॉलमार्क रुद्राक्ष स्टाइल गोल्ड चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Heavy-duty 916 hallmark Rudraksha-style gold chain."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -8547,19 +9055,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-269",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 270,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "भारी वजन वाली 916 हॉलमार्क रुद्राक्ष स्टाइल गोल्ड चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Heavy-duty 916 hallmark Rudraksha-style gold chain."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -8578,19 +9086,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-270",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 271,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "पुरुषों के लिए सोफिस्टिकेटेड मैट-फिनिश 22ct गोल्ड लिंक चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Sophisticated matte-finish 22ct gold link chain for men."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -8609,19 +9117,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-271",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 272,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "पुरुषों के लिए सोफिस्टिकेटेड मैट-फिनिश 22ct गोल्ड लिंक चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Sophisticated matte-finish 22ct gold link chain for men."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -8640,19 +9148,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-272",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 273,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "हॉलमार्क वाले 916 सोने में पारंपरिक मोटी एंकर चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Traditional thick anchor chain in hallmarked 916 gold."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -8671,19 +9179,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-273",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 274,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "हॉलमार्क वाले 916 सोने में पारंपरिक मोटी एंकर चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Traditional thick anchor chain in hallmarked 916 gold."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -8702,19 +9210,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-274",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 275,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "अद्वितीय HUID कोड के साथ प्रीमियम हैंडक्राफ्टेड सॉलिड गोल्ड चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Premium handcrafted solid gold chain with unique HUID code."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -8733,19 +9241,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-275",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 276,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "अद्वितीय HUID कोड के साथ प्रीमियम हैंडक्राफ्टेड सॉलिड गोल्ड चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Premium handcrafted solid gold chain with unique HUID code."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -8764,19 +9272,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-276",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 277,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "चमकदार चमक के साथ उत्तम 22K गोल्ड स्नेक चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Exquisite 22K gold snake chain with a radiant glow."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -8795,19 +9303,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-277",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 278,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "चमकदार चमक के साथ उत्तम 22K गोल्ड स्नेक चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Exquisite 22K gold snake chain with a radiant glow."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -8826,19 +9334,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-278",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 279,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "त्योहारी अवसरों के लिए जटिल मशीन-कट 916 गोल्ड चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Intricate machine-cut 916 gold chain for festive occasions."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -8857,19 +9365,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-279",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 280,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "त्योहारी अवसरों के लिए जटिल मशीन-कट 916 गोल्ड चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Intricate machine-cut 916 gold chain for festive occasions."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -8888,19 +9396,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-280",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 281,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "अपनों के लिए एक बेहतरीन उपहार—चमकदार 22ct गोल्ड बीड चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Sparkling 22ct gold bead chain, a perfect gift for loved ones."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -8919,19 +9427,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-281",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 282,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "अपनों के लिए एक बेहतरीन उपहार—चमकदार 22ct गोल्ड बीड चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Sparkling 22ct gold bead chain, a perfect gift for loved ones."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -8950,19 +9458,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-282",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 283,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "आधुनिक टच के लिए सुरुचिपूर्ण रोज़-टिंटेड 916 गोल्ड चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Elegant rose-tinted 916 gold chain for a modern touch."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -8981,19 +9489,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-283",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 284,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "आधुनिक टच के लिए सुरुचिपूर्ण रोज़-टिंटेड 916 गोल्ड चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Elegant rose-tinted 916 gold chain for a modern touch."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -9012,19 +9520,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-284",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 285,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "HUID सर्टिफिकेशन के साथ एवरग्रीन ड्यूल-टोन 22K गोल्ड चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Timeless dual-tone 22K gold chain with HUID certification."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -9043,19 +9551,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-285",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 286,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "HUID सर्टिफिकेशन के साथ एवरग्रीन ड्यूल-टोन 22K गोल्ड चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Timeless dual-tone 22K gold chain with HUID certification."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -9074,19 +9582,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-286",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 287,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "शाही लुक के लिए शानदार 22K येलो गोल्ड नवाबी स्टाइल चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Rich 22K yellow gold Nawabi style chain for a royal look."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -9105,19 +9613,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-287",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 288,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "शाही लुक के लिए शानदार 22K येलो गोल्ड नवाबी स्टाइल चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Rich 22K yellow gold Nawabi style chain for a royal look."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -9136,19 +9644,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-288",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 289,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "नक्काशीदार फिनिश के साथ विस्तृत 916 हॉलमार्क बॉल चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Elaborate 916 hallmark ball chain with textured finish."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -9167,19 +9675,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-289",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 290,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "नक्काशीदार फिनिश के साथ विस्तृत 916 हॉलमार्क बॉल चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Elaborate 916 hallmark ball chain with textured finish."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -9198,19 +9706,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-290",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 291,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "HUID स्टैम्प के साथ शादी में पहनने योग्य भारी 22ct गोल्ड लॉन्ग चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Heavy wedding-wear 22ct gold long chain with HUID stamp."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -9229,19 +9737,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-291",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 292,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "HUID स्टैम्प के साथ शादी में पहनने योग्य भारी 22ct गोल्ड लॉन्ग चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Heavy wedding-wear 22ct gold long chain with HUID stamp."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -9260,19 +9768,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-292",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 293,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "पारंपरिक दक्षिण भारतीय शैली की 916 गोल्ड मुगप्पु चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Traditional South Indian style 916 gold Mugappu chain."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -9291,19 +9799,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-293",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 294,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "पारंपरिक दक्षिण भारतीय शैली की 916 गोल्ड मुगप्पु चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Traditional South Indian style 916 gold Mugappu chain."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -9322,19 +9830,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-294",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 295,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "भारतीय विरासत को दर्शाती शुद्ध 22K सोने की हस्तनिर्मित चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Pure 22K gold handcrafted chain reflecting Indian heritage."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -9353,19 +9861,19 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-295",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 296,
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "भारतीय विरासत को दर्शाती शुद्ध 22K सोने की हस्तनिर्मित चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Pure 22K gold handcrafted chain reflecting Indian heritage."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -9384,7 +9892,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-296",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 297,
@@ -9415,7 +9925,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-297",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 298,
@@ -9446,7 +9958,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-298",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 299,
@@ -9477,7 +9991,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-299",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 300,
@@ -9508,7 +10024,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-300",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 301,
@@ -9539,7 +10057,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-301",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 302,
@@ -9570,7 +10090,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-302",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 303,
@@ -9601,7 +10123,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-303",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 304,
@@ -9632,7 +10156,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-304",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 305,
@@ -9663,7 +10189,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-305",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 306,
@@ -9694,7 +10222,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-306",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 307,
@@ -9725,7 +10255,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-307",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 308,
@@ -9756,7 +10288,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-308",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 309,
@@ -9787,7 +10321,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-309",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 310,
@@ -9818,7 +10354,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-310",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 311,
@@ -9849,7 +10387,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-311",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 312,
@@ -9880,7 +10420,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-312",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 313,
@@ -9911,7 +10453,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-313",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 314,
@@ -9942,7 +10486,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-314",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 315,
@@ -9973,7 +10519,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-315",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 316,
@@ -10004,7 +10552,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-316",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 317,
@@ -10035,7 +10585,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-317",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 318,
@@ -10066,7 +10618,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-318",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 319,
@@ -10097,7 +10651,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-319",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 320,
@@ -10128,7 +10684,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-320",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 321,
@@ -10159,7 +10717,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-321",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 322,
@@ -10190,7 +10750,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "ladies-chain-322",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 323,
@@ -10221,7 +10783,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "ladies-chain-323",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 324,
@@ -10252,7 +10816,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-324",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 325,
@@ -10283,7 +10849,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-325",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 326,
@@ -10314,7 +10882,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-326",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 327,
@@ -10345,7 +10915,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-327",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 328,
@@ -10376,7 +10948,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-328",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 329,
@@ -10407,7 +10981,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-329",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 330,
@@ -10438,7 +11014,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-330",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 331,
@@ -10469,7 +11047,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-331",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 332,
@@ -10500,7 +11080,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-332",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 333,
@@ -10531,7 +11113,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-333",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 334,
@@ -10562,7 +11146,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-334",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 335,
@@ -10593,7 +11179,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-335",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 336,
@@ -10624,7 +11212,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-336",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 337,
@@ -10655,7 +11245,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-337",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 338,
@@ -10686,7 +11278,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-338",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 339,
@@ -10717,7 +11311,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-339",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 340,
@@ -10748,7 +11344,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-340",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 341,
@@ -10779,7 +11377,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-341",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 342,
@@ -10810,7 +11410,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-342",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 343,
@@ -10841,7 +11443,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-343",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 344,
@@ -10872,7 +11476,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-344",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 345,
@@ -10903,7 +11509,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-345",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 346,
@@ -10934,7 +11542,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-346",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 347,
@@ -10965,7 +11575,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-347",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 348,
@@ -10996,7 +11608,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-348",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 349,
@@ -11027,7 +11641,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-349",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 350,
@@ -11058,7 +11674,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-350",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 351,
@@ -11089,7 +11707,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-351",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 352,
@@ -11120,7 +11740,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-352",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 353,
@@ -11151,7 +11773,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-353",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 354,
@@ -11182,7 +11806,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "common-chain-354",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 355,
@@ -11213,7 +11839,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gents-gold-chain-355",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 356,
@@ -11244,7 +11872,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-haar-356",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 357,
@@ -11275,7 +11905,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "chokar-357",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 358,
@@ -11306,7 +11938,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "chokar-358",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 359,
@@ -11337,7 +11971,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "chokar-359",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 360,
@@ -11368,7 +12004,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "chokar-360",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 361,
@@ -11399,7 +12037,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "chokar-361",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 362,
@@ -11430,7 +12070,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "chokar-362",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 363,
@@ -11461,7 +12103,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "chokar-363",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 364,
@@ -11492,7 +12136,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "chokar-364",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 365,
@@ -11523,7 +12169,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "chokar-365",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 366,
@@ -11554,7 +12202,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "chokar-366",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 367,
@@ -11585,7 +12235,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "chokar-367",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 368,
@@ -11616,7 +12268,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "chokar-368",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 369,
@@ -11647,7 +12301,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "chokar-369",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 370,
@@ -11678,7 +12334,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "chokar-370",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 371,
@@ -11709,7 +12367,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "chokar-371",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 372,
@@ -11740,7 +12400,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "chokar-372",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 373,
@@ -11771,7 +12433,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "chokar-373",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 374,
@@ -11802,7 +12466,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "chokar-374",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 375,
@@ -11833,7 +12499,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "chokar-375",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 376,
@@ -11864,7 +12532,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "chokar-376",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 377,
@@ -11895,7 +12565,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "chokar-377",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 378,
@@ -11926,7 +12598,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "chokar-378",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 379,
@@ -11957,7 +12631,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "chokar-379",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 380,
@@ -11988,7 +12664,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "chokar-380",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 381,
@@ -12019,7 +12697,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "chokar-381",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 382,
@@ -12050,7 +12730,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "chokar-382",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 383,
@@ -12081,7 +12763,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "chokar-383",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 384,
@@ -12112,7 +12796,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "chokar-384",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 385,
@@ -12143,7 +12829,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "chokar-385",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 386,
@@ -12174,7 +12862,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "chokar-386",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 387,
@@ -12205,7 +12895,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "chokar-387",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 388,
@@ -12236,7 +12928,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "chokar-388",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 389,
@@ -12267,7 +12961,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "chokar-389",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 390,
@@ -12298,7 +12994,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "chokar-390",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 391,
@@ -12329,7 +13027,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "chokar-391",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 392,
@@ -12360,7 +13060,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "chokar-392",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 393,
@@ -12391,7 +13093,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "chokar-393",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 394,
@@ -12422,7 +13126,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "chokar-394",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 395,
@@ -12451,7 +13157,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "antique-haar-395",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 396,
@@ -12461,7 +13169,7 @@
       "यह एक 22 कैरेट (916) हॉलमार्क युक्त एंटीक गोल्ड डिज़ाइन वाला खूबसूरत हार सेट है, जिसमें मैचिंग झुमके शामिल हैं। हार में एक बड़ा, आकर्षक पेंडेंट है जिसमें बीच में एक छोटा शीशा (mirror work) लगा है। इसके चारों ओर रूबी (लाल) और पन्ने (हरा) जैसे रंगीन पत्थरों की सुंदर जड़ाई की गई है।"
     ],
     "englishHighlights": [
-      "This is an exquisite 22-karat (916 hallmark) antique gold necklace set that includes a pair of matching earrings. The necklace features a large, striking central pendant adorned with a small mirror work element, surrounded by beautiful settings of colored stones, including rubies (red) and emeralds (green)."
+      "export async function generateStaticParams() {"
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12480,7 +13188,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "antique-haar-396",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 397,
@@ -12490,7 +13200,7 @@
       "यह एक 22 कैरेट (916) हॉलमार्क युक्त एंटीक गोल्ड डिज़ाइन वाला खूबसूरत हार सेट है, जिसमें मैचिंग झुमके शामिल हैं। हार में एक बड़ा, आकर्षक पेंडेंट है जिसमें बीच में एक छोटा शीशा (mirror work) लगा है। इसके चारों ओर रूबी (लाल) और पन्ने (हरा) जैसे रंगीन पत्थरों की सुंदर जड़ाई की गई है।"
     ],
     "englishHighlights": [
-      "This is an exquisite 22-karat (916 hallmark) antique gold necklace set that includes a pair of matching earrings. The necklace features a large, striking central pendant adorned with a small mirror work element, surrounded by beautiful settings of colored stones, including rubies (red) and emeralds (green)."
+      "return categories"
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12509,7 +13219,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "antique-haar-397",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 398,
@@ -12519,7 +13231,7 @@
       "यह एक 22 कैरेट (916) हॉलमार्क युक्त एंटीक गोल्ड डिज़ाइन वाला खूबसूरत हार सेट है, जिसमें मैचिंग झुमके शामिल हैं। हार में एक बड़ा, आकर्षक पेंडेंट है जिसमें बीच में एक छोटा शीशा (mirror work) लगा है। इसके चारों ओर रूबी (लाल) और पन्ने (हरा) जैसे रंगीन पत्थरों की सुंदर जड़ाई की गई है।"
     ],
     "englishHighlights": [
-      "This is an exquisite 22-karat (916 hallmark) antique gold necklace set that includes a pair of matching earrings. The necklace features a large, striking central pendant adorned with a small mirror work element, surrounded by beautiful settings of colored stones, including rubies (red) and emeralds (green)."
+      ".filter((c: Category) => c.active)"
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12538,7 +13250,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "antique-haar-398",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 399,
@@ -12548,7 +13262,7 @@
       "यह एक 22 कैरेट (916) हॉलमार्क युक्त एंटीक गोल्ड डिज़ाइन वाला खूबसूरत हार सेट है, जिसमें मैचिंग झुमके शामिल हैं। हार में एक बड़ा, आकर्षक पेंडेंट है जिसमें बीच में एक छोटा शीशा (mirror work) लगा है। इसके चारों ओर रूबी (लाल) और पन्ने (हरा) जैसे रंगीन पत्थरों की सुंदर जड़ाई की गई है।"
     ],
     "englishHighlights": [
-      "This is an exquisite 22-karat (916 hallmark) antique gold necklace set that includes a pair of matching earrings. The necklace features a large, striking central pendant adorned with a small mirror work element, surrounded by beautiful settings of colored stones, including rubies (red) and emeralds (green)."
+      ".flatMap((cat: Category) => {"
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12567,7 +13281,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "antique-haar-399",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 400,
@@ -12577,7 +13293,7 @@
       "यह एक 22 कैरेट (916) हॉलमार्क युक्त एंटीक गोल्ड डिज़ाइन वाला खूबसूरत हार सेट है, जिसमें मैचिंग झुमके शामिल हैं। हार में एक बड़ा, आकर्षक पेंडेंट है जिसमें बीच में एक छोटा शीशा (mirror work) लगा है। इसके चारों ओर रूबी (लाल) और पन्ने (हरा) जैसे रंगीन पत्थरों की सुंदर जड़ाई की गई है।"
     ],
     "englishHighlights": [
-      "This is an exquisite 22-karat (916 hallmark) antique gold necklace set that includes a pair of matching earrings. The necklace features a large, striking central pendant adorned with a small mirror work element, surrounded by beautiful settings of colored stones, including rubies (red) and emeralds (green)."
+      "const nameSlug = encodeURIComponent("
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12596,7 +13312,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "antique-haar-400",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 401,
@@ -12606,7 +13324,7 @@
       "यह एक 22 कैरेट (916) हॉलमार्क युक्त एंटीक गोल्ड डिज़ाइन वाला खूबसूरत हार सेट है, जिसमें मैचिंग झुमके शामिल हैं। हार में एक बड़ा, आकर्षक पेंडेंट है जिसमें बीच में एक छोटा शीशा (mirror work) लगा है। इसके चारों ओर रूबी (लाल) और पन्ने (हरा) जैसे रंगीन पत्थरों की सुंदर जड़ाई की गई है।"
     ],
     "englishHighlights": [
-      "This is an exquisite 22-karat (916 hallmark) antique gold necklace set that includes a pair of matching earrings. The necklace features a large, striking central pendant adorned with a small mirror work element, surrounded by beautiful settings of colored stones, including rubies (red) and emeralds (green)."
+      "cat.name.replace(/\\s+/g, \"-\")"
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12625,7 +13343,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "antique-haar-401",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 402,
@@ -12635,7 +13355,7 @@
       "यह एक 22 कैरेट (916) हॉलमार्क युक्त एंटीक गोल्ड डिज़ाइन वाला खूबसूरत हार सेट है, जिसमें मैचिंग झुमके शामिल हैं। हार में एक बड़ा, आकर्षक पेंडेंट है जिसमें बीच में एक छोटा शीशा (mirror work) लगा है। इसके चारों ओर रूबी (लाल) और पन्ने (हरा) जैसे रंगीन पत्थरों की सुंदर जड़ाई की गई है।"
     ],
     "englishHighlights": [
-      "This is an exquisite 22-karat (916 hallmark) antique gold necklace set that includes a pair of matching earrings. The necklace features a large, striking central pendant adorned with a small mirror work element, surrounded by beautiful settings of colored stones, including rubies (red) and emeralds (green)."
+      ");"
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12654,7 +13374,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "antique-haar-402",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 403,
@@ -12663,9 +13385,7 @@
     "highlights": [
       "यह एक 22 कैरेट (916) हॉलमार्क युक्त एंटीक गोल्ड डिज़ाइन वाला खूबसूरत हार सेट है, जिसमें मैचिंग झुमके शामिल हैं। हार में एक बड़ा, आकर्षक पेंडेंट है जिसमें बीच में एक छोटा शीशा (mirror work) लगा है। इसके चारों ओर रूबी (लाल) और पन्ने (हरा) जैसे रंगीन पत्थरों की सुंदर जड़ाई की गई है।"
     ],
-    "englishHighlights": [
-      "This is an exquisite 22-karat (916 hallmark) antique gold necklace set that includes a pair of matching earrings. The necklace features a large, striking central pendant adorned with a small mirror work element, surrounded by beautiful settings of colored stones, including rubies (red) and emeralds (green)."
-    ],
+    "englishHighlights": [],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
     "for": "her",
@@ -12683,7 +13403,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "antique-haar-403",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 404,
@@ -12693,7 +13415,7 @@
       "यह एक 22 कैरेट (916) हॉलमार्क युक्त एंटीक गोल्ड डिज़ाइन वाला खूबसूरत हार सेट है, जिसमें मैचिंग झुमके शामिल हैं। हार में एक बड़ा, आकर्षक पेंडेंट है जिसमें बीच में एक छोटा शीशा (mirror work) लगा है। इसके चारों ओर रूबी (लाल) और पन्ने (हरा) जैसे रंगीन पत्थरों की सुंदर जड़ाई की गई है।"
     ],
     "englishHighlights": [
-      "This is an exquisite 22-karat (916 hallmark) antique gold necklace set that includes a pair of matching earrings. The necklace features a large, striking central pendant adorned with a small mirror work element, surrounded by beautiful settings of colored stones, including rubies (red) and emeralds (green)."
+      "return ["
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12712,7 +13434,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "antique-haar-404",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 405,
@@ -12722,7 +13446,7 @@
       "यह एक 22 कैरेट (916) हॉलमार्क युक्त एंटीक गोल्ड डिज़ाइन वाला खूबसूरत हार सेट है, जिसमें मैचिंग झुमके शामिल हैं। हार में एक बड़ा, आकर्षक पेंडेंट है जिसमें बीच में एक छोटा शीशा (mirror work) लगा है। इसके चारों ओर रूबी (लाल) और पन्ने (हरा) जैसे रंगीन पत्थरों की सुंदर जड़ाई की गई है।"
     ],
     "englishHighlights": [
-      "This is an exquisite 22-karat (916 hallmark) antique gold necklace set that includes a pair of matching earrings. The necklace features a large, striking central pendant adorned with a small mirror work element, surrounded by beautiful settings of colored stones, including rubies (red) and emeralds (green)."
+      "{ slug: cat.slug },   // /category/rings"
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12741,7 +13465,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "antique-haar-405",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 406,
@@ -12751,7 +13477,7 @@
       "यह एक 22 कैरेट (916) हॉलमार्क युक्त एंटीक गोल्ड डिज़ाइन वाला खूबसूरत हार सेट है, जिसमें मैचिंग झुमके शामिल हैं। हार में एक बड़ा, आकर्षक पेंडेंट है जिसमें बीच में एक छोटा शीशा (mirror work) लगा है। इसके चारों ओर रूबी (लाल) और पन्ने (हरा) जैसे रंगीन पत्थरों की सुंदर जड़ाई की गई है।"
     ],
     "englishHighlights": [
-      "This is an exquisite 22-karat (916 hallmark) antique gold necklace set that includes a pair of matching earrings. The necklace features a large, striking central pendant adorned with a small mirror work element, surrounded by beautiful settings of colored stones, including rubies (red) and emeralds (green)."
+      "{ slug: nameSlug },   // /category/सोने-की-चूड़ी"
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12770,7 +13496,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "antique-haar-406",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 407,
@@ -12780,7 +13508,7 @@
       "यह एक 22 कैरेट (916) हॉलमार्क युक्त एंटीक गोल्ड डिज़ाइन वाला खूबसूरत हार सेट है, जिसमें मैचिंग झुमके शामिल हैं। हार में एक बड़ा, आकर्षक पेंडेंट है जिसमें बीच में एक छोटा शीशा (mirror work) लगा है। इसके चारों ओर रूबी (लाल) और पन्ने (हरा) जैसे रंगीन पत्थरों की सुंदर जड़ाई की गई है।"
     ],
     "englishHighlights": [
-      "This is an exquisite 22-karat (916 hallmark) antique gold necklace set that includes a pair of matching earrings. The necklace features a large, striking central pendant adorned with a small mirror work element, surrounded by beautiful settings of colored stones, including rubies (red) and emeralds (green)."
+      "];"
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12799,7 +13527,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "antique-haar-407",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 408,
@@ -12809,7 +13539,7 @@
       "यह एक 22 कैरेट (916) हॉलमार्क युक्त एंटीक गोल्ड डिज़ाइन वाला खूबसूरत हार सेट है, जिसमें मैचिंग झुमके शामिल हैं। हार में एक बड़ा, आकर्षक पेंडेंट है जिसमें बीच में एक छोटा शीशा (mirror work) लगा है। इसके चारों ओर रूबी (लाल) और पन्ने (हरा) जैसे रंगीन पत्थरों की सुंदर जड़ाई की गई है।"
     ],
     "englishHighlights": [
-      "This is an exquisite 22-karat (916 hallmark) antique gold necklace set that includes a pair of matching earrings. The necklace features a large, striking central pendant adorned with a small mirror work element, surrounded by beautiful settings of colored stones, including rubies (red) and emeralds (green)."
+      "});"
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12828,7 +13558,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "antique-haar-408",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 409,
@@ -12838,7 +13570,7 @@
       "यह एक 22 कैरेट (916) हॉलमार्क युक्त एंटीक गोल्ड डिज़ाइन वाला खूबसूरत हार सेट है, जिसमें मैचिंग झुमके शामिल हैं। हार में एक बड़ा, आकर्षक पेंडेंट है जिसमें बीच में एक छोटा शीशा (mirror work) लगा है। इसके चारों ओर रूबी (लाल) और पन्ने (हरा) जैसे रंगीन पत्थरों की सुंदर जड़ाई की गई है।"
     ],
     "englishHighlights": [
-      "This is an exquisite 22-karat (916 hallmark) antique gold necklace set that includes a pair of matching earrings. The necklace features a large, striking central pendant adorned with a small mirror work element, surrounded by beautiful settings of colored stones, including rubies (red) and emeralds (green)."
+      "}"
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12857,7 +13589,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "antique-haar-409",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 410,
@@ -12886,7 +13620,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "antique-haar-410",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 411,
@@ -12915,7 +13651,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "antique-haar-411",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 412,
@@ -12944,7 +13682,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "antique-haar-412",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 413,
@@ -12973,7 +13713,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "antique-haar-413",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 414,
@@ -13002,7 +13744,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "antique-haar-414",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 415,
@@ -13031,7 +13775,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "antique-haar-415",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 416,
@@ -13060,7 +13806,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "antique-haar-416",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 417,
@@ -13089,7 +13837,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "antique-haar-417",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 418,
@@ -13118,7 +13868,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "antique-haar-418",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 419,
@@ -13147,7 +13899,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "antique-haar-419",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 420,
@@ -13176,7 +13930,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "antique-haar-420",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 421,
@@ -13205,7 +13961,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "antique-haar-421",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 422,
@@ -13234,7 +13992,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "antique-haar-422",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 423,
@@ -13263,7 +14023,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "antique-haar-423",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 424,
@@ -13292,7 +14054,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "antique-haar-424",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 425,
@@ -13321,7 +14085,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "antique-haar-425",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 426,
@@ -13350,7 +14116,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "antique-haar-426",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 427,
@@ -13379,7 +14147,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "antique-haar-427",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 428,
@@ -13408,7 +14178,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "antique-haar-428",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 429,
@@ -13441,7 +14213,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-429",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 430,
@@ -13474,7 +14248,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-430",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 431,
@@ -13507,7 +14283,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-431",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 432,
@@ -13540,7 +14318,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-432",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 433,
@@ -13573,7 +14353,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-433",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 434,
@@ -13606,7 +14388,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-434",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 435,
@@ -13639,7 +14423,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-435",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 436,
@@ -13672,7 +14458,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-436",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 437,
@@ -13705,7 +14493,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-437",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 438,
@@ -13738,7 +14528,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-438",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 439,
@@ -13771,7 +14563,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-439",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 440,
@@ -13804,7 +14598,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-440",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 441,
@@ -13837,7 +14633,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-441",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 442,
@@ -13870,7 +14668,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-442",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 443,
@@ -13903,7 +14703,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-443",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 444,
@@ -13936,7 +14738,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-444",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 445,
@@ -13969,7 +14773,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-445",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 446,
@@ -14002,7 +14808,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-446",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 447,
@@ -14035,7 +14843,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-447",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 448,
@@ -14068,7 +14878,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-448",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 449,
@@ -14101,7 +14913,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-449",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 450,
@@ -14134,7 +14948,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-450",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 451,
@@ -14167,7 +14983,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-451",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 452,
@@ -14200,7 +15018,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-452",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 453,
@@ -14233,7 +15053,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-453",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 454,
@@ -14266,7 +15088,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-454",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 455,
@@ -14299,7 +15123,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-455",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 456,
@@ -14332,7 +15158,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-456",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 457,
@@ -14365,7 +15193,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-457",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 458,
@@ -14398,7 +15228,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-458",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 459,
@@ -14431,7 +15263,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-459",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 460,
@@ -14464,7 +15298,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-460",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 461,
@@ -14497,7 +15333,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-461",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 462,
@@ -14530,7 +15368,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-462",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 463,
@@ -14563,7 +15403,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-463",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 464,
@@ -14596,7 +15438,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-464",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 465,
@@ -14629,7 +15473,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-465",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 466,
@@ -14662,7 +15508,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-466",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 467,
@@ -14695,7 +15543,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-467",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 468,
@@ -14728,7 +15578,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-468",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 469,
@@ -14761,7 +15613,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-469",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 470,
@@ -14794,7 +15648,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-470",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 471,
@@ -14827,7 +15683,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-471",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 475,
@@ -14860,7 +15718,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-475",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 478,
@@ -14893,7 +15753,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-478",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 479,
@@ -14926,7 +15788,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-479",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 480,
@@ -14959,7 +15823,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-480",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 481,
@@ -14992,7 +15858,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-481",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 483,
@@ -15025,7 +15893,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-483",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 484,
@@ -15058,7 +15928,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-484",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 486,
@@ -15091,7 +15963,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-486",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 487,
@@ -15124,7 +15998,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-487",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 489,
@@ -15157,7 +16033,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-489",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 490,
@@ -15190,7 +16068,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-490",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 491,
@@ -15223,7 +16103,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-491",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 492,
@@ -15256,7 +16138,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-492",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 493,
@@ -15289,7 +16173,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-493",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 494,
@@ -15322,7 +16208,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-494",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 495,
@@ -15355,7 +16243,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-495",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 496,
@@ -15388,7 +16278,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-496",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 497,
@@ -15421,7 +16313,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-497",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 498,
@@ -15454,7 +16348,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-498",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 499,
@@ -15487,7 +16383,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-499",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 500,
@@ -15520,7 +16418,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-500",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 502,
@@ -15553,7 +16453,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-502",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 503,
@@ -15586,7 +16488,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-503",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 504,
@@ -15619,7 +16523,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-504",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 505,
@@ -15652,7 +16558,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-505",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 506,
@@ -15685,7 +16593,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-506",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 507,
@@ -15718,7 +16628,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-507",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 508,
@@ -15751,7 +16663,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-508",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 509,
@@ -15784,7 +16698,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-509",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 510,
@@ -15817,7 +16733,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-510",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 511,
@@ -15850,7 +16768,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-511",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 512,
@@ -15883,7 +16803,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-512",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 514,
@@ -15916,7 +16838,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-514",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 515,
@@ -15949,7 +16873,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-515",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 516,
@@ -15982,7 +16908,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-516",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 517,
@@ -16015,7 +16943,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-517",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 518,
@@ -16048,7 +16978,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-mangalsutra-518",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 519,
@@ -16077,7 +17009,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-519",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 521,
@@ -16106,7 +17040,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-521",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 522,
@@ -16135,7 +17071,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-522",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 523,
@@ -16164,7 +17102,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-523",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 524,
@@ -16193,7 +17133,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-524",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 525,
@@ -16222,7 +17164,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-525",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 526,
@@ -16251,7 +17195,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-526",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 527,
@@ -16280,7 +17226,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-527",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 528,
@@ -16309,7 +17257,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-528",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 529,
@@ -16338,7 +17288,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-529",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 530,
@@ -16367,7 +17319,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-530",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 531,
@@ -16396,7 +17350,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-531",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 532,
@@ -16425,7 +17381,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-532",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 533,
@@ -16454,7 +17412,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "कांटे-533",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 534,
@@ -16483,7 +17443,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-534",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 535,
@@ -16512,7 +17474,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-535",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 536,
@@ -16541,7 +17505,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-536",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 537,
@@ -16570,7 +17536,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-537",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 538,
@@ -16599,7 +17567,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-538",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 539,
@@ -16628,7 +17598,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-539",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 540,
@@ -16657,7 +17629,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-540",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 541,
@@ -16686,7 +17660,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-541",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 542,
@@ -16715,7 +17691,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-542",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 543,
@@ -16744,7 +17722,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-543",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 544,
@@ -16773,7 +17753,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-544",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 545,
@@ -16802,7 +17784,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-545",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 546,
@@ -16831,7 +17815,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-546",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 547,
@@ -16860,7 +17846,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-547",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 548,
@@ -16889,7 +17877,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-548",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 549,
@@ -16918,7 +17908,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-549",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 550,
@@ -16947,7 +17939,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-550",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 551,
@@ -16976,7 +17970,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-551",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 552,
@@ -17005,7 +18001,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-552",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 553,
@@ -17034,7 +18032,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-553",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 554,
@@ -17063,7 +18063,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-554",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 555,
@@ -17092,7 +18094,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-555",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 556,
@@ -17121,7 +18125,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-556",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 557,
@@ -17150,7 +18156,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-557",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 558,
@@ -17179,7 +18187,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-558",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 559,
@@ -17208,7 +18218,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-559",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 560,
@@ -17237,7 +18249,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-560",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 561,
@@ -17266,7 +18280,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-561",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 562,
@@ -17295,7 +18311,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-562",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 563,
@@ -17324,7 +18342,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-563",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 565,
@@ -17353,7 +18373,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-565",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 566,
@@ -17382,7 +18404,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-566",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 567,
@@ -17411,7 +18435,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-567",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 568,
@@ -17440,7 +18466,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-568",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 569,
@@ -17469,7 +18497,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-569",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 570,
@@ -17498,7 +18528,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-570",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 572,
@@ -17527,7 +18559,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-572",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 573,
@@ -17556,7 +18590,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-earing-573",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 574,
@@ -17589,7 +18625,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-necklace-574",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 575,
@@ -17622,7 +18660,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-necklace-575",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 576,
@@ -17651,7 +18691,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-necklace-576",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 577,
@@ -17680,7 +18722,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-necklace-577",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 578,
@@ -17709,7 +18753,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-necklace-578",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 579,
@@ -17738,7 +18784,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-necklace-579",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 580,
@@ -17767,7 +18815,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-necklace-580",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 581,
@@ -17796,7 +18846,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-necklace-581",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 582,
@@ -17825,7 +18877,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-necklace-582",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 583,
@@ -17854,7 +18908,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-necklace-583",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 584,
@@ -17883,7 +18939,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-necklace-584",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 585,
@@ -17912,7 +18970,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-necklace-585",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 586,
@@ -17941,7 +19001,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-necklace-586",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 587,
@@ -17970,7 +19032,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-necklace-587",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 588,
@@ -17999,7 +19063,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-necklace-588",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 589,
@@ -18028,7 +19094,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-necklace-589",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 590,
@@ -18057,7 +19125,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "gold-necklace-590",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 591,
@@ -18088,7 +19158,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "rajputi-necklace-591",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 592,
@@ -18119,7 +19191,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "rajputi-necklace-592",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 593,
@@ -18150,7 +19224,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "rajputi-necklace-593",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 594,
@@ -18181,7 +19257,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "rajputi-necklace-594",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 595,
@@ -18212,7 +19290,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "rajputi-necklace-595",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 596,
@@ -18243,7 +19323,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "rajputi-necklace-596",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 597,
@@ -18274,7 +19356,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "rajputi-necklace-597",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 598,
@@ -18305,7 +19389,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "rajputi-necklace-598",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 599,
@@ -18336,7 +19422,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "rajputi-necklace-599",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 600,
@@ -18367,7 +19455,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "rajputi-necklace-600",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 601,
@@ -18398,7 +19488,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "rajputi-necklace-601",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 602,
@@ -18429,7 +19521,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "rajputi-necklace-602",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 603,
@@ -18460,7 +19554,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "rajputi-necklace-603",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 604,
@@ -18491,7 +19587,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "rajputi-necklace-604",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 605,
@@ -18522,7 +19620,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "rajputi-necklace-605",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 606,
@@ -18553,7 +19653,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "rajputi-necklace-606",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 607,
@@ -18584,7 +19686,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "rajputi-necklace-607",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 608,
@@ -18615,7 +19719,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "rajputi-necklace-608",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 609,
@@ -18646,7 +19752,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "rajputi-necklace-609",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 610,
@@ -18677,7 +19785,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "rajputi-necklace-610",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 611,
@@ -18706,7 +19816,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "rajputi-bajuband-611",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 612,
@@ -18735,7 +19847,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "rajputi-bajuband-612",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 613,
@@ -18764,7 +19878,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "rajputi-bajuband-613",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 614,
@@ -18793,7 +19909,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "rajputi-bajuband-614",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 615,
@@ -18822,7 +19940,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "rajputi-bajuband-615",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 616,
@@ -18851,7 +19971,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "silver-necklace-616",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 617,
@@ -18880,7 +20002,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "silver-necklace-617",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 618,
@@ -18909,7 +20033,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "silver-necklace-618",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 619,
@@ -18938,7 +20064,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "silver-necklace-619",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 620,
@@ -18967,7 +20095,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "silver-necklace-620",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 621,
@@ -18996,7 +20126,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "silver-necklace-621",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 622,
@@ -19025,7 +20157,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "silver-necklace-622",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 623,
@@ -19054,7 +20188,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "silver-necklace-623",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 624,
@@ -19083,7 +20219,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "silver-necklace-624",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 625,
@@ -19112,7 +20250,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "silver-necklace-625",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 626,
@@ -19141,7 +20281,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "silver-necklace-626",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 627,
@@ -19170,7 +20312,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "silver-necklace-627",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 628,
@@ -19199,7 +20343,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "silver-necklace-628",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 629,
@@ -19228,7 +20374,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "silver-necklace-629",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 630,
@@ -19257,7 +20405,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "silver-necklace-630",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 631,
@@ -19286,7 +20436,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "silver-necklace-631",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 632,
@@ -19313,7 +20465,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "silver-bengles-632",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 633,
@@ -19342,7 +20496,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "silver-bengles-633",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 634,
@@ -19371,7 +20527,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "silver-bengles-634",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 635,
@@ -19400,7 +20558,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "silver-bengles-635",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 636,
@@ -19429,7 +20589,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "silver-phone-cover-636",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 637,
@@ -19458,7 +20620,9 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "silver-phone-cover-637",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   },
   {
     "id": 638,
@@ -19487,6 +20651,8 @@
     "makingCharges": 0,
     "gst": 0,
     "slug": "silver-phone-cover-638",
-    "active": true
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0
   }
 ]

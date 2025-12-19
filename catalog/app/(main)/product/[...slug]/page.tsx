@@ -23,10 +23,20 @@ const driveURL = `${baseURL}/img/products/optimized/`;
 export async function generateStaticParams() {
   return products
     .filter(p => p.active && p.weight > 0 && p.slug.length >= 5)
-    .flatMap(p => [
-      { slug: [p.slug] },
-      { slug: [p.category.replace(" ","-"), String(p.id)] }
-    ]);
+    .flatMap(p => {
+      const categorySlug = encodeURIComponent(
+        p.category.replace(/\s+/g, "-")
+      );
+
+      return [
+        // /product/slug
+        { slug: [p.slug] },
+
+        // /product/category/id
+        { slug: [categorySlug, String(p.id)] },
+
+      ];
+    });
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string[] }> }): Promise<Metadata> {

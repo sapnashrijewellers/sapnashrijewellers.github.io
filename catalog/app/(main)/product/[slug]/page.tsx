@@ -85,7 +85,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
     .filter(p => p.active && product.type.some(t => p.type.includes(t)) && p.for === product.for && !p.newArrival)
     .sort((a, b) => Number(b.available) - Number(a.available))
     .slice(0, 15);
-  
+
   const baseProductUrl = `${baseURL}/product/${product.slug}`;
 
 
@@ -104,7 +104,9 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
       "@type": "Offer",
       priceCurrency: "INR",
       price: 10,
-      availability: "https://schema.org/InStock",
+      availability: product.available
+    ? "https://schema.org/InStock"
+    : "https://schema.org/PreOrder",
       url: baseProductUrl,
     },
   };
@@ -137,18 +139,23 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
         </div>
 
         {/* ---------------- Product Details ---------------- */}
-        <div className="p-2 space-y-4">
+        <div className="">
           {/* Title + Share */}
           <div className="flex items-start justify-between gap-3">
-            <h1 className="text-2xl md:text-3xl font-cinzel text-primary-dark font-semibold">
+            <h1 className="text-2xl md:text-3xl font-cinzel text-primary-dark font-semibold mb-1">
               {product.name}
             </h1>
-
-
           </div>
+
+          {!product.available && (
+            <div className="inline-flex items-center gap-2 rounded-full bg-surface text-primary-dark px-3 py-1 text-xs font-medium border ">
+              <span className="h-2 w-2 rounded-full bg-accent animate-pulse" />
+              Made to Order · Available on Request
+            </div>
+          )}
           <ProductShare product={product} />
           {/* Description */}
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground py-2">
             {product.description}
           </p>
 
@@ -191,8 +198,8 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
             ))}
           </div>
         </div>) : <div></div>}
-        
-        <WishListBar/>
+
+      <WishListBar />
 
       {/* ---------------- Trust Banner (Moved Below) ---------------- */}
       <div className="max-w-6xl mx-auto px-3 pb-6">

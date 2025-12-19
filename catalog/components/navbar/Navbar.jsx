@@ -57,47 +57,33 @@ export default function Navbar() {
         {/* Right: Menu + Rates */}
         <div className="flex flex-col p-1">
           {/* Top row: Menu links */}
-         <DesktopTopLinks/>
-
-          {/* Live rate timestamp */}
-          {(rates.gold24K > 0 || rates.silver > 0) && (
-            <div className="flex items-end justify-end gap-4 text-xs">
-              <span>
-                <span className="animate-pulse w-3 h-3 bg-red-500 rounded-full inline-block p-1"></span>&nbsp;
-                Live Rates *{" "}
-                {new Date(rates.asOn).toLocaleString("en-IN", {
-                  day: "2-digit",
-                  month: "short",
-                  hour: "2-digit",
-                  minute: "2-digit",
-                  hour12: false,
-                  timeZone: "Asia/Kolkata",
-                })}
-              </span>
-            </div>
-          )}
-
+          <DesktopTopLinks />
           {/* Bottom rates section */}
-          <div className="grid grid-cols-1 md:grid-cols-4 md:gap-2 text-right justify-end font-cinzel text-xs font-semibold">
-            
-            <div className="flex justify-end">
-            Gold 24K:&nbsp;
+          <div className="grid grid-cols-1 md:grid-cols-2 md:gap-2 text-right justify-end font-cinzel text-xs font-semibold">
+            <div className="flex justify-end" title={new Date(rates.asOn).toLocaleString("en-IN", {
+              day: "2-digit",
+              month: "short",
+              hour: "2-digit",
+              minute: "2-digit",
+              hour12: false,
+              timeZone: "Asia/Kolkata",
+            })}>Gold 24K:&nbsp;
               <IndianRupeeRate rate={rates.gold24K * 10} className="text-primary-dark  text-sm" itemName="Gold 24K" itemTitle="10g" />
             </div>
 
             <div className="flex justify-end">
-            Gold 22K:&nbsp;
-              <IndianRupeeRate rate={rates.gold22K * 10} className="text-primary-dark text-sm" itemName="Gold 22K" itemTitle="10g"/>
+              Gold 22K:&nbsp;
+              <IndianRupeeRate rate={rates.gold22K * 10} className="text-primary-dark text-sm" itemName="Gold 22K" itemTitle="10g" />
             </div>
 
             <div className="flex justify-end">
-            Silver 99.9%:&nbsp;
-              <IndianRupeeRate rate={rates.silver * 1000} className="text-primary-dark text-sm" itemName="Silver 99.9%" itemTitle="1kg"/>
+              Silver 99.9%:&nbsp;
+              <IndianRupeeRate rate={rates.silver * 1000} className="text-primary-dark text-sm" itemName="Silver 99.9%" itemTitle="1kg" />
             </div>
 
             <div className="flex justify-end">
-            Silver Jewelry:&nbsp;
-              <IndianRupeeRate rate={rates.silver * 1000 * 0.92} className="text-primary-dark textsm" itemName="Silver Jewelry" itemTitle="1kg"/>
+              Silver Jewelry:&nbsp;
+              <IndianRupeeRate rate={rates.silver * 1000 * 0.92} className="text-primary-dark textsm" itemName="Silver Jewelry" itemTitle="1kg" />
             </div>
           </div>
 

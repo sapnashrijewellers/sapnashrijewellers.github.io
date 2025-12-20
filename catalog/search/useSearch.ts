@@ -53,7 +53,9 @@ export function useSearch(
       keywords: "",
       description: "",
       makingCharges: 0,
-      gst: 0
+      gst: 0,
+      rating:0,
+      ratingCount:0
 
     }));
   }

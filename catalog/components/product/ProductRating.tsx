@@ -4,12 +4,14 @@ type ProductRatingProps = {
   rating: number;        // e.g. 4.6
   count?: number;        // e.g. 12
   size?: number;         // icon size
+  showExpert: boolean;
 };
 
 export default function ProductRating({
   rating,
   count = 0,
   size = 16,
+  showExpert = true,
 }: ProductRatingProps) {
   const fullStars = Math.floor(rating);
   const hasHalfStar = rating % 1 >= 0.5;
@@ -40,7 +42,7 @@ export default function ProductRating({
         {rating.toFixed(1)}
       </span>
 
-      {count > 0 && (
+      {count > 0 && showExpert &&(
         <span className="text-muted-foreground">
           · Expert rating ({count})
         </span>

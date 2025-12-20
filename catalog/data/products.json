@@ -32,8 +32,8 @@
     "gst": 5,
     "slug": "gold-bangles-1",
     "active": true,
-    "rating": 3.5,
-    "ratingCount": 12
+    "rating": 4.9,
+    "ratingCount": 64
   },
   {
     "id": 2,
@@ -67,8 +67,8 @@
     "gst": 5,
     "slug": "silver-bar-2",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 86
   },
   {
     "id": 3,
@@ -102,8 +102,8 @@
     "gst": 5,
     "slug": "gold-bar-3",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4,
+    "ratingCount": 98
   },
   {
     "id": 4,
@@ -141,8 +141,8 @@
     "gst": 5,
     "slug": "sawariya-seth-silver-ring-4",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 75
   },
   {
     "id": 5,
@@ -175,8 +175,8 @@
     "gst": 5,
     "slug": "silver-frame-5",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 90
   },
   {
     "id": 6,
@@ -209,8 +209,8 @@
     "gst": 5,
     "slug": "silver-frame-6",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 93
   },
   {
     "id": 7,
@@ -242,8 +242,8 @@
     "gst": 5,
     "slug": "fancy-silver-churi-gold-polish-7",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4,
+    "ratingCount": 112
   },
   {
     "id": 8,
@@ -276,8 +276,8 @@
     "gst": 5,
     "slug": "ladies-chain-8",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.1,
+    "ratingCount": 113
   },
   {
     "id": 9,
@@ -311,8 +311,8 @@
     "gst": 5,
     "slug": "gold-necklace-9",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 77
   },
   {
     "id": 10,
@@ -346,8 +346,8 @@
     "gst": 5,
     "slug": "silver-haar-10",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 57
   },
   {
     "id": 11,
@@ -381,8 +381,8 @@
     "gst": 5,
     "slug": "naharmukhi-kada-11",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 37
   },
   {
     "id": 12,
@@ -419,8 +419,8 @@
     "gst": 5,
     "slug": "gents-ring-12",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.9,
+    "ratingCount": 24
   },
   {
     "id": 13,
@@ -453,8 +453,8 @@
     "gst": 5,
     "slug": "silver-bar-13",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 114
   },
   {
     "id": 14,
@@ -487,8 +487,8 @@
     "gst": 5,
     "slug": "mangalsutra-pandle-14",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4,
+    "ratingCount": 86
   },
   {
     "id": 15,
@@ -521,8 +521,8 @@
     "gst": 5,
     "slug": "silver-bar-15",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.2,
+    "ratingCount": 17
   },
   {
     "id": 16,
@@ -554,8 +554,8 @@
     "gst": 5,
     "slug": "silver-bar-16",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 91
   },
   {
     "id": 17,
@@ -588,8 +588,8 @@
     "gst": 5,
     "slug": "silver-bar-17",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 80
   },
   {
     "id": 18,
@@ -624,8 +624,8 @@
     "gst": 5,
     "slug": "silver-chain-18",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 23
   },
   {
     "id": 19,
@@ -661,8 +661,8 @@
     "gst": 5,
     "slug": "silver-chain-19",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 45
   },
   {
     "id": 20,
@@ -695,8 +695,8 @@
     "gst": 5,
     "slug": "silver-nariyal-20",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 119
   },
   {
     "id": 21,
@@ -729,8 +729,8 @@
     "gst": 5,
     "slug": "silver-plate-21",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 85
   },
   {
     "id": 22,
@@ -764,8 +764,8 @@
     "gst": 5,
     "slug": "sui-dhaga-22",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 106
   },
   {
     "id": 23,
@@ -803,8 +803,8 @@
     "gst": 5,
     "slug": "sawariya-seth-silver-ring-23",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 34
   },
   {
     "id": 24,
@@ -842,8 +842,8 @@
     "gst": 5,
     "slug": "sawariya-seth-silver-ring-24",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.1,
+    "ratingCount": 71
   },
   {
     "id": 25,
@@ -876,8 +876,8 @@
     "gst": 5,
     "slug": "silver-boys-ring-25",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 114
   },
   {
     "id": 26,
@@ -909,8 +909,8 @@
     "gst": 5,
     "slug": "ladies-ring-916-26",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4,
+    "ratingCount": 10
   },
   {
     "id": 27,
@@ -943,8 +943,8 @@
     "gst": 5,
     "slug": "studs-for-girls-27",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 46
   },
   {
     "id": 28,
@@ -977,8 +977,8 @@
     "gst": 5,
     "slug": "studs-for-girls-28",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 11
   },
   {
     "id": 29,
@@ -1010,8 +1010,8 @@
     "gst": 5,
     "slug": "silver-925-bali-29",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 63
   },
   {
     "id": 30,
@@ -1043,8 +1043,8 @@
     "gst": 5,
     "slug": "sui-dhaga-30",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 13
   },
   {
     "id": 31,
@@ -1077,8 +1077,8 @@
     "gst": 5,
     "slug": "studs-31",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 21
   },
   {
     "id": 32,
@@ -1114,8 +1114,8 @@
     "gst": 5,
     "slug": "sawariya-seth-gold-ring-32",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 90
   },
   {
     "id": 33,
@@ -1148,8 +1148,8 @@
     "gst": 5,
     "slug": "fancy-dulhan-payal-33",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 24
   },
   {
     "id": 34,
@@ -1182,8 +1182,8 @@
     "gst": 5,
     "slug": "bichiya-34",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 108
   },
   {
     "id": 35,
@@ -1216,8 +1216,8 @@
     "gst": 5,
     "slug": "bichiya-35",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 113
   },
   {
     "id": 36,
@@ -1248,8 +1248,8 @@
     "gst": 5,
     "slug": "angutha-bichiya-seth-36",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 15
   },
   {
     "id": 37,
@@ -1281,8 +1281,8 @@
     "gst": 5,
     "slug": "silver-girls-ring-37",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 14
   },
   {
     "id": 38,
@@ -1315,8 +1315,8 @@
     "gst": 5,
     "slug": "silver-boys-ring-38",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 72
   },
   {
     "id": 39,
@@ -1349,8 +1349,8 @@
     "gst": 5,
     "slug": "silver-boys-ring-39",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 110
   },
   {
     "id": 40,
@@ -1382,8 +1382,8 @@
     "gst": 5,
     "slug": "silver-girls-ring-40",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 101
   },
   {
     "id": 41,
@@ -1415,8 +1415,8 @@
     "gst": 5,
     "slug": "guchcha-41",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 111
   },
   {
     "id": 42,
@@ -1448,8 +1448,8 @@
     "gst": 5,
     "slug": "kandora-42",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 31
   },
   {
     "id": 43,
@@ -1481,8 +1481,8 @@
     "gst": 5,
     "slug": "kandora-43",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 49
   },
   {
     "id": 44,
@@ -1514,8 +1514,8 @@
     "gst": 5,
     "slug": "guchcha-44",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 94
   },
   {
     "id": 45,
@@ -1548,8 +1548,8 @@
     "gst": 5,
     "slug": "gold-latkan-45",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 16
   },
   {
     "id": 46,
@@ -1582,8 +1582,8 @@
     "gst": 5,
     "slug": "fancy-silver-churi-gajra-46",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 111
   },
   {
     "id": 47,
@@ -1609,8 +1609,8 @@
     "gst": 5,
     "slug": "bracelet-silver-47",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 86
   },
   {
     "id": 48,
@@ -1645,8 +1645,8 @@
     "gst": 5,
     "slug": "bracelet-silver-48",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 99
   },
   {
     "id": 49,
@@ -1683,8 +1683,8 @@
     "gst": 5,
     "slug": "gold-jhumki-49",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.2,
+    "ratingCount": 10
   },
   {
     "id": 50,
@@ -1719,8 +1719,8 @@
     "gst": 5,
     "slug": "jodha-payal-50",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 42
   },
   {
     "id": 51,
@@ -1754,8 +1754,8 @@
     "gst": 5,
     "slug": "gents-gold-chain-51",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 56
   },
   {
     "id": 52,
@@ -1789,8 +1789,8 @@
     "gst": 5,
     "slug": "gold-mangalsutra-52",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 103
   },
   {
     "id": 53,
@@ -1823,8 +1823,8 @@
     "gst": 5,
     "slug": "rakhdi-53",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 23
   },
   {
     "id": 54,
@@ -1857,8 +1857,8 @@
     "gst": 5,
     "slug": "gold-bali-916-54",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.9,
+    "ratingCount": 48
   },
   {
     "id": 55,
@@ -1893,8 +1893,8 @@
     "gst": 5,
     "slug": "bracelet-silver-55",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4,
+    "ratingCount": 10
   },
   {
     "id": 56,
@@ -1928,8 +1928,8 @@
     "gst": 5,
     "slug": "gold-chain-for-kids-56",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 44
   },
   {
     "id": 57,
@@ -1963,8 +1963,8 @@
     "gst": 5,
     "slug": "fancy-tops-22k916-57",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 36
   },
   {
     "id": 58,
@@ -1998,8 +1998,8 @@
     "gst": 5,
     "slug": "tika-58",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.1,
+    "ratingCount": 31
   },
   {
     "id": 59,
@@ -2032,8 +2032,8 @@
     "gst": 5,
     "slug": "ladies-ring-59",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.9,
+    "ratingCount": 12
   },
   {
     "id": 60,
@@ -2066,8 +2066,8 @@
     "gst": 5,
     "slug": "gents-ring-60",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 22
   },
   {
     "id": 61,
@@ -2101,8 +2101,8 @@
     "gst": 5,
     "slug": "fancy-dulhan-payal-61",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 65
   },
   {
     "id": 62,
@@ -2136,8 +2136,8 @@
     "gst": 5,
     "slug": "puri-kamar-kandora-62",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 86
   },
   {
     "id": 63,
@@ -2171,8 +2171,8 @@
     "gst": 5,
     "slug": "fancy-tops-63",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 13
   },
   {
     "id": 64,
@@ -2206,8 +2206,8 @@
     "gst": 5,
     "slug": "ladies-ring-64",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 52
   },
   {
     "id": 65,
@@ -2241,8 +2241,8 @@
     "gst": 5,
     "slug": "mangalsutra-pandle-65",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 47
   },
   {
     "id": 66,
@@ -2275,8 +2275,8 @@
     "gst": 5,
     "slug": "silver-glass-66",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 73
   },
   {
     "id": 67,
@@ -2309,8 +2309,8 @@
     "gst": 5,
     "slug": "gents-chain-67",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 35
   },
   {
     "id": 68,
@@ -2345,8 +2345,8 @@
     "gst": 5,
     "slug": "fancy-tops-68",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 111
   },
   {
     "id": 69,
@@ -2380,8 +2380,8 @@
     "gst": 5,
     "slug": "ladies-chain-69",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 110
   },
   {
     "id": 70,
@@ -2414,8 +2414,8 @@
     "gst": 5,
     "slug": "gold-murki-70",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.1,
+    "ratingCount": 46
   },
   {
     "id": 71,
@@ -2454,8 +2454,8 @@
     "gst": 5,
     "slug": "bajuband-71",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 95
   },
   {
     "id": 72,
@@ -2493,8 +2493,8 @@
     "gst": 5,
     "slug": "bajuband-72",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 92
   },
   {
     "id": 73,
@@ -2532,8 +2532,8 @@
     "gst": 5,
     "slug": "bajuband-73",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 118
   },
   {
     "id": 74,
@@ -2572,8 +2572,8 @@
     "gst": 5,
     "slug": "bajuband-74",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 106
   },
   {
     "id": 75,
@@ -2612,8 +2612,8 @@
     "gst": 5,
     "slug": "bajuband-75",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.1,
+    "ratingCount": 40
   },
   {
     "id": 76,
@@ -2650,8 +2650,8 @@
     "gst": 5,
     "slug": "bajuband-76",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 108
   },
   {
     "id": 77,
@@ -2688,8 +2688,8 @@
     "gst": 5,
     "slug": "bajuband-77",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 80
   },
   {
     "id": 78,
@@ -2726,8 +2726,8 @@
     "gst": 5,
     "slug": "bajuband-78",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 38
   },
   {
     "id": 79,
@@ -2763,8 +2763,8 @@
     "gst": 5,
     "slug": "bajuband-79",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 62
   },
   {
     "id": 80,
@@ -2800,8 +2800,8 @@
     "gst": 5,
     "slug": "bajuband-80",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.2,
+    "ratingCount": 50
   },
   {
     "id": 81,
@@ -2838,8 +2838,8 @@
     "gst": 5,
     "slug": "gents-gold-chain-81",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 52
   },
   {
     "id": 82,
@@ -2874,8 +2874,8 @@
     "gst": 5,
     "slug": "gents-gold-chain-82",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 65
   },
   {
     "id": 83,
@@ -2910,8 +2910,8 @@
     "gst": 5,
     "slug": "gents-gold-chain-83",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 103
   },
   {
     "id": 84,
@@ -2944,8 +2944,8 @@
     "gst": 5,
     "slug": "gents-gold-chain-84",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4,
+    "ratingCount": 63
   },
   {
     "id": 85,
@@ -2979,8 +2979,8 @@
     "gst": 5,
     "slug": "gents-gold-chain-85",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 85
   },
   {
     "id": 86,
@@ -3014,8 +3014,8 @@
     "gst": 5,
     "slug": "gents-gold-chain-86",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 79
   },
   {
     "id": 87,
@@ -3049,8 +3049,8 @@
     "gst": 5,
     "slug": "gents-gold-chain-87",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 43
   },
   {
     "id": 88,
@@ -3083,8 +3083,8 @@
     "gst": 5,
     "slug": "gents-gold-chain-88",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 15
   },
   {
     "id": 89,
@@ -3117,8 +3117,8 @@
     "gst": 5,
     "slug": "gents-gold-chain-89",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 54
   },
   {
     "id": 90,
@@ -3151,8 +3151,8 @@
     "gst": 5,
     "slug": "gents-gold-chain-90",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 105
   },
   {
     "id": 91,
@@ -3186,8 +3186,8 @@
     "gst": 5,
     "slug": "gents-gold-chain-91",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 84
   },
   {
     "id": 92,
@@ -3221,8 +3221,8 @@
     "gst": 5,
     "slug": "gents-gold-chain-92",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 60
   },
   {
     "id": 93,
@@ -3256,8 +3256,8 @@
     "gst": 5,
     "slug": "gents-gold-chain-93",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 65
   },
   {
     "id": 94,
@@ -3289,8 +3289,8 @@
     "gst": 5,
     "slug": "ladies-ring-94",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 107
   },
   {
     "id": 95,
@@ -3324,8 +3324,8 @@
     "gst": 5,
     "slug": "ladies-ring-95",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 81
   },
   {
     "id": 96,
@@ -3359,8 +3359,8 @@
     "gst": 5,
     "slug": "ladies-ring-96",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.2,
+    "ratingCount": 15
   },
   {
     "id": 97,
@@ -3394,8 +3394,8 @@
     "gst": 5,
     "slug": "ladies-ring-97",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 83
   },
   {
     "id": 98,
@@ -3429,8 +3429,8 @@
     "gst": 5,
     "slug": "ladies-ring-98",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 30
   },
   {
     "id": 99,
@@ -3464,8 +3464,8 @@
     "gst": 5,
     "slug": "ladies-ring-99",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.1,
+    "ratingCount": 36
   },
   {
     "id": 100,
@@ -3499,8 +3499,8 @@
     "gst": 5,
     "slug": "ladies-ring-100",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 110
   },
   {
     "id": 101,
@@ -3534,8 +3534,8 @@
     "gst": 5,
     "slug": "ladies-ring-101",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 105
   },
   {
     "id": 102,
@@ -3569,8 +3569,8 @@
     "gst": 5,
     "slug": "ladies-ring-102",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.1,
+    "ratingCount": 104
   },
   {
     "id": 103,
@@ -3604,8 +3604,8 @@
     "gst": 5,
     "slug": "ladies-ring-103",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 84
   },
   {
     "id": 104,
@@ -3637,8 +3637,8 @@
     "gst": 5,
     "slug": "gents-ring-104",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 26
   },
   {
     "id": 105,
@@ -3672,8 +3672,8 @@
     "gst": 5,
     "slug": "gents-ring-105",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 55
   },
   {
     "id": 106,
@@ -3707,8 +3707,8 @@
     "gst": 5,
     "slug": "gents-ring-106",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 116
   },
   {
     "id": 107,
@@ -3742,8 +3742,8 @@
     "gst": 5,
     "slug": "gents-ring-107",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 20
   },
   {
     "id": 108,
@@ -3777,8 +3777,8 @@
     "gst": 5,
     "slug": "gents-ring-108",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 41
   },
   {
     "id": 109,
@@ -3812,8 +3812,8 @@
     "gst": 5,
     "slug": "gents-ring-109",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.2,
+    "ratingCount": 91
   },
   {
     "id": 110,
@@ -3847,8 +3847,8 @@
     "gst": 5,
     "slug": "gents-ring-110",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 33
   },
   {
     "id": 111,
@@ -3882,8 +3882,8 @@
     "gst": 5,
     "slug": "gents-ring-111",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.1,
+    "ratingCount": 39
   },
   {
     "id": 112,
@@ -3917,8 +3917,8 @@
     "gst": 5,
     "slug": "gents-ring-112",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 90
   },
   {
     "id": 113,
@@ -3952,8 +3952,8 @@
     "gst": 5,
     "slug": "gents-ring-113",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 52
   },
   {
     "id": 114,
@@ -3987,8 +3987,8 @@
     "gst": 5,
     "slug": "mangalsutra-pandle-114",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 11
   },
   {
     "id": 115,
@@ -4022,8 +4022,8 @@
     "gst": 5,
     "slug": "mangalsutra-pandle-115",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.2,
+    "ratingCount": 10
   },
   {
     "id": 116,
@@ -4057,8 +4057,8 @@
     "gst": 5,
     "slug": "mangalsutra-pandle-116",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 120
   },
   {
     "id": 117,
@@ -4092,8 +4092,8 @@
     "gst": 5,
     "slug": "ladies-ring-117",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 31
   },
   {
     "id": 118,
@@ -4127,8 +4127,8 @@
     "gst": 5,
     "slug": "ladies-ring-118",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4,
+    "ratingCount": 10
   },
   {
     "id": 119,
@@ -4162,8 +4162,8 @@
     "gst": 5,
     "slug": "ladies-ring-119",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 44
   },
   {
     "id": 120,
@@ -4197,8 +4197,8 @@
     "gst": 5,
     "slug": "ladies-ring-120",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 69
   },
   {
     "id": 121,
@@ -4232,8 +4232,8 @@
     "gst": 5,
     "slug": "gold-haar-121",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 38
   },
   {
     "id": 122,
@@ -4267,8 +4267,8 @@
     "gst": 5,
     "slug": "gold-haar-122",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 105
   },
   {
     "id": 123,
@@ -4307,8 +4307,8 @@
     "gst": 5,
     "slug": "gold-necklace-123",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 33
   },
   {
     "id": 124,
@@ -4342,8 +4342,8 @@
     "gst": 5,
     "slug": "gold-necklace-124",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.9,
+    "ratingCount": 56
   },
   {
     "id": 125,
@@ -4377,8 +4377,8 @@
     "gst": 5,
     "slug": "gold-necklace-125",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.1,
+    "ratingCount": 109
   },
   {
     "id": 126,
@@ -4411,8 +4411,8 @@
     "gst": 5,
     "slug": "silver-chain-126",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 46
   },
   {
     "id": 127,
@@ -4446,8 +4446,8 @@
     "gst": 5,
     "slug": "silver-chain-127",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.1,
+    "ratingCount": 86
   },
   {
     "id": 128,
@@ -4481,8 +4481,8 @@
     "gst": 5,
     "slug": "silver-chain-128",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 67
   },
   {
     "id": 129,
@@ -4516,8 +4516,8 @@
     "gst": 5,
     "slug": "silver-chain-129",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 115
   },
   {
     "id": 130,
@@ -4551,8 +4551,8 @@
     "gst": 5,
     "slug": "silver-chain-130",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 67
   },
   {
     "id": 131,
@@ -4587,8 +4587,8 @@
     "gst": 5,
     "slug": "fancy-dulhan-payal-131",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4,
+    "ratingCount": 33
   },
   {
     "id": 132,
@@ -4622,8 +4622,8 @@
     "gst": 5,
     "slug": "fancy-dulhan-payal-132",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 110
   },
   {
     "id": 133,
@@ -4658,8 +4658,8 @@
     "gst": 5,
     "slug": "fancy-dulhan-payal-133",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 37
   },
   {
     "id": 134,
@@ -4692,8 +4692,8 @@
     "gst": 5,
     "slug": "fancy-dulhan-payal-134",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 56
   },
   {
     "id": 135,
@@ -4726,8 +4726,8 @@
     "gst": 5,
     "slug": "fancy-dulhan-payal-135",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.2,
+    "ratingCount": 106
   },
   {
     "id": 136,
@@ -4761,8 +4761,8 @@
     "gst": 5,
     "slug": "mangalsutra-pandle-136",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 71
   },
   {
     "id": 137,
@@ -4796,8 +4796,8 @@
     "gst": 5,
     "slug": "mangalsutra-pandle-137",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 89
   },
   {
     "id": 138,
@@ -4831,8 +4831,8 @@
     "gst": 5,
     "slug": "mangalsutra-pandle-138",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 30
   },
   {
     "id": 139,
@@ -4866,8 +4866,8 @@
     "gst": 5,
     "slug": "mangalsutra-pandle-139",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 16
   },
   {
     "id": 140,
@@ -4901,8 +4901,8 @@
     "gst": 5,
     "slug": "mangalsutra-pandle-140",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 83
   },
   {
     "id": 141,
@@ -4936,8 +4936,8 @@
     "gst": 5,
     "slug": "mangalsutra-pandle-141",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.7,
+    "ratingCount": 9
   },
   {
     "id": 142,
@@ -4971,8 +4971,8 @@
     "gst": 5,
     "slug": "mangalsutra-pandle-142",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4,
+    "ratingCount": 80
   },
   {
     "id": 143,
@@ -5006,8 +5006,8 @@
     "gst": 5,
     "slug": "ladies-ring-143",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 99
   },
   {
     "id": 144,
@@ -5041,8 +5041,8 @@
     "gst": 5,
     "slug": "ladies-ring-144",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 28
   },
   {
     "id": 145,
@@ -5076,8 +5076,8 @@
     "gst": 5,
     "slug": "ladies-ring-145",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 93
   },
   {
     "id": 146,
@@ -5111,8 +5111,8 @@
     "gst": 5,
     "slug": "ladies-ring-146",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 69
   },
   {
     "id": 147,
@@ -5146,8 +5146,8 @@
     "gst": 5,
     "slug": "ladies-ring-147",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 115
   },
   {
     "id": 148,
@@ -5181,8 +5181,8 @@
     "gst": 5,
     "slug": "ladies-ring-148",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4,
+    "ratingCount": 98
   },
   {
     "id": 149,
@@ -5216,8 +5216,8 @@
     "gst": 5,
     "slug": "ladies-ring-149",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.8,
+    "ratingCount": 32
   },
   {
     "id": 150,
@@ -5251,8 +5251,8 @@
     "gst": 5,
     "slug": "ladies-ring-150",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 13
   },
   {
     "id": 151,
@@ -5286,8 +5286,8 @@
     "gst": 5,
     "slug": "ladies-ring-151",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 53
   },
   {
     "id": 152,
@@ -5321,8 +5321,8 @@
     "gst": 5,
     "slug": "ladies-ring-152",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 86
   },
   {
     "id": 153,
@@ -5356,8 +5356,8 @@
     "gst": 5,
     "slug": "ladies-ring-153",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.2,
+    "ratingCount": 102
   },
   {
     "id": 154,
@@ -5391,8 +5391,8 @@
     "gst": 5,
     "slug": "ladies-ring-154",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.6,
+    "ratingCount": 14
   },
   {
     "id": 155,
@@ -5426,8 +5426,8 @@
     "gst": 5,
     "slug": "ladies-ring-155",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.2,
+    "ratingCount": 72
   },
   {
     "id": 156,
@@ -5461,8 +5461,8 @@
     "gst": 5,
     "slug": "ladies-ring-156",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4,
+    "ratingCount": 113
   },
   {
     "id": 157,
@@ -5496,8 +5496,8 @@
     "gst": 5,
     "slug": "ladies-ring-157",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.6,
+    "ratingCount": 9
   },
   {
     "id": 158,
@@ -5531,8 +5531,8 @@
     "gst": 5,
     "slug": "ladies-chain-158",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.2,
+    "ratingCount": 86
   },
   {
     "id": 159,
@@ -5566,8 +5566,8 @@
     "gst": 5,
     "slug": "ladies-chain-159",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 110
   },
   {
     "id": 160,
@@ -5601,8 +5601,8 @@
     "gst": 5,
     "slug": "gents-gold-chain-160",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 119
   },
   {
     "id": 162,
@@ -5636,8 +5636,8 @@
     "gst": 5,
     "slug": "gents-gold-chain-162",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 14
   },
   {
     "id": 163,
@@ -5671,8 +5671,8 @@
     "gst": 5,
     "slug": "ladies-chain-163",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 43
   },
   {
     "id": 164,
@@ -5706,8 +5706,8 @@
     "gst": 5,
     "slug": "ladies-chain-164",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 96
   },
   {
     "id": 165,
@@ -5741,8 +5741,8 @@
     "gst": 5,
     "slug": "ladies-chain-165",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 119
   },
   {
     "id": 166,
@@ -5776,8 +5776,8 @@
     "gst": 5,
     "slug": "ladies-chain-166",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 116
   },
   {
     "id": 167,
@@ -5811,8 +5811,8 @@
     "gst": 5,
     "slug": "ladies-chain-167",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 98
   },
   {
     "id": 168,
@@ -5846,8 +5846,8 @@
     "gst": 5,
     "slug": "gents-gold-chain-168",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 109
   },
   {
     "id": 169,
@@ -5881,8 +5881,8 @@
     "gst": 5,
     "slug": "gents-gold-chain-169",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 44
   },
   {
     "id": 170,
@@ -5916,8 +5916,8 @@
     "gst": 5,
     "slug": "ladies-chain-170",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.9,
+    "ratingCount": 111
   },
   {
     "id": 171,
@@ -5951,8 +5951,8 @@
     "gst": 5,
     "slug": "common-chain-171",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 81
   },
   {
     "id": 172,
@@ -5986,8 +5986,8 @@
     "gst": 5,
     "slug": "ladies-chain-172",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 27
   },
   {
     "id": 173,
@@ -6021,8 +6021,8 @@
     "gst": 5,
     "slug": "common-chain-173",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4,
+    "ratingCount": 42
   },
   {
     "id": 174,
@@ -6056,8 +6056,8 @@
     "gst": 5,
     "slug": "ladies-chain-174",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 58
   },
   {
     "id": 175,
@@ -6091,8 +6091,8 @@
     "gst": 5,
     "slug": "common-chain-175",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 37
   },
   {
     "id": 176,
@@ -6126,8 +6126,8 @@
     "gst": 5,
     "slug": "ladies-chain-176",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 104
   },
   {
     "id": 177,
@@ -6161,8 +6161,8 @@
     "gst": 5,
     "slug": "ladies-chain-177",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 68
   },
   {
     "id": 178,
@@ -6196,8 +6196,8 @@
     "gst": 5,
     "slug": "ladies-chain-178",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 28
   },
   {
     "id": 179,
@@ -6231,8 +6231,8 @@
     "gst": 5,
     "slug": "ladies-chain-179",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.2,
+    "ratingCount": 101
   },
   {
     "id": 180,
@@ -6266,8 +6266,8 @@
     "gst": 5,
     "slug": "ladies-chain-180",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 100
   },
   {
     "id": 181,
@@ -6301,8 +6301,8 @@
     "gst": 5,
     "slug": "ladies-chain-181",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 117
   },
   {
     "id": 182,
@@ -6336,8 +6336,8 @@
     "gst": 5,
     "slug": "gents-gold-chain-182",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4,
+    "ratingCount": 81
   },
   {
     "id": 183,
@@ -6371,8 +6371,8 @@
     "gst": 5,
     "slug": "gents-gold-chain-183",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 56
   },
   {
     "id": 184,
@@ -6407,8 +6407,8 @@
     "gst": 5,
     "slug": "silver-chain-184",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4,
+    "ratingCount": 44
   },
   {
     "id": 185,
@@ -6443,8 +6443,8 @@
     "gst": 0,
     "slug": "gold-bangles-185",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 78
   },
   {
     "id": 186,
@@ -6479,8 +6479,8 @@
     "gst": 0,
     "slug": "gold-bangles-186",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.2,
+    "ratingCount": 29
   },
   {
     "id": 187,
@@ -6510,8 +6510,8 @@
     "gst": 0,
     "slug": "gold-bangles-187",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 72
   },
   {
     "id": 188,
@@ -6541,8 +6541,8 @@
     "gst": 0,
     "slug": "gold-bangles-188",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 42
   },
   {
     "id": 189,
@@ -6572,8 +6572,8 @@
     "gst": 0,
     "slug": "gold-bangles-189",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.9,
+    "ratingCount": 27
   },
   {
     "id": 190,
@@ -6603,8 +6603,8 @@
     "gst": 0,
     "slug": "gold-bangles-190",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 9
   },
   {
     "id": 191,
@@ -6634,8 +6634,8 @@
     "gst": 0,
     "slug": "gold-bangles-191",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 118
   },
   {
     "id": 192,
@@ -6665,8 +6665,8 @@
     "gst": 0,
     "slug": "gold-bangles-192",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 33
   },
   {
     "id": 193,
@@ -6696,8 +6696,8 @@
     "gst": 0,
     "slug": "gold-bangles-193",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.2,
+    "ratingCount": 93
   },
   {
     "id": 194,
@@ -6727,8 +6727,8 @@
     "gst": 0,
     "slug": "gold-bangles-194",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.9,
+    "ratingCount": 93
   },
   {
     "id": 195,
@@ -6758,8 +6758,8 @@
     "gst": 0,
     "slug": "gold-bangles-195",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 20
   },
   {
     "id": 196,
@@ -6789,8 +6789,8 @@
     "gst": 0,
     "slug": "gold-bangles-196",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 86
   },
   {
     "id": 197,
@@ -6820,8 +6820,8 @@
     "gst": 0,
     "slug": "gold-bangles-197",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 104
   },
   {
     "id": 198,
@@ -6851,8 +6851,8 @@
     "gst": 0,
     "slug": "gold-bangles-198",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 41
   },
   {
     "id": 199,
@@ -6882,8 +6882,8 @@
     "gst": 0,
     "slug": "gold-bangles-199",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 34
   },
   {
     "id": 200,
@@ -6913,8 +6913,8 @@
     "gst": 0,
     "slug": "gold-bangles-200",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 105
   },
   {
     "id": 201,
@@ -6944,8 +6944,8 @@
     "gst": 0,
     "slug": "gold-bangles-201",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 109
   },
   {
     "id": 202,
@@ -6975,8 +6975,8 @@
     "gst": 0,
     "slug": "gold-bangles-202",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 80
   },
   {
     "id": 203,
@@ -7006,8 +7006,8 @@
     "gst": 0,
     "slug": "gold-bangles-203",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.8,
+    "ratingCount": 23
   },
   {
     "id": 204,
@@ -7037,8 +7037,8 @@
     "gst": 0,
     "slug": "gold-bangles-204",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 18
   },
   {
     "id": 205,
@@ -7068,8 +7068,8 @@
     "gst": 0,
     "slug": "gold-bangles-205",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 16
   },
   {
     "id": 206,
@@ -7099,8 +7099,8 @@
     "gst": 0,
     "slug": "gold-bangles-206",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 56
   },
   {
     "id": 207,
@@ -7130,8 +7130,8 @@
     "gst": 0,
     "slug": "gold-bangles-207",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 50
   },
   {
     "id": 208,
@@ -7161,8 +7161,8 @@
     "gst": 0,
     "slug": "gold-bangles-208",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 85
   },
   {
     "id": 209,
@@ -7192,8 +7192,8 @@
     "gst": 0,
     "slug": "gold-bangles-209",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 96
   },
   {
     "id": 210,
@@ -7223,8 +7223,8 @@
     "gst": 0,
     "slug": "gold-bangles-210",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4,
+    "ratingCount": 45
   },
   {
     "id": 211,
@@ -7254,8 +7254,8 @@
     "gst": 0,
     "slug": "gold-bangles-211",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 93
   },
   {
     "id": 212,
@@ -7285,8 +7285,8 @@
     "gst": 0,
     "slug": "gold-bangles-212",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 11
   },
   {
     "id": 213,
@@ -7316,8 +7316,8 @@
     "gst": 0,
     "slug": "gold-bangles-213",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.1,
+    "ratingCount": 90
   },
   {
     "id": 214,
@@ -7347,8 +7347,8 @@
     "gst": 0,
     "slug": "gold-bangles-214",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.6,
+    "ratingCount": 10
   },
   {
     "id": 215,
@@ -7378,8 +7378,8 @@
     "gst": 0,
     "slug": "gold-bangles-215",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 48
   },
   {
     "id": 216,
@@ -7409,8 +7409,8 @@
     "gst": 0,
     "slug": "gold-bangles-216",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 90
   },
   {
     "id": 217,
@@ -7440,8 +7440,8 @@
     "gst": 0,
     "slug": "gold-bangles-217",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 117
   },
   {
     "id": 218,
@@ -7471,8 +7471,8 @@
     "gst": 0,
     "slug": "gold-bangles-218",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 73
   },
   {
     "id": 219,
@@ -7502,8 +7502,8 @@
     "gst": 0,
     "slug": "gold-bangles-219",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 46
   },
   {
     "id": 220,
@@ -7533,8 +7533,8 @@
     "gst": 0,
     "slug": "gold-bangles-220",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.8,
+    "ratingCount": 91
   },
   {
     "id": 221,
@@ -7564,8 +7564,8 @@
     "gst": 0,
     "slug": "gold-bangles-221",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.2,
+    "ratingCount": 87
   },
   {
     "id": 222,
@@ -7595,8 +7595,8 @@
     "gst": 0,
     "slug": "gold-bangles-222",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 17
   },
   {
     "id": 223,
@@ -7626,8 +7626,8 @@
     "gst": 0,
     "slug": "gold-bangles-223",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 64
   },
   {
     "id": 224,
@@ -7657,8 +7657,8 @@
     "gst": 0,
     "slug": "gold-bangles-224",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 54
   },
   {
     "id": 225,
@@ -7688,8 +7688,8 @@
     "gst": 0,
     "slug": "gold-bangles-225",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.5,
+    "ratingCount": 10
   },
   {
     "id": 226,
@@ -7719,8 +7719,8 @@
     "gst": 0,
     "slug": "gold-bangles-226",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.9,
+    "ratingCount": 116
   },
   {
     "id": 227,
@@ -7750,8 +7750,8 @@
     "gst": 0,
     "slug": "gold-bangles-227",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.2,
+    "ratingCount": 54
   },
   {
     "id": 228,
@@ -7781,8 +7781,8 @@
     "gst": 0,
     "slug": "gold-bangles-228",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.9,
+    "ratingCount": 9
   },
   {
     "id": 229,
@@ -7812,8 +7812,8 @@
     "gst": 0,
     "slug": "gold-bangles-229",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 56
   },
   {
     "id": 230,
@@ -7843,8 +7843,8 @@
     "gst": 0,
     "slug": "gold-bangles-230",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 40
   },
   {
     "id": 231,
@@ -7874,8 +7874,8 @@
     "gst": 0,
     "slug": "gold-bangles-231",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.2,
+    "ratingCount": 118
   },
   {
     "id": 232,
@@ -7905,8 +7905,8 @@
     "gst": 0,
     "slug": "gold-bangles-232",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 23
   },
   {
     "id": 233,
@@ -7936,8 +7936,8 @@
     "gst": 0,
     "slug": "gold-bangles-233",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 29
   },
   {
     "id": 234,
@@ -7967,8 +7967,8 @@
     "gst": 0,
     "slug": "gold-bangles-234",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 49
   },
   {
     "id": 235,
@@ -7998,8 +7998,8 @@
     "gst": 0,
     "slug": "gold-bangles-235",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 110
   },
   {
     "id": 236,
@@ -8029,8 +8029,8 @@
     "gst": 0,
     "slug": "gold-bangles-236",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 44
   },
   {
     "id": 237,
@@ -8060,8 +8060,8 @@
     "gst": 0,
     "slug": "gold-bangles-237",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.1,
+    "ratingCount": 71
   },
   {
     "id": 238,
@@ -8091,8 +8091,8 @@
     "gst": 0,
     "slug": "gold-bangles-238",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 10
   },
   {
     "id": 239,
@@ -8122,8 +8122,8 @@
     "gst": 0,
     "slug": "gold-bangles-239",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 101
   },
   {
     "id": 240,
@@ -8153,8 +8153,8 @@
     "gst": 0,
     "slug": "gold-bangles-240",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 92
   },
   {
     "id": 241,
@@ -8184,8 +8184,8 @@
     "gst": 0,
     "slug": "gold-bangles-241",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.7,
+    "ratingCount": 18
   },
   {
     "id": 242,
@@ -8215,8 +8215,8 @@
     "gst": 0,
     "slug": "gold-bangles-242",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 32
   },
   {
     "id": 243,
@@ -8246,8 +8246,8 @@
     "gst": 0,
     "slug": "gold-bangles-243",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 67
   },
   {
     "id": 244,
@@ -8277,8 +8277,8 @@
     "gst": 0,
     "slug": "gold-bangles-244",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 49
   },
   {
     "id": 245,
@@ -8308,8 +8308,8 @@
     "gst": 0,
     "slug": "gold-bangles-245",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.8,
+    "ratingCount": 29
   },
   {
     "id": 246,
@@ -8339,8 +8339,8 @@
     "gst": 0,
     "slug": "gold-bangles-246",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 94
   },
   {
     "id": 247,
@@ -8370,8 +8370,8 @@
     "gst": 0,
     "slug": "gold-bangles-247",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.5,
+    "ratingCount": 10
   },
   {
     "id": 248,
@@ -8401,8 +8401,8 @@
     "gst": 0,
     "slug": "gold-bangles-248",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 109
   },
   {
     "id": 249,
@@ -8432,8 +8432,8 @@
     "gst": 0,
     "slug": "gold-bangles-249",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 47
   },
   {
     "id": 250,
@@ -8463,8 +8463,8 @@
     "gst": 0,
     "slug": "gold-bangles-250",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 102
   },
   {
     "id": 251,
@@ -8494,8 +8494,8 @@
     "gst": 0,
     "slug": "gold-bangles-251",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 111
   },
   {
     "id": 252,
@@ -8525,8 +8525,8 @@
     "gst": 0,
     "slug": "gold-bangles-252",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 26
   },
   {
     "id": 253,
@@ -8556,8 +8556,8 @@
     "gst": 0,
     "slug": "gold-bangles-253",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 94
   },
   {
     "id": 254,
@@ -8587,8 +8587,8 @@
     "gst": 0,
     "slug": "gold-bangles-254",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 97
   },
   {
     "id": 255,
@@ -8618,8 +8618,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-255",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.1,
+    "ratingCount": 108
   },
   {
     "id": 256,
@@ -8649,8 +8649,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-256",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 102
   },
   {
     "id": 257,
@@ -8680,8 +8680,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-257",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 119
   },
   {
     "id": 258,
@@ -8711,8 +8711,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-258",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 26
   },
   {
     "id": 259,
@@ -8744,8 +8744,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-259",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 120
   },
   {
     "id": 260,
@@ -8777,8 +8777,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-260",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 51
   },
   {
     "id": 261,
@@ -8808,8 +8808,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-261",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4,
+    "ratingCount": 92
   },
   {
     "id": 262,
@@ -8839,8 +8839,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-262",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 27
   },
   {
     "id": 263,
@@ -8870,8 +8870,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-263",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 103
   },
   {
     "id": 264,
@@ -8901,8 +8901,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-264",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 25
   },
   {
     "id": 265,
@@ -8932,8 +8932,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-265",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 35
   },
   {
     "id": 266,
@@ -8963,8 +8963,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-266",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 111
   },
   {
     "id": 267,
@@ -8994,8 +8994,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-267",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 73
   },
   {
     "id": 268,
@@ -9025,8 +9025,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-268",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 75
   },
   {
     "id": 269,
@@ -9056,8 +9056,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-269",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 68
   },
   {
     "id": 270,
@@ -9087,8 +9087,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-270",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 64
   },
   {
     "id": 271,
@@ -9118,8 +9118,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-271",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 24
   },
   {
     "id": 272,
@@ -9149,8 +9149,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-272",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 73
   },
   {
     "id": 273,
@@ -9180,8 +9180,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-273",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 12
   },
   {
     "id": 274,
@@ -9211,8 +9211,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-274",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 91
   },
   {
     "id": 275,
@@ -9242,8 +9242,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-275",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 25
   },
   {
     "id": 276,
@@ -9273,8 +9273,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-276",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 62
   },
   {
     "id": 277,
@@ -9304,8 +9304,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-277",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 45
   },
   {
     "id": 278,
@@ -9335,8 +9335,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-278",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 100
   },
   {
     "id": 279,
@@ -9366,8 +9366,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-279",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 47
   },
   {
     "id": 280,
@@ -9397,8 +9397,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-280",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 91
   },
   {
     "id": 281,
@@ -9428,8 +9428,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-281",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 28
   },
   {
     "id": 282,
@@ -9459,8 +9459,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-282",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 117
   },
   {
     "id": 283,
@@ -9490,8 +9490,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-283",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 67
   },
   {
     "id": 284,
@@ -9521,8 +9521,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-284",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 52
   },
   {
     "id": 285,
@@ -9552,8 +9552,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-285",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 102
   },
   {
     "id": 286,
@@ -9583,8 +9583,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-286",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 99
   },
   {
     "id": 287,
@@ -9614,8 +9614,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-287",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 62
   },
   {
     "id": 288,
@@ -9645,8 +9645,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-288",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 66
   },
   {
     "id": 289,
@@ -9676,8 +9676,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-289",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4,
+    "ratingCount": 29
   },
   {
     "id": 290,
@@ -9707,8 +9707,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-290",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 22
   },
   {
     "id": 291,
@@ -9738,8 +9738,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-291",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 71
   },
   {
     "id": 292,
@@ -9769,8 +9769,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-292",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 82
   },
   {
     "id": 293,
@@ -9800,8 +9800,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-293",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 15
   },
   {
     "id": 294,
@@ -9831,8 +9831,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-294",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 16
   },
   {
     "id": 295,
@@ -9862,8 +9862,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-295",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.7,
+    "ratingCount": 23
   },
   {
     "id": 296,
@@ -9893,8 +9893,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-296",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 76
   },
   {
     "id": 297,
@@ -9926,8 +9926,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-297",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 21
   },
   {
     "id": 298,
@@ -9959,8 +9959,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-298",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.9,
+    "ratingCount": 35
   },
   {
     "id": 299,
@@ -9992,8 +9992,8 @@
     "gst": 0,
     "slug": "common-chain-299",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.1,
+    "ratingCount": 42
   },
   {
     "id": 300,
@@ -10025,8 +10025,8 @@
     "gst": 0,
     "slug": "common-chain-300",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.1,
+    "ratingCount": 64
   },
   {
     "id": 301,
@@ -10058,8 +10058,8 @@
     "gst": 0,
     "slug": "common-chain-301",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 80
   },
   {
     "id": 302,
@@ -10091,8 +10091,8 @@
     "gst": 0,
     "slug": "common-chain-302",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 24
   },
   {
     "id": 303,
@@ -10124,8 +10124,8 @@
     "gst": 0,
     "slug": "common-chain-303",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.1,
+    "ratingCount": 15
   },
   {
     "id": 304,
@@ -10157,8 +10157,8 @@
     "gst": 0,
     "slug": "common-chain-304",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.2,
+    "ratingCount": 11
   },
   {
     "id": 305,
@@ -10190,8 +10190,8 @@
     "gst": 0,
     "slug": "common-chain-305",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.9,
+    "ratingCount": 11
   },
   {
     "id": 306,
@@ -10223,8 +10223,8 @@
     "gst": 0,
     "slug": "common-chain-306",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 67
   },
   {
     "id": 307,
@@ -10256,8 +10256,8 @@
     "gst": 0,
     "slug": "common-chain-307",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 32
   },
   {
     "id": 308,
@@ -10289,8 +10289,8 @@
     "gst": 0,
     "slug": "common-chain-308",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 75
   },
   {
     "id": 309,
@@ -10322,8 +10322,8 @@
     "gst": 0,
     "slug": "common-chain-309",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 40
   },
   {
     "id": 310,
@@ -10355,8 +10355,8 @@
     "gst": 0,
     "slug": "common-chain-310",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.2,
+    "ratingCount": 65
   },
   {
     "id": 311,
@@ -10388,8 +10388,8 @@
     "gst": 0,
     "slug": "common-chain-311",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.1,
+    "ratingCount": 13
   },
   {
     "id": 312,
@@ -10421,8 +10421,8 @@
     "gst": 0,
     "slug": "common-chain-312",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 9
   },
   {
     "id": 313,
@@ -10454,8 +10454,8 @@
     "gst": 0,
     "slug": "common-chain-313",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 90
   },
   {
     "id": 314,
@@ -10487,8 +10487,8 @@
     "gst": 0,
     "slug": "common-chain-314",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.9,
+    "ratingCount": 20
   },
   {
     "id": 315,
@@ -10520,8 +10520,8 @@
     "gst": 0,
     "slug": "common-chain-315",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 47
   },
   {
     "id": 316,
@@ -10553,8 +10553,8 @@
     "gst": 0,
     "slug": "common-chain-316",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 67
   },
   {
     "id": 317,
@@ -10586,8 +10586,8 @@
     "gst": 0,
     "slug": "common-chain-317",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.9,
+    "ratingCount": 58
   },
   {
     "id": 318,
@@ -10619,8 +10619,8 @@
     "gst": 0,
     "slug": "common-chain-318",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 98
   },
   {
     "id": 319,
@@ -10652,8 +10652,8 @@
     "gst": 0,
     "slug": "common-chain-319",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 102
   },
   {
     "id": 320,
@@ -10685,8 +10685,8 @@
     "gst": 0,
     "slug": "common-chain-320",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.2,
+    "ratingCount": 60
   },
   {
     "id": 321,
@@ -10718,8 +10718,8 @@
     "gst": 0,
     "slug": "common-chain-321",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.1,
+    "ratingCount": 20
   },
   {
     "id": 322,
@@ -10751,8 +10751,8 @@
     "gst": 0,
     "slug": "ladies-chain-322",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 105
   },
   {
     "id": 323,
@@ -10784,8 +10784,8 @@
     "gst": 0,
     "slug": "ladies-chain-323",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 70
   },
   {
     "id": 324,
@@ -10817,8 +10817,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-324",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 84
   },
   {
     "id": 325,
@@ -10850,8 +10850,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-325",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.1,
+    "ratingCount": 38
   },
   {
     "id": 326,
@@ -10883,8 +10883,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-326",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 10
   },
   {
     "id": 327,
@@ -10916,8 +10916,8 @@
     "gst": 0,
     "slug": "common-chain-327",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 94
   },
   {
     "id": 328,
@@ -10949,8 +10949,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-328",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 89
   },
   {
     "id": 329,
@@ -10982,8 +10982,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-329",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 18
   },
   {
     "id": 330,
@@ -11015,8 +11015,8 @@
     "gst": 0,
     "slug": "common-chain-330",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.2,
+    "ratingCount": 55
   },
   {
     "id": 331,
@@ -11048,8 +11048,8 @@
     "gst": 0,
     "slug": "common-chain-331",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.7,
+    "ratingCount": 27
   },
   {
     "id": 332,
@@ -11081,8 +11081,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-332",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 55
   },
   {
     "id": 333,
@@ -11114,8 +11114,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-333",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4,
+    "ratingCount": 45
   },
   {
     "id": 334,
@@ -11147,8 +11147,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-334",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 40
   },
   {
     "id": 335,
@@ -11180,8 +11180,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-335",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 32
   },
   {
     "id": 336,
@@ -11213,8 +11213,8 @@
     "gst": 0,
     "slug": "common-chain-336",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 79
   },
   {
     "id": 337,
@@ -11246,8 +11246,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-337",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.7,
+    "ratingCount": 15
   },
   {
     "id": 338,
@@ -11279,8 +11279,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-338",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 119
   },
   {
     "id": 339,
@@ -11312,8 +11312,8 @@
     "gst": 0,
     "slug": "common-chain-339",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 100
   },
   {
     "id": 340,
@@ -11345,8 +11345,8 @@
     "gst": 0,
     "slug": "common-chain-340",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.7,
+    "ratingCount": 63
   },
   {
     "id": 341,
@@ -11378,8 +11378,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-341",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 103
   },
   {
     "id": 342,
@@ -11411,8 +11411,8 @@
     "gst": 0,
     "slug": "common-chain-342",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 76
   },
   {
     "id": 343,
@@ -11444,8 +11444,8 @@
     "gst": 0,
     "slug": "common-chain-343",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.2,
+    "ratingCount": 103
   },
   {
     "id": 344,
@@ -11477,8 +11477,8 @@
     "gst": 0,
     "slug": "common-chain-344",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 106
   },
   {
     "id": 345,
@@ -11510,8 +11510,8 @@
     "gst": 0,
     "slug": "common-chain-345",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.2,
+    "ratingCount": 49
   },
   {
     "id": 346,
@@ -11543,8 +11543,8 @@
     "gst": 0,
     "slug": "common-chain-346",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 74
   },
   {
     "id": 347,
@@ -11576,8 +11576,8 @@
     "gst": 0,
     "slug": "common-chain-347",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.9,
+    "ratingCount": 15
   },
   {
     "id": 348,
@@ -11609,8 +11609,8 @@
     "gst": 0,
     "slug": "common-chain-348",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 119
   },
   {
     "id": 349,
@@ -11642,8 +11642,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-349",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.7,
+    "ratingCount": 37
   },
   {
     "id": 350,
@@ -11675,8 +11675,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-350",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 73
   },
   {
     "id": 351,
@@ -11708,8 +11708,8 @@
     "gst": 0,
     "slug": "common-chain-351",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 75
   },
   {
     "id": 352,
@@ -11741,8 +11741,8 @@
     "gst": 0,
     "slug": "common-chain-352",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 28
   },
   {
     "id": 353,
@@ -11774,8 +11774,8 @@
     "gst": 0,
     "slug": "common-chain-353",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 10
   },
   {
     "id": 354,
@@ -11807,8 +11807,8 @@
     "gst": 0,
     "slug": "common-chain-354",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4,
+    "ratingCount": 94
   },
   {
     "id": 355,
@@ -11840,8 +11840,8 @@
     "gst": 0,
     "slug": "gents-gold-chain-355",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 40
   },
   {
     "id": 356,
@@ -11873,8 +11873,8 @@
     "gst": 0,
     "slug": "gold-haar-356",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 55
   },
   {
     "id": 357,
@@ -11906,8 +11906,8 @@
     "gst": 0,
     "slug": "chokar-357",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 60
   },
   {
     "id": 358,
@@ -11939,8 +11939,8 @@
     "gst": 0,
     "slug": "chokar-358",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 23
   },
   {
     "id": 359,
@@ -11972,8 +11972,8 @@
     "gst": 0,
     "slug": "chokar-359",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 85
   },
   {
     "id": 360,
@@ -12005,8 +12005,8 @@
     "gst": 0,
     "slug": "chokar-360",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 117
   },
   {
     "id": 361,
@@ -12038,8 +12038,8 @@
     "gst": 0,
     "slug": "chokar-361",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4,
+    "ratingCount": 10
   },
   {
     "id": 362,
@@ -12071,8 +12071,8 @@
     "gst": 0,
     "slug": "chokar-362",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 107
   },
   {
     "id": 363,
@@ -12104,8 +12104,8 @@
     "gst": 0,
     "slug": "chokar-363",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 111
   },
   {
     "id": 364,
@@ -12137,8 +12137,8 @@
     "gst": 0,
     "slug": "chokar-364",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 78
   },
   {
     "id": 365,
@@ -12170,8 +12170,8 @@
     "gst": 0,
     "slug": "chokar-365",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.9,
+    "ratingCount": 11
   },
   {
     "id": 366,
@@ -12203,8 +12203,8 @@
     "gst": 0,
     "slug": "chokar-366",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 76
   },
   {
     "id": 367,
@@ -12236,8 +12236,8 @@
     "gst": 0,
     "slug": "chokar-367",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 11
   },
   {
     "id": 368,
@@ -12269,8 +12269,8 @@
     "gst": 0,
     "slug": "chokar-368",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 45
   },
   {
     "id": 369,
@@ -12302,8 +12302,8 @@
     "gst": 0,
     "slug": "chokar-369",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 89
   },
   {
     "id": 370,
@@ -12335,8 +12335,8 @@
     "gst": 0,
     "slug": "chokar-370",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 79
   },
   {
     "id": 371,
@@ -12368,8 +12368,8 @@
     "gst": 0,
     "slug": "chokar-371",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 102
   },
   {
     "id": 372,
@@ -12401,8 +12401,8 @@
     "gst": 0,
     "slug": "chokar-372",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.9,
+    "ratingCount": 82
   },
   {
     "id": 373,
@@ -12434,8 +12434,8 @@
     "gst": 0,
     "slug": "chokar-373",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 26
   },
   {
     "id": 374,
@@ -12467,8 +12467,8 @@
     "gst": 0,
     "slug": "chokar-374",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.9,
+    "ratingCount": 90
   },
   {
     "id": 375,
@@ -12500,8 +12500,8 @@
     "gst": 0,
     "slug": "chokar-375",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 12
   },
   {
     "id": 376,
@@ -12533,8 +12533,8 @@
     "gst": 0,
     "slug": "chokar-376",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 69
   },
   {
     "id": 377,
@@ -12566,8 +12566,8 @@
     "gst": 0,
     "slug": "chokar-377",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 18
   },
   {
     "id": 378,
@@ -12599,8 +12599,8 @@
     "gst": 0,
     "slug": "chokar-378",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 46
   },
   {
     "id": 379,
@@ -12632,8 +12632,8 @@
     "gst": 0,
     "slug": "chokar-379",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 84
   },
   {
     "id": 380,
@@ -12665,8 +12665,8 @@
     "gst": 0,
     "slug": "chokar-380",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.1,
+    "ratingCount": 97
   },
   {
     "id": 381,
@@ -12698,8 +12698,8 @@
     "gst": 0,
     "slug": "chokar-381",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 47
   },
   {
     "id": 382,
@@ -12731,8 +12731,8 @@
     "gst": 0,
     "slug": "chokar-382",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 71
   },
   {
     "id": 383,
@@ -12764,8 +12764,8 @@
     "gst": 0,
     "slug": "chokar-383",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.9,
+    "ratingCount": 73
   },
   {
     "id": 384,
@@ -12797,8 +12797,8 @@
     "gst": 0,
     "slug": "chokar-384",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 66
   },
   {
     "id": 385,
@@ -12830,8 +12830,8 @@
     "gst": 0,
     "slug": "chokar-385",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.1,
+    "ratingCount": 14
   },
   {
     "id": 386,
@@ -12863,8 +12863,8 @@
     "gst": 0,
     "slug": "chokar-386",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 19
   },
   {
     "id": 387,
@@ -12896,8 +12896,8 @@
     "gst": 0,
     "slug": "chokar-387",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 44
   },
   {
     "id": 388,
@@ -12929,8 +12929,8 @@
     "gst": 0,
     "slug": "chokar-388",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4,
+    "ratingCount": 41
   },
   {
     "id": 389,
@@ -12962,8 +12962,8 @@
     "gst": 0,
     "slug": "chokar-389",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 107
   },
   {
     "id": 390,
@@ -12995,8 +12995,8 @@
     "gst": 0,
     "slug": "chokar-390",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.6,
+    "ratingCount": 27
   },
   {
     "id": 391,
@@ -13028,8 +13028,8 @@
     "gst": 0,
     "slug": "chokar-391",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 61
   },
   {
     "id": 392,
@@ -13061,8 +13061,8 @@
     "gst": 0,
     "slug": "chokar-392",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 105
   },
   {
     "id": 393,
@@ -13094,8 +13094,8 @@
     "gst": 0,
     "slug": "chokar-393",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 8
   },
   {
     "id": 394,
@@ -13127,8 +13127,8 @@
     "gst": 0,
     "slug": "chokar-394",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 117
   },
   {
     "id": 395,
@@ -13158,8 +13158,8 @@
     "gst": 0,
     "slug": "antique-haar-395",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 100
   },
   {
     "id": 396,
@@ -13189,8 +13189,8 @@
     "gst": 0,
     "slug": "antique-haar-396",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.1,
+    "ratingCount": 91
   },
   {
     "id": 397,
@@ -13220,8 +13220,8 @@
     "gst": 0,
     "slug": "antique-haar-397",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 77
   },
   {
     "id": 398,
@@ -13251,8 +13251,8 @@
     "gst": 0,
     "slug": "antique-haar-398",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 79
   },
   {
     "id": 399,
@@ -13282,8 +13282,8 @@
     "gst": 0,
     "slug": "antique-haar-399",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.8,
+    "ratingCount": 8
   },
   {
     "id": 400,
@@ -13313,8 +13313,8 @@
     "gst": 0,
     "slug": "antique-haar-400",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 52
   },
   {
     "id": 401,
@@ -13344,8 +13344,8 @@
     "gst": 0,
     "slug": "antique-haar-401",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 41
   },
   {
     "id": 402,
@@ -13375,8 +13375,8 @@
     "gst": 0,
     "slug": "antique-haar-402",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 84
   },
   {
     "id": 403,
@@ -13404,8 +13404,8 @@
     "gst": 0,
     "slug": "antique-haar-403",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 53
   },
   {
     "id": 404,
@@ -13435,8 +13435,8 @@
     "gst": 0,
     "slug": "antique-haar-404",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.2,
+    "ratingCount": 101
   },
   {
     "id": 405,
@@ -13466,8 +13466,8 @@
     "gst": 0,
     "slug": "antique-haar-405",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 98
   },
   {
     "id": 406,
@@ -13497,8 +13497,8 @@
     "gst": 0,
     "slug": "antique-haar-406",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 111
   },
   {
     "id": 407,
@@ -13528,8 +13528,8 @@
     "gst": 0,
     "slug": "antique-haar-407",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 35
   },
   {
     "id": 408,
@@ -13559,8 +13559,8 @@
     "gst": 0,
     "slug": "antique-haar-408",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 49
   },
   {
     "id": 409,
@@ -13590,8 +13590,8 @@
     "gst": 0,
     "slug": "antique-haar-409",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 48
   },
   {
     "id": 410,
@@ -13621,8 +13621,8 @@
     "gst": 0,
     "slug": "antique-haar-410",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 70
   },
   {
     "id": 411,
@@ -13652,8 +13652,8 @@
     "gst": 0,
     "slug": "antique-haar-411",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 67
   },
   {
     "id": 412,
@@ -13683,8 +13683,8 @@
     "gst": 0,
     "slug": "antique-haar-412",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 14
   },
   {
     "id": 413,
@@ -13714,8 +13714,8 @@
     "gst": 0,
     "slug": "antique-haar-413",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.9,
+    "ratingCount": 99
   },
   {
     "id": 414,
@@ -13745,8 +13745,8 @@
     "gst": 0,
     "slug": "antique-haar-414",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.1,
+    "ratingCount": 51
   },
   {
     "id": 415,
@@ -13776,8 +13776,8 @@
     "gst": 0,
     "slug": "antique-haar-415",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4,
+    "ratingCount": 16
   },
   {
     "id": 416,
@@ -13807,8 +13807,8 @@
     "gst": 0,
     "slug": "antique-haar-416",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 89
   },
   {
     "id": 417,
@@ -13838,8 +13838,8 @@
     "gst": 0,
     "slug": "antique-haar-417",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.2,
+    "ratingCount": 75
   },
   {
     "id": 418,
@@ -13863,14 +13863,14 @@
     "images": [
       "AHS120_4.webp"
     ],
-    "available": false,
+    "available": true,
     "newArrival": false,
     "makingCharges": 0,
     "gst": 0,
     "slug": "antique-haar-418",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 89
   },
   {
     "id": 419,
@@ -13900,8 +13900,8 @@
     "gst": 0,
     "slug": "antique-haar-419",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 15
   },
   {
     "id": 420,
@@ -13931,8 +13931,8 @@
     "gst": 0,
     "slug": "antique-haar-420",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.2,
+    "ratingCount": 94
   },
   {
     "id": 421,
@@ -13962,8 +13962,8 @@
     "gst": 0,
     "slug": "antique-haar-421",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 118
   },
   {
     "id": 422,
@@ -13993,8 +13993,8 @@
     "gst": 0,
     "slug": "antique-haar-422",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 26
   },
   {
     "id": 423,
@@ -14024,8 +14024,8 @@
     "gst": 0,
     "slug": "antique-haar-423",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 37
   },
   {
     "id": 424,
@@ -14055,8 +14055,8 @@
     "gst": 0,
     "slug": "antique-haar-424",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 21
   },
   {
     "id": 425,
@@ -14086,8 +14086,8 @@
     "gst": 0,
     "slug": "antique-haar-425",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 45
   },
   {
     "id": 426,
@@ -14117,8 +14117,8 @@
     "gst": 0,
     "slug": "antique-haar-426",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 84
   },
   {
     "id": 427,
@@ -14148,8 +14148,8 @@
     "gst": 0,
     "slug": "antique-haar-427",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 106
   },
   {
     "id": 428,
@@ -14179,8 +14179,8 @@
     "gst": 0,
     "slug": "antique-haar-428",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 47
   },
   {
     "id": 429,
@@ -14214,8 +14214,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-429",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 17
   },
   {
     "id": 430,
@@ -14249,8 +14249,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-430",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 75
   },
   {
     "id": 431,
@@ -14284,8 +14284,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-431",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.1,
+    "ratingCount": 23
   },
   {
     "id": 432,
@@ -14319,8 +14319,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-432",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 76
   },
   {
     "id": 433,
@@ -14354,8 +14354,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-433",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 49
   },
   {
     "id": 434,
@@ -14389,8 +14389,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-434",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 99
   },
   {
     "id": 435,
@@ -14424,8 +14424,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-435",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 80
   },
   {
     "id": 436,
@@ -14459,8 +14459,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-436",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 80
   },
   {
     "id": 437,
@@ -14494,8 +14494,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-437",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.9,
+    "ratingCount": 117
   },
   {
     "id": 438,
@@ -14529,8 +14529,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-438",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 61
   },
   {
     "id": 439,
@@ -14564,8 +14564,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-439",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 54
   },
   {
     "id": 440,
@@ -14599,8 +14599,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-440",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.9,
+    "ratingCount": 10
   },
   {
     "id": 441,
@@ -14634,8 +14634,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-441",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.1,
+    "ratingCount": 14
   },
   {
     "id": 442,
@@ -14669,8 +14669,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-442",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 65
   },
   {
     "id": 443,
@@ -14704,8 +14704,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-443",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.2,
+    "ratingCount": 79
   },
   {
     "id": 444,
@@ -14739,8 +14739,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-444",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 97
   },
   {
     "id": 445,
@@ -14774,8 +14774,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-445",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 65
   },
   {
     "id": 446,
@@ -14809,8 +14809,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-446",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 103
   },
   {
     "id": 447,
@@ -14844,8 +14844,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-447",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 57
   },
   {
     "id": 448,
@@ -14879,8 +14879,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-448",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 86
   },
   {
     "id": 449,
@@ -14914,8 +14914,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-449",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 101
   },
   {
     "id": 450,
@@ -14949,8 +14949,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-450",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 116
   },
   {
     "id": 451,
@@ -14984,8 +14984,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-451",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 76
   },
   {
     "id": 452,
@@ -15019,8 +15019,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-452",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 24
   },
   {
     "id": 453,
@@ -15054,8 +15054,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-453",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 102
   },
   {
     "id": 454,
@@ -15089,8 +15089,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-454",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 61
   },
   {
     "id": 455,
@@ -15124,8 +15124,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-455",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 109
   },
   {
     "id": 456,
@@ -15159,8 +15159,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-456",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.8,
+    "ratingCount": 8
   },
   {
     "id": 457,
@@ -15194,8 +15194,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-457",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 73
   },
   {
     "id": 458,
@@ -15229,8 +15229,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-458",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 81
   },
   {
     "id": 459,
@@ -15264,8 +15264,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-459",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 33
   },
   {
     "id": 460,
@@ -15299,8 +15299,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-460",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.2,
+    "ratingCount": 108
   },
   {
     "id": 461,
@@ -15334,8 +15334,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-461",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 61
   },
   {
     "id": 462,
@@ -15369,8 +15369,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-462",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 54
   },
   {
     "id": 463,
@@ -15404,8 +15404,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-463",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.1,
+    "ratingCount": 76
   },
   {
     "id": 464,
@@ -15439,8 +15439,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-464",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 83
   },
   {
     "id": 465,
@@ -15474,8 +15474,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-465",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 59
   },
   {
     "id": 466,
@@ -15509,8 +15509,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-466",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.1,
+    "ratingCount": 44
   },
   {
     "id": 467,
@@ -15544,8 +15544,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-467",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 84
   },
   {
     "id": 468,
@@ -15579,8 +15579,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-468",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 78
   },
   {
     "id": 469,
@@ -15614,8 +15614,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-469",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 10
   },
   {
     "id": 470,
@@ -15649,8 +15649,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-470",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4,
+    "ratingCount": 20
   },
   {
     "id": 471,
@@ -15684,8 +15684,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-471",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4,
+    "ratingCount": 17
   },
   {
     "id": 475,
@@ -15719,8 +15719,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-475",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 9
   },
   {
     "id": 478,
@@ -15754,8 +15754,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-478",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 101
   },
   {
     "id": 479,
@@ -15789,8 +15789,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-479",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 96
   },
   {
     "id": 480,
@@ -15824,8 +15824,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-480",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 30
   },
   {
     "id": 481,
@@ -15859,8 +15859,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-481",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 114
   },
   {
     "id": 483,
@@ -15894,8 +15894,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-483",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 33
   },
   {
     "id": 484,
@@ -15929,8 +15929,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-484",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4,
+    "ratingCount": 14
   },
   {
     "id": 486,
@@ -15964,8 +15964,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-486",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.1,
+    "ratingCount": 112
   },
   {
     "id": 487,
@@ -15999,8 +15999,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-487",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 79
   },
   {
     "id": 489,
@@ -16034,8 +16034,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-489",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 76
   },
   {
     "id": 490,
@@ -16069,8 +16069,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-490",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 104
   },
   {
     "id": 491,
@@ -16104,8 +16104,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-491",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 105
   },
   {
     "id": 492,
@@ -16139,8 +16139,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-492",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 89
   },
   {
     "id": 493,
@@ -16174,8 +16174,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-493",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 93
   },
   {
     "id": 494,
@@ -16209,8 +16209,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-494",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.2,
+    "ratingCount": 119
   },
   {
     "id": 495,
@@ -16244,8 +16244,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-495",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 38
   },
   {
     "id": 496,
@@ -16279,8 +16279,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-496",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 117
   },
   {
     "id": 497,
@@ -16314,8 +16314,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-497",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 17
   },
   {
     "id": 498,
@@ -16349,8 +16349,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-498",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 58
   },
   {
     "id": 499,
@@ -16384,8 +16384,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-499",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 103
   },
   {
     "id": 500,
@@ -16419,8 +16419,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-500",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 103
   },
   {
     "id": 502,
@@ -16454,8 +16454,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-502",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 18
   },
   {
     "id": 503,
@@ -16489,8 +16489,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-503",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.2,
+    "ratingCount": 8
   },
   {
     "id": 504,
@@ -16524,8 +16524,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-504",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.9,
+    "ratingCount": 94
   },
   {
     "id": 505,
@@ -16559,8 +16559,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-505",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 111
   },
   {
     "id": 506,
@@ -16594,8 +16594,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-506",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.1,
+    "ratingCount": 9
   },
   {
     "id": 507,
@@ -16629,8 +16629,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-507",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 51
   },
   {
     "id": 508,
@@ -16664,8 +16664,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-508",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 99
   },
   {
     "id": 509,
@@ -16699,8 +16699,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-509",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 53
   },
   {
     "id": 510,
@@ -16734,8 +16734,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-510",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 30
   },
   {
     "id": 511,
@@ -16769,8 +16769,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-511",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 36
   },
   {
     "id": 512,
@@ -16804,8 +16804,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-512",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 113
   },
   {
     "id": 514,
@@ -16839,8 +16839,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-514",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 57
   },
   {
     "id": 515,
@@ -16874,8 +16874,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-515",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 73
   },
   {
     "id": 516,
@@ -16909,8 +16909,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-516",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.1,
+    "ratingCount": 71
   },
   {
     "id": 517,
@@ -16944,8 +16944,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-517",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.1,
+    "ratingCount": 54
   },
   {
     "id": 518,
@@ -16979,8 +16979,8 @@
     "gst": 0,
     "slug": "gold-mangalsutra-518",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.8,
+    "ratingCount": 76
   },
   {
     "id": 519,
@@ -17010,8 +17010,8 @@
     "gst": 0,
     "slug": "gold-earing-519",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 108
   },
   {
     "id": 521,
@@ -17041,8 +17041,8 @@
     "gst": 0,
     "slug": "gold-earing-521",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 107
   },
   {
     "id": 522,
@@ -17072,8 +17072,8 @@
     "gst": 0,
     "slug": "gold-earing-522",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 96
   },
   {
     "id": 523,
@@ -17103,8 +17103,8 @@
     "gst": 0,
     "slug": "gold-earing-523",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 90
   },
   {
     "id": 524,
@@ -17134,8 +17134,8 @@
     "gst": 0,
     "slug": "gold-earing-524",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.1,
+    "ratingCount": 67
   },
   {
     "id": 525,
@@ -17165,8 +17165,8 @@
     "gst": 0,
     "slug": "gold-earing-525",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 77
   },
   {
     "id": 526,
@@ -17196,8 +17196,8 @@
     "gst": 0,
     "slug": "gold-earing-526",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 113
   },
   {
     "id": 527,
@@ -17227,8 +17227,8 @@
     "gst": 0,
     "slug": "gold-earing-527",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 15
   },
   {
     "id": 528,
@@ -17258,8 +17258,8 @@
     "gst": 0,
     "slug": "gold-earing-528",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 27
   },
   {
     "id": 529,
@@ -17289,8 +17289,8 @@
     "gst": 0,
     "slug": "gold-earing-529",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 73
   },
   {
     "id": 530,
@@ -17320,8 +17320,8 @@
     "gst": 0,
     "slug": "gold-earing-530",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.2,
+    "ratingCount": 8
   },
   {
     "id": 531,
@@ -17351,8 +17351,8 @@
     "gst": 0,
     "slug": "gold-earing-531",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.1,
+    "ratingCount": 61
   },
   {
     "id": 532,
@@ -17382,8 +17382,8 @@
     "gst": 0,
     "slug": "gold-earing-532",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.9,
+    "ratingCount": 68
   },
   {
     "id": 533,
@@ -17413,8 +17413,8 @@
     "gst": 0,
     "slug": "कांटे-533",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 15
   },
   {
     "id": 534,
@@ -17444,8 +17444,8 @@
     "gst": 0,
     "slug": "gold-earing-534",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 55
   },
   {
     "id": 535,
@@ -17475,8 +17475,8 @@
     "gst": 0,
     "slug": "gold-earing-535",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 19
   },
   {
     "id": 536,
@@ -17506,8 +17506,8 @@
     "gst": 0,
     "slug": "gold-earing-536",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 112
   },
   {
     "id": 537,
@@ -17537,8 +17537,8 @@
     "gst": 0,
     "slug": "gold-earing-537",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 102
   },
   {
     "id": 538,
@@ -17568,8 +17568,8 @@
     "gst": 0,
     "slug": "gold-earing-538",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 43
   },
   {
     "id": 539,
@@ -17599,8 +17599,8 @@
     "gst": 0,
     "slug": "gold-earing-539",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 32
   },
   {
     "id": 540,
@@ -17630,8 +17630,8 @@
     "gst": 0,
     "slug": "gold-earing-540",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 79
   },
   {
     "id": 541,
@@ -17661,8 +17661,8 @@
     "gst": 0,
     "slug": "gold-earing-541",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 79
   },
   {
     "id": 542,
@@ -17692,8 +17692,8 @@
     "gst": 0,
     "slug": "gold-earing-542",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 14
   },
   {
     "id": 543,
@@ -17723,8 +17723,8 @@
     "gst": 0,
     "slug": "gold-earing-543",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 24
   },
   {
     "id": 544,
@@ -17754,8 +17754,8 @@
     "gst": 0,
     "slug": "gold-earing-544",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 81
   },
   {
     "id": 545,
@@ -17785,8 +17785,8 @@
     "gst": 0,
     "slug": "gold-earing-545",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.9,
+    "ratingCount": 83
   },
   {
     "id": 546,
@@ -17816,8 +17816,8 @@
     "gst": 0,
     "slug": "gold-earing-546",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 67
   },
   {
     "id": 547,
@@ -17847,8 +17847,8 @@
     "gst": 0,
     "slug": "gold-earing-547",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 116
   },
   {
     "id": 548,
@@ -17878,8 +17878,8 @@
     "gst": 0,
     "slug": "gold-earing-548",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.2,
+    "ratingCount": 40
   },
   {
     "id": 549,
@@ -17909,8 +17909,8 @@
     "gst": 0,
     "slug": "gold-earing-549",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 43
   },
   {
     "id": 550,
@@ -17940,8 +17940,8 @@
     "gst": 0,
     "slug": "gold-earing-550",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 69
   },
   {
     "id": 551,
@@ -17971,8 +17971,8 @@
     "gst": 0,
     "slug": "gold-earing-551",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 77
   },
   {
     "id": 552,
@@ -18002,8 +18002,8 @@
     "gst": 0,
     "slug": "gold-earing-552",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 32
   },
   {
     "id": 553,
@@ -18033,8 +18033,8 @@
     "gst": 0,
     "slug": "gold-earing-553",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 72
   },
   {
     "id": 554,
@@ -18064,8 +18064,8 @@
     "gst": 0,
     "slug": "gold-earing-554",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 68
   },
   {
     "id": 555,
@@ -18095,8 +18095,8 @@
     "gst": 0,
     "slug": "gold-earing-555",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 46
   },
   {
     "id": 556,
@@ -18126,8 +18126,8 @@
     "gst": 0,
     "slug": "gold-earing-556",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 42
   },
   {
     "id": 557,
@@ -18157,8 +18157,8 @@
     "gst": 0,
     "slug": "gold-earing-557",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 38
   },
   {
     "id": 558,
@@ -18188,8 +18188,8 @@
     "gst": 0,
     "slug": "gold-earing-558",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 86
   },
   {
     "id": 559,
@@ -18219,8 +18219,8 @@
     "gst": 0,
     "slug": "gold-earing-559",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 81
   },
   {
     "id": 560,
@@ -18250,8 +18250,8 @@
     "gst": 0,
     "slug": "gold-earing-560",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 94
   },
   {
     "id": 561,
@@ -18281,8 +18281,8 @@
     "gst": 0,
     "slug": "gold-earing-561",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 105
   },
   {
     "id": 562,
@@ -18312,8 +18312,8 @@
     "gst": 0,
     "slug": "gold-earing-562",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 48
   },
   {
     "id": 563,
@@ -18343,8 +18343,8 @@
     "gst": 0,
     "slug": "gold-earing-563",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 29
   },
   {
     "id": 565,
@@ -18374,8 +18374,8 @@
     "gst": 0,
     "slug": "gold-earing-565",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 113
   },
   {
     "id": 566,
@@ -18405,8 +18405,8 @@
     "gst": 0,
     "slug": "gold-earing-566",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.9,
+    "ratingCount": 82
   },
   {
     "id": 567,
@@ -18436,8 +18436,8 @@
     "gst": 0,
     "slug": "gold-earing-567",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 75
   },
   {
     "id": 568,
@@ -18467,8 +18467,8 @@
     "gst": 0,
     "slug": "gold-earing-568",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 77
   },
   {
     "id": 569,
@@ -18498,8 +18498,8 @@
     "gst": 0,
     "slug": "gold-earing-569",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 45
   },
   {
     "id": 570,
@@ -18529,8 +18529,8 @@
     "gst": 0,
     "slug": "gold-earing-570",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 84
   },
   {
     "id": 572,
@@ -18560,8 +18560,8 @@
     "gst": 0,
     "slug": "gold-earing-572",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 95
   },
   {
     "id": 573,
@@ -18591,8 +18591,8 @@
     "gst": 0,
     "slug": "gold-earing-573",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 30
   },
   {
     "id": 574,
@@ -18626,8 +18626,8 @@
     "gst": 0,
     "slug": "gold-necklace-574",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 70
   },
   {
     "id": 575,
@@ -18661,8 +18661,8 @@
     "gst": 0,
     "slug": "gold-necklace-575",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 120
   },
   {
     "id": 576,
@@ -18692,8 +18692,8 @@
     "gst": 0,
     "slug": "gold-necklace-576",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 106
   },
   {
     "id": 577,
@@ -18723,8 +18723,8 @@
     "gst": 0,
     "slug": "gold-necklace-577",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 42
   },
   {
     "id": 578,
@@ -18754,8 +18754,8 @@
     "gst": 0,
     "slug": "gold-necklace-578",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 83
   },
   {
     "id": 579,
@@ -18785,8 +18785,8 @@
     "gst": 0,
     "slug": "gold-necklace-579",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 43
   },
   {
     "id": 580,
@@ -18816,8 +18816,8 @@
     "gst": 0,
     "slug": "gold-necklace-580",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 43
   },
   {
     "id": 581,
@@ -18847,8 +18847,8 @@
     "gst": 0,
     "slug": "gold-necklace-581",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 12
   },
   {
     "id": 582,
@@ -18878,8 +18878,8 @@
     "gst": 0,
     "slug": "gold-necklace-582",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 8
   },
   {
     "id": 583,
@@ -18909,8 +18909,8 @@
     "gst": 0,
     "slug": "gold-necklace-583",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4,
+    "ratingCount": 83
   },
   {
     "id": 584,
@@ -18940,8 +18940,8 @@
     "gst": 0,
     "slug": "gold-necklace-584",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 26
   },
   {
     "id": 585,
@@ -18971,8 +18971,8 @@
     "gst": 0,
     "slug": "gold-necklace-585",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 39
   },
   {
     "id": 586,
@@ -19002,8 +19002,8 @@
     "gst": 0,
     "slug": "gold-necklace-586",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 58
   },
   {
     "id": 587,
@@ -19033,8 +19033,8 @@
     "gst": 0,
     "slug": "gold-necklace-587",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 88
   },
   {
     "id": 588,
@@ -19064,8 +19064,8 @@
     "gst": 0,
     "slug": "gold-necklace-588",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 77
   },
   {
     "id": 589,
@@ -19095,8 +19095,8 @@
     "gst": 0,
     "slug": "gold-necklace-589",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 30
   },
   {
     "id": 590,
@@ -19126,8 +19126,8 @@
     "gst": 0,
     "slug": "gold-necklace-590",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 48
   },
   {
     "id": 591,
@@ -19159,8 +19159,8 @@
     "gst": 0,
     "slug": "rajputi-necklace-591",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 82
   },
   {
     "id": 592,
@@ -19192,8 +19192,8 @@
     "gst": 0,
     "slug": "rajputi-necklace-592",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 83
   },
   {
     "id": 593,
@@ -19225,8 +19225,8 @@
     "gst": 0,
     "slug": "rajputi-necklace-593",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 80
   },
   {
     "id": 594,
@@ -19258,8 +19258,8 @@
     "gst": 0,
     "slug": "rajputi-necklace-594",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.2,
+    "ratingCount": 100
   },
   {
     "id": 595,
@@ -19291,8 +19291,8 @@
     "gst": 0,
     "slug": "rajputi-necklace-595",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.9,
+    "ratingCount": 28
   },
   {
     "id": 596,
@@ -19324,8 +19324,8 @@
     "gst": 0,
     "slug": "rajputi-necklace-596",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.9,
+    "ratingCount": 43
   },
   {
     "id": 597,
@@ -19357,8 +19357,8 @@
     "gst": 0,
     "slug": "rajputi-necklace-597",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 38
   },
   {
     "id": 598,
@@ -19390,8 +19390,8 @@
     "gst": 0,
     "slug": "rajputi-necklace-598",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 87
   },
   {
     "id": 599,
@@ -19423,8 +19423,8 @@
     "gst": 0,
     "slug": "rajputi-necklace-599",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 76
   },
   {
     "id": 600,
@@ -19456,8 +19456,8 @@
     "gst": 0,
     "slug": "rajputi-necklace-600",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 42
   },
   {
     "id": 601,
@@ -19489,8 +19489,8 @@
     "gst": 0,
     "slug": "rajputi-necklace-601",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 42
   },
   {
     "id": 602,
@@ -19522,8 +19522,8 @@
     "gst": 0,
     "slug": "rajputi-necklace-602",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 118
   },
   {
     "id": 603,
@@ -19555,8 +19555,8 @@
     "gst": 0,
     "slug": "rajputi-necklace-603",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 86
   },
   {
     "id": 604,
@@ -19588,8 +19588,8 @@
     "gst": 0,
     "slug": "rajputi-necklace-604",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.9,
+    "ratingCount": 27
   },
   {
     "id": 605,
@@ -19621,8 +19621,8 @@
     "gst": 0,
     "slug": "rajputi-necklace-605",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 77
   },
   {
     "id": 606,
@@ -19654,8 +19654,8 @@
     "gst": 0,
     "slug": "rajputi-necklace-606",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 44
   },
   {
     "id": 607,
@@ -19687,8 +19687,8 @@
     "gst": 0,
     "slug": "rajputi-necklace-607",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 94
   },
   {
     "id": 608,
@@ -19720,8 +19720,8 @@
     "gst": 0,
     "slug": "rajputi-necklace-608",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 23
   },
   {
     "id": 609,
@@ -19753,8 +19753,8 @@
     "gst": 0,
     "slug": "rajputi-necklace-609",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 72
   },
   {
     "id": 610,
@@ -19786,8 +19786,8 @@
     "gst": 0,
     "slug": "rajputi-necklace-610",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 29
   },
   {
     "id": 611,
@@ -19817,8 +19817,8 @@
     "gst": 0,
     "slug": "rajputi-bajuband-611",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 58
   },
   {
     "id": 612,
@@ -19848,8 +19848,8 @@
     "gst": 0,
     "slug": "rajputi-bajuband-612",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 113
   },
   {
     "id": 613,
@@ -19879,8 +19879,8 @@
     "gst": 0,
     "slug": "rajputi-bajuband-613",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.9,
+    "ratingCount": 60
   },
   {
     "id": 614,
@@ -19910,8 +19910,8 @@
     "gst": 0,
     "slug": "rajputi-bajuband-614",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 25
   },
   {
     "id": 615,
@@ -19941,8 +19941,8 @@
     "gst": 0,
     "slug": "rajputi-bajuband-615",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 69
   },
   {
     "id": 616,
@@ -19972,8 +19972,8 @@
     "gst": 0,
     "slug": "silver-necklace-616",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.4,
+    "ratingCount": 96
   },
   {
     "id": 617,
@@ -20003,8 +20003,8 @@
     "gst": 0,
     "slug": "silver-necklace-617",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 56
   },
   {
     "id": 618,
@@ -20034,8 +20034,8 @@
     "gst": 0,
     "slug": "silver-necklace-618",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 60
   },
   {
     "id": 619,
@@ -20065,8 +20065,8 @@
     "gst": 0,
     "slug": "silver-necklace-619",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 47
   },
   {
     "id": 620,
@@ -20096,8 +20096,8 @@
     "gst": 0,
     "slug": "silver-necklace-620",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 23
   },
   {
     "id": 621,
@@ -20127,8 +20127,8 @@
     "gst": 0,
     "slug": "silver-necklace-621",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.1,
+    "ratingCount": 9
   },
   {
     "id": 622,
@@ -20158,8 +20158,8 @@
     "gst": 0,
     "slug": "silver-necklace-622",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 79
   },
   {
     "id": 623,
@@ -20189,8 +20189,8 @@
     "gst": 0,
     "slug": "silver-necklace-623",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 76
   },
   {
     "id": 624,
@@ -20220,8 +20220,8 @@
     "gst": 0,
     "slug": "silver-necklace-624",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.9,
+    "ratingCount": 21
   },
   {
     "id": 625,
@@ -20251,8 +20251,8 @@
     "gst": 0,
     "slug": "silver-necklace-625",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 11
   },
   {
     "id": 626,
@@ -20282,8 +20282,8 @@
     "gst": 0,
     "slug": "silver-necklace-626",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.8,
+    "ratingCount": 105
   },
   {
     "id": 627,
@@ -20313,8 +20313,8 @@
     "gst": 0,
     "slug": "silver-necklace-627",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.2,
+    "ratingCount": 96
   },
   {
     "id": 628,
@@ -20344,8 +20344,8 @@
     "gst": 0,
     "slug": "silver-necklace-628",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 9
   },
   {
     "id": 629,
@@ -20375,8 +20375,8 @@
     "gst": 0,
     "slug": "silver-necklace-629",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.7,
+    "ratingCount": 14
   },
   {
     "id": 630,
@@ -20406,8 +20406,8 @@
     "gst": 0,
     "slug": "silver-necklace-630",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 26
   },
   {
     "id": 631,
@@ -20437,8 +20437,8 @@
     "gst": 0,
     "slug": "silver-necklace-631",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.6,
+    "ratingCount": 89
   },
   {
     "id": 632,
@@ -20466,8 +20466,8 @@
     "gst": 0,
     "slug": "silver-bengles-632",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 5,
+    "ratingCount": 67
   },
   {
     "id": 633,
@@ -20497,8 +20497,8 @@
     "gst": 0,
     "slug": "silver-bengles-633",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 33
   },
   {
     "id": 634,
@@ -20528,8 +20528,8 @@
     "gst": 0,
     "slug": "silver-bengles-634",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 12
   },
   {
     "id": 635,
@@ -20559,8 +20559,8 @@
     "gst": 0,
     "slug": "silver-bengles-635",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 3.8,
+    "ratingCount": 87
   },
   {
     "id": 636,
@@ -20590,8 +20590,8 @@
     "gst": 0,
     "slug": "silver-phone-cover-636",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.5,
+    "ratingCount": 8
   },
   {
     "id": 637,
@@ -20621,8 +20621,8 @@
     "gst": 0,
     "slug": "silver-phone-cover-637",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.3,
+    "ratingCount": 16
   },
   {
     "id": 638,
@@ -20652,7 +20652,7 @@
     "gst": 0,
     "slug": "silver-phone-cover-638",
     "active": true,
-    "rating": 0,
-    "ratingCount": 0
+    "rating": 4.1,
+    "ratingCount": 99
   }
 ]

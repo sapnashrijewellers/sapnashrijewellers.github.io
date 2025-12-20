@@ -79,7 +79,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
   );
 
   if (!product) notFound();
-
+  const imageUrl = `${driveURL}${product.images?.[0]}`;
   const newArrivals = products
     .filter(p => p.active && p.newArrival)
     .sort((a, b) => Number(b.available) - Number(a.available))
@@ -96,7 +96,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
     "@context": "https://schema.org",
     "@type": "Product",
     name: product.name,
-    image: product.images[0],
+    image: imageUrl,
     description: product.description,
     sku: product.id,
     brand: {
@@ -166,7 +166,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
               Rate this jewellery
             </p>
             <ProductRatingInput
-              productId={product.id}              
+              productId={product.id}
             />
           </div>
           {!product.available && (

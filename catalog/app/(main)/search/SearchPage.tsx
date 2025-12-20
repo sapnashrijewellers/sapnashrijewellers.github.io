@@ -72,8 +72,7 @@ export default function JewelrySearch() {
       <SearchBar
         query={inputQuery}
         onQueryChange={setInputQuery}
-        onSearch={handleSearchSubmit}        
-        onMicClick={() => { }}
+        onSearch={handleSearchSubmit}                
       />
       <div className="flex items-center gap-3 m-4">
   {/* LEFT: takes remaining space */}

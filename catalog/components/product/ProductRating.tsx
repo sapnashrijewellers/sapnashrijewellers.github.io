@@ -15,7 +15,11 @@ export default function ProductRating({
 }: ProductRatingProps) {
   const fullStars = Math.floor(rating);
   const hasHalfStar = rating % 1 >= 0.5;
+  const safeCount = Number(rating);
 
+if (!Number.isFinite(rating) || rating <= 0) {
+  return null;
+}
   return (
     <div className="flex items-center gap-2 text-sm">
       <div className="flex items-center gap-0.5 text-amber-500">
@@ -42,7 +46,7 @@ export default function ProductRating({
         {rating.toFixed(1)}
       </span>
 
-      {count > 0 && showExpert &&(
+      {count > 0 && showExpert && (
         <span className="text-muted-foreground">
           · Expert rating ({count})
         </span>

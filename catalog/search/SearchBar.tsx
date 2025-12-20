@@ -1,119 +1,99 @@
 "use client";
 
-import { Search, Mic, Funnel, ArrowUpDown } from "lucide-react";
-import { FilterPanel } from "@/components/common/FilterPanel";
-import { SortPanel } from "@/components/common/SortPanel";
-import { SearchFilters } from "@/types/catalog";
-import { useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { Search, Mic } from "lucide-react";
 
 interface SearchBarProps {
-    query: string;
-    onQueryChange: (q: string) => void;
-    onSearch: () => void;
-    filters: SearchFilters;
-    onFilterChange: (k: keyof SearchFilters, v: any) => void;
-    sortBy: string;
-    onSortChange: (v: string) => void;
-    onMicClick?: () => void;
+  query: string;
+  onQueryChange: (q: string) => void;
+  onSearch: () => void;
 }
 
 export default function SearchBar({
-    query,
-    onQueryChange,
-    onSearch,
-    filters,
-    onFilterChange,
-    sortBy,
-    onSortChange,
-    onMicClick
+  query,
+  onQueryChange,
+  onSearch,
 }: SearchBarProps) {
-    const filterBtnRef = useRef<HTMLButtonElement>(null);
-    const sortBtnRef = useRef<HTMLButtonElement>(null);
-    const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-        if (e.key === "Enter") {
-            e.preventDefault();
-            onSearch();
-        }
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      onSearch();
+    }
+  };
+
+  const startSpeechRecognition = () => {
+    const SpeechRecognition =
+      (window as any).SpeechRecognition ||
+      (window as any).webkitSpeechRecognition;
+
+    if (!SpeechRecognition) {
+      alert("Voice search is not supported on this browser.");
+      return;
+    }
+
+    const recognition = new SpeechRecognition();
+    recognition.lang = "en-US";
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 1;
+    recognition.continuous = false;
+
+    recognition.onresult = (event: any) => {
+      const spokenText = event.results[0][0].transcript;
+      onQueryChange(spokenText);
     };
 
-    const startSpeechRecognition = () => {
-        if (!("webkitSpeechRecognition" in window || "SpeechRecognition" in window)) {
-            alert("Speech recognition is not supported in this browser.");
-            return;
-        }
-
-        const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
-        const recognition = new SpeechRecognition();
-        recognition.lang = "en-US";
-        recognition.interimResults = false;
-        recognition.maxAlternatives = 1;
-
-        recognition.onresult = (event: any) => {
-            const spokenText = event.results[0][0].transcript;
-            onQueryChange(spokenText);
-        };
-
-        recognition.start();
+    recognition.onerror = (event: any) => {
+      console.error("Speech recognition error:", event.error);
+      alert("Microphone access denied or unavailable.");
     };
 
-    return (
+    recognition.start();
+  };
 
-        <div className="relative w-full">
-            <div className="flex items-center border-2 border-primary rounded-xl bg-highlight w-full gap-1 p-0.5">
-                <input
-                    type="search"
-                    value={query}
-                    onChange={e => onQueryChange(e.target.value)}
-                    onKeyDown={handleKeyDown}
-                    placeholder="Search jewellery..."
-                    inputMode="search"
-                    className="rounded-2xl flex-1 min-w-0 outline-none text-normal placeholder:text-normal focus:outline-none focus:ring-1 focus:ring-purple-500"
+  return (
+    <div className="relative w-full">
+      <div className="
+  flex items-center
+  rounded-xl
+  bg-highlight
+  w-full
+  gap-2
+  px-2 py-1
+  ring-1 ring-black/10
+  focus-within:ring-2 focus-within:ring-primary
+  transition
+">
+        <input
+          type="search"
+          value={query}
+          onChange={(e) => onQueryChange(e.target.value)}
+          onKeyDown={handleKeyDown}
+          placeholder="Search jewellery..."
+          inputMode="search"
+          className="flex-1 min-w-0 bg-transparent outline-none text-normal placeholder:text-normal focus:outline-none rounded-md px-2 py-2"
+        />
 
-                />
+        {/* Mic Button */}
+        <button
+          type="button"
+          onClick={startSpeechRecognition}
+          title="Speak to search"
+          aria-label="Voice search"
+          className="ssj-btn flex items-center justify-center min-w-[36px] min-h-[36px]"
+        >
+          <Mic size={18} />
+        </button>
 
-                <button onClick={onMicClick || startSpeechRecognition}
-                    className="ssj-btn text-normal shrink-0" title="Speak to search">
-                    <Mic size={16} />
-                </button>
-                {/* Search Button (inside input) */}
-                <button
-                    type="button"
-                    className="ssj-btn"
-                    onClick={onSearch}
-                    aria-label="Search"
-                    title="Click to search"
-                >
-                    <Search className="text-normal shrink-0" size={16} />
-                </button>
-
-                <div className="relative">
-                    <button ref={filterBtnRef}
-                        className="ssj-btn text-normal shrink-0 flex items-center justify-center"
-                        title="Filter search results">
-                        <Funnel size={16} />
-                    </button>
-                    <FilterPanel
-                        filters={filters}
-                        onChange={onFilterChange}
-                        triggerRef={filterBtnRef}
-                    />
-                </div>
-
-                <div className="relative">
-                    <button ref={sortBtnRef}
-                        className="ssj-btn text-normal shrink-0 flex items-center justify-center"
-                        title="Sort search results">
-                        <ArrowUpDown size={16} />
-                    </button>
-                    <SortPanel
-                        sortBy={sortBy}
-                        onSortChange={onSortChange}
-                        triggerRef={sortBtnRef}
-                    />
-                </div>
-            </div>
-        </div>
-
-    );
+        {/* Search Button */}
+        <button
+          type="button"
+          onClick={onSearch}
+          title="Search"
+          aria-label="Search"
+          className="ssj-btn flex items-center justify-center min-w-[36px] min-h-[36px]"
+        >
+          <Search size={18} />
+        </button>
+      </div>
+    </div>
+  );
 }

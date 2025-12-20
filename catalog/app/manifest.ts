@@ -9,7 +9,7 @@ export default function manifest(): MetadataRoute.Manifest {
     description: "सपना श्री ज्वैलर्स, नागदा की आधिकारिक वेबसाइट। हमारे नवीनतम आभूषण संग्रह देखें।",
     lang: "hi",
     dir: "ltr",
-    id: process.env.BASE_URL,
+    id: "/",
     start_url: "/",
     scope: "/",
     display: "standalone",

@@ -137,19 +137,19 @@ const description = metadata.description;
       </p>
 
       {/* Example Section */}
-      <div className="bg-muted border border-border rounded-xl p-5">
+      <div className="bg-muted rounded-xl">
         <h3 className="text-lg font-semibold text-accent mb-3">
           हॉलमार्क कहाँ देखें:
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <figure className="text-center">
             <Image
-              src={`${baseURL}/static/img/hallmark-sample1.png`}
-              alt="सोने की चूड़ी पर हॉलमार्क स्थान"
-              width={400}
-              height={250}
-              className="rounded-xl shadow-sm mx-auto transition-transform duration-300 hover:scale-105"
-            />
+  src={`${baseURL}/static/img/hallmark-sample1.png`}
+  alt="सोने की चूड़ी पर हॉलमार्क स्थान"
+  width={400}
+  height={250}
+  className="w-full max-w-md h-auto rounded-xl shadow-sm mx-auto transition-transform duration-300 hover:scale-105"
+/>
             <figcaption className="mt-2 text-sm text-muted-foreground">
               सोने की चूड़ी पर HUID और BIS मार्क स्थान
             </figcaption>

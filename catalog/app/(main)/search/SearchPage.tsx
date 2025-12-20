@@ -9,6 +9,7 @@ import SearchBar from "@/search/SearchBar";
 import { useSearch } from "@/search/useSearch";
 import { miniSearchIndexOptions } from "@/search/shared";
 import Breadcrumb from "@/components/navbar/BreadcrumbItem";
+import FilterNSort from "@/components/common/FilterNSort";
 
 export default function JewelrySearch() {
   const searchParams = useSearchParams();
@@ -71,24 +72,32 @@ export default function JewelrySearch() {
       <SearchBar
         query={inputQuery}
         onQueryChange={setInputQuery}
-        onSearch={handleSearchSubmit}
-        filters={filters}
-        onFilterChange={(k, v) =>
-          setFilters(p => ({ ...p, [k]: v }))
-        }
-        sortBy={sortBy}
-        onSortChange={setSortBy}
-        onMicClick={() => {}}
+        onSearch={handleSearchSubmit}        
+        onMicClick={() => { }}
       />
+      <div className="flex items-center gap-3 m-4">
+  {/* LEFT: takes remaining space */}
+  <div className="flex-1 font-medium truncate">
+    {submittedQuery && (
+      <span className="text-primary">
+        {" "}
+      </span>
+    )}
+    {results.length} products found
+  </div>
 
-      <div className="m-4 font-medium">
-        {submittedQuery && (
-          <span className="text-primary">
-            Search: “{submittedQuery}” —{" "}
-          </span>
-        )}
-        {results.length} products found
-      </div>
+  {/* RIGHT: fixed / intrinsic width */}
+  <div className="shrink-0">
+    <FilterNSort
+      filters={filters}
+      onFilterChange={(k, v) =>
+        setFilters(p => ({ ...p, [k]: v }))
+      }
+      sortBy={sortBy}
+      onSortChange={setSortBy}
+    />
+  </div>
+</div>
 
       <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
         {results.map(p => (

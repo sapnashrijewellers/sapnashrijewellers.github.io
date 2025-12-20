@@ -100,3 +100,11 @@ type NavItem = {
   title: string;
   icon: React.ReactNode;
 };
+
+type Review = {
+  rating: number;
+  review: string;
+  createdAt: Date;
+  productId: number;
+  status: string;
+}

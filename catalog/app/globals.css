@@ -170,7 +170,7 @@ h3 {
 
 .bg-accent {
   background-color: var(--color-accent);
-  color: #FFFFFF
+  color: var(--color-surface)
 }
 
 .border-theme {
@@ -189,7 +189,10 @@ h3 {
   color: var(--color-primary);
 }
 .text-highlight{
-  color:var(--color-highlight);
+  color:var(--color-primary-dak);
+}
+.text-surface{
+  color:var(--color-surface);
 }
 
 .text-normal {

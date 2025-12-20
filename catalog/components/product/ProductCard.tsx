@@ -11,7 +11,8 @@ export default function ProductCard({ product }: { product: Product }) {
   const cardHighlightClass = product.newArrival
     ? "shadow-md hover:shadow-xl bg-accent"
     : "shadow hover:shadow-lg text-primary-dark";
-
+  const rating = Number(product.rating);
+  const ratingCount = Number(product.ratingCount);
   return (
     <article
       className={`rounded-2xl  overflow-hidden transition-transform duration-300 hover:scale-105 ${cardHighlightClass}`}
@@ -57,11 +58,11 @@ export default function ProductCard({ product }: { product: Product }) {
       <div className="p-3">
         <h2 className="text-sm">{product.name}</h2>
         {/* ⭐ Rating */}
-        {product.rating && (
+        {Number.isFinite(rating) && rating > 0 && ratingCount > 0 && (
           <div className="mt-1">
             <ProductRating
-              rating={product.rating}
-              count={product.ratingCount}
+              rating={rating}
+              count={ratingCount}
               size={14}
               showExpert={false}
             />

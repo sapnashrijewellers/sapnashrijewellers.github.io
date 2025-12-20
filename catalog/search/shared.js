@@ -23,7 +23,9 @@ exports.miniSearchIndexOptions = {
         "newArrival",
         "weight",
         "for",
-        "type"
+        "type",
+        "rating",
+        "ratingCount"
     ],
     tokenize(text) {
         return (text

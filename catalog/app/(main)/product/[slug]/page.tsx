@@ -15,8 +15,8 @@ import WishlistButton from "@/components/common/WishlistButton";
 import ProductRating from "@/components/product/ProductRating";
 import WishListBar from "@/components/product/WishlistBar";
 import ProductRatingInput from "@/components/product/ProductRatingInput";
-
-
+import ProductJsonLd from "@/components/product/ProductJsonLd";
+import {buildProductJsonLd} from "@/utils/buildProductJsonLd"
 
 const baseURL = process.env.BASE_URL;
 const driveURL = `${baseURL}/img/products/optimized/`;
@@ -80,6 +80,14 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 
   if (!product) notFound();
   const imageUrl = `${driveURL}${product.images?.[0]}`;
+  const baseProductUrl = `${baseURL}/product/${product.slug}`;
+
+  const productJsonLd = buildProductJsonLd(
+  product,
+  imageUrl,
+  baseProductUrl
+);
+
   const newArrivals = products
     .filter(p => p.active && p.newArrival)
     .sort((a, b) => Number(b.available) - Number(a.available))
@@ -88,37 +96,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
     .filter(p => p.active && product.type.some(t => p.type.includes(t)) && p.for === product.for && !p.newArrival)
     .sort((a, b) => Number(b.available) - Number(a.available))
     .slice(0, 15);
-
-  const baseProductUrl = `${baseURL}/product/${product.slug}`;
-
-
-  const ldjson = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: product.name,
-    image: imageUrl,
-    description: product.description,
-    sku: product.id,
-    brand: {
-      "@type": "Brand",
-      name: "Sapna Shri Jewellers",
-    },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: product.rating ?? 4.6,
-      reviewCount: product.ratingCount ?? 12,
-    },
-    offers: {
-      "@type": "Offer",
-      priceCurrency: "INR",
-      price: 10,
-      availability: product.available
-        ? "https://schema.org/InStock"
-        : "https://schema.org/PreOrder",
-      url: baseProductUrl,
-    },
-  };
-
+  
   const category = categories.find(c => c.name === product.category);
   return (
     <div>
@@ -131,11 +109,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
       />
 
       <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-6 py-6 px-3">
-        {/* SEO */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(ldjson) }}
-        />
+        <ProductJsonLd json={productJsonLd} />
 
         {/* ---------------- Product Gallery ---------------- */}
         <div className="relative">
@@ -154,11 +128,11 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
             <h1 className="text-2xl md:text-3xl font-cinzel text-primary-dark font-semibold mb-1">
               {product.name}
             </h1>
-
           </div>
           <ProductRating
             rating={product.rating ?? 4.6}
             count={product.ratingCount ?? 12}
+            showExpert={true}
           />
 
           <div className="pt-2">

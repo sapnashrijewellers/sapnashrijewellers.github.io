@@ -1,26 +1,24 @@
 "use client";
 
 import {
-  FaFacebookF, FaInstagram, FaYoutube, FaTv, FaWhatsapp,
-  FaUserTie, FaShieldAlt,FaLightbulb,
+  FaFacebookF, 
+  FaInstagram, 
+  FaYoutube,
+  FaShieldAlt, 
+  FaLightbulb,
   FaMapMarkerAlt
 } from "react-icons/fa";
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import JewelleryTipsWidget from "@/components/common/JewelleryTipsWidget";
 
-const baseURL = process.env.BASE_URL;
+import JewelleryTipsWidget from "@/components/common/JewelleryTipsWidget";
 
 export default function Footer() {
   const [tipsOpen, setTipsOpen] = useState(false);
-
-  const phone = "918234042231";
-  const whatsappUrl = `https://wa.me/${phone}`;
   const currentYear = new Date().getFullYear();
 
   return (
-    
+
     <footer className="bg-background text-foreground p-4">
       <div className="max-w-6xl mx-auto space-y-6">
         {/* Disclaimer */}
@@ -98,45 +96,17 @@ export default function Footer() {
             >
               <FaYoutube />
             </a>
-
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Connect with us on WhatsApp"
-              className="hover:!text-green-600 transition-colors text-primary"
-            >
-              <FaWhatsapp />
-            </a>
-
-            <Link
-              href="/tv"
-              title="TV advertisement"
-              className="hover:text-accent hover:scale-110 transform transition duration-200"
-              prefetch={false}
-            >
-              <FaTv />
-            </Link>
           </div>
         </div>
 
         {/* Footer Links */}
-        <div className="flex flex-wrap gap-4 mt-4 font-cinzel">
-          <Link
-            href="/about-us"
-            className="flex items-center gap-2 mt-4 transition-colors"
-            prefetch={false}
-            title="Know more about Sapna Shri Jewellers"
-          >
-            <FaUserTie className="text-primary-dark mt-[1px]" />
-            About Us
-          </Link>
+        <div className="flex flex-wrap gap-4 mt-4">
           <button
-          onClick={() => setTipsOpen(true)}
-          className="ssj-btn flex items-center gap-2 mt-4 transition-colors text-primary underline hover:text-primary-dark"
-        >     <FaLightbulb className="text-primary-dark mt-[1px]"/>
-             Jewellery Buying Tips
-        </button>
+            onClick={() => setTipsOpen(true)}
+            className="ssj-btn flex items-center gap-2 mt-4 transition-colors text-primary underline hover:text-primary-dark"
+          >     <FaLightbulb className="text-primary-dark mt-[1px]" />
+            Jewellery Buying Tips
+          </button>
           <Link
             href="/privacy"
             className="flex items-center gap-2 mt-4 transition-colors"
@@ -145,21 +115,6 @@ export default function Footer() {
           >
             <FaShieldAlt className="text-primary-dark mt-[1px]" />
             Privacy Policy
-          </Link>
-
-          <Link
-            className="flex items-center gap-2 mt-4 transition-colors"
-            href="/huid"
-            title="HUID हॉलमार्किंग क्यों ज़रूरी है?"
-          >
-            <Image
-              src={`${baseURL}/static/img/hallmark.png`}
-              width={25}
-              height={30}
-              alt="HUID हॉलमार्किंग क्यों ज़रूरी है?"
-              style={{ height: "auto" }}   // 👈 fix
-            />
-            Hallmark
           </Link>
         </div>
       </div>

@@ -2,7 +2,7 @@ import {
   type Options as MiniSearchIndexOptions,
   type SearchOptions as MiniSearchSearchOptions
 } from "minisearch";
-   
+
 export const miniSearchIndexOptions: MiniSearchIndexOptions = {
   fields: [
     "name",
@@ -26,7 +26,9 @@ export const miniSearchIndexOptions: MiniSearchIndexOptions = {
     "newArrival",
     "weight",
     "for",
-    "type"
+    "type",
+    "rating",
+    "ratingCount"
   ],
 
   tokenize(text: string) {
@@ -72,7 +74,7 @@ function normalizeTerm(term: string) {
   let t = term.normalize('NFKC').toLowerCase().trim()
   t = t.replace(/\u093C/g, '') // nukta removal
 
-  const map: Record<string, string>= {
+  const map: Record<string, string> = {
     bangles: 'bangle',
     bracelets: 'bracelet',
     chains: 'chain',

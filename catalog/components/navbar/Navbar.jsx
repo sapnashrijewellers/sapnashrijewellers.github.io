@@ -61,7 +61,7 @@ export default function Navbar() {
           {/* <DesktopTopLinks /> */}
           <ResponsiveNavbar/>
           {/* Bottom rates section */}
-          <div className="grid grid-cols-1 md:grid-cols-4 md:gap-4 text-right justify-end font-cinzel text-xs font-semibold">
+          <div className="grid grid-cols-1 md:grid-cols-4 md:gap-1 text-right justify-end font-cinzel text-xs font-semibold">
             <div className="flex justify-end" title={new Date(rates.asOn).toLocaleString("en-IN", {
               day: "2-digit",
               month: "short",
@@ -79,13 +79,13 @@ export default function Navbar() {
             </div>
 
             <div className="flex justify-end">
-              Silver 99.9%:&nbsp;
+              Silver 999:&nbsp;
               <IndianRupeeRate rate={rates.silver * 1000} className="text-primary-dark text-sm" itemName="Silver 99.9%" itemTitle="1kg" />
             </div>
 
             <div className="flex justify-end">
               Silver Jewelry:&nbsp;
-              <IndianRupeeRate rate={rates.silver * 1000 * 0.92} className="text-primary-dark textsm" itemName="Silver Jewelry" itemTitle="1kg" />
+              <IndianRupeeRate rate={rates.silver * 1000 * 0.92} className="text-primary-dark text-sm" itemName="Silver Jewelry" itemTitle="1kg" />
             </div>
           </div>
 

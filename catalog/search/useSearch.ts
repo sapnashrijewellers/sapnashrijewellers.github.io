@@ -54,8 +54,8 @@ export function useSearch(
       description: "",
       makingCharges: 0,
       gst: 0,
-      rating:0,
-      ratingCount:0
+      rating: p.rating,
+      ratingCount: p.ratingCount
 
     }));
   }
@@ -74,8 +74,8 @@ export function useSearch(
   }
   items = items.filter(
     p => p.active
-      //&& p.weight > 0
-      //&& p.slug.length > 4
+    //&& p.weight > 0
+    //&& p.slug.length > 4
   );
   return items;
 }

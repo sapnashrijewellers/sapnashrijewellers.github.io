@@ -6,28 +6,29 @@ import { SortPanel } from "@/components/common/SortPanel";
 import { SearchFilters } from "@/types/catalog";
 import { useRef } from "react";
 export interface FilterNSortProps {
-  filters: SearchFilters;
-  onFilterChange: <K extends keyof SearchFilters>(
-    key: K,
-    value: SearchFilters[K]
-  ) => void;
-  sortBy: string;
-  onSortChange: (sort: string) => void;
+    filters: SearchFilters;
+    onFilterChange: <K extends keyof SearchFilters>(
+        key: K,
+        value: SearchFilters[K]
+    ) => void;
+    sortBy: string;
+    onSortChange: (sort: string) => void;
 }
 export default function SearchBar({
     filters,
     onFilterChange,
     sortBy,
     onSortChange
-}: FilterNSortProps) {    
+}: FilterNSortProps) {
     const filterBtnRef = useRef<HTMLButtonElement>(null);
     const sortBtnRef = useRef<HTMLButtonElement>(null);
     return (
         <div className="relative ">
-            <div className="flex items-center border-2 border-primary rounded-xl bg-highlight px-3 py-1 w-full gap-2">
+            <div className="flex items-center rounded-xl  w-full gap-2">
                 <div className="relative">
                     <button ref={filterBtnRef}
-                        className="ssj-btn text-normal shrink-0 flex items-center justify-center"
+                        className="ssj-btn bg-accent shrink-0 flex items-center justify-center
+           w-10 h-10 sm:w-9 sm:h-9"
                         title="Filter results">
                         <Funnel size={16} />
                     </button>
@@ -40,7 +41,8 @@ export default function SearchBar({
 
                 <div className="relative">
                     <button ref={sortBtnRef}
-                        className="ssj-btn text-normal shrink-0 flex items-center justify-center"
+                        className="ssj-btn bg-accent shrink-0 flex items-center justify-center
+           w-10 h-10 sm:w-9 sm:h-9"
                         title="Sort results">
                         <ArrowUpDown size={16} />
                     </button>
@@ -51,8 +53,6 @@ export default function SearchBar({
                     />
                 </div>
             </div>
-
-
         </div>
     );
 }

@@ -25,7 +25,9 @@ const productsForIndex = catalog
       purity: p.purity,
       slug: p.slug,
       images: p.images,
-      newArrival: p.newArrival
+      newArrival: p.newArrival,
+      rating: p.rating,
+      ratingCount: p.ratingCount
    }));
 
 const miniSearch = new MiniSearch(miniSearchIndexOptions);

@@ -2142,7 +2142,7 @@
   {
     "id": 63,
     "name": "FANCY Tops | फैंसी टॉप्स",
-    "category": "सोने की अंगुठी",
+    "category": "सोने के ईयररिंग",
     "highlights": [
       "ऑफिस और रोज़मर्रा के लिए स्टाइलिश 22K गोल्ड टॉप्स",
       "ट्रेंडी और हल्का-फुल्का डिज़ाइन, जो आराम से पहने जा सकते हैं",
@@ -3260,39 +3260,6 @@
     "ratingCount": 65
   },
   {
-    "id": 94,
-    "name": "Ladies Ring | लेडीज रिंग",
-    "category": "सोने की अंगुठी",
-    "highlights": [
-      "आकर्षक और हल्का वज़न वाला गोल्ड लेडीज रिंग",
-      "22K 916 शुद्धता, रोज़ाना पहनने के लिए आरामदायक और स्टाइलिश"
-    ],
-    "englishHighlights": [
-      "Attractive and lightweight gold ladies ring",
-      "22K 916 purity, comfortable and stylish for daily wear."
-    ],
-    "description": "Attractive and lightweight 22K 916 purity gold ladies ring, comfortable and stylish for daily wear.",
-    "keywords": "ladies gold ring, 22k ring, lightweight, daily wear, 916 hallmark",
-    "for": "her",
-    "type": [
-      "Daily Wear",
-      "Modern"
-    ],
-    "weight": 3.25,
-    "purity": "gold22K",
-    "images": [
-      "lr.webp"
-    ],
-    "available": false,
-    "newArrival": false,
-    "makingCharges": 7,
-    "gst": 5,
-    "slug": "ladies-ring-94",
-    "active": true,
-    "rating": 4.5,
-    "ratingCount": 107
-  },
-  {
     "id": 95,
     "name": "Ladies Ring",
     "category": "सोने की अंगुठी",
@@ -3479,7 +3446,6 @@
     "weight": 2.46,
     "purity": "gold22K",
     "images": [
-      "lr6.webp",
       "lr06.webp",
       "lr006.webp"
     ],
@@ -3907,7 +3873,7 @@
     "purity": "gold22K",
     "images": [
       "jr10.webp",
-      "jr010.webp",
+      "jr00010.webp",
       "jr0010.webp"
     ],
     "available": false,
@@ -4227,11 +4193,7 @@
     "highlights": [
       "22K 916 HUID हॉलमार्क वाला सुंदर हार और इयररिंग्स सेट",
       "बारीक डिज़ाइन और पारंपरिक शिल्प कौशल, विशेष अवसरों के लिए एकदम सही",
-      "यह 22 कैरेट 916 हॉलमार्क वाली ज्वेलरी एक सुंदर सेट है जिसमें एक हार और मैचिंग इयररिंग्स शामिल हैं",
-      "हार में एक गोलाकार पेंडेंट है जिसमें बारीक डिज़ाइन और काम किया गया है, जो पारंपरिक भारतीय शिल्प कौशल को दर्शाता है",
-      "यह पेंडेंट मनके जैसी सोने की श्रृंखला से जुड़ा हुआ है",
-      "इयररिंग्स भी हार के डिज़ाइन से मेल खाते हुए छोटे और सुरुचिपूर्ण हैं",
-      "यह सेट किसी भी विशेष अवसर के लिए एकदम सही है"
+      "यह 22 कैरेट 916 हॉलमार्क वाली ज्वेलरी एक सुंदर सेट है जिसमें एक हार और मैचिंग इयररिंग्स शामिल हैं"
     ],
     "englishHighlights": [
       "Beautiful 22K 916 HUID hallmark necklace and earrings set",
@@ -4599,7 +4561,7 @@
     "images": [
       "payal3.webp",
       "payal03.webp",
-      "payal003.webp",
+      "payal0003.webp",
       "payal0003.webp"
     ],
     "available": false,
@@ -5182,10 +5144,11 @@
     "id": 151,
     "name": "Ladies Ring | लेडीज रिंग",
     "category": "सोने की अंगुठी",
-    "highlights": [],
+    "highlights": [
+      "स्लिम और स्टाइलिश 22 कैरेट गोल्ड रिंग, जो अकेले पहनने या स्टैकिंग के लिए HUID हॉलमार्क के साथ उपयुक्त है।"
+    ],
     "englishHighlights": [
-      "Attractive and lightweight gold ladies ring",
-      "22K 916 purity, comfortable and stylish for daily wear."
+      "Slim and chic 22ct gold ring with HUID hallmark, perfect for stacking or wearing alone."
     ],
     "description": "Attractive and lightweight 22K 916 purity gold ladies ring, comfortable and stylish for daily wear.",
     "keywords": "ladies gold ring, 22k ring, lightweight, daily wear, 916 hallmark",
@@ -5215,12 +5178,10 @@
     "name": "Ladies Ring | लेडीज रिंग",
     "category": "सोने की अंगुठी",
     "highlights": [
-      "आकर्षक और हल्का वज़न वाला गोल्ड लेडीज रिंग",
-      "22K 916 शुद्धता, रोज़ाना पहनने के लिए आरामदायक और स्टाइलिश"
+      "स्लिम और स्टाइलिश 22 कैरेट गोल्ड रिंग, जो अकेले पहनने या स्टैकिंग के लिए HUID हॉलमार्क के साथ उपयुक्त है।"
     ],
     "englishHighlights": [
-      "Attractive and lightweight gold ladies ring",
-      "22K 916 purity, comfortable and stylish for daily wear."
+      "Slim and chic 22ct gold ring with HUID hallmark, perfect for stacking or wearing alone."
     ],
     "description": "Attractive and lightweight 22K 916 purity gold ladies ring, comfortable and stylish for daily wear.",
     "keywords": "ladies gold ring, 22k ring, lightweight, daily wear, 916 hallmark",
@@ -5250,12 +5211,10 @@
     "name": "Ladies Ring",
     "category": "सोने की अंगुठी",
     "highlights": [
-      "आकर्षक और हल्का वज़न वाला गोल्ड लेडीज रिंग",
-      "22K 916 शुद्धता, रोज़ाना पहनने के लिए आरामदायक और स्टाइलिश"
+      "जीवनभर की सुंदरता के लिए 916 HUID से युक्त इस 22 कैरेट गोल्ड रिंग के साथ अपनी आंतरिक चमक बिखेरें।"
     ],
     "englishHighlights": [
-      "Attractive and lightweight gold ladies ring",
-      "22K 916 purity, comfortable and stylish for daily wear."
+      "Reflect your inner light with this 22k gold ring, featuring 916 HUID for a lifetime of beauty."
     ],
     "description": "Attractive and lightweight 22K 916 purity gold ladies ring, comfortable and stylish for daily wear.",
     "keywords": "ladies gold ring, 22k ring, lightweight, daily wear, 916 hallmark",
@@ -5285,12 +5244,10 @@
     "name": "Ladies Ring",
     "category": "सोने की अंगुठी",
     "highlights": [
-      "आकर्षक और हल्का वज़न वाला गोल्ड लेडीज रिंग",
-      "22K 916 शुद्धता, रोज़ाना पहनने के लिए आरामदायक और स्टाइलिश"
+      "जीवनभर की सुंदरता के लिए 916 HUID से युक्त इस 22 कैरेट गोल्ड रिंग के साथ अपनी आंतरिक चमक बिखेरें।"
     ],
     "englishHighlights": [
-      "Attractive and lightweight gold ladies ring",
-      "22K 916 purity, comfortable and stylish for daily wear."
+      "Reflect your inner light with this 22k gold ring, featuring 916 HUID for a lifetime of beauty."
     ],
     "description": "Attractive and lightweight 22K 916 purity gold ladies ring, comfortable and stylish for daily wear.",
     "keywords": "ladies gold ring, 22k ring, lightweight, daily wear, 916 hallmark",
@@ -5320,12 +5277,10 @@
     "name": "Ladies Ring | लेडीज रिंग",
     "category": "सोने की अंगुठी",
     "highlights": [
-      "आकर्षक और हल्का वज़न वाला गोल्ड लेडीज रिंग",
-      "22K 916 शुद्धता, रोज़ाना पहनने के लिए आरामदायक और स्टाइलिश"
+      "स्वर्ण कारीगरी के शिखर का प्रतिनिधित्व करने वाली HUID प्रमाणन के साथ हाथ से तैयार 22 कैरेट गोल्ड रिंग।"
     ],
     "englishHighlights": [
-      "Attractive and lightweight gold ladies ring",
-      "22K 916 purity, comfortable and stylish for daily wear."
+      "Hand-finished 22ct gold ring with HUID certification, representing the peak of gold craftsmanship."
     ],
     "description": "Attractive and lightweight 22K 916 purity gold ladies ring, comfortable and stylish for daily wear.",
     "keywords": "ladies gold ring, 22k ring, lightweight, daily wear, 916 hallmark",
@@ -5355,12 +5310,10 @@
     "name": "Ladies Ring",
     "category": "सोने की अंगुठी",
     "highlights": [
-      "आकर्षक और हल्का वज़न वाला गोल्ड लेडीज रिंग",
-      "22K 916 शुद्धता, रोज़ाना पहनने के लिए आरामदायक और स्टाइलिश"
+      "स्वर्ण कारीगरी के शिखर का प्रतिनिधित्व करने वाली HUID प्रमाणन के साथ हाथ से तैयार 22 कैरेट गोल्ड रिंग।"
     ],
     "englishHighlights": [
-      "Attractive and lightweight gold ladies ring",
-      "22K 916 purity, comfortable and stylish for daily wear."
+      "Hand-finished 22ct gold ring with HUID certification, representing the peak of gold craftsmanship."
     ],
     "description": "Attractive and lightweight 22K 916 purity gold ladies ring, comfortable and stylish for daily wear.",
     "keywords": "ladies gold ring, 22k ring, lightweight, daily wear, 916 hallmark",
@@ -5390,12 +5343,10 @@
     "name": "Ladies Ring | लेडीज रिंग",
     "category": "सोने की अंगुठी",
     "highlights": [
-      "आकर्षक और हल्का वज़न वाला गोल्ड लेडीज रिंग",
-      "22K 916 शुद्धता, रोज़ाना पहनने के लिए आरामदायक और स्टाइलिश"
+      "स्वर्ण कारीगरी के शिखर का प्रतिनिधित्व करने वाली HUID प्रमाणन के साथ हाथ से तैयार 22 कैरेट गोल्ड रिंग।"
     ],
     "englishHighlights": [
-      "Attractive and lightweight gold ladies ring",
-      "22K 916 purity, comfortable and stylish for daily wear."
+      "Hand-finished 22ct gold ring with HUID certification, representing the peak of gold craftsmanship."
     ],
     "description": "Attractive and lightweight 22K 916 purity gold ladies ring, comfortable and stylish for daily wear.",
     "keywords": "ladies gold ring, 22k ring, lightweight, daily wear, 916 hallmark",
@@ -5495,12 +5446,10 @@
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "916 HUID हॉलमार्क वाली यह मजबूत 22 कैरेट गोल्ड चेन, स्थायी मजबूती और सत्यापित शुद्धता का एक सही मिश्रण है।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Robust 22k gold chain with a 916 HUID hallmark, offering a perfect blend of enduring strength and verified purity."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -5530,12 +5479,10 @@
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "916 HUID हॉलमार्क वाली यह मजबूत 22 कैरेट गोल्ड चेन, स्थायी मजबूती और सत्यापित शुद्धता का एक सही मिश्रण है।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Robust 22k gold chain with a 916 HUID hallmark, offering a perfect blend of enduring strength and verified purity."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -5565,12 +5512,10 @@
     "name": "Ladies Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "हल्की और ट्रेंडी डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "रोज़ाना पहनने के लिए आरामदायक और हर लुक के साथ परफेक्ट"
+      "हल्का और आरामदायक 22 कैरेट सोने की चेन, आपके दैनिक स्टाइल के लिए असली गुणवत्ता सुनिश्चित करने हेतु HUID प्रमाणित।"
     ],
     "englishHighlights": [
-      "Lightweight and trendy design 22K 916 gold chain",
-      "comfortable for daily wear and perfect with every look."
+      "Lightweight and comfortable 22ct gold chain, HUID certified to ensure authentic quality for your daily style."
     ],
     "description": "Lightweight and trendy design 22K 916 gold ladies chain, comfortable for daily wear and perfect for enhancing any look.",
     "keywords": "ladies gold chain, 22k chain, lightweight, daily wear, 916 hallmark",
@@ -5600,12 +5545,10 @@
     "name": "Ladies Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "हल्की और ट्रेंडी डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "रोज़ाना पहनने के लिए आरामदायक और हर लुक के साथ परफेक्ट"
+      "हल्का और आरामदायक 22 कैरेट सोने की चेन, आपके दैनिक स्टाइल के लिए असली गुणवत्ता सुनिश्चित करने हेतु HUID प्रमाणित।"
     ],
     "englishHighlights": [
-      "Lightweight and trendy design 22K 916 gold chain",
-      "comfortable for daily wear and perfect with every look."
+      "Lightweight and comfortable 22ct gold chain, HUID certified to ensure authentic quality for your daily style."
     ],
     "description": "Lightweight and trendy design 22K 916 gold ladies chain, comfortable for daily wear and perfect for enhancing any look.",
     "keywords": "ladies gold chain, 22k chain, lightweight, daily wear, 916 hallmark",
@@ -5635,12 +5578,10 @@
     "name": "Ladies Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "हल्की और ट्रेंडी डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "रोज़ाना पहनने के लिए आरामदायक और हर लुक के साथ परफेक्ट"
+      "यूनिक HUID स्टैम्प के साथ उत्कृष्ट रूप से तैयार 22 कैरेट गोल्ड लिंक, जो पारंपरिक विलासिता के शिखर का प्रतिनिधित्व करते हैं।"
     ],
     "englishHighlights": [
-      "Lightweight and trendy design 22K 916 gold chain",
-      "comfortable for daily wear and perfect with every look."
+      "Exquisitely crafted 22k gold links featuring a unique HUID stamp, representing the pinnacle of traditional luxury."
     ],
     "description": "Lightweight and trendy design 22K 916 gold ladies chain, comfortable for daily wear and perfect for enhancing any look.",
     "keywords": "ladies gold chain, 22k chain, lightweight, daily wear, 916 hallmark",
@@ -5670,12 +5611,10 @@
     "name": "Ladies Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "हल्की और ट्रेंडी डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "रोज़ाना पहनने के लिए आरामदायक और हर लुक के साथ परफेक्ट"
+      "यूनिक HUID स्टैम्प के साथ उत्कृष्ट रूप से तैयार 22 कैरेट गोल्ड लिंक, जो पारंपरिक विलासिता के शिखर का प्रतिनिधित्व करते हैं।"
     ],
     "englishHighlights": [
-      "Lightweight and trendy design 22K 916 gold chain",
-      "comfortable for daily wear and perfect with every look."
+      "Exquisitely crafted 22k gold links featuring a unique HUID stamp, representing the pinnacle of traditional luxury."
     ],
     "description": "Lightweight and trendy design 22K 916 gold ladies chain, comfortable for daily wear and perfect for enhancing any look.",
     "keywords": "ladies gold chain, 22k chain, lightweight, daily wear, 916 hallmark",
@@ -5705,12 +5644,10 @@
     "name": "Ladies Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "हल्की और ट्रेंडी डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "रोज़ाना पहनने के लिए आरामदायक और हर लुक के साथ परफेक्ट"
+      "आधुनिक और सुरक्षा के प्रति जागरूक खरीदार के लिए HUID हॉलमार्क वाली एक सरल लेकिन परिष्कृत 22 कैरेट 916 गोल्ड चेन।"
     ],
     "englishHighlights": [
-      "Lightweight and trendy design 22K 916 gold chain",
-      "comfortable for daily wear and perfect with every look."
+      "A simple yet sophisticated 22-carat 916 gold chain, hallmarked with HUID for the modern, safety-conscious buyer."
     ],
     "description": "Lightweight and trendy design 22K 916 gold ladies chain, comfortable for daily wear and perfect for enhancing any look.",
     "keywords": "ladies gold chain, 22k chain, lightweight, daily wear, 916 hallmark",
@@ -5740,12 +5677,10 @@
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "आधुनिक और सुरक्षा के प्रति जागरूक खरीदार के लिए HUID हॉलमार्क वाली एक सरल लेकिन परिष्कृत 22 कैरेट 916 गोल्ड चेन।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "A simple yet sophisticated 22-carat 916 gold chain, hallmarked with HUID for the modern, safety-conscious buyer."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -5775,12 +5710,10 @@
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "हर रोशनी में चमकने वाली हाई-पॉलिश 22 कैरेट गोल्ड चेन, पूर्ण मानसिक शांति के लिए HUID हॉलमार्किंग के साथ।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "High-polish 22k gold chain that catches every light, backed by HUID hallmarking for absolute peace of mind."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -5792,7 +5725,7 @@
     "weight": 9.95,
     "purity": "gold22K",
     "images": [
-      "chain12jpg",
+      "chain12.webp",
       "chain012.webp",
       "chain0012.webp"
     ],
@@ -5810,12 +5743,10 @@
     "name": "Ladies Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "हल्की और ट्रेंडी डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "रोज़ाना पहनने के लिए आरामदायक और हर लुक के साथ परफेक्ट"
+      "हर रोशनी में चमकने वाली हाई-पॉलिश 22 कैरेट गोल्ड चेन, पूर्ण मानसिक शांति के लिए HUID हॉलमार्किंग के साथ।"
     ],
     "englishHighlights": [
-      "Lightweight and trendy design 22K 916 gold chain",
-      "comfortable for daily wear and perfect with every look."
+      "High-polish 22k gold chain that catches every light, backed by HUID hallmarking for absolute peace of mind."
     ],
     "description": "Lightweight and trendy design 22K 916 gold ladies chain, comfortable for daily wear and perfect for enhancing any look.",
     "keywords": "ladies gold chain, 22k chain, lightweight, daily wear, 916 hallmark",
@@ -5845,12 +5776,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "यह 22 कैरेट 916 गोल्ड चेन किसी भी पेंडेंट के लिए उपयुक्त है, जिसमें गारंटीकृत स्वर्ण मानकों के लिए HUID प्रमाणन है।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "This 22ct 916 gold chain is perfect for any pendant, featuring HUID certification for guaranteed gold standards."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -5880,12 +5809,10 @@
     "name": "Ladies Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "हल्की और ट्रेंडी डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "रोज़ाना पहनने के लिए आरामदायक और हर लुक के साथ परफेक्ट"
+      "यह 22 कैरेट 916 गोल्ड चेन किसी भी पेंडेंट के लिए उपयुक्त है, जिसमें गारंटीकृत स्वर्ण मानकों के लिए HUID प्रमाणन है।"
     ],
     "englishHighlights": [
-      "Lightweight and trendy design 22K 916 gold chain",
-      "comfortable for daily wear and perfect with every look."
+      "This 22ct 916 gold chain is perfect for any pendant, featuring HUID certification for guaranteed gold standards."
     ],
     "description": "Lightweight and trendy design 22K 916 gold ladies chain, comfortable for daily wear and perfect for enhancing any look.",
     "keywords": "ladies gold chain, 22k chain, lightweight, daily wear, 916 hallmark",
@@ -5915,12 +5842,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "इस 22 कैरेट गोल्ड चेन के साथ शुद्धता में निवेश करें, जहाँ हर लिंक एक ट्रैसेबल HUID हॉलमार्क कोड द्वारा सुरक्षित है।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "Invest in purity with this 22k gold chain, where every link is protected by a traceable HUID hallmark code."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -5950,12 +5875,10 @@
     "name": "Ladies Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "हल्की और ट्रेंडी डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "रोज़ाना पहनने के लिए आरामदायक और हर लुक के साथ परफेक्ट"
+      "इस 22 कैरेट गोल्ड चेन के साथ शुद्धता में निवेश करें, जहाँ हर लिंक एक ट्रैसेबल HUID हॉलमार्क कोड द्वारा सुरक्षित है।"
     ],
     "englishHighlights": [
-      "Lightweight and trendy design 22K 916 gold chain",
-      "comfortable for daily wear and perfect with every look."
+      "Invest in purity with this 22k gold chain, where every link is protected by a traceable HUID hallmark code."
     ],
     "description": "Lightweight and trendy design 22K 916 gold ladies chain, comfortable for daily wear and perfect for enhancing any look.",
     "keywords": "ladies gold chain, 22k chain, lightweight, daily wear, 916 hallmark",
@@ -5985,12 +5908,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "खूबसूरती से तैयार 22 कैरेट गोल्ड चेन, जो HUID-प्रमाणित उत्कृष्टता और बेहतरीन स्वर्ण कारीगरी को प्रदर्शित करती है।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "Beautifully finished 22-carat gold chain, showcasing HUID-certified excellence and superior gold craftsmanship."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -6020,12 +5941,10 @@
     "name": "Ladies Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "हल्की और ट्रेंडी डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "रोज़ाना पहनने के लिए आरामदायक और हर लुक के साथ परफेक्ट"
+      "खूबसूरती से तैयार 22 कैरेट गोल्ड चेन, जो HUID-प्रमाणित उत्कृष्टता और बेहतरीन स्वर्ण कारीगरी को प्रदर्शित करती है।"
     ],
     "englishHighlights": [
-      "Lightweight and trendy design 22K 916 gold chain",
-      "comfortable for daily wear and perfect with every look."
+      "Beautifully finished 22-carat gold chain, showcasing HUID-certified excellence and superior gold craftsmanship."
     ],
     "description": "Lightweight and trendy design 22K 916 gold ladies chain, comfortable for daily wear and perfect for enhancing any look.",
     "keywords": "ladies gold chain, 22k chain, lightweight, daily wear, 916 hallmark",
@@ -6055,12 +5974,10 @@
     "name": "Ladies Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "हल्की और ट्रेंडी डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "रोज़ाना पहनने के लिए आरामदायक और हर लुक के साथ परफेक्ट"
+      "सत्यापित वजन और शुद्धता के लिए 916 HUID हॉलमार्क वाली इस मोटी 22 कैरेट गोल्ड लिंक चेन के साथ अपनी छाप छोड़ें।"
     ],
     "englishHighlights": [
-      "Lightweight and trendy design 22K 916 gold chain",
-      "comfortable for daily wear and perfect with every look."
+      "Make an impression with a thick 22k gold link chain, hallmarked with 916 HUID for verified weight and purity."
     ],
     "description": "Lightweight and trendy design 22K 916 gold ladies chain, comfortable for daily wear and perfect for enhancing any look.",
     "keywords": "ladies gold chain, 22k chain, lightweight, daily wear, 916 hallmark",
@@ -6090,12 +6007,10 @@
     "name": "Ladies Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "हल्की और ट्रेंडी डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "रोज़ाना पहनने के लिए आरामदायक और हर लुक के साथ परफेक्ट"
+      "सत्यापित वजन और शुद्धता के लिए 916 HUID हॉलमार्क वाली इस मोटी 22 कैरेट गोल्ड लिंक चेन के साथ अपनी छाप छोड़ें।"
     ],
     "englishHighlights": [
-      "Lightweight and trendy design 22K 916 gold chain",
-      "comfortable for daily wear and perfect with every look."
+      "Make an impression with a thick 22k gold link chain, hallmarked with 916 HUID for verified weight and purity."
     ],
     "description": "Lightweight and trendy design 22K 916 gold ladies chain, comfortable for daily wear and perfect for enhancing any look.",
     "keywords": "ladies gold chain, 22k chain, lightweight, daily wear, 916 hallmark",
@@ -6125,12 +6040,10 @@
     "name": "Ladies Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "हल्की और ट्रेंडी डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "रोज़ाना पहनने के लिए आरामदायक और हर लुक के साथ परफेक्ट"
+      "पीढ़ियों तक चलने के लिए डिज़ाइन की गई 22 कैरेट गोल्ड चेन, जिसमें पूर्ण प्रमाणिकता के लिए विश्वसनीय 916 HUID मार्क है।"
     ],
     "englishHighlights": [
-      "Lightweight and trendy design 22K 916 gold chain",
-      "comfortable for daily wear and perfect with every look."
+      "A 22ct gold chain designed to last generations, featuring the trusted 916 HUID mark for ultimate authenticity."
     ],
     "description": "Lightweight and trendy design 22K 916 gold ladies chain, comfortable for daily wear and perfect for enhancing any look.",
     "keywords": "ladies gold chain, 22k chain, lightweight, daily wear, 916 hallmark",
@@ -6160,12 +6073,10 @@
     "name": "Ladies Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "हल्की और ट्रेंडी डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "रोज़ाना पहनने के लिए आरामदायक और हर लुक के साथ परफेक्ट"
+      "पीढ़ियों तक चलने के लिए डिज़ाइन की गई 22 कैरेट गोल्ड चेन, जिसमें पूर्ण प्रमाणिकता के लिए विश्वसनीय 916 HUID मार्क है।"
     ],
     "englishHighlights": [
-      "Lightweight and trendy design 22K 916 gold chain",
-      "comfortable for daily wear and perfect with every look."
+      "A 22ct gold chain designed to last generations, featuring the trusted 916 HUID mark for ultimate authenticity."
     ],
     "description": "Lightweight and trendy design 22K 916 gold ladies chain, comfortable for daily wear and perfect for enhancing any look.",
     "keywords": "ladies gold chain, 22k chain, lightweight, daily wear, 916 hallmark",
@@ -6195,12 +6106,12 @@
     "name": "Ladies Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "हल्की और ट्रेंडी डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "रोज़ाना पहनने के लिए आरामदायक और हर लुक के साथ परफेक्ट"
+      "रोज़मर्रा के उपयोग के लिए हल्की और मजबूत चांदी की चेन",
+      "हर आउटफिट के साथ जँचने वाला आधुनिक और सरल डिज़ाइन"
     ],
     "englishHighlights": [
-      "Lightweight and trendy design 22K 916 gold chain",
-      "comfortable for daily wear and perfect with every look."
+      "Lightweight and strong silver chain for everyday use",
+      "modern and simple design that suits every outfit."
     ],
     "description": "Lightweight and trendy design 22K 916 gold ladies chain, comfortable for daily wear and perfect for enhancing any look.",
     "keywords": "ladies gold chain, 22k chain, lightweight, daily wear, 916 hallmark",
@@ -7539,7 +7450,7 @@
     "weight": 20.21,
     "purity": "gold22K",
     "images": [
-      "IMG-20251209-WA0020,jpg"
+      "IMG-20251209-WA0020.webp"
     ],
     "available": false,
     "newArrival": false,
@@ -9822,12 +9733,10 @@
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "उच्च शुद्धता: यह चेन 22 कैरेट सोने से बनी है, जिसका अर्थ है कि इसमें 91.6% शुद्ध सोना है, जो इसे अत्यंत मूल्यवान बनाता है।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "High Purity: This chain is crafted from 22-karat gold, meaning it contains 91.6% pure gold, making it highly valuable and rich in color."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -9855,12 +9764,10 @@
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "उच्च शुद्धता: यह चेन 22 कैरेट सोने से बनी है, जिसका अर्थ है कि इसमें 91.6% शुद्ध सोना है, जो इसे अत्यंत मूल्यवान बनाता है।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "High Purity: This chain is crafted from 22-karat gold, meaning it contains 91.6% pure gold, making it highly valuable and rich in color."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -9888,12 +9795,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "सरकारी प्रमाणन: इसमें HUID (हॉलमार्क विशिष्ट अल्फ़ान्यूमेरिक आईडी) है, जो सोने की शुद्धता और उसकी पहचान की गारंटी देता है।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "Government Certified: It features the HUID (Hallmark Unique Alphanumeric ID), a unique code that ensures traceability and guarantees the gold's purity."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -9921,12 +9826,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "सरकारी प्रमाणन: इसमें HUID (हॉलमार्क विशिष्ट अल्फ़ान्यूमेरिक आईडी) है, जो सोने की शुद्धता और उसकी पहचान की गारंटी देता है।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "Government Certified: It features the HUID (Hallmark Unique Alphanumeric ID), a unique code that ensures traceability and guarantees the gold's purity."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -9954,12 +9857,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "916 हॉलमार्क: \"916\" की मुहर 22K सोने के लिए एक वैश्विक मानक है, जो आपको इसकी गुणवत्ता का भरोसा दिलाती है।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "916 Hallmark: The \"916\" stamp is a global standard for 22K gold, providing you with peace of mind regarding its quality and authenticity."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -9987,12 +9888,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "916 हॉलमार्क: \"916\" की मुहर 22K सोने के लिए एक वैश्विक मानक है, जो आपको इसकी गुणवत्ता का भरोसा दिलाती है।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "916 Hallmark: The \"916\" stamp is a global standard for 22K gold, providing you with peace of mind regarding its quality and authenticity."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -10020,12 +9919,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "BIS द्वारा मान्यता प्राप्त: इस पर भारतीय मानक ब्यूरो (BIS) का लोगो होता है, जो भारत में सोने के आभूषणों के लिए आधिकारिक शुद्धता का प्रतीक है।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "BIS Approved: It carries the Bureau of Indian Standards (BIS) logo, which is the official seal of quality for gold jewelry in India."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -10053,12 +9950,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "BIS द्वारा मान्यता प्राप्त: इस पर भारतीय मानक ब्यूरो (BIS) का लोगो होता है, जो भारत में सोने के आभूषणों के लिए आधिकारिक शुद्धता का प्रतीक है।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "BIS Approved: It carries the Bureau of Indian Standards (BIS) logo, which is the official seal of quality for gold jewelry in India."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -10086,12 +9981,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "मजबूत और सुंदर: 22K सोना शुद्ध सोने की चमक और दैनिक उपयोग के लिए आवश्यक मजबूती का एक बेहतरीन संतुलन है।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "Durable & Elegant: 22K gold offers the perfect balance between the softness of pure gold and the strength needed for daily wear."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -10119,12 +10012,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "मजबूत और सुंदर: 22K सोना शुद्ध सोने की चमक और दैनिक उपयोग के लिए आवश्यक मजबूती का एक बेहतरीन संतुलन है।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "Durable & Elegant: 22K gold offers the perfect balance between the softness of pure gold and the strength needed for daily wear."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -10152,12 +10043,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "बेहतरीन निवेश: अपनी उच्च शुद्धता और आधिकारिक प्रमाणन के कारण, इस चेन की रीसेल (Resale) वैल्यू हमेशा अच्छी रहती है।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "Investment Grade: Because of its high purity and official certification, this chain holds excellent resale and exchange value."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -10185,12 +10074,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "बेहतरीन निवेश: अपनी उच्च शुद्धता और आधिकारिक प्रमाणन के कारण, इस चेन की रीसेल (Resale) वैल्यू हमेशा अच्छी रहती है।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "Investment Grade: Because of its high purity and official certification, this chain holds excellent resale and exchange value."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -10218,12 +10105,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "त्वचा के लिए सुरक्षित: उच्च शुद्धता वाला 916 सोना आमतौर पर संवेदनशील त्वचा के लिए सुरक्षित होता है और एलर्जी नहीं करता।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "Skin Friendly: High-purity 916 gold is generally hypoallergenic and safe for sensitive skin."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -10251,12 +10136,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "त्वचा के लिए सुरक्षित: उच्च शुद्धता वाला 916 सोना आमतौर पर संवेदनशील त्वचा के लिए सुरक्षित होता है और एलर्जी नहीं करता।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "Skin Friendly: High-purity 916 gold is generally hypoallergenic and safe for sensitive skin."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -10284,12 +10167,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "शानदार कारीगरी: इन चेनों में क्लासिक और आधुनिक दोनों तरह के आकर्षक डिजाइन उपलब्ध होते हैं।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "Artistic Craftsmanship: These chains often feature intricate designs, from classic bismark links to modern machine-cut patterns."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -10317,12 +10198,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "शानदार कारीगरी: इन चेनों में क्लासिक और आधुनिक दोनों तरह के आकर्षक डिजाइन उपलब्ध होते हैं।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "Artistic Craftsmanship: These chains often feature intricate designs, from classic bismark links to modern machine-cut patterns."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -10350,12 +10229,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "धोखाधड़ी से सुरक्षा: HUID कोड हर आभूषण के लिए अलग होता है, जिससे मिलावट या नकली सोने का खतरा खत्म हो जाता है।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "Tamper-Proof Identity: The HUID code is unique to every single piece, preventing any chance of fraud or duplication."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -10383,12 +10260,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "धोखाधड़ी से सुरक्षा: HUID कोड हर आभूषण के लिए अलग होता है, जिससे मिलावट या नकली सोने का खतरा खत्म हो जाता है।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "Tamper-Proof Identity: The HUID code is unique to every single piece, preventing any chance of fraud or duplication."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -10416,12 +10291,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "सदाबहार गहना: 22K 916 गोल्ड चेन एक ऐसा आभूषण है जो कभी पुराना नहीं होता और पीढ़ियों तक चलता है।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "Timeless Appeal: A 22K 916 gold chain is a classic accessory that never goes out of style and serves as a family heirloom."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -10449,12 +10322,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "सदाबहार गहना: 22K 916 गोल्ड चेन एक ऐसा आभूषण है जो कभी पुराना नहीं होता और पीढ़ियों तक चलता है।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "Timeless Appeal: A 22K 916 gold chain is a classic accessory that never goes out of style and serves as a family heirloom."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -10482,12 +10353,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "ट्रैसेबिलिटी (Traceability): 6-अंकीय HUID कोड आपको रिफाइनरी से लेकर ज्वेलर तक चेन के सफर को ट्रैक करने की अनुमति देता है।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "Traceability: The 6-digit HUID code allows you to track the chain's journey from the refinery to the jeweler."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -10515,12 +10384,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "ट्रैसेबिलिटी (Traceability): 6-अंकीय HUID कोड आपको रिफाइनरी से लेकर ज्वेलर तक चेन के सफर को ट्रैक करने की अनुमति देता है।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "Traceability: The 6-digit HUID code allows you to track the chain's journey from the refinery to the jeweler."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -10548,12 +10415,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "ऐप द्वारा सत्यापन: आप BIS CARE ऐप में HUID कोड डालकर चेन का विवरण और ज्वेलर का नाम तुरंत चेक कर सकते हैं।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "App Verification: You can instantly verify the chain’s details, including the jeweler's name, by entering the HUID code into the BIS CARE app."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -10581,12 +10446,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "ऐप द्वारा सत्यापन: आप BIS CARE ऐप में HUID कोड डालकर चेन का विवरण और ज्वेलर का नाम तुरंत चेक कर सकते हैं।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "App Verification: You can instantly verify the chain’s details, including the jeweler's name, by entering the HUID code into the BIS CARE app."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -10614,12 +10477,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "गोल्ड लोन में आसानी: बैंक HUID सोने को प्राथमिकता देते हैं, जिससे आपको अपनी चेन पर अधिक लोन राशि मिलना आसान हो जाता है।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "Gold Loan Eligibility: Banks and financial institutions prefer HUID gold, making it easier to get a higher loan amount against your chain."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -10647,12 +10508,10 @@
     "name": "Ladies Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "हल्की और ट्रेंडी डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "रोज़ाना पहनने के लिए आरामदायक और हर लुक के साथ परफेक्ट"
+      "गोल्ड लोन में आसानी: बैंक HUID सोने को प्राथमिकता देते हैं, जिससे आपको अपनी चेन पर अधिक लोन राशि मिलना आसान हो जाता है।"
     ],
     "englishHighlights": [
-      "Lightweight and trendy design 22K 916 gold chain",
-      "comfortable for daily wear and perfect with every look."
+      "Gold Loan Eligibility: Banks and financial institutions prefer HUID gold, making it easier to get a higher loan amount against your chain."
     ],
     "description": "Lightweight and trendy design 22K 916 gold ladies chain, comfortable for daily wear and perfect for enhancing any look.",
     "keywords": "ladies gold chain, 22k chain, lightweight, daily wear, 916 hallmark",
@@ -10680,12 +10539,10 @@
     "name": "Ladies Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "हल्की और ट्रेंडी डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "रोज़ाना पहनने के लिए आरामदायक और हर लुक के साथ परफेक्ट"
+      "त्वचा के अनुकूल: 91.6% शुद्धता के कारण, यह सोना संवेदनशील त्वचा के लिए सुरक्षित है और जलन पैदा नहीं करता।"
     ],
     "englishHighlights": [
-      "Lightweight and trendy design 22K 916 gold chain",
-      "comfortable for daily wear and perfect with every look."
+      "Hypoallergenic: At 91.6% purity, this gold is extremely safe for sensitive skin and rarely causes irritation."
     ],
     "description": "Lightweight and trendy design 22K 916 gold ladies chain, comfortable for daily wear and perfect for enhancing any look.",
     "keywords": "ladies gold chain, 22k chain, lightweight, daily wear, 916 hallmark",
@@ -10713,12 +10570,10 @@
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "त्वचा के अनुकूल: 91.6% शुद्धता के कारण, यह सोना संवेदनशील त्वचा के लिए सुरक्षित है और जलन पैदा नहीं करता।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Hypoallergenic: At 91.6% purity, this gold is extremely safe for sensitive skin and rarely causes irritation."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -10746,12 +10601,10 @@
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "जंग रोधी: कम कैरेट वाले सोने या प्लेटेड गहनों के विपरीत, 22K 916 सोना समय के साथ काला नहीं पड़ता या खराब नहीं होता।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Corrosion Resistance: Unlike lower-karat gold or plated jewelry, 22K 916 gold does not rust or corrode over time."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -10779,12 +10632,10 @@
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "जंग रोधी: कम कैरेट वाले सोने या प्लेटेड गहनों के विपरीत, 22K 916 सोना समय के साथ काला नहीं पड़ता या खराब नहीं होता।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Corrosion Resistance: Unlike lower-karat gold or plated jewelry, 22K 916 gold does not rust or corrode over time."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -10812,12 +10663,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "गहरी चमक: इसमें एक गहरा और गर्म पीला रंग होता है जो 14K या 18K सोने की तुलना में बहुत अधिक चमकदार होता है।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "Rich Luster: It possesses a deep, warm yellow glow that is much more vibrant than 14K or 18K gold."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -10845,12 +10694,10 @@
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "गहरी चमक: इसमें एक गहरा और गर्म पीला रंग होता है जो 14K या 18K सोने की तुलना में बहुत अधिक चमकदार होता है।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Rich Luster: It possesses a deep, warm yellow glow that is much more vibrant than 14K or 18K gold."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -10878,12 +10725,10 @@
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "बेहतर टांका (Solder): आधुनिक 916 गहनों में सोने आधारित टांकों का उपयोग किया जाता है, जिससे जोड़ मजबूत और शुद्ध रहते हैं।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Solder Quality: Modern 916 jewelry uses gold-based solders (instead of old cadmium/KDM), ensuring the joints are strong and pure."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -10911,12 +10756,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "बेहतर टांका (Solder): आधुनिक 916 गहनों में सोने आधारित टांकों का उपयोग किया जाता है, जिससे जोड़ मजबूत और शुद्ध रहते हैं।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "Solder Quality: Modern 916 jewelry uses gold-based solders (instead of old cadmium/KDM), ensuring the joints are strong and pure."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -10944,12 +10787,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "वैश्विक स्वीकार्यता: 22K 916 एक विश्व स्तर पर मान्यता प्राप्त मानक है, यानी आप इसे दुनिया में कहीं भी बेच या बदल सकते हैं।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "Global Liquidity: 22K 916 is a globally recognized standard, meaning you can sell or exchange it anywhere in the world."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -10977,12 +10818,10 @@
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "वैश्विक स्वीकार्यता: 22K 916 एक विश्व स्तर पर मान्यता प्राप्त मानक है, यानी आप इसे दुनिया में कहीं भी बेच या बदल सकते हैं।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Global Liquidity: 22K 916 is a globally recognized standard, meaning you can sell or exchange it anywhere in the world."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -10994,7 +10833,7 @@
     "weight": 21.81,
     "purity": "gold22K",
     "images": [
-      "IMG-20251210-WA0075jpg"
+      "IMG-20251210-WA0075.webp"
     ],
     "available": false,
     "newArrival": false,
@@ -11010,12 +10849,10 @@
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "सटीक कीमत: HUID यह सुनिश्चित करता है कि आप केवल शुद्ध सोने के पैसे दें, जिससे कोई ज्वेलर आपसे अधिक पैसे नहीं ले सकता।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Standardized Pricing: HUID ensures you pay for the exact purity promised, preventing overcharging by dishonest sellers."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -11043,12 +10880,10 @@
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "सटीक कीमत: HUID यह सुनिश्चित करता है कि आप केवल शुद्ध सोने के पैसे दें, जिससे कोई ज्वेलर आपसे अधिक पैसे नहीं ले सकता।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Standardized Pricing: HUID ensures you pay for the exact purity promised, preventing overcharging by dishonest sellers."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -11076,12 +10911,10 @@
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "साफ करने में आसान: हल्के साबुन के पानी और मुलायम ब्रश से इसे घर पर ही वापस नया जैसा चमकाया जा सकता है।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Maintenance Ease: A simple soak in mild soapy water and a soft brush is all it takes to restore its original shine."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -11109,12 +10942,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "साफ करने में आसान: हल्के साबुन के पानी और मुलायम ब्रश से इसे घर पर ही वापस नया जैसा चमकाया जा सकता है।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "Maintenance Ease: A simple soak in mild soapy water and a soft brush is all it takes to restore its original shine."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -11142,12 +10973,10 @@
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "सांस्कृतिक महत्व: कई संस्कृतियों में 22K सोने को ही \"असली सोना\" माना जाता है, जो इसे शादियों के लिए सबसे खास बनाता है।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Cultural Heritage: In many cultures, 22K gold is considered \"real gold,\" making it the gold standard for wedding gifts and traditions."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -11175,12 +11004,10 @@
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "सांस्कृतिक महत्व: कई संस्कृतियों में 22K सोने को ही \"असली सोना\" माना जाता है, जो इसे शादियों के लिए सबसे खास बनाता है।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Cultural Heritage: In many cultures, 22K gold is considered \"real gold,\" making it the gold standard for wedding gifts and traditions."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -11208,12 +11035,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "भविष्य के लिए सुरक्षित: जैसे-जैसे HUID अनिवार्य हो रहा है, भविष्य में बिना HUID वाला सोना बेचना मुश्किल हो सकता है; यह चेन पहले से ही नियमों के अनुसार है।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "Future Proof: As HUID becomes mandatory, non-HUID gold may be harder to sell in the future; this chain is already compliant."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -11241,12 +11066,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "भविष्य के लिए सुरक्षित: जैसे-जैसे HUID अनिवार्य हो रहा है, भविष्य में बिना HUID वाला सोना बेचना मुश्किल हो सकता है; यह चेन पहले से ही नियमों के अनुसार है।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "Future Proof: As HUID becomes mandatory, non-HUID gold may be harder to sell in the future; this chain is already compliant."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -11274,12 +11097,10 @@
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "बढ़ता मूल्य: लक्जरी घड़ियों या कारों के विपरीत, 916 गोल्ड चेन का मूल्य दशकों में बढ़ता ही जाता है।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Intrinsic Value: Unlike luxury watches or cars, the value of a 916 gold chain typically appreciates over decades."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -11307,12 +11128,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "बढ़ता मूल्य: लक्जरी घड़ियों या कारों के विपरीत, 916 गोल्ड चेन का मूल्य दशकों में बढ़ता ही जाता है।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "Intrinsic Value: Unlike luxury watches or cars, the value of a 916 gold chain typically appreciates over decades."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -11340,12 +11159,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "डिजाइन की विविधता: यह दैनिक उपयोग के लिए मजबूत है और बारीक नक्काशी वाले डिजाइनों के लिए भी उपयुक्त है।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "Design Versatility: It is strong enough for daily-wear \"rope\" designs yet soft enough for high-detail \"filigree\" work."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -11373,12 +11190,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "डिजाइन की विविधता: यह दैनिक उपयोग के लिए मजबूत है और बारीक नक्काशी वाले डिजाइनों के लिए भी उपयुक्त है।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "Design Versatility: It is strong enough for daily-wear \"rope\" designs yet soft enough for high-detail \"filigree\" work."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -11406,12 +11221,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "उपभोक्ता संरक्षण: यदि शुद्धता कम पाई जाती है, तो HUID सिस्टम मुआवजे के लिए कानूनी आधार प्रदान करता है।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "Consumer Protection: If the purity is found to be lower than marked, the HUID system provides a legal ground for compensation."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -11439,12 +11252,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "उपभोक्ता संरक्षण: यदि शुद्धता कम पाई जाती है, तो HUID सिस्टम मुआवजे के लिए कानूनी आधार प्रदान करता है।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "Consumer Protection: If the purity is found to be lower than marked, the HUID system provides a legal ground for compensation."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -11472,12 +11283,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "विशिष्ट पहचान: HUID आपकी चेन के लिए \"फिंगरप्रिंट\" की तरह काम करता है, जिससे इसकी अदला-बदली करना असंभव है।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "Unique Identity: The HUID acts like a \"fingerprint\" for your chain, making it harder for it to be swapped or tampered with."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -11505,12 +11314,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "विशिष्ट पहचान: HUID आपकी चेन के लिए \"फिंगरप्रिंट\" की तरह काम करता है, जिससे इसकी अदला-बदली करना असंभव है।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "Unique Identity: The HUID acts like a \"fingerprint\" for your chain, making it harder for it to be swapped or tampered with."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -11538,12 +11345,10 @@
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "टार्निश रेजिस्टेंस: हालांकि सालों बाद इस पर हल्की परत जम सकती है, लेकिन 916 सोना कभी काला नहीं पड़ता।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Tarnish Resistance: While it may develop a slight patina over years, 916 gold does not turn black or lose its base color."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -11571,12 +11376,10 @@
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "टार्निश रेजिस्टेंस: हालांकि सालों बाद इस पर हल्की परत जम सकती है, लेकिन 916 सोना कभी काला नहीं पड़ता।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Tarnish Resistance: While it may develop a slight patina over years, 916 gold does not turn black or lose its base color."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -11604,12 +11407,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "निवेश की सुरक्षा: यह आर्थिक महंगाई के समय में आपके धन की रक्षा करने वाली एक सुरक्षित संपत्ति है।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "Investment Security: It serves as a \"safe haven\" asset that protects your wealth during times of economic inflation."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -11637,12 +11438,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "निवेश की सुरक्षा: यह आर्थिक महंगाई के समय में आपके धन की रक्षा करने वाली एक सुरक्षित संपत्ति है।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "Investment Security: It serves as a \"safe haven\" asset that protects your wealth during times of economic inflation."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -11670,12 +11469,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "पीढ़ियों का गहना: अपनी उच्च शुद्धता और आधिकारिक हॉलमार्किंग के कारण, यह अगली पीढ़ी के लिए एक मूल्यवान संपत्ति बनी रहती है।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "Heirloom Quality: Due to its high purity and official hallmarking, it remains a valuable asset for the next generation."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -11703,12 +11500,10 @@
     "name": "Common Chain | सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "यूनिसेक्स डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बहुमुखी और मजबूत, पुरुषों और महिलाओं दोनों के लिए उत्तम"
+      "पीढ़ियों का गहना: अपनी उच्च शुद्धता और आधिकारिक हॉलमार्किंग के कारण, यह अगली पीढ़ी के लिए एक मूल्यवान संपत्ति बनी रहती है।"
     ],
     "englishHighlights": [
-      "Unisex design 22K 916 gold chain",
-      "versatile and strong, excellent for both men and women."
+      "Heirloom Quality: Due to its high purity and official hallmarking, it remains a valuable asset for the next generation."
     ],
     "description": "Versatile and strong unisex design 22K 916 gold chain, excellent for both men and women.",
     "keywords": "common gold chain, unisex chain, 22k gold, versatile jewelry",
@@ -11736,12 +11531,10 @@
     "name": "Gents Gold Chain | जेंट्स की सोने की चैन",
     "category": "सोने की चैन",
     "highlights": [
-      "मजबूत और स्टाइलिश डिज़ाइन वाली 22K 916 गोल्ड चेन",
-      "बोल्ड और आकर्षक लुक, रोज़ाना पहनने के लिए उत्तम"
+      "उपहार देने में विश्वास: HUID सोना उपहार में देने पर, पाने वाला खुद इसकी कीमत की जांच कर सकता है, जिससे उपहार की प्रतिष्ठा बढ़ती है।"
     ],
     "englishHighlights": [
-      "Strong and stylish design 22K 916 gold chain",
-      "bold and attractive look, excellent for daily wear."
+      "Confidence in Gifting: When gifting HUID gold, the recipient can verify the value themselves, adding to the prestige of the gift."
     ],
     "description": "Strong and stylish design 22K 916 gold gents chain, providing a bold and attractive look, excellent for daily wear.",
     "keywords": "gents gold chain, 22k chain, bold design, daily wear, 916 hallmark",
@@ -11835,12 +11628,10 @@
     "name": "Chokar | चोकर",
     "category": "सोने के राजपूतानी आभूषण",
     "highlights": [
-      "भव्य 22K 916 HUID हॉलमार्क गोल्ड चोकर",
-      "शादियों और विशेष उत्सवों के लिए एक शानदार स्टेटमेंट नेकलेस"
+      "राजपूती शान: 'आड़' एक पारंपरिक चोकर हार है, जिसे राजपूती वधुएँ अपनी सुंदरता और राजसी ठाट-बाट को दर्शाने के लिए पहनती हैं।"
     ],
     "englishHighlights": [
-      "Grand and heavy 22K 916 HUID hallmark gold Chokar (necklace)",
-      "a spectacular statement necklace for weddings and special festivals."
+      "Regal Design: The Aad is a rectangular or curved choker-style necklace, traditionally worn by Rajput brides to represent royalty and grace."
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -11868,12 +11659,10 @@
     "name": "Chokar | चोकर",
     "category": "सोने के राजपूतानी आभूषण",
     "highlights": [
-      "भव्य 22K 916 HUID हॉलमार्क गोल्ड चोकर",
-      "शादियों और विशेष उत्सवों के लिए एक शानदार स्टेटमेंट नेकलेस"
+      "राजपूती शान: 'आड़' एक पारंपरिक चोकर हार है, जिसे राजपूती वधुएँ अपनी सुंदरता और राजसी ठाट-बाट को दर्शाने के लिए पहनती हैं।"
     ],
     "englishHighlights": [
-      "Grand and heavy 22K 916 HUID hallmark gold Chokar (necklace)",
-      "a spectacular statement necklace for weddings and special festivals."
+      "Regal Design: The Aad is a rectangular or curved choker-style necklace, traditionally worn by Rajput brides to represent royalty and grace."
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -11901,12 +11690,10 @@
     "name": "Chokar | चोकर",
     "category": "सोने के राजपूतानी आभूषण",
     "highlights": [
-      "भव्य 22K 916 HUID हॉलमार्क गोल्ड चोकर",
-      "शादियों और विशेष उत्सवों के लिए एक शानदार स्टेटमेंट नेकलेस"
+      "HUID की सुरक्षा: इस पर 6-अंकीय HUID कोड होता है, जो इसकी शुद्धता (91.6%) की कानूनी गारंटी देता है और इसे ट्रैक करना आसान बनाता है।"
     ],
     "englishHighlights": [
-      "Grand and heavy 22K 916 HUID hallmark gold Chokar (necklace)",
-      "a spectacular statement necklace for weddings and special festivals."
+      "HUID Security: Every Aad comes with a 6-digit HUID (Hallmark Unique ID), ensuring the gold is traceable and its 91.6% purity is officially verified."
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -11934,12 +11721,10 @@
     "name": "Chokar | चोकर",
     "category": "सोने के राजपूतानी आभूषण",
     "highlights": [
-      "भव्य 22K 916 HUID हॉलमार्क गोल्ड चोकर",
-      "शादियों और विशेष उत्सवों के लिए एक शानदार स्टेटमेंट नेकलेस"
+      "HUID की सुरक्षा: इस पर 6-अंकीय HUID कोड होता है, जो इसकी शुद्धता (91.6%) की कानूनी गारंटी देता है और इसे ट्रैक करना आसान बनाता है।"
     ],
     "englishHighlights": [
-      "Grand and heavy 22K 916 HUID hallmark gold Chokar (necklace)",
-      "a spectacular statement necklace for weddings and special festivals."
+      "HUID Security: Every Aad comes with a 6-digit HUID (Hallmark Unique ID), ensuring the gold is traceable and its 91.6% purity is officially verified."
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -11967,12 +11752,10 @@
     "name": "Chokar | चोकर",
     "category": "सोने के राजपूतानी आभूषण",
     "highlights": [
-      "भव्य 22K 916 HUID हॉलमार्क गोल्ड चोकर",
-      "शादियों और विशेष उत्सवों के लिए एक शानदार स्टेटमेंट नेकलेस"
+      "916 शुद्धता: यह 22 कैरेट सोने से बना होता है, जो इसे पारंपरिक आभूषणों के लिए सबसे शुद्ध और कीमती विकल्प बनाता है।"
     ],
     "englishHighlights": [
-      "Grand and heavy 22K 916 HUID hallmark gold Chokar (necklace)",
-      "a spectacular statement necklace for weddings and special festivals."
+      "High Purity (916): Crafted from 22-karat gold, it maintains a rich, deep yellow glow that is characteristic of authentic Indian bridal jewelry."
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12000,12 +11783,10 @@
     "name": "Chokar | चोकर",
     "category": "सोने के राजपूतानी आभूषण",
     "highlights": [
-      "भव्य 22K 916 HUID हॉलमार्क गोल्ड चोकर",
-      "शादियों और विशेष उत्सवों के लिए एक शानदार स्टेटमेंट नेकलेस"
+      "916 शुद्धता: यह 22 कैरेट सोने से बना होता है, जो इसे पारंपरिक आभूषणों के लिए सबसे शुद्ध और कीमती विकल्प बनाता है।"
     ],
     "englishHighlights": [
-      "Grand and heavy 22K 916 HUID hallmark gold Chokar (necklace)",
-      "a spectacular statement necklace for weddings and special festivals."
+      "High Purity (916): Crafted from 22-karat gold, it maintains a rich, deep yellow glow that is characteristic of authentic Indian bridal jewelry."
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12033,12 +11814,10 @@
     "name": "Chokar | चोकर",
     "category": "सोने के राजपूतानी आभूषण",
     "highlights": [
-      "भव्य 22K 916 HUID हॉलमार्क गोल्ड चोकर",
-      "शादियों और विशेष उत्सवों के लिए एक शानदार स्टेटमेंट नेकलेस"
+      "बेहतरीन कारीगरी: इसमें अक्सर कुंदन, मीनाकारी और पोलकी का काम होता है, जो राजस्थान की प्राचीन कला और संस्कृति को दर्शाता है।"
     ],
     "englishHighlights": [
-      "Grand and heavy 22K 916 HUID hallmark gold Chokar (necklace)",
-      "a spectacular statement necklace for weddings and special festivals."
+      "Intricate Artistry: These pieces often feature Kundan, Meenakari (enameling), or Polki (uncut diamonds) work, showcasing Rajasthan’s world-class craftsmanship."
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12066,12 +11845,10 @@
     "name": "Chokar | चोकर",
     "category": "सोने के राजपूतानी आभूषण",
     "highlights": [
-      "भव्य 22K 916 HUID हॉलमार्क गोल्ड चोकर",
-      "शादियों और विशेष उत्सवों के लिए एक शानदार स्टेटमेंट नेकलेस"
+      "बेहतरीन कारीगरी: इसमें अक्सर कुंदन, मीनाकारी और पोलकी का काम होता है, जो राजस्थान की प्राचीन कला और संस्कृति को दर्शाता है।"
     ],
     "englishHighlights": [
-      "Grand and heavy 22K 916 HUID hallmark gold Chokar (necklace)",
-      "a spectacular statement necklace for weddings and special festivals."
+      "Intricate Artistry: These pieces often feature Kundan, Meenakari (enameling), or Polki (uncut diamonds) work, showcasing Rajasthan’s world-class craftsmanship."
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12099,12 +11876,10 @@
     "name": "Chokar | चोकर",
     "category": "सोने के राजपूतानी आभूषण",
     "highlights": [
-      "भव्य 22K 916 HUID हॉलमार्क गोल्ड चोकर",
-      "शादियों और विशेष उत्सवों के लिए एक शानदार स्टेटमेंट नेकलेस"
+      "बारीक जाल: आड़ के नीचे सोने की बारीक लड़ियाँ या 'जाल' होता है, जिसमें अंत में मोती या कीमती रत्न पिरोए जाते हैं।"
     ],
     "englishHighlights": [
-      "Grand and heavy 22K 916 HUID hallmark gold Chokar (necklace)",
-      "a spectacular statement necklace for weddings and special festivals."
+      "Signature Mesh (Jaal): Below the solid gold block, a delicate gold mesh or \"curtain\" often cascades toward the bosom, ending in pearls or gemstones."
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12132,12 +11907,10 @@
     "name": "Chokar | चोकर",
     "category": "सोने के राजपूतानी आभूषण",
     "highlights": [
-      "भव्य 22K 916 HUID हॉलमार्क गोल्ड चोकर",
-      "शादियों और विशेष उत्सवों के लिए एक शानदार स्टेटमेंट नेकलेस"
+      "बारीक जाल: आड़ के नीचे सोने की बारीक लड़ियाँ या 'जाल' होता है, जिसमें अंत में मोती या कीमती रत्न पिरोए जाते हैं।"
     ],
     "englishHighlights": [
-      "Grand and heavy 22K 916 HUID hallmark gold Chokar (necklace)",
-      "a spectacular statement necklace for weddings and special festivals."
+      "Signature Mesh (Jaal): Below the solid gold block, a delicate gold mesh or \"curtain\" often cascades toward the bosom, ending in pearls or gemstones."
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12165,12 +11938,10 @@
     "name": "Chokar | चोकर",
     "category": "सोने के राजपूतानी आभूषण",
     "highlights": [
-      "भव्य 22K 916 HUID हॉलमार्क गोल्ड चोकर",
-      "शादियों और विशेष उत्सवों के लिए एक शानदार स्टेटमेंट नेकलेस"
+      "प्रतिष्ठा का प्रतीक: प्राचीन काल में यह केवल रानियों द्वारा पहना जाता था; आज भी यह परिवार की प्रतिष्ठा और वैभव का प्रतीक माना जाता है।"
     ],
     "englishHighlights": [
-      "Grand and heavy 22K 916 HUID hallmark gold Chokar (necklace)",
-      "a spectacular statement necklace for weddings and special festivals."
+      "Symbol of Status: Historically worn by Rajput queens, the Aad is a statement piece that signifies the family's wealth and heritage."
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12198,12 +11969,10 @@
     "name": "Chokar | चोकर",
     "category": "सोने के राजपूतानी आभूषण",
     "highlights": [
-      "भव्य 22K 916 HUID हॉलमार्क गोल्ड चोकर",
-      "शादियों और विशेष उत्सवों के लिए एक शानदार स्टेटमेंट नेकलेस"
+      "प्रतिष्ठा का प्रतीक: प्राचीन काल में यह केवल रानियों द्वारा पहना जाता था; आज भी यह परिवार की प्रतिष्ठा और वैभव का प्रतीक माना जाता है।"
     ],
     "englishHighlights": [
-      "Grand and heavy 22K 916 HUID hallmark gold Chokar (necklace)",
-      "a spectacular statement necklace for weddings and special festivals."
+      "Symbol of Status: Historically worn by Rajput queens, the Aad is a statement piece that signifies the family's wealth and heritage."
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12231,12 +12000,10 @@
     "name": "Chokar | चोकर",
     "category": "सोने के राजपूतानी आभूषण",
     "highlights": [
-      "भव्य 22K 916 HUID हॉलमार्क गोल्ड चोकर",
-      "शादियों और विशेष उत्सवों के लिए एक शानदार स्टेटमेंट नेकलेस"
+      "विवाह का महत्व: राजस्थानी शादियों में दूल्हे के परिवार द्वारा दुल्हन को 'आड़' देना एक अनिवार्य और सम्मानित परंपरा है।"
     ],
     "englishHighlights": [
-      "Grand and heavy 22K 916 HUID hallmark gold Chokar (necklace)",
-      "a spectacular statement necklace for weddings and special festivals."
+      "Marital Significance: It is typically gifted by the groom’s family and is a mandatory part of a traditional Rajasthani bridal ensemble."
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12264,12 +12031,10 @@
     "name": "Chokar | चोकर",
     "category": "सोने के राजपूतानी आभूषण",
     "highlights": [
-      "भव्य 22K 916 HUID हॉलमार्क गोल्ड चोकर",
-      "शादियों और विशेष उत्सवों के लिए एक शानदार स्टेटमेंट नेकलेस"
+      "विवाह का महत्व: राजस्थानी शादियों में दूल्हे के परिवार द्वारा दुल्हन को 'आड़' देना एक अनिवार्य और सम्मानित परंपरा है।"
     ],
     "englishHighlights": [
-      "Grand and heavy 22K 916 HUID hallmark gold Chokar (necklace)",
-      "a spectacular statement necklace for weddings and special festivals."
+      "Marital Significance: It is typically gifted by the groom’s family and is a mandatory part of a traditional Rajasthani bridal ensemble."
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12297,12 +12062,10 @@
     "name": "Chokar | चोकर",
     "category": "सोने के राजपूतानी आभूषण",
     "highlights": [
-      "भव्य 22K 916 HUID हॉलमार्क गोल्ड चोकर",
-      "शादियों और विशेष उत्सवों के लिए एक शानदार स्टेटमेंट नेकलेस"
+      "सुरक्षित निवेश: अपनी उच्च शुद्धता और सरकारी हॉलमार्किंग के कारण, यह आभूषण भविष्य के लिए एक बेहतरीन निवेश भी है।"
     ],
     "englishHighlights": [
-      "Grand and heavy 22K 916 HUID hallmark gold Chokar (necklace)",
-      "a spectacular statement necklace for weddings and special festivals."
+      "Investment Value: Due to its 916 hallmarking and substantial weight, it serves as a high-value financial asset with excellent resale potential."
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12330,12 +12093,10 @@
     "name": "Chokar | चोकर",
     "category": "सोने के राजपूतानी आभूषण",
     "highlights": [
-      "भव्य 22K 916 HUID हॉलमार्क गोल्ड चोकर",
-      "शादियों और विशेष उत्सवों के लिए एक शानदार स्टेटमेंट नेकलेस"
+      "सुरक्षित निवेश: अपनी उच्च शुद्धता और सरकारी हॉलमार्किंग के कारण, यह आभूषण भविष्य के लिए एक बेहतरीन निवेश भी है।"
     ],
     "englishHighlights": [
-      "Grand and heavy 22K 916 HUID hallmark gold Chokar (necklace)",
-      "a spectacular statement necklace for weddings and special festivals."
+      "Investment Value: Due to its 916 hallmarking and substantial weight, it serves as a high-value financial asset with excellent resale potential."
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12363,12 +12124,10 @@
     "name": "Chokar | चोकर",
     "category": "सोने के राजपूतानी आभूषण",
     "highlights": [
-      "भव्य 22K 916 HUID हॉलमार्क गोल्ड चोकर",
-      "शादियों और विशेष उत्सवों के लिए एक शानदार स्टेटमेंट नेकलेस"
+      "रेशमी डोरों का उपयोग: इसे गले में बांधने के लिए मजबूत रेशमी डोरों (डोरी) का उपयोग किया जाता है, जिससे इसे पहनना आरामदायक और आसान होता है।"
     ],
     "englishHighlights": [
-      "Grand and heavy 22K 916 HUID hallmark gold Chokar (necklace)",
-      "a spectacular statement necklace for weddings and special festivals."
+      "Sturdy Fastening: Unlike thin chains, the Aad is secured by thick silk threads (Resham Doras) with decorative tassels for a comfortable, adjustable fit."
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12396,12 +12155,10 @@
     "name": "Chokar | चोकर",
     "category": "सोने के राजपूतानी आभूषण",
     "highlights": [
-      "भव्य 22K 916 HUID हॉलमार्क गोल्ड चोकर",
-      "शादियों और विशेष उत्सवों के लिए एक शानदार स्टेटमेंट नेकलेस"
+      "रेशमी डोरों का उपयोग: इसे गले में बांधने के लिए मजबूत रेशमी डोरों (डोरी) का उपयोग किया जाता है, जिससे इसे पहनना आरामदायक और आसान होता है।"
     ],
     "englishHighlights": [
-      "Grand and heavy 22K 916 HUID hallmark gold Chokar (necklace)",
-      "a spectacular statement necklace for weddings and special festivals."
+      "Sturdy Fastening: Unlike thin chains, the Aad is secured by thick silk threads (Resham Doras) with decorative tassels for a comfortable, adjustable fit."
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12429,12 +12186,10 @@
     "name": "Chokar | चोकर",
     "category": "सोने के राजपूतानी आभूषण",
     "highlights": [
-      "भव्य 22K 916 HUID हॉलमार्क गोल्ड चोकर",
-      "शादियों और विशेष उत्सवों के लिए एक शानदार स्टेटमेंट नेकलेस"
+      "खानदानी विरासत: 22K 916 गोल्ड आड़ एक ऐसा कीमती तोहफा है, जिसे माएं अपनी बेटियों को विरासत के रूप में अगली पीढ़ियों को सौंपती हैं।"
     ],
     "englishHighlights": [
-      "Grand and heavy 22K 916 HUID hallmark gold Chokar (necklace)",
-      "a spectacular statement necklace for weddings and special festivals."
+      "Heirloom Quality: A 22K 916 Aad is designed to last for generations, often passed down from mother to daughter as a precious family legacy."
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12462,12 +12217,10 @@
     "name": "Chokar | चोकर",
     "category": "सोने के राजपूतानी आभूषण",
     "highlights": [
-      "भव्य 22K 916 HUID हॉलमार्क गोल्ड चोकर",
-      "शादियों और विशेष उत्सवों के लिए एक शानदार स्टेटमेंट नेकलेस"
+      "खानदानी विरासत: 22K 916 गोल्ड आड़ एक ऐसा कीमती तोहफा है, जिसे माएं अपनी बेटियों को विरासत के रूप में अगली पीढ़ियों को सौंपती हैं।"
     ],
     "englishHighlights": [
-      "Grand and heavy 22K 916 HUID hallmark gold Chokar (necklace)",
-      "a spectacular statement necklace for weddings and special festivals."
+      "Heirloom Quality: A 22K 916 Aad is designed to last for generations, often passed down from mother to daughter as a precious family legacy."
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12495,12 +12248,10 @@
     "name": "Chokar | चोकर",
     "category": "सोने के राजपूतानी आभूषण",
     "highlights": [
-      "भव्य 22K 916 HUID हॉलमार्क गोल्ड चोकर",
-      "शादियों और विशेष उत्सवों के लिए एक शानदार स्टेटमेंट नेकलेस"
+      "वजन और ठोसपन: एक पारंपरिक सोने की आड़ काफी भारी होती है, जिसका वजन आमतौर पर 50 से 150 ग्राम या उससे अधिक होता है, जो इसे परिवार की एक बड़ी संपत्ति बनाता है।"
     ],
     "englishHighlights": [
-      "Grand and heavy 22K 916 HUID hallmark gold Chokar (necklace)",
-      "a spectacular statement necklace for weddings and special festivals."
+      "Weight & Substance: A traditional gold Aad is a substantial piece, typically weighing between 50 to 150 grams or more, making it a significant store of family wealth."
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12528,12 +12279,10 @@
     "name": "Chokar | चोकर",
     "category": "सोने के राजपूतानी आभूषण",
     "highlights": [
-      "भव्य 22K 916 HUID हॉलमार्क गोल्ड चोकर",
-      "शादियों और विशेष उत्सवों के लिए एक शानदार स्टेटमेंट नेकलेस"
+      "वजन और ठोसपन: एक पारंपरिक सोने की आड़ काफी भारी होती है, जिसका वजन आमतौर पर 50 से 150 ग्राम या उससे अधिक होता है, जो इसे परिवार की एक बड़ी संपत्ति बनाता है।"
     ],
     "englishHighlights": [
-      "Grand and heavy 22K 916 HUID hallmark gold Chokar (necklace)",
-      "a spectacular statement necklace for weddings and special festivals."
+      "Weight & Substance: A traditional gold Aad is a substantial piece, typically weighing between 50 to 150 grams or more, making it a significant store of family wealth."
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12561,12 +12310,10 @@
     "name": "Chokar | चोकर",
     "category": "सोने के राजपूतानी आभूषण",
     "highlights": [
-      "भव्य 22K 916 HUID हॉलमार्क गोल्ड चोकर",
-      "शादियों और विशेष उत्सवों के लिए एक शानदार स्टेटमेंट नेकलेस"
+      "वजन और ठोसपन: एक पारंपरिक सोने की आड़ काफी भारी होती है, जिसका वजन आमतौर पर 50 से 150 ग्राम या उससे अधिक होता है, जो इसे परिवार की एक बड़ी संपत्ति बनाता है।"
     ],
     "englishHighlights": [
-      "Grand and heavy 22K 916 HUID hallmark gold Chokar (necklace)",
-      "a spectacular statement necklace for weddings and special festivals."
+      "Jadau & Kundan Work: Most 916 Aads feature Jadau (stone-setting) techniques where gemstones like rubies and emeralds are embedded into the gold with high precision."
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12594,12 +12341,10 @@
     "name": "Chokar | चोकर",
     "category": "सोने के राजपूतानी आभूषण",
     "highlights": [
-      "भव्य 22K 916 HUID हॉलमार्क गोल्ड चोकर",
-      "शादियों और विशेष उत्सवों के लिए एक शानदार स्टेटमेंट नेकलेस"
+      "जड़ाऊ और कुंदन: अधिकांश 916 आड़ में जड़ाऊ तकनीक का उपयोग किया जाता है, जिसमें रूबी, पन्ना जैसे रत्नों को सोने में बहुत ही बारीकी से सेट किया जाता है।"
     ],
     "englishHighlights": [
-      "Grand and heavy 22K 916 HUID hallmark gold Chokar (necklace)",
-      "a spectacular statement necklace for weddings and special festivals."
+      "Jadau & Kundan Work: Most 916 Aads feature Jadau (stone-setting) techniques where gemstones like rubies and emeralds are embedded into the gold with high precision."
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12627,12 +12372,10 @@
     "name": "Chokar | चोकर",
     "category": "सोने के राजपूतानी आभूषण",
     "highlights": [
-      "भव्य 22K 916 HUID हॉलमार्क गोल्ड चोकर",
-      "शादियों और विशेष उत्सवों के लिए एक शानदार स्टेटमेंट नेकलेस"
+      "जड़ाऊ और कुंदन: अधिकांश 916 आड़ में जड़ाऊ तकनीक का उपयोग किया जाता है, जिसमें रूबी, पन्ना जैसे रत्नों को सोने में बहुत ही बारीकी से सेट किया जाता है।"
     ],
     "englishHighlights": [
-      "Grand and heavy 22K 916 HUID hallmark gold Chokar (necklace)",
-      "a spectacular statement necklace for weddings and special festivals."
+      "HUID Digital Proof: The 6-digit HUID code is laser-etched on the back of the Aad, allowing you to verify the gold's purity through the BIS CARE app instantly."
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12660,12 +12403,10 @@
     "name": "Chokar | चोकर",
     "category": "सोने के राजपूतानी आभूषण",
     "highlights": [
-      "भव्य 22K 916 HUID हॉलमार्क गोल्ड चोकर",
-      "शादियों और विशेष उत्सवों के लिए एक शानदार स्टेटमेंट नेकलेस"
+      "HUID डिजिटल प्रमाण: आड़ के पीछे लेजर से खुदा हुआ 6-अंकीय HUID कोड होता है, जिसे आप BIS CARE ऐप के जरिए कभी भी सत्यापित (verify) कर सकते हैं।"
     ],
     "englishHighlights": [
-      "Grand and heavy 22K 916 HUID hallmark gold Chokar (necklace)",
-      "a spectacular statement necklace for weddings and special festivals."
+      "HUID Digital Proof: The 6-digit HUID code is laser-etched on the back of the Aad, allowing you to verify the gold's purity through the BIS CARE app instantly."
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12693,12 +12434,10 @@
     "name": "Chokar | चोकर",
     "category": "सोने के राजपूतानी आभूषण",
     "highlights": [
-      "भव्य 22K 916 HUID हॉलमार्क गोल्ड चोकर",
-      "शादियों और विशेष उत्सवों के लिए एक शानदार स्टेटमेंट नेकलेस"
+      "HUID डिजिटल प्रमाण: आड़ के पीछे लेजर से खुदा हुआ 6-अंकीय HUID कोड होता है, जिसे आप BIS CARE ऐप के जरिए कभी भी सत्यापित (verify) कर सकते हैं।"
     ],
     "englishHighlights": [
-      "Grand and heavy 22K 916 HUID hallmark gold Chokar (necklace)",
-      "a spectacular statement necklace for weddings and special festivals."
+      "Enameling (Meenakari): The reverse side of a high-quality Aad often features intricate Meenakari work, ensuring the piece looks beautiful from both sides."
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12726,12 +12465,10 @@
     "name": "Chokar | चोकर",
     "category": "सोने के राजपूतानी आभूषण",
     "highlights": [
-      "भव्य 22K 916 HUID हॉलमार्क गोल्ड चोकर",
-      "शादियों और विशेष उत्सवों के लिए एक शानदार स्टेटमेंट नेकलेस"
+      "मीनाकारी कला: उच्च गुणवत्ता वाली आड़ के पिछले हिस्से पर अक्सर बारीक मीनाकारी का काम होता है, जिससे यह आभूषण दोनों तरफ से सुंदर दिखता है।"
     ],
     "englishHighlights": [
-      "Grand and heavy 22K 916 HUID hallmark gold Chokar (necklace)",
-      "a spectacular statement necklace for weddings and special festivals."
+      "Enameling (Meenakari): The reverse side of a high-quality Aad often features intricate Meenakari work, ensuring the piece looks beautiful from both sides."
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12759,12 +12496,10 @@
     "name": "Chokar | चोकर",
     "category": "सोने के राजपूतानी आभूषण",
     "highlights": [
-      "भव्य 22K 916 HUID हॉलमार्क गोल्ड चोकर",
-      "शादियों और विशेष उत्सवों के लिए एक शानदार स्टेटमेंट नेकलेस"
+      "मीनाकारी कला: उच्च गुणवत्ता वाली आड़ के पिछले हिस्से पर अक्सर बारीक मीनाकारी का काम होता है, जिससे यह आभूषण दोनों तरफ से सुंदर दिखता है।"
     ],
     "englishHighlights": [
-      "Grand and heavy 22K 916 HUID hallmark gold Chokar (necklace)",
-      "a spectacular statement necklace for weddings and special festivals."
+      "Curvature Design: The \"choker\" block is specifically curved to hug the contours of the neck, providing a comfortable yet commanding \"queen-like\" fit."
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12792,12 +12527,10 @@
     "name": "Chokar | चोकर",
     "category": "सोने के राजपूतानी आभूषण",
     "highlights": [
-      "भव्य 22K 916 HUID हॉलमार्क गोल्ड चोकर",
-      "शादियों और विशेष उत्सवों के लिए एक शानदार स्टेटमेंट नेकलेस"
+      "विशेष बनावट: आड़ का मुख्य ब्लॉक गले की बनावट के अनुसार थोड़ा घुमावदार (curved) बनाया जाता है, ताकि यह पहनने पर आरामदायक और राजसी दिखे।"
     ],
     "englishHighlights": [
-      "Grand and heavy 22K 916 HUID hallmark gold Chokar (necklace)",
-      "a spectacular statement necklace for weddings and special festivals."
+      "Curvature Design: The \"choker\" block is specifically curved to hug the contours of the neck, providing a comfortable yet commanding \"queen-like\" fit."
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12825,12 +12558,10 @@
     "name": "Chokar | चोकर",
     "category": "सोने के राजपूतानी आभूषण",
     "highlights": [
-      "भव्य 22K 916 HUID हॉलमार्क गोल्ड चोकर",
-      "शादियों और विशेष उत्सवों के लिए एक शानदार स्टेटमेंट नेकलेस"
+      "विशेष बनावट: आड़ का मुख्य ब्लॉक गले की बनावट के अनुसार थोड़ा घुमावदार (curved) बनाया जाता है, ताकि यह पहनने पर आरामदायक और राजसी दिखे।"
     ],
     "englishHighlights": [
-      "Grand and heavy 22K 916 HUID hallmark gold Chokar (necklace)",
-      "a spectacular statement necklace for weddings and special festivals."
+      "Cultural Anchor: In Rajasthani culture, the Aad is considered a Suhag Chinha (symbol of marriage), often more significant than the Mangalsutra in royal families."
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12858,12 +12589,10 @@
     "name": "Chokar | चोकर",
     "category": "सोने के राजपूतानी आभूषण",
     "highlights": [
-      "भव्य 22K 916 HUID हॉलमार्क गोल्ड चोकर",
-      "शादियों और विशेष उत्सवों के लिए एक शानदार स्टेटमेंट नेकलेस"
+      "सांस्कृतिक आधार: राजस्थानी संस्कृति में आड़ को सुहाग का प्रतीक माना जाता है, और राज परिवारों में इसका महत्व मंगलसूत्र से भी अधिक होता है।"
     ],
     "englishHighlights": [
-      "Grand and heavy 22K 916 HUID hallmark gold Chokar (necklace)",
-      "a spectacular statement necklace for weddings and special festivals."
+      "Cultural Anchor: In Rajasthani culture, the Aad is considered a Suhag Chinha (symbol of marriage), often more significant than the Mangalsutra in royal families."
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12891,12 +12620,10 @@
     "name": "Chokar | चोकर",
     "category": "सोने के राजपूतानी आभूषण",
     "highlights": [
-      "भव्य 22K 916 HUID हॉलमार्क गोल्ड चोकर",
-      "शादियों और विशेष उत्सवों के लिए एक शानदार स्टेटमेंट नेकलेस"
+      "सांस्कृतिक आधार: राजस्थानी संस्कृति में आड़ को सुहाग का प्रतीक माना जाता है, और राज परिवारों में इसका महत्व मंगलसूत्र से भी अधिक होता है।"
     ],
     "englishHighlights": [
-      "Grand and heavy 22K 916 HUID hallmark gold Chokar (necklace)",
-      "a spectacular statement necklace for weddings and special festivals."
+      "Handcrafted Finish: Unlike machine-made chains, every Aad is unique as it is handcrafted by master \"Soni\" (goldsmith) communities of Jaipur or Jodhpur."
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12924,12 +12651,10 @@
     "name": "Chokar | चोकर",
     "category": "सोने के राजपूतानी आभूषण",
     "highlights": [
-      "भव्य 22K 916 HUID हॉलमार्क गोल्ड चोकर",
-      "शादियों और विशेष उत्सवों के लिए एक शानदार स्टेटमेंट नेकलेस"
+      "हाथों की कारीगरी: मशीनी चेनों के विपरीत, हर आड़ को जयपुर या जोधपुर के कुशल सोनी कारीगरों द्वारा हाथों से बनाया जाता है, जिससे हर पीस अनूठा होता है।"
     ],
     "englishHighlights": [
-      "Grand and heavy 22K 916 HUID hallmark gold Chokar (necklace)",
-      "a spectacular statement necklace for weddings and special festivals."
+      "Handcrafted Finish: Unlike machine-made chains, every Aad is unique as it is handcrafted by master \"Soni\" (goldsmith) communities of Jaipur or Jodhpur."
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12957,12 +12682,10 @@
     "name": "Chokar | चोकर",
     "category": "सोने के राजपूतानी आभूषण",
     "highlights": [
-      "भव्य 22K 916 HUID हॉलमार्क गोल्ड चोकर",
-      "शादियों और विशेष उत्सवों के लिए एक शानदार स्टेटमेंट नेकलेस"
+      "हाथों की कारीगरी: मशीनी चेनों के विपरीत, हर आड़ को जयपुर या जोधपुर के कुशल सोनी कारीगरों द्वारा हाथों से बनाया जाता है, जिससे हर पीस अनूठा होता है।"
     ],
     "englishHighlights": [
-      "Grand and heavy 22K 916 HUID hallmark gold Chokar (necklace)",
-      "a spectacular statement necklace for weddings and special festivals."
+      "Resale Security: Because it is 916 Hallmarked, you receive the maximum exchange value based on current gold rates, with no disputes over purity."
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -12990,12 +12713,10 @@
     "name": "Chokar | चोकर",
     "category": "सोने के राजपूतानी आभूषण",
     "highlights": [
-      "भव्य 22K 916 HUID हॉलमार्क गोल्ड चोकर",
-      "शादियों और विशेष उत्सवों के लिए एक शानदार स्टेटमेंट नेकलेस"
+      "पुनर्विक्रय सुरक्षा: 916 हॉलमार्क होने के कारण, आपको बाजार भाव के अनुसार पूरा एक्सचेंज मूल्य मिलता है और शुद्धता को लेकर कोई विवाद नहीं होता।"
     ],
     "englishHighlights": [
-      "Grand and heavy 22K 916 HUID hallmark gold Chokar (necklace)",
-      "a spectacular statement necklace for weddings and special festivals."
+      "Resale Security: Because it is 916 Hallmarked, you receive the maximum exchange value based on current gold rates, with no disputes over purity."
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -13023,12 +12744,10 @@
     "name": "Chokar | चोकर",
     "category": "सोने के राजपूतानी आभूषण",
     "highlights": [
-      "भव्य 22K 916 HUID हॉलमार्क गोल्ड चोकर",
-      "शादियों और विशेष उत्सवों के लिए एक शानदार स्टेटमेंट नेकलेस"
+      "पुनर्विक्रय सुरक्षा: 916 हॉलमार्क होने के कारण, आपको बाजार भाव के अनुसार पूरा एक्सचेंज मूल्य मिलता है और शुद्धता को लेकर कोई विवाद नहीं होता।"
     ],
     "englishHighlights": [
-      "Grand and heavy 22K 916 HUID hallmark gold Chokar (necklace)",
-      "a spectacular statement necklace for weddings and special festivals."
+      "Adaptability: Modern 22K Aads are now being made with detachable \"latkans\" (danglers), allowing the wearer to use it as a simpler choker for less formal events."
     ],
     "description": "Grand and heavy 22K 916 HUID hallmark gold necklace (Haar), a spectacular statement piece for weddings and special occasions.",
     "keywords": "gold haar, heavy necklace, 22k gold, bridal jewelry, wedding necklace",
@@ -15001,7 +14720,7 @@
     "weight": 10.25,
     "purity": "gold22K",
     "images": [
-      "IMG-20251210-WA0124jpg"
+      "IMG-20251210-WA0124.webp"
     ],
     "available": false,
     "newArrival": false,
@@ -18993,7 +18712,7 @@
     "weight": 10.05,
     "purity": "gold22K",
     "images": [
-      "IMG-20251210-WA0222,jpg"
+      "IMG-20251210-WA0222.webp"
     ],
     "available": false,
     "newArrival": false,
@@ -19410,8 +19129,8 @@
     "englishHighlights": [
       "Whether it’s a wedding or a grand festival like Teej or Gangaur, this Aad adds unmatched elegance to your attire."
     ],
-    "description": "",
-    "keywords": "",
+    "description": "Celebrate timeless tradition with this regal gold bajuband, adorned with red and white gemstones and intricate floral engravings. A perfect blend of royal charm and cultural elegance for festive and bridal wear.",
+    "keywords": "Traditional gold bajuband,, Indian armlet jewelry",
     "for": "her",
     "type": [
       "Wedding",
@@ -19441,8 +19160,8 @@
     "englishHighlights": [
       "Whether it’s a wedding or a grand festival like Teej or Gangaur, this Aad adds unmatched elegance to your attire."
     ],
-    "description": "",
-    "keywords": "",
+    "description": "This artisan-crafted bajuband showcases masterful gold detailing, velvet accents, and vibrant stones. Ideal for weddings, classical dance, or temple ceremonies, it’s a tribute to India’s rich jewelry heritage.",
+    "keywords": "Bridal bajuband design, Gold bajuband with gemstones",
     "for": "her",
     "type": [
       "Wedding",
@@ -19472,8 +19191,8 @@
     "englishHighlights": [
       "More than just jewelry, this 22K gold Aad is a valuable family heirloom that can be passed down for generations."
     ],
-    "description": "",
-    "keywords": "",
+    "description": "Make a bold statement with this traditional bajuband featuring ornate goldwork and gemstone embellishments. Designed to elevate ethnic outfits with a touch of ceremonial grandeur.",
+    "keywords": "Ethnic Indian jewelry,, Bajuband for wedding",
     "for": "her",
     "type": [
       "Wedding",
@@ -19503,8 +19222,8 @@
     "englishHighlights": [
       "More than just jewelry, this 22K gold Aad is a valuable family heirloom that can be passed down for generations."
     ],
-    "description": "",
-    "keywords": "",
+    "description": "Designed for special occasions, this gold bajuband sparkles with red and white stones and luxurious velvet trim. A must-have accessory for brides, performers, and lovers of classic Indian style.",
+    "keywords": "Handcrafted gold armlet,, Red and white stone bajuband",
     "for": "her",
     "type": [
       "Wedding",
@@ -19534,8 +19253,8 @@
     "englishHighlights": [
       "More than just jewelry, this 22K gold Aad is a valuable family heirloom that can be passed down for generations."
     ],
-    "description": "",
-    "keywords": "",
+    "description": "This handcrafted traditional Indian gold bajuband features intricate floral engravings, vibrant red and white gemstones, and rich velvet accents. Perfect for weddings, festivals, and cultural ceremonies, it blends heritage artistry with luxurious elegance.",
+    "keywords": "Velvet bordered bajuband,, South Asian ceremonial jewelry",
     "for": "her",
     "type": [
       "Wedding",

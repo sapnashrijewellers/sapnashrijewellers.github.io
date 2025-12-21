@@ -16,7 +16,7 @@ import ProductRating from "@/components/product/ProductRating";
 import WishListBar from "@/components/product/WishlistBar";
 import ProductRatingInput from "@/components/product/ProductRatingInput";
 import ProductJsonLd from "@/components/product/ProductJsonLd";
-import {buildProductJsonLd} from "@/utils/buildProductJsonLd"
+import { buildProductJsonLd } from "@/utils/buildProductJsonLd"
 
 const baseURL = process.env.BASE_URL;
 const driveURL = `${baseURL}/img/products/optimized/`;
@@ -83,10 +83,10 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
   const baseProductUrl = `${baseURL}/product/${product.slug}`;
 
   const productJsonLd = buildProductJsonLd(
-  product,
-  imageUrl,
-  baseProductUrl
-);
+    product,
+    imageUrl,
+    baseProductUrl
+  );
 
   const newArrivals = products
     .filter(p => p.active && p.newArrival)
@@ -96,8 +96,21 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
     .filter(p => p.active && product.type.some(t => p.type.includes(t)) && p.for === product.for && !p.newArrival)
     .sort((a, b) => Number(b.available) - Number(a.available))
     .slice(0, 15);
-  
+
   const category = categories.find(c => c.name === product.category);
+
+  function formatPurity(purity: string) {
+  switch (purity.toLowerCase()) {
+    case "silver":
+      return "Silver 99.9%";
+    case "gold24k":
+      return "Gold 24K";
+    case "gold22k":
+      return "Gold 22K";
+    default:
+      return purity; // fallback in case new purity is added
+  }
+}
   return (
     <div>
       <Breadcrumb
@@ -157,11 +170,30 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
             {product.description}
           </p>
 
-          {/* Key Specs */}
-          <div className="text-sm space-y-1">
-            <p><span className="font-medium">Purity:</span> {product.purity}</p>
-            <p><span className="font-medium">Weight:</span> {product.weight} g</p>
+          {/* Key Specs + Hallmark */}
+          <div className="flex items-center justify-between mt-3 mb-3">
+            {/* Left: Key Specs */}
+            <div className="text-sm space-y-1">
+              <p>
+                <span className="font-medium">Purity:</span> {formatPurity(product.purity)}
+              </p>
+              <p><span className="font-medium">Weight:</span> {product.weight} g</p>
+            </div>
+
+            {/* Right: Hallmark Certification */}
+            {product.purity.toLowerCase().startsWith("gold") && product.weight > 2 && (
+              <div className="flex flex-col items-center" title="100% Hallmark certified!!">
+                <Image
+                  src={`${baseURL}/static/img/hallmark.png`}
+                  height={60}
+                  width={60}
+                  alt="Hallmark certification"
+                />
+                <span className="text-xs mt-1">Hallmark Certified</span>
+              </div>
+            )}
           </div>
+
 
           {/* Primary Actions */}
           <div className="space-y-3 pt-2">

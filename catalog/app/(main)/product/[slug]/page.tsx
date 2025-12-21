@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import type { Product } from "@/types/catalog";
 import products from "@/data/products.json";
-import ProductCard from "@/components/product/ProductCard";
 import categories from "@/data/categories.json";
 import { notFound } from "next/navigation";
 import ProductShare from "@/components/product/ProductShare";
@@ -16,7 +15,10 @@ import ProductRating from "@/components/product/ProductRating";
 import WishListBar from "@/components/product/WishlistBar";
 import ProductRatingInput from "@/components/product/ProductRatingInput";
 import ProductJsonLd from "@/components/product/ProductJsonLd";
-import { buildProductJsonLd } from "@/utils/buildProductJsonLd"
+import { buildProductJsonLd } from "@/utils/buildProductJsonLd";
+import formatPurity from "@/utils/utils.js";
+import NewArrivals from "@/components/product/NewArrivals";
+import YouMAyAlsoLike from "@/components/product/YouMayAlsoLike";
 
 const baseURL = process.env.BASE_URL;
 const driveURL = `${baseURL}/img/products/optimized/`;
@@ -88,29 +90,11 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
     baseProductUrl
   );
 
-  const newArrivals = products
-    .filter(p => p.active && p.newArrival)
-    .sort((a, b) => Number(b.available) - Number(a.available))
-    .slice(0.15);
-  const youMayLike = products
-    .filter(p => p.active && product.type.some(t => p.type.includes(t)) && p.for === product.for && !p.newArrival)
-    .sort((a, b) => Number(b.available) - Number(a.available))
-    .slice(0, 15);
+
+
 
   const category = categories.find(c => c.name === product.category);
 
-  function formatPurity(purity: string) {
-  switch (purity.toLowerCase()) {
-    case "silver":
-      return "Silver 99.9%";
-    case "gold24k":
-      return "Gold 24K";
-    case "gold22k":
-      return "Gold 22K";
-    default:
-      return purity; // fallback in case new purity is added
-  }
-}
   return (
     <div>
       <Breadcrumb
@@ -182,14 +166,14 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 
             {/* Right: Hallmark Certification */}
             {product.purity.toLowerCase().startsWith("gold") && product.weight > 2 && (
-              <div className="flex flex-col items-center" title="100% Hallmark certified!!">
+              <div className="flex flex-col items-center w-30" title="100% Hallmark certified!!">
                 <Image
                   src={`${baseURL}/static/img/hallmark.png`}
                   height={60}
                   width={60}
-                  alt="Hallmark certification"
+                  alt="BIS Hallmark"
                 />
-                <span className="text-xs mt-1">Hallmark Certified</span>
+                <span className="text-xs mt-1 text-center">BIS Hallmark Certified</span>
               </div>
             )}
           </div>
@@ -205,29 +189,8 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
           <HighlightsTabs product={product} />
         </div>
       </div>
-      {newArrivals.length > 0 ? (
-        <div className="relative">
-          <h2 className="text-2xl p-2">New Arrivals</h2>
-          <div className=" flex gap-4 overflow-x-auto scrollbar-hide pb-2 snap-x snap-mandatory">
-            {newArrivals.map((p: Product) => (
-              <div key={p.id} className="flex-shrink-0 w-[160px] sm:w-[200px] lg:w-[220px] snap-start">
-                <ProductCard product={p} />
-              </div>
-            ))}
-          </div>
-        </div>) : <div></div>}
-
-      {youMayLike.length > 0 ? (
-        <div className="relative">
-          <h2 className="text-2xl p-2">You May Also Like</h2>
-          <div className=" flex gap-4 overflow-x-auto scrollbar-hide pb-2 snap-x snap-mandatory">
-            {youMayLike.map((p: Product) => (
-              <div key={p.id} className="flex-shrink-0 w-[160px] sm:w-[200px] lg:w-[220px] snap-start">
-                <ProductCard product={p} />
-              </div>
-            ))}
-          </div>
-        </div>) : <div></div>}
+      <NewArrivals products={products} />
+      <YouMAyAlsoLike product={product} products={products} />
 
       <WishListBar />
 

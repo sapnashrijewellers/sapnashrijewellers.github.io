@@ -2,6 +2,7 @@
 import { writeFile } from 'fs/promises';
 // 'path' is used for creating clean, platform-independent file paths
 import path from 'path';
+import buildSearchIndex from "./buildSearchIndex.js"
 
 const DtaFolder = "../catalog/data/"
 // The URL of your Google Apps Script Web App
@@ -53,13 +54,10 @@ async function fetchAndSaveData() {
                 && p.slug.length > 4
             );
         }
-
-        // Convert the JavaScript object/array into a nicely formatted JSON string
-        // The third argument (2) specifies 2 spaces for indentation (pretty print)
         const jsonString = JSON.stringify(data, null, 2);
 
         try {
-            // 4. Write the JSON string to a file using fs/promises.writeFile
+
             await writeFile(fileName, jsonString);
             console.log(`✅ Saved data for key: ${key} -> ${fileName}`);
             successCount++;
@@ -72,5 +70,5 @@ async function fetchAndSaveData() {
     console.log(`Total files created: ${successCount} / ${keys.length}`);
 }
 
-// Execute the main function
-fetchAndSaveData();
+await fetchAndSaveData();
+await buildSearchIndex();

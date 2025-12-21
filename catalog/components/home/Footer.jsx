@@ -63,7 +63,7 @@ export default function Footer() {
         {/* Social Media */}
         <div>
           <h2 className="flex items-center gap-2 text-lg mt-4 font-cinzel">
-            🔗 Follow Us
+            🔗 Be Part of Our Inner Circle
           </h2>
 
           <div className="flex gap-4 mt-2 text-xl sm:text-2xl md:text-3xl text-muted-foreground">

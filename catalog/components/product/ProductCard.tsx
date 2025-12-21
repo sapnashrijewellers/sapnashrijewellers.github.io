@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Product } from "@/types/catalog";
 import WishlistButton from "@/components/common/WishlistButton";
 import ProductRating from "@/components/product/ProductRating";
+import formatPurity from "@/utils/utils.js"
 
 export default function ProductCard({ product }: { product: Product }) {
   const baseURL = process.env.BASE_URL;
@@ -69,7 +70,7 @@ export default function ProductCard({ product }: { product: Product }) {
           </div>
         )}
         <div className="flex justify-between text-xs mt-1">
-          <span>{product.purity}</span>
+          <span>{formatPurity(product.purity)}</span>
           <span>{product.weight} gm</span>
         </div>
       </div>

@@ -52,7 +52,7 @@ export default function ResponsiveNavbar() {
                 title={item.title}
                 aria-current={active ? "page" : undefined}
                 className={`flex flex-col items-center gap-1 transition
-          ${active ? "text-highlight" : "text-primary"}
+          ${active ? "text-primary-dark" : "text-primary"}
           ${mobile ? "active:scale-95" : "group-hover:scale-110"}`}
             >
                 {item.icon}
@@ -82,7 +82,7 @@ export default function ResponsiveNavbar() {
       aria-current={active ? "page" : undefined}
       onClick={() => setOpen(false)}
       className={`flex flex-col items-center gap-1 transition active:scale-95
-        ${active ? "text-highlight" : "text-primary"}`}
+        ${active ? "text-primary-dark" : "text-primary"}`}
     >
       {item.icon}
       <span className="text-[11px]">{item.label}</span>

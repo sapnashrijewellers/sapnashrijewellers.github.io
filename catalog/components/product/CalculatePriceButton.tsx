@@ -11,9 +11,9 @@ const CalculatePrice = ({ product }: { product: Product }) => {
     >
       <Calculator className="text-4xl" />
       <div className="flex flex-col leading-tight">
-        <span className="font-semibold text-black text-lg">Calculate Price</span>
+        <span className="font-semibold text-black text-lg">Estimate Price</span>
         <span className="text-black font-medium text-sm -mt-0.5">
-          Click To Get Final Price
+          Get Price Estimate
         </span>
       </div>
     </a>

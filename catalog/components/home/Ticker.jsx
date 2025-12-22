@@ -9,7 +9,7 @@ export default function Ticker() {
   return (
     <div className="relative w-full bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-primary-dark)] text-white py-2 overflow-hidden shadow-md">
   <div className="flex items-center gap-3 px-4">
-    <FaBullhorn className="text-highlight text-2xl animate-pulse flex-shrink-0" />
+    <FaBullhorn className="text-2xl animate-pulse flex-shrink-0" />
 
     <div className="ticker-container w-full overflow-hidden relative">
       <div className="ticker-content">

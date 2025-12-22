@@ -19,7 +19,9 @@
   --color-surface: #FFFDF9;
   --color-border: #051e45;
   --color-accent: #051e45;
-  --color-highlight: #A855F7;
+  --color-accent-bg: #0a2a66;   /* richer royal blue */
+  --color-accent-text: #f6ecd2; /* warm ivory-gold */
+  
   --font-playfair: 'Playfair Display', serif;
   --font-cormorant: 'Cormorant Garamond', serif;
   --font-cinzel: 'Cinzel', serif;
@@ -33,16 +35,26 @@
 /* Dark theme (auto applied using system preference) */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: #121212;
-    --color-text: rgba(255, 255, 255, 0.87);
-    --color-primary: #FFD700;
-    --color-primary-dark: #FFB300;
-    --color-surface: #1e1e1e;
-    --color-border: #3f3f3f;
-    --color-accent: #2a2a2a;
+    /* Core surfaces */
+    --color-bg: #000000;              /* True black */
+    --color-surface: #0b0b0b;         /* Slight elevation */
+    --color-border: #1f1f1f;          /* Subtle separators */
+
+    /* Text */
+    --color-text: rgba(255, 255, 255, 0.92);
+    
+    /* Brand / gold accents (muted, premium) */
+    --color-primary: #c9a24d;         /* Soft antique gold */
+    --color-primary-dark: #9f7c2f;    /* Pressed / hover state */
+
+    /* Accents */
+    --color-accent: #1a1a1a;          /* Chips, hover bg */
+
+    --color-accent-bg: #1a1a1a;
+    --color-accent-text: var(--color-primary);
+    
   }
 }
-
 @layer utilities {
   .font-playfair {
     /* font-family: var(--font-playfair); */
@@ -90,9 +102,7 @@
   .ssj-btn:active {
     transform: scale(0.95);
   }
-  .inputClasses {
-    /* @apply w-full rounded-lg px-3 py-2;  */
-    /* background-color: var(--color-surface); */
+  .inputClasses {    
     color: var(--color-text);
     border-color: var(--color-border);
     width:100%
@@ -169,8 +179,8 @@ h3 {
 }
 
 .bg-accent {
-  background-color: var(--color-accent);
-  color: var(--color-surface)
+  background-color: var(--color-accent-bg);
+  color: var(--color-accent-text);
 }
 
 .border-theme {
@@ -188,9 +198,7 @@ h3 {
 .text-primary {
   color: var(--color-primary);
 }
-.text-highlight{
-  color:var(--color-primary-dak);
-}
+
 .text-surface{
   color:var(--color-surface);
 }
@@ -240,3 +248,24 @@ h3 {
 }
 
 /*Ticker*/
+
+/* Testimonials */
+.testimonial-track-auto {
+  animation: testimonial-track-scroll 18s linear infinite;
+}
+
+@keyframes testimonial-track-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-40%);
+  }
+}
+
+/* Pause when user interacts */
+.testimonial-track-auto:hover {
+  animation-play-state: paused;
+}
+
+/* Testimonials */

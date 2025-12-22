@@ -26,7 +26,7 @@ export default function SocialAuthMenu({ onAction, mobile }: Props) {
   const baseClasses = `
     flex flex-col items-center gap-1 transition
     text-primary dark:text-primary-dark
-    hover:text-highlight active:scale-95
+    hover:text-primary-dark active:scale-95
   `;
 
   /* ================= LOGGED IN ================= */

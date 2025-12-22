@@ -31,7 +31,7 @@ const ldjson = {
   },
   "mainEntity": {
     "@type": "ComputeAction",
-    "name": "Jewellery Price Calculator",
+    "name": "Estimate Jewellery Price",
     "target": {
       "@type": "EntryPoint",
       "urlTemplate": `${baseURL}/calculator`
@@ -84,7 +84,7 @@ export default async function CalculatorPage() {
       />
 
       <h1 className="text-2xl mb-6 text-primary-dark font-cinzel ">
-        Jewellery Price Calculator
+        Estimate Jewellery Price
       </h1>
 
       <Suspense fallback={<CalculatorSkeleton />}>

@@ -5,6 +5,7 @@ import JewelleryTypeBar from "@/components/home/JewelleryType"
 import type { Product } from "@/types/catalog";
 import products from "@/data/products.json";
 import ProductCard from "@/components/product/ProductCard";
+import TestimonialScroller from "@/components/common/Testimonials"
 
 const title = `Sapna Shri Jewellers`;
 const description = `Explore out latest products at Sapna Shri Jewellers Nagda. High-quality gold & silver jewellery with BIS 916 certification.`;
@@ -51,13 +52,13 @@ export default function Home() {
         <RotatingBanner />
       </div>
       <div>
-        <h2 className="text-2xl p-2">Jewellery for Every Occasion</h2>
+        <h2 className="au-h2">Jewellery for Every Occasion</h2>
         <JewelleryTypeBar />
       </div>
       <div>
         {newArrivals.length > 0 ? (
           <div className="relative">
-            <h2 className="text-2xl p-2">New Arrivals</h2>
+            <h2 className="au-h2">New Arrivals</h2>
             <div className=" flex gap-4 overflow-x-auto scrollbar-hide pb-2 snap-x snap-mandatory">
               {newArrivals.map((p: Product) => (
                 <div key={p.id} className="flex-shrink-0 w-[160px] sm:w-[200px] lg:w-[220px] snap-start">
@@ -67,8 +68,9 @@ export default function Home() {
             </div>
           </div>) : <div></div>}
       </div>
+      <TestimonialScroller />
       <div>
-        <h2 className="text-2xl p-2">Our Signature Collections</h2>
+        <h2 className="au-h2">Our Signature Collections</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
 
           {categories

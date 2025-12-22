@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
 import { Product } from "@/types/catalog";
 
@@ -27,7 +26,7 @@ const WhatsappClick = ({ product }: { product: Product }) => {
       <div className="flex flex-col leading-tight">
         <span className="font-semibold text-black text-lg">WhatsApp</span>
         <span className="text-green-600 font-medium text-sm -mt-0.5">
-          Click To Chat
+          Click to get discounts & offers
         </span>
       </div>
     </a>

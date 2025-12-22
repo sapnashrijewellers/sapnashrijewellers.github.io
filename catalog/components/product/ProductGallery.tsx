@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { Product } from "@/types/catalog";
+import WishlistButton from "@/components/common/WishlistButton";
 
 export default function ProductGallery({ product }: { product: Product }) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -58,14 +59,14 @@ export default function ProductGallery({ product }: { product: Product }) {
   }, [activeImage]);
 
   return (
-    <div className="w-full space-y-4">
+    <div className="aspect-square  rounded-lg  w-full space-y-4 relative">
       {/* Main Image */}
       <div
         ref={containerRef}
         onMouseMove={!isTouch ? handleMouseMove : undefined}
         onMouseLeave={!isTouch ? resetZoom : undefined}
         onClick={isTouch ? () => setMobileZoomOpen(true) : undefined}
-        className="relative h-[260px] sm:h-[340px] md:h-[380px] rounded-2xl overflow-hidden border bg-white cursor-zoom-in"
+        className="relative h-[260px] sm:h-[340px] md:h-[380px] rounded-2xl overflow-hidden bg-surface cursor-zoom-in"
         style={{
           backgroundImage: zoomStyle.backgroundPosition
             ? `url(${process.env.BASE_URL}/static/img/products/optimized/${activeImage})`
@@ -85,6 +86,8 @@ export default function ProductGallery({ product }: { product: Product }) {
             alt={product.name}
             fill
             priority
+            fetchPriority="high"
+            sizes="(max-width: 768px) 100vw, 50vw"
             className="object-contain"
           />
         )}
@@ -103,8 +106,8 @@ export default function ProductGallery({ product }: { product: Product }) {
           <button
             key={i}
             onClick={() => setActiveIndex(i)}
-            className={`relative h-16 w-16 sm:h-18 sm:w-18 md:h-20 md:w-20 flex-shrink-0 rounded-lg border overflow-hidden transition
-              ${i === activeIndex ? "ring-2 ring-accent" : "opacity-70 hover:opacity-100"}`}
+            className={`relative h-16 w-16 sm:h-18 sm:w-18 md:h-20 md:w-20 flex-shrink-0 bg-surface overflow-hidden transition
+              ${i === activeIndex ? "ring-2 ring-accent" : ""}`}
           >
             <Image
               src={`${process.env.BASE_URL}/static/img/products/optimized/${img}`}
@@ -143,6 +146,11 @@ export default function ProductGallery({ product }: { product: Product }) {
           </div>
         </div>
       )}
+
+      {/* ❤️ Wishlist — overlay */}
+          <div className="absolute top-3 right-3 z-10">
+            <WishlistButton slug={product.slug} />
+          </div>
     </div>
   );
 }

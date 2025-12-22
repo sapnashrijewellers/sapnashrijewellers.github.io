@@ -2,7 +2,7 @@ type Props = {
   json: object;
 };
 
-export default function ProductJsonLd({ json }: Props) {
+export default function JsonLd({ json }: Props) {
   return (
     <script
       type="application/ld+json"

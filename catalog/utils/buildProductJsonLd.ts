@@ -1,10 +1,13 @@
 import type { Product } from "@/types/catalog";
 
-export function buildProductJsonLd(
-  product: Product,
-  imageUrl: string,
-  baseProductUrl: string
+export default function buildProductJsonLd(
+  product: Product  
 ) {
+  const baseURL = process.env.BASE_URL;
+  const driveURL = `${baseURL}/img/products/optimized/`;
+  const imageUrl = `${driveURL}${product.images?.[0]}`;
+  const baseProductUrl = `${baseURL}/product/${product.slug}`;
+
   return {
     "@context": "https://schema.org",
     "@type": "Product",

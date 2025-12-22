@@ -11,7 +11,6 @@ export default function JewelryTypeClient(
 ) {
     const [filters, setFilters] = useState<SearchFilters>({});
     const [sortBy, setSortBy] = useState("best-match");
-
     const visibleProducts = useMemo(() => {
         let items = [...products];
 
@@ -31,6 +30,7 @@ export default function JewelryTypeClient(
             && p.name.length > 4);
         return items;
     }, [products, filters, sortBy]);
+    
 
     return (
         <>

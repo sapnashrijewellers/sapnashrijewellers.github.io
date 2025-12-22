@@ -5,19 +5,18 @@ import categories from "@/data/categories.json";
 import ProductCard from "@/components/product/ProductCard";
 import { notFound } from "next/navigation";
 import Breadcrumb from "@/components/navbar/BreadcrumbItem";
+import { buildCategoryPageJsonLd } from "@/utils/buildCategoryPageJsonLd";
+import JsonLd from "@/components/common/JsonLd";
 
 
 const baseURL = process.env.BASE_URL;
-const driveURL = `${baseURL}/static/img/products/thumbnail/`;
+const driveURL = `${baseURL}/static/img/products/optimized/`;
 
-
-let ldjson = {};
 export async function generateStaticParams() {
     return categories.filter(c => c.active).map((cat: Category) => ({
         slug: cat.slug,
     }));
 }
-
 
 // ---- METADATA ----
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -42,20 +41,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
             : `${baseURL}/logo.png`;
 
     const keywords = category.keywords;
-
-    ldjson = {
-        "@context": "https://schema.org",
-        "@type": "CollectionPage",
-        name: `${category.name} | ${category.englishName} `,
-        description,
-        url: `${baseURL}/category/${slug}`,
-        mainEntity: filtered.map((p: Product) => ({
-            "@type": "Product",
-            name: p.name,
-            image: `${driveURL}${p.images[0]}`,
-            url: `${baseURL}/product/${p.slug}}`,
-        })),
-    };
 
     return {
         title,
@@ -86,31 +71,25 @@ export default async function CategoryPage({ params }: { params: { slug: string 
         (cat: Category) => cat.slug === slug && cat.active
     );
 
-    
     if (!category) notFound();
 
     const filtered = products.filter((p: Product) => p.category === category.name && p.active)
-        .sort((a: Product, b: Product) => {
-            // If 'a' is available and 'b' is not, 'a' comes first (negative number)
+        .sort((a: Product, b: Product) => {            
             if (a.available && !b.available) {
                 return -1;
-            }
-            // If 'b' is available and 'a' is not, 'b' comes first (positive number)
+            }            
             if (!a.available && b.available) {
                 return 1;
-            }
-            // Otherwise, maintain relative order or treat them as equal
+            }            
             return 0;
         });
+    const JsonLdObj = buildCategoryPageJsonLd(filtered, category);
 
     return (
         <div className="container mx-auto">
             <Breadcrumb items={[{ name: "Home", href: "/" }, { name: category.name }]} />
             {/* ✅ JSON-LD Structured Data */}
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(ldjson) }}
-            />
+            <JsonLd json={JsonLdObj} />
             <div className="pl-4 border-l-4 border-primary/70 mb-4">
                 <h1 className="text-2xl md:text-3xl font-yatra font-bold text-primary-dark">
                     {category.name} | {category.englishName}

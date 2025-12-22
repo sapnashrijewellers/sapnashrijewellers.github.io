@@ -5,9 +5,11 @@ import products from "@/data/products.json";
 import types from "@/data/types.json";
 import Breadcrumb from "@/components/navbar/BreadcrumbItem";
 import JewelryTypeClient from "./JewelryTypeClient";
+import { buildJewelryTypePageJsonLd } from "@/utils/buildJewelryTypePageJsonLd";
+import JsonLd from "@/components/common/JsonLd";
 
 const baseURL = process.env.BASE_URL!;
-const driveURL = `${baseURL}/static/img/products/thumbnail/`;
+
 
 export async function generateStaticParams() {
   return types.filter(t => t.active).map(t => ({
@@ -51,20 +53,11 @@ export default async  function JewelryTypePage(
     .sort((a, b) =>
       Number(b.available) - Number(a.available)
     );
-
-  const ldjson = {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    name: `${t.type} by Sapna Shri Jewellers`,
-    description: t.description,
-    url: `${baseURL}/jewelry-type/${params.slug}`,
-    mainEntity: baseProducts.map(p => ({
-      "@type": "Product",
-      name: p.name,
-      image: `${driveURL}${p.images[0]}`,
-      url: `${baseURL}/product/${p.slug}`,
-    })),
-  };
+ 
+  const JsonLdObj = buildJewelryTypePageJsonLd(
+      baseProducts,
+      t      
+    );
 
   return (
     <div className="container mx-auto">
@@ -73,10 +66,7 @@ export default async  function JewelryTypePage(
         { name: t.type }
       ]} />
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(ldjson) }}
-      />
+      <JsonLd json={JsonLdObj} />
 
       <div className="pl-4 border-l-4 border-primary/70 mb-4">
         <h1 className="text-3xl font-yatra font-bold">

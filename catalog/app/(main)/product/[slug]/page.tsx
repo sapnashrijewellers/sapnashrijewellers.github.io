@@ -14,7 +14,7 @@ import WishlistButton from "@/components/common/WishlistButton";
 import ProductRating from "@/components/product/ProductRating";
 import WishListBar from "@/components/product/WishlistBar";
 import ProductRatingInput from "@/components/product/ProductRatingInput";
-import ProductJsonLd from "@/components/product/ProductJsonLd";
+import JsonLd from "@/components/common/JsonLd";
 import { buildProductJsonLd } from "@/utils/buildProductJsonLd";
 import formatPurity from "@/utils/utils.js";
 import NewArrivals from "@/components/product/NewArrivals";
@@ -81,18 +81,10 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
   );
 
   if (!product) notFound();
-  const imageUrl = `${driveURL}${product.images?.[0]}`;
-  const baseProductUrl = `${baseURL}/product/${product.slug}`;
-
+  
   const productJsonLd = buildProductJsonLd(
-    product,
-    imageUrl,
-    baseProductUrl
+    product
   );
-
-
-
-
   const category = categories.find(c => c.name === product.category);
 
   return (
@@ -106,7 +98,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
       />
 
       <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-6 py-6 px-3">
-        <ProductJsonLd json={productJsonLd} />
+        <JsonLd json={productJsonLd} />
 
         {/* ---------------- Product Gallery ---------------- */}
         <div className="relative">

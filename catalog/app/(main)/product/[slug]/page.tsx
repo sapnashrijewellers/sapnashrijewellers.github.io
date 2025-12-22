@@ -15,7 +15,7 @@ import ProductRating from "@/components/product/ProductRating";
 import WishListBar from "@/components/product/WishlistBar";
 import ProductRatingInput from "@/components/product/ProductRatingInput";
 import JsonLd from "@/components/common/JsonLd";
-import { buildProductJsonLd } from "@/utils/buildProductJsonLd";
+import buildProductJsonLd from "@/utils/buildProductJsonLd";
 import formatPurity from "@/utils/utils.js";
 import NewArrivals from "@/components/product/NewArrivals";
 import YouMAyAlsoLike from "@/components/product/YouMayAlsoLike";

@@ -1,38 +1,38 @@
 {
-  "packageId": "io.github.sapnashrijewellers.twa",
-  "host": "sapnashrijewellers.github.io",
+  "packageId": "in.sapnashrijewellers.twa",
+  "host": "sapnashrijewellers.in",
   "name": "Sapna Shri Jewellers",
   "launcherName": "SSJ",
   "display": "standalone",
-  "themeColor": "#FFD700",
+  "themeColor": "#FEF8DE",
   "themeColorDark": "#000000",
-  "navigationColor": "#000000",
+  "navigationColor": "#FEF8DE",
   "navigationColorDark": "#000000",
-  "navigationDividerColor": "#000000",
-  "navigationDividerColorDark": "#000000",
-  "backgroundColor": "#000000",
+  "navigationDividerColor": "#A37F2C",
+  "navigationDividerColorDark": "#1f1f1f",
+  "backgroundColor": "#FEF8DE",  
   "enableNotifications": true,
   "startUrl": "/",
-  "iconUrl": "https://sapnashrijewellers.github.io/icons/android-chrome-512x512-v1.png",
-  "maskableIconUrl": "https://sapnashrijewellers.github.io/icons/android-chrome-512x512-v1.png",
-  "monochromeIconUrl": "https://sapnashrijewellers.github.io/icons/android-chrome-512x512-v1.png",
+  "iconUrl": "https://sapnashrijewellers.in/icons/android-chrome-512x512-v1.png",
+  "maskableIconUrl": "https://sapnashrijewellers.in/icons/android-chrome-512x512-v1.png",
+  "monochromeIconUrl": "https://sapnashrijewellers.in/icons/android-chrome-512x512-v1.png",
   "splashScreenFadeOutDuration": 300,
   "signingKey": {
-    "path": "/home/big/vipul/ssj/bubblewrap/android.keystore",
+    "path": "./android.keystore",
     "alias": "ssjkey"
   },
-  "appVersionName": "1",
-  "appVersionCode": 1,
+  "appVersionName": "3",
+  "appVersionCode": 3,
   "shortcuts": [
     {
       "name": "Jewellery",
       "shortName": "Gold",
-      "url": "https://sapnashrijewellers.github.io/#/",
-      "chosenIconUrl": "https://sapnashrijewellers.github.io/icons/android-chrome-192x192-v1.png"
+      "url": "https://sapnashrijewellers.in/",
+      "chosenIconUrl": "https://sapnashrijewellers.in/icons/android-chrome-192x192-v1.png"
     }
   ],
   "generatorApp": "bubblewrap-cli",
-  "webManifestUrl": "https://sapnashrijewellers.github.io/manifest.webmanifest",
+  "webManifestUrl": "https://sapnashrijewellers.in/manifest.webmanifest",
   "fallbackType": "customtabs",
   "features": {},
   "alphaDependencies": {
@@ -41,7 +41,7 @@
   "enableSiteSettingsShortcut": true,
   "isChromeOSOnly": false,
   "isMetaQuest": false,
-  "fullScopeUrl": "https://sapnashrijewellers.github.io/",
+  "fullScopeUrl": "https://sapnashrijewellers.in/",
   "minSdkVersion": 21,
   "orientation": "any",
   "fingerprints": [],
@@ -51,5 +51,5 @@
   "fileHandlers": [],
   "launchHandlerClientMode": "",
   "displayOverride": [],
-  "appVersion": "1"
+  "appVersion": "3"
 }

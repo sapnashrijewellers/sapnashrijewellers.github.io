@@ -21,8 +21,8 @@ plugins {
 }
 
 def twaManifest = [
-    applicationId: 'io.github.sapnashrijewellers.twa',
-    hostName: 'sapnashrijewellers.github.io', // The domain being opened in the TWA.
+    applicationId: 'in.sapnashrijewellers.twa',
+    hostName: 'sapnashrijewellers.in', // The domain being opened in the TWA.
     launchUrl: '/', // The start path for the TWA. Must be relative to the domain.
     name: 'Sapna Shri Jewellers', // The application name.
     launcherName: 'SSJ', // The name shown on the Android Launcher.
@@ -39,7 +39,7 @@ def twaManifest = [
     // - short_name: Shorter string used if |name| is too long.
     // - url: Absolute path of the URL to launch the app with (e.g '/create').
     // - icon: Name of the resource in the drawable folder to use as an icon.
-    shortcuts: [[name:'Jewellery', short_name:'Gold', url:'https://sapnashrijewellers.github.io/#/', icon:'shortcut_0']],
+    shortcuts: [[name:'Jewellery', short_name:'Gold', url:'https://sapnashrijewellers.in/#/', icon:'shortcut_0']],
     // The duration of fade out animation in milliseconds to be played when removing splash screen.
     splashScreenFadeOutDuration: 300,
     generatorApp: 'bubblewrap-cli', // Application that generated the Android Project
@@ -52,13 +52,13 @@ def twaManifest = [
 
 android {
     compileSdkVersion 36
-    namespace "io.github.sapnashrijewellers.twa"
+    namespace "in.sapnashrijewellers.twa"
     defaultConfig {
-        applicationId "io.github.sapnashrijewellers.twa"
+        applicationId "in.sapnashrijewellers.twa"
         minSdkVersion 21
         targetSdkVersion 35
-        versionCode 1
-        versionName "1"
+        versionCode 3
+        versionName "3"
 
         // The name for the application
         resValue "string", "appName", twaManifest.name
@@ -76,12 +76,12 @@ android {
             // The URL the Web Manifest for the Progressive Web App that the TWA points to. This
             // is used by Chrome OS and Meta Quest to open the Web version of the PWA instead of
             // the TWA, as it will probably give a better user experience for non-mobile devices.
-            resValue "string", "webManifestUrl", 'https://sapnashrijewellers.github.io/manifest.webmanifest'
+            resValue "string", "webManifestUrl", 'https://sapnashrijewellers.in/manifest.webmanifest'
         
 
         
             // This is used by Meta Quest.
-            resValue "string", "fullScopeUrl", 'https://sapnashrijewellers.github.io/'
+            resValue "string", "fullScopeUrl", 'https://sapnashrijewellers.in/'
         
 
         

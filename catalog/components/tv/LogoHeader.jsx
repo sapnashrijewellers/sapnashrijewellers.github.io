@@ -6,12 +6,12 @@ export default function LogoHeader() {
       {/* Left: Logo */}
       <Link href="/" className="flex items-center" aria-label="Go to homepage">
         <Image
-          src="/logo.png"
+          src="/icons/android-chrome-192x192.png"
           alt="Sapna Shri Jewellers Nagda | सपना श्री ज्वैलर्स, नागदा"
           className="h-24 object-contain"
           itemProp="logo"
-          width="200"
-          height="200"
+          width="192"
+          height="192"
         />
       </Link>
 

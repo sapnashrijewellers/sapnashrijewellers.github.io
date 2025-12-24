@@ -23,11 +23,10 @@ export const metadata: Metadata = {
     "Official website of Sapna Shri Jewellers, Nagda — trusted jewellery shop offering gold and silver ornaments.",
   icons: {
     icon: [
-      { url: "/icons/favicon-96x96-v1.png", sizes: "96x96", type: "image/png" },
-      { url: "/icons/favicon-v1.svg", type: "image/svg+xml" },
-      { url: "/icons/favicon-v1.ico", rel: "shortcut icon" },
+      { url: "/icons/favicon-96x96.png", sizes: "96x96", type: "image/png" },      
+      { url: "/icons/favicon.ico", rel: "shortcut icon" },
     ],
-    apple: "/icons/apple-touch-icon-v1.png",
+    apple: "/icons/apple-touch-icon.png",
   },
   authors: [{ name: "Sapna Shri Jewellers" }],
   robots: "index, follow",

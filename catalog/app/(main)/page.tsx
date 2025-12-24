@@ -10,7 +10,7 @@ import TestimonialScroller from "@/components/common/Testimonials"
 const title = `Sapna Shri Jewellers`;
 const description = `Explore out latest products at Sapna Shri Jewellers Nagda. High-quality gold & silver jewellery with BIS 916 certification.`;
 const baseURL = process.env.BASE_URL;
-const imageUrl = `${baseURL}/logo.png`;
+const imageUrl = `${baseURL}/icons/android-chrome-512x512.png`;
 const keywords = "Sapna Shri Jewellers Nagda. High-quality gold & silver jewellery with BIS 916 certification";
 
 

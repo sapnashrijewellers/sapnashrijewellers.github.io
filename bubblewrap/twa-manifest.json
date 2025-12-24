@@ -13,9 +13,9 @@
   "backgroundColor": "#FEF8DE",  
   "enableNotifications": true,
   "startUrl": "/",
-  "iconUrl": "https://sapnashrijewellers.in/icons/android-chrome-512x512-v1.png",
-  "maskableIconUrl": "https://sapnashrijewellers.in/icons/android-chrome-512x512-v1.png",
-  "monochromeIconUrl": "https://sapnashrijewellers.in/icons/android-chrome-512x512-v1.png",
+  "iconUrl": "https://sapnashrijewellers.in/icons/android-chrome-512x512.png",
+  "maskableIconUrl": "https://sapnashrijewellers.in/icons/android-chrome-512x512.png",
+  "monochromeIconUrl": "https://sapnashrijewellers.in/icons/android-chrome-512x512.png",
   "splashScreenFadeOutDuration": 300,
   "signingKey": {
     "path": "./android.keystore",
@@ -28,7 +28,7 @@
       "name": "Jewellery",
       "shortName": "Gold",
       "url": "https://sapnashrijewellers.in/",
-      "chosenIconUrl": "https://sapnashrijewellers.in/icons/android-chrome-192x192-v1.png"
+      "chosenIconUrl": "https://sapnashrijewellers.in/icons/android-chrome-192x192.png"
     }
   ],
   "generatorApp": "bubblewrap-cli",

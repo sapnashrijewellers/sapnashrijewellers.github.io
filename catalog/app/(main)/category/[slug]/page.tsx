@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const imageUrl =
         filtered.length > 0
             ? `${driveURL}${filtered[0].images[0]}`
-            : `${baseURL}/logo.png`;
+            : `${baseURL}/icons/android-chrome-512x512.png`;
 
     const keywords = category.keywords;
 

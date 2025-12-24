@@ -4,62 +4,58 @@ export const dynamic = "force-static";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
+
     name: "Sapna Shri Jewellers",
     short_name: "SSJ",
-    description:
-      "सपना श्री ज्वैलर्स, नागदा की आधिकारिक वेबसाइट। हमारे नवीनतम आभूषण संग्रह देखें।",
-    lang: "hi",
+    description: "सपना श्री ज्वैलर्स, नागदा की आधिकारिक वेबसाइट। हमारे नवीनतम आभूषण संग्रह देखें।",
+    lang: "hi-IN",
     dir: "ltr",
-
+    id: "/?source=pwa",
     start_url: "/?source=pwa",
     scope: "/",
     display: "standalone",
     orientation: "any",
-
+    display_override: ["window-controls-overlay", "standalone"],
     /* Light theme (default) */
-    background_color: "#FEF8DE",
-    theme_color: "#FEF8DE",
+    /* Brand-aligned colors (from CSS variables) */
+    background_color: "#FEF8DE", // --color-bg (light theme)
+    theme_color: "#A37F2C",      // --color-primary (brand gold)
 
     /* Hint to browser: this PWA supports both */
     categories: ["shopping", "lifestyle", "business"],
 
     icons: [
       {
-        src: "/icons/android-chrome-192x192-v1.png",
+        src: "/icons/android-chrome-192x192.png",
         sizes: "192x192",
         type: "image/png",
         purpose: "any",
       },
       {
-        src: "/icons/android-chrome-512x512-v1.png",
+        src: "/icons/android-chrome-512x512.png",
         sizes: "512x512",
         type: "image/png",
         purpose: "any",
       },
       {
-        src: "/icons/apple-touch-icon-v1.png",
+        src: "/icons/apple-touch-icon.png",
         sizes: "180x180",
         type: "image/png",
       },
       {
-        src: "/icons/favicon-16x16-v1.png",
+        src: "/icons/favicon-16x16.png",
         sizes: "16x16",
         type: "image/png",
       },
       {
-        src: "/icons/favicon-32x32-v1.png",
+        src: "/icons/favicon-32x32.png",
         sizes: "32x32",
         type: "image/png",
       },
       {
-        src: "/icons/favicon-v1.ico",
+        src: "/icons/favicon.ico",
         sizes: "48x48",
         type: "image/x-icon",
-      },
-      {
-        src: "/icons/favicon-v1.svg",
-        sizes: "any",
-        type: "image/svg+xml",
       },
     ],
 
@@ -71,7 +67,7 @@ export default function manifest(): MetadataRoute.Manifest {
         url: "/",
         icons: [
           {
-            src: "/icons/android-chrome-192x192-v1.png",
+            src: "/icons/android-chrome-192x192.png",
             sizes: "192x192",
             type: "image/png",
           },
@@ -81,15 +77,27 @@ export default function manifest(): MetadataRoute.Manifest {
 
     screenshots: [
       {
-        src: "/screenshots/homepage.jpeg",
+        src: "/screenshots/homepage.png",
         sizes: "738x1600",
-        type: "image/jpeg",
+        type: "image/png",
         label: "Homepage",
       },
       {
-        src: "/screenshots/product-detail.jpeg",
+        src: "/screenshots/product.png",
         sizes: "738x1600",
-        type: "image/jpeg",
+        type: "image/png",
+        label: "Product Detail Page",
+      },
+      {
+        src: "/screenshots/homepage-wide.png",
+        sizes: "1280x720",
+        type: "image/png",
+        label: "Homepage",
+      },
+      {
+        src: "/screenshots/product-wide.png",
+        sizes: "1280x720",
+        type: "image/png",
         label: "Product Detail Page",
       },
     ],

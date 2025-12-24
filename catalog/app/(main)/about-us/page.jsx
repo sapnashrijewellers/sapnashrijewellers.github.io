@@ -30,7 +30,7 @@ const ldjson = {
   publisher: {
     "@type": "JewelryStore",
     name: "Sapna Shri Jewellers Nagda",
-    image: `${baseURL}/logo.png`,
+    image: `${baseURL}//icons/android-chrome-512x512.png`,
     address: {
       "@type": "PostalAddress",
       streetAddress: "Railway Station Main Road, Near Jain Mandir",

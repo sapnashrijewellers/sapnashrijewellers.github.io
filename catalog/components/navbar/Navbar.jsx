@@ -40,26 +40,41 @@ export default function Navbar() {
 
   return (
     <nav className="p-2 shadow-md bg-highlight">
-      
+
       <div className="flex justify-between items-center ">
         {/* Left: Logo */}
         <div className="flex-shrink-0 flex items-center">
-          <Link href="/" title="Go to Home Page of Sapna Shri Jewellers" className="flex items-start">
+          <Link
+            href="/"
+            title="Go to Home Page of Sapna Shri Jewellers"
+            className="flex items-start"
+          >
+            {/* Mobile / Small screens logo */}
             <Image
-              src="/icons/favicon-v1.svg"
+              src="/icons/logo.png"
               alt="Sapna Shri Jewellers Nagda | सपना श्री ज्वैलर्स, नागदा"
-              className="h-20 w-auto logo bg-black rounded-xl"
-              width="120"
-              height="120"
+              className="h-20 w-auto logo bg-black rounded-xl lg:hidden"
+              width={120}
+              height={120}
+              priority
+            />
+
+            {/* Medium & Large screens logo */}
+            <Image
+              src="/icons/logo-wide.png"
+              alt="Sapna Shri Jewellers Nagda | Wide Logo"
+              className="hidden lg:block h-20 rounded-xl w-auto"
+              width={320}
+              height={120}
+              priority
             />
           </Link>
         </div>
-
         {/* Right: Menu + Rates */}
         <div className="flex flex-col p-1">
           {/* Top row: Menu links */}
           {/* <DesktopTopLinks /> */}
-          <ResponsiveNavbar/>
+          <ResponsiveNavbar />
           {/* Bottom rates section */}
           <div className="grid grid-cols-1 md:grid-cols-4 md:gap-1 text-right justify-end font-cinzel text-xs font-semibold">
             <div className="flex justify-end" title={new Date(rates.asOn).toLocaleString("en-IN", {

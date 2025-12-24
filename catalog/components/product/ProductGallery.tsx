@@ -59,7 +59,7 @@ export default function ProductGallery({ product }: { product: Product }) {
   }, [activeImage]);
 
   return (
-    <div className="aspect-square  rounded-lg  w-full space-y-4 relative">
+    <div className="rounded-lg  w-full space-y-4 relative">
       {/* Main Image */}
       <div
         ref={containerRef}

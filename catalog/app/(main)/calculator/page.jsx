@@ -7,7 +7,7 @@ import { Suspense } from "react";
 const title = `ज्वेलरी प्राइस कैलकुलेटर`;
 const description = `ज्वेलरी प्राइस कैलकुलेटर | online Jewellery Price Calculator by Sapna Shri Jewellers`;
 const baseURL = process.env.BASE_URL;
-const imageUrl = `${baseURL}/logo.png`;
+const imageUrl = `${baseURL}/icons/android-chrome-512x512.png`;
 const keywords = "ज्वेलरी प्राइस कैलकुलेटर, Jewellery price calculator, 22K gold jewellery price calculator, Silver jewellery price";
 const ldjson = {
   "@context": "https://schema.org",
@@ -18,7 +18,7 @@ const ldjson = {
   "publisher": {
     "@type": "JewelryStore",
     "name": "Sapna Shri Jewellers Nagda",
-    "image": `${baseURL}/logo.png`,
+    "image": `${baseURL}/icons/android-chrome-512x512.png`,
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Railway Station Main Road, Near Jain Mandir",

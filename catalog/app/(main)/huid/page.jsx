@@ -4,7 +4,7 @@ import Breadcrumb from "@/components/navbar/BreadcrumbItem";
 
 const baseURL = process.env.BASE_URL;
 
-const imageUrl = `${baseURL}/logo.png`;
+const imageUrl = `${baseURL}/icons/android-chrome-512x512.png`;
 
 
 export const metadata = {
@@ -45,7 +45,7 @@ const description = metadata.description;
     publisher: {
       "@type": "JewelryStore",
       name: "Sapna Shri Jewellers Nagda",
-      image: `${baseURL}/logo.png`,
+      image: `${imageUrl}`,
       address: {
         "@type": "PostalAddress",
         streetAddress: "Railway Station Main Road, Near Jain Mandir",

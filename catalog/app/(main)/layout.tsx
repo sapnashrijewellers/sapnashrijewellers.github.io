@@ -17,7 +17,10 @@ const notoDevanagari = Noto_Sans_Devanagari({
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#ffffff",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#A37F2C" },
+    { media: "(prefers-color-scheme: dark)", color: "#000000" },
+  ],
 };
 
 export const metadata: Metadata = {
@@ -27,19 +30,22 @@ export const metadata: Metadata = {
   manifest: "/manifest.webmanifest",
   icons: {
     icon: [
-      { url: "/icons/favicon-32x32-v1.png", sizes: "32x32", type: "image/png" },
-      { url: "/icons/favicon-16x16-v1.png", sizes: "16x16", type: "image/png" },
-      { url: "/icons/favicon-v1.svg", type: "image/svg+xml" },
-      { url: "/icons/favicon-v1.ico", rel: "shortcut icon" },
+      { url: "/icons/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/icons/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/icons/favicon.ico", rel: "shortcut icon" },
     ],
-    apple: "/icons/apple-touch-icon-v1.png",
+    apple: "/icons/apple-touch-icon.png",
   },
+
   authors: [{ name: "Sapna Shri Jewellers" }],
   robots: "index, follow",
   other: {
     "color-scheme": "light dark",
+    "apple-mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-status-bar-style": "black-translucent",
   },
 };
+
 
 export default function RootLayout({ children, }: { children: React.ReactNode; }) {
 
@@ -47,28 +53,28 @@ export default function RootLayout({ children, }: { children: React.ReactNode; }
     <html lang="en" className="">
       <body className={notoDevanagari.className}>
         <AuthProvider>
-        <RegisterSW />
-        {/* Floating WhatsApp Button */}
-        <FloatingWhatsAppButton />
+          <RegisterSW />
+          {/* Floating WhatsApp Button */}
+          <FloatingWhatsAppButton />
 
-        {/* Main layout */}
-        <div className="container mx-auto mb-15 md:mb-0">
-          <Navbar />
-          <Ticker />
-          <div className="px-2 max-w-6xl mx-auto py-4">{children}</div>
-          
-          <FooterTrust />
-          <Footer />
-          
-          <a id="powered-by-mehtalogy"
-            href="https://mehtalogy.in"
-            target="_blank" title="Powered by Mehtalogy LABS">
-            Mehtalogy LABS
-          </a>
+          {/* Main layout */}
+          <div className="container mx-auto mb-15 md:mb-0">
+            <Navbar />
+            <Ticker />
+            <div className="px-2 max-w-6xl mx-auto py-4">{children}</div>
 
-          <Script src="https://mehtalogy.in/pb/v1.js"
-            strategy="afterInteractive" />
-        </div>
+            <FooterTrust />
+            <Footer />
+
+            <a id="powered-by-mehtalogy"
+              href="https://mehtalogy.in"
+              target="_blank" title="Powered by Mehtalogy LABS">
+              Mehtalogy LABS
+            </a>
+
+            <Script src="https://mehtalogy.in/pb/v1.js"
+              strategy="afterInteractive" />
+          </div>
         </AuthProvider>
       </body>
     </html>

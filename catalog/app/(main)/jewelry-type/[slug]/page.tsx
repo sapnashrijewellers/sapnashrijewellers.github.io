@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const t = types.find(t => t.slug === slug);
   if (!t) return {};  
 
-  const imageUrl = `${baseURL}/logo.png`;
+  const imageUrl = `${baseURL}/icons/android-chrome-192x192.png`;
   
   return {
     title: `${t.type} jewelry collection by Sapna Shri Jewellers`,

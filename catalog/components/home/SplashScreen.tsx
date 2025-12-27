@@ -6,10 +6,24 @@ import Image from "next/image";
 export default function SplashScreen() {
   const [visible, setVisible] = useState(true);
   const [exit, setExit] = useState(false);
-
-
+  const finalizeSplash = () => {
+  document.body.classList.add("splash-done");
+  document.documentElement.classList.remove("splash-lock");
+  document.body.classList.remove("splash-lock");
+  setVisible(false);
+};
 
   useEffect(() => {
+    const hasShownSplash = sessionStorage.getItem("splashShown");
+
+    // If splash already shown in this session → skip
+    if (hasShownSplash) {
+      finalizeSplash();
+      return;
+    }
+
+    // Mark splash as shown for this session
+    sessionStorage.setItem("splashShown", "true");
 
     document.documentElement.classList.add("splash-lock");
     document.body.classList.add("splash-lock");
@@ -25,10 +39,7 @@ export default function SplashScreen() {
     }, 3800); // visible pause
 
     const removeTimer = setTimeout(() => {
-      document.body.classList.add("splash-done");
-      document.documentElement.classList.remove("splash-lock");
-      document.body.classList.remove("splash-lock");
-      setVisible(false);
+      finalizeSplash();
     }, 4600);
 
     return () => {

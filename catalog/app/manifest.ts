@@ -78,25 +78,25 @@ export default function manifest(): MetadataRoute.Manifest {
     screenshots: [
       {
         src: "/screenshots/homepage.png",
-        sizes: "738x1600",
+        sizes: "1476x3200",
         type: "image/png",
         label: "Homepage",
       },
       {
         src: "/screenshots/product.png",
-        sizes: "738x1600",
+        sizes: "1476x3200",
         type: "image/png",
         label: "Product Detail Page",
       },
       {
         src: "/screenshots/homepage-wide.png",
-        sizes: "1280x720",
+        sizes: "2560x1440",
         type: "image/png",
         label: "Homepage",
       },
       {
         src: "/screenshots/product-wide.png",
-        sizes: "1280x720",
+        sizes: "2560x1440",
         type: "image/png",
         label: "Product Detail Page",
       },

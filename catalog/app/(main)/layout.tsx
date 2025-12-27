@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "@/app/globals.css";
+import "@/app/splash.css";
 import { Noto_Sans_Devanagari } from "next/font/google";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/home/Footer";
@@ -9,6 +10,8 @@ import FloatingWhatsAppButton from "@/components/home/FloatingWhatsAppButton";
 import RegisterSW from "@/components/home/registerSW";
 import Script from "next/script"
 import { AuthProvider } from "@/context/AuthContext";
+import SplashClient from "@/components/home/SplashClient";
+
 
 const notoDevanagari = Noto_Sans_Devanagari({
   subsets: ["latin", "devanagari"],
@@ -43,39 +46,42 @@ export const metadata: Metadata = {
     "color-scheme": "light dark",
     "apple-mobile-web-app-capable": "yes",
     "apple-mobile-web-app-status-bar-style": "black-translucent",
+    "preload-splash-logo": "/splash/ss-logo.png",
   },
 };
 
 
 export default function RootLayout({ children, }: { children: React.ReactNode; }) {
-
   return (
-    <html lang="en" className="">
+    <html lang="en" className="">      
       <body className={notoDevanagari.className}>
-        <AuthProvider>
-          <RegisterSW />
-          {/* Floating WhatsApp Button */}
-          <FloatingWhatsAppButton />
+        <SplashClient />
+        <div id="app-content">
+          <AuthProvider>
+            <RegisterSW />
+            {/* Floating WhatsApp Button */}
+            <FloatingWhatsAppButton />
 
-          {/* Main layout */}
-          <div className="container mx-auto mb-15 md:mb-0">
-            <Navbar />
-            <Ticker />
-            <div className="px-2 max-w-6xl mx-auto py-4">{children}</div>
+            {/* Main layout */}
+            <div className="container mx-auto mb-15 md:mb-0">
+              <Navbar />
+              <Ticker />
+              <div className="px-2 max-w-6xl mx-auto py-4">{children}</div>
 
-            <FooterTrust />
-            <Footer />
+              <FooterTrust />
+              <Footer />
 
-            <a id="powered-by-mehtalogy"
-              href="https://mehtalogy.in"
-              target="_blank" title="Powered by Mehtalogy LABS">
-              Mehtalogy LABS
-            </a>
+              <a id="powered-by-mehtalogy"
+                href="https://mehtalogy.in"
+                target="_blank" title="Powered by Mehtalogy LABS">
+                Mehtalogy LABS
+              </a>
 
-            <Script src="https://mehtalogy.in/pb/v1.js"
-              strategy="afterInteractive" />
-          </div>
-        </AuthProvider>
+              <Script src="https://mehtalogy.in/pb/v1.js"
+                strategy="afterInteractive" />
+            </div>
+          </AuthProvider>
+        </div>
       </body>
     </html>
   );

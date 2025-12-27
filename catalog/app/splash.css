@@ -1,0 +1,170 @@
+/* =============================== */
+/* SCROLL LOCK */
+/* =============================== */
+#app-content {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#splash-root {
+  display: flex;
+}
+
+html.splash-lock::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9998; /* just below splash */
+  background: radial-gradient(circle at center, #1c1408 0%, #000 70%);
+  pointer-events: none;
+}
+
+body.splash-done #app-content {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 300ms ease;
+}
+
+
+html.splash-lock,
+body.splash-lock {
+  overflow: hidden;
+  height: 100%;
+}
+
+html.splash-lock {
+  overflow: hidden;
+  overscroll-behavior: none;
+  height: 100%;
+}
+/* =============================== */
+/* SPLASH ROOT */
+/* =============================== */
+
+.splash-root {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: radial-gradient(circle at center, #1c1408 0%, #000 70%);
+
+  opacity: 1;
+  transition: opacity 0.9s ease;
+}
+
+.splash-root.splash-exit {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* =============================== */
+/* CENTER */
+/* =============================== */
+
+.splash-center {
+  text-align: center;
+}
+
+/* =============================== */
+/* LOGO */
+/* =============================== */
+
+.splash-logo {
+  position: relative;
+  width: clamp(140px, 24vw, 360px);
+  height: clamp(140px, 24vw, 360px);
+  margin-bottom: 1.3rem;
+
+  opacity: 0;
+  animation:
+    splash-logo-in 1.2s ease-out forwards,
+    splash-logo-glow 2.8s ease-in-out infinite;
+}
+
+/* =============================== */
+/* TEXT */
+/* =============================== */
+
+.splash-text h1 {
+  font-size: clamp(1.9rem, 4vw, 3.6rem);
+  color: #f7e7bf;
+  opacity: 0;
+  animation: splash-text-in 1s ease forwards;
+  animation-delay: 1.2s;
+}
+
+.splash-text span {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: clamp(1rem, 2vw, 1.45rem);
+  letter-spacing: 0.28em;
+  color: #d4af37;
+  opacity: 0;
+  animation: splash-text-in 1s ease forwards;
+  animation-delay: 1.5s;
+}
+
+/* =============================== */
+/* ANIMATIONS */
+/* =============================== */
+
+@keyframes splash-logo-in {
+  from {
+    opacity: 0;
+    transform: scale(0.88);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes splash-text-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes splash-logo-glow {
+  0% {
+    filter: drop-shadow(0 0 0 rgba(212,175,55,0));
+  }
+  50% {
+    filter: drop-shadow(0 0 26px rgba(212,175,55,.45));
+  }
+  100% {
+    filter: drop-shadow(0 0 0 rgba(212,175,55,0));
+  }
+}
+
+@keyframes fadeScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  35% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fade-scale {
+  animation: fadeScale 1.6s ease-out forwards;
+}
+
+/* Gold color helper */
+.text-gold {
+  color: #d4af37;
+}

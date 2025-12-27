@@ -122,12 +122,9 @@ html {
   background-color: var(--color-bg-surface);
   color: var(--color-text);
   transition: background-color 0.3s ease, color 0.3s ease;
+  scrollbar-gutter: stable;
   /* font-family: var(--font-yatra); */
 }
-
-/* body {
-  font-family: 'Yatra One', 'Noto Sans Devanagari', Mangal, Arial, sans-serif;
-} */
 
 a {
   color: var(--color-primary);

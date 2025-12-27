@@ -20,6 +20,7 @@ const notoDevanagari = Noto_Sans_Devanagari({
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
+  viewportFit: "cover",
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#A37F2C" },
     { media: "(prefers-color-scheme: dark)", color: "#000000" },
@@ -31,6 +32,11 @@ export const metadata: Metadata = {
   description:
     "Official website of Sapna Shri Jewellers, Nagda — trusted jewellery shop offering gold and silver ornaments.",
   manifest: "/manifest.webmanifest",
+  appleWebApp: {
+    capable: true,
+    title: "SSJ",
+    statusBarStyle: "black-translucent", // Options: "default", "black", "black-translucent"
+  },
   icons: {
     icon: [
       { url: "/icons/favicon-32x32.png", sizes: "32x32", type: "image/png" },
@@ -43,17 +49,14 @@ export const metadata: Metadata = {
   authors: [{ name: "Sapna Shri Jewellers" }],
   robots: "index, follow",
   other: {
-    "color-scheme": "light dark",
-    "apple-mobile-web-app-capable": "yes",
-    "apple-mobile-web-app-status-bar-style": "black-translucent",
-    "preload-splash-logo": "/splash/ss-logo.png",
+    "color-scheme": "light dark"
   },
 };
 
 
 export default function RootLayout({ children, }: { children: React.ReactNode; }) {
   return (
-    <html lang="en" className="">      
+    <html lang="en" className="">
       <body className={notoDevanagari.className}>
         <SplashClient />
         <div id="app-content">

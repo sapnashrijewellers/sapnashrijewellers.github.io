@@ -81,24 +81,28 @@ export default function manifest(): MetadataRoute.Manifest {
         sizes: "1476x3200",
         type: "image/png",
         label: "Homepage",
+        form_factor: "narrow",
       },
       {
         src: "/screenshots/product.png",
         sizes: "1476x3200",
         type: "image/png",
         label: "Product Detail Page",
+        form_factor: "narrow",
       },
       {
         src: "/screenshots/homepage-wide.png",
         sizes: "2560x1440",
         type: "image/png",
         label: "Homepage",
+        form_factor: "wide",
       },
       {
         src: "/screenshots/product-wide.png",
         sizes: "2560x1440",
         type: "image/png",
         label: "Product Detail Page",
+        form_factor: "wide",
       },
     ],
 

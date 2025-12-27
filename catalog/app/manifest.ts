@@ -1,12 +1,32 @@
 import { MetadataRoute } from "next";
+import types from "@/data/types.json";
+import { Type } from "@/types/catalog";
 
 export const dynamic = "force-static";
 
 export default function manifest(): MetadataRoute.Manifest {
+  // Map the JSON types to the Shortcut format
+  const dynamicShortcuts = (types as Type[])
+    .filter((t) => t.active)
+    .sort((a, b) => a.rank - b.rank)
+    .slice(0, 4) // Optimization: Browsers usually cap shortcuts at 4-10
+    .map((t) => ({
+      name: `${t.type} collection`,
+      short_name: t.type, // Use first word for brevity
+      description: t.description || `Explore our ${t.type} collection`,
+      url: `/jewelry-type/${t.slug}?source=pwa_shortcut`,
+      icons: [
+        {
+          src: "/icons/android-chrome-192x192.png", // Fallback to main icon
+          sizes: "192x192",
+          type: "image/png",
+        },
+      ],
+    }));
   return {
 
     name: "Sapna Shri Jewellers",
-    short_name: "SSJ",
+    short_name: "Sapna Shri",
     description: "सपना श्री ज्वैलर्स, नागदा की आधिकारिक वेबसाइट। हमारे नवीनतम आभूषण संग्रह देखें।",
     lang: "hi-IN",
     dir: "ltr",
@@ -59,21 +79,7 @@ export default function manifest(): MetadataRoute.Manifest {
       },
     ],
 
-    shortcuts: [
-      {
-        name: "Jewellery",
-        short_name: "Gold",
-        description: "Explore our gold jewellery collection",
-        url: "/",
-        icons: [
-          {
-            src: "/icons/android-chrome-192x192.png",
-            sizes: "192x192",
-            type: "image/png",
-          },
-        ],
-      },
-    ],
+    shortcuts: dynamicShortcuts,
 
     screenshots: [
       {
@@ -107,5 +113,20 @@ export default function manifest(): MetadataRoute.Manifest {
     ],
 
     prefer_related_applications: false,
+    "share_target": {
+      "action": "/search",
+      "method": "GET",
+      "params": {
+        "title": "q",
+        "text": "q",
+        "url": "url"
+      }
+    },
+    "protocol_handlers": [
+      {
+        "protocol": "web+ssj",
+        "url": "/search?q=%s"
+      }
+    ]
   };
 }

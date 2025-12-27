@@ -21,27 +21,6 @@ Sapna Shri Jewellers Nagda Location,
 Sapna Shri Jewellers Nagda Contact Number`;
 const baseURL = process.env.BASE_URL;
 const imageUrl = `${baseURL}/static/img/shop.png`;
-const ldjson = {
-  "@context": "https://schema.org",
-  "@type": "JewelryStore",
-  name: title,
-  url: `${baseURL}/about-us`,
-  description,
-  publisher: {
-    "@type": "JewelryStore",
-    name: "Sapna Shri Jewellers Nagda",
-    image: `${baseURL}//icons/android-chrome-512x512.png`,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "Railway Station Main Road, Near Jain Mandir",
-      addressLocality: "Nagda",
-      addressRegion: "Ujjain",
-      postalCode: "456335",
-      addressCountry: "IN",
-    },
-    telephone: "+91-8234042231",
-  },
-};
 
 export async function generateMetadata() {
   return {
@@ -76,11 +55,6 @@ export default function AboutUsPage() {
 
   return (
     <div className="leading-relaxed">
-      {/* ✅ JSON-LD Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(ldjson) }}
-      />
       <Breadcrumb items={[{ name: "Home", href: "/" }, { name: "About Us" }]} />
 
       {/* ===== Heading ===== */}

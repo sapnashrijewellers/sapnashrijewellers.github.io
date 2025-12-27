@@ -47,7 +47,14 @@ self.addEventListener("push", (event) => {
     renotify: true,
   };
 
-  event.waitUntil(self.registration.showNotification(title, options));
+  event.waitUntil(
+    Promise.all([
+      self.registration.showNotification(title, options),
+      // 2. Set the App Badge (The red dot on the home screen)
+      // We use '1' to indicate 'new data' or the actual price change
+      'setAppBadge' in navigator ? navigator.setAppBadge(1) : Promise.resolve()
+    ])
+  );
 });
 
 /* ===== Handle Notification Click ===== */

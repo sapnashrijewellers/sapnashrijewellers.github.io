@@ -9,20 +9,29 @@
     "active": true
   },
   {
-    "type": "Kundan",
-    "description": "Shop exquisite Kundan jewelry sets featuring intricate craftsmanship and stunning stone work. Perfect for festive occasions, weddings, and a traditional royal look.",
-    "keywords": "kundan jewelry, kundan necklace, kundan set, traditional kundan, bridal kundan, royal jewelry, meenakari kundan, kundan earrings",
-    "slug": "kundan",
-    "icon": "Gem",
+    "type": "Gift",
+    "description": "Find the perfect jewelry gift for birthdays, anniversaries, housewarmings, and festive occasions. Choose from personalized gold, silver, and gemstone options for every budget.",
+    "keywords": "jewelry gifts, gift for women, gift for men, auspicious gifts, gold gift, silver gift, birthday gift, anniversary jewelry",
+    "slug": "gift",
+    "icon": "Gift",
     "rank": 2,
     "active": true
   },
   {
-    "type": "Daily Wear",
-    "description": "Discover durable, lightweight, and stylish jewelry pieces perfect for everyday wear. Our collection features 22K gold, 92.5 sterling silver, and comfortable designs for office or home.",
-    "keywords": "daily wear jewelry, lightweight gold, daily wear silver, office wear jewelry, comfortable jewelry, daily use accessories, gold for everyday, light churi",
-    "slug": "daily-wear",
-    "icon": "Sparkle",
+    "type": "Modern",
+    "description": "Shop the latest trends in gold and silver jewelry featuring minimalist, geometric, and contemporary designs. Lightweight and stylish, perfect for modern outfits and casual wear.",
+    "keywords": "modern jewelry, trendy gold, minimalist design, contemporary silver, stylish accessories, lightweight modern, latest jewelry trends, geometric jewelry",
+    "slug": "modern",
+    "icon": "Shapes",
+    "rank": 3,
+    "active": true
+  },
+  {
+    "type": "Religious",
+    "description": "Shop sacred and devotional gold and silver items including frames, coins, and idols of deities like Lakshmi, Ganesh, and Radha Krishna. Perfect for Pooja, worship, and auspicious gifting.",
+    "keywords": "religious jewelry, devotional silver, pooja items, lakshmi ganesh frame, silver nariyal, auspicious gift, gold locket, religious coin",
+    "slug": "religious",
+    "icon": "Bell",
     "rank": 4,
     "active": true
   },
@@ -32,15 +41,6 @@
     "keywords": "gold investment, silver investment, 999 purity bar, 24k gold coin, physical gold investment, certified silver, secure wealth, bullion for investment",
     "slug": "investment",
     "icon": "Coins",
-    "rank": 5,
-    "active": true
-  },
-  {
-    "type": "Religious",
-    "description": "Shop sacred and devotional gold and silver items including frames, coins, and idols of deities like Lakshmi, Ganesh, and Radha Krishna. Perfect for Pooja, worship, and auspicious gifting.",
-    "keywords": "religious jewelry, devotional silver, pooja items, lakshmi ganesh frame, silver nariyal, auspicious gift, gold locket, religious coin",
-    "slug": "religious",
-    "icon": "Bell",
     "rank": 6,
     "active": true
   },
@@ -54,20 +54,20 @@
     "active": true
   },
   {
-    "type": "Modern",
-    "description": "Shop the latest trends in gold and silver jewelry featuring minimalist, geometric, and contemporary designs. Lightweight and stylish, perfect for modern outfits and casual wear.",
-    "keywords": "modern jewelry, trendy gold, minimalist design, contemporary silver, stylish accessories, lightweight modern, latest jewelry trends, geometric jewelry",
-    "slug": "modern",
-    "icon": "Shapes",
+    "type": "Daily Wear",
+    "description": "Discover durable, lightweight, and stylish jewelry pieces perfect for everyday wear. Our collection features 22K gold, 92.5 sterling silver, and comfortable designs for office or home.",
+    "keywords": "daily wear jewelry, lightweight gold, daily wear silver, office wear jewelry, comfortable jewelry, daily use accessories, gold for everyday, light churi",
+    "slug": "daily-wear",
+    "icon": "Sparkle",
     "rank": 8,
     "active": true
   },
   {
-    "type": "Gift",
-    "description": "Find the perfect jewelry gift for birthdays, anniversaries, housewarmings, and festive occasions. Choose from personalized gold, silver, and gemstone options for every budget.",
-    "keywords": "jewelry gifts, gift for women, gift for men, auspicious gifts, gold gift, silver gift, birthday gift, anniversary jewelry",
-    "slug": "gift",
-    "icon": "Gift",
+    "type": "Kundan",
+    "description": "Shop exquisite Kundan jewelry sets featuring intricate craftsmanship and stunning stone work. Perfect for festive occasions, weddings, and a traditional royal look.",
+    "keywords": "kundan jewelry, kundan necklace, kundan set, traditional kundan, bridal kundan, royal jewelry, meenakari kundan, kundan earrings",
+    "slug": "kundan",
+    "icon": "Gem",
     "rank": 9,
     "active": true
   },

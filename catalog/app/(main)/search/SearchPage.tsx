@@ -13,7 +13,8 @@ import FilterNSort from "@/components/common/FilterNSort";
 
 export default function JewelrySearch() {
   const searchParams = useSearchParams();
-  const initialQuery = decodeURIComponent(searchParams.get("q") || "");
+  const rawQuery = decodeURIComponent(searchParams.get("q") || "");
+  const initialQuery = rawQuery.replace(/^web\+ssj:(\/\/)?/i, "");
 
   // 🔹 Typing state
   const [inputQuery, setInputQuery] = useState(initialQuery);
@@ -72,31 +73,31 @@ export default function JewelrySearch() {
       <SearchBar
         query={inputQuery}
         onQueryChange={setInputQuery}
-        onSearch={handleSearchSubmit}                
+        onSearch={handleSearchSubmit}
       />
       <div className="flex items-center gap-3 m-4">
-  {/* LEFT: takes remaining space */}
-  <div className="flex-1 font-medium truncate">
-    {submittedQuery && (
-      <span className="text-primary">
-        {" "}
-      </span>
-    )}
-    {results.length} products found
-  </div>
+        {/* LEFT: takes remaining space */}
+        <div className="flex-1 font-medium truncate">
+          {submittedQuery && (
+            <span className="text-primary">
+              {" "}
+            </span>
+          )}
+          {results.length} products found
+        </div>
 
-  {/* RIGHT: fixed / intrinsic width */}
-  <div className="shrink-0">
-    <FilterNSort
-      filters={filters}
-      onFilterChange={(k, v) =>
-        setFilters(p => ({ ...p, [k]: v }))
-      }
-      sortBy={sortBy}
-      onSortChange={setSortBy}
-    />
-  </div>
-</div>
+        {/* RIGHT: fixed / intrinsic width */}
+        <div className="shrink-0">
+          <FilterNSort
+            filters={filters}
+            onFilterChange={(k, v) =>
+              setFilters(p => ({ ...p, [k]: v }))
+            }
+            sortBy={sortBy}
+            onSortChange={setSortBy}
+          />
+        </div>
+      </div>
 
       <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
         {results.map(p => (

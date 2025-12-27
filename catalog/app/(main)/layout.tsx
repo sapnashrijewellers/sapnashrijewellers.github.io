@@ -10,7 +10,7 @@ import FloatingWhatsAppButton from "@/components/home/FloatingWhatsAppButton";
 import RegisterSW from "@/components/home/registerSW";
 import Script from "next/script"
 import { AuthProvider } from "@/context/AuthContext";
-import SplashClient from "@/components/home/SplashClient";
+import BadgeHandler from "@/components/common/BadgeHandler";
 
 
 const notoDevanagari = Noto_Sans_Devanagari({
@@ -48,8 +48,15 @@ export const metadata: Metadata = {
 
   authors: [{ name: "Sapna Shri Jewellers" }],
   robots: "index, follow",
+  alternates: {
+    types: {
+      'application/opensearchdescription+xml': [
+        { url: '/opensearch.xml', title: 'Sapna Shri' },
+      ],
+    },
+  },
   other: {
-    "color-scheme": "light dark"
+    "color-scheme": "light dark",
   },
 };
 
@@ -57,34 +64,40 @@ export const metadata: Metadata = {
 export default function RootLayout({ children, }: { children: React.ReactNode; }) {
   return (
     <html lang="en" className="">
+      <head>
+        <link
+          rel="search"
+          type="application/opensearchdescription+xml"
+          title="Sapna Shri"
+          href="/opensearch.xml"
+        />
+      </head>
       <body className={notoDevanagari.className}>
-        <SplashClient />
-        <div id="app-content">
-          <AuthProvider>
-            <RegisterSW />
-            {/* Floating WhatsApp Button */}
-            <FloatingWhatsAppButton />
+        <BadgeHandler />
+        <AuthProvider>
+          <RegisterSW />
+          {/* Floating WhatsApp Button */}
+          <FloatingWhatsAppButton />
 
-            {/* Main layout */}
-            <div className="container mx-auto mb-15 md:mb-0">
-              <Navbar />
-              <Ticker />
-              <div className="px-2 max-w-6xl mx-auto py-4">{children}</div>
+          {/* Main layout */}
+          <div className="container mx-auto mb-15 md:mb-0">
+            <Navbar />
+            <Ticker />
+            <div className="px-2 max-w-6xl mx-auto py-4">{children}</div>
 
-              <FooterTrust />
-              <Footer />
+            <FooterTrust />
+            <Footer />
 
-              <a id="powered-by-mehtalogy"
-                href="https://mehtalogy.in"
-                target="_blank" title="Powered by Mehtalogy LABS">
-                Mehtalogy LABS
-              </a>
+            <a id="powered-by-mehtalogy"
+              href="https://mehtalogy.in"
+              target="_blank" title="Powered by Mehtalogy LABS">
+              Mehtalogy LABS
+            </a>
 
-              <Script src="https://mehtalogy.in/pb/v1.js"
-                strategy="afterInteractive" />
-            </div>
-          </AuthProvider>
-        </div>
+            <Script src="https://mehtalogy.in/pb/v1.js"
+              strategy="afterInteractive" />
+          </div>
+        </AuthProvider>
       </body>
     </html>
   );

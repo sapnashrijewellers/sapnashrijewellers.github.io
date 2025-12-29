@@ -21,11 +21,22 @@ import android.os.Build;
 import android.os.Bundle;
 
 
+    import java.util.HashMap;
+
+    import java.util.Map;
+
 
 public class LauncherActivity
         extends com.google.androidbrowserhelper.trusted.LauncherActivity {
     
 
+    
+        @Override
+        protected Map<String, Uri> getProtocolHandlers() {
+            Map<String, Uri> registry = new HashMap<>();
+            registry.put("web+ssj", Uri.parse("/search?q=%s"));
+            return registry;
+        }
     
 
     @Override

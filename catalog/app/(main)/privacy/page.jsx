@@ -137,10 +137,37 @@ export default function PrivacyPolicy() {
             Email:{" "}
             <a href="mailto:privacy@sapnashrijewellers.in" className="text-accent underline">
               privacy@sapnashrijewellers.in
-            </a>          
+            </a>
           </address>
 
-          
+
+        </Section>
+        <Section title="Account & Data Deletion Request">
+          <p>
+            Sapna Shri Jewellers allows users to request deletion of their account-related data at any time.
+          </p>
+          <p>What data we store:</p>
+          <ul className="list-disc pl-6 space-y-1 mt-2">
+            <li>Google Sign-In identifier (used only to prevent duplicate ratings)</li>
+            <li>Product ratings submitted by the user</li>
+            <li>Push notification subscription data (if enabled)</li>
+          </ul>
+          <p>How to request deletion:</p>
+          <ul className="list-disc pl-6 space-y-1 mt-2">
+            <li>Email us at privacy@sapnashrijewellers.in with the subject “Account & Data Deletion Request”</li>
+          </ul>
+
+          <p>Please include the Google account email used to sign in</p>
+
+          <p>What happens next:</p>
+          <ul className="list-disc pl-6 space-y-1 mt-2">
+            <li>We verify the request</li>
+            <li>Delete associated data within 7–30 days</li>
+          </ul>
+
+          <p>Send confirmation once completed</p>
+
+          <p>You may also disable push notifications at any time via device or browser settings.</p>
         </Section>
 
         <footer className="mt-10 text-xs text-muted-foreground border-t border-border pt-3">

@@ -24,7 +24,7 @@ import TestimonialScroller from "@/components/common/Testimonials"
 
 
 const baseURL = process.env.BASE_URL;
-const driveURL = `${baseURL}/img/products/optimized/`;
+const driveURL = `${baseURL}/static/img/products/thumbnail/`;
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const slug = await params;

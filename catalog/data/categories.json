@@ -55,7 +55,7 @@
   },
   {
     "name": "चांदी की पायल",
-    "englishName": "Silver Anklet",
+    "englishName": "Silver Anklet/Payal",
     "rank": 7,
     "slug": "silver-anklet",
     "keywords": "Silver Anklet, Chaandi ki Payal, Silver anklet pair, 925 anklet, traditional payal",
@@ -136,7 +136,7 @@
   },
   {
     "name": "चांदी की पोची",
-    "englishName": "Silver Toe Ring (Pochi)",
+    "englishName": "Silver Bracelet (Pochi)",
     "rank": 16,
     "slug": "silver-toe-ring-pochi",
     "keywords": "Chaandi ki Pochi, Silver bichhiya, toe ring pair, 925 toe ring",
@@ -222,6 +222,51 @@
     "slug": "antic-Sets-Gift-Item",
     "keywords": "925 Sterling Silver Jewellery, Designer Oxidised Necklaces, Heavy Antique Silver Sets, Tribal Silver Jewellery, Afghani Jewellery Online, Traditional Jhumkas",
     "description": "Step into timeless elegance with our Premium Antique Silver Jewellery collection. Explore 925 sterling silver sets, oxidised designs, and traditional temple jewellery that capture the essence of heritage.",
+    "active": true
+  },
+  {
+    "name": "चांदी की बिछिया",
+    "englishName": "Silver Toe Ring",
+    "rank": 26,
+    "slug": "",
+    "keywords": "",
+    "description": "",
+    "active": true
+  },
+  {
+    "name": "चांदी की बाली",
+    "englishName": "Silver Bali Studs",
+    "rank": 27,
+    "slug": "",
+    "keywords": "",
+    "description": "",
+    "active": true
+  },
+  {
+    "name": "चांदी के मंगलसूत्र",
+    "englishName": "Silver MangalSutra",
+    "rank": 28,
+    "slug": "",
+    "keywords": "",
+    "description": "",
+    "active": true
+  },
+  {
+    "name": "बच्चो की सिल्वर ज्वेलरी",
+    "englishName": "Kidswear",
+    "rank": 29,
+    "slug": "",
+    "keywords": "",
+    "description": "",
+    "active": true
+  },
+  {
+    "name": "चांदी की अंगुठी",
+    "englishName": "Silver Ring",
+    "rank": 30,
+    "slug": "",
+    "keywords": "",
+    "description": "",
     "active": true
   }
 ]

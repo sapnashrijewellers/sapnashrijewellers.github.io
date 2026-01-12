@@ -106,5 +106,14 @@
     "icon": "Gem",
     "rank": 13,
     "active": true
+  },
+  {
+    "type": "Party Wear",
+    "description": "",
+    "keywords": "Party Wear, trendy,trending",
+    "slug": "Party Wear",
+    "icon": "",
+    "rank": 14,
+    "active": true
   }
 ]

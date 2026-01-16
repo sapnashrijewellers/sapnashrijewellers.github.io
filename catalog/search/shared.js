@@ -4,6 +4,7 @@ exports.normalize = exports.miniSearchQueryOptions = exports.miniSearchIndexOpti
 exports.miniSearchIndexOptions = {
     fields: [
         "name",
+        "hindiName",
         "highlights",
         "englishHighlights",
         "category",
@@ -17,6 +18,7 @@ exports.miniSearchIndexOptions = {
         "id",
         "slug",
         "name",
+        "hindiName",
         "images",
         "category",
         "purity",
@@ -45,6 +47,7 @@ exports.miniSearchQueryOptions = {
     boost: {
         name: 5,
         highlights: 3.5,
+        hindiName: 3.5,
         englishHighlights: 3,
         category: 2.5,
         keywords: 2.5,

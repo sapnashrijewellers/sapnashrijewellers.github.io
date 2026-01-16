@@ -21,7 +21,10 @@ export interface Product {
   gst: number;
   available?: boolean;
   rating: number;
-  ratingCount: number
+  ratingCount: number;
+  brandText:string;
+  size:string;
+  hindiName:string;
 }
 
 export interface Category {

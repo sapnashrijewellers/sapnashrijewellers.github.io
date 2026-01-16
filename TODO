@@ -30,10 +30,81 @@ Todo:
   ✔ Product rating @started(25-12-19 20:31) @done(25-12-20 13:51) @lasted(17h20m28s)
   ✔ Remove Live rate @done(25-12-20 13:51)
   ✔ Fix dark theme @done(25-12-22 12:42)
-  ✔ Testimonial integration @started(25-12-22 13:22) @done(25-12-22 15:43) @lasted(2h21m58s)
-  ☐ Loading on search page & restrict number of pages
+  ✔ Testimonial integration @started(25-12-22 13:22) @done(25-12-22 15:43) @lasted(2h21m58s)  
   ☐ App on play store @started(25-12-27 18:57)
+  ✔ Include hindiName in search @done(26-01-15 18:52)
+  ✔ Add hindi name in page title and product title @done(26-01-15 18:52)
+  ✔ clean metadata section on every page @done(26-01-15 18:52)
+  ☐ check for favicon @started(26-01-16 11:46)
+  ✔ www must work @done(26-01-15 18:10)
+  ✔ Whole banner must be clickable link @done(26-01-16 15:47) @lasted(4h) @done(26-01-16 15:47) @lasted(4h) @done(26-01-16 15:47) @lasted(4h) @done(26-01-16 15:47) @lasted(4h)
 
-  
+  ✔ Navigation Bar – 18K Gold Pricing: - Remove Silver price- Display 18K Gold price Formula: 24K Gold Price × 75% @done(26-01-16 15:37)
+☐ Product Detail Page – Pricing Logic : - Silver price shown only if making charges apply (+- MC +-Absolute)- Hide calculator when final price exists
+    ☐ Touch-Swipe & Carousel: - Swipe-enabled product galleries
+    ☐ Brand / Identity Field- New catalog field: brandText- Display below Weight & Purity
+    ☐ Trust Signals Ribbon All - Metal type, certification, warranty, returns, online payments (CC,DC, UPI), craftsmanship, skin-safe, All India Delivery
+      ☐ Gold: Online payment. 
+      ☐ Silver: - COD
+    ☐ Bulk Enquiry - Product, Quantity, Requirements → WhatsApp
+    ☐ Dedicated CTA & form for corporate/event orders
+    ☐ Size Selection: Size must go in ShipRocket order details
+      ☐ Rings: 1–28
+      ☐ Bangles/Bracelets: 2-0 to 3-0
+      ☐ Chain -
+    ☐ Care Instructions Expandable PDP section - general instructions for gold and silver
+☐ Shiprocket Integration
+    ☐ Automated logistics
+    ☐ Stock-based CTA behavior
+    ☐ WhatsApp inquiry for out-of-stock
+    ☐ Shipping Status
+        ☐ Order → Shipped → Delivered
+        ☐ Live updates from Shiprocket
+
+☐ Return Policy- Detailed policy page with T&C
+☐ Filters- Material [Gold | Silver] & Price range filters
+☐ Hallmark Page- Silver hallmarking not compulsory
+☐ Home & Category Banners - Images will be provided by Amish
+✔ Full banner must be clickable @done(26-01-16 15:45)
+☐ Rajputani jewellery banner - Amish will provide image
+☐ Calculator - When directly navigate to calculator page,  default making charges must be: 3.5% rather than existing 7%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+☐ Product Detail Page – Pricing Logic : - Silver price shown only if making charges apply (+- MC +-Absolute)- Hide calculator when final price exists
+    ☐ Touch-Swipe & Carousel: - Swipe-enabled product galleries
+    ☐ Brand / Identity Field- New catalog field: brandText- Display below Weight & Purity
+    ☐ Trust Signals Ribbon All - Metal type, certification, warranty, returns, online payments (CC,DC, UPI), craftsmanship, skin-safe, All India Delivery
+      ☐ Gold: Online payment. 
+      ☐ Silver: - COD
+    ☐ Bulk Enquiry - Product, Quantity, Requirements → WhatsApp
+    ☐ Dedicated CTA & form for corporate/event orders
+    ☐ Size Selection: Size must go in ShipRocket order details
+      ☐ Rings: 1–28
+      ☐ Bangles/Bracelets: 2-0 to 3-0
+      ☐ Chain -
+    ☐ Care Instructions Expandable PDP section - general instructions for gold and silver
+
+☐ Return Policy- Detailed policy page with T&C
+☐ Filters- Material [Gold | Silver] & Price range filters
+☐ Hallmark Page- Silver hallmarking not compulsory
+☐ Home & Category Banners - Images will be provided by Amish
+☐ Full banner must be clickable
+☐ Rajputani jewellery banner - Amish will provide image
+☐ Calculator - When directly navigate to calculator page,  default making charges must be: 3.5% rather than existing 7%
+
+
 
 

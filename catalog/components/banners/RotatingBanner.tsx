@@ -126,7 +126,7 @@ export default function RotatingBanner({
   const [index, setIndex] = useState(0);
 
   const reducedMotion = useReducedMotion();
-  const bannerRef = useRef<HTMLDivElement | null>(null);  
+  const bannerRef = useRef<HTMLDivElement | null>(null);
 
   /* --------------------------------------------
      Rotation timer
@@ -160,64 +160,61 @@ export default function RotatingBanner({
       ? (current.imageAnimation as keyof typeof imageAnimationMap)
       : "pan-right";
 
-const textMotion =
-  textAnimationMap[textAnimationKey];
+  const textMotion =
+    textAnimationMap[textAnimationKey];
 
-const imageMotion =
-  reducedMotion
-    ? imageAnimationMap.fade
-    : imageAnimationMap[imageAnimationKey];
+  const imageMotion =
+    reducedMotion
+      ? imageAnimationMap.fade
+      : imageAnimationMap[imageAnimationKey];
 
   /* --------------------------------------------
      Render
   --------------------------------------------- */
   return (
     <div className="w-full">
-      <div
-        ref={bannerRef}
-        className={`relative w-full overflow-hidden rounded-2xl shadow-lg ${height}`}
-      >
-        {/* ================= Image ================= */}
-        <AnimatePresence mode="wait">
-          <motion.div
-             key={`${current.bgImage}-${imageAnimationKey}`}
-            className="absolute inset-0"
-            initial={imageMotion.initial}
-            animate={imageMotion.animate}
-            exit={imageMotion.exit}
-            transition={{ duration: 1.2, ease: "easeOut" }}
-          >
-            <Image
-              src={`${baseURL}/static/${current.bgImage}`}
-              alt={current.title ?? "Banner"}
-              fill
-              priority
-              className="object-cover opacity-95"
-            />
-          </motion.div>
-        </AnimatePresence>
+      <Link href={current.link} aria-label={current.title ?? "Banner Link"}>
+        <div
+          ref={bannerRef}
+          className={`relative w-full overflow-hidden rounded-2xl shadow-lg ${height}`}
+        >
+          {/* ================= Image ================= */}
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={`${current.bgImage}-${imageAnimationKey}`}
+              className="absolute inset-0"
+              initial={imageMotion.initial}
+              animate={imageMotion.animate}
+              exit={imageMotion.exit}
+              transition={{ duration: 1.2, ease: "easeOut" }}
+            >
+              <Image
+                src={`${baseURL}/static/${current.bgImage}`}
+                alt={current.title ?? "Banner"}
+                fill
+                priority
+                className="object-cover opacity-95"
+              />
+            </motion.div>
+          </AnimatePresence>
 
-        {/* ================= Text ================= */}
-        <AnimatePresence initial={false}>
-          <motion.div
-             key={`${current.link}-${textAnimationKey}`}
-            initial={textMotion.initial}
-            animate={textMotion.animate}
-            exit={textMotion.exit}
-            transition={{
-              duration: 0.7,
-              ease: [0.22, 1, 0.36, 1]
-            }}
-            className="absolute inset-0"
-          >
-            {current.title && (
-              <Link
-                href={current.link}
-                className={`absolute z-10 max-w-[480px] ${contentPosition}`}
-              >
-                {/* Feathered background */}
-                <div
-                  className="
+          {/* ================= Text ================= */}
+          <AnimatePresence initial={false}>
+            <motion.div
+              key={`${current.link}-${textAnimationKey}`}
+              initial={textMotion.initial}
+              animate={textMotion.animate}
+              exit={textMotion.exit}
+              transition={{
+                duration: 0.7,
+                ease: [0.22, 1, 0.36, 1]
+              }}
+              className="absolute inset-0"
+            >
+              {current.title && (
+                <div className={`absolute z-10 max-w-[480px] ${contentPosition}`}>
+                  {/* Feathered background */}
+                  <div className="
                     absolute inset-0
                 bg-gradient-to-r from-black/80 via-black/55 to-transparent
                 rounded-xl
@@ -226,41 +223,42 @@ const imageMotion =
                 -z-10
                 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]
                   "
-                />
+                  />
 
-                <div className="p-5 md:p-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    {Icon && (
-                      <Icon className={`w-10 h-10 ${current.textColor}`} />
+                  <div className="p-5 md:p-6">
+                    <div className="flex items-center gap-3 mb-3">
+                      {Icon && (
+                        <Icon className={`w-10 h-10 ${current.textColor}`} />
+                      )}
+                      <h2
+                        className={`font-cinzel text-2xl md:text-3xl font-semibold ${current.textColor}`}
+                      >
+                        {current.title}
+                      </h2>
+                    </div>
+
+                    {current.subtitle && (
+                      <p
+                        className={`text-base md:text-lg ${current.textColor} opacity-90 font-yatra`}
+                      >
+                        {current.subtitle}
+                      </p>
                     )}
-                    <h2
-                      className={`font-cinzel text-2xl md:text-3xl font-semibold ${current.textColor}`}
-                    >
-                      {current.title}
-                    </h2>
+
+                    {current.subtitle1 && (
+                      <p
+                        className={`text-base md:text-lg ${current.textColor} opacity-90`}
+                      >
+                        {current.subtitle1}
+                      </p>
+                    )}
                   </div>
-
-                  {current.subtitle && (
-                    <p
-                      className={`text-base md:text-lg ${current.textColor} opacity-90 font-yatra`}
-                    >
-                      {current.subtitle}
-                    </p>
-                  )}
-
-                  {current.subtitle1 && (
-                    <p
-                      className={`text-base md:text-lg ${current.textColor} opacity-90`}
-                    >
-                      {current.subtitle1}
-                    </p>
-                  )}
                 </div>
-              </Link>
-            )}
-          </motion.div>
-        </AnimatePresence>
-      </div>
+              )}
+            </motion.div>
+          </AnimatePresence>
+        </div>
+      </Link>
 
       {/* ================= Pagination ================= */}
       {items.length > 1 && (

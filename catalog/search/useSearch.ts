@@ -39,7 +39,8 @@ export function useSearch(
     items = results.map(p => ({
       id: p.id,
       name: (p.name),
-      slug: p.slug,
+      hindiName: p.hindiName,
+      slug: p.slug,      
       images: p.images,
       category: (p.category),
       purity: (p.purity),

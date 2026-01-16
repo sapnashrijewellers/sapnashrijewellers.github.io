@@ -39,9 +39,11 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon.ico", rel: "shortcut icon" },
+      { url: "/favicon-96x96.png", sizes: "96x96", rel: "icon", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", rel: "icon", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", rel: "icon", type: "image/png" },
+      { url: "/favicon.ico", sizes: "48x48", rel: "icon", type: "image/x-icon" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
     ],
     apple: "/apple-touch-icon.png",
   },
@@ -72,15 +74,7 @@ export default function RootLayout({ children, }: { children: React.ReactNode; }
           href="/opensearch.xml"
         />
       </head>
-      <!-- Google tag (gtag.js) -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-93YXKJV18B"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-93YXKJV18B');
-      </script>
+      
       <body className={notoDevanagari.className}>
         <BadgeHandler />
         <AuthProvider>

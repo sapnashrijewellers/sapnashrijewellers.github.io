@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!product) return {};
 
   const baseProductUrl = `${baseURL}/product/${product.slug}`;
-  const title = `${product.name} by Sapna Shri Jewellers`;
+  const title = `${product.name} | ${product.hindiName} | by Sapna Shri Jewellers`;
   const description = `${product.description}`;
   const imageUrl = `${driveURL}${product.images?.[0]}`;
   const keywords = product.keywords;
@@ -97,24 +97,19 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
         items={[
           { name: "Home", href: "/" },
           { name: product.category, href: `/category/${category?.slug}` },
-          { name: product.name },
+          { name: `${product.name} | ${product.hindiName}` },
         ]}
       />
-
+      <h1 className="text-2xl md:text-3xl font-cinzel text-primary-dark font-semibold">
+        {product.name} | {product.hindiName}
+      </h1>
       <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-6 py-6 px-3">
-
-
         <div className="space-y-3 md:sticky md:top-20 self-start">
-          <h1 className="text-2xl md:text-3xl font-cinzel text-primary-dark font-semibold">
-            {product.name}
-          </h1>
-
           <ProductRating
             rating={product.rating ?? 4.6}
             count={product.ratingCount ?? 12}
             showExpert
           />
-
           <ProductGallery product={product} />
         </div>
         <div className="space-y-4">
@@ -150,12 +145,10 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
               </div>
             )}
           </div>
-
-          <HighlightsTabs product={product} />
-
           <p className="text-muted-foreground text-sm">
             {product.description}
           </p>
+          <HighlightsTabs product={product} />
 
           <ProductShare product={product} />
 
@@ -178,7 +171,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
           title="Points to consider before you buy jewellery"
           className="object-cover w-full rounded-lg"
           loading="lazy"
-          width={1200}          
+          width={1200}
           height={400}
           sizes="100vw"
         />

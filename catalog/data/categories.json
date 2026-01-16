@@ -1,14 +1,5 @@
 [
   {
-    "name": "सोने के राजपूतानी आभूषण",
-    "englishName": "Rajputani Gold Jewellery",
-    "rank": 1,
-    "slug": "rajputani-gold-jewellery",
-    "keywords": "Sone ke Rajputani Abhooshan,  Rajputi jewellery, Rajasthani gold jewellery, traditional gold set, heritage jewellery, राजपूतानी सेट, राजस्थानी आभूषण",
-    "description": "Experience the timeless grandeur of Rajasthan with handcrafted Rajputi gold designs that celebrate heritage, grace, and royal elegance.",
-    "active": true
-  },
-  {
     "name": "सोने की चैन",
     "englishName": "Gold Chain",
     "rank": 2,
@@ -18,30 +9,39 @@
     "active": true
   },
   {
+    "name": "सोने के ईयररिंग",
+    "englishName": "Gold Earrings (Tops)",
+    "rank": 14,
+    "slug": "gold-earrings-tops",
+    "keywords": "Sone ke Tops, Gold tops, 22k gold earrings, daily wear earrings",
+    "description": "Enhance your style with gold earrings designed for comfort, brilliance, and effortless everyday beauty.",
+    "active": true
+  },
+  {
+    "name": "सोने के राजपूतानी आभूषण",
+    "englishName": "Rajputani Gold Jewellery",
+    "rank": 1,
+    "slug": "rajputani-gold-jewellery",
+    "keywords": "Sone ke Rajputani Abhooshan,  Rajputi jewellery, Rajasthani gold jewellery, traditional gold set, heritage jewellery, राजपूतानी सेट, राजस्थानी आभूषण",
+    "description": "Experience the timeless grandeur of Rajasthan with handcrafted Rajputi gold designs that celebrate heritage, grace, and royal elegance.",
+    "active": true
+  },
+  {
+    "name": "सोने के आभूषण",
+    "englishName": "Gold Jewellery",
+    "rank": 9,
+    "slug": "gold-jewellery",
+    "keywords": "Sone ke Abhooshan, Gold ornaments, 22k jewellery, gold items",
+    "description": "Explore a world of premium gold jewellery where modern elegance meets timeless tradition—crafted to perfection for every occasion.",
+    "active": true
+  },
+  {
     "name": "सोने का हार",
     "englishName": "Gold Necklace",
     "rank": 3,
     "slug": "gold-necklace",
     "keywords": "Sone ka Haar, Ladies gold necklace, 22k gold necklace, jewellery necklace, हार, गोल्ड सेट, नेकलेस सेट",
     "description": "Elevate your look with exquisite gold necklaces designed to shine with unmatched craftsmanship and luxurious brilliance.",
-    "active": true
-  },
-  {
-    "name": "गोल्ड जेंट्स रिंग",
-    "englishName": "Gold Gents Ring",
-    "rank": 4,
-    "slug": "gold-gents-ring",
-    "keywords": "Gold Jents Ring        Men gold ring, gents ring 22k, gold band ring        जेंट्स अंगूठी, पुरुषों की अंगूठी",
-    "description": "Showcase your personality with bold and elegant gents’ gold rings crafted for confidence, class, and daily sophistication.",
-    "active": true
-  },
-  {
-    "name": "सोने की अंगुठी",
-    "englishName": "Gold womens Ring",
-    "rank": 5,
-    "slug": "gold-ladies-ring",
-    "keywords": "Gold Ledeez Ring,  Ladies gold ring, women 22k ring, daily wear ring,   लेडीज अंगूठी, महिला अंगूठी",
-    "description": "Adorn yourself with delicate yet striking gold rings designed to complement every mood, moment, and celebration.",
     "active": true
   },
   {
@@ -72,12 +72,12 @@
     "active": true
   },
   {
-    "name": "सोने के आभूषण",
-    "englishName": "Gold Jewellery",
-    "rank": 9,
-    "slug": "gold-jewellery",
-    "keywords": "Sone ke Abhooshan, Gold ornaments, 22k jewellery, gold items",
-    "description": "Explore a world of premium gold jewellery where modern elegance meets timeless tradition—crafted to perfection for every occasion.",
+    "name": "रानी हार",
+    "englishName": "Rani Haar",
+    "rank": 18,
+    "slug": "rani-haar",
+    "keywords": "Rani Haar, royal necklace, bridal jewellery, traditional gold jewellery, long necklace, Indian wedding jewellery, festive jewellery",
+    "description": "Rani Haar – a traditional royal long necklace worn for weddings and grand occasions.",
     "active": true
   },
   {
@@ -90,12 +90,93 @@
     "active": true
   },
   {
-    "name": "चांदी का कन्दोरा",
-    "englishName": "Silver Waist Belt",
-    "rank": 11,
-    "slug": "silver-waist-belt",
-    "keywords": "Chaandi ka Kandora, Silver kamarbandh, silver waist chain, bridal kandora",
-    "description": "Make a statement with beautifully crafted silver waist belts that blend regal design with contemporary elegance.",
+    "name": "मंगलसूत्र",
+    "englishName": "Mangalsutra",
+    "rank": 17,
+    "slug": "mangalsutra",
+    "keywords": "Mangalsutra, Black bead necklace, gold mangalsutra, traditional jewellery",
+    "description": "A symbol of love and tradition—crafted with premium gold detailing to honor every bride’s timeless journey.",
+    "active": true
+  },
+  {
+    "name": "गिफ्ट आइटम",
+    "englishName": "Gift Item",
+    "rank": 24,
+    "slug": "gift-item",
+    "keywords": "Luxury Gift Ideas, Gifts for Him/Her, Wedding Anniversary Gifts, Birthday Gifts for Mom, Affordable Gift Items, New Year Gifts",
+    "description": "Find the perfect expression of love with our curated collection of unique gift items. Whether it's a special anniversary or a corporate celebration, explore gifts that truly delight and inspire.",
+    "active": true
+  },
+  {
+    "name": "सोने की अंगुठी",
+    "englishName": "Gold womens Ring",
+    "rank": 5,
+    "slug": "gold-ladies-ring",
+    "keywords": "Gold Ledeez Ring,  Ladies gold ring, women 22k ring, daily wear ring,   लेडीज अंगूठी, महिला अंगूठी",
+    "description": "Adorn yourself with delicate yet striking gold rings designed to complement every mood, moment, and celebration.",
+    "active": true
+  },
+  {
+    "name": "गोल्ड कॉइन और बार",
+    "englishName": "Gold Coin & Bar",
+    "rank": 15,
+    "slug": "gold-coin-bar",
+    "keywords": "Gold Koin aur Baar, Gold investment coin, 24k gold bar, gold bullion",
+    "description": "Invest with confidence—premium purity gold coins and bars crafted for value, trust, and long-term security.",
+    "active": true
+  },
+  {
+    "name": "सोने का कंदोरा",
+    "englishName": "Gold Kandora(Belt)",
+    "rank": 20,
+    "slug": "gold-kandora-belt",
+    "keywords": "gold kandora, gold waist belt, bridal kandora, traditional jewellery belt, wedding jewellery, gold kamarbandh, ethnic waist belt",
+    "description": "Gold Kandora Belt crafted in traditional design, ideal for bridal and festive attire.",
+    "active": true
+  },
+  {
+    "name": "गोल्ड जेंट्स रिंग",
+    "englishName": "Gold Gents Ring",
+    "rank": 4,
+    "slug": "gold-gents-ring",
+    "keywords": "Gold Jents Ring        Men gold ring, gents ring 22k, gold band ring        जेंट्स अंगूठी, पुरुषों की अंगूठी",
+    "description": "Showcase your personality with bold and elegant gents’ gold rings crafted for confidence, class, and daily sophistication.",
+    "active": true
+  },
+  {
+    "name": "सोने की चूड़ी",
+    "englishName": "Gold bangles",
+    "rank": 21,
+    "slug": "gold-bangles",
+    "keywords": "gold bangles, gold chudi, ladies bangles, daily wear gold jewellery, traditional bangles, wedding bangles, gold bracelet styles",
+    "description": "Gold Bangles with classic craftsmanship suitable for daily wear and festive dressing.",
+    "active": true
+  },
+  {
+    "name": "गोल्ड एंटीक ज्वेलरी",
+    "englishName": "Gold Antique Sets",
+    "rank": 19,
+    "slug": "gold-antique-sets",
+    "keywords": "gold antique sets, antique jewellery, vintage gold designs, traditional jewellery sets, wedding jewellery, heritage gold jewellery",
+    "description": "Available on order only. Gold Antique Sets featuring vintage craftsmanship and intricate detailing.",
+    "active": true
+  },
+  {
+    "name": "हैण्डमेड ज्वेलरी",
+    "englishName": "Customize Jewellery",
+    "rank": 23,
+    "slug": "customize-jewellery",
+    "keywords": "Design Your Own Ring, Custom Made Necklace, Personalized Name Pendants, Handmade Silver Jewelry, Custom Engagement Rings, Unique Handmade Gifts",
+    "description": "Unleash your creativity. Our expert artisans bring your vision to life with hand-crafted, bespoke jewellery. From personalized nameplates to custom-designed engagement rings, make it truly yours.",
+    "active": true
+  },
+  {
+    "name": "चांदी की पोची",
+    "englishName": "Silver Bracelet (Pochi)",
+    "rank": 16,
+    "slug": "silver-toe-ring-pochi",
+    "keywords": "Chaandi ki Pochi, Silver bichhiya, toe ring pair, 925 toe ring",
+    "description": "Traditional elegance meets modern design with pure silver toe rings made for comfort, beauty, and cultural significance.",
     "active": true
   },
   {
@@ -117,75 +198,12 @@
     "active": true
   },
   {
-    "name": "सोने के ईयररिंग",
-    "englishName": "Gold Earrings (Tops)",
-    "rank": 14,
-    "slug": "gold-earrings-tops",
-    "keywords": "Sone ke Tops, Gold tops, 22k gold earrings, daily wear earrings",
-    "description": "Enhance your style with gold earrings designed for comfort, brilliance, and effortless everyday beauty.",
-    "active": true
-  },
-  {
-    "name": "गोल्ड कॉइन और बार",
-    "englishName": "Gold Coin & Bar",
-    "rank": 15,
-    "slug": "gold-coin-bar",
-    "keywords": "Gold Koin aur Baar, Gold investment coin, 24k gold bar, gold bullion",
-    "description": "Invest with confidence—premium purity gold coins and bars crafted for value, trust, and long-term security.",
-    "active": true
-  },
-  {
-    "name": "चांदी की पोची",
-    "englishName": "Silver Bracelet (Pochi)",
-    "rank": 16,
-    "slug": "silver-toe-ring-pochi",
-    "keywords": "Chaandi ki Pochi, Silver bichhiya, toe ring pair, 925 toe ring",
-    "description": "Traditional elegance meets modern design with pure silver toe rings made for comfort, beauty, and cultural significance.",
-    "active": true
-  },
-  {
-    "name": "मंगलसूत्र",
-    "englishName": "Mangalsutra",
-    "rank": 17,
-    "slug": "mangalsutra",
-    "keywords": "Mangalsutra, Black bead necklace, gold mangalsutra, traditional jewellery",
-    "description": "A symbol of love and tradition—crafted with premium gold detailing to honor every bride’s timeless journey.",
-    "active": true
-  },
-  {
-    "name": "रानी हार",
-    "englishName": "Rani Haar",
-    "rank": 18,
-    "slug": "rani-haar",
-    "keywords": "Rani Haar, royal necklace, bridal jewellery, traditional gold jewellery, long necklace, Indian wedding jewellery, festive jewellery",
-    "description": "Rani Haar – a traditional royal long necklace worn for weddings and grand occasions.",
-    "active": true
-  },
-  {
-    "name": "गोल्ड एंटीक ज्वेलरी",
-    "englishName": "Gold Antique Sets",
-    "rank": 19,
-    "slug": "gold-antique-sets",
-    "keywords": "gold antique sets, antique jewellery, vintage gold designs, traditional jewellery sets, wedding jewellery, heritage gold jewellery",
-    "description": "Available on order only. Gold Antique Sets featuring vintage craftsmanship and intricate detailing.",
-    "active": true
-  },
-  {
-    "name": "सोने का कंदोरा",
-    "englishName": "Gold Kandora(Belt)",
-    "rank": 20,
-    "slug": "gold-kandora-belt",
-    "keywords": "gold kandora, gold waist belt, bridal kandora, traditional jewellery belt, wedding jewellery, gold kamarbandh, ethnic waist belt",
-    "description": "Gold Kandora Belt crafted in traditional design, ideal for bridal and festive attire.",
-    "active": true
-  },
-  {
-    "name": "सोने की चूड़ी",
-    "englishName": "Gold bangles",
-    "rank": 21,
-    "slug": "gold-bangles",
-    "keywords": "gold bangles, gold chudi, ladies bangles, daily wear gold jewellery, traditional bangles, wedding bangles, gold bracelet styles",
-    "description": "Gold Bangles with classic craftsmanship suitable for daily wear and festive dressing.",
+    "name": "चांदी का कन्दोरा",
+    "englishName": "Silver Waist Belt",
+    "rank": 11,
+    "slug": "silver-waist-belt",
+    "keywords": "Chaandi ka Kandora, Silver kamarbandh, silver waist chain, bridal kandora",
+    "description": "Make a statement with beautifully crafted silver waist belts that blend regal design with contemporary elegance.",
     "active": true
   },
   {
@@ -195,24 +213,6 @@
     "slug": "gems-and-jewellery",
     "keywords": "Astrology Gemstones, Healing Crystal Jewellery, Birthstone Pendants, Rashi Ratna, Original Gemstone Price, Stone Rings, Wholesale Gems",
     "description": "Discover the vibrancy of nature with our hand-selected, certified gemstones and jewellery. Find your Rashi Ratna or a stunning natural diamond piece for every occasion.",
-    "active": true
-  },
-  {
-    "name": "हैण्डमेड ज्वेलरी",
-    "englishName": "Customize Jewellery",
-    "rank": 23,
-    "slug": "customize-jewellery",
-    "keywords": "Design Your Own Ring, Custom Made Necklace, Personalized Name Pendants, Handmade Silver Jewelry, Custom Engagement Rings, Unique Handmade Gifts",
-    "description": "Unleash your creativity. Our expert artisans bring your vision to life with hand-crafted, bespoke jewellery. From personalized nameplates to custom-designed engagement rings, make it truly yours.",
-    "active": true
-  },
-  {
-    "name": "गिफ्ट आइटम",
-    "englishName": "Gift Item",
-    "rank": 24,
-    "slug": "gift-item",
-    "keywords": "Luxury Gift Ideas, Gifts for Him/Her, Wedding Anniversary Gifts, Birthday Gifts for Mom, Affordable Gift Items, New Year Gifts",
-    "description": "Find the perfect expression of love with our curated collection of unique gift items. Whether it's a special anniversary or a corporate celebration, explore gifts that truly delight and inspire.",
     "active": true
   },
   {
@@ -228,45 +228,63 @@
     "name": "चांदी की बिछिया",
     "englishName": "Silver Toe Ring",
     "rank": 26,
-    "slug": "",
-    "keywords": "",
-    "description": "",
+    "slug": "silver-toe-ring",
+    "keywords": "silver bichhiya, traditional toe rings, adjustable silver rings",
+    "description": "Elegant handcrafted silver toe rings for traditional and daily wear.",
     "active": true
   },
   {
     "name": "चांदी की बाली",
     "englishName": "Silver Bali Studs",
     "rank": 27,
-    "slug": "",
-    "keywords": "",
-    "description": "",
+    "slug": "silver-bali-studs",
+    "keywords": "silver earrings, bali studs, hoop earrings, 925 silver",
+    "description": "Classic silver bali and stud earrings featuring intricate craftsmanship.",
     "active": true
   },
   {
     "name": "चांदी के मंगलसूत्र",
     "englishName": "Silver MangalSutra",
     "rank": 28,
-    "slug": "",
-    "keywords": "",
-    "description": "",
+    "slug": "silver-mangalsutra",
+    "keywords": "silver mangalsutra, ethnic neckwear, silver jewelry for women",
+    "description": "Beautifully designed silver mangalsutras blending tradition with modern style.",
     "active": true
   },
   {
     "name": "बच्चो की सिल्वर ज्वेलरी",
-    "englishName": "Kidswear",
+    "englishName": "Kids Silver Jewellery",
     "rank": 29,
-    "slug": "",
-    "keywords": "",
-    "description": "",
+    "slug": "kids-silver-jewellery",
+    "keywords": "baby silver bangles, kids silver chain, silver gifts for infants",
+    "description": "Safe and charming silver jewellery collection specially designed for children.",
     "active": true
   },
   {
     "name": "चांदी की अंगुठी",
     "englishName": "Silver Ring",
     "rank": 30,
-    "slug": "",
-    "keywords": "",
-    "description": "",
+    "slug": "silver-ring",
+    "keywords": "silver finger rings, sterling silver rings, bridal silver rings",
+    "description": "Exquisite silver rings available in various designs for all occasions.",
+    "active": true
+  },
+  {
+    "name": "पुरुषों के चांदी के आभूषण",
+    "englishName": "Gents Silver Accessories",
+    "rank": 31,
+    "slug": "gents-silver-accessories",
+    "keywords": "silver kadas, men's silver rings, gents silver chains",
+    "description": "Bold and stylish silver accessories including kadas and rings for men.",
+    "active": true
+  },
+  {
+    "name": "महिलाओं के चांदी के आभूषण",
+    "englishName": "Women Silver Accessories",
+    "rank": 32,
+    "slug": "women-silver-jewellery",
+    "keywords": "women's silver ornaments, silver necklaces, ladies silver sets",
+    "description": "A premium range of silver jewellery and accessories for the modern woman.",
     "active": true
   }
 ]

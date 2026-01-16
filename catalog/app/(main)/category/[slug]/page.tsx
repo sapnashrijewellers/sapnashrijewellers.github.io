@@ -7,6 +7,7 @@ import { notFound } from "next/navigation";
 import Breadcrumb from "@/components/navbar/BreadcrumbItem";
 import { buildCategoryPageJsonLd } from "@/utils/buildCategoryPageJsonLd";
 import JsonLd from "@/components/common/JsonLd";
+import RotatingBanner from "@/components/banners/RotatingBanner";
 
 
 const baseURL = process.env.BASE_URL;
@@ -98,6 +99,9 @@ export default async function CategoryPage({ params }: { params: { slug: string 
                     {category.description}
                 </p>
             </div>
+            <div className="mb-6">
+                    <RotatingBanner key={category.slug}  page={category.slug} />
+                  </div>
             {filtered.length === 0 ? (
                 <p>इस श्रेणी में कोई उत्पाद नहीं मिला.</p>
             ) : (

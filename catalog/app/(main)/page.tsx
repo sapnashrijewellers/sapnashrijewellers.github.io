@@ -49,7 +49,7 @@ export default function Home() {
   return (
     <div className="container mx-auto">
       <div className="mb-6">
-        <RotatingBanner />
+        <RotatingBanner page="home" />
       </div>
       <div>
         <h2 className="au-h2">Jewellery for Every Occasion</h2>

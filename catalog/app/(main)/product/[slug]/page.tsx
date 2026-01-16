@@ -20,6 +20,11 @@ import formatPurity from "@/utils/utils.js";
 import NewArrivals from "@/components/product/NewArrivals";
 import YouMAyAlsoLike from "@/components/product/YouMayAlsoLike";
 import TestimonialScroller from "@/components/common/Testimonials"
+import TrustSignalsRibbon from "@/components/product/TrustSignalsRibbon";
+import CareInstructions from "@/components/product/CareInstructions";
+import ProductSizeSelector from "@/components/product/ProductSizeSelector";
+import BulkEnquiry from "@/components/product/BulkEnquiry";
+
 
 
 
@@ -131,6 +136,10 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
             <div className="text-sm space-y-1">
               <p><span className="font-medium">Purity:</span> {formatPurity(product.purity)}</p>
               <p><span className="font-medium">Weight:</span> {product.weight} g</p>
+              {product.brandText && product.brandText.length > 2 && (
+                <p><span className="font-medium">Brand:</span> {product.brandText}</p>
+              )}
+
             </div>
 
             {product.purity.toLowerCase().startsWith("gold") && product.weight > 2 && (
@@ -148,6 +157,9 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
           <p className="text-muted-foreground text-sm">
             {product.description}
           </p>
+          <ProductSizeSelector
+            size={product.size}                        
+          />
           <HighlightsTabs product={product} />
 
           <ProductShare product={product} />
@@ -158,6 +170,10 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
           </div>
         </div>
       </div>
+      
+      <TrustSignalsRibbon product={product} />
+      <BulkEnquiry product={product} />
+      <CareInstructions careKey={product.care} />
       <WishListBar />
       <TestimonialScroller />
       <YouMAyAlsoLike product={product} products={products} />

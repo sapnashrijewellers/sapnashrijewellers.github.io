@@ -10,10 +10,6 @@ import type { ComponentType } from "react";
 
 import banners from "@/data/banners.json";
 
-interface Props {
-  interval?: number;
-  height?: string;
-}
 
 const baseURL = process.env.BASE_URL ?? "";
 
@@ -110,6 +106,11 @@ const imageAnimationMap = {
   }
 } as const;
 
+interface Props {
+  interval?: number;
+  height?: string;
+  page?: string;
+}
 
 
 /* --------------------------------------------
@@ -117,12 +118,15 @@ const imageAnimationMap = {
 --------------------------------------------- */
 export default function RotatingBanner({
   interval = 15000,
-  height = "h-120"
+  height = "h-120",
+  page = "home"
 }: Props) {
   const items = banners
-    .filter(b => b.active)
+    .filter(b => b.active && b.page === page)
     .sort((a, b) => a.rank - b.rank);
-
+  if (items.length === 0) {
+    return null;
+  }
   const [index, setIndex] = useState(0);
 
   const reducedMotion = useReducedMotion();

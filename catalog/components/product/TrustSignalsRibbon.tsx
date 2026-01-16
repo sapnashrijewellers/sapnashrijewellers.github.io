@@ -1,5 +1,5 @@
 import { ShieldCheck, Truck, CreditCard, IndianRupee, BadgeCheck, Hammer, Heart, Globe, RefreshCcw } from "lucide-react";
-import type { Product } from "./types";
+import type { Product } from "@/types/catalog";
 
 interface Props {
   product: Product;
@@ -36,6 +36,11 @@ export default function TrustSignalsRibbon({ product }: Props) {
     },
     {
       show: true,
+      icon: ShieldCheck,
+      label: "6 Month Warranty",
+    },
+    {
+      show: true,
       icon: Heart,
       label: "Skin Safe",
     },
@@ -62,7 +67,7 @@ export default function TrustSignalsRibbon({ product }: Props) {
   ];
 
   return (
-    <section className="bg-surface border border-theme rounded-xl p-4 md:p-6">
+    <section className="bg-surface rounded-xl py-4">
       <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
         {signals
           .filter((s) => s.show)

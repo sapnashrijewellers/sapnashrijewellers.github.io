@@ -1,0 +1,158 @@
+[
+  {
+    "id": "1",
+    "instructionType": "GOLD_GENERAL",
+    "instruction": "Avoid contact with perfumes, deodorants, and harsh chemicals",
+    "iconKey": "FlaskConical"
+  },
+  {
+    "id": "2",
+    "instructionType": "GOLD_GENERAL",
+    "instruction": "Remove jewellery before bathing, swimming, or heavy physical activity",
+    "iconKey": "DropletOff"
+  },
+  {
+    "id": "3",
+    "instructionType": "GOLD_GENERAL",
+    "instruction": "Clean gently using a soft, dry cloth",
+    "iconKey": "Sparkles"
+  },
+  {
+    "id": "4",
+    "instructionType": "GOLD_GENERAL",
+    "instruction": "Store separately to avoid scratches",
+    "iconKey": "Box"
+  },
+  {
+    "id": "5",
+    "instructionType": "GOLD_GENERAL",
+    "instruction": "Avoid frequent polishing to maintain finish",
+    "iconKey": "Eraser"
+  },
+  {
+    "id": "6",
+    "instructionType": "SILVER_GENERAL",
+    "instruction": "Store in an airtight pouch to reduce tarnishing",
+    "iconKey": "Archive"
+  },
+  {
+    "id": "7",
+    "instructionType": "SILVER_GENERAL",
+    "instruction": "Keep away from moisture and humidity",
+    "iconKey": "CloudOff"
+  },
+  {
+    "id": "8",
+    "instructionType": "SILVER_GENERAL",
+    "instruction": "Clean using a soft silver polishing cloth",
+    "iconKey": "Sparkles"
+  },
+  {
+    "id": "9",
+    "instructionType": "SILVER_GENERAL",
+    "instruction": "Avoid contact with perfumes, lotions, and chemicals",
+    "iconKey": "FlaskConical"
+  },
+  {
+    "id": "10",
+    "instructionType": "SILVER_GENERAL",
+    "instruction": "Remove before bathing or swimming",
+    "iconKey": "DropletOff"
+  },
+  {
+    "id": "11",
+    "instructionType": "GEMSTONE_GENERAL",
+    "instruction": "Avoid water, perfumes, and chemical cleaners",
+    "iconKey": "FlaskConical"
+  },
+  {
+    "id": "12",
+    "instructionType": "GEMSTONE_GENERAL",
+    "instruction": "Do not expose to excessive heat or direct sunlight",
+    "iconKey": "Sun"
+  },
+  {
+    "id": "13",
+    "instructionType": "GEMSTONE_GENERAL",
+    "instruction": "Store separately to prevent stone damage",
+    "iconKey": "Box"
+  },
+  {
+    "id": "14",
+    "instructionType": "GEMSTONE_GENERAL",
+    "instruction": "Clean gently with a soft, dry cloth only",
+    "iconKey": "Sparkles"
+  },
+  {
+    "id": "15",
+    "instructionType": "ENAMEL_MEENAKARI",
+    "instruction": "Avoid water and moisture to protect enamel work",
+    "iconKey": "DropletOff"
+  },
+  {
+    "id": "16",
+    "instructionType": "ENAMEL_MEENAKARI",
+    "instruction": "Do not rub or scrub enamel surfaces",
+    "iconKey": "CircleSlash"
+  },
+  {
+    "id": "17",
+    "instructionType": "ENAMEL_MEENAKARI",
+    "instruction": "Store carefully to prevent chipping",
+    "iconKey": "GlassWater"
+  },
+  {
+    "id": "18",
+    "instructionType": "ANTIQUE_FINISH",
+    "instruction": "Do not polish frequently as it may remove antique finish",
+    "iconKey": "Eraser"
+  },
+  {
+    "id": "19",
+    "instructionType": "ANTIQUE_FINISH",
+    "instruction": "Avoid liquid jewellery cleaners",
+    "iconKey": "FlaskConical"
+  },
+  {
+    "id": "20",
+    "instructionType": "ANTIQUE_FINISH",
+    "instruction": "Store in a dry, padded box",
+    "iconKey": "BoxSelect"
+  },
+  {
+    "id": "21",
+    "instructionType": "BLACK_BEADS_THREAD",
+    "instruction": "Avoid pulling or twisting the beads or thread",
+    "iconKey": "Hand"
+  },
+  {
+    "id": "22",
+    "instructionType": "BLACK_BEADS_THREAD",
+    "instruction": "Remove before bathing or sleeping",
+    "iconKey": "Moon"
+  },
+  {
+    "id": "23",
+    "instructionType": "BLACK_BEADS_THREAD",
+    "instruction": "Handle with care to avoid breakage",
+    "iconKey": "GlassWater"
+  },
+  {
+    "id": "24",
+    "instructionType": "HANDCRAFTED_GENERAL",
+    "instruction": "Handle with extra care as the jewellery is handcrafted",
+    "iconKey": "Heart"
+  },
+  {
+    "id": "25",
+    "instructionType": "HANDCRAFTED_GENERAL",
+    "instruction": "Minor variations are part of the craftsmanship",
+    "iconKey": "Hammer"
+  },
+  {
+    "id": "26",
+    "instructionType": "HANDCRAFTED_GENERAL",
+    "instruction": "Avoid rough usage or impact",
+    "iconKey": "ShieldAlert"
+  }
+]

@@ -34,7 +34,7 @@ export default function Calculator() {
   const [form, setForm] = useState<CalculatorForm>({
     purity: product ? product.purity : "gold22K",
     weight: product ? product.weight : 10,
-    makingCharges: product ? "" : 7, // ✅ blank if product-based
+    makingCharges: product ? "" : 3.5, // ✅ blank if product-based
     gst: 3,
   });
 

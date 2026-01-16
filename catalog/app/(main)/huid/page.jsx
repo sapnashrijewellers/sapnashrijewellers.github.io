@@ -35,7 +35,7 @@ export const metadata = {
 
 
 export default function HUIDInfo() {
-const description = metadata.description;
+  const description = metadata.description;
   const ldjson = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -124,6 +124,9 @@ const description = metadata.description;
           <strong>हॉलमार्किंग अनिवार्य</strong> है।
         </li>
         <li>
+          चांदी के गहनों के लिए <strong>हॉलमार्किंग अनिवार्य नहीं</strong> है (यह स्वैच्छिक है)।
+        </li>
+        <li>
           2 ग्राम से कम वज़न वाले सोने के गहनों को{" "}
           <strong>हॉलमार्किंग से छूट</strong> है।
         </li>
@@ -144,12 +147,12 @@ const description = metadata.description;
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <figure className="text-center">
             <Image
-  src={`${baseURL}/static/img/hallmark-sample1.png`}
-  alt="सोने की चूड़ी पर हॉलमार्क स्थान"
-  width={400}
-  height={250}
-  className="w-full max-w-md h-auto rounded-xl shadow-sm mx-auto transition-transform duration-300 hover:scale-105"
-/>
+              src={`${baseURL}/static/img/hallmark-sample1.png`}
+              alt="सोने की चूड़ी पर हॉलमार्क स्थान"
+              width={400}
+              height={250}
+              className="w-full max-w-md h-auto rounded-xl shadow-sm mx-auto transition-transform duration-300 hover:scale-105"
+            />
             <figcaption className="mt-2 text-sm text-muted-foreground">
               सोने की चूड़ी पर HUID और BIS मार्क स्थान
             </figcaption>

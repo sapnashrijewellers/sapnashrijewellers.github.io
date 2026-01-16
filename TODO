@@ -42,18 +42,17 @@ Todo:
   ✔ Navigation Bar – 18K Gold Pricing: - Remove Silver price- Display 18K Gold price Formula: 24K Gold Price × 75% @done(26-01-16 15:37)
 ☐ Product Detail Page – Pricing Logic : - Silver price shown only if making charges apply (+- MC +-Absolute)- Hide calculator when final price exists
     ☐ Touch-Swipe & Carousel: - Swipe-enabled product galleries
-    ☐ Brand / Identity Field- New catalog field: brandText- Display below Weight & Purity
-    ☐ Trust Signals Ribbon All - Metal type, certification, warranty, returns, online payments (CC,DC, UPI), craftsmanship, skin-safe, All India Delivery
-      ☐ Gold: Online payment. 
-      ☐ Silver: - COD
-    ☐ Bulk Enquiry - Product, Quantity, Requirements → WhatsApp
-    ☐ Dedicated CTA & form for corporate/event orders
-    ☐ Size Selection: Size must go in ShipRocket order details
-      ☐ Rings: 1–28
-      ☐ Bangles/Bracelets: 2-0 to 3-0
-      ☐ Chain -
-    ☐ Care Instructions Expandable PDP section - general instructions for gold and silver
-☐ Shiprocket Integration
+    ✔ Brand / Identity Field- New catalog field: brandText- Display below Weight & Purity @done(26-01-16 19:00)
+    ☐ Return Policy- Detailed policy page with T&C
+    ☐ Bulk Enquiry - Product, Quantity, Requirements → WhatsApp    ☐ Dedicated CTA & form for corporate/event orders
+    ✔ Size Selection: Size must go in ShipRocket order details @done(26-01-16 19:00)      ☐ Rings: 1–28      ☐ Bangles/Bracelets: 2-0 to 3-0      ☐ Chain -
+    ✔ Care Instructions Expandable PDP section - general instructions for gold and silver @done(26-01-16 18:40)
+    ✔ Trust Signals Ribbon All - Metal type, certification, warranty, returns, online payments (CC,DC, UPI), craftsmanship, skin-safe, All India Delivery @started(26-01-16 16:41) @done(26-01-16 16:41) @lasted(1m)
+      ✔ Gold: Online payment. @started(26-01-16 16:41) @done(26-01-16 16:42) @lasted(1m)
+      ✔ Silver: - COD @started(26-01-16 16:41) @done(26-01-16 16:42) @lasted(1m1s)
+
+
+      ☐ Shiprocket Integration
     ☐ Automated logistics
     ☐ Stock-based CTA behavior
     ☐ WhatsApp inquiry for out-of-stock
@@ -61,13 +60,13 @@ Todo:
         ☐ Order → Shipped → Delivered
         ☐ Live updates from Shiprocket
 
-☐ Return Policy- Detailed policy page with T&C
+
 ☐ Filters- Material [Gold | Silver] & Price range filters
-☐ Hallmark Page- Silver hallmarking not compulsory
-☐ Home & Category Banners - Images will be provided by Amish
+✔ Hallmark Page- Silver hallmarking not compulsory @done(26-01-16 19:09)
+✔ Home & Category Banners - Images will be provided by Amish @done(26-01-16 19:44)
 ✔ Full banner must be clickable @done(26-01-16 15:45)
-☐ Rajputani jewellery banner - Amish will provide image
-☐ Calculator - When directly navigate to calculator page,  default making charges must be: 3.5% rather than existing 7%
+✔ Rajputani jewellery banner - Amish will provide image @done(26-01-16 19:40)
+✔ Calculator - When directly navigate to calculator page,  default making charges must be: 3.5% rather than existing 7% @done(26-01-16 19:44)
 
 
 

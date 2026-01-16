@@ -1,5 +1,6 @@
 [
   {
+    "id": "1",
     "rank": 3,
     "title": "Rajputani Jewellery",
     "subtitle": "Timeless royal designs inspired by heritage",
@@ -12,9 +13,11 @@
     "position": "bottom-left",
     "textAnimation": "slide-up",
     "imageAnimation": "pan-right",
-    "bgImage": "/img/banner/bajuband.png"
+    "bgImage": "/img/banner/bajuband.png",
+    "page": "home"
   },
   {
+    "id": "2",
     "rank": 4,
     "title": "Bridal Collection",
     "subtitle": "Exquisite jewellery for your big day",
@@ -27,9 +30,11 @@
     "position": "top-right",
     "textAnimation": "slide-down",
     "imageAnimation": "subtle-zoom",
-    "bgImage": "/img/banner/bride.jpg"
+    "bgImage": "/img/banner/bride.jpg",
+    "page": "home"
   },
   {
+    "id": "3",
     "rank": 5,
     "title": "Customize Jewellery",
     "subtitle": "Design your unique jewellery piece",
@@ -42,9 +47,11 @@
     "position": "top-left",
     "textAnimation": "fade",
     "imageAnimation": "pan-right",
-    "bgImage": "/img/banner/custom.png"
+    "bgImage": "/img/banner/custom.png",
+    "page": "home"
   },
   {
+    "id": "4",
     "rank": 1,
     "title": "सांवरिया सेठ रिंग",
     "subtitle": "आस्था का पावन दिव्य आभूषण",
@@ -57,6 +64,41 @@
     "position": "bottom-left",
     "textAnimation": "zoom-fade",
     "imageAnimation": "fade",
-    "bgImage": "/img/products/optimized/IMG_20251003_062204.webp"
+    "bgImage": "/img/products/optimized/IMG_20251003_062204.webp",
+    "page": "home"
+  },
+  {
+    "id": "5",
+    "rank": 6,
+    "title": "सांवरिया सेठ रिंग",
+    "subtitle": "आस्था का पावन दिव्य आभूषण",
+    "subtitle1": "",
+    "link": "/category/sawariya-seth-ring/",
+    "icon": "Diamond",
+    "textColor": "text-white",
+    "fontFamily": "font-yatra",
+    "active": true,
+    "position": "bottom-left",
+    "textAnimation": "zoom-fade",
+    "imageAnimation": "fade",
+    "bgImage": "/img/products/optimized/IMG_20251003_062204.webp",
+    "page": "sawariya-seth-ring"
+  },
+  {
+    "id": "6",
+    "rank": 7,
+    "title": "Customize Jewellery",
+    "subtitle": "Design your unique jewellery piece",
+    "subtitle1": "",
+    "link": "/customize",
+    "icon": "Sparkles",
+    "textColor": "text-white",
+    "fontFamily": "font-playfair",
+    "active": true,
+    "position": "top-left",
+    "textAnimation": "fade",
+    "imageAnimation": "pan-right",
+    "bgImage": "/img/banner/custom.png",
+    "page": "sawariya-seth-ring"
   }
 ]

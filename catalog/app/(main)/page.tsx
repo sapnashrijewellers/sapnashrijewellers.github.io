@@ -6,6 +6,7 @@ import type { Product } from "@/types/catalog";
 import products from "@/data/products.json";
 import ProductCard from "@/components/product/ProductCard";
 import TestimonialScroller from "@/components/common/Testimonials"
+import SignatureCollections from "@/components/home/SignatureCollections";
 
 const title = `Sapna Shri Jewellers`;
 const description = `Explore out latest products at Sapna Shri Jewellers Nagda. High-quality gold & silver jewellery with BIS 916 certification.`;
@@ -69,27 +70,8 @@ export default function Home() {
           </div>) : <div></div>}
       </div>
       <TestimonialScroller />
-      <div>
-        <h2 className="au-h2">Our Signature Collections</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-
-          {categories
-          .filter(c=> c.active)
-          .sort((a, b) => a.rank - b.rank).map(cat => {
-            const productsForCategory = products.filter(p => p.category == cat.name) || [];
-            if (productsForCategory.length === 0) {
-              return null;
-            }
-            return (
-              <CategoryCard
-                key={cat.name}
-                category={cat}
-                products={productsForCategory}
-              />
-            );
-          })}
-        </div>
-      </div>
+      <SignatureCollections categories={categories} products={products} />
+      
     </div>
   );
 }

@@ -17,8 +17,7 @@ export interface Product {
   slug: string;
   active: boolean;
   description: string;
-  makingCharges: number;
-  gst: number;
+  makingCharges: number;  
   available?: boolean;
   rating: number;
   ratingCount: number;

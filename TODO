@@ -42,11 +42,12 @@ Todo:
   ✔ Navigation Bar – 18K Gold Pricing: - Remove Silver price- Display 18K Gold price Formula: 24K Gold Price × 75% @done(26-01-16 15:37)
 
 ✔ Filters- Material [Gold | Silver] & Price range filters @done(26-01-17 11:13)
-☐ Product Card: When two image then change image on hover
-☐ Product Detail Page – Pricing Logic: - Silver price shown only if making charges apply (+- MC +-Absolute)- Hide calculator when final price exists
-  ☐ Touch-Swipe & Carousel: - Swipe-enabled product galleries
-  ☐ Return Policy- Detailed policy page with T&C
-  ☐ Bulk Enquiry - Product, Quantity, Requirements → WhatsApp    ☐ Dedicated CTA & form for corporate/event orders
+✔ Product Card: When two image then change image on hover @done(26-01-17 11:18)
+✔ Product Detail Page – 
+  ✔ Pricing Logic: - Silver price shown only if making charges apply (+- MC +-Absolute)- Hide calculator when final price exists @started(26-01-17 16:28) @done(26-01-17 16:28) @lasted(12s)
+  ✔ Touch-Swipe & Carousel: - Swipe-enabled product galleries @done(26-01-17 18:13)
+  ✔ Return Policy- Detailed policy page with T&C @done(26-01-17 18:01)
+  ✔ Bulk Enquiry - Product, Quantity, Requirements → WhatsApp    ☐ Dedicated CTA & form for corporate/event orders @done(26-01-17 11:19)
   ✔ Brand / Identity Field- New catalog field: brandText- Display below Weight & Purity @done(26-01-16 19:00)
   ✔ Size Selection: Size must go in ShipRocket order details @done(26-01-16 19:00)      ☐ Rings: 1–28      ☐ Bangles/Bracelets: 2-0 to 3-0      ☐ Chain -
   ✔ Care Instructions Expandable PDP section - general instructions for gold and silver @done(26-01-16 18:40)
@@ -55,13 +56,15 @@ Todo:
   ✔ Silver: - COD @started(26-01-16 16:41) @done(26-01-16 16:42) @lasted(1m1s)
 
 
-☐ Shiprocket Integration
-    ☐ Automated logistics
-    ☐ Stock-based CTA behavior
-    ☐ WhatsApp inquiry for out-of-stock
-    ☐ Shipping Status
-        ☐ Order → Shipped → Delivered
-        ☐ Live updates from Shiprocket
+
+
+
+certified Purity --> What about silver products? What about < 2 gram gold products?
+Where is return policy
+do we need to mention COD?
+ --> Trust signals: 
+  return policy required
+
 
 
 

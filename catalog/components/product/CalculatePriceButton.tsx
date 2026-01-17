@@ -1,7 +1,7 @@
 import { Calculator } from 'lucide-react';
 import { Product } from "@/types/catalog";
 
-const CalculatePrice = ({ product }: { product: Product }) => {
+const CalculatePriceButton = ({ product }: { product: Product }) => {
 
   return (
     <a
@@ -20,4 +20,4 @@ const CalculatePrice = ({ product }: { product: Product }) => {
   );
 };
 
-export default CalculatePrice;
+export default CalculatePriceButton;

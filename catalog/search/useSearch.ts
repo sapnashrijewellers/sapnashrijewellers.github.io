@@ -56,7 +56,9 @@ export function useSearch(
       makingCharges: 0,
       gst: 0,
       rating: p.rating,
-      ratingCount: p.ratingCount
+      ratingCount: p.ratingCount,
+      brandText: "",
+      size:""
 
     }));
   }

@@ -5,6 +5,8 @@ import Image from "next/image";
 import { Product } from "@/types/catalog";
 import WishlistButton from "@/components/common/WishlistButton";
 
+const SWIPE_THRESHOLD = 50; // px
+
 export default function ProductGallery({ product }: { product: Product }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [zoomStyle, setZoomStyle] = useState<{ backgroundPosition?: string }>({});
@@ -13,6 +15,12 @@ export default function ProductGallery({ product }: { product: Product }) {
 
   const containerRef = useRef<HTMLDivElement>(null);
   const lastTapRef = useRef<number>(0);
+
+  // swipe refs
+  const touchStartX = useRef(0);
+  const touchStartY = useRef(0);
+  const touchEndX = useRef(0);
+  const isSwiping = useRef(false);
 
   const activeImage = product.images[activeIndex];
 
@@ -42,6 +50,42 @@ export default function ProductGallery({ product }: { product: Product }) {
     lastTapRef.current = now;
   };
 
+  /* ---------------- Swipe handling (mobile only) ---------------- */
+  const onTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY;
+    isSwiping.current = false;
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    const dx = Math.abs(e.touches[0].clientX - touchStartX.current);
+    const dy = Math.abs(e.touches[0].clientY - touchStartY.current);
+
+    // lock horizontal swipe only
+    if (dx > dy && dx > 10) {
+      isSwiping.current = true;
+    }
+  };
+
+  const onTouchEnd = (e: React.TouchEvent) => {
+    if (!isSwiping.current) return;
+
+    touchEndX.current = e.changedTouches[0].clientX;
+    const deltaX = touchEndX.current - touchStartX.current;
+
+    if (Math.abs(deltaX) < SWIPE_THRESHOLD) return;
+
+    if (deltaX < 0) {
+      // swipe left → next
+      setActiveIndex((i) => (i + 1) % product.images.length);
+    } else {
+      // swipe right → previous
+      setActiveIndex((i) =>
+        i === 0 ? product.images.length - 1 : i - 1
+      );
+    }
+  };
+
   /* ---------------- iOS-safe body lock ---------------- */
   useEffect(() => {
     if (!mobileZoomOpen) return;
@@ -59,13 +103,16 @@ export default function ProductGallery({ product }: { product: Product }) {
   }, [activeImage]);
 
   return (
-    <div className="rounded-lg  w-full space-y-4 relative">
+    <div className="rounded-lg w-full space-y-4 relative">
       {/* Main Image */}
       <div
         ref={containerRef}
         onMouseMove={!isTouch ? handleMouseMove : undefined}
         onMouseLeave={!isTouch ? resetZoom : undefined}
         onClick={isTouch ? () => setMobileZoomOpen(true) : undefined}
+        onTouchStart={isTouch ? onTouchStart : undefined}
+        onTouchMove={isTouch ? onTouchMove : undefined}
+        onTouchEnd={isTouch ? onTouchEnd : undefined}
         className="relative h-[260px] sm:h-[340px] md:h-[380px] rounded-2xl overflow-hidden bg-surface cursor-zoom-in"
         style={{
           backgroundImage: zoomStyle.backgroundPosition
@@ -76,26 +123,20 @@ export default function ProductGallery({ product }: { product: Product }) {
           backgroundPosition: zoomStyle.backgroundPosition
         }}
       >
-        {/*
-          CRITICAL FIX: Only render the Next.js Image component when the zoom is NOT active.
-          When zoom is active, the background-image will take over the div space.
-        */}
-        {!zoomStyle.backgroundPosition && ( // <-- Added conditional rendering here
+        {!zoomStyle.backgroundPosition && (
           <Image
             src={`${process.env.BASE_URL}/static/img/products/optimized/${activeImage}`}
             alt={product.name}
             fill
             priority
-            fetchPriority="high"
             sizes="(max-width: 768px) 100vw, 50vw"
             className="object-contain"
           />
         )}
 
-        {/* Tap hotspot indicator */}
         {isTouch && !mobileZoomOpen && (
           <div className="absolute bottom-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded-full">
-            Tap to zoom
+            Swipe or tap
           </div>
         )}
       </div>
@@ -106,8 +147,8 @@ export default function ProductGallery({ product }: { product: Product }) {
           <button
             key={i}
             onClick={() => setActiveIndex(i)}
-            className={`relative h-16 w-16 sm:h-18 sm:w-18 md:h-20 md:w-20 flex-shrink-0 bg-surface overflow-hidden transition
-              ${i === activeIndex ? "ring-2 ring-accent" : ""}`}
+            className={`relative h-16 w-16 md:h-20 md:w-20 flex-shrink-0 overflow-hidden transition
+              ${i === activeIndex ? "ring-4 ring-accent" : ""}`}
           >
             <Image
               src={`${process.env.BASE_URL}/static/img/products/optimized/${img}`}
@@ -126,9 +167,14 @@ export default function ProductGallery({ product }: { product: Product }) {
           onClick={() => setMobileZoomOpen(false)}
         >
           <div
-            className="relative w-full h-full overflow-auto"
+            className="relative w-full h-full"
             onClick={(e) => e.stopPropagation()}
-            onTouchEnd={handleTap}
+            onTouchStart={onTouchStart}
+            onTouchMove={onTouchMove}
+            onTouchEnd={(e) => {
+              onTouchEnd(e);
+              handleTap();
+            }}
           >
             <Image
               src={`${process.env.BASE_URL}/static/img/products/optimized/${activeImage}`}
@@ -147,10 +193,10 @@ export default function ProductGallery({ product }: { product: Product }) {
         </div>
       )}
 
-      {/* ❤️ Wishlist — overlay */}
-          <div className="absolute top-3 right-3 z-10">
-            <WishlistButton slug={product.slug} />
-          </div>
+      {/* ❤️ Wishlist */}
+      <div className="absolute top-3 right-3 z-10">
+        <WishlistButton slug={product.slug} />
+      </div>
     </div>
   );
 }

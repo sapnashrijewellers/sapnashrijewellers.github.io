@@ -17,18 +17,13 @@ export default function TrustSignalsRibbon({ product }: Props) {
     {
       show: true,
       icon: ShieldCheck,
-      label: "Certified Purity",
+      label: product.purity.startsWith("gold") && product.weight > 2 ? "Hallmark Gold" : "Certified Purity",
     },
     {
       show: true,
       icon: BadgeCheck,
       label: `${metal === "gold" ? "Gold" : "Silver"} Jewellery`,
-    },
-    {
-      show: true,
-      icon: RefreshCcw,
-      label: "Easy Returns",
-    },
+    },    
     {
       show: true,
       icon: Hammer,
@@ -48,11 +43,6 @@ export default function TrustSignalsRibbon({ product }: Props) {
       show: true,
       icon: Globe,
       label: "All India Delivery",
-    },
-    {
-      show: true,
-      icon: CreditCard,
-      label: "Online Payments (CC / DC / UPI)",
     },
     {
       show: !isGold,

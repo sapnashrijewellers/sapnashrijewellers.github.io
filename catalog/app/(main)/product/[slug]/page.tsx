@@ -10,7 +10,6 @@ import WhatsappClick from "@/components/product/WhatAppClick";
 import CalculatePrice from "@/components/product/CalculatePriceButton";
 import Image from "next/image"
 import Breadcrumb from "@/components/navbar/BreadcrumbItem";
-
 import ProductRating from "@/components/product/ProductRating";
 import WishListBar from "@/components/product/WishlistBar";
 import ProductRatingInput from "@/components/product/ProductRatingInput";
@@ -24,6 +23,7 @@ import TrustSignalsRibbon from "@/components/product/TrustSignalsRibbon";
 import CareInstructions from "@/components/product/CareInstructions";
 import ProductSizeSelector from "@/components/product/ProductSizeSelector";
 import BulkEnquiry from "@/components/product/BulkEnquiry";
+import ProductPrice from "@/components/product/ProductPrice";
 
 
 
@@ -105,31 +105,22 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
           { name: `${product.name} | ${product.hindiName}` },
         ]}
       />
-      <h1 className="text-2xl md:text-3xl font-cinzel text-primary-dark font-semibold">
+      
+      <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-6 py-6 px-3">
+        <div className="space-y-3 md:sticky md:top-20 self-start">          
+          <ProductGallery product={product} />
+          <WhatsappClick product={product} />
+        </div>
+        <div className="space-y-4">
+          <h1 className="text-2xl md:text-3xl font-cinzel text-primary-dark font-semibold">
         {product.name} | {product.hindiName}
       </h1>
-      <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-6 py-6 px-3">
-        <div className="space-y-3 md:sticky md:top-20 self-start">
-          <ProductRating
+      <ProductRating
             rating={product.rating ?? 4.6}
             count={product.ratingCount ?? 12}
             showExpert
-          />
-          <ProductGallery product={product} />
-        </div>
-        <div className="space-y-4">
-          {/* Primary Actions – HIGH VISIBILITY */}
-          <div className="space-y-3">
-            <WhatsappClick product={product} />
-            <CalculatePrice product={product} />
-          </div>
-
-          {!product.available && (
-            <div className="inline-flex items-center gap-2 rounded-full bg-surface text-primary-dark px-3 py-1 text-xs font-medium border">
-              <span className="h-2 w-2 rounded-full bg-accent animate-pulse" />
-              Made to Order · Available on Request
-            </div>
-          )}
+          />          
+          <ProductPrice product={product} />
 
           {/* Specs + Hallmark */}
           <div className="flex items-center justify-between border-t border-theme pt-3">

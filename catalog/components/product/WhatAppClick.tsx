@@ -5,7 +5,7 @@ import { Product } from "@/types/catalog";
 const WHATSAPP_NUMBER = '918234042231';
 const baseURL = process.env.BASE_URL;
 
-const WhatsappClick = ({ product }: { product: Product }) => {
+const WhatsappClick = ({ product, title = "" }: { product: Product, title?: string }) => {
   const baseProductUrl = `${baseURL}/product/${product.slug}`;
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${(
     `Hi, I want more details and discount on ${baseProductUrl}`
@@ -24,10 +24,15 @@ const WhatsappClick = ({ product }: { product: Product }) => {
 
       {/* Text Block */}
       <div className="flex flex-col leading-tight">
-        <span className="font-semibold text-black text-lg">WhatsApp</span>
-        <span className="text-green-600 font-medium text-sm -mt-0.5">
-          Click to get discounts & offers
+        <span className="font-semibold text-black text-lg">
+          {title.length > 0 ? title : 'WhatsApp'}
+
         </span>
+        {title.length <= 0 && (
+          <span className="text-green-600 font-medium text-sm -mt-0.5">
+            Click to get discounts & offers
+          </span>
+        )}
       </div>
     </a>
   );

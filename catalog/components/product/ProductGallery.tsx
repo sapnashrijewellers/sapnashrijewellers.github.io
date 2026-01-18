@@ -4,25 +4,28 @@ import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { Product } from "@/types/catalog";
 import WishlistButton from "@/components/common/WishlistButton";
+import { ExternalLink } from "lucide-react";
 
-const SWIPE_THRESHOLD = 50; // px
+const SWIPE_THRESHOLD = 50;
 
 export default function ProductGallery({ product }: { product: Product }) {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [zoomStyle, setZoomStyle] = useState<{ backgroundPosition?: string }>({});
+  const [zoomStyle, setZoomStyle] = useState<{ backgroundPosition?: string }>(
+    {}
+  );
   const [mobileZoomOpen, setMobileZoomOpen] = useState(false);
   const [zoomed, setZoomed] = useState(false);
 
   const containerRef = useRef<HTMLDivElement>(null);
   const lastTapRef = useRef<number>(0);
 
-  // swipe refs
   const touchStartX = useRef(0);
   const touchStartY = useRef(0);
   const touchEndX = useRef(0);
   const isSwiping = useRef(false);
 
   const activeImage = product.images[activeIndex];
+  const imageUrl = `${process.env.BASE_URL}/static/img/products/optimized/${activeImage}`;
 
   const isTouch =
     typeof window !== "undefined" &&
@@ -33,6 +36,8 @@ export default function ProductGallery({ product }: { product: Product }) {
     if (!containerRef.current) return;
 
     const rect = containerRef.current.getBoundingClientRect();
+    if (!rect.width || !rect.height) return;
+
     const x = ((e.clientX - rect.left) / rect.width) * 100;
     const y = ((e.clientY - rect.top) / rect.height) * 100;
 
@@ -60,11 +65,7 @@ export default function ProductGallery({ product }: { product: Product }) {
   const onTouchMove = (e: React.TouchEvent) => {
     const dx = Math.abs(e.touches[0].clientX - touchStartX.current);
     const dy = Math.abs(e.touches[0].clientY - touchStartY.current);
-
-    // lock horizontal swipe only
-    if (dx > dy && dx > 10) {
-      isSwiping.current = true;
-    }
+    if (dx > dy && dx > 10) isSwiping.current = true;
   };
 
   const onTouchEnd = (e: React.TouchEvent) => {
@@ -76,10 +77,8 @@ export default function ProductGallery({ product }: { product: Product }) {
     if (Math.abs(deltaX) < SWIPE_THRESHOLD) return;
 
     if (deltaX < 0) {
-      // swipe left → next
       setActiveIndex((i) => (i + 1) % product.images.length);
     } else {
-      // swipe right → previous
       setActiveIndex((i) =>
         i === 0 ? product.images.length - 1 : i - 1
       );
@@ -99,8 +98,8 @@ export default function ProductGallery({ product }: { product: Product }) {
   /* ---------------- Hi-res preload ---------------- */
   useEffect(() => {
     const img = new window.Image();
-    img.src = `${process.env.BASE_URL}/static/img/products/optimized/${activeImage}`;
-  }, [activeImage]);
+    img.src = imageUrl;
+  }, [imageUrl]);
 
   return (
     <div className="rounded-lg w-full space-y-4 relative">
@@ -114,25 +113,40 @@ export default function ProductGallery({ product }: { product: Product }) {
         onTouchMove={isTouch ? onTouchMove : undefined}
         onTouchEnd={isTouch ? onTouchEnd : undefined}
         className="relative h-[260px] sm:h-[340px] md:h-[380px] rounded-2xl overflow-hidden bg-surface cursor-zoom-in"
-        style={{
-          backgroundImage: zoomStyle.backgroundPosition
-            ? `url(${process.env.BASE_URL}/static/img/products/optimized/${activeImage})`
-            : undefined,
-          backgroundSize: zoomStyle.backgroundPosition ? "200%" : undefined,
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: zoomStyle.backgroundPosition
-        }}
       >
-        {!zoomStyle.backgroundPosition && (
-          <Image
-            src={`${process.env.BASE_URL}/static/img/products/optimized/${activeImage}`}
-            alt={product.name}
-            fill
-            priority
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-contain"
+        {/* Base image NEVER disappears */}
+        <Image
+          src={imageUrl}
+          alt={product.name}
+          fill
+          priority
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="object-contain"
+        />
+
+        {/* Desktop zoom overlay (graceful) */}
+        {!isTouch && zoomStyle.backgroundPosition && (
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              backgroundImage: `url(${imageUrl})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "200%",
+              backgroundPosition: zoomStyle.backgroundPosition,
+            }}
           />
         )}
+
+        {/* Open in new tab (always works) */}
+        <a
+          href={imageUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute bottom-3 left-3 z-10 bg-accent  text-xs px-3 py-1 rounded-full flex items-center gap-1"
+        >
+          <ExternalLink size={12} />
+          Open
+        </a>
 
         {isTouch && !mobileZoomOpen && (
           <div className="absolute bottom-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded-full">
@@ -147,8 +161,9 @@ export default function ProductGallery({ product }: { product: Product }) {
           <button
             key={i}
             onClick={() => setActiveIndex(i)}
-            className={`relative h-16 w-16 md:h-20 md:w-20 flex-shrink-0 overflow-hidden transition
-              ${i === activeIndex ? "ring-4 ring-accent" : ""}`}
+            className={`relative h-16 w-16 md:h-20 md:w-20 flex-shrink-0 overflow-hidden transition ${
+              i === activeIndex ? "ring-4 ring-accent" : ""
+            }`}
           >
             <Image
               src={`${process.env.BASE_URL}/static/img/products/optimized/${img}`}
@@ -160,7 +175,7 @@ export default function ProductGallery({ product }: { product: Product }) {
         ))}
       </div>
 
-      {/* Mobile fullscreen zoom */}
+      {/* Mobile fullscreen zoom (UNCHANGED) */}
       {mobileZoomOpen && (
         <div
           className="fixed inset-0 z-50 bg-black flex items-center justify-center"
@@ -177,7 +192,7 @@ export default function ProductGallery({ product }: { product: Product }) {
             }}
           >
             <Image
-              src={`${process.env.BASE_URL}/static/img/products/optimized/${activeImage}`}
+              src={imageUrl}
               alt="Zoomed product"
               fill
               className="object-contain"

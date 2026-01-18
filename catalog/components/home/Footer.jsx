@@ -1,127 +1,139 @@
 "use client";
 
 import {
-  FaFacebookF, 
-  FaInstagram, 
+  FaFacebookF,
+  FaInstagram,
   FaYoutube,
-  FaShieldAlt, 
-  FaLightbulb,
-  FaMapMarkerAlt
+  FaWhatsapp,
+  FaClock,
 } from "react-icons/fa";
 import { useState } from "react";
 import Link from "next/link";
-
 import JewelleryTipsWidget from "@/components/common/JewelleryTipsWidget";
+import BrandLogo from "../common/BrandLogo";
 
 export default function Footer() {
   const [tipsOpen, setTipsOpen] = useState(false);
-  const currentYear = new Date().getFullYear();
+  const year = new Date().getFullYear();
 
   return (
+    <footer className="bg-accent text-accent-text border-t border-theme">
+      <div className="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
 
-    <footer className="bg-background text-foreground p-4">
-      <div className="max-w-6xl mx-auto space-y-6">
-        {/* Disclaimer */}
-        <div className="flex gap-2 text-xl">
-          <p className="italic text-xs text-muted-foreground">
-            अस्वीकरण: कीमतें बाजार दर के अनुसार बदलती रहती हैं। कृपया अंतिम कीमत और उत्पाद का अनुभव करने के लिए दुकान पर अवश्य आएँ।
-            दी गई कीमतें केवल संकेतात्मक हैं, मेकिंग चार्ज एवं GST एक्स्ट्रा। *नियम एवं शर्तें लागू। *
-            The indicated rates are for Gold per 10 grams and Silver per kilogram only.
-            *Rates are for reference purpose only, rates may sometimes vary due to high volatility in the market.
-            Actual product design may vary slightly from the images shown.
-            किसी भी विवाद की स्थिति में न्यायिक क्षेत्र नागदा जंक्शन रहेगा।
+        {/* BRAND */}
+        <div>
+          <h1 className="text-2xl font-yatra text-primary">
+            <BrandLogo view="lg" />
+            Sapna Shri Jewellers
+          </h1>
+          <p className="mt-2 text-sm italic opacity-90">
+            Crafting Trust in Gold & Silver Since Generations
           </p>
-        </div>
-        {/* Store Location */}
-        <div>
-          <h2 className="flex items-center gap-2 font-bold text-lg font-cinzel">
-            <FaMapMarkerAlt className="text-red-500 mt-[1px]" />
-            Store Address
-          </h2>
-          {/* Store Location */}
-          <div className="grid md:grid-cols-2 grid-cols-1 gap-6 max-w-6xl mx-auto text-primary">
-            {/* Hindi Address */}
-            <address className="bg-accent border border-theme rounded-2xl p-6 shadow-md">
-              <h3 className="text-lg font-semibold ">
-                📌 सपना श्री ज्वैलर्स,
-              </h3>
-              रेलवे स्टेशन मेन रोड, जैन मंदिर के पास,<br />
-              नागदा जंक्शन, जिला उज्जैन<br />
-              📞 8234042231
-            </address>
-            {/* English Address */}
-            <address className="bg-accent border border-theme rounded-2xl p-6 shadow-md font-cinzel">
-              <h2 className="text-lg font-semibold">
-                📌 Sapna Shri Jewellers,
-              </h2>
-              Near Railway Station, M G Road,<br />
-              Nagda Junction, District: Ujjain<br />
-              📞 8234042231
-            </address>
-          </div>
-        </div>
-        {/* Social Media */}
-        <div>
-          <h2 className="flex items-center gap-2 text-lg mt-4 font-cinzel">
-            🔗 Be Part of Our Inner Circle
-          </h2>
-
-          <div className="flex gap-4 mt-2 text-xl sm:text-2xl md:text-3xl text-muted-foreground">
-            <a
-              href="https://www.facebook.com/share/14JjQReswYv/"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Connect with us on Facebook"
-              className="hover:!text-blue-600 transition-colors"
-            >
-              <FaFacebookF />
-            </a>
-
-            <a
-              href="https://www.instagram.com/sapna_shri_jewllers/"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Connect with us on Instagram"
-              className="hover:!text-pink-600 transition-colors"
-            >
-              <FaInstagram />
-            </a>
-
-            <a
-              href="https://www.youtube.com/@SapnaShriJewellers-b1f/shorts"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Connect with us on YouTube"
-              className="hover:!text-red-600 transition-colors"
-            >
-              <FaYoutube />
-            </a>
+          <div className="mt-4 text-xs opacity-80">
+            BIS Hallmarked Jewellery • Transparent Pricing
           </div>
         </div>
 
-        {/* Footer Links */}
-        <div className="flex flex-wrap gap-4 mt-4">
-          <button
-            onClick={() => setTipsOpen(true)}
-            className="ssj-btn flex items-center gap-2 mt-4 transition-colors text-primary underline hover:text-primary-dark"
-          >     <FaLightbulb className="text-primary-dark mt-[1px]" />
-            Jewellery Buying Tips
-          </button>
-          <Link
-            href="/privacy"
-            className="flex items-center gap-2 mt-4 transition-colors"
-            prefetch={false}
-            title="privacy policy"
+        {/* QUICK LINKS */}
+        <div>
+          <h2 className="font-yatra text-lg mb-3">Policies</h2>
+          <p className="text-xs mt-3 opacity-75">
+            Prices may vary based on live market rates... <Link href="/policies/disclaimer" className="text-xs underline">
+              Read full disclaimer
+            </Link>
+          </p>
+
+
+          <ul className="space-y-2 text-sm">
+            <li><Link href="/policies/terms">Terms of Service</Link></li>
+            <li><Link href="/policies/privacy">Privacy Policy</Link></li>
+            <li><Link href="/policies/returns">Return Policy</Link></li>
+            <li><Link href="/policies/shipping">Shipping Policy</Link></li>
+          </ul>
+        </div>
+
+        {/* QUICK LINKS */}
+        <div>
+          <h2 className="font-yatra text-lg mb-3">Quick Links</h2>
+          <ul className="space-y-2 text-sm">
+            <li><Link href="/about-us">About Us</Link></li>
+            <li><Link href="/payment-qr">Payment QR</Link></li>
+            <li><Link href="/categories">Shop by Category</Link></li>
+            <li><Link href="/occasion">Shop by Occasion</Link></li>
+            <li><Link href="/qr">QR code for Payment</Link></li>
+            <li><Link href="#" onClick={() => setTipsOpen(true)}>💡 Jewellery Buying Tips</Link></li>
+          </ul>
+        </div>
+
+        {/* STORE & LEGAL */}
+        <div>
+          <h2 className="font-yatra text-lg mb-3">Store Address</h2>
+
+          <div className="text-sm space-y-3">
+            <p className="font-tiro">
+              सपना श्री ज्वैलर्स,<br />
+              रेलवे स्टेशन मेन रोड,<br />
+              नागदा जंक्शन, उज्जैन
+            </p>
+
+            <p className="font-cinzel">
+              M G Road, Near Jain Mandir, <br />
+              Nagda Junction, Ujjain
+            </p>
+
+            <p className="flex items-center gap-2">
+              <FaClock /> 11:00 AM – 8:00 PM
+            </p>
+            <p className="flex items-center gap-2">
+              📞 Mobile: +91-8234042231
+            </p>
+
+
+            <p className="text-xs opacity-80">
+              GSTIN: 23AFFPG2954P1Z8
+            </p>
+          </div>
+        </div>
+
+        {/* CONNECT */}
+        <div>
+          <h2 className="font-yatra text-lg mb-3">Connect With Us</h2>
+
+          <a
+            href="https://wa.me/918234042231"
+            className="inline-flex items-center gap-2 text-sm ssj-btn"
           >
-            <FaShieldAlt className="text-primary-dark mt-[1px]" />
-            Privacy Policy
-          </Link>
+            <FaWhatsapp /> Ask on WhatsApp
+          </a>
+
+          <div className="flex gap-4 mt-4 text-xl">
+            <a href="https://www.facebook.com/share/14JjQReswYv/" target="_blank"><FaFacebookF /></a>
+            <a href="https://www.instagram.com/sapna_shri_jewllers/" target="_blank"><FaInstagram /></a>
+            <a href="https://www.youtube.com/@SapnaShriJewellers-b1f/shorts" target="_blank"><FaYoutube /></a>
+          </div>
+          {/* Play Store Widget */}
+          <div className="mt-6">
+            <p className="text-xs font-medium opacity-80 mb-2">📱 Download our Android App</p>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.yourapp.package"
+              target="_blank"
+              className="inline-block"
+            >
+              <img
+                src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"
+                alt="Get it on Google Play"
+                className="h-16"  // bigger size
+              />
+            </a>
+          </div>
         </div>
       </div>
 
-      <p className="text-center text-xs text-muted-foreground mt-6">
-        &copy; {currentYear} Sapna Shri Jewellers. All rights reserved.
-      </p>
+      {/* BOTTOM BAR */}
+      <div className="border-t border-theme text-center py-4 text-xs opacity-70">
+        © {year} Sapna Shri Jewellers. All Rights Reserved.
+      </div>
+
       <JewelleryTipsWidget
         isOpen={tipsOpen}
         onOpen={() => setTipsOpen(true)}

@@ -47,8 +47,8 @@ export default function ProductSizeSelector({
                 transition-all
                 ${
                   active
-                    ? "border-primary text-primary bg-[color-mix(in srgb,var(--color-primary) 10%,transparent)]"
-                    : "border-theme hover:border-primary"
+                    ? "ssj-btn bg-accent"
+                    : "hover:border-primary"
                 }
               `}
             >

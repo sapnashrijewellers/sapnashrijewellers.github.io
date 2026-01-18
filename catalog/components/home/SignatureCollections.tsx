@@ -39,7 +39,7 @@ export default function SignatureCollections({
                 px-6 py-2 text-sm font-medium transition 
                 ${
                   material === m
-                    ? "bg-accent text-surface font-bold"
+                    ? "bg-accent  font-bold"
                     : "bg-surface text-primary-dark hover:bg-primary/10 cursor-pointer"
                 }
               `}

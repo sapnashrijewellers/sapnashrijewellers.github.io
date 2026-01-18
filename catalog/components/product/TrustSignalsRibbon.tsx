@@ -1,4 +1,7 @@
-import { ShieldCheck, Truck, CreditCard, IndianRupee, BadgeCheck, Hammer, Heart, Globe, RefreshCcw } from "lucide-react";
+import {
+  ShieldCheck, Truck, CreditCard, IndianRupee, BadgeCheck, Hammer, Heart, Globe, RefreshCcw,
+  Triangle, HandMetal, RectangleHorizontal
+} from "lucide-react";
 import type { Product } from "@/types/catalog";
 
 interface Props {
@@ -16,17 +19,17 @@ export default function TrustSignalsRibbon({ product }: Props) {
   const signals = [
     {
       show: true,
-      icon: ShieldCheck,
-      label: product.purity.startsWith("gold") && product.weight > 2 ? "Hallmark Gold" : "Certified Purity",
+      icon: Triangle,
+      label: product.purity.startsWith("gold") && product.weight > 2 ? "BIS Hallmark Gold" : "Authentication Certificate",
     },
     {
       show: true,
-      icon: BadgeCheck,
+      icon: RectangleHorizontal,
       label: `${metal === "gold" ? "Gold" : "Silver"} Jewellery`,
-    },    
+    },
     {
       show: true,
-      icon: Hammer,
+      icon: HandMetal,
       label: "Superior Craftsmanship",
     },
     {
@@ -51,14 +54,46 @@ export default function TrustSignalsRibbon({ product }: Props) {
     },
     {
       show: true,
+      icon: RefreshCcw,
+      label: "Easy Exchange",
+    },
+    {
+      show: true,
+      icon: CreditCard,
+      label: "UPI Payments",
+    },
+
+    {
+      show: true,
       icon: Truck,
       label: "Secure Shipping",
     },
   ];
 
+
   return (
-    <section className="bg-surface rounded-xl py-4">
-      <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+    /*
+    className="
+      relative rounded-2xl p-5
+      bg-gradient-to-b
+      from-[color-mix(in_srgb,var(--color-primary)_10%,transparent)]
+      to-[color-mix(in_srgb,var(--color-primary-dark)_4%,transparent)]
+    "
+    */
+    <section
+      className="relative rounded-2xl p-5 mb-6"
+      style={{
+    background: `linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--color-primary) 12%, transparent),
+      color-mix(in srgb, var(--color-primary) 4%, transparent)
+    )`,
+  }}
+    >
+      <h3 className="mb-4 uppercase tracking-[0.2em] text-primary-dark">
+        Our Trust Promise
+      </h3>
+      <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-6 gap-y-5">
         {signals
           .filter((s) => s.show)
           .map((item, idx) => {
@@ -66,14 +101,21 @@ export default function TrustSignalsRibbon({ product }: Props) {
             return (
               <li
                 key={idx}
-                className="flex items-center gap-3 rounded-lg p-3 bg-highlight border border-theme"
+                className="flex items-center gap-3 px-2"
               >
                 <Icon
-                  size={22}
-                  className="text-primary shrink-0"
-                  strokeWidth={1.8}
+                  size={24}
+                  strokeWidth={2}
+                  className="font-bold text-primary-dark opacity-70 shrink-0"
                 />
-                <span className="text-sm font-medium text-normal leading-snug">
+
+                <span className="
+              text-sm
+              font-medium
+              tracking-wide
+              text-normal
+              leading-snug
+            ">
                   {item.label}
                 </span>
               </li>
@@ -81,5 +123,6 @@ export default function TrustSignalsRibbon({ product }: Props) {
           })}
       </ul>
     </section>
+
   );
 }

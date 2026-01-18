@@ -37,6 +37,7 @@ export interface Category {
 }
 
 export interface SearchFilters {
+  material: string;
   minWeight?: number;
   maxWeight?: number;
   forWhom?: string;
@@ -57,12 +58,6 @@ export interface BannerItem {
   rank: number;
   active: boolean;
 }
-
-// export interface NewCatalog {
-//   products: Product[];
-//   ticker?: string[];
-//   categories: Category[];
-// }
 export interface Rates {
   asOn: Date;
   gold24K: number;

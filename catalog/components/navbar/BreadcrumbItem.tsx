@@ -16,21 +16,29 @@ export default function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
       "@type": "ListItem",
       position: i + 1,
       name: item.name,
-      item: item.href ? item.href : undefined,
+      item: item.href,
     })),
   };
 
   return (
     <nav
       aria-label="Breadcrumb"
-      className="flex items-center space-x-1 text-sm text-muted-foreground mb-4"
+      className="
+        flex flex-wrap items-center
+        gap-x-1 gap-y-1 px-2
+        text-sm text-muted-foreground mb-4
+      "
     >
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(ldjson) }}
       />
+
       {items.map((item, i) => (
-        <span key={i} className="flex items-center">
+        <span
+          key={i}
+          className="inline-flex items-center whitespace-nowrap"
+        >
           {item.href ? (
             <Link
               href={item.href}
@@ -39,10 +47,16 @@ export default function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
               {item.name}
             </Link>
           ) : (
-            <span className="text-accent font-medium">{item.name}</span>
+            <span className="text-accent font-medium">
+              {item.name}
+            </span>
           )}
+
           {i < items.length - 1 && (
-            <ChevronRight size={14} className="mx-1 text-gray-400" />
+            <ChevronRight
+              size={14}
+              className="mx-1 text-gray-400 shrink-0"
+            />
           )}
         </span>
       ))}

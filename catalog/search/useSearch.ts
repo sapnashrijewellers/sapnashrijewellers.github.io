@@ -59,7 +59,6 @@ export function useSearch(
       ratingCount: p.ratingCount,
       brandText: "",
       size:""
-
     }));
   }
 
@@ -67,6 +66,7 @@ export function useSearch(
   if (filters.minWeight) items = items.filter(p => p.weight >= filters.minWeight!);
   if (filters.maxWeight) items = items.filter(p => p.weight <= filters.maxWeight!);
   if (filters.forWhom) items = items.filter(p => p.for === filters.forWhom);
+  if (filters.material) items = items.filter(p => p.purity.startsWith(filters.material.toLowerCase()));
 
   /* sorting */
   switch (sortBy) {

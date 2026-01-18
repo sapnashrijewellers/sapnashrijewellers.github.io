@@ -1,108 +1,47 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import IndianRupeeRate from "../common/IndianRupeeRate";
-import Image from "next/image";
+import dynamic from "next/dynamic";
+import LiveRatePopup from "@/components/common/LiveRatePopup";
 import ResponsiveNavbar from "@/components/navbar/ResponsiveNavbar"
+import { useRates } from "@/context/RateContext";
+import BrandLogo from "../common/BrandLogo";
 
-const RATES_URL = `${process.env.BASE_URL}/rate/rates.json`;
+const SearchBar = dynamic(
+  () => import("@/components/common/SearchBar"),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="h-10 w-full rounded-xl bg-surface animate-pulse" />
+    ),
+  }
+);
 
 export default function Navbar() {
-  const [rates, setRates] = useState({
-    asOn: "",
-    gold24K: 0,
-    gold22K: 0,
-    gold18K: 0,
-    silver: 0,
-    silverJewelry: 0,
-  });
-
-  // Fetch function
-  const fetchRates = async () => {
-    try {
-      console.log(RATES_URL);
-      const res = await fetch(RATES_URL, { cache: "no-store" });
-      if (!res.ok) throw new Error(`Failed to fetch rates: ${res.status}`);
-      const data = await res.json();
-      setRates(data);
-    } catch (err) {
-      console.error("Rates fetch error:", err);
-    }
-  };
-
-  // Auto refresh every minute
-  useEffect(() => {
-    fetchRates();
-    const interval = setInterval(fetchRates, 60 * 1000);
-    return () => clearInterval(interval);
-  }, []);
+  const rates = useRates();
 
   return (
-    <nav className="p-2 shadow-md bg-highlight">
-
-      <div className="flex justify-between items-center ">
-        {/* Left: Logo */}
-        <div className="flex-shrink-0 flex items-center">
-          <Link
-            href="/"
-            title="Go to Home Page of Sapna Shri Jewellers"
-            className="flex items-start"
-          >
-            {/* Mobile / Small screens logo */}
-            <Image
-              src="/icons/logo.png"
-              alt="Sapna Shri Jewellers Nagda | सपना श्री ज्वैलर्स, नागदा"
-              className="h-20 w-auto logo bg-black rounded-xl lg:hidden"
-              width={120}
-              height={120}
-              priority
-            />
-
-            {/* Medium & Large screens logo */}
-            <Image
-              src="/icons/logo-wide.png"
-              alt="Sapna Shri Jewellers Nagda | Wide Logo"
-              className="hidden lg:block h-20 rounded-xl w-auto"
-              width={320}
-              height={120}
-              priority
-            />
-          </Link>
-        </div>
-        {/* Right: Menu + Rates */}
-        <div className="flex flex-col p-1">
-          {/* Top row: Menu links */}
-          {/* <DesktopTopLinks /> */}
-          <ResponsiveNavbar />
-          {/* Bottom rates section */}
-          <div className="grid grid-cols-1 md:grid-cols-4 md:gap-1 text-right justify-end font-cinzel text-xs font-semibold">
-            <div className="flex justify-end" title={new Date(rates.asOn).toLocaleString("en-IN", {
-              day: "2-digit",
-              month: "short",
-              hour: "2-digit",
-              minute: "2-digit",
-              hour12: false,
-              timeZone: "Asia/Kolkata",
-            })}>Gold 24K:&nbsp;
-              <IndianRupeeRate rate={rates.gold24K * 10} className="text-primary-dark  text-sm" itemName="Gold 24K" itemTitle="10g" />
-            </div>
-
-            <div className="flex justify-end">
-              Gold 22K:&nbsp;
-              <IndianRupeeRate rate={rates.gold22K * 10} className="text-primary-dark text-sm" itemName="Gold 22K" itemTitle="10g" />
-            </div>
-            <div className="flex justify-end">
-              Gold 18K:&nbsp;
-              <IndianRupeeRate rate={rates.gold24K * 10 * 0.75} className="text-primary-dark text-sm" itemName="Gold 18K" itemTitle="10g" />
-            </div>
-            <div className="flex justify-end">
-              Silver 999:&nbsp;
-              <IndianRupeeRate rate={rates.silver * 1000} className="text-primary-dark text-sm" itemName="Silver 99.9%" itemTitle="1kg" />
-            </div>            
-          </div>
-        </div>
+    <header className="sticky top-0 z-40 bg-surface border-b border-theme py-2">
+  <LiveRatePopup rates={rates} />
+  <div className="mx-auto max-w-7xl px-3 h-auto">
+    <div className="flex items-center h-14 gap-4">
+      {/* Logo */}
+      <div className="flex-shrink-0">
+        <BrandLogo />
       </div>
-    </nav>
+
+      {/* Search bar takes remaining space */}
+      <div className="flex-1">
+        <SearchBar />
+      </div>
+
+      {/* Navbar */}
+      <div className="flex-shrink-0">
+        <ResponsiveNavbar />
+      </div>
+    </div>
+  </div>
+</header>
+
+
   );
 }

@@ -9,7 +9,7 @@ import ProductCard from "@/components/product/ProductCard";
 export default function JewelryTypeClient(
     { products }: { products: Product[] }
 ) {
-    const [filters, setFilters] = useState<SearchFilters>({});
+    const [filters, setFilters] = useState<SearchFilters>({ material: "Silver",});
     const [sortBy, setSortBy] = useState("best-match");
     const visibleProducts = useMemo(() => {
         let items = [...products];
@@ -17,6 +17,7 @@ export default function JewelryTypeClient(
         if (filters.minWeight) items = items.filter(p => p.weight >= filters.minWeight!);
         if (filters.maxWeight) items = items.filter(p => p.weight <= filters.maxWeight!);
         if (filters.forWhom) items = items.filter(p => p.for === filters.forWhom);
+        if (filters.material) items = items.filter(p => p.purity.startsWith(filters.material.toLowerCase()));
 
         /* sorting */
         switch (sortBy) {
@@ -30,7 +31,7 @@ export default function JewelryTypeClient(
             && p.name.length > 4);
         return items;
     }, [products, filters, sortBy]);
-    
+
 
     return (
         <>

@@ -22,7 +22,7 @@ export default function JewelrySearch() {
   // 🔹 Submitted (actual search) state
   const [submittedQuery, setSubmittedQuery] = useState(initialQuery);
 
-  const [filters, setFilters] = useState<SearchFilters>({});
+  const [filters, setFilters] = useState<SearchFilters>({material: "Silver"});
   const [sortBy, setSortBy] = useState("best-match");
   const [searchIndex, setSearchIndex] = useState<MiniSearch<any> | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -70,11 +70,7 @@ export default function JewelrySearch() {
         { name: "Search" }
       ]} />
 
-      <SearchBar
-        query={inputQuery}
-        onQueryChange={setInputQuery}
-        onSearch={handleSearchSubmit}
-      />
+      
       <div className="flex items-center gap-3 m-4">
         {/* LEFT: takes remaining space */}
         <div className="flex-1 font-medium truncate">

@@ -7,7 +7,6 @@ import ProductShare from "@/components/product/ProductShare";
 import { HighlightsTabs } from "@/components/product/Highlights";
 import ProductGallery from "@/components/product/ProductGallery";
 import WhatsappClick from "@/components/product/WhatAppClick";
-import CalculatePrice from "@/components/product/CalculatePriceButton";
 import Image from "next/image"
 import Breadcrumb from "@/components/navbar/BreadcrumbItem";
 import ProductRating from "@/components/product/ProductRating";
@@ -133,7 +132,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 
             </div>
 
-            {product.purity.toLowerCase().startsWith("gold") && product.weight > 2 && (
+            {((product.purity.toLowerCase().startsWith("gold") && product.weight > 2) || (product.HUID)) && (
               <div className="flex flex-col items-center w-28">
                 <Image
                   src={`${baseURL}/static/img/hallmark.png`}

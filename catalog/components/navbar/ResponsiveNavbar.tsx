@@ -2,147 +2,105 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import SocialAuthMenu from "@/components/auth/SocialAuthMenu";
-import {
-    Home,
-    Search,
-    Calculator,
-    Heart,
-    BadgeCheck,
-    Menu,
-    Info,
-    QrCode,
-} from "lucide-react";
+import { Calculator, Heart, Triangle, Activity, Menu, X } from "lucide-react";
 import { useState } from "react";
 
 type NavItem = {
-    label: string;
-    href: string;
-    title: string;
-    icon: React.ReactNode;
+  label: string;
+  title: string;
+  icon: React.ReactNode;
+  href?: string;
+  onClick?: () => void;
 };
 
 const PRIMARY_NAV: NavItem[] = [
-    { label: "Home", href: "/", title: "Go to home page", icon: <Home size={22} /> },
-    { label: "Hallmark", href: "/huid", title: "Hallmark details", icon: <BadgeCheck size={22} /> },
-    { label: "Calculator", href: "/calculator", title: "Jewellery calculator", icon: <Calculator size={22} /> },
-    { label: "Wishlist", href: "/wishlist", title: "Wishlist", icon: <Heart size={22} /> },
-];
-
-const SECONDARY_NAV: NavItem[] = [
-    { label: "About", href: "/about-us", title: "About us", icon: <Info size={20} /> },
-    { label: "QR", href: "/qr", title: "QR info", icon: <QrCode size={20} /> },
-    { label: "Search", href: "/search", title: "Search jewellery", icon: <Search size={22} /> },
+  {
+    label: "Hallmark",
+    href: "/huid",
+    title: "Hallmark",
+    icon: <Triangle size={22} />,
+  },
+  {
+    label: "Calculator",
+    href: "/calculator",
+    title: "Jewellery Price Calculator",
+    icon: <Calculator size={22} />,
+  },
+  {
+    label: "Wishlist",
+    href: "/wishlist",
+    title: "Wishlist",
+    icon: <Heart size={22} />,
+  },
+  {
+    label: "Rates",
+    title: "Gold & Silver Rates",
+    icon: <Activity size={22} className="animate-pulse" />,
+    onClick: () => window.dispatchEvent(new Event("open-live-rates")),
+  },
 ];
 
 export default function ResponsiveNavbar() {
-    const pathname = usePathname();
-    const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const [menuOpen, setMenuOpen] = useState(false);
 
-    const isActive = (href: string) =>
-        href === "/" ? pathname === "/" : pathname.startsWith(href);
+  const isActive = (href?: string) =>
+    href ? (href === "/" ? pathname === "/" : pathname.startsWith(href)) : false;
 
-    const renderLink = (item: NavItem, mobile = false) => {
-        const active = isActive(item.href);
+  const renderItem = (item: NavItem) => {
+    const active = isActive(item.href);
+    const cls = `flex items-center gap-1 ssj-btn transition  ${
+      active ? "text-primary-dark" : ""
+    }`;
 
-        return (
-            <Link
-                key={item.href}
-                href={item.href}
-                title={item.title}
-                aria-current={active ? "page" : undefined}
-                className={`flex flex-col items-center gap-1 transition
-          ${active ? "text-primary-dark" : "text-primary"}
-          ${mobile ? "active:scale-95" : "group-hover:scale-110"}`}
-            >
-                {item.icon}
-                <span className={mobile ? "text-[11px]" : "text-[13px] font-medium"}>
-                    {item.label}
-                </span>
-
-                {/* Desktop underline */}
-                {!mobile && (
-                    <span
-                        className={`absolute -bottom-1 h-[2px] w-full origin-left bg-accent transition-transform duration-300
-              ${active ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
-                    />
-                )}
-            </Link>
-        );
-    };
-
-    const renderMobileMenuLink = (item: NavItem) => {
-  const active = isActive(item.href);
-
-  return (
-    <Link
-      key={item.href}
-      href={item.href}
-      role="menuitem"
-      aria-current={active ? "page" : undefined}
-      onClick={() => setOpen(false)}
-      className={`flex flex-col items-center gap-1 transition active:scale-95
-        ${active ? "text-primary-dark" : "text-primary"}`}
-    >
-      {item.icon}
-      <span className="text-[11px]">{item.label}</span>
-    </Link>
-  );
-};
-
+    if (item.onClick) {
+      return (        
+        <button key={item.label} onClick={item.onClick} title={item.title} className={cls}>
+          {item.icon} <span className="md:hidden">{item.label}</span>
+        </button>
+        
+      );
+    }
 
     return (
-        <>
-            {/* ================= MOBILE NAV ================= */}
-            <nav
-                className="fixed bottom-0 left-0 z-[100] w-full border-t bg-surface md:hidden"
-                role="navigation"
-                aria-label="Mobile navigation"
-            >
-                <div className="grid grid-cols-5 py-2 text-center">
-                    {PRIMARY_NAV.map((item) => renderLink(item, true))}
-
-                    {/* Hamburger */}
-                    <button
-                        onClick={() => setOpen((v) => !v)}
-                        aria-expanded={open}
-                        aria-label="More options"
-                        className="flex flex-col items-center gap-1 text-primary active:scale-95"
-                    >
-                        <Menu size={22} />
-                        <span className="text-[11px] font-medium">More</span>
-                    </button>
-                </div>
-
-                {/* Mobile Dropdown */}
-                {open && (
-                    <div
-                        className="absolute bottom-14 left-2 right-2 z-[110] rounded-xl border bg-surface shadow-lg grid grid-cols-5 py-2 text-center"
-                        role="menu"
-                    >
-                        {SECONDARY_NAV.map(renderMobileMenuLink)}
-
-                        {/* 🔐 Social login hook */}
-                        <SocialAuthMenu mobile onAction={() => setOpen(false)} />
-                    </div>
-                )}
-            </nav>
-
-            {/* ================= DESKTOP NAV ================= */}
-            <div
-                className="relative hidden items-end justify-end gap-6 mb-3 md:flex"
-                role="navigation"
-                aria-label="Desktop navigation"
-            >
-                {[...PRIMARY_NAV, ...SECONDARY_NAV].map((item) => (
-                    <div key={item.href} className="relative group">
-                        {renderLink(item)}
-                    </div>
-                ))}
-
-                {/* 🔐 Desktop auth hook */}
-                <SocialAuthMenu />
-            </div>
-        </>
+      <Link
+        key={item.href}
+        href={item.href!}
+        title={item.title}
+        aria-current={active ? "page" : undefined}
+        className={cls}
+      >
+        {item.icon} <span className="md:hidden ">{item.label}</span>
+      </Link>
     );
+  };
+
+  return (
+    <div className="flex items-center gap-4">
+      {/* Live Rates always visible on mobile */}
+      {PRIMARY_NAV.filter((item) => item.label === "Live Rates").map(renderItem)}
+
+      {/* Hamburger for other items */}
+      <div className="md:hidden relative">
+        <button
+          className="ssj-btn"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Menu"
+        >
+          {menuOpen ? <X size={22} /> : <Menu size={22} />}
+        </button>
+
+        {menuOpen && (
+          <div className="absolute right-0 mt-2 w-48 bg-surface shadow-lg rounded-md p-2 flex flex-col gap-2 z-50">
+            {PRIMARY_NAV.map(renderItem)}
+          </div>
+        )}
+      </div>
+
+      {/* Desktop nav */}
+      <div className="hidden md:flex items-center gap-6">
+        {PRIMARY_NAV.map(renderItem)}
+      </div>
+    </div>
+  );
 }

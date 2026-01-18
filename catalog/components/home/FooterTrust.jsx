@@ -8,7 +8,7 @@ export default function FooterTrust() {
   return (
     <footer
       className="
-        bg-accent text-card-foreground
+        bg-surface text-card-foreground
         py-16 flex flex-col md:flex-row items-center justify-center gap-16
         shadow-md mt-6 font-cinzel
       "

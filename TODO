@@ -54,25 +54,28 @@ Todo:
   ✔ Trust Signals Ribbon All - Metal type, certification, warranty, returns, online payments (CC,DC, UPI), craftsmanship, skin-safe, All India Delivery @started(26-01-16 16:41) @done(26-01-16 16:41) @lasted(1m)
   ✔ Gold: Online payment. @started(26-01-16 16:41) @done(26-01-16 16:42) @lasted(1m)
   ✔ Silver: - COD @started(26-01-16 16:41) @done(26-01-16 16:42) @lasted(1m1s)
-
-
-
-
-
-certified Purity --> What about silver products? What about < 2 gram gold products?
-Where is return policy
-do we need to mention COD?
- --> Trust signals: 
-  return policy required
-
-
-
-
 ✔ Hallmark Page- Silver hallmarking not compulsory @done(26-01-16 19:09)
 ✔ Home & Category Banners - Images will be provided by Amish @done(26-01-16 19:44)
 ✔ Full banner must be clickable @done(26-01-16 15:45)
 ✔ Rajputani jewellery banner - Amish will provide image @done(26-01-16 19:40)
 ✔ Calculator - When directly navigate to calculator page,  default making charges must be: 3.5% rather than existing 7% @done(26-01-16 19:44)
+✔ selected size should be highlighted in PDP @done(26-01-18 18:03)
+✔ HUID column for gold and silver @done(26-01-18 12:22)
+✔ breadcrumb multiline @done(26-01-18 13:01)
+
+✔ Footer: GST No, Legal Name, Mobile Number, Business Hours @started(26-01-18 12:24) @done(26-01-18 12:24) @lasted(28s)
+
+✔ hallmark --> triangle symbol @done(26-01-18 12:25)
+✔ craftsmanship --> hand symbol @done(26-01-18 12:56)
+✔ silver jewellery --> bar @done(26-01-18 12:56)
+✔ certified purity --> Authentication certificate @done(26-01-18 12:56)
+
+☐ search bar --> search page not working
+☐ Size should go in whatsapp message
+
+☐ image can be slightly different than picture due to lighting condition
+☐ on order weight of product may vary slightly due to manufacturing tolerance, so final product weight can be +/- 0.1 gram from mentioned weight
+☐ for price calculation useRates remove SWR implementation
 
 
 
@@ -87,28 +90,27 @@ do we need to mention COD?
 
 
 
+✔ Product Detail Page – Pricing Logic : - Silver price shown only if making charges apply (+- MC +-Absolute)- Hide calculator when final price exists @done(26-01-18 18:05)
+    ✔ Touch-Swipe & Carousel: - Swipe-enabled product galleries @done(26-01-18 18:04)
+    ✔ Brand / Identity Field- New catalog field: brandText- Display below Weight & Purity @done(26-01-18 18:04)
+    ✔ Trust Signals Ribbon All - Metal type, certification, warranty, returns, online payments (CC,DC, UPI), craftsmanship, skin-safe, All India Delivery @done(26-01-18 18:04)
+      ✔ Gold: Online payment. @done(26-01-18 18:04)
+      ✔ Silver: - COD @done(26-01-18 18:04)
+    ✔ Bulk Enquiry - Product, Quantity, Requirements → WhatsApp @done(26-01-18 18:04)
+    ✔ Dedicated CTA & form for corporate/event orders @done(26-01-18 18:04)
+    ✔ Size Selection: Size must go in ShipRocket order details @done(26-01-18 18:04)
+      ✔ Rings: 1–28 @done(26-01-18 18:04)
+      ✔ Bangles/Bracelets: 2-0 to 3-0 @done(26-01-18 18:04)
+      ✔ Chain - @done(26-01-18 18:04)
+    ✔ Care Instructions Expandable PDP section - general instructions for gold and silver @done(26-01-18 18:04)
 
-☐ Product Detail Page – Pricing Logic : - Silver price shown only if making charges apply (+- MC +-Absolute)- Hide calculator when final price exists
-    ☐ Touch-Swipe & Carousel: - Swipe-enabled product galleries
-    ☐ Brand / Identity Field- New catalog field: brandText- Display below Weight & Purity
-    ☐ Trust Signals Ribbon All - Metal type, certification, warranty, returns, online payments (CC,DC, UPI), craftsmanship, skin-safe, All India Delivery
-      ☐ Gold: Online payment. 
-      ☐ Silver: - COD
-    ☐ Bulk Enquiry - Product, Quantity, Requirements → WhatsApp
-    ☐ Dedicated CTA & form for corporate/event orders
-    ☐ Size Selection: Size must go in ShipRocket order details
-      ☐ Rings: 1–28
-      ☐ Bangles/Bracelets: 2-0 to 3-0
-      ☐ Chain -
-    ☐ Care Instructions Expandable PDP section - general instructions for gold and silver
-
-☐ Return Policy- Detailed policy page with T&C
-☐ Filters- Material [Gold | Silver] & Price range filters
-☐ Hallmark Page- Silver hallmarking not compulsory
-☐ Home & Category Banners - Images will be provided by Amish
-☐ Full banner must be clickable
-☐ Rajputani jewellery banner - Amish will provide image
-☐ Calculator - When directly navigate to calculator page,  default making charges must be: 3.5% rather than existing 7%
+✔ Return Policy- Detailed policy page with T&C @done(26-01-18 18:04)
+✔ Filters- Material [Gold | Silver] & Price range filters @done(26-01-18 18:04)
+✔ Hallmark Page- Silver hallmarking not compulsory @done(26-01-18 18:04)
+✔ Home & Category Banners - Images will be provided by Amish @done(26-01-18 18:04)
+✔ Full banner must be clickable @done(26-01-18 18:04)
+✔ Rajputani jewellery banner - Amish will provide image @done(26-01-18 18:04)
+✔ Calculator - When directly navigate to calculator page,  default making charges must be: 3.5% rather than existing 7% @done(26-01-18 18:04)
 
 
 

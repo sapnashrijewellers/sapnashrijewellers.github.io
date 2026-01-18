@@ -49,9 +49,7 @@ export default function SocialAuthMenu({ onAction, mobile }: Props) {
           <LogOut size={22} />
         )}
 
-        <span className={mobile ? "text-[11px]" : "text-[13px] font-medium"}>
-          Logout
-        </span>
+        
       </button>
     );
   }
@@ -65,9 +63,7 @@ export default function SocialAuthMenu({ onAction, mobile }: Props) {
       className={baseClasses}
     >
       <LogIn size={22} />
-      <span className={mobile ? "text-[11px]" : "text-[13px] font-medium"}>
-        Login
-      </span>
+      
     </button>
   );
 }

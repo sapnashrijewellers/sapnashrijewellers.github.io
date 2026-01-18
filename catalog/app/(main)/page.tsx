@@ -53,7 +53,7 @@ export default function Home() {
         <RotatingBanner page="home" />
       </div>
       <div>
-        <h2 className="au-h2">Jewellery for Every Occasion</h2>
+        <h2 className="au-h2" id="shop-by-occasion">Jewellery for Every Occasion</h2>
         <JewelleryTypeBar />
       </div>
       <div>

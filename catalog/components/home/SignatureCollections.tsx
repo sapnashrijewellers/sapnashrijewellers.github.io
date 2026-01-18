@@ -26,7 +26,7 @@ export default function SignatureCollections({
 
   return (
     <section>
-      <h2 className="au-h2">Our Signature Collections</h2>
+      <h2 className="au-h2" id="shop-by-category">Our Signature Collections</h2>
 
       {/* 🔘 Material Latch */}
       <div className="flex justify-center mb-8">

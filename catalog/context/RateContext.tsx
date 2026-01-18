@@ -1,18 +1,10 @@
 "use client";
 
 import React, { createContext, useContext, useEffect, useState } from "react";
-
-export type Rates = {
-  asOn: string;
-  gold24K: number;
-  gold22K: number;
-  gold18K: number;
-  silver: number;
-  silverJewelry: number;
-};
+import {Rates} from "@/types/catalog"
 
 const DEFAULT_RATES: Rates = {
-  asOn: "",
+  asOn: new Date(),
   gold24K: 0,
   gold22K: 0,
   gold18K: 0,

@@ -22,7 +22,7 @@ export default function Footer() {
 
         {/* BRAND */}
         <div>
-          <h1 className="text-2xl font-yatra text-primary">
+          <h1 className="text-2xl font-yatra text-highlight">
             <BrandLogo view="lg" />
             Sapna Shri Jewellers
           </h1>
@@ -58,10 +58,10 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             <li><Link href="/about-us">About Us</Link></li>
             <li><Link href="/payment-qr">Payment QR</Link></li>
-            <li><Link href="/categories">Shop by Category</Link></li>
-            <li><Link href="/occasion">Shop by Occasion</Link></li>
+            <li><Link href="/#shop-by-category">Shop by Category</Link></li>
+            <li><Link href="/#shop-by-occasion">Shop by Occasion</Link></li>
             <li><Link href="/qr">QR code for Payment</Link></li>
-            <li><Link href="#" onClick={() => setTipsOpen(true)}>💡 Jewellery Buying Tips</Link></li>
+            <li><Link href="#" onClick={() => setTipsOpen(true)}>Jewellery Buying Tips 💡</Link></li>
           </ul>
         </div>
 

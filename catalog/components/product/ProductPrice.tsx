@@ -1,25 +1,15 @@
 "use client";
 
-import useSWR from "swr";
+
+import { useRates } from "@/context/RateContext";
 import { calculatePrice } from "@/utils/calculatePrice";
 import WhatsappClick from "@/components/product/WhatAppClick";
-import CalculatePrice from "@/components/product/CalculatePriceButton";
+import AddToCartButton from "./AddToCartButton";
+import CalculatePriceButton from "@/components/product/CalculatePriceButton";
 import { Product } from "@/types/catalog";
 
 export default function ProductPrice({ product }: { product: Product }) {
-  const { data: rates, isLoading } = useSWR(
-    "https://sapnashrijewellers.in/rate/rates.json",
-    (url) => fetch(url).then(r => r.json()),
-    { refreshInterval: 30 * 1000 }
-  );
-
-  if (isLoading || !rates) {
-    return (
-      <div className="text-sm animate-pulse text-muted">
-        Fetching live silver rate…
-      </div>
-    );
-  }
+  const rates = useRates();
 
   const priceResult = calculatePrice({ product, rates });
 
@@ -42,13 +32,19 @@ export default function ProductPrice({ product }: { product: Product }) {
       {(!isAvailable || !hasMakingCharges) && <MadeToOrder />}
 
       {/* 3. CTA Logic */}
+      {isAvailable && hasMakingCharges && (
+        <AddToCartButton product={product} />
+      )}
+      {!(isAvailable && hasMakingCharges) && (
       <WhatsappClick
         product={product}
-        title={isAvailable && hasMakingCharges ? "Buy Now" : "Order via WhatsApp"}
+        title= "Order via WhatsApp"
       />
 
+      )}
       {/* 4. Price Calculator Logic (Only when making charges are missing) */}
-      {!hasMakingCharges && <CalculatePrice product={product} />}
+      {!hasMakingCharges && <CalculatePriceButton product={product} />}
+
     </div>
   );
 }

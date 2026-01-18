@@ -7,6 +7,7 @@ import { Product } from "@/types/catalog";
 import WishlistButton from "@/components/common/WishlistButton";
 import ProductRating from "@/components/product/ProductRating";
 import formatPurity from "@/utils/utils";
+import ProductPrice from "./ProductCardPrice";
 
 export default function ProductCard({ product }: { product: Product }) {
   const baseURL = process.env.BASE_URL;
@@ -74,9 +75,8 @@ export default function ProductCard({ product }: { product: Product }) {
             {images.slice(0, 2).map((_, idx) => (
               <span
                 key={idx}
-                className={`h-1.5 w-1.5 rounded-full transition ${
-                  activeImage === idx ? "bg-white" : "bg-white/50"
-                }`}
+                className={`h-1.5 w-1.5 rounded-full transition ${activeImage === idx ? "bg-white" : "bg-white/50"
+                  }`}
               />
             ))}
           </div>
@@ -85,10 +85,12 @@ export default function ProductCard({ product }: { product: Product }) {
 
       {/* Info */}
       <div className="p-3">
-        <h2 className="text-sm leading-tight line-clamp-2">
-          {product.name}
-        </h2>
-
+        <Link href={`/product/${product.slug}`} className="block">
+          <h2 className={`${product.newArrival ? "bg-accent" : "text-primary-dark"} text-sm leading-tight line-clamp-2 w-full`}>
+            {product.name}
+          </h2>
+        </Link>
+        <ProductPrice product={product} />
         {rating > 0 && ratingCount > 0 && (
           <div className="mt-1">
             <ProductRating

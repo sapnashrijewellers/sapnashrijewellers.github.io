@@ -30,7 +30,7 @@ const PRIMARY_NAV: NavItem[] = [
     label: "Wishlist",
     href: "/wishlist",
     title: "Wishlist",
-    icon: <Heart size={22} />,
+    icon: <Heart size={22} className="text-center items-center" />,
   },
   {
     label: "Rates",
@@ -47,39 +47,56 @@ export default function ResponsiveNavbar() {
   const isActive = (href?: string) =>
     href ? (href === "/" ? pathname === "/" : pathname.startsWith(href)) : false;
 
-  const renderItem = (item: NavItem) => {
-    const active = isActive(item.href);
-    const cls = `flex items-center gap-1 ssj-btn transition  ${
-      active ? "text-primary-dark" : ""
-    }`;
+const renderItem = (item: NavItem) => {
+  const active = isActive(item.href);
 
-    if (item.onClick) {
-      return (        
-        <button key={item.label} onClick={item.onClick} title={item.title} className={cls}>
-          {item.icon} <span className="md:hidden">{item.label}</span>
-        </button>
-        
-      );
-    }
+const cls = `
+  flex flex-row md:flex-col
+  items-center md:items-center
+  gap-1 md:gap-1.5
+  text-left md:text-center
+  transition
+  ${active ? "text-primary-dark" : ""}
+`;
+  const content = (
+    <>
+  <span className="flex  text-start items-center justify-center">
+    {item.icon}
+  </span>
+  <span className="text-sm md:text-xs leading-none justify-center">
+    {item.label}
+  </span>
+</>
+  );
 
+  if (item.onClick) {
     return (
-      <Link
-        key={item.href}
-        href={item.href!}
+      <button
+        key={item.label}
+        onClick={item.onClick}
         title={item.title}
-        aria-current={active ? "page" : undefined}
         className={cls}
       >
-        {item.icon} <span className="md:hidden ">{item.label}</span>
-      </Link>
+        {content}
+      </button>
     );
-  };
+  }
 
   return (
-    <div className="flex items-center gap-4">
-      {/* Live Rates always visible on mobile */}
-      {PRIMARY_NAV.filter((item) => item.label === "Live Rates").map(renderItem)}
+    <Link
+      key={item.href}
+      href={item.href!}
+      title={item.title}
+      aria-current={active ? "page" : undefined}
+      className={cls}
+    >
+      {content}
+    </Link>
+  );
+};
 
+  return (
+    <div className="flex items-start md:items-center gap-1">
       {/* Hamburger for other items */}
       <div className="md:hidden relative">
         <button
@@ -98,7 +115,7 @@ export default function ResponsiveNavbar() {
       </div>
 
       {/* Desktop nav */}
-      <div className="hidden md:flex items-center gap-6">
+      <div className="hidden md:flex items-center gap-2">
         {PRIMARY_NAV.map(renderItem)}
       </div>
     </div>

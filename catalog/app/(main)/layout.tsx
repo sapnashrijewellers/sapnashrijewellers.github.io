@@ -5,12 +5,14 @@ import { Noto_Sans_Devanagari } from "next/font/google";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/home/Footer";
 import FooterTrust from "@/components/home/FooterTrust";
+
 import FloatingWhatsAppButton from "@/components/home/FloatingWhatsAppButton";
 import RegisterSW from "@/components/home/registerSW";
 import Script from "next/script"
 import { AuthProvider } from "@/context/AuthContext";
 import BadgeHandler from "@/components/common/BadgeHandler";
 import { RateProvider } from "@/context/RateContext";
+import GoToTop from "@/components/common/GoToTop";
 
 const notoDevanagari = Noto_Sans_Devanagari({
   subsets: ["latin", "devanagari"],
@@ -63,7 +65,7 @@ export const metadata: Metadata = {
 
 
 export default function RootLayout({ children, }: { children: React.ReactNode; }) {
-  
+
   return (
     <html lang="en" className="">
       <head>
@@ -75,18 +77,21 @@ export default function RootLayout({ children, }: { children: React.ReactNode; }
         />
       </head>
 
-      <body className={notoDevanagari.className}>
+      <body className={`${notoDevanagari.className} flex flex-col min-h-screen transition-colors`}>
         <BadgeHandler />
         <RateProvider>
           <AuthProvider>
             <RegisterSW />
             {/* Floating WhatsApp Button */}
-            <FloatingWhatsAppButton />            
+            <FloatingWhatsAppButton />
             {/* Main layout */}
-            <div className="container mx-auto mb-15 md:mb-0">
-              <Navbar />              
-              <div className="max-w-6xl mx-auto py-4">{children}</div>
-
+            <header className="sticky top-0 z-50 shadow-sm">
+              <Navbar />
+            </header>
+            {/* Main Content */}
+            <main className="flex-grow w-full p-4 mx-auto">
+              {children}
+            </main>
               <FooterTrust />
               <Footer />
 
@@ -98,7 +103,7 @@ export default function RootLayout({ children, }: { children: React.ReactNode; }
 
               <Script src="https://mehtalogy.in/pb/v1.js"
                 strategy="afterInteractive" />
-            </div>
+            <GoToTop />
           </AuthProvider>
         </RateProvider>
       </body>

@@ -7,15 +7,14 @@ export default function FooterTrust() {
 
   return (
     <footer
-      className="
-        bg-surface text-card-foreground
+      className="bg-footer-trust text-footer-trust
         py-16 flex flex-col md:flex-row items-center justify-center gap-16
         shadow-md mt-6 font-cinzel
       "
     >
       {/* Years of Trust */}
       <div className="text-center">
-        <h2 className="text-7xl md:text-8xl  drop-shadow-sm">
+        <h2 className="footer-heading text-7xl md:text-8xl  drop-shadow-sm">
           {yearsOfTrust}+
         </h2>
         <p className="mt-2 text-2xl md:text-3xl tracking-wide ">
@@ -25,7 +24,7 @@ export default function FooterTrust() {
 
       {/* Happy Customers */}
       <div className="text-center">
-        <h2 className="text-7xl md:text-8xl  drop-shadow-sm">
+        <h2 className="footer-heading text-7xl md:text-8xl  drop-shadow-sm">
           {happyCustomers}+
         </h2>
         <p className="mt-2 text-2xl md:text-3xl tracking-wide ">

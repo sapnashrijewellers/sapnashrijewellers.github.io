@@ -59,7 +59,7 @@ export function FilterPanel({ filters, onChange, triggerRef }: FilterPanelProps)
         ${open ? "opacity-100 scale-100 visible" : "opacity-0 scale-95 invisible"}
       `}
     >
-      <h3 className="font-semibold mb-3 text-primary">Filters</h3>
+      <h3 className="font-semibold mb-3">Filters</h3>
 
       <div className="grid grid-cols-1 gap-3">
         <input

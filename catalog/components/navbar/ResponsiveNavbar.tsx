@@ -55,7 +55,7 @@ const cls = `
   items-center md:items-center
   gap-1 md:gap-1.5
   text-left md:text-center
-  transition
+  transition cursor-pointer
   ${active ? "text-primary-dark" : ""}
 `;
   const content = (

@@ -92,7 +92,7 @@ export default async function CategoryPage({ params }: { params: { slug: string 
             {/* ✅ JSON-LD Structured Data */}
             <JsonLd json={JsonLdObj} />
             <div className="pl-4 border-l-4 border-primary/70 mb-4">
-                <h1 className="text-2xl md:text-3xl font-yatra font-bold text-primary-dark">
+                <h1 className="text-2xl md:text-3xl font-yatra font-bold">
                     {category.name} | {category.englishName}
                 </h1>
                 <p className="mt-1 text-sm md:text-base text-muted-foreground/90 leading-relaxed">

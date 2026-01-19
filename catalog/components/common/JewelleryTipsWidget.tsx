@@ -65,7 +65,7 @@ export default function JewelleryTipsWidget({
                         Jewellery Buying Tips
                     </button>
                     <button onClick={dismissTeaser}>
-                        <X className="w-4 h-4 text-primary" />
+                        <X className="w-4 h-4" />
                     </button>
                 </motion.div>
             )}
@@ -78,12 +78,12 @@ export default function JewelleryTipsWidget({
                             onClick={onClose}
                             className="ssj-btn absolute top-2 right-2 p-1 rounded-full hover:bg-gray-200"
                         >
-                            <X className="w-6 h-6 text-primary" />
+                            <X className="w-6 h-6" />
                         </button>
 
                         {/* ---- CONTENT ---- */}
                         <section className="space-y-6">
-                            <h2 className="text-xl md:text-2xl font-bold text-primary-dark text-center">
+                            <h2 className="text-xl md:text-2xl font-bold text-center">
                                 सोना खरीदने से पहले इन 3 बातों का विशेष ध्यान रखें
                             </h2>
 

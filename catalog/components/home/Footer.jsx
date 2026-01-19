@@ -17,12 +17,12 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-accent text-accent-text border-t border-theme">
+    <footer className="bg-footer text-footer">
       <div className="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
 
         {/* BRAND */}
         <div>
-          <h1 className="text-2xl font-yatra text-highlight">
+          <h1 className="text-2xl font-yatra footer-heading">
             <BrandLogo view="lg" />
             Sapna Shri Jewellers
           </h1>
@@ -36,7 +36,7 @@ export default function Footer() {
 
         {/* QUICK LINKS */}
         <div>
-          <h2 className="font-yatra text-lg mb-3">Policies</h2>
+          <h2 className="footer-heading font-yatra text-lg mb-3">Policies</h2>
           <p className="text-xs mt-3 opacity-75">
             Prices may vary based on live market rates... <Link href="/policies/disclaimer" className="text-xs underline">
               Read full disclaimer
@@ -54,7 +54,7 @@ export default function Footer() {
 
         {/* QUICK LINKS */}
         <div>
-          <h2 className="font-yatra text-lg mb-3">Quick Links</h2>
+          <h2 className="footer-heading font-yatra text-lg mb-3">Quick Links</h2>
           <ul className="space-y-2 text-sm">
             <li><Link href="/about-us">About Us</Link></li>
             <li><Link href="/payment-qr">Payment QR</Link></li>
@@ -67,7 +67,7 @@ export default function Footer() {
 
         {/* STORE & LEGAL */}
         <div>
-          <h2 className="font-yatra text-lg mb-3">Store Address</h2>
+          <h2 className="footer-heading font-yatra text-lg mb-3 ">Store Address</h2>
 
           <div className="text-sm space-y-3">
             <p className="font-tiro">
@@ -97,7 +97,7 @@ export default function Footer() {
 
         {/* CONNECT */}
         <div>
-          <h2 className="font-yatra text-lg mb-3">Connect With Us</h2>
+          <h2 className="footer-heading font-yatra text-lg mb-3">Connect With Us</h2>
 
           <a
             href="https://wa.me/918234042231"
@@ -107,9 +107,9 @@ export default function Footer() {
           </a>
 
           <div className="flex gap-4 mt-4 text-xl">
-            <a href="https://www.facebook.com/share/14JjQReswYv/" target="_blank"><FaFacebookF /></a>
-            <a href="https://www.instagram.com/sapna_shri_jewllers/" target="_blank"><FaInstagram /></a>
-            <a href="https://www.youtube.com/@SapnaShriJewellers-b1f/shorts" target="_blank"><FaYoutube /></a>
+            <a href="https://www.facebook.com/share/14JjQReswYv/" target="_blank"><FaFacebookF className="icon-footer-trust" /></a>
+            <a href="https://www.instagram.com/sapna_shri_jewllers/" target="_blank"><FaInstagram className="icon-footer-trust"/></a>
+            <a href="https://www.youtube.com/@SapnaShriJewellers-b1f/shorts" target="_blank"><FaYoutube className="icon-footer-trust"/></a>
           </div>
           {/* Play Store Widget */}
           <div className="mt-6">

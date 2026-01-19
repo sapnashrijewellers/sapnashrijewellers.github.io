@@ -35,7 +35,7 @@ export default function SearchBar({
                 border px-6 ssj-btn py-2 text-sm font-medium transition shrink-0 flex items-center justify-center
                 ${material === m
                                     ? "bg-accent  font-bold"
-                                    : "bg-surface text-primary-dark hover:bg-primary/10 cursor-pointer"
+                                    : "bg-surface text-normal hover:bg-primary/10 cursor-pointer"
                                 }
               `}
                         >

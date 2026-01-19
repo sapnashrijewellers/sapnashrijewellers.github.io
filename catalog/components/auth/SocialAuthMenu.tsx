@@ -23,11 +23,7 @@ export default function SocialAuthMenu({ onAction, mobile }: Props) {
     onAction?.();
   };
 
-  const baseClasses = `
-    flex flex-col items-center gap-1 transition
-    text-primary dark:text-primary-dark
-    hover:text-primary-dark active:scale-95
-  `;
+  const baseClasses = `flex flex-col items-center gap-1 transition active:scale-95`;
 
   /* ================= LOGGED IN ================= */
   if (user) {

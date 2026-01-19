@@ -67,7 +67,7 @@ export function SortPanel({ sortBy, onSortChange, triggerRef }: SortPanelProps) 
         ${open ? "opacity-100 scale-100 visible" : "opacity-0 scale-95 invisible"}
       `}
     >
-      <h3 className="mb-3 text-primary">Sort By</h3>
+      <h3 className="mb-3">Sort By</h3>
 
       <div className="grid grid-cols-1 gap-2">
         {options.map((opt) => (
@@ -79,7 +79,7 @@ export function SortPanel({ sortBy, onSortChange, triggerRef }: SortPanelProps) 
             }}
             className={`
               p-2 border border-theme rounded
-              ${sortBy === opt.value ? "bg-accent text-primary" : "bg-surface text-normal"}
+              ${sortBy === opt.value ? "bg-accent" : "bg-surface text-normal"}
             `}
           >
             {opt.label}

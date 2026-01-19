@@ -23,7 +23,7 @@ export default function ProductPrice({ product }: { product: Product }) {
     <div className="space-y-3">
       {/* 1. Price Display Logic */}
       {hasMakingCharges && (
-        <div className="text-3xl font-bold text-primary-dark">
+        <div className="text-2xl font-semibold">
           {!isAvailable && "Estimated Price "}₹{formattedPrice}
         </div>
       )}

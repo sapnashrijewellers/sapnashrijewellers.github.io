@@ -7,14 +7,12 @@
     "subtitle1": "",
     "link": "category/rajputani-gold-jewellery/",
     "icon": "Crown",
-    "textColor": "text-white",
-    "fontFamily": "font-playfair",
-    "active": true,
     "position": "bottom-left",
     "textAnimation": "slide-up",
     "imageAnimation": "pan-right",
     "bgImage": "/img/banner/bajuband.png",
-    "page": "home"
+    "page": "home",
+    "textColor": "text-white"
   },
   {
     "id": "2",
@@ -24,14 +22,12 @@
     "subtitle1": "",
     "link": "/search/?q=bridal",
     "icon": "Diamond",
-    "textColor": "text-white",
-    "fontFamily": "font-playfair",
-    "active": true,
     "position": "top-right",
     "textAnimation": "slide-down",
     "imageAnimation": "subtle-zoom",
     "bgImage": "/img/banner/bride.jpg",
-    "page": "home"
+    "page": "home",
+    "textColor": "text-white"
   },
   {
     "id": "3",
@@ -39,16 +35,14 @@
     "title": "Customize Jewellery",
     "subtitle": "Design your unique jewellery piece",
     "subtitle1": "",
-    "link": "/customize",
+    "link": "/category/customize-jewellery/",
     "icon": "Sparkles",
-    "textColor": "text-white",
-    "fontFamily": "font-playfair",
-    "active": true,
     "position": "top-left",
     "textAnimation": "fade",
     "imageAnimation": "pan-right",
     "bgImage": "/img/banner/custom.png",
-    "page": "home"
+    "page": "home",
+    "textColor": "text-white"
   },
   {
     "id": "4",
@@ -58,14 +52,12 @@
     "subtitle1": "",
     "link": "/category/sawariya-seth-ring/",
     "icon": "Diamond",
-    "textColor": "text-white",
-    "fontFamily": "font-yatra",
-    "active": true,
     "position": "bottom-left",
     "textAnimation": "zoom-fade",
     "imageAnimation": "fade",
     "bgImage": "/img/products/optimized/IMG_20251003_062204.webp",
-    "page": "home"
+    "page": "home",
+    "textColor": "text-white"
   },
   {
     "id": "5",
@@ -75,14 +67,12 @@
     "subtitle1": "",
     "link": "/category/sawariya-seth-ring/",
     "icon": "Diamond",
-    "textColor": "text-white",
-    "fontFamily": "font-yatra",
-    "active": true,
     "position": "bottom-left",
     "textAnimation": "zoom-fade",
     "imageAnimation": "fade",
     "bgImage": "/img/products/optimized/IMG_20251003_062204.webp",
-    "page": "sawariya-seth-ring"
+    "page": "sawariya-seth-ring",
+    "textColor": "text-white"
   },
   {
     "id": "6",
@@ -92,13 +82,11 @@
     "subtitle1": "",
     "link": "/customize",
     "icon": "Sparkles",
-    "textColor": "text-white",
-    "fontFamily": "font-playfair",
-    "active": true,
     "position": "top-left",
     "textAnimation": "fade",
     "imageAnimation": "pan-right",
     "bgImage": "/img/banner/custom.png",
-    "page": "sawariya-seth-ring"
+    "page": "sawariya-seth-ring",
+    "textColor": "text-white"
   }
 ]

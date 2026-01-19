@@ -32,7 +32,7 @@ export default function CareInstructions({ careKey }: Props) {
                 </span>
 
 
-                <span className="text-primary">
+                <span className="">
                     {open ? <FaMinus /> : <FaPlus />}
                 </span>
 

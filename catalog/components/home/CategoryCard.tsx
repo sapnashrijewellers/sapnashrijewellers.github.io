@@ -12,8 +12,8 @@ const baseURL = process.env.BASE_URL;
 
   const firstProduct = products[0];
   const cardHighlightClass = firstProduct.newArrival
-    ? "shadow-md hover:shadow-xl bg-accent"
-    : "shadow hover:shadow-lg text-primary-dark";
+    ? "shadow-md hover:shadow-xl"
+    : "shadow hover:shadow-lg";
 
   return (
     <Link
@@ -32,7 +32,7 @@ const baseURL = process.env.BASE_URL;
                 absolute top-2 left-2 z-10 bg-accent
                 text-xs px-2 py-1 
                 rounded-full shadow-lg transform -rotate-3">
-                ✨ NEW ARRIVAL
+                ✨ NEW
               </div>
             )}
           <Image

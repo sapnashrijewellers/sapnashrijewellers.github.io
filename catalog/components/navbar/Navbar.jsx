@@ -20,7 +20,8 @@ export default function Navbar() {
   const rates = useRates();
 
   return (
-    <header className="sticky top-0 z-40 bg-surface border-b border-theme">
+    /*sticky top-0 z-50 w-full bg-surface/80 backdrop-blur-xl border-theme/30 shadow-xl*/
+    <header className="sticky top-0 z-40 bg-(--color-surface)/70 backdrop-blur-xl border-theme/30 shadow-xl">
       <LiveRatePopup rates={rates} />
 
       <div className="mx-auto max-w-7xl px-3 py-2">

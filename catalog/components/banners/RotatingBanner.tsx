@@ -122,7 +122,7 @@ export default function RotatingBanner({
   page = "home"
 }: Props) {
   const items = banners
-    .filter(b => b.active && b.page === page)
+    .filter(b => b.page === page)
     .sort((a, b) => a.rank - b.rank);
   if (items.length === 0) {
     return null;
@@ -234,11 +234,11 @@ export default function RotatingBanner({
                       {Icon && (
                         <Icon className={`w-10 h-10 ${current.textColor}`} />
                       )}
-                      <h2
-                        className={`text-2xl md:text-3xl font-semibold ${current.textColor}`}
+                      <p
+                        className={`font-yatra text-2xl md:text-3xl font-semibold ${current.textColor}`}
                       >
                         {current.title}
-                      </h2>
+                      </p>
                     </div>
 
                     {current.subtitle && (

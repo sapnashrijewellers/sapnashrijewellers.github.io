@@ -1,5 +1,5 @@
 "use client";
-
+import { createPortal } from "react-dom";
 import { useEffect, useState } from "react";
 import { X, Activity } from "lucide-react";
 import IndianRupeeRate from "@/components/common/IndianRupeeRate";
@@ -41,19 +41,30 @@ export default function LiveRatePopup({ rates }: { rates: Rates }) {
 
   if (!open) return null;
 
-  return (
-    <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/40 backdrop-blur-sm">
+  return createPortal(
+    <div
+  className="
+    fixed top-1/2 left-1/2
+    -translate-x-1/2 -translate-y-1/2
+    z-[60]
+    w-screen h-screen
+    flex items-center justify-center
+    bg-black/80 backdrop-blur-sm
+  "
+>
+
+    {/* <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/40 backdrop-blur-sm"> */}
       <div className="bg-surface border border-theme rounded-xl shadow-xl w-[92%] max-w-md p-5 relative">
 
         {/* Header */}
         <div className="flex items-center justify-between mb-4">
-          <div className="flex items-center gap-2 text-primary-dark">
+          <div className="flex items-center gap-2">
             <Activity className="animate-pulse" size={18} />
             <span className="text-sm font-semibold tracking-wide">
               Gold & Silver Rates
             </span>
           </div>
-          <button onClick={close} className="ssj-btn">
+          <button onClick={close} className="ssj-btn cursor-pointer">
             <X size={18} />
           </button>
         </div>
@@ -67,7 +78,7 @@ export default function LiveRatePopup({ rates }: { rates: Rates }) {
         </div>
 
         {/* Footer */}
-        <div className="mt-4 text-[11px] opacity-70 text-right">
+        <div className="mt-4 text-xs opacity-70 text-right">
           As on{" "}
           {new Date(rates.asOn).toLocaleString("en-IN", {
             day: "2-digit",
@@ -79,7 +90,7 @@ export default function LiveRatePopup({ rates }: { rates: Rates }) {
           })}
         </div>
       </div>
-    </div>
+    </div>,document.body
   );
 }
 
@@ -89,7 +100,7 @@ function RateRow({ label, value }: { label: string; value: number }) {
       <span>{label}</span>
       <IndianRupeeRate
         rate={value}
-        className="text-primary-dark font-semibold"
+        className="font-semibold"
       />
     </div>
   );

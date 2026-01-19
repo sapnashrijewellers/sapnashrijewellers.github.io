@@ -78,8 +78,8 @@ Todo:
 ☐ Offer discounted price
 ☐ Add offer valid until, in-stock & price in json LD
 ☐ Out of stock with price
-☐ Remove Ticker and bring Search bar below the logo
-☐ Color Theme on blue color
+✔ Remove Ticker and bring Search bar below the logo @done(26-01-19 23:05)
+✔ Color Theme on blue color @done(26-01-19 22:48)
 
 ☐ Shiprocket integration
 ☐ image can be slightly different than picture due to lighting condition

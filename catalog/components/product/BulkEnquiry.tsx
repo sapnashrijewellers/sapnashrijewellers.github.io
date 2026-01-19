@@ -44,7 +44,7 @@ Please share best price and delivery timeline.
           Bulk Enquiry
         </span>
 
-        <span className="text-primary">
+        <span className="">
           {open ? <FaMinus /> : <FaPlus />}
         </span>
       </button>

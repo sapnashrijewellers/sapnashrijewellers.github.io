@@ -15,16 +15,16 @@ export function HighlightsTabs({ product }: { product: Product }) {
   return (
     <div className="mt-4">
       {/* Tabs Navigation */}
-      <div className="flex gap-6 border-b border-gray-200 mb-3">
+      <div className="flex gap-6 border-b border-theme mb-3">
         {hasHindi && (
           <button
             onClick={() => setActiveTab("hindi")}
-            className={`pb-2 transition-all font-medium ${
+            className={`ssj-btn pb-2 transition-all font-medium ${
               activeTab === "hindi"
-                ? "border-b-2 border-primary text-primary"
-                : "text-gray-500 hover:text-black"
+                ? "border-b-2 border-primary bg-accent rounded-br-none rounded-bl-none"
+                : "text-normal bg-page"
             }`}
-          >
+          > 
             Hindi
           </button>
         )}
@@ -32,10 +32,10 @@ export function HighlightsTabs({ product }: { product: Product }) {
         {hasEnglish && (
           <button
             onClick={() => setActiveTab("english")}
-            className={`pb-2 transition-all font-medium ${
+            className={`ssj-btn pb-2 transition-all font-medium ${
               activeTab === "english"
-                ? "border-b-2 border-primary text-primary"
-                : "text-gray-500 hover:text-black"
+                ? "border-b-2 border-primary bg-accent rounded-br-none rounded-bl-none"
+                : "text-normal bg-page"
             }`}
           >
             English
@@ -45,7 +45,7 @@ export function HighlightsTabs({ product }: { product: Product }) {
 
       {/* Tab Content */}
       {activeTab === "hindi" && hasHindi && (
-        <ul className="list-disc space-y-1 text-sm mb-4">
+        <ul className="list-disc space-y-1 text-sm mb-4 px-4">
           {product.highlights.map((point, i) => (
             <li key={i}>{point}</li>
           ))}
@@ -53,7 +53,7 @@ export function HighlightsTabs({ product }: { product: Product }) {
       )}
 
       {activeTab === "english" && hasEnglish && (
-        <ul className="list-disc space-y-1 text-sm mb-4">
+        <ul className="list-disc space-y-1 text-sm mb-4 px-4">
           {product.englishHighlights.map((point, i) => (
             <li key={i}>{point}</li>
           ))}

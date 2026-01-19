@@ -43,7 +43,7 @@ export default function WishlistPage() {
     return (
         <section className="container mx-auto">
             <Breadcrumb items={[{ name: "Home", href: "/" }, { name: "Wish-list" }]} />
-            <h1 className="text-2xl  mb-6 text-primary-dark">My Wishlist ❤️</h1>
+            <h1 className="text-2xl mb-6">My Wishlist ❤️</h1>
 
             {wishlistProducts.length === 0 ? (
                 <p className="text-muted-foreground text-sm">

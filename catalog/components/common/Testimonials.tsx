@@ -119,12 +119,12 @@ export default function TestimonialScroller() {
                     <Star
                       key={idx}
                       size={14}
-                      className="text-primary fill-current"
+                      className="text-amber-500 fill-current"
                     />
                   ))}
                 </div>
-                <span className="flex items-center gap-1 text-xs text-primary">
-                  <BadgeCheck size={14} />
+                <span className=" flex items-center gap-1 text-xs">
+                  <BadgeCheck size={14} className="text-green-600" />
                   Verified Buyer
                 </span>
               </div>
@@ -133,7 +133,7 @@ export default function TestimonialScroller() {
                 {t.text}
               </p>
 
-              <p className="text-sm font-semibold text-primary-dark">
+              <p className="text-sm font-semibold">
                 — {t.name}
               </p>
             </div>

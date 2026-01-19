@@ -40,7 +40,7 @@ export default function SignatureCollections({
                 ${
                   material === m
                     ? "bg-accent  font-bold"
-                    : "bg-surface text-primary-dark hover:bg-primary/10 cursor-pointer"
+                    : "bg-surface hover:bg-primary/10 cursor-pointer"
                 }
               `}
             >

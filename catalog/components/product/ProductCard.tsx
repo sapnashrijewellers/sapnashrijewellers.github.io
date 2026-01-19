@@ -19,8 +19,8 @@ export default function ProductCard({ product }: { product: Product }) {
   const ratingCount = Number(product.ratingCount);
 
   const cardHighlightClass = product.newArrival
-    ? "shadow-md hover:shadow-xl bg-accent"
-    : "shadow hover:shadow-lg text-primary-dark";
+    ? "shadow-md hover:shadow-xl "
+    : "shadow hover:shadow-lg";
 
   const imageSrc = `${baseURL}/static/img/products/thumbnail/${images[activeImage]}`;
 
@@ -86,9 +86,9 @@ export default function ProductCard({ product }: { product: Product }) {
       {/* Info */}
       <div className="p-3">
         <Link href={`/product/${product.slug}`} className="block">
-          <h2 className={`${product.newArrival ? "bg-accent" : "text-primary-dark"} text-sm leading-tight line-clamp-2 w-full`}>
+          <h3 className={`leading-tight line-clamp-2 w-full`}>
             {product.name}
-          </h2>
+          </h3>
         </Link>
         <ProductPrice product={product} />
         {rating > 0 && ratingCount > 0 && (

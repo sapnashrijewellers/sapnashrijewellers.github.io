@@ -1,6 +1,6 @@
 1:"$Sreact.fragment"
-2:I[605500,["/_next/static/chunks/d4cc5aff0ab8a147.js","/_next/static/chunks/2077e4b4ac0c7e63.js","/_next/static/chunks/8a72dfeab7e8acfe.js","/_next/static/chunks/3012c1556077ab50.js","/_next/static/chunks/ca6f452050543de0.js"],"Image"]
+2:I[605500,["/_next/static/chunks/d4cc5aff0ab8a147.js","/_next/static/chunks/f0e37908148e28f3.js","/_next/static/chunks/8a72dfeab7e8acfe.js","/_next/static/chunks/3012c1556077ab50.js","/_next/static/chunks/ca6f452050543de0.js"],"Image"]
 3:I[897367,["/_next/static/chunks/d96012bcfc98706a.js","/_next/static/chunks/d80b3790a119a285.js"],"OutletBoundary"]
 4:"$Sreact.suspense"
-0:{"buildId":"ECj6YwU1TdVAvR5LbXDMs","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"flex justify-center items-center  p-4 w-full","children":["$","$L2",null,{"src":"https://sapnashrijewellers.in/static/img/qr/image.png","alt":"Payment QR Code","width":300,"height":300,"className":"border-4 border-gray-100 rounded-lg shadow-md","priority":true}]}],null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
+0:{"buildId":"6WPSagbVXim6ftrEQL3qq","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"flex justify-center items-center  p-4 w-full","children":["$","$L2",null,{"src":"https://sapnashrijewellers.in/static/img/qr/image.png","alt":"Payment QR Code","width":300,"height":300,"className":"border-4 border-gray-100 rounded-lg shadow-md","priority":true}]}],null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
 5:null

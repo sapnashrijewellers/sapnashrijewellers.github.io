@@ -8,7 +8,7 @@
       "IMG_20251003_062007.webp"
     ],
     "suggestedImageName": "ssj-gold-bangles-1",
-    "size": "2-2\n2-4\n2-6",
+    "size": "2-2  On order\n2-4  On order\n2-6  Available\n2-8  On Order",
     "brandText": "",
     "care": "GOLD_GENERAL",
     "highlights": [
@@ -31,11 +31,11 @@
     ],
     "weight": 20.46,
     "purity": "gold22K",
-    "available": false,
+    "available": true,
     "newArrival": true,
     "HUID": "false",
     "active": true,
-    "makingCharges": 7,
+    "makingCharges": 6,
     "slug": "gold-bangles-1",
     "rating": 4.9,
     "ratingCount": 64,
@@ -76,7 +76,7 @@
     "newArrival": true,
     "HUID": "false",
     "active": true,
-    "makingCharges": 1,
+    "makingCharges": 0.5,
     "slug": "silver-bar-2",
     "rating": 4.5,
     "ratingCount": 86,
@@ -117,7 +117,7 @@
     "newArrival": false,
     "HUID": "false",
     "active": true,
-    "makingCharges": 7,
+    "makingCharges": 1,
     "slug": "gold-bar-3",
     "rating": 4,
     "ratingCount": 98,
@@ -1347,7 +1347,7 @@
     "newArrival": false,
     "HUID": "false",
     "active": true,
-    "makingCharges": 7,
+    "makingCharges": -7,
     "slug": "fancy-dulhan-payal-33",
     "rating": 4.6,
     "ratingCount": 24,
@@ -1387,7 +1387,7 @@
     "newArrival": true,
     "HUID": "false",
     "active": true,
-    "makingCharges": 7,
+    "makingCharges": -7,
     "slug": "bichiya-34",
     "rating": 4.3,
     "ratingCount": 108,
@@ -1423,7 +1423,7 @@
     ],
     "weight": 12,
     "purity": "silverJewellery",
-    "available": false,
+    "available": true,
     "newArrival": true,
     "HUID": "false",
     "active": true,
@@ -1495,8 +1495,10 @@
     "keywords": "girls ring, silver ring, kids jewelry",
     "for": "kids",
     "type": [
-      "Kids Wear",
-      "Daily Wear"
+      "Daily Wear",
+      "Office Wear",
+      "Modern",
+      "Party Wear"
     ],
     "weight": 3,
     "purity": "silverJewellery",
@@ -1614,8 +1616,9 @@
     "keywords": "boys ring, silver ring, kids jewelry",
     "for": "kids",
     "type": [
-      "Kids Wear",
-      "Daily Wear"
+      "Daily Wear",
+      "Gift",
+      "Office Wear"
     ],
     "weight": 3,
     "purity": "silverJewellery",
@@ -1662,7 +1665,7 @@
     "newArrival": false,
     "HUID": "false",
     "active": true,
-    "makingCharges": 7,
+    "makingCharges": -7,
     "slug": "guchcha-41",
     "rating": 4.7,
     "ratingCount": 111,
@@ -1701,7 +1704,7 @@
     "newArrival": true,
     "HUID": "false",
     "active": true,
-    "makingCharges": 7,
+    "makingCharges": -7,
     "slug": "kandora-42",
     "rating": 4.4,
     "ratingCount": 31,
@@ -1740,7 +1743,7 @@
     "newArrival": true,
     "HUID": "false",
     "active": true,
-    "makingCharges": 7,
+    "makingCharges": -7,
     "slug": "kandora-43",
     "rating": 4.9,
     "ratingCount": 49,
@@ -1779,7 +1782,7 @@
     "newArrival": true,
     "HUID": "false",
     "active": true,
-    "makingCharges": 7,
+    "makingCharges": -7,
     "slug": "guchcha-44",
     "rating": 4.9,
     "ratingCount": 94,
@@ -2216,8 +2219,10 @@
     "keywords": "silver bracelet, poochi, girls jewelry, trendy silver, modern design",
     "for": "kids",
     "type": [
-      "Kids Wear",
-      "Gift"
+      "Gift",
+      "Daily Wear",
+      "Party Wear",
+      "Office Wear"
     ],
     "weight": 17,
     "purity": "silverJewellery",
@@ -2927,7 +2932,6 @@
     "for": "her",
     "type": [
       "Traditional",
-      "Wedding Wear",
       "Bridal"
     ],
     "weight": 21.37,
@@ -2973,7 +2977,6 @@
     "for": "her",
     "type": [
       "Traditional",
-      "Wedding Wear",
       "Bridal"
     ],
     "weight": 18.98,
@@ -3061,7 +3064,6 @@
     "for": "her",
     "type": [
       "Traditional",
-      "Wedding Wear",
       "Bridal"
     ],
     "weight": 21.9,
@@ -3105,7 +3107,6 @@
     "for": "her",
     "type": [
       "Traditional",
-      "Wedding Wear",
       "Bridal"
     ],
     "weight": 23.98,
@@ -3192,7 +3193,7 @@
     "for": "her",
     "type": [
       "Traditional",
-      "Wedding Wear"
+      "Bridal"
     ],
     "weight": 19.19,
     "purity": "gold22K",
@@ -21857,7 +21858,7 @@
     "for": "her",
     "type": [
       "Wedding",
-      "Traditional"
+      "Party Wear"
     ],
     "weight": 80,
     "purity": "silverJewellery",
@@ -22029,7 +22030,7 @@
     "for": "her",
     "type": [
       "Wedding",
-      "Traditional"
+      "Party Wear"
     ],
     "weight": 80,
     "purity": "silverJewellery",
@@ -22115,7 +22116,7 @@
     "for": "her",
     "type": [
       "Wedding",
-      "Traditional"
+      "Party Wear"
     ],
     "weight": 150,
     "purity": "silverJewellery",
@@ -22197,7 +22198,7 @@
     "for": "her",
     "type": [
       "Wedding",
-      "Traditional"
+      "Party Wear"
     ],
     "weight": 89,
     "purity": "silverJewellery",
@@ -22238,7 +22239,7 @@
     "for": "her",
     "type": [
       "Wedding",
-      "Traditional"
+      "Party Wear"
     ],
     "weight": 85,
     "purity": "silverJewellery",
@@ -22319,8 +22320,8 @@
     "keywords": "haar, silver necklace, Indian jewellery, floral jewellery, oxidised haar, ethnic wear, ruby necklace",
     "for": "her",
     "type": [
-      "Wedding",
-      "Traditional"
+      "Traditional",
+      "Modern"
     ],
     "weight": 75,
     "purity": "silverJewellery",
@@ -22361,7 +22362,7 @@
     "for": "her",
     "type": [
       "Wedding",
-      "Traditional"
+      "Party Wear"
     ],
     "weight": 81,
     "purity": "silverJewellery",
@@ -22401,8 +22402,8 @@
     "keywords": "silver choker, haar, Indian jewellery, oxidised necklace, floral choker, ethnic necklace, black stone jewellery",
     "for": "her",
     "type": [
-      "Wedding",
-      "Traditional"
+      "Traditional",
+      "Modern"
     ],
     "weight": 40,
     "purity": "silverJewellery",
@@ -22444,8 +22445,8 @@
     "keywords": "silver pendant, taveez necklace, antique jewellery, Indian jewellery, silver haar, tribal silver, kangan, bala",
     "for": "her",
     "type": [
-      "Wedding",
-      "Traditional"
+      "Traditional",
+      "Modern"
     ],
     "weight": 78,
     "purity": "silverJewellery",
@@ -22487,8 +22488,8 @@
     "keywords": "silver chain, silver mala, bead necklace, Indian jewellery, silver haar, minimalist jewellery, kangan, kada, choodi",
     "for": "her",
     "type": [
-      "Wedding",
-      "Traditional"
+      "Traditional",
+      "Modern"
     ],
     "weight": 30,
     "purity": "silverJewellery",
@@ -24193,12 +24194,11 @@
       "Gift",
       "Modern",
       "Daily Wear",
-      "Kids Wear",
       "Office Wear"
     ],
     "weight": 2,
     "purity": "silverJewellery",
-    "available": false,
+    "available": true,
     "newArrival": false,
     "HUID": "false",
     "active": true,
@@ -24234,7 +24234,6 @@
       "Gift",
       "Modern",
       "Daily Wear",
-      "Kids Wear",
       "Office Wear"
     ],
     "weight": 1,
@@ -24275,7 +24274,6 @@
       "Gift",
       "Modern",
       "Daily Wear",
-      "Kids Wear",
       "Office Wear"
     ],
     "weight": 3,
@@ -24316,7 +24314,6 @@
       "Gift",
       "Modern",
       "Daily Wear",
-      "Kids Wear",
       "Office Wear"
     ],
     "weight": 1,
@@ -24357,7 +24354,6 @@
       "Gift",
       "Modern",
       "Daily Wear",
-      "Kids Wear",
       "Office Wear"
     ],
     "weight": 0.5,
@@ -24398,7 +24394,6 @@
       "Gift",
       "Modern",
       "Daily Wear",
-      "Kids Wear",
       "Office Wear"
     ],
     "weight": 2,
@@ -24439,7 +24434,6 @@
       "Gift",
       "Modern",
       "Daily Wear",
-      "Kids Wear",
       "Office Wear"
     ],
     "weight": 1.5,
@@ -24480,7 +24474,6 @@
       "Gift",
       "Modern",
       "Daily Wear",
-      "Kids Wear",
       "Office Wear"
     ],
     "weight": 0.5,
@@ -24520,7 +24513,6 @@
       "Gift",
       "Modern",
       "Daily Wear",
-      "Kids Wear",
       "Office Wear"
     ],
     "weight": 0.5,
@@ -24560,7 +24552,6 @@
       "Gift",
       "Modern",
       "Daily Wear",
-      "Kids Wear",
       "Office Wear"
     ],
     "weight": 0.5,
@@ -24642,7 +24633,6 @@
       "Gift",
       "Modern",
       "Daily Wear",
-      "Kids Wear",
       "Office Wear"
     ],
     "weight": 3.6,
@@ -24684,7 +24674,6 @@
       "Gift",
       "Modern",
       "Daily Wear",
-      "Kids Wear",
       "Office Wear"
     ],
     "weight": 2.08,
@@ -24728,7 +24717,6 @@
       "Gift",
       "Modern",
       "Daily Wear",
-      "Kids Wear",
       "Office Wear"
     ],
     "weight": 1.4,
@@ -24772,7 +24760,6 @@
       "Gift",
       "Modern",
       "Daily Wear",
-      "Kids Wear",
       "Office Wear"
     ],
     "weight": 6.94,
@@ -24816,7 +24803,6 @@
       "Gift",
       "Modern",
       "Daily Wear",
-      "Kids Wear",
       "Office Wear"
     ],
     "weight": 5.49,
@@ -24858,7 +24844,6 @@
       "Gift",
       "Modern",
       "Daily Wear",
-      "Kids Wear",
       "Office Wear"
     ],
     "weight": 3.17,
@@ -24901,7 +24886,6 @@
       "Gift",
       "Modern",
       "Daily Wear",
-      "Kids Wear",
       "Office Wear"
     ],
     "weight": 3.28,
@@ -24943,7 +24927,6 @@
       "Gift",
       "Modern",
       "Daily Wear",
-      "Kids Wear",
       "Office Wear"
     ],
     "weight": 3.56,
@@ -24986,7 +24969,6 @@
       "Gift",
       "Modern",
       "Daily Wear",
-      "Kids Wear",
       "Office Wear"
     ],
     "weight": 3.78,
@@ -25030,7 +25012,6 @@
       "Gift",
       "Modern",
       "Daily Wear",
-      "Kids Wear",
       "Office Wear"
     ],
     "weight": 1.97,
@@ -25073,7 +25054,6 @@
       "Gift",
       "Modern",
       "Daily Wear",
-      "Kids Wear",
       "Office Wear"
     ],
     "weight": 4.38,
@@ -25116,7 +25096,6 @@
       "Gift",
       "Modern",
       "Daily Wear",
-      "Kids Wear",
       "Office Wear"
     ],
     "weight": 8.05,
@@ -25156,7 +25135,6 @@
       "Gift",
       "Modern",
       "Daily Wear",
-      "Kids Wear",
       "Office Wear"
     ],
     "weight": 6.2,
@@ -25198,7 +25176,6 @@
       "Gift",
       "Modern",
       "Daily Wear",
-      "Kids Wear",
       "Office Wear"
     ],
     "weight": 4,
@@ -25241,7 +25218,6 @@
       "Gift",
       "Modern",
       "Daily Wear",
-      "Kids Wear",
       "Office Wear"
     ],
     "weight": 1.8,
@@ -25288,7 +25264,6 @@
       "Gift",
       "Modern",
       "Daily Wear",
-      "Kids Wear",
       "Office Wear"
     ],
     "weight": 1.19,
@@ -25332,7 +25307,6 @@
       "Gift",
       "Modern",
       "Daily Wear",
-      "Kids Wear",
       "Office Wear"
     ],
     "weight": 1.63,
@@ -25376,7 +25350,6 @@
       "Gift",
       "Modern",
       "Daily Wear",
-      "Kids Wear",
       "Office Wear"
     ],
     "weight": 1.86,
@@ -25417,7 +25390,6 @@
       "Gift",
       "Modern",
       "Daily Wear",
-      "Kids Wear",
       "Office Wear"
     ],
     "weight": 1.45,
@@ -25458,7 +25430,6 @@
       "Gift",
       "Modern",
       "Daily Wear",
-      "Kids Wear",
       "Office Wear"
     ],
     "weight": 2.02,
@@ -25500,7 +25471,6 @@
       "Gift",
       "Modern",
       "Daily Wear",
-      "Kids Wear",
       "Office Wear"
     ],
     "weight": 1.42,
@@ -25542,7 +25512,6 @@
       "Gift",
       "Modern",
       "Daily Wear",
-      "Kids Wear",
       "Office Wear"
     ],
     "weight": 2.43,
@@ -25582,7 +25551,6 @@
       "Gift",
       "Modern",
       "Daily Wear",
-      "Kids Wear",
       "Office Wear"
     ],
     "weight": 1.5,
@@ -25623,7 +25591,6 @@
       "Gift",
       "Modern",
       "Daily Wear",
-      "Kids Wear",
       "Office Wear"
     ],
     "weight": 1.31,
@@ -25664,7 +25631,6 @@
       "Gift",
       "Modern",
       "Daily Wear",
-      "Kids Wear",
       "Office Wear"
     ],
     "weight": 0.51,

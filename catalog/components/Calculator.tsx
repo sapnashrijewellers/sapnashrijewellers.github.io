@@ -128,89 +128,88 @@ export default function Calculator() {
     <div className="container mx-auto px-4">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
         {/* ---------------- Calculator Section ---------------- */}
-        <div>
-          <label className={`labelClasses`}>Purity</label>
-          <select
-            name="purity"
-            value={form.purity}
-            onChange={handleChange}
-            disabled={lockProductFields}
-            className={`inputClasses mb-4`}
-          >
-            <option value="gold22K">Gold 22K</option>
-            <option value="gold24K">Gold 24K</option>
-            <option value="gold18K">Gold 18K</option>
-            <option value="silver">Silver 99%</option>
-            <option value="silverJewellery">Silver Jewellery</option>
+        <form className="form">         
+            <label className={`labelClasses`}>Purity</label>
+            <select
+              name="purity"
+              value={form.purity}
+              onChange={handleChange}
+              disabled={lockProductFields}
+              className={`inputClasses mb-4`}
+            >
+              <option value="gold22K">Gold 22K</option>
+              <option value="gold24K">Gold 24K</option>
+              <option value="gold18K">Gold 18K</option>
+              <option value="silver">Silver 99%</option>
+              <option value="silverJewellery">Silver Jewellery</option>
 
-          </select>
+            </select>
 
-          <label className={`labelClasses`}>Weight (gm)</label>
-          <input
-            type="number"
-            name="weight"
-            value={form.weight}
-            onChange={handleChange}
-            disabled={lockProductFields}
-            className={`inputClasses mb-4`}
-          />
+            <label className={`labelClasses`}>Weight (gm)</label>
+            <input
+              type="number"
+              name="weight"
+              value={form.weight}
+              onChange={handleChange}
+              disabled={lockProductFields}
+              className={`inputClasses mb-4`}
+            />
 
-          <label className={`labelClasses`}>Making Charges (%)</label>
-          <input
-            type="number"
-            name="makingCharges"
-            value={form.makingCharges}
-            onChange={handleChange}
-            placeholder="WhatsApp for charges"
-            className="inputClasses mb-4"
-            min="0"
-            max="100"
-          />
-          {showMakingChargeNotice && (
-            <p className="text-sm text-red-600 mt-2">
-              * Please contact on WhatsApp to get exact making changes.
-            </p>
-          )}
-          <label className={`labelClasses`}>GST (%)</label>
-          <select
-            name="gst"
-            value={form.gst}
-            onChange={handleChange}
-            className={`inputClasses mb-6`}            
-          >
-            <option value={3}>3%</option>
-          </select>
+            <label className={`labelClasses`}>Making Charges (%)</label>
+            <input
+              type="number"
+              name="makingCharges"
+              value={form.makingCharges}
+              onChange={handleChange}
+              placeholder="WhatsApp for charges"
+              className="inputClasses mb-4"
+              min="0"
+              max="100"
+            />
+            {showMakingChargeNotice && (
+              <p className="text-sm text-red-600 mt-2">
+                * Please contact on WhatsApp to get exact making changes.
+              </p>
+            )}
+            <label className={`labelClasses`}>GST (%)</label>
+            <select
+              name="gst"
+              value={form.gst}
+              onChange={handleChange}
+              className={`inputClasses mb-6`}
+            >
+              <option value={3}>3%</option>
+            </select>
 
-          <div className="mb-4 p-4 rounded-lg text-sm bg-highlight"
-            title="Making charges vary from product to product. Please contact us on WhatsApp for exact making charges.">
-            <p className="font-medium mb-1">
-              मेकिंग चार्ज हर आभूषण में अलग होता है। यह डिज़ाइन, कारीगरी और वज़न पर निर्भर करता है।
-            </p>
-            <p className="mb-2">
-              सटीक मेकिंग चार्ज जानने के लिए कृपया हमसे WhatsApp पर संपर्क करें।
-            </p>
-            {product && <WhatsappClick product={product} />}
-          </div>
-
-          <button
-            onClick={calculatePrice}
-            disabled={loading}
-            className="w-full bg-accent text-accent-foreground py-2 rounded-lg"
-          >
-            {loading ? "कैलकुलेट हो रहा है..." : "Calculate Final Price"}
-          </button>
-
-          {price !== null && !showMakingChargeNotice && (
-            <div className="mt-6 p-4 bg-muted rounded-lg text-center">
-              <h3 className="font-semibold mb-2">Final Price</h3>
-              <IndianRupeeRate
-                rate={price}
-                className="text-2xl font-bold text-accent"
-              />
+            <div className="mb-4 p-4 rounded-lg text-sm bg-highlight"
+              title="Making charges vary from product to product. Please contact us on WhatsApp for exact making charges.">
+              <p className="font-medium mb-1">
+                मेकिंग चार्ज हर आभूषण में अलग होता है। यह डिज़ाइन, कारीगरी और वज़न पर निर्भर करता है।
+              </p>
+              <p className="mb-2">
+                सटीक मेकिंग चार्ज जानने के लिए कृपया हमसे WhatsApp पर संपर्क करें।
+              </p>
+              {product && <WhatsappClick product={product} />}
             </div>
-          )}
-        </div>
 
+            <button
+              onClick={calculatePrice}
+              disabled={loading}
+              className="w-full bg-accent text-accent-foreground py-2 rounded-lg"
+            >
+              {loading ? "कैलकुलेट हो रहा है..." : "Calculate Final Price"}
+            </button>
+
+            {price !== null && !showMakingChargeNotice && (
+              <div className="mt-6 p-4 bg-muted rounded-lg text-center">
+                <h3 className="font-semibold mb-2">Final Price</h3>
+                <IndianRupeeRate
+                  rate={price}
+                  className="text-2xl font-bold text-accent"
+                />
+              </div>
+            )}          
+        </form >
         {/* ---------------- Product Section ---------------- */}
         {product && (
           <div className="space-y-4">

@@ -66,7 +66,7 @@ export default function SplashScreen() {
 
         <div className="splash-text">
           <h1 className="font-yatra">SapnaShri</h1>
-          <span className="font-cinzel">JEWELLERS</span>
+          <span className="">JEWELLERS</span>
         </div>
       </div>
     </div>

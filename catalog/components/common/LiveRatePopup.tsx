@@ -43,7 +43,7 @@ export default function LiveRatePopup({ rates }: { rates: Rates }) {
 
   return (
     <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/40 backdrop-blur-sm">
-      <div className="bg-surface border border-theme rounded-xl shadow-xl w-[92%] max-w-md p-5 font-cinzel relative">
+      <div className="bg-surface border border-theme rounded-xl shadow-xl w-[92%] max-w-md p-5 relative">
 
         {/* Header */}
         <div className="flex items-center justify-between mb-4">

@@ -73,33 +73,27 @@ Todo:
 
 ✔ search bar --> search page not working @done(26-01-19 10:25)
 ☐ Size should go in whatsapp message
+☐ How to manage price for different variants and size of product
+☐ New arrivals should be one per category and keep changing
+☐ Offer discounted price
+☐ Add offer valid until, in-stock & price in json LD
+☐ Out of stock with price
+☐ Remove Ticker and bring Search bar below the logo
+☐ Color Theme on blue color
 
+☐ Shiprocket integration
 ☐ image can be slightly different than picture due to lighting condition
 ☐ on order weight of product may vary slightly due to manufacturing tolerance, so final product weight can be +/- 0.1 gram from mentioned weight
 ✔ for price calculation useRates remove SWR implementation @done(26-01-18 21:12)
 ✔ Shop by occasion and shop by category link is not working @done(26-01-18 20:38)
 ✔ Remove whatsapp icon from Buy Now button and make it in blue color @done(26-01-18 20:24)
 ✔ Has to double tap on product card to go to PDP @done(26-01-18 21:12)
+☐ Showing BIS LOGO on silver even when HUID is not true
 
 ☐ Favicon in search Results
-☐ How to update data in google sheet, filters and sorting
-☐ Google forms
+
 ☐ How to name images
 ☐ how to test products on website
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

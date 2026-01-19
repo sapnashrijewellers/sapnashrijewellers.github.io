@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 import LiveRatePopup from "@/components/common/LiveRatePopup";
-import ResponsiveNavbar from "@/components/navbar/ResponsiveNavbar"
+import ResponsiveNavbar from "@/components/navbar/ResponsiveNavbar";
 import { useRates } from "@/context/RateContext";
 import BrandLogo from "../common/BrandLogo";
 
@@ -20,28 +20,35 @@ export default function Navbar() {
   const rates = useRates();
 
   return (
-    <header className="sticky top-0 z-40 bg-surface border-b border-theme py-2">
-  <LiveRatePopup rates={rates} />
-  <div className="mx-auto max-w-7xl px-3 h-auto">
-    <div className="flex items-center h-14 gap-4">
-      {/* Logo */}
-      <div className="flex-shrink-0">
-        <BrandLogo />
+    <header className="sticky top-0 z-40 bg-surface border-b border-theme">
+      <LiveRatePopup rates={rates} />
+
+      <div className="mx-auto max-w-7xl px-3 py-2">
+        {/* TOP ROW */}
+        <div className="flex items-center gap-4">
+          {/* LEFT: Logo */}
+          <div className="flex-shrink-0">
+            <BrandLogo />
+          </div>
+
+          {/* CENTER (md+ only): Search */}
+          <div className="hidden md:flex flex-1 justify-center">
+            <div className="w-full max-w-xl">
+              <SearchBar />
+            </div>
+          </div>
+
+          {/* RIGHT: Nav */}
+          <div className="ml-auto flex-shrink-0">
+            <ResponsiveNavbar />
+          </div>
+        </div>
+
+        {/* SECOND ROW (mobile only): Search */}
+        <div className="mt-3 md:hidden">
+          <SearchBar />
+        </div>
       </div>
-
-      {/* Search bar takes remaining space */}
-      <div className="flex-1">
-        <SearchBar />
-      </div>
-
-      {/* Navbar */}
-      <div className="flex-shrink-0">
-        <ResponsiveNavbar />
-      </div>
-    </div>
-  </div>
-</header>
-
-
+    </header>
   );
 }

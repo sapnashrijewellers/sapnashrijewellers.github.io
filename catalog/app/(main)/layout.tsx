@@ -5,7 +5,6 @@ import { Noto_Sans_Devanagari } from "next/font/google";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/home/Footer";
 import FooterTrust from "@/components/home/FooterTrust";
-import Ticker from "@/components/home/Ticker";
 import FloatingWhatsAppButton from "@/components/home/FloatingWhatsAppButton";
 import RegisterSW from "@/components/home/registerSW";
 import Script from "next/script"
@@ -85,8 +84,7 @@ export default function RootLayout({ children, }: { children: React.ReactNode; }
             <FloatingWhatsAppButton />            
             {/* Main layout */}
             <div className="container mx-auto mb-15 md:mb-0">
-              <Navbar />
-              <Ticker />
+              <Navbar />              
               <div className="max-w-6xl mx-auto py-4">{children}</div>
 
               <FooterTrust />

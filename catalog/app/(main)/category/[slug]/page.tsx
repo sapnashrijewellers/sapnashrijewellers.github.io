@@ -95,7 +95,7 @@ export default async function CategoryPage({ params }: { params: { slug: string 
                 <h1 className="text-2xl md:text-3xl font-yatra font-bold text-primary-dark">
                     {category.name} | {category.englishName}
                 </h1>
-                <p className="mt-1 text-sm md:text-base text-muted-foreground/90 leading-relaxed font-playfair">
+                <p className="mt-1 text-sm md:text-base text-muted-foreground/90 leading-relaxed">
                     {category.description}
                 </p>
             </div>

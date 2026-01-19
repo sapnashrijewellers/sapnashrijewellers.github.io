@@ -111,7 +111,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
           <WhatsappClick product={product} />
         </div>
         <div className="space-y-4">
-          <h1 className="text-2xl md:text-3xl font-cinzel text-primary-dark font-semibold">
+          <h1 className="text-2xl md:text-3xl text-primary-dark font-semibold">
         {product.name} | {product.hindiName}
       </h1>
       <ProductRating

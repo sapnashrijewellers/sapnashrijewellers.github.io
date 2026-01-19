@@ -235,7 +235,7 @@ export default function RotatingBanner({
                         <Icon className={`w-10 h-10 ${current.textColor}`} />
                       )}
                       <h2
-                        className={`font-cinzel text-2xl md:text-3xl font-semibold ${current.textColor}`}
+                        className={`text-2xl md:text-3xl font-semibold ${current.textColor}`}
                       >
                         {current.title}
                       </h2>

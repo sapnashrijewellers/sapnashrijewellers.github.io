@@ -1,49 +1,57 @@
 export const dynamic = "force-static";
-import type { Product,Category,Type } from "@/types/catalog";
+
 import products from "@/data/products.json";
 import categories from "@/data/categories.json";
-import types from "@/data/types.json"
+import types from "@/data/types.json";
 
 export default async function sitemap() {
-  const baseUrl = process.env.BASE_URL;
+  const baseUrl = "https://sapnashrijewellers.in";
+  const now = new Date().toISOString();
 
-  // --- Category URLs ---
-  const categoryUrls = categories.map((cat: Category) => ({
-    url: `${baseUrl}/category/${cat.slug}`,
-    lastModified: new Date().toISOString(),
-    changeFrequency: "weekly",
-    priority: 0.8,
-  }));
+  return [
+    // Home
+    {
+      url: `${baseUrl}/`,
+      lastModified: now,
+      changeFrequency: "daily",
+      priority: 1.0,
+    },
 
-  const typesUrls = types.map((t: Type) => ({
-    url: `${baseUrl}/jewelry-type/${t.slug}`,
-    lastModified: new Date().toISOString(),
-    changeFrequency: "weekly",
-    priority: 0.8,
-  }));
+    // Categories
+    ...categories.map(cat => ({
+      url: `${baseUrl}/category/${cat.slug}/`,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    })),
 
-  // --- Product URLs ---
-  const productUrls =products.map((product:Product)=> ({
-        url: `${baseUrl}/product/${product.slug}/`,
-        lastModified: new Date().toISOString(),
-        changeFrequency: "weekly",
-        priority: 0.7,
-      }));
-    
+    // Jewelry Types
+    ...types.map(t => ({
+      url: `${baseUrl}/jewelry-type/${t.slug}/`,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    })),
 
-  // --- Static pages ---
-  const staticUrls = [
-    "",
-    "/about-us",
-    "/calculator",
-    "/huid",
-  ].map((path) => ({
-    url: `${baseUrl}${path}`,
-    lastModified: new Date().toISOString(),
-    changeFrequency: "weekly",
-    priority: 0.9,
-  }));
+    // Products
+    ...products.map(product => ({
+      url: `${baseUrl}/product/${product.slug}/`,
+      changeFrequency: "weekly",
+      priority: 0.7,
+    })),
 
-  // --- Combine all ---
-  return [...staticUrls, ...categoryUrls, ...productUrls, ...typesUrls];
+    // Static / policy pages
+    ...[
+      "/about-us/",
+      "/calculator/",
+      "/huid/",
+      "/policies/privacy/",
+      "/policies/terms/",
+      "/policies/shipping/",
+      "/policies/disclaimer/",
+      "/policies/returns/",
+    ].map(path => ({
+      url: `${baseUrl}${path}`,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    })),
+  ];
 }

@@ -1,108 +1,127 @@
 "use client";
 
+import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
 import MiniSearch from "minisearch";
+
 import ProductCard from "@/components/product/ProductCard";
-import { SearchFilters } from "@/types/catalog";
-import SearchBar from "@/search/SearchBar";
-import { useSearch } from "@/search/useSearch";
-import { miniSearchIndexOptions } from "@/search/shared";
 import Breadcrumb from "@/components/navbar/BreadcrumbItem";
 import FilterNSort from "@/components/common/FilterNSort";
 
+import { SearchFilters } from "@/types/catalog";
+import { miniSearchIndexOptions } from "@/search/shared";
+import { useSearch } from "@/search/useSearch";
+
 export default function JewelrySearch() {
   const searchParams = useSearchParams();
-  const rawQuery = decodeURIComponent(searchParams.get("q") || "");
-  const initialQuery = rawQuery.replace(/^web\+ssj:(\/\/)?/i, "");
-
-  // 🔹 Typing state
-  const [inputQuery, setInputQuery] = useState(initialQuery);
-
-  // 🔹 Submitted (actual search) state
-  const [submittedQuery, setSubmittedQuery] = useState(initialQuery);
-
-  const [filters, setFilters] = useState<SearchFilters>({material: "Silver"});
-  const [sortBy, setSortBy] = useState("best-match");
-  const [searchIndex, setSearchIndex] = useState<MiniSearch<any> | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
 
   /* ----------------------------
-     Load MiniSearch index
+     Query (URL = truth)
+  ----------------------------- */
+  const query = useMemo(() => {
+    const raw = decodeURIComponent(searchParams.get("q") || "");
+    return raw.replace(/^web\+ssj:(\/\/)?/i, "").trim();
+  }, [searchParams]);
+
+  /* ----------------------------
+     State
+  ----------------------------- */
+  const [filters, setFilters] = useState<SearchFilters>({ material: "Silver" });
+  const [sortBy, setSortBy] = useState("best-match");
+
+  const [searchIndex, setSearchIndex] = useState<MiniSearch<any> | null>(null);
+  const [isIndexLoading, setIsIndexLoading] = useState(true);
+
+  /* ----------------------------
+     Load index
   ----------------------------- */
   useEffect(() => {
     let cancelled = false;
 
     async function loadIndex() {
-      setIsLoading(true);
+      setIsIndexLoading(true);
       const res = await fetch("/data/search-index.json");
-      const indexJSON = await res.text();
+      const json = await res.text();
       if (cancelled) return;
 
       setSearchIndex(
-        MiniSearch.loadJSON(indexJSON, miniSearchIndexOptions)
+        MiniSearch.loadJSON(json, miniSearchIndexOptions)
       );
-      setIsLoading(false);
+      setIsIndexLoading(false);
     }
 
     loadIndex();
-    return () => { cancelled = true };
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   /* ----------------------------
-     Search runs ONLY on submit
+     Search (sync, derived)
   ----------------------------- */
   const results = useSearch(
     searchIndex,
-    submittedQuery,
+    query,
     filters,
     sortBy
   );
 
-  const handleSearchSubmit = () => {
-    setSubmittedQuery(inputQuery.trim());
-  };
+  const isSearching = isIndexLoading || !searchIndex;
 
+  /* ----------------------------
+     Render
+  ----------------------------- */
   return (
     <div className="container mx-auto">
-      <Breadcrumb items={[
-        { name: "Home", href: "/" },
-        { name: "Search" }
-      ]} />
+      <Breadcrumb
+        items={[
+          { name: "Home", href: "/" },
+          { name: "Search" }
+        ]}
+      />
 
-      
       <div className="flex items-center gap-3 m-4">
-        {/* LEFT: takes remaining space */}
         <div className="flex-1 font-medium truncate">
-          {submittedQuery && (
-            <span className="text-primary">
-              {" "}
-            </span>
-          )}
-          {results.length} products found
+          {isSearching
+            ? <span className="opacity-60">Searching…</span>
+            : <span>{results.length} products found</span>
+          }
         </div>
 
-        {/* RIGHT: fixed / intrinsic width */}
-        <div className="shrink-0">
-          <FilterNSort
-            filters={filters}
-            onFilterChange={(k, v) =>
-              setFilters(p => ({ ...p, [k]: v }))
-            }
-            sortBy={sortBy}
-            onSortChange={setSortBy}
-          />
+        <FilterNSort
+          filters={filters}
+          onFilterChange={(k, v) =>
+            setFilters(p => ({ ...p, [k]: v }))
+          }
+          sortBy={sortBy}
+          onSortChange={setSortBy}
+        />
+      </div>
+
+      {/* Skeleton */}
+      {isSearching && (
+        <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
+          {Array.from({ length: 8 }).map((_, i) => (
+            <div
+              key={i}
+              className="h-64 rounded-lg bg-surface animate-pulse"
+            />
+          ))}
         </div>
-      </div>
+      )}
 
-      <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
-        {results.map(p => (
-          <ProductCard key={p.slug} product={p} />
-        ))}
-      </div>
+      {/* Results */}
+      {!isSearching && results.length > 0 && (
+        <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
+          {results.map(p => (
+            <ProductCard key={p.slug} product={p} />
+          ))}
+        </div>
+      )}
 
-      {!isLoading && results.length === 0 && (
-        <div className="text-center py-20">
+      {/* Empty */}
+      {!isSearching && results.length === 0 && (
+        <div className="text-center py-20 opacity-70">
           No results found.
         </div>
       )}

@@ -71,7 +71,7 @@ Todo:
 ✔ certified purity --> Authentication certificate @done(26-01-18 12:56)
 ✔ Price on Product card @done(26-01-18 21:11)
 
-☐ search bar --> search page not working
+✔ search bar --> search page not working @done(26-01-19 10:25)
 ☐ Size should go in whatsapp message
 
 ☐ image can be slightly different than picture due to lighting condition
@@ -80,6 +80,14 @@ Todo:
 ✔ Shop by occasion and shop by category link is not working @done(26-01-18 20:38)
 ✔ Remove whatsapp icon from Buy Now button and make it in blue color @done(26-01-18 20:24)
 ✔ Has to double tap on product card to go to PDP @done(26-01-18 21:12)
+
+☐ Favicon in search Results
+☐ How to update data in google sheet, filters and sorting
+☐ Google forms
+☐ How to name images
+☐ how to test products on website
+
+
 
 
 

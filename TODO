@@ -97,14 +97,25 @@ Completed Tasks:
   ✔ wedding jewellery type icon missing @done(26-01-20 12:02)
   ✔ Category card same as product card for image hover effect @done(26-01-20 12:02)
   ✔ How to manage price for different variants and size of product @done(26-01-20 16:06)
-Todo:
+  ✔ Showing BIS LOGO on silver even when HUID is not true @done(26-01-20 17:58)
+  ✔ fix fetch and save so that it keeps a copy of products.jso into public/data folder @done(26-01-20 17:58)
+  ✔ Offer discounted price @done(26-01-20 18:59)
+  ✔ Size should go in whatsapp message @done(26-01-20 19:36)
+  ✔ Buy now button @done(26-01-20 19:36)
+Staged:
   ☐ App on play store @started(25-12-27 18:57)
   ☐ check for favicon @started(26-01-16 11:46)    
-  ☐ Size should go in whatsapp message    
-  ☐ Offer discounted price
-  ☐ Add offer valid until, in-stock & price in json LD
-  ☐ Out of stock with price  
-  ☐ Showing BIS LOGO on silver even when HUID is not true    
+  
+
+Working:
+  
+  
+  ☐ Add offer valid until, in-stock & price in json LD  
+  ☐ Price filter  
+  
+
+Not Started:
   ☐ Shiprocket integration
+  
   
   

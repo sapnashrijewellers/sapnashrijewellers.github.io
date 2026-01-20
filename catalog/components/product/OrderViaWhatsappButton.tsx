@@ -5,10 +5,10 @@ import { Product } from "@/types/catalog";
 const WHATSAPP_NUMBER = '918234042231';
 const baseURL = process.env.BASE_URL;
 
-const WhatsappClick = ({ product, title = "" }: { product: Product, title?: string }) => {
+const OrderViaWhatsappButton = ({ product, title = "", activeVariant = 0 }: { product: Product, title?: string, activeVariant?: number }) => {
   const baseProductUrl = `${baseURL}/product/${product.slug}`;
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${(
-    `Hi, I want more details and discount on ${baseProductUrl}`
+    `Hi, I want more details and discount on ${baseProductUrl} SIZE: ${product.variants[activeVariant].size}`
   )}`;
   return (
     <a
@@ -38,4 +38,4 @@ const WhatsappClick = ({ product, title = "" }: { product: Product, title?: stri
   );
 };
 
-export default WhatsappClick;
+export default OrderViaWhatsappButton;

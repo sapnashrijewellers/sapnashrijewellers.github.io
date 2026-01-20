@@ -3,8 +3,8 @@
 
 import { useRates } from "@/context/RateContext";
 import { calculatePrice } from "@/utils/calculatePrice";
-import WhatsappClick from "@/components/product/WhatAppClick";
-import AddToCartButton from "./AddToCartButton";
+import OrderViaWhatsappButton from "@/components/product/OrderViaWhatsappButton";
+import BuyNowButton from "./BuyNowButton";
 import CalculatePriceButton from "@/components/product/CalculatePriceButton";
 import { Product } from "@/types/catalog";
 import DisclaimerTooltip from "@/components/common/DisclaimerTooltip"
@@ -18,20 +18,44 @@ export default function ProductPrice({ product, activeVariant = 0 }: { product: 
 
   const isAvailable = product.variants[activeVariant].available;
   const hasMakingCharges = product.variants[activeVariant].makingCharges > 0;
-  const formattedPrice = popV?.price?.toLocaleString("en-IN");
+
+  const formattedFinal = popV?.price?.toLocaleString("en-IN");
+  const formattedMRP = popV?.MRP?.toLocaleString("en-IN");
 
   return (
     <div className="space-y-3">
       {/* 1. Price Display Logic */}
       {hasMakingCharges && (
-        <div className="text-2xl font-semibold">
-          {!isAvailable && "Estimated Price "}₹{formattedPrice}
-          {!product.variants[activeVariant].available && (
-            <DisclaimerTooltip
-              text="On order, product weight may vary slightly due to manufacturing tolerance."
-              href="/policies/disclaimer"
-            />
-          )}
+        <div className="space-y-1">
+          {/* Discounted pricing */}
+          {popV?.price != null &&
+            popV.MRP != null &&
+            popV.discount != null &&
+            popV.discount > 0 && (
+              <div className="flex items-center gap-2 text-sm">
+                <span className="line-through text-gray-500">
+                  ₹{formattedMRP}
+                </span>
+                {popV.discount && popV.discount > 0 && (
+                  <span className="rounded-full bg-accent text-surface px-2 py-0.5 text-xs font-semibold">
+                    {popV.discount}% OFF
+                  </span>
+                )}
+              </div>
+            )}
+
+          {/* Final price */}
+          <div className="text-2xl font-semibold text-primary-dark">
+            {!isAvailable && "Estimated Price "}
+            ₹{formattedFinal}
+
+            {!isAvailable && (
+              <DisclaimerTooltip
+                text="On order, product weight may vary slightly due to manufacturing tolerance."
+                href="/policies/disclaimer"
+              />
+            )}
+          </div>
         </div>
       )}
 
@@ -40,12 +64,13 @@ export default function ProductPrice({ product, activeVariant = 0 }: { product: 
 
       {/* 3. CTA Logic */}
       {isAvailable && hasMakingCharges && (
-        <AddToCartButton product={product} />
+        <BuyNowButton product={product} activeVariant={activeVariant} />
       )}
       {!(isAvailable && hasMakingCharges) && (
-        <WhatsappClick
+        <OrderViaWhatsappButton
           product={product}
           title="Order via WhatsApp"
+          activeVariant={activeVariant}
         />
 
       )}

@@ -36,16 +36,16 @@
     "rating": 4.9,
     "ratingCount": 64,
     "Lock": "",
-    "weight": 20.46,
+    "weight": 20,
     "variants": [
       {
         "id": 1,
         "productId": 1,
         "size": "2-2",
         "available": true,
-        "weight": 20.46,
+        "weight": 20,
         "makingCharges": 6,
-        "priceAdjustment": 0,
+        "priceAdjustment": 200,
         "discount": 0,
         "active": true
       },
@@ -113,7 +113,7 @@
     ],
     "purity": "silver",
     "newArrival": true,
-    "HUID": false,
+    "HUID": true,
     "available": true,
     "active": true,
     "slug": "silver-bar-2",
@@ -2966,7 +2966,7 @@
         "weight": 4.5,
         "makingCharges": 7,
         "priceAdjustment": 0,
-        "discount": 0,
+        "discount": 8,
         "active": true
       }
     ]

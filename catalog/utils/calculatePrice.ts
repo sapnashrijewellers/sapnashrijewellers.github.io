@@ -6,7 +6,7 @@ export function calculatePrice({
   variant,
   rates,
 }: {
-  purity:string
+  purity: string
   variant: ProductVariant;
   rates?: Rates;
 }): ProductVariant | null {
@@ -22,22 +22,28 @@ export function calculatePrice({
   }
 
   if (!productRate) return null;
+  if (!variant.makingCharges && variant.makingCharges < 0)
+    return null;
 
-  
-  
-    const basePrice = (variant.weight || 0) * productRate;
-    const making = (basePrice * (variant.makingCharges || 0)) / 100;
-    const subtotal = basePrice + making;
-    const gst = subtotal * 0.03;
 
-    const mrp = Math.round(subtotal + gst);
-    const discountAmount = (mrp * (variant.discount || 0)) / 100;
-    const finalPrice = Math.round(mrp - discountAmount);
 
-    // Return the updated object
-    return {
-      ...variant,
-      price: finalPrice,
-      MRP: mrp
-    };  
+  const basePrice = (variant.weight || 0) * productRate;
+  const making = (basePrice * (variant.makingCharges || 0)) / 100;
+  const subtotal = basePrice + making;
+  const gst = subtotal * 0.03;
+
+  const mrp = Math.round(subtotal + gst);
+
+  const hikedPrice: number = (variant.discount && variant.discount > 0) ?
+    mrp / (1 - (variant.discount / 100))
+    :
+    mrp;
+  const finalPrice = Math.round(mrp);
+
+  // Return the updated object
+  return {
+    ...variant,
+    price: finalPrice,
+    MRP: Math.round(hikedPrice)
+  };
 }

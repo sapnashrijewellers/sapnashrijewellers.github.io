@@ -4,7 +4,8 @@ import { writeFile } from 'fs/promises';
 import path from 'path';
 import buildSearchIndex from "./buildSearchIndex.js"
 
-const DtaFolder = "../catalog/data/"
+const DataFolder = "../catalog/data/"
+const PublicDataFolder = "../catalog/public/data/"
 // The URL of your Google Apps Script Web App
 const API_URL = "https://script.google.com/macros/s/AKfycbwNQ9fFmV0MqVEKg6pk-x56FsCw-xOnV__A3l6hqrlUVukKyx6gf31DpiO4hn4Vep6U5w/exec";
 
@@ -42,7 +43,7 @@ async function fetchAndSaveData() {
     for (const key of keys) {
 
         // Construct the output filename (e.g., 'ticker.json')
-        const fileName = path.join(DtaFolder, `${key}.json`);
+        const fileName = path.join(DataFolder, `${key}.json`);
 
         // Get the value for the current key
         let data = apiResponse[key];
@@ -59,6 +60,10 @@ async function fetchAndSaveData() {
         try {
 
             await writeFile(fileName, jsonString);
+            if (key === "products") {
+                const fName = path.join(PublicDataFolder, `${key}.json`);
+                await writeFile(fName, jsonString);
+            }
             console.log(`✅ Saved data for key: ${key} -> ${fileName}`);
             successCount++;
         } catch (fileError) {

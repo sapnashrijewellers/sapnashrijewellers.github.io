@@ -7,7 +7,7 @@ import products from "@/data/products.json";
 import { Product } from "@/types/catalog";
 import { HighlightsTabs } from "@/components/product/Highlights";
 import ProductGallery from "@/components/product/ProductGallery";
-import WhatsappClick from "@/components/product/WhatAppClick";
+import WhatsappClick from "@/components/product/OrderViaWhatsappButton";
 import { CalculatorForm, CalcRates } from "@/types/catalog"
 
 

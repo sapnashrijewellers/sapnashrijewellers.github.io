@@ -6,7 +6,7 @@ import ProductCard from "@/components/product/ProductCard";
 import products from "@/data/products.json";
 import type { Product } from "@/types/catalog";
 
-export default function WishlistPage() {
+export default function WishlistBar() {
 
     const [wishlist, setWishlist] = useState<string[]>([]);
 

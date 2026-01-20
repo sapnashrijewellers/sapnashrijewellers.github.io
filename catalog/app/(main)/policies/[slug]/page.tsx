@@ -89,7 +89,7 @@ export default async function PrivacyPage({ params }: { params: Promise<{ slug: 
     const { content, data: frontmatter } = data;
 
     return (
-        <main className="max-w-5xl mx-auto px-4 py-16">
+        <main className="max-w-5xl mx-auto px-4 py-16 policy-container">
             <header className="mb-12">
                 <h1 className="text-4xl font-bold mb-4">{frontmatter.title}</h1>
                 <p className="text-muted max-w-xl">{frontmatter.description}</p>                

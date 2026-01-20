@@ -1,30 +1,23 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import {ProductVariant} from "@/types/catalog"
 
 type ProductSizeSelectorProps = {
-  size?: string | null;
-  onChange?: (size: string) => void;
+  variants: ProductVariant[];
+  onChange?: (activeVariant: number) => void;
 };
 
 export default function ProductSizeSelector({
-  size,
+  variants,
   onChange,
 }: ProductSizeSelectorProps) {
-  const [selectedSize, setSelectedSize] = useState<string>("");
+  const [selectedVariant, setSelectedSize] = useState<number>(0);  
 
-  const sizes = useMemo(() => {
-    if (!size) return [];
-    return size
-      .split("\n")
-      .map((s) => s.trim())
-      .filter(Boolean);
-  }, [size]);
+  
+  if (variants.length === 1) return null;
 
-  // 🔕 No size → render nothing
-  if (sizes.length === 0) return null;
-
-  const handleSelect = (value: string) => {
+  const handleSelect = (value: number) => {
     setSelectedSize(value);
     onChange?.(value);
   };
@@ -34,17 +27,17 @@ export default function ProductSizeSelector({
       <p className="labelClasses mb-2">Select Size</p>
 
       <div className="flex flex-wrap gap-2">
-        {sizes.map((s) => {
-          const active = selectedSize === s;
+        {variants.map((s,index) => {
+          const active = selectedVariant === index;
 
           return (
             <button
-              key={s}
+              key={s.id}
               type="button"
-              onClick={() => handleSelect(s)}
+              onClick={() => handleSelect(index)}
               className={`
                 px-4 py-2 rounded-md border text-sm
-                transition-all
+                transition-all cursor-pointer
                 ${
                   active
                     ? "ssj-btn bg-accent"
@@ -52,7 +45,7 @@ export default function ProductSizeSelector({
                 }
               `}
             >
-              {s}
+              {s.size}
             </button>
           );
         })}

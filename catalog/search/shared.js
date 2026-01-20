@@ -27,7 +27,8 @@ exports.miniSearchIndexOptions = {
         "for",
         "type",
         "rating",
-        "ratingCount"
+        "ratingCount",
+        "discount"
     ],
     tokenize(text) {
         return (text

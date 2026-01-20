@@ -1,4 +1,4 @@
-Todo:
+Completed Tasks:
   ✔ WhatsApp button @started(25-12-13 03:18) @done(25-12-13 03:39) @lasted(21m51s)
   ✔ product details english highlights @done(25-12-13 03:39)  
   ✔ calculator fix @done(25-12-13 04:12)
@@ -30,96 +30,81 @@ Todo:
   ✔ Product rating @started(25-12-19 20:31) @done(25-12-20 13:51) @lasted(17h20m28s)
   ✔ Remove Live rate @done(25-12-20 13:51)
   ✔ Fix dark theme @done(25-12-22 12:42)
-  ✔ Testimonial integration @started(25-12-22 13:22) @done(25-12-22 15:43) @lasted(2h21m58s)  
-  ☐ App on play store @started(25-12-27 18:57)
+  ✔ Testimonial integration @started(25-12-22 13:22) @done(25-12-22 15:43) @lasted(2h21m58s)    
   ✔ Include hindiName in search @done(26-01-15 18:52)
   ✔ Add hindi name in page title and product title @done(26-01-15 18:52)
-  ✔ clean metadata section on every page @done(26-01-15 18:52)
-  ☐ check for favicon @started(26-01-16 11:46)
+  ✔ clean metadata section on every page @done(26-01-15 18:52)  
   ✔ www must work @done(26-01-15 18:10)
   ✔ Whole banner must be clickable link @done(26-01-16 15:47) @lasted(4h) @done(26-01-16 15:47) @lasted(4h) @done(26-01-16 15:47) @lasted(4h) @done(26-01-16 15:47) @lasted(4h)
-
   ✔ Navigation Bar – 18K Gold Pricing: - Remove Silver price- Display 18K Gold price Formula: 24K Gold Price × 75% @done(26-01-16 15:37)
-
-✔ Filters- Material [Gold | Silver] & Price range filters @done(26-01-17 11:13)
-✔ Product Card: When two image then change image on hover @done(26-01-17 11:18)
-✔ Product Detail Page – 
-  ✔ Pricing Logic: - Silver price shown only if making charges apply (+- MC +-Absolute)- Hide calculator when final price exists @started(26-01-17 16:28) @done(26-01-17 16:28) @lasted(12s)
-  ✔ Touch-Swipe & Carousel: - Swipe-enabled product galleries @done(26-01-17 18:13)
-  ✔ Return Policy- Detailed policy page with T&C @done(26-01-17 18:01)
-  ✔ Bulk Enquiry - Product, Quantity, Requirements → WhatsApp    ☐ Dedicated CTA & form for corporate/event orders @done(26-01-17 11:19)
-  ✔ Brand / Identity Field- New catalog field: brandText- Display below Weight & Purity @done(26-01-16 19:00)
-  ✔ Size Selection: Size must go in ShipRocket order details @done(26-01-16 19:00)      ☐ Rings: 1–28      ☐ Bangles/Bracelets: 2-0 to 3-0      ☐ Chain -
-  ✔ Care Instructions Expandable PDP section - general instructions for gold and silver @done(26-01-16 18:40)
-  ✔ Trust Signals Ribbon All - Metal type, certification, warranty, returns, online payments (CC,DC, UPI), craftsmanship, skin-safe, All India Delivery @started(26-01-16 16:41) @done(26-01-16 16:41) @lasted(1m)
-  ✔ Gold: Online payment. @started(26-01-16 16:41) @done(26-01-16 16:42) @lasted(1m)
-  ✔ Silver: - COD @started(26-01-16 16:41) @done(26-01-16 16:42) @lasted(1m1s)
-✔ Hallmark Page- Silver hallmarking not compulsory @done(26-01-16 19:09)
-✔ Home & Category Banners - Images will be provided by Amish @done(26-01-16 19:44)
-✔ Full banner must be clickable @done(26-01-16 15:45)
-✔ Rajputani jewellery banner - Amish will provide image @done(26-01-16 19:40)
-✔ Calculator - When directly navigate to calculator page,  default making charges must be: 3.5% rather than existing 7% @done(26-01-16 19:44)
-✔ selected size should be highlighted in PDP @done(26-01-18 18:03)
-✔ HUID column for gold and silver @done(26-01-18 12:22)
-✔ breadcrumb multiline @done(26-01-18 13:01)
-
-✔ Footer: GST No, Legal Name, Mobile Number, Business Hours @started(26-01-18 12:24) @done(26-01-18 12:24) @lasted(28s)
-
-✔ hallmark --> triangle symbol @done(26-01-18 12:25)
-✔ craftsmanship --> hand symbol @done(26-01-18 12:56)
-✔ silver jewellery --> bar @done(26-01-18 12:56)
-✔ certified purity --> Authentication certificate @done(26-01-18 12:56)
-✔ Price on Product card @done(26-01-18 21:11)
-
-✔ search bar --> search page not working @done(26-01-19 10:25)
-☐ Size should go in whatsapp message
-☐ How to manage price for different variants and size of product
-☐ New arrivals should be one per category and keep changing
-☐ Offer discounted price
-☐ Add offer valid until, in-stock & price in json LD
-☐ Out of stock with price
-✔ Remove Ticker and bring Search bar below the logo @done(26-01-19 23:05)
-✔ Color Theme on blue color @done(26-01-19 22:48)
-
-☐ Shiprocket integration
-☐ image can be slightly different than picture due to lighting condition
-☐ on order weight of product may vary slightly due to manufacturing tolerance, so final product weight can be +/- 0.1 gram from mentioned weight
-✔ for price calculation useRates remove SWR implementation @done(26-01-18 21:12)
-✔ Shop by occasion and shop by category link is not working @done(26-01-18 20:38)
-✔ Remove whatsapp icon from Buy Now button and make it in blue color @done(26-01-18 20:24)
-✔ Has to double tap on product card to go to PDP @done(26-01-18 21:12)
-☐ Showing BIS LOGO on silver even when HUID is not true
-
-☐ Favicon in search Results
-
-☐ How to name images
-☐ how to test products on website
-
-
-
-
-✔ Product Detail Page – Pricing Logic : - Silver price shown only if making charges apply (+- MC +-Absolute)- Hide calculator when final price exists @done(26-01-18 18:05)
-    ✔ Touch-Swipe & Carousel: - Swipe-enabled product galleries @done(26-01-18 18:04)
-    ✔ Brand / Identity Field- New catalog field: brandText- Display below Weight & Purity @done(26-01-18 18:04)
-    ✔ Trust Signals Ribbon All - Metal type, certification, warranty, returns, online payments (CC,DC, UPI), craftsmanship, skin-safe, All India Delivery @done(26-01-18 18:04)
-      ✔ Gold: Online payment. @done(26-01-18 18:04)
-      ✔ Silver: - COD @done(26-01-18 18:04)
-    ✔ Bulk Enquiry - Product, Quantity, Requirements → WhatsApp @done(26-01-18 18:04)
-    ✔ Dedicated CTA & form for corporate/event orders @done(26-01-18 18:04)
-    ✔ Size Selection: Size must go in ShipRocket order details @done(26-01-18 18:04)
-      ✔ Rings: 1–28 @done(26-01-18 18:04)
-      ✔ Bangles/Bracelets: 2-0 to 3-0 @done(26-01-18 18:04)
-      ✔ Chain - @done(26-01-18 18:04)
-    ✔ Care Instructions Expandable PDP section - general instructions for gold and silver @done(26-01-18 18:04)
-
-✔ Return Policy- Detailed policy page with T&C @done(26-01-18 18:04)
-✔ Filters- Material [Gold | Silver] & Price range filters @done(26-01-18 18:04)
-✔ Hallmark Page- Silver hallmarking not compulsory @done(26-01-18 18:04)
-✔ Home & Category Banners - Images will be provided by Amish @done(26-01-18 18:04)
-✔ Full banner must be clickable @done(26-01-18 18:04)
-✔ Rajputani jewellery banner - Amish will provide image @done(26-01-18 18:04)
-✔ Calculator - When directly navigate to calculator page,  default making charges must be: 3.5% rather than existing 7% @done(26-01-18 18:04)
-
-
-
-
+  ✔ Filters- Material [Gold | Silver] & Price range filters @done(26-01-17 11:13)
+  ✔ Product Card: When two image then change image on hover @done(26-01-17 11:18)
+  ✔ Product Detail Page – 
+    ✔ Pricing Logic: - Silver price shown only if making charges apply (+- MC +-Absolute)- Hide calculator when final price exists @started(26-01-17 16:28) @done(26-01-17 16:28) @lasted(12s)
+    ✔ Touch-Swipe & Carousel: - Swipe-enabled product galleries @done(26-01-17 18:13)
+    ✔ Return Policy- Detailed policy page with T&C @done(26-01-17 18:01)
+    ✔ Bulk Enquiry - Product, Quantity, Requirements → WhatsApp    ☐ Dedicated CTA & form for corporate/event orders @done(26-01-17 11:19)
+    ✔ Brand / Identity Field- New catalog field: brandText- Display below Weight & Purity @done(26-01-16 19:00)
+    ✔ Size Selection: Size must go in ShipRocket order details @done(26-01-16 19:00)      ☐ Rings: 1–28      ☐ Bangles/Bracelets: 2-0 to 3-0      ☐ Chain -
+    ✔ Care Instructions Expandable PDP section - general instructions for gold and silver @done(26-01-16 18:40)
+    ✔ Trust Signals Ribbon All - Metal type, certification, warranty, returns, online payments (CC,DC, UPI), craftsmanship, skin-safe, All India Delivery @started(26-01-16 16:41) @done(26-01-16 16:41) @lasted(1m)
+    ✔ Gold: Online payment. @started(26-01-16 16:41) @done(26-01-16 16:42) @lasted(1m)
+    ✔ Silver: - COD @started(26-01-16 16:41) @done(26-01-16 16:42) @lasted(1m1s)
+  ✔ Hallmark Page- Silver hallmarking not compulsory @done(26-01-16 19:09)
+  ✔ Home & Category Banners - Images will be provided by Amish @done(26-01-16 19:44)
+  ✔ Full banner must be clickable @done(26-01-16 15:45)
+  ✔ Rajputani jewellery banner - Amish will provide image @done(26-01-16 19:40)
+  ✔ Calculator - When directly navigate to calculator page,  default making charges must be: 3.5% rather than existing 7% @done(26-01-16 19:44)
+  ✔ selected size should be highlighted in PDP @done(26-01-18 18:03)
+  ✔ HUID column for gold and silver @done(26-01-18 12:22)
+  ✔ breadcrumb multiline @done(26-01-18 13:01)
+  ✔ Footer: GST No, Legal Name, Mobile Number, Business Hours @started(26-01-18 12:24) @done(26-01-18 12:24) @lasted(28s)
+  ✔ hallmark --> triangle symbol @done(26-01-18 12:25)
+  ✔ craftsmanship --> hand symbol @done(26-01-18 12:56)
+  ✔ silver jewellery --> bar @done(26-01-18 12:56)
+  ✔ certified purity --> Authentication certificate @done(26-01-18 12:56)
+  ✔ Price on Product card @done(26-01-18 21:11)
+  ✔ search bar --> search page not working @done(26-01-19 10:25)
+  ✔ Remove Ticker and bring Search bar below the logo @done(26-01-19 23:05)
+  ✔ Color Theme on blue color @done(26-01-19 22:48)
+  ✔ for price calculation useRates remove SWR implementation @done(26-01-18 21:12)
+  ✔ Shop by occasion and shop by category link is not working @done(26-01-18 20:38)
+  ✔ Remove whatsapp icon from Buy Now button and make it in blue color @done(26-01-18 20:24)
+  ✔ Has to double tap on product card to go to PDP @done(26-01-18 21:12)
+  ✔ Product Detail Page – Pricing Logic : - Silver price shown only if making charges apply (+- MC +-Absolute)- Hide calculator when final price exists @done(26-01-18 18:05)
+      ✔ Touch-Swipe & Carousel: - Swipe-enabled product galleries @done(26-01-18 18:04)
+      ✔ Brand / Identity Field- New catalog field: brandText- Display below Weight & Purity @done(26-01-18 18:04)
+      ✔ Trust Signals Ribbon All - Metal type, certification, warranty, returns, online payments (CC,DC, UPI), craftsmanship, skin-safe, All India Delivery @done(26-01-18 18:04)
+        ✔ Gold: Online payment. @done(26-01-18 18:04)
+        ✔ Silver: - COD @done(26-01-18 18:04)
+      ✔ Bulk Enquiry - Product, Quantity, Requirements → WhatsApp @done(26-01-18 18:04)
+      ✔ Dedicated CTA & form for corporate/event orders @done(26-01-18 18:04)
+      ✔ Size Selection: Size must go in ShipRocket order details @done(26-01-18 18:04)
+        ✔ Rings: 1–28 @done(26-01-18 18:04)
+        ✔ Bangles/Bracelets: 2-0 to 3-0 @done(26-01-18 18:04)
+        ✔ Chain - @done(26-01-18 18:04)
+      ✔ Care Instructions Expandable PDP section - general instructions for gold and silver @done(26-01-18 18:04)
+  ✔ Return Policy- Detailed policy page with T&C @done(26-01-18 18:04)
+  ✔ Filters- Material [Gold | Silver] & Price range filters @done(26-01-18 18:04)
+  ✔ Hallmark Page- Silver hallmarking not compulsory @done(26-01-18 18:04)
+  ✔ Home & Category Banners - Images will be provided by Amish @done(26-01-18 18:04)
+  ✔ Full banner must be clickable @done(26-01-18 18:04)
+  ✔ Rajputani jewellery banner - Amish will provide image @done(26-01-18 18:04)
+  ✔ Calculator - When directly navigate to calculator page,  default making charges must be: 3.5% rather than existing 7% @done(26-01-18 18:04)
+  ✔ image can be slightly different than picture due to lighting condition @done(26-01-20 10:13)
+  ✔ on order weight of product may vary slightly due to manufacturing tolerance, so final product weight can be +/- 0.1 gram from mentioned weight @done(26-01-20 10:39)
+  ✔ New arrivals should be one per category and keep changing @done(26-01-20 10:39)
+  ✔ wedding jewellery type icon missing @done(26-01-20 12:02)
+  ✔ Category card same as product card for image hover effect @done(26-01-20 12:02)
+  ✔ How to manage price for different variants and size of product @done(26-01-20 16:06)
+Todo:
+  ☐ App on play store @started(25-12-27 18:57)
+  ☐ check for favicon @started(26-01-16 11:46)    
+  ☐ Size should go in whatsapp message    
+  ☐ Offer discounted price
+  ☐ Add offer valid until, in-stock & price in json LD
+  ☐ Out of stock with price  
+  ☐ Showing BIS LOGO on silver even when HUID is not true    
+  ☐ Shiprocket integration
+  
+  

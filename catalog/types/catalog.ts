@@ -1,10 +1,22 @@
 import { LucideIcon } from "lucide-react";
 
 /** Represents a single jewelry product item */
+export interface ProductVariant {
+  id: number;
+  productId: number;
+  weight: number;
+  active: boolean;
+  makingCharges: number;
+  available?: boolean;
+  size: string;
+  discount: number;
+  price?: number;
+  MRP?: number;
+}
+
 export interface Product {
   id: number;
   name: string;
-  weight: number;
   purity: string;
   images: string[];
   highlights: string[];
@@ -13,17 +25,17 @@ export interface Product {
   category: string;
   type: string[];
   for: string;
-  keywords: string;
   slug: string;
   active: boolean;
   description: string;
-  makingCharges: number;  
   available?: boolean;
   rating: number;
   ratingCount: number;
-  brandText:string;
-  size:string;
-  hindiName:string;
+  brandText: string;
+  hindiName: string;
+  HUID: boolean;
+  weight: number;
+  variants: ProductVariant[]
 }
 
 export interface Category {

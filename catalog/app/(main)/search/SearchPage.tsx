@@ -1,72 +1,134 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import { useEffect, useMemo, useState } from "react";
 import MiniSearch from "minisearch";
-
 import ProductCard from "@/components/product/ProductCard";
 import Breadcrumb from "@/components/navbar/BreadcrumbItem";
+import { miniSearchIndexOptions, miniSearchQueryOptions } from "@/search/shared";
+import { Product } from "@/types/catalog";
 import FilterNSort from "@/components/common/FilterNSort";
-
 import { SearchFilters } from "@/types/catalog";
-import { miniSearchIndexOptions } from "@/search/shared";
-import { useSearch } from "@/search/useSearch";
+import rawQueryMap from "@/data/queryMap.json";
 
 export default function JewelrySearch() {
   const searchParams = useSearchParams();
+  const queryMap: Record<string, string> = rawQueryMap;
 
-  /* ----------------------------
-     Query (URL = truth)
-  ----------------------------- */
   const query = useMemo(() => {
     const raw = decodeURIComponent(searchParams.get("q") || "");
     return raw.replace(/^web\+ssj:(\/\/)?/i, "").trim();
   }, [searchParams]);
 
-  /* ----------------------------
-     State
-  ----------------------------- */
   const [filters, setFilters] = useState<SearchFilters>({ material: "Silver" });
   const [sortBy, setSortBy] = useState("best-match");
 
-  const [searchIndex, setSearchIndex] = useState<MiniSearch<any> | null>(null);
-  const [isIndexLoading, setIsIndexLoading] = useState(true);
+  const [products, setProducts] = useState<Product[]>([]);
+  const [searchIndex, setSearchIndex] = useState<MiniSearch | null>(null);
+  const [results, setResults] = useState<{ id: number; score: number }[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  /* ----------------------------
-     Load index
-  ----------------------------- */
+
+  const normalizeQuery = (q: string) =>
+    q
+      .toLowerCase()
+      .trim()
+      .split(/\s+/)
+      .map(t => queryMap[t] || t)
+      .join(" ");
+
   useEffect(() => {
     let cancelled = false;
 
-    async function loadIndex() {
-      setIsIndexLoading(true);
-      const res = await fetch("/data/search-index.json");
-      const json = await res.text();
-      if (cancelled) return;
+    async function loadAll() {
+      try {
+        setLoading(true);
 
-      setSearchIndex(
-        MiniSearch.loadJSON(json, miniSearchIndexOptions)
-      );
-      setIsIndexLoading(false);
+        const [indexRes, productRes] = await Promise.all([
+          fetch("/data/search-index.json"),
+          fetch("/data/products.json"),
+        ]);
+
+        const indexJSON = await indexRes.text();
+        const productJSON = await productRes.json();
+
+        if (cancelled) return;
+
+        setSearchIndex(MiniSearch.loadJSON(indexJSON, miniSearchIndexOptions));
+        setProducts(productJSON ?? []);
+      } catch (e) {
+        console.error(e);
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
     }
 
-    loadIndex();
-    return () => {
-      cancelled = true;
-    };
+    loadAll();
+    return () => { cancelled = true; };
   }, []);
 
-  /* ----------------------------
-     Search (sync, derived)
-  ----------------------------- */
-  const results = useSearch(
-    searchIndex,
-    query,
-    filters,
-    sortBy
-  );
 
-  const isSearching = isIndexLoading || !searchIndex;
+
+  /* -----------------------------------------
+   Run search
+  ------------------------------------------ */
+  useEffect(() => {
+    if (!searchIndex || !query) {
+      setResults([]);
+      return;
+    }
+
+    const cleaned = normalizeQuery(query);
+
+    const r = searchIndex.search(cleaned, miniSearchQueryOptions);
+
+    setResults(
+      r.map(x => ({
+        id: x.id,
+        score: x.score,
+      }))
+    );
+  }, [query, searchIndex]);
+
+  /* -----------------------------------------
+   Hydrate services from search results
+  ------------------------------------------ */
+  const hydratedProducts = useMemo(() => {
+    if (!results.length) return [];
+
+    const map = new Map(products.map(p => [p.id, p]));
+
+    return results
+      .map(r => map.get(r.id))
+      .filter((p): p is Product => Boolean(p));
+  }, [results, products]);
+
+  const filteredProducts = useMemo(() => {
+    let items = [...hydratedProducts]; // clone
+
+    const minWeight = filters.minWeight;
+    if (minWeight !== undefined) {
+      items = items.filter(p => p.weight >= minWeight);
+    }
+
+    const maxWeight = filters.maxWeight;
+    if (maxWeight !== undefined) {
+      items = items.filter(p => p.weight <= maxWeight);
+    }
+    if (filters.forWhom) items = items.filter(p => p.for === filters.forWhom);
+    if (filters.material) items = items.filter(p => p.purity.startsWith(filters.material.toLowerCase()));
+    items = items.filter(p => p.active);
+
+    switch (sortBy) {
+      case "name-asc": items.sort((a, b) => a.name.localeCompare(b.name)); break;
+      case "name-desc": items.sort((a, b) => b.name.localeCompare(a.name)); break;
+      case "weight-asc": items.sort((a, b) => a.weight - b.weight); break;
+      case "weight-desc": items.sort((a, b) => b.weight - a.weight); break;
+      // best-match = keep MiniSearch order
+    }
+
+    return items;
+  }, [hydratedProducts, filters, sortBy]);
 
   /* ----------------------------
      Render
@@ -82,9 +144,9 @@ export default function JewelrySearch() {
 
       <div className="flex items-center gap-3 m-4">
         <div className="flex-1 font-medium truncate">
-          {isSearching
+          {loading
             ? <span className="opacity-60">Searching…</span>
-            : <span>{results.length} products found</span>
+            : <span>{hydratedProducts.length} products found</span>
           }
         </div>
 
@@ -99,7 +161,7 @@ export default function JewelrySearch() {
       </div>
 
       {/* Skeleton */}
-      {isSearching && (
+      {loading && (
         <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
           {Array.from({ length: 8 }).map((_, i) => (
             <div
@@ -111,18 +173,24 @@ export default function JewelrySearch() {
       )}
 
       {/* Results */}
-      {!isSearching && results.length > 0 && (
+      {!loading && query && filteredProducts.length > 0 && (
         <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
-          {results.map(p => (
+          {filteredProducts.map(p => (
             <ProductCard key={p.slug} product={p} />
           ))}
         </div>
       )}
 
       {/* Empty */}
-      {!isSearching && results.length === 0 && (
+      {!loading && query && filteredProducts.length === 0 && (
         <div className="text-center py-20 opacity-70">
           No results found.
+        </div>
+      )}
+
+      {!loading && !query && (
+        <div className="py-20 text-center opacity-60">
+          Start typing to search jewellery…
         </div>
       )}
     </div>

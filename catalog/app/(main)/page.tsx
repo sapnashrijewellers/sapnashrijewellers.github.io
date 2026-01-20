@@ -1,12 +1,14 @@
-import CategoryCard from "@/components/home/CategoryCard";
-import categories from "@/data/categories.json";
+
 import RotatingBanner from "@/components/banners/RotatingBanner";
 import JewelleryTypeBar from "@/components/home/JewelleryType"
-import type { Product } from "@/types/catalog";
-import products from "@/data/products.json";
-import ProductCard from "@/components/product/ProductCard";
 import TestimonialScroller from "@/components/common/Testimonials"
 import SignatureCollections from "@/components/home/SignatureCollections";
+import NewArrivals from "@/components/product/NewArrivals";
+import WishlistBar from "@/components/common/WishlistBar";
+
+import categories from "@/data/categories.json";
+import products from "@/data/products.json";
+
 
 const title = `Sapna Shri Jewellers`;
 const description = `Explore out latest products at Sapna Shri Jewellers Nagda. High-quality gold & silver jewellery with BIS 916 certification.`;
@@ -42,36 +44,22 @@ export async function generateMetadata() {
 
 }
 
-const newArrivals = products
-  .filter(p => p.active && p.newArrival)
-  .sort((a, b) => Number(b.available) - Number(a.available))
-  .slice(0.15);
 export default function Home() {
   return (
     <div className="container mx-auto">
-      <div className="mb-6">
-        <RotatingBanner page="home" />
-      </div>
-      <div>
-        <h2 className="au-h2" id="shop-by-occasion">Jewellery for Every Occasion</h2>
-        <JewelleryTypeBar />
-      </div>
-      <div>
-        {newArrivals.length > 0 ? (
-          <div className="relative">
-            <h2 className="au-h2">New Arrivals</h2>
-            <div className=" flex gap-4 overflow-x-auto scrollbar-hide pb-2 snap-x snap-mandatory">
-              {newArrivals.map((p: Product) => (
-                <div key={p.id} className="flex-shrink-0 w-[160px] sm:w-[200px] lg:w-[220px] snap-start">
-                  <ProductCard product={p} />
-                </div>
-              ))}
-            </div>
-          </div>) : <div></div>}
-      </div>
+
+      <RotatingBanner page="home" />
+
+      <JewelleryTypeBar home={false} />
+
+      <WishlistBar /> 
+
+      <NewArrivals products={products} />
+
       <TestimonialScroller />
-      <SignatureCollections categories={categories} products={products} />
       
+      <SignatureCollections categories={categories} products={products} />
+
     </div>
   );
 }

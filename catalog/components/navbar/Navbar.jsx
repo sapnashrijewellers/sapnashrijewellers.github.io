@@ -19,12 +19,11 @@ const SearchBar = dynamic(
 export default function Navbar() {
   const rates = useRates();
 
-  return (
-    /*sticky top-0 z-50 w-full bg-surface/80 backdrop-blur-xl border-theme/30 shadow-xl*/
-    <header className="sticky top-0 z-40 bg-(--color-surface)/70 backdrop-blur-xl border-theme/30 shadow-xl">
+  return (    
+    <header className="container mx-auto">
       <LiveRatePopup rates={rates} />
 
-      <div className="mx-auto max-w-7xl px-3 py-2">
+      <div className="">
         {/* TOP ROW */}
         <div className="flex items-center gap-4">
           {/* LEFT: Logo */}

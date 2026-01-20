@@ -30,7 +30,7 @@ const PRIMARY_NAV: NavItem[] = [
     label: "Wishlist",
     href: "/wishlist",
     title: "Wishlist",
-    icon: <Heart size={22} className="text-center items-center" />,
+    icon: <Heart size={22} />,
   },
   {
     label: "Rates",

@@ -7,17 +7,18 @@ import WhatsappClick from "@/components/product/WhatAppClick";
 import AddToCartButton from "./AddToCartButton";
 import CalculatePriceButton from "@/components/product/CalculatePriceButton";
 import { Product } from "@/types/catalog";
+import DisclaimerTooltip from "@/components/common/DisclaimerTooltip"
 
-export default function ProductPrice({ product }: { product: Product }) {
+export default function ProductPrice({ product, activeVariant = 0 }: { product: Product, activeVariant?: number }) {
   const rates = useRates();
 
-  const priceResult = calculatePrice({ product, rates });
+  const popV = calculatePrice({ purity: product.purity, variant: product.variants[activeVariant], rates });
 
-  if (!priceResult) return null;
+  if (popV?.price === null) return null;
 
-  const isAvailable = product.available;
-  const hasMakingCharges = product.makingCharges > 0;
-  const formattedPrice = priceResult.price.toLocaleString("en-IN");
+  const isAvailable = product.variants[activeVariant].available;
+  const hasMakingCharges = product.variants[activeVariant].makingCharges > 0;
+  const formattedPrice = popV?.price?.toLocaleString("en-IN");
 
   return (
     <div className="space-y-3">
@@ -25,6 +26,12 @@ export default function ProductPrice({ product }: { product: Product }) {
       {hasMakingCharges && (
         <div className="text-2xl font-semibold">
           {!isAvailable && "Estimated Price "}₹{formattedPrice}
+          {!product.variants[activeVariant].available && (
+            <DisclaimerTooltip
+              text="On order, product weight may vary slightly due to manufacturing tolerance."
+              href="/policies/disclaimer"
+            />
+          )}
         </div>
       )}
 
@@ -36,10 +43,10 @@ export default function ProductPrice({ product }: { product: Product }) {
         <AddToCartButton product={product} />
       )}
       {!(isAvailable && hasMakingCharges) && (
-      <WhatsappClick
-        product={product}
-        title= "Order via WhatsApp"
-      />
+        <WhatsappClick
+          product={product}
+          title="Order via WhatsApp"
+        />
 
       )}
       {/* 4. Price Calculator Logic (Only when making charges are missing) */}

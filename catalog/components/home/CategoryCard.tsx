@@ -38,9 +38,9 @@ const baseURL = process.env.BASE_URL;
           <Image
             src={`${baseURL}/static/img/products/thumbnail/${firstProduct.images[0]}`}
             alt={firstProduct.name}
-            className="absolute inset-0 w-full h-full object-cover rounded-t-2xl"
-            loading="eager"
+            className="absolute inset-0 w-full h-full object-cover rounded-t-2xl"            
             title={firstProduct.name}
+            priority={false}
             fill
           />
         </div>

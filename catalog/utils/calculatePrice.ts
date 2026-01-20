@@ -1,53 +1,43 @@
-import { Product, Rates } from "@/types/catalog";
+import { ProductVariant, Rates } from "@/types/catalog";
 
-type PriceResult = {
-  price: number;
-  basePrice: number;
-  making: number;
-  gst: number;
-};
 
 export function calculatePrice({
-  product,
+  purity = "gold24K",
+  variant,
   rates,
 }: {
-  product: Product;
+  purity:string
+  variant: ProductVariant;
   rates?: Rates;
-}): PriceResult | null {
+}): ProductVariant | null {
 
-  
-  // ⛔ Guard: rates not ready
-  if (!rates) return null;
-  
+  if (!rates || !variant) return null;
+
   let productRate: number = 0;
-  
-  switch (product.purity) {    
-    case 'gold24K':
-      productRate = rates.gold24K;
-      break;    
-    case 'gold22K':
-      productRate = rates.gold22K;
-      break;    
-    case 'gold18K':
-      productRate = rates.gold18K;
-      break;    
-    default:      
-      productRate = rates.silver;
+  switch (purity) {
+    case 'gold24K': productRate = rates.gold24K; break;
+    case 'gold22K': productRate = rates.gold22K; break;
+    case 'gold18K': productRate = rates.gold18K; break;
+    default: productRate = rates.silver;
   }
 
-  
   if (!productRate) return null;
+
   
+  
+    const basePrice = (variant.weight || 0) * productRate;
+    const making = (basePrice * (variant.makingCharges || 0)) / 100;
+    const subtotal = basePrice + making;
+    const gst = subtotal * 0.03;
 
-  const basePrice = product.weight * productRate;
-  const making = (basePrice * product.makingCharges) / 100;
-  const subtotal = basePrice + making;
-  const gst = subtotal * 0.03;
+    const mrp = Math.round(subtotal + gst);
+    const discountAmount = (mrp * (variant.discount || 0)) / 100;
+    const finalPrice = Math.round(mrp - discountAmount);
 
-  return {
-    basePrice: Math.round(basePrice),
-    making: Math.round(making),
-    gst: Math.round(gst),
-    price: Math.round(subtotal + gst),
-  };
+    // Return the updated object
+    return {
+      ...variant,
+      price: finalPrice,
+      MRP: mrp
+    };  
 }

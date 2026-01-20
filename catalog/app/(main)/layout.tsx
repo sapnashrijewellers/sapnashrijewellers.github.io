@@ -85,11 +85,11 @@ export default function RootLayout({ children, }: { children: React.ReactNode; }
             {/* Floating WhatsApp Button */}
             <FloatingWhatsAppButton />
             {/* Main layout */}
-            <header className="sticky top-0 z-50 shadow-sm">
+            <header className="p-2 mx-auto w-full grow sticky top-0 z-40 bg-(--color-surface)/70 backdrop-blur-xl border-theme/30 shadow-xl">
               <Navbar />
             </header>
             {/* Main Content */}
-            <main className="flex-grow w-full p-4 mx-auto">
+            <main className="grow w-full p-4 mx-auto">
               {children}
             </main>
               <FooterTrust />

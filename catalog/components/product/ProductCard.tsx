@@ -25,12 +25,22 @@ export default function ProductCard({ product }: { product: Product }) {
   const imageSrc = `${baseURL}/static/img/products/thumbnail/${images[activeImage]}`;
 
   return (
-    <article
-      className={`rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-[1.03] ${cardHighlightClass}`}
-    >
+     <Link
+          href={`/product/${product.slug}`}
+          className="block transition-transform duration-300 hover:scale-105 rounded-2xl"
+          prefetch={false}
+          onClick={(e) => {
+            // 📱 Mobile tap preview
+            if (hasMultipleImages && activeImage === 0) {
+              e.preventDefault();
+              setActiveImage(1);
+            }
+          }}
+        >
+    <div className={` flex flex-col h-full bg-card ${cardHighlightClass} rounded-2xl`}>
       {/* Image */}
       <div
-        className="relative"
+        className="relative w-full overflow-hidden grow pt-[100%]"
         onMouseEnter={() => hasMultipleImages && setActiveImage(1)}
         onMouseLeave={() => hasMultipleImages && setActiveImage(0)}
       >
@@ -47,27 +57,16 @@ export default function ProductCard({ product }: { product: Product }) {
         )}
 
         {/* Image wrapper */}
-        <Link
-          href={`/product/${product.slug}`}
-          className="block relative overflow-hidden bg-muted"
-          style={{ height: 200 }}
-          onClick={(e) => {
-            // 📱 Mobile tap preview
-            if (hasMultipleImages && activeImage === 0) {
-              e.preventDefault();
-              setActiveImage(1);
-            }
-          }}
-        >
+       
           <Image
             src={imageSrc}
             alt={product.name}
-            fill
-            sizes="(max-width: 768px) 50vw, 220px"
-            className="object-cover transition-opacity duration-300"
+            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 rounded-t-2xl"            
+            title={product.name}            
             priority={false}
+            fill
           />
-        </Link>
+        
 
         {/* Mobile image dots */}
         {hasMultipleImages && (
@@ -85,11 +84,11 @@ export default function ProductCard({ product }: { product: Product }) {
 
       {/* Info */}
       <div className="p-3">
-        <Link href={`/product/${product.slug}`} className="block">
+        
           <h3 className={`leading-tight line-clamp-2 w-full`}>
             {product.name}
           </h3>
-        </Link>
+        
         <ProductPrice product={product} />
         {rating > 0 && ratingCount > 0 && (
           <div className="mt-1">
@@ -107,6 +106,7 @@ export default function ProductCard({ product }: { product: Product }) {
           <span>{product.weight} gm</span>
         </div>
       </div>
-    </article>
+    </div>
+    </Link>
   );
 }

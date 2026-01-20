@@ -6,6 +6,8 @@ import { Product } from "@/types/catalog";
 import WishlistButton from "@/components/common/WishlistButton";
 import { ExternalLink } from "lucide-react";
 
+
+
 const SWIPE_THRESHOLD = 50;
 
 export default function ProductGallery({ product }: { product: Product }) {
@@ -123,6 +125,7 @@ export default function ProductGallery({ product }: { product: Product }) {
           sizes="(max-width: 768px) 100vw, 50vw"
           className="object-contain"
         />
+
 
         {/* Desktop zoom overlay (graceful) */}
         {!isTouch && zoomStyle.backgroundPosition && (

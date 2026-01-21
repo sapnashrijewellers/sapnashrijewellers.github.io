@@ -7,23 +7,25 @@ import OrderViaWhatsappButton from "@/components/product/OrderViaWhatsappButton"
 import BuyNowButton from "./BuyNowButton";
 import CalculatePriceButton from "@/components/product/CalculatePriceButton";
 import { Product } from "@/types/catalog";
-import DisclaimerTooltip from "@/components/common/DisclaimerTooltip"
+import Tooltip from "@/components/common/Tooltip"
+import JsonLd from "@/components/common/JsonLd";
+import buildProductJsonLd from "@/utils/buildProductJsonLd";
 
 export default function ProductPrice({ product, activeVariant = 0 }: { product: Product, activeVariant?: number }) {
   const rates = useRates();
-
+  const productJsonLd = buildProductJsonLd(product, rates);
   const popV = calculatePrice({ purity: product.purity, variant: product.variants[activeVariant], rates });
 
   if (popV?.price === null) return null;
 
   const isAvailable = product.variants[activeVariant].available;
   const hasMakingCharges = product.variants[activeVariant].makingCharges > 0;
-
   const formattedFinal = popV?.price?.toLocaleString("en-IN");
   const formattedMRP = popV?.MRP?.toLocaleString("en-IN");
 
   return (
     <div className="space-y-3">
+      <JsonLd json={productJsonLd} />
       {/* 1. Price Display Logic */}
       {hasMakingCharges && (
         <div className="space-y-1">
@@ -50,9 +52,9 @@ export default function ProductPrice({ product, activeVariant = 0 }: { product: 
             ₹{formattedFinal}
 
             {!isAvailable && (
-              <DisclaimerTooltip
+              <Tooltip
                 text="On order, product weight may vary slightly due to manufacturing tolerance."
-                href="/policies/disclaimer"
+                href="/policies/disclaimer/"
               />
             )}
           </div>

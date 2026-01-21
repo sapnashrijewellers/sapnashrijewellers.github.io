@@ -24,7 +24,7 @@ export default function CareInstructions({ careKey }: Props) {
             {/* Header */}
             <button
                 onClick={() => setOpen(!open)}
-                className="w-full flex items-center justify-between px-4 py-3"
+                className="w-full flex items-center justify-between px-4 py-3 cursor-pointer"
                 aria-expanded={open}
             >
                 <span className="font-semibold text-lg text-primary-dark">

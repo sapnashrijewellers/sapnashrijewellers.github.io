@@ -38,17 +38,17 @@ export default function Footer() {
         <div>
           <h2 className="footer-heading font-yatra text-lg mb-3">Policies</h2>
           <p className="text-xs mt-3 opacity-75">
-            Prices may vary based on live market rates... <Link href="/policies/disclaimer" className="text-xs underline">
+            Prices may vary based on live market rates... <Link href="/policies/disclaimer/" className="text-xs underline">
               Read full disclaimer
             </Link>
           </p>
 
 
           <ul className="space-y-2 text-sm">
-            <li><Link href="/policies/terms">Terms of Service</Link></li>
-            <li><Link href="/policies/privacy">Privacy Policy</Link></li>
-            <li><Link href="/policies/returns">Return Policy</Link></li>
-            <li><Link href="/policies/shipping">Shipping Policy</Link></li>
+            <li><Link href="/policies/terms/">Terms of Service</Link></li>
+            <li><Link href="/policies/privacy/">Privacy Policy</Link></li>
+            <li><Link href="/policies/returns/">Return Policy</Link></li>
+            <li><Link href="/policies/shipping/">Shipping Policy</Link></li>
           </ul>
         </div>
 
@@ -56,11 +56,10 @@ export default function Footer() {
         <div>
           <h2 className="footer-heading font-yatra text-lg mb-3">Quick Links</h2>
           <ul className="space-y-2 text-sm">
-            <li><Link href="/about-us">About Us</Link></li>
-            <li><Link href="/payment-qr">Payment QR</Link></li>
+            <li><Link href="/about-us/">About Us</Link></li>            
             <li><Link href="/#shop-by-category">Shop by Category</Link></li>
             <li><Link href="/#shop-by-occasion">Shop by Occasion</Link></li>
-            <li><Link href="/qr">QR code for Payment</Link></li>
+            <li><Link href="/qr/">QR code for Payment</Link></li>
             <li><Link href="#" onClick={() => setTipsOpen(true)}>Jewellery Buying Tips 💡</Link></li>
           </ul>
         </div>

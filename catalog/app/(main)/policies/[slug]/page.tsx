@@ -35,6 +35,11 @@ const policies = [
     slug:"returns",    
     title:"Return Policy",    
     description: "Learn about our return policies, including eligibility and procedures, to ensure a hassle-free shopping experience."
+  },
+  {
+    slug:"warranty",    
+    title:"Warranty Policy",    
+    description: "Learn about our warranty policies, including eligibility and procedures, to ensure a hassle-free shopping experience."
   }
 
 ]

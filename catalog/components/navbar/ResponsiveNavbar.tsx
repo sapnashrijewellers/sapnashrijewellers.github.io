@@ -16,19 +16,19 @@ type NavItem = {
 const PRIMARY_NAV: NavItem[] = [
   {
     label: "Hallmark",
-    href: "/huid",
+    href: "/huid/",
     title: "Hallmark",
     icon: <Triangle size={22} />,
   },
   {
     label: "Calculator",
-    href: "/calculator",
+    href: "/calculator/",
     title: "Jewellery Price Calculator",
     icon: <Calculator size={22} />,
   },
   {
     label: "Wishlist",
-    href: "/wishlist",
+    href: "/wishlist/",
     title: "Wishlist",
     icon: <Heart size={22} />,
   },

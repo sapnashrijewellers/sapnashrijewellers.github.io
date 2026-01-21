@@ -17,7 +17,7 @@ export default function JewelleryTypeBar({ home = true }: { home?: boolean }) {
             return (
               <Link
                 key={item.slug}
-                href={`/jewelry-type/${item.slug}`}
+                href={`/jewelry-type/${item.slug}/`}
                 className="group flex min-w-[96px] flex-col items-center gap-2 rounded-2xl bg-white px-4 py-3 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md"
               >
                 <div className="flex h-14 w-14 items-center justify-center rounded-full bg-amber-50 text-amber-700 group-hover:bg-amber-100">

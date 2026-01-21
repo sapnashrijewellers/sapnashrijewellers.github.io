@@ -26,7 +26,7 @@ export default function ProductCard({ product }: { product: Product }) {
 
   return (
      <Link
-          href={`/product/${product.slug}`}
+          href={`/product/${product.slug}/`}
           className="block transition-transform duration-300 hover:scale-105 rounded-2xl"
           prefetch={false}
           onClick={(e) => {

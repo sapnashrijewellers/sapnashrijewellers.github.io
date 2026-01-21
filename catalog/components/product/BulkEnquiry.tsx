@@ -38,7 +38,7 @@ Please share best price and delivery timeline.
       {/* Header */}
       <button
         onClick={() => setOpen(!open)}
-        className="w-full flex items-center justify-between px-4 py-3 text-left"
+        className="w-full flex items-center justify-between px-4 py-3 text-left cursor-pointer"
       >
         <span className="font-semibold text-primary-dark text-lg">
           Bulk Enquiry

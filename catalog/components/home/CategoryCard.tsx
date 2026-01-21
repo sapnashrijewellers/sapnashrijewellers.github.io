@@ -17,7 +17,7 @@ const baseURL = process.env.BASE_URL;
 
   return (
     <Link
-      href={`/category/${category.slug}`} title={`${category.name}`}
+      href={`/category/${category.slug}/`} title={`${category.name}`}
       className="block transition-transform duration-300 hover:scale-105 rounded-2xl"
       prefetch={false} // optional: skip prefetch for large catalogs
     >

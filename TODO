@@ -102,6 +102,10 @@ Completed Tasks:
   ✔ Offer discounted price @done(26-01-20 18:59)
   ✔ Size should go in whatsapp message @done(26-01-20 19:36)
   ✔ Buy now button @done(26-01-20 19:36)
+  ✔ Tooltip on trust signals @done(26-01-21 10:08)
+  ✔ Mouse cursor pointer on bulk enquiry & care instructions @done(26-01-21 10:09)
+  ✔ Fixed trailing slash in link for whole project to address Google 301 redirect issue @done(26-01-21 10:57)
+  ✔ Add offer valid until, in-stock & price in json LD @done(26-01-21 11:12)
 Staged:
   ☐ App on play store @started(25-12-27 18:57)
   ☐ check for favicon @started(26-01-16 11:46)    
@@ -109,9 +113,8 @@ Staged:
 
 Working:
   
-  
-  ☐ Add offer valid until, in-stock & price in json LD  
   ☐ Price filter  
+  ☐ Search mic is not working
   
 
 Not Started:

@@ -1,8 +1,9 @@
 import {
-  ShieldCheck, Truck, CreditCard, IndianRupee, BadgeCheck, Hammer, Heart, Globe, RefreshCcw,
+  ShieldCheck, Truck, CreditCard, IndianRupee, Heart, Globe, RefreshCcw,
   Triangle, HandMetal, RectangleHorizontal
 } from "lucide-react";
 import type { Product } from "@/types/catalog";
+import Tooltip from "@/components/common/Tooltip"
 
 interface Props {
   product: Product;
@@ -21,6 +22,7 @@ export default function TrustSignalsRibbon({ product }: Props) {
       show: true,
       icon: Triangle,
       label: product.purity.startsWith("gold") && product.weight > 2 ? "BIS Hallmark Gold" : "Authentication Certificate",
+
     },
     {
       show: true,
@@ -36,6 +38,8 @@ export default function TrustSignalsRibbon({ product }: Props) {
       show: true,
       icon: ShieldCheck,
       label: "6 Month Warranty",
+      toolTip: "All our products come with a **6-month limited warranty** from the date of purchase, applicable under normal use and proper care.",
+      link: "/policies/warranty/"
     },
     {
       show: true,
@@ -46,6 +50,8 @@ export default function TrustSignalsRibbon({ product }: Props) {
       show: true,
       icon: Globe,
       label: "All India Delivery",
+      toolTip: "We are committed to delivering your order in a safe, timely, and transparent manner.",
+      link: "/policies/shipping/"
     },
     {
       show: !isGold,
@@ -56,6 +62,8 @@ export default function TrustSignalsRibbon({ product }: Props) {
       show: true,
       icon: RefreshCcw,
       label: "Easy Exchange",
+      toolTip: "We values transparency and customer satisfaction. Please read the following Return, Exchange, and Refund terms carefully...",
+      link: "/policies/returns/"
     },
     {
       show: true,
@@ -67,28 +75,22 @@ export default function TrustSignalsRibbon({ product }: Props) {
       show: true,
       icon: Truck,
       label: "Secure Shipping",
+      toolTip: "We are committed to delivering your order in a safe, timely, and transparent manner.",
+      link: "/policies/shipping/"
     },
   ];
 
 
   return (
-    /*
-    className="
-      relative rounded-2xl p-5
-      bg-gradient-to-b
-      from-[color-mix(in_srgb,var(--color-primary)_10%,transparent)]
-      to-[color-mix(in_srgb,var(--color-primary-dark)_4%,transparent)]
-    "
-    */
     <section
       className="relative rounded-2xl p-5 mb-6"
       style={{
-    background: `linear-gradient(
+        background: `linear-gradient(
       180deg,
       color-mix(in srgb, var(--color-primary) 12%, transparent),
       color-mix(in srgb, var(--color-primary) 4%, transparent)
     )`,
-  }}
+      }}
     >
       <h3 className="mb-4 uppercase tracking-[0.2em] text-primary-dark">
         Our Trust Promise
@@ -99,10 +101,7 @@ export default function TrustSignalsRibbon({ product }: Props) {
           .map((item, idx) => {
             const Icon = item.icon;
             return (
-              <li
-                key={idx}
-                className="flex items-center gap-3 px-2"
-              >
+              <li key={idx} className="flex items-center gap-3 px-2">
                 <Icon
                   size={24}
                   strokeWidth={2}
@@ -117,6 +116,9 @@ export default function TrustSignalsRibbon({ product }: Props) {
               leading-snug
             ">
                   {item.label}
+                  {item.link && (
+                    <Tooltip text={`${item.toolTip}`} href={item.link} key={item.label} />
+                  )}
                 </span>
               </li>
             );

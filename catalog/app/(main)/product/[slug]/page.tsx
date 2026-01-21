@@ -12,9 +12,6 @@ import Breadcrumb from "@/components/navbar/BreadcrumbItem";
 import ProductRating from "@/components/product/ProductRating";
 import WishListBar from "@/components/common/WishlistBar";
 import ProductRatingInput from "@/components/product/ProductRatingInput";
-import JsonLd from "@/components/common/JsonLd";
-import buildProductJsonLd from "@/utils/buildProductJsonLd";
-
 import NewArrivals from "@/components/product/NewArrivals";
 import YouMAyAlsoLike from "@/components/product/YouMayAlsoLike";
 import TestimonialScroller from "@/components/common/Testimonials"
@@ -22,11 +19,8 @@ import TrustSignalsRibbon from "@/components/product/TrustSignalsRibbon";
 import CareInstructions from "@/components/product/CareInstructions";
 import BulkEnquiry from "@/components/product/BulkEnquiry";
 import JewelleryTypeBar from "@/components/home/JewelleryType";
-import DisclaimerTooltip from "@/components/common/DisclaimerTooltip";
+import Tooltip from "@/components/common/Tooltip";
 import ProductSelection from "@/components/product/ProductSelection"
-
-
-
 
 const baseURL = process.env.BASE_URL;
 const driveURL = `${baseURL}/static/img/products/thumbnail/`;
@@ -79,7 +73,7 @@ export async function generateStaticParams() {
 
 export default async function ProductDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-
+  
   const product = products.find(
     (p: Product) =>
       p.active &&
@@ -87,20 +81,17 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
   );
 
   if (!product) notFound();
-
-  const productJsonLd = buildProductJsonLd(
-    product
-  );
-  const category = categories.find(c => c.name === product.category);
   
+  const category = categories.find(c => c.name === product.category);
+
 
   return (
     <div className="container mx-auto">
-      <JsonLd json={productJsonLd} />
+      
       <Breadcrumb
         items={[
           { name: "Home", href: "/" },
-          { name: product.category, href: `/category/${category?.slug}` },
+          { name: product.category, href: `/category/${category?.slug}/` },
           { name: `${product.name} | ${product.hindiName}` },
         ]}
       />
@@ -110,7 +101,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
           <div className="space-y-2">
             <div className="flex items-center gap-1 text-xs text-muted">
               <span>Product images</span>
-              <DisclaimerTooltip
+              <Tooltip
                 text="Product appearance may vary slightly due to lighting and photography."
               />
             </div>
@@ -131,7 +122,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
           />
           <ProductSelection product={product} />
 
-          
+
           <p className="text-muted-foreground text-sm">
             {product.description}
           </p>

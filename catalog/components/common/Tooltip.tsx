@@ -4,9 +4,9 @@ import Link from "next/link";
 import { Info } from "lucide-react";
 import { useState, useRef, useLayoutEffect } from "react";
 
-export default function DisclaimerTooltip({
+export default function Tooltip({
   text,
-  href = "/policies/disclaimer",
+  href = "/policies/disclaimer/",
   className = "",
 }: {
   text: string;
@@ -63,7 +63,7 @@ export default function DisclaimerTooltip({
               href={href} 
               className="mt-2 inline-block text-xs text-primary font-normal hover:underline"
             >
-              Read full disclaimer
+              Read full policy
             </Link>
           </span>
         </>

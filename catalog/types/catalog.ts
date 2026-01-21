@@ -12,6 +12,7 @@ export interface ProductVariant {
   discount: number;
   price?: number;
   MRP?: number;
+  priceAdjustment? : number;
 }
 
 export interface Product {

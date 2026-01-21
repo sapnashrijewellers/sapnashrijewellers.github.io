@@ -1,13 +1,13 @@
 "use client";
-
+import { useRates } from "@/context/RateContext";
 import { calculatePrice } from "@/utils/calculatePrice";
 import { Product } from "@/types/catalog";
 
 export default function ProductCardPrice({ product }: { product: Product }) {
-  
+  const rates = useRates();
   if(!product.variants[0].makingCharges)
     return null;
-  const popV = calculatePrice({ purity: product.purity, variant: product.variants[0] });
+  const popV = calculatePrice({ purity: product.purity, variant: product.variants[0], rates });
   
   if (popV?.price && popV?.price === null) return null;
 

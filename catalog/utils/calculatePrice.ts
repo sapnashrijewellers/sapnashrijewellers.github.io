@@ -26,9 +26,9 @@ export function calculatePrice({
     return null;
 
 
-
+  const adjustment = variant.priceAdjustment === undefined ? 0 : variant.priceAdjustment
   const basePrice = (variant.weight || 0) * productRate;
-  const making = (basePrice * (variant.makingCharges || 0)) / 100;
+  const making = ((basePrice + adjustment) * (variant.makingCharges || 0)) / 100;
   const subtotal = basePrice + making;
   const gst = subtotal * 0.03;
 

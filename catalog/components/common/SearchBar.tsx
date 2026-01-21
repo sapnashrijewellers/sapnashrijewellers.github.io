@@ -8,20 +8,20 @@ interface SearchBarProps {
   initialQuery?: string;
 }
 
+const SUGGESTED_QUERIES = [
+    "Sawariya Seth Ring",
+    "Mahadev Kada",
+    "Lightweight mangalsutra",
+  ];
+
 export default function SearchBar({ initialQuery = "" }: SearchBarProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const urlQuery = searchParams.get("q");
   const [query, setQuery] = useState(initialQuery);
+  const [listening, setListening] = useState(false);
 
-  const SUGGESTED_QUERIES = [
-    "Golden ring",
-    "Sawariya Seth Ring",
-    "Mahadev Kada",
-    "Bridal Necklace Set",
-    "Daily wear bangles",
-    "Lightweight mangalsutra",
-  ];
+  
 
   const [placeholderIndex, setPlaceholderIndex] = useState(0);
 
@@ -46,6 +46,43 @@ export default function SearchBar({ initialQuery = "" }: SearchBarProps) {
     router.push(`/search?q=${encodeURIComponent(trimmed)}`, { scroll: false });
   };
 
+  const startSpeechRecognition = () => {
+    const SpeechRecognition =
+      (window as any).SpeechRecognition ||
+      (window as any).webkitSpeechRecognition;
+
+    if (!SpeechRecognition) {
+      alert("Voice search is not supported on this browser.");
+      return;
+    }
+
+    const recognition = new SpeechRecognition();
+    recognition.lang = query.match(/[\u0900-\u097F]/) ? "hi-IN" : "en-IN";
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 1;
+    recognition.continuous = false;
+
+    recognition.onstart = () => setListening(true);
+    recognition.onend = () => setListening(false);
+    recognition.onerror = () => setListening(false);
+
+    recognition.onresult = (event: any) => {
+      const spokenText = event.results[0][0].transcript;
+      setQuery(spokenText);
+      router.push(`/search?q=${encodeURIComponent(spokenText)}`, { scroll: false });
+    };
+
+    recognition.onerror = (event: any) => {
+      if (event.error === "not-allowed") {
+        alert("Please allow microphone access to use voice search.");
+      } else if (event.error === "no-speech") {
+        alert("No speech detected. Try again.");
+      }
+    };
+
+    recognition.start();
+  };
+
   return (
     <div className="relative w-full">
       {/* SINGLE visual control */}
@@ -62,13 +99,15 @@ export default function SearchBar({ initialQuery = "" }: SearchBarProps) {
       >
         {/* SEARCH INPUT */}
         <input
+          aria-label="Search jewellery"
           type="search"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && executeSearch()}
           placeholder={SUGGESTED_QUERIES[placeholderIndex]}
           inputMode="search"
-          className="
+          className={`
+            ${listening ? "animate-pulse text-primary" : ""}
             flex-1
             h-full
             bg-transparent
@@ -78,13 +117,13 @@ export default function SearchBar({ initialQuery = "" }: SearchBarProps) {
             text-sm
             placeholder:text-muted
             rounded-none
-          "
+          `}
         />
 
         {/* MIC */}
         <button
           type="button"
-          onClick={() => {}}
+          onClick={startSpeechRecognition}
           className="
             h-full
             px-2

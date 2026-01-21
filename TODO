@@ -106,6 +106,7 @@ Completed Tasks:
   ✔ Mouse cursor pointer on bulk enquiry & care instructions @done(26-01-21 10:09)
   ✔ Fixed trailing slash in link for whole project to address Google 301 redirect issue @done(26-01-21 10:57)
   ✔ Add offer valid until, in-stock & price in json LD @done(26-01-21 11:12)
+  ✔ Search mic is not working @done(26-01-21 12:43)
 Staged:
   ☐ App on play store @started(25-12-27 18:57)
   ☐ check for favicon @started(26-01-16 11:46)    
@@ -114,7 +115,7 @@ Staged:
 Working:
   
   ☐ Price filter  
-  ☐ Search mic is not working
+  
   
 
 Not Started:

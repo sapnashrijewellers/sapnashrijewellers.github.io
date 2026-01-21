@@ -9,15 +9,27 @@ interface BreadcrumbItem {
 }
 
 export default function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
+  const baseUrl = process.env.BASE_URL!;
+
   const ldjson = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: items.map((item, i) => ({
-      "@type": "ListItem",
-      position: i + 1,
-      name: item.name,
-      item: item.href,
-    })),
+    itemListElement: items.map((item, i) => {
+      const listItem: any = {
+        "@type": "ListItem",
+        position: i + 1,
+        name: item.name,
+      };
+
+      // ✅ Deterministic, absolute URLs only
+      if (item.href) {
+        listItem.item = item.href.startsWith("http")
+          ? item.href
+          : `${baseUrl}${item.href}`;
+      }
+
+      return listItem;
+    }),
   };
 
   return (
@@ -35,10 +47,7 @@ export default function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
       />
 
       {items.map((item, i) => (
-        <span
-          key={i}
-          className="inline-flex items-center whitespace-nowrap"
-        >
+        <span key={i} className="inline-flex items-center whitespace-nowrap">
           {item.href ? (
             <Link
               href={item.href}
@@ -47,9 +56,7 @@ export default function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
               {item.name}
             </Link>
           ) : (
-            <span className="text-accent font-medium">
-              {item.name}
-            </span>
+            <span className="text-accent font-medium">{item.name}</span>
           )}
 
           {i < items.length - 1 && (

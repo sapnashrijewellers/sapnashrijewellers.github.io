@@ -22,9 +22,13 @@ export default function buildProductJsonLd(
   // Price valid for next 24 hours
   const priceValidUntil = hasValidPrice
     ? new Date(Date.now() + 24 * 60 * 60 * 1000)
-        .toISOString()
-        .split("T")[0]
+      .toISOString()
+      .split("T")[0]
     : undefined;
+  const brandName =
+    product.brandText && product.brandText.trim().length > 0
+      ? product.brandText.trim()
+      : "SSJ Brand";
 
   const productJsonLd: any = {
     "@context": "https://schema.org",
@@ -38,7 +42,7 @@ export default function buildProductJsonLd(
 
     brand: {
       "@type": "Brand",
-      name: product.brandText,
+      name: brandName,
     },
   };
 
@@ -65,20 +69,38 @@ export default function buildProductJsonLd(
     hasMerchantReturnPolicy: {
       "@type": "MerchantReturnPolicy",
       returnPolicyCategory:
-        "https://schema.org/NoReturnsAccepted",
+        "MerchantReturnNotPermitted",
       applicableCountry: "IN",
     },
 
     shippingDetails: {
       "@type": "OfferShippingDetails",
+
       shippingRate: {
         "@type": "MonetaryAmount",
         value: 60,
         currency: "INR",
       },
+
       shippingDestination: {
         "@type": "DefinedRegion",
         addressCountry: "IN",
+      },
+
+      deliveryTime: {
+        "@type": "ShippingDeliveryTime",
+        handlingTime: {
+          "@type": "QuantitativeValue",
+          minValue: 1,
+          maxValue: 2,
+          unitCode: "DAY",
+        },
+        transitTime: {
+          "@type": "QuantitativeValue",
+          minValue: 5,
+          maxValue: 7,
+          unitCode: "DAY",
+        },
       },
     },
   };

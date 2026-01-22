@@ -9,8 +9,7 @@ export const miniSearchIndexOptions: MiniSearchIndexOptions = {
     "hindiName",
     "highlights",
     "englishHighlights",
-    "category",
-    "keywords",
+    "category",    
     "description",
     "type",
     "for",
@@ -59,16 +58,13 @@ export const miniSearchQueryOptions: MiniSearchSearchOptions = {
     highlights: 3.5,
     hindiName: 3.5,
     englishHighlights: 3,
-    category: 2.5,
-    keywords: 2.5,
+    category: 2.5,    
     description: 2,
     type: 1.3,
     for: 1.2,
     purity: 1.1
   },
-
-  boostDocument: (doc: any, term: string) =>
-    doc.keywords?.includes(term) ? 1.5 : 1
+  
 };
 
 

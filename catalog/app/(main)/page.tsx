@@ -14,8 +14,6 @@ const title = `Sapna Shri Jewellers`;
 const description = `Explore out latest products at Sapna Shri Jewellers Nagda. High-quality gold & silver jewellery with BIS 916 certification.`;
 const baseURL = process.env.BASE_URL;
 const imageUrl = `${baseURL}/android-chrome-512x512.png`;
-const keywords = "Sapna Shri Jewellers Nagda. High-quality gold & silver jewellery with BIS 916 certification";
-
 
 export async function generateMetadata() {
 
@@ -23,7 +21,6 @@ export async function generateMetadata() {
   return {
     title,
     description,
-    keywords,
     openGraph: {
       title,
       description,

@@ -8,7 +8,6 @@ const title = `ज्वेलरी प्राइस कैलकुलेट
 const description = `ज्वेलरी प्राइस कैलकुलेटर | online Jewellery Price Calculator by Sapna Shri Jewellers`;
 const baseURL = process.env.BASE_URL;
 const imageUrl = `${baseURL}/icons/android-chrome-512x512.png`;
-const keywords = "ज्वेलरी प्राइस कैलकुलेटर, Jewellery price calculator, 22K gold jewellery price calculator, Silver jewellery price";
 const ldjson = {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -42,8 +41,7 @@ const ldjson = {
 export async function generateMetadata() {
   return {
     title,
-    description,
-    keywords,
+    description,    
     openGraph: {
       title,
       description,

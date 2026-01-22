@@ -26,8 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   
   return {
     title: `${t.type} jewelry collection by Sapna Shri Jewellers`,
-    description: t.description,
-    keywords: t.keywords,
+    description: t.description,    
     alternates: {
       canonical: `${baseURL}/jewelry-type/${slug}`,
     },

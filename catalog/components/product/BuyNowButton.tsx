@@ -3,7 +3,7 @@ import { Product } from "@/types/catalog";
 import { ShoppingCartIcon } from "lucide-react"
 
 // Replace with your actual phone number, including country code (no '+' or leading '00')
-const WHATSAPP_NUMBER = '918234042231';
+const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP;
 const baseURL = process.env.BASE_URL;
 
 const BuyNowButton = ({ product,activeVariant = 0 }: { product: Product, activeVariant:number }) => {

@@ -27,7 +27,7 @@ This proposal outlines a modern, high-performance Progressive Web App (PWA) desi
 ### 3. SEO & LLM-Friendly Architecture
 - Built with a search-engine-optimized and AI-friendly content structure.
 - **Custom SEO Controls**
-  - User-defined page titles, meta descriptions, and keywords.
+  - User-defined page titles, meta descriptions.
   - Individual SEO metadata for every product.
 - **Structured Data**
   - JSON-LD schema integration for products, categories, and listings.
@@ -127,7 +127,7 @@ This proposal outlines a modern, high-performance Progressive Web App (PWA) desi
 
 #### 9.4 Search Page
 - Free-text search across the entire catalog.
-- Enables fast discovery of products by name, type, or keywords.
+- Enables fast discovery of products by name, type.
 
 ---
 

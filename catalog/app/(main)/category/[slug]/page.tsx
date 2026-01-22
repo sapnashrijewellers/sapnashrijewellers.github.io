@@ -41,12 +41,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
             ? `${driveURL}${filtered[0].images[0]}`
             : `${baseURL}/android-chrome-512x512.png`;
 
-    const keywords = category.keywords;
-
     return {
         title,
         description,
-        keywords,
         openGraph: {
             title,
             description,

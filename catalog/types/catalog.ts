@@ -43,8 +43,7 @@ export interface Category {
   name: string;
   englishName: string,
   rank: number,
-  slug: string,
-  keywords: string,
+  slug: string,  
   description: string,
   active: boolean
 }
@@ -83,8 +82,7 @@ export interface Rates {
 export interface Type {
   type: string,
   rank: number,
-  slug: string,
-  keywords: string,
+  slug: string,  
   description: string,
   icon: string,
   active: boolean
@@ -103,18 +101,4 @@ export interface CalcRates {
   gold18K: number;
   silver: number;
   silverJewellery: number;
-}
-type NavItem = {
-  label: string;
-  href: string;
-  title: string;
-  icon: React.ReactNode;
-};
-
-type Review = {
-  rating: number;
-  review: string;
-  createdAt: Date;
-  productId: number;
-  status: string;
 }

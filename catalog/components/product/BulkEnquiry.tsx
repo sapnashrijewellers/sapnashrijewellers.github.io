@@ -4,7 +4,7 @@ import { useState } from "react";
 import { FaWhatsapp, FaPlus, FaMinus } from "react-icons/fa";
 import { Product } from "@/types/catalog";
 
-const WHATSAPP_NUMBER = "918234042231";
+const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP;
 const baseURL = process.env.BASE_URL;
 
 const BulkEnquiry = ({ product }: { product: Product }) => {

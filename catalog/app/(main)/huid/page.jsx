@@ -1,18 +1,12 @@
 import Image from "next/image";
 import Breadcrumb from "@/components/navbar/BreadcrumbItem";
 
-
 const baseURL = process.env.BASE_URL;
-
 const imageUrl = `${baseURL}/icons/android-chrome-512x512.png`;
-
 
 export const metadata = {
   title: "HUID Hallmarking Info - Sapna Shri Jewellers Nagda",
-  description:
-    "जानें HUID हॉलमार्किंग का महत्व। BIS 916 प्रमाणित सोने और चांदी के आभूषण खरीदते समय HUID क्यों ज़रूरी है।",
-  keywords:
-    "HUID, BIS Hallmark, Gold Jewellery Nagda, Silver Jewellery Nagda, Sapna Shri Jewellers, Hallmark Unique ID",
+  description:    "जानें HUID हॉलमार्किंग का महत्व। BIS 916 प्रमाणित सोने और चांदी के आभूषण खरीदते समय HUID क्यों ज़रूरी है।",  
   openGraph: {
     title: "HUID Hallmarking Info - Sapna Shri Jewellers Nagda",
     description:

@@ -8,7 +8,6 @@ exports.miniSearchIndexOptions = {
         "highlights",
         "englishHighlights",
         "category",
-        "keywords",
         "description",
         "type",
         "for",
@@ -51,13 +50,11 @@ exports.miniSearchQueryOptions = {
         hindiName: 3.5,
         englishHighlights: 3,
         category: 2.5,
-        keywords: 2.5,
         description: 2,
         type: 1.3,
         for: 1.2,
         purity: 1.1
     },
-    boostDocument: (doc, term) => doc.keywords?.includes(term) ? 1.5 : 1
 };
 function normalizeTerm(term) {
     if (!term)

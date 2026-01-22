@@ -100,7 +100,7 @@ export default function Footer() {
           <h2 className="footer-heading font-yatra text-lg mb-3">Connect With Us</h2>
 
           <a
-            href="https://wa.me/918234042231"
+            href={`https://wa.me/${NEXT_PUBLIC_WHATSAPP}`}
             className="inline-flex items-center gap-2 text-sm ssj-btn"
           >
             <FaWhatsapp /> Ask on WhatsApp

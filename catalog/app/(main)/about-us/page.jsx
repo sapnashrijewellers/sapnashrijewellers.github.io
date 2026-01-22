@@ -6,27 +6,13 @@ import {promises, services, certificates, faqs} from "@/data/aboutUs.json";
 
 const title = `Sapna Shri Jewellers Nagda | सपना श्री ज्वेलर्स नागदा`;
 const description = `Sapna Shri Jewellers Nagda - सोने और चांदी के आभूषणों में 35+ वर्षों का अनुभव। BIS 916 हॉलमार्क गोल्ड, सर्टिफाइड डायमंड और पारदर्शी सेवा।`;
-const keywords = `Sapna Shri Jewellers Nagda,
-सपना श्री ज्वेलर्स नागदा,
-सपना श्री ज्वैलर्स नागदा उज्जैन,
-Silver Jewellery Nagda,
-Gold Jewellery Showroom Nagda,
-Jewellery Shop near Railway Station Nagda,
-Jewellery Shop near Bus Stand Nagda,
-Gold Exchange Nagda,
-BIS 916 Hallmarked Jewellery Nagda,
-Trusted Jewellers of Nagda Ujjain District,
-35 years of trust,
-Sapna Shri Jewellers Nagda Location,
-Sapna Shri Jewellers Nagda Contact Number`;
 const baseURL = process.env.BASE_URL;
 const imageUrl = `${baseURL}/static/img/shop.png`;
 
 export async function generateMetadata() {
   return {
     title,
-    description,
-    keywords,
+    description,    
     openGraph: {
       title,
       description,

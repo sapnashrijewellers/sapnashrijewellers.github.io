@@ -2,7 +2,6 @@
   {
     "type": "Wedding",
     "description": "Explore our collection of premium gold and diamond jewelry, meticulously crafted for the perfect wedding day. Find the ideal bridal set, guest accessories, and timeless wedding gifts.",
-    "keywords": "wedding jewelry, bridal sets, gold wedding, diamond wedding, wedding accessories, shadi jewelry, dulhan jewelry, auspicious wedding gifts",
     "slug": "wedding",
     "icon": "HeartHandshake",
     "rank": 1,
@@ -11,7 +10,6 @@
   {
     "type": "Gift",
     "description": "Find the perfect jewelry gift for birthdays, anniversaries, housewarmings, and festive occasions. Choose from personalized gold, silver, and gemstone options for every budget.",
-    "keywords": "jewelry gifts, gift for women, gift for men, auspicious gifts, gold gift, silver gift, birthday gift, anniversary jewelry",
     "slug": "gift",
     "icon": "Gift",
     "rank": 2,
@@ -20,7 +18,6 @@
   {
     "type": "Modern",
     "description": "Shop the latest trends in gold and silver jewelry featuring minimalist, geometric, and contemporary designs. Lightweight and stylish, perfect for modern outfits and casual wear.",
-    "keywords": "modern jewelry, trendy gold, minimalist design, contemporary silver, stylish accessories, lightweight modern, latest jewelry trends, geometric jewelry",
     "slug": "modern",
     "icon": "Shapes",
     "rank": 3,
@@ -29,7 +26,6 @@
   {
     "type": "Religious",
     "description": "Shop sacred and devotional gold and silver items including frames, coins, and idols of deities like Lakshmi, Ganesh, and Radha Krishna. Perfect for Pooja, worship, and auspicious gifting.",
-    "keywords": "religious jewelry, devotional silver, pooja items, lakshmi ganesh frame, silver nariyal, auspicious gift, gold locket, religious coin",
     "slug": "religious",
     "icon": "Bell",
     "rank": 4,
@@ -38,7 +34,6 @@
   {
     "type": "Investment",
     "description": "Secure your wealth with certified, high-purity gold and silver bars, coins, and biscuits. Ideal for long-term investment, savings, and gifting on auspicious dates.",
-    "keywords": "gold investment, silver investment, 999 purity bar, 24k gold coin, physical gold investment, certified silver, secure wealth, bullion for investment",
     "slug": "investment",
     "icon": "Coins",
     "rank": 6,
@@ -47,7 +42,6 @@
   {
     "type": "Traditional",
     "description": "Explore timeless traditional Indian jewelry designs like Haar, Payal, and Kada crafted with cultural finesse. Perfect for festivals, family functions, and classic styling.",
-    "keywords": "traditional indian jewelry, classic gold designs, traditional silver, ethnic jewelry, haar, kada, payal, cultural accessories",
     "slug": "traditional",
     "icon": "Feather",
     "rank": 7,
@@ -56,7 +50,6 @@
   {
     "type": "Daily Wear",
     "description": "Discover durable, lightweight, and stylish jewelry pieces perfect for everyday wear. Our collection features 22K gold, 92.5 sterling silver, and comfortable designs for office or home.",
-    "keywords": "daily wear jewelry, lightweight gold, daily wear silver, office wear jewelry, comfortable jewelry, daily use accessories, gold for everyday, light churi",
     "slug": "daily-wear",
     "icon": "Sparkle",
     "rank": 8,
@@ -65,7 +58,6 @@
   {
     "type": "Kundan",
     "description": "Shop exquisite Kundan jewelry sets featuring intricate craftsmanship and stunning stone work. Perfect for festive occasions, weddings, and a traditional royal look.",
-    "keywords": "kundan jewelry, kundan necklace, kundan set, traditional kundan, bridal kundan, royal jewelry, meenakari kundan, kundan earrings",
     "slug": "kundan",
     "icon": "Gem",
     "rank": 9,
@@ -74,7 +66,6 @@
   {
     "type": "Bridal",
     "description": "Exclusive collection of grand bridal jewelry sets, necklaces, bangles, and rings. High-purity 22K gold and intricate designs to complete your stunning bridal look.",
-    "keywords": "bridal jewelry, bridal set, dulhan set, heavy gold necklace, wedding jewelry, bridal mangalsutra, gold haar, grand bridal wear",
     "slug": "bridal",
     "icon": "Crown",
     "rank": 10,
@@ -83,7 +74,6 @@
   {
     "type": "Wedding Wear",
     "description": "Elegant jewelry designed for guests and attendees of wedding functions. Stylish gold and silver pieces that balance grandiosity with comfort for sangeet, reception, and ceremonies.",
-    "keywords": "wedding wear jewelry, wedding guest accessories, festive gold, stylish jewelry for ceremonies, reception wear, party wear jewelry",
     "slug": "wedding-wear",
     "icon": "Diamond",
     "rank": 11,
@@ -92,7 +82,6 @@
   {
     "type": "Kids Wear",
     "description": "Safe, lightweight, and adorable gold and silver jewelry designed for babies and children. Features secure screw-backs and comfortable designs for daily use and gifting.",
-    "keywords": "kids jewelry, baby gold, silver kada for kids, screw-back earrings, safe kids jewelry, children's jewelry, kids chain, gold for babies",
     "slug": "kids-wear",
     "icon": "Baby",
     "rank": 12,
@@ -101,7 +90,6 @@
   {
     "type": "Office Wear",
     "description": "Elevate your professional look with our refined Office Wear Jewellery collection. Explore subtle earrings, elegant necklaces, and minimal accessories perfect for the workplace.",
-    "keywords": "Office Wear Jewellery, Work Wear Jewelry, Professional Jewellery, Corporate Jewellery, Daily Wear Jewellery",
     "slug": "office-wear",
     "icon": "Gem",
     "rank": 13,
@@ -110,7 +98,6 @@
   {
     "type": "Party Wear",
     "description": "Elevate your evening with our 2026 Party Wear Jewellery Collection. From statement necklaces to shimmering chandeliers, find the perfect handcrafted sparkle for weddings, galas, and nights out. Shop premium designs with fast shipping. Sparkle tonight.",
-    "keywords": "Party wear jewellery, statement jewellery, evening accessories, wedding guest jewellery.",
     "slug": "party-wear",
     "icon": "PartyPopper",
     "rank": 14,

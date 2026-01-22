@@ -8,6 +8,7 @@ import Breadcrumb from "@/components/navbar/BreadcrumbItem";
 import { buildCategoryPageJsonLd } from "@/utils/buildCategoryPageJsonLd";
 import JsonLd from "@/components/common/JsonLd";
 import RotatingBanner from "@/components/banners/RotatingBanner";
+import SEO from "@/components/common/SEO";
 
 
 const baseURL = process.env.BASE_URL;
@@ -108,6 +109,7 @@ export default async function CategoryPage({ params }: { params: { slug: string 
                     ))}
                 </div>
             )}
+            <SEO slug={`/categories/${slug}`}/>
         </div>
     );
 }

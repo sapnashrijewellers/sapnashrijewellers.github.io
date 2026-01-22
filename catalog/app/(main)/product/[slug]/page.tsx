@@ -21,6 +21,7 @@ import BulkEnquiry from "@/components/product/BulkEnquiry";
 import JewelleryTypeBar from "@/components/home/JewelleryType";
 import Tooltip from "@/components/common/Tooltip";
 import ProductSelection from "@/components/product/ProductSelection"
+import StoreAvailability from "@/components/product/StoreAvailability" 
 
 const baseURL = process.env.BASE_URL;
 const driveURL = `${baseURL}/static/img/products/thumbnail/`;
@@ -109,7 +110,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
             <ProductGallery product={product} />
           </div>
 
-          <OrderViaWhatsappButton product={product} />
+          <OrderViaWhatsappButton product={product} />          
         </div>
         <div className="space-y-4">
           <h1 className="text-2xl md:text-3xl font-semibold">
@@ -120,7 +121,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
             count={product.ratingCount ?? 12}
             showExpert
           />
-          <ProductSelection product={product} />
+          <ProductSelection product={product} />          
 
 
           <p className="text-muted-foreground text-sm">
@@ -135,6 +136,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
             <p className="text-xs text-muted-foreground">Rate this jewellery</p>
             <ProductRatingInput productId={product.id} />
           </div>
+          <StoreAvailability />
         </div>
       </div>
 

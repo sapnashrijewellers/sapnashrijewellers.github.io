@@ -73,7 +73,7 @@ function CalculatorSkeleton() {
 
 export default async function CalculatorPage() {
   return (
-    <div className="">
+    <div className="container mx-auto">
       <Breadcrumb items={[{ name: "Home", href: "/" }, { name: "Calculator" }]} />
       {/* ✅ JSON-LD Structured Data */}
       <script

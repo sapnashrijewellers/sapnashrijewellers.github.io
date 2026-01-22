@@ -32,7 +32,7 @@ export default function ProductSizeSelector({
 
           return (
             <button
-              key={s.id}
+              key={s.SKU}
               type="button"
               onClick={() => handleSelect(index)}
               className={`

@@ -5,7 +5,6 @@ import { Noto_Sans_Devanagari } from "next/font/google";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/home/Footer";
 import FooterTrust from "@/components/home/FooterTrust";
-
 import FloatingWhatsAppButton from "@/components/home/FloatingWhatsAppButton";
 import RegisterSW from "@/components/home/registerSW";
 import Script from "next/script"
@@ -23,7 +22,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   viewportFit: "cover",
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#A37F2C" },
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
     { media: "(prefers-color-scheme: dark)", color: "#000000" },
   ],
 };
@@ -39,11 +38,9 @@ export const metadata: Metadata = {
     statusBarStyle: "black-translucent", // Options: "default", "black", "black-translucent"
   },
   icons: {
-    icon: [
-      { url: "/favicon-96x96.png", sizes: "96x96", rel: "icon", type: "image/png" },
-      { url: "/favicon-32x32.png", sizes: "32x32", rel: "icon", type: "image/png" },
-      { url: "/favicon-16x16.png", sizes: "16x16", rel: "icon", type: "image/png" },
-      { url: "/favicon.ico", sizes: "48x48", rel: "icon", type: "image/x-icon" },
+    icon: [      
+      { url: "/favicon-96x96-v4.png", sizes: "96x96", rel: "icon", type: "image/png" },      
+      { url: "/favicon-v4.ico", sizes: "48x48", type: "image/x-icon" },
       { url: "/favicon.svg", type: "image/svg+xml" },
     ],
     apple: "/apple-touch-icon.png",

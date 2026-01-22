@@ -49,6 +49,7 @@ export default function Footer() {
             <li><Link href="/policies/privacy/">Privacy Policy</Link></li>
             <li><Link href="/policies/returns/">Return Policy</Link></li>
             <li><Link href="/policies/shipping/">Shipping Policy</Link></li>
+            <li><Link href="/policies/warranty/">Warranty Policy</Link></li>
           </ul>
         </div>
 
@@ -121,7 +122,7 @@ export default function Footer() {
               <img
                 src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"
                 alt="Get it on Google Play"
-                className="h-16"  // bigger size
+                className="h-16"  
               />
             </a>
           </div>

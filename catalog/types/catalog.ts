@@ -1,8 +1,8 @@
 import { LucideIcon } from "lucide-react";
 
 /** Represents a single jewelry product item */
-export interface ProductVariant {
-  id: number;
+export interface ProductVariant {  
+  SKU:string;
   productId: number;
   weight: number;
   active: boolean;

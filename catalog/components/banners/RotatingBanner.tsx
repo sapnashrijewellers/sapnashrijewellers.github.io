@@ -193,10 +193,11 @@ export default function RotatingBanner({
               transition={{ duration: 1.2, ease: "easeOut" }}
             >
               <Image
-                src={`${baseURL}/static/${current.bgImage}`}
+                src={`${baseURL}/static/img/banner/${current.bgImage}`}
                 alt={current.title ?? "Banner"}
                 fill
                 priority
+                loading="eager"
                 className="object-cover opacity-95"
               />
             </motion.div>

@@ -40,7 +40,7 @@ export default function AboutUsPage() {
   
 
   return (
-    <div className="leading-relaxed">
+    <div className="container mx-auto">
       <Breadcrumb items={[{ name: "Home", href: "/" }, { name: "About Us" }]} />
 
       {/* ===== Heading ===== */}

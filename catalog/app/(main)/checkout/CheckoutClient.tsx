@@ -16,6 +16,7 @@ import confetti from "canvas-confetti";
 
 
 export default function CheckoutPage() {
+  const isMobile = /Android|iPhone|iPad/i.test(navigator.userAgent);
   const rates = useRates();
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -111,11 +112,11 @@ export default function CheckoutPage() {
   async function placeOrder() {
     if (!user || !product || !selectedVariant) return;
 
-   fireConfetti();
-  setOrderPlaced(true);
+    fireConfetti();
+    setOrderPlaced(true);
 
-  // Optional auto-open WhatsApp after 1s
-  setTimeout(sendWhatsAppMessage, 1000);
+    // Optional auto-open WhatsApp after 1s
+    setTimeout(sendWhatsAppMessage, 1000);
   }
 
   if (!product || !selectedVariant) return null;
@@ -124,6 +125,14 @@ export default function CheckoutPage() {
     const message = buildWhatsAppMessage();
     const url = `https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
+  }
+
+  function openUPI() {
+    const amount = finalPrice.toFixed(2);
+
+    const upiUrl = `upi://pay?pa=mab.037326019610011@axisbank&pn=Sapna%20Shri%20Jewellers&am=${amount}&cu=INR&tn=Order-${product?.id}`;
+
+    window.location.href = upiUrl;
   }
 
   function buildWhatsAppMessage() {
@@ -160,7 +169,7 @@ Total: ₹${finalPrice}
   return (
     <div className="max-w-5xl mx-auto p-4 bg-page">
       <h1 className="text-2xl mb-4">Checkout</h1>
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 ">
         <ProductCard product={product} variant={variantIndex} />
       </div>
       {/* Address */}
@@ -234,22 +243,34 @@ Total: ₹${finalPrice}
           Total: ₹{finalPrice}
         </p>
       </div>
+      {isMobile ? (
+        <button className="ssj-btn w-full" onClick={openUPI}>
+          Pay ₹{finalPrice} via UPI
+        </button>
+      ) : (
+        <>
+          <UPIPaymentQR
+            amount={finalPrice}
+            orderId={`SSJ-${product.id}-${Date.now()}`}
+          />
+          {/* <QRCode value={upiString} size={220} />
+    <p className="text-muted mt-2">
+      Scan QR using any UPI app
+    </p> */}
+        </>
+      )}
 
-      <UPIPaymentQR
-        amount={finalPrice}
-        orderId={`SSJ-${product.id}-${Date.now()}`}
-      />
 
       {/* Actions */}
       <div className="flex justify-between mt-6">
         <button
-          className="border border-default rounded-xl p-2 cursor-pointer"
+          className="border border-default rounded-xl p-2 cursor-pointer m-2"
           onClick={() => router.push("/")}
         >
           Continue Shopping
         </button>
 
-        <button className="ssj-btn" onClick={placeOrder}>
+        <button className="ssj-btn m-2" onClick={placeOrder}>
           Place Order
         </button>
       </div>

@@ -7,7 +7,7 @@ import products from "@/data/products.json";
 import categories from "@/data/categories.json";
 
 
-const baseURL = process.env.BASE_URL;
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 const driveURL = `${baseURL}/static/img/products/optimized/`;
 
 export default function TV() {

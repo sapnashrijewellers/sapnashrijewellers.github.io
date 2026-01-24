@@ -11,7 +11,7 @@ import RotatingBanner from "@/components/banners/RotatingBanner";
 import SEO from "@/components/common/SEO";
 
 
-const baseURL = process.env.BASE_URL;
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 const driveURL = `${baseURL}/static/img/products/optimized/`;
 
 export async function generateStaticParams() {

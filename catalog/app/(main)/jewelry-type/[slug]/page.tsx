@@ -8,7 +8,7 @@ import JewelryTypeClient from "./JewelryTypeClient";
 import { buildJewelryTypePageJsonLd } from "@/utils/buildJewelryTypePageJsonLd";
 import JsonLd from "@/components/common/JsonLd";
 
-const baseURL = process.env.BASE_URL!;
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL!;
 
 
 export async function generateStaticParams() {

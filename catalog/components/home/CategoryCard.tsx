@@ -8,7 +8,7 @@ export default function CategoryCard({ category, products, }: {
 
   if (!products || products.length === 0) return null;
 
-const baseURL = process.env.BASE_URL;
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
   const firstProduct = products[0];
   const cardHighlightClass = firstProduct.newArrival

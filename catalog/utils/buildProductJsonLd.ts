@@ -5,7 +5,7 @@ export default function buildProductJsonLd(
   product: Product,
   rates: Rates
 ) {
-  const baseURL = process.env.BASE_URL;
+  const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
   const driveURL = `${baseURL}/img/products/optimized/`;
   const imageUrl = `${driveURL}${product.images?.[0]}`;
   const baseProductUrl = `${baseURL}/product/${product.slug}`;

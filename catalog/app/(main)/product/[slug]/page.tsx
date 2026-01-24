@@ -23,7 +23,7 @@ import Tooltip from "@/components/common/Tooltip";
 import ProductSelection from "@/components/product/ProductSelection"
 import StoreAvailability from "@/components/product/StoreAvailability" 
 
-const baseURL = process.env.BASE_URL;
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 const driveURL = `${baseURL}/static/img/products/thumbnail/`;
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -153,7 +153,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
       {/* ---------------- Trust Banner (Moved Below) ---------------- */}
       <div className="max-w-6xl mx-auto px-3 pb-6">
         <Image
-          src={`${process.env.BASE_URL}/static/img/before-buy-banner.png`}
+          src={`${process.env.NEXT_PUBLIC_BASE_URL}/static/img/before-buy-banner.png`}
           alt="Points to consider before you buy jewellery"
           title="Points to consider before you buy jewellery"
           className="object-cover w-full rounded-lg"

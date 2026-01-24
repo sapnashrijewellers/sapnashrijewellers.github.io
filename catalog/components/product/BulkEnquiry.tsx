@@ -5,7 +5,7 @@ import { FaWhatsapp, FaPlus, FaMinus } from "react-icons/fa";
 import { Product } from "@/types/catalog";
 
 const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP;
-const baseURL = process.env.BASE_URL;
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
 const BulkEnquiry = ({ product }: { product: Product }) => {
   const [open, setOpen] = useState(false);

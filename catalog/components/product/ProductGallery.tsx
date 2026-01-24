@@ -27,7 +27,7 @@ export default function ProductGallery({ product }: { product: Product }) {
   const isSwiping = useRef(false);
 
   const activeImage = product.images[activeIndex];
-  const imageUrl = `${process.env.BASE_URL}/static/img/products/optimized/${activeImage}`;
+  const imageUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/static/img/products/optimized/${activeImage}`;
 
   const isTouch =
     typeof window !== "undefined" &&
@@ -169,7 +169,7 @@ export default function ProductGallery({ product }: { product: Product }) {
             }`}
           >
             <Image
-              src={`${process.env.BASE_URL}/static/img/products/optimized/${img}`}
+              src={`${process.env.NEXT_PUBLIC_BASE_URL}/static/img/products/optimized/${img}`}
               alt={`${product.name} thumbnail ${i + 1}`}
               fill
               className="object-contain"

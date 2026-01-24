@@ -12,7 +12,7 @@ export default function QrPage() {
 
     <div className="flex justify-center items-center  p-4 w-full">
       <Image
-        src={`${process.env.BASE_URL}/static/img/qr/image.png`}
+        src={`${process.env.NEXT_PUBLIC_BASE_URL}/static/img/qr/image.png`}
         alt="Payment QR Code"
         width={300}
         height={300}

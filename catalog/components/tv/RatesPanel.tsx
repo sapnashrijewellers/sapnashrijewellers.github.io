@@ -14,7 +14,7 @@ type Rates = {
 
 export default function RatesPanel() {
   const [rates, setRates] = useState<Rates | null>(null);
-const rateUrl = `${process.env.BASE_URL}/rate/rates.json`
+const rateUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/rate/rates.json`
   const fetchRates = async () => {
     try {
       const res = await fetch(rateUrl, { cache: "no-store" });

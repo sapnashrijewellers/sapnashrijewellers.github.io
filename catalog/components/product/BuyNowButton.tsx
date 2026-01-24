@@ -11,7 +11,7 @@ import { useRouter } from "next/navigation";
 export default function BuyNowButton({ product, activeVariant = 0 }: { product: Product, activeVariant: number }) {
 
   //const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP;
-  //const baseURL = process.env.BASE_URL;
+  //const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
   // const baseProductUrl = `${baseURL}/product/${product.slug}`;
   // const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(

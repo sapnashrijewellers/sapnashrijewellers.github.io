@@ -14,7 +14,7 @@ const DEFAULT_RATES: Rates = {
 
 const RateContext = createContext<Rates>(DEFAULT_RATES);
 
-const RATES_URL = `${process.env.BASE_URL}/rate/rates.json`;
+const RATES_URL = `${process.env.NEXT_PUBLIC_BASE_URL}/rate/rates.json`;
 
 export function RateProvider({ children }: { children: React.ReactNode }) {
   const [rates, setRates] = useState<Rates>(DEFAULT_RATES);

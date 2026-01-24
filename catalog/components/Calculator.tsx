@@ -62,7 +62,7 @@ export default function Calculator() {
 
   const fetchRates = async (): Promise<CalcRates | null> => {
     try {
-      const res = await fetch(`${process.env.BASE_URL}/rate/rates.json`, { cache: "no-store" });
+      const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/rate/rates.json`, { cache: "no-store" });
       if (!res.ok) throw new Error("Failed to load rates");
       return (await res.json()) as CalcRates;
     } catch (err) {

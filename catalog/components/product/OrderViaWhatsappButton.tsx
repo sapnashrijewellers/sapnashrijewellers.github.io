@@ -3,7 +3,7 @@ import { Product } from "@/types/catalog";
 
 // Replace with your actual phone number, including country code (no '+' or leading '00')
 const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP;
-const baseURL = process.env.BASE_URL;
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
 const OrderViaWhatsappButton = ({ product, title = "", activeVariant = 0 }: { product: Product, title?: string, activeVariant?: number }) => {
   const baseProductUrl = `${baseURL}/product/${product.slug}`;

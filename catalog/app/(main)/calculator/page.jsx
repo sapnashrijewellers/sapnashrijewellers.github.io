@@ -6,7 +6,7 @@ import { Suspense } from "react";
 
 const title = `ज्वेलरी प्राइस कैलकुलेटर`;
 const description = `ज्वेलरी प्राइस कैलकुलेटर | online Jewellery Price Calculator by Sapna Shri Jewellers`;
-const baseURL = process.env.BASE_URL;
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 const imageUrl = `${baseURL}/icons/android-chrome-512x512.png`;
 const ldjson = {
   "@context": "https://schema.org",

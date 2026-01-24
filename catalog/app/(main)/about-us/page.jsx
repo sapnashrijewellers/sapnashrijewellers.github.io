@@ -6,7 +6,7 @@ import {promises, services, certificates, faqs} from "@/data/aboutUs.json";
 
 const title = `Sapna Shri Jewellers Nagda | सपना श्री ज्वेलर्स नागदा`;
 const description = `Sapna Shri Jewellers Nagda - सोने और चांदी के आभूषणों में 35+ वर्षों का अनुभव। BIS 916 हॉलमार्क गोल्ड, सर्टिफाइड डायमंड और पारदर्शी सेवा।`;
-const baseURL = process.env.BASE_URL;
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 const imageUrl = `${baseURL}/static/img/shop.png`;
 
 export async function generateMetadata() {
@@ -86,7 +86,7 @@ export default function AboutUsPage() {
         ].map((owner) => (
           <div key={owner.name} className="text-center">
             <Image
-              src={`${process.env.BASE_URL}/static/${owner.img}`}
+              src={`${process.env.NEXT_PUBLIC_BASE_URL}/static/${owner.img}`}
               alt={owner.name}
               className="rounded-2xl shadow-lg h-64 object-cover mx-auto border-2 border-theme"
               width="300"
@@ -100,7 +100,7 @@ export default function AboutUsPage() {
       {/* ===== Shop Photo ===== */}
       <div className="text-center mt-12">
         <Image
-          src={`${process.env.BASE_URL}/static/img/shop.png`}
+          src={`${process.env.NEXT_PUBLIC_BASE_URL}/static/img/shop.png`}
           alt="Sapna Shri Jewellers Shop - Nagda"
           className="rounded-3xl shadow-2xl mx-auto border-4 border-yellow-500 w-full max-w-3xl"
           width="300"

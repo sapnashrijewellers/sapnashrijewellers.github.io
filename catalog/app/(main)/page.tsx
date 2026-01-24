@@ -12,7 +12,7 @@ import products from "@/data/products.json";
 
 const title = `Sapna Shri Jewellers`;
 const description = `Explore out latest products at Sapna Shri Jewellers Nagda. High-quality gold & silver jewellery with BIS 916 certification.`;
-const baseURL = process.env.BASE_URL;
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 const imageUrl = `${baseURL}/android-chrome-512x512.png`;
 
 export async function generateMetadata() {

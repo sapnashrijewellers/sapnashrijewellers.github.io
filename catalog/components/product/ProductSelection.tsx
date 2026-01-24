@@ -42,7 +42,7 @@ export default function ProductSelection({ product }: { product: Product }) {
         {isHallmarked && (
           <div className="flex flex-col items-center w-28">
             <Image
-              src={`${process.env.BASE_URL}/static/img/hallmark.png`}
+              src={`${process.env.NEXT_PUBLIC_BASE_URL}/static/img/hallmark.png`}
               height={56}
               width={56}
               alt="BIS Hallmark"

@@ -9,7 +9,7 @@ interface BreadcrumbItem {
 }
 
 export default function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
-  const baseUrl = process.env.BASE_URL!;
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL!;
 
   const ldjson = {
     "@context": "https://schema.org",

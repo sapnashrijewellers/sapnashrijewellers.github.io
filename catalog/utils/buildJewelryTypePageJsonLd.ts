@@ -4,7 +4,7 @@ export function buildJewelryTypePageJsonLd(
   products: Product[],
   t: Type
 ) {
-  const baseURL = process.env.BASE_URL;
+  const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
   const driveURL = `${baseURL}/img/products/optimized/`;
   return {
     "@context": "https://schema.org",

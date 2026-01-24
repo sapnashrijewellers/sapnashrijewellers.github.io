@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Breadcrumb from "@/components/navbar/BreadcrumbItem";
 
-const baseURL = process.env.BASE_URL;
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 const imageUrl = `${baseURL}/icons/android-chrome-512x512.png`;
 
 export const metadata = {

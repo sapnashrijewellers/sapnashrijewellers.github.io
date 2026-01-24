@@ -10,7 +10,7 @@ import formatPurity from "@/utils/utils";
 import ProductPrice from "./ProductCardPrice";
 
 export default function ProductCard({ product, variant = 0 }: { product: Product, variant?: number }) {
-  const baseURL = process.env.BASE_URL;
+  const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
   const images = product.images || [];
   const hasMultipleImages = images.length > 1;
 

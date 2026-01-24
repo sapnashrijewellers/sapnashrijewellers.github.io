@@ -11,7 +11,7 @@ import type { ComponentType } from "react";
 import banners from "@/data/banners.json";
 
 
-const baseURL = process.env.BASE_URL ?? "";
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL ?? "";
 
 /* --------------------------------------------
    Icon resolver

@@ -33,14 +33,14 @@ self.addEventListener("push", (event) => {
     return;
   }
 
-  const payload = event.data.json();
-  console.log("[SW] Push received:", payload);
+  const payload = event.data.json();  
+  //console.log("[SW] Push received:", payload);
 
   const title = payload.title || "Sapna Shri Jewellers";
   const options = {
     body: payload.body || "Tap to open",
     icon: "/icons/android-chrome-192x192.png",
-    badge: "/icons/android-chrome-96x96.png",
+    badge: "/icons/badge-icon-96x96.png",
     data: { url: payload.url || "/" },
     vibrate: [100, 50, 100],
     tag: "ssj-notification",
@@ -60,7 +60,7 @@ self.addEventListener("push", (event) => {
 /* ===== Handle Notification Click ===== */
 
 self.addEventListener("notificationclick", (event) => {
-  console.log("[SW] Notification click:", event.notification.tag);
+  //console.log("[SW] Notification click:", event.notification.tag);
   event.notification.close();
 
   const targetUrl = event.notification.data?.url || "/";

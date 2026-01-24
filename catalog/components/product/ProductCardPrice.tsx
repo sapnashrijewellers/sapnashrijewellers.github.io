@@ -3,11 +3,11 @@ import { useRates } from "@/context/RateContext";
 import { calculatePrice } from "@/utils/calculatePrice";
 import { Product } from "@/types/catalog";
 
-export default function ProductCardPrice({ product }: { product: Product }) {
+export default function ProductCardPrice({ product, variant =0 }: { product: Product, variant:number  }) {
   const rates = useRates();
-  if(!product.variants[0].makingCharges)
+  if(!product.variants[variant].makingCharges)
     return null;
-  const popV = calculatePrice({ purity: product.purity, variant: product.variants[0], rates });
+  const popV = calculatePrice({ purity: product.purity, variant: product.variants[variant], rates });
   
   if (popV?.price && popV?.price === null) return null;
 

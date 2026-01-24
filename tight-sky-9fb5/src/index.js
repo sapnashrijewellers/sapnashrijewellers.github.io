@@ -11,8 +11,8 @@
  *
  * Learn more at https://developers.cloudflare.com/workers/
  */
-import {createOrder, placeOrder,getOrder} from "./order";
-import {updateUser,getUser} from "./user";
+//import {createOrder, placeOrder,getOrder} from "./order";
+//import {updateUser,getUser} from "./user";
 import {subscribeUser,deleteSubscription,listSubs } from "./subscription"
 
 export default {

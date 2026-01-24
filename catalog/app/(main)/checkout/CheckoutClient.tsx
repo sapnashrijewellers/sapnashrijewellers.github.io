@@ -11,6 +11,8 @@ import { Product } from "@/types/catalog"
 import { useRates } from "@/context/RateContext";
 import { calculatePrice } from "@/utils/calculatePrice";
 import UPIPaymentQR from "@/components/UPIPaymentQR"
+import Link from "next/link";
+import confetti from "canvas-confetti";
 
 
 export default function CheckoutPage() {
@@ -21,13 +23,14 @@ export default function CheckoutPage() {
   console.log(user);
 
   const productId = Number(searchParams.get("p"));
-
-  //const productId = useMemo(() => searchParams.get("p"), [searchParams]);
-  const variantIndex = Number(searchParams.get("v") ?? 0);
-
+  const variantIndex = Number(searchParams.get("v"));
   const [product, setProduct] = useState<Product | null>(null);
+  const [orderPlaced, setOrderPlaced] = useState(false);
+
   const [address, setAddress] = useState("");
   const [mobile, setMobile] = useState("");
+  const [city, setCity] = useState("");
+  const [pin, setPin] = useState("");
   const [paymentMethod, setPaymentMethod] =
     useState<"UPI" | "COD">("UPI");
 
@@ -53,7 +56,7 @@ export default function CheckoutPage() {
     fetch("/data/products.json")
       .then((r) => r.json())
       .then((products) => {
-        const p = products.find((x: Product) => x.id === 13);
+        const p = products.find((x: Product) => x.id === productId);
 
         if (!p) {
           router.replace("/");
@@ -91,15 +94,15 @@ export default function CheckoutPage() {
     if (!product) return null;
     if (!product.variants?.[variantIndex]) return null;
     if (!rates) return null;
-
+    console.log('varient: ', product.variants?.[variantIndex]);
     return calculatePrice({
       purity: product.purity,
-      variant: product.variants[variantIndex],
+      variant: product.variants?.[variantIndex],
       rates,
     });
   }, [product, variantIndex, rates]);
 
-  const finalPrice =(COD_CHARGE > 0) ? SHIPPING + COD_CHARGE : 
+  const finalPrice = (COD_CHARGE > 0) ? SHIPPING + COD_CHARGE :
     (vPop?.price ?? 0) + SHIPPING + COD_CHARGE;
 
   /* -------------------------------
@@ -108,33 +111,60 @@ export default function CheckoutPage() {
   async function placeOrder() {
     if (!user || !product || !selectedVariant) return;
 
-    await fetch("/api/order/create", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        uid: user.uid,
-        productId: product.id,
-        variantIndex,
-        address,
-        mobile,
-        paymentMethod,
-        finalPrice,
-      }),
-    });
+   fireConfetti();
+  setOrderPlaced(true);
 
-    router.push("/thank-you");
+  // Optional auto-open WhatsApp after 1s
+  setTimeout(sendWhatsAppMessage, 1000);
   }
 
   if (!product || !selectedVariant) return null;
+
+  function sendWhatsAppMessage() {
+    const message = buildWhatsAppMessage();
+    const url = `https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
+  }
+
+  function buildWhatsAppMessage() {
+    return `
+🛍️ 
+
+👤 Name: ${user?.displayName || "Customer"}
+📞 Mobile: ${mobile}
+
+📍 Delivery Address:
+${address}
+City: ${city}
+Pincode: ${pin}
+
+💍 Product:
+${product?.name}
+Variant: ${selectedVariant?.size}
+
+🔗 Product Link:
+${process.env.BASE_ULR}/product/${product?.slug}
+
+💰 Price Summary:
+Product: ₹${vPop?.price}
+Shipping: ₹60
+${paymentMethod === "COD" ? "COD Charge: ₹200" : ""}
+Total: ₹${finalPrice}
+
+💳 Payment Method: ${paymentMethod}
+
+🙏 Please confirm availability.
+  `.trim();
+  }
 
   return (
     <div className="max-w-5xl mx-auto p-4 bg-page">
       <h1 className="text-2xl mb-4">Checkout</h1>
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-        <ProductCard product={product} />
+        <ProductCard product={product} variant={variantIndex} />
       </div>
       {/* Address */}
-      <div className="bg-surface p-4 rounded-lg border border-theme mt-4">
+      <div className="bg-surface p-4 rounded-lg border border-default mt-4">
         <label className="labelClasses">Delivery Address</label>
         <textarea
           className="inputClasses"
@@ -148,10 +178,24 @@ export default function CheckoutPage() {
           value={mobile}
           onChange={(e) => setMobile(e.target.value)}
         />
+
+        <label className="labelClasses mt-3">City</label>
+        <input
+          className="inputClasses"
+          value={city}
+          onChange={(e) => setCity(e.target.value)}
+        />
+
+        <label className="labelClasses mt-3">Pin Code</label>
+        <input
+          className="inputClasses"
+          value={pin}
+          onChange={(e) => setPin(e.target.value)}
+        />
       </div>
 
       {/* Payment */}
-      <div className="bg-surface p-4 rounded-lg border border-theme mt-4">
+      <div className="bg-surface p-4 rounded-lg border border-default mt-4">
         <label className="labelClasses mt-3">Choose Payment Method</label>
         <label className="flex gap-2">
           <input
@@ -172,15 +216,15 @@ export default function CheckoutPage() {
         </label>
       </div>
       {paymentMethod === "COD" && (
-  <div className="mt-3 rounded-md border border-primary bg-surface p-3 text-sm text-normal">
-    <strong>Cash on Delivery Selected</strong>
-    <p className="mt-1">
-      You will pay <strong>₹{SHIPPING + COD_CHARGE}</strong> now for shipping and COD charges.
-      <br />
-      <strong>Product price will be paid at the time of delivery.</strong>
-    </p>
-  </div>
-)}
+        <div className="mt-3 rounded-md border border-primary bg-surface p-3 text-sm text-normal">
+          <strong>Cash on Delivery Selected</strong>
+          <p className="mt-1">
+            You will pay <strong>₹{SHIPPING + COD_CHARGE}</strong> now for shipping and COD charges.
+            <br />
+            <strong>Product price will be paid at the time of delivery.</strong>
+          </p>
+        </div>
+      )}
 
       {/* Summary */}
       <div className="mt-4 text-right">
@@ -192,14 +236,14 @@ export default function CheckoutPage() {
       </div>
 
       <UPIPaymentQR
-    amount={finalPrice}
-    orderId={`SSJ-${product.id}-${Date.now()}`}
-  />
+        amount={finalPrice}
+        orderId={`SSJ-${product.id}-${Date.now()}`}
+      />
 
       {/* Actions */}
       <div className="flex justify-between mt-6">
         <button
-          className="ssj-btn-outline"
+          className="border border-default rounded-xl p-2 cursor-pointer"
           onClick={() => router.push("/")}
         >
           Continue Shopping
@@ -209,6 +253,54 @@ export default function CheckoutPage() {
           Place Order
         </button>
       </div>
+      <div className="text-xs p-2 text-right">
+        By clicking “Place Order”, you agree to our &nbsp;
+        <Link href={`/policies/terms/`} className="underline">Terms</Link>
+        &nbsp;and &nbsp;
+        <Link href={`/policies/privacy/`} className="underline">Privacy Policy</Link>.
+      </div>
+      {orderPlaced && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
+          <div className="bg-surface p-8 rounded-xl text-center max-w-md w-full border border-theme">
+            <h2 className="text-2xl mb-2 font-yatra">
+              🎉 Order Placed Successfully!
+            </h2>
+            <p className="text-muted mb-4">
+              Thank you for shopping with Sapna Shri Jewellers
+            </p>
+
+            <button
+              className="ssj-btn w-full"
+              onClick={sendWhatsAppMessage}
+            >
+              Send Order on WhatsApp
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
+
+
+function fireConfetti() {
+  confetti({
+    particleCount: 150,
+    spread: 80,
+    origin: { y: 0.6 },
+  });
+
+  setTimeout(() => {
+    confetti({
+      particleCount: 120,
+      spread: 120,
+      origin: { x: 0.2, y: 0.4 },
+    });
+    confetti({
+      particleCount: 120,
+      spread: 120,
+      origin: { x: 0.8, y: 0.4 },
+    });
+  }, 300);
+}
+

@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "axios": "^1.13.2",
+    "canvas-confetti": "^1.9.4",
     "firebase": "^12.7.0",
     "framer-motion": "^12.23.26",
     "fs-extra": "^11.3.2",

@@ -1,4 +1,4 @@
-async function subscribeUser(request, env, headers) {
+export async function subscribeUser(request, env, headers) {
 	try {
 		const body = await request.json();
 
@@ -52,7 +52,7 @@ async function subscribeUser(request, env, headers) {
  * @param {KVNamespace} USER_SUBSCRIPTIONS - The KV namespace binding (e.g., env.USER_SUBSCRIPTIONS).
  * @returns {Promise<Response>} A JSON response containing the list of subscriptions.
  */
-async function listSubs(USER_SUBSCRIPTIONS) {
+export async function listSubs(USER_SUBSCRIPTIONS) {
 	const keys = await USER_SUBSCRIPTIONS.list();
 	const subscriptions = [];
 
@@ -78,7 +78,7 @@ async function listSubs(USER_SUBSCRIPTIONS) {
 	});
 }
 
-async function deleteSubscription(request, env) {
+export async function deleteSubscription(request, env) {
 
 	const key = await request.text();
 	//console.log("deleting: ",key);

@@ -13,8 +13,6 @@ import { calculatePrice } from "@/utils/calculatePrice";
 import UPIPaymentQR from "@/components/UPIPaymentQR"
 import Link from "next/link";
 import confetti from "canvas-confetti";
-const [step, setStep] = useState<CheckoutStep>("CART");
-
 
 export default function CheckoutPage() {
   const isMobile = /Android|iPhone|iPad/i.test(navigator.userAgent);

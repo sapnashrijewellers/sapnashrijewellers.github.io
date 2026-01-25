@@ -102,3 +102,32 @@ export interface CalcRates {
   silver: number;
   silverJewellery: number;
 }
+
+export type CartItem = {
+  productId: number;
+  variantIndex: number;
+  qty: number;
+};
+
+export type Cart = {
+  items: CartItem[];
+  priceSummary?: PriceSummaryType;
+};
+
+export class Address {
+  uid!: string;
+  name!: string;
+  email!: string;
+  mobile!: string;
+  address!: string;
+  city!: string;
+  pin!: string;
+}
+
+export type PriceSummaryType={
+  productTotal: number,
+  shipping:number,
+  paymentMethod:string,
+}
+
+export type PaymentMethod = "UPI" | "COD";

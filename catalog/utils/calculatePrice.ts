@@ -1,4 +1,5 @@
-import { ProductVariant, Rates } from "@/types/catalog";
+import { ProductVariant, Rates, Cart, PaymentMethod, PriceSummaryType } from "@/types/catalog";
+import products from "@/data/products.json"
 
 
 export function calculatePrice({
@@ -46,4 +47,31 @@ export function calculatePrice({
     price: finalPrice,
     MRP: Math.round(hikedPrice)
   };
+}
+
+export function calculateFinal(cart: Cart, paymentMethod: PaymentMethod, rates?: Rates) {
+  // 1. Calculate the total by iterating through cart items
+  const totalAmount = cart.items.reduce((accumulator, item) => {
+    // Find the product data
+    const productData = products.find(p => p.id === item.productId);
+    
+    // Safety check: if product doesn't exist, don't add to total
+    if (!productData) return accumulator;
+
+    // 2. Calculate price for the specific variant
+    const vPop = calculatePrice({ 
+      purity: productData.purity, 
+      variant: productData.variants[item.variantIndex], 
+      rates 
+    });
+
+    // 3. Multiply by quantity and add to the running total
+    // Using optional chaining and nullish coalescing to avoid NaN
+    const itemTotal = (vPop?.price ?? 0) * item.qty;
+    
+    return accumulator + itemTotal;
+  }, 0);
+
+  // 4. Return the final sum
+  return totalAmount;
 }

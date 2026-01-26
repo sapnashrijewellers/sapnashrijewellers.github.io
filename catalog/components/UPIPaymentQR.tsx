@@ -6,10 +6,10 @@ import {generateUPIString} from "@/utils/generateUPI";
 
 export default function UPIPaymentQR({
   amount,
-  orderId,
+  //orderId,
 }: {
   amount: number;
-  orderId: string;
+  //orderId: string;
 }) {
   const [qr, setQr] = useState<string>("");
 
@@ -18,11 +18,11 @@ export default function UPIPaymentQR({
       vpa: "mab.037326019610011@axisbank",
       name: "SAPNA SHREE JEWELLERS",
       amount,
-      orderId,
+      //orderId,
     });
 
     QRCode.toDataURL(upiString).then(setQr);
-  }, [amount, orderId]);
+  }, [amount]);
 
   if (!qr) return null;
 

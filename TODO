@@ -114,6 +114,15 @@ Staged:
   
 Working:  
   ☐ Price filter
+  ☐ Save Address in cloudFlare KV
+  ☐ Delete button on Quantity control
+  ☐ Change WhatsApp message for multiple products
+  ☐ Test for multiple product & save into local storage
+  ☐ Remove products from cart on place order
+  ☐ Generate orderid and save order on place order
+
+
+
   
 
 Not Started:

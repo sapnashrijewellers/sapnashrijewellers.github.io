@@ -1,15 +1,19 @@
-import { PaymentMethod } from "@/types/catalog"
+import { PaymentMethod} from "@/types/catalog"
+
 export default function PaymentStep({
     method,
     onChange,
     onNext,
     onBack
 }: {
-    method: string;
+    method: PaymentMethod;
     onChange: (value: PaymentMethod) => void; // Standard function signature
     onNext: () => void;
     onBack: () => void;
 }) {
+    
+    
+
     return (
         <>
             <h2 className="text-xl mb-4">Payment Method</h2>
@@ -30,7 +34,7 @@ export default function PaymentStep({
                     onChange={() => onChange("COD")}
                 />
                 COD (+₹200)
-            </label>            
+            </label>
             <div className="flex gap-3 mt-6">
                 <button
                     className="ssj-btn-outline w-full"

@@ -1,42 +1,39 @@
 import { Address, Cart, PaymentMethod, PriceSummaryType } from "@/types/catalog";
 import { AddressSummary } from "./AddressSummary";
 import { PriceSummary } from "./PriceSummary";
-import { calculateFinal } from "@/utils/calculatePrice";
-import { useRates } from "@/context/RateContext"
 import CartStep from "@/components/checkout/CartStep"
+import PayViaUPIButton from "./PayViaUPIButton";
+import PlaceOrderButton from "./PlaceOrderButton";
 
 export default function ReviewStep(
-  { cart,
+  {
+    cart,
     address,
+    priceSummary,
     paymentMethod,
     onEditAddress,
     onEditPayment, }:
     {
       cart: Cart,
-      address: Address,
+      address: Address | undefined,
       paymentMethod: PaymentMethod,
+      priceSummary: PriceSummaryType,
       onEditAddress: () => void;
       onEditPayment: () => void;
     }) {
-  const rates = useRates();
-  const pTotal = calculateFinal(cart, paymentMethod, rates);
 
-  const summary: PriceSummaryType = {
-    productTotal: pTotal,
-    shipping: 60.00,
-    paymentMethod: paymentMethod
-  };
 
   return (
     <>
       <h2 className="text-xl mb-4">Review & Place Order</h2>
       <CartStep cart={cart} />
       <AddressSummary address={address} onEdit={onEditAddress} />
-      <PriceSummary priceSummary={summary} onEditPayment={onEditPayment} />
-
-      <button className="ssj-btn w-full mt-6">
-        Place Order
-      </button>
+      <PriceSummary priceSummary={priceSummary} onEditPayment={onEditPayment} />
+      <PayViaUPIButton finalPrice={priceSummary.finalPrice} />
+      <PlaceOrderButton cart={cart} 
+      address={address}
+      paymentMethod={paymentMethod}      
+      priceSummary={priceSummary}  />
     </>
   );
 }

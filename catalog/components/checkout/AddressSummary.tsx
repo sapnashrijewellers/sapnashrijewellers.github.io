@@ -1,11 +1,12 @@
 import {Address} from "@/types/catalog";
 
 type AddressSummaryProps = {
-  address: Address;
+  address: Address | undefined;
   onEdit: () => void;
 };
 
 export function AddressSummary({ address, onEdit }: AddressSummaryProps) {
+  if(!address) return(<p>Address not available</p>);
   return (
     <div className="bg-surface border border-theme rounded-lg p-4 mt-4">
       <div className="flex justify-between items-start">

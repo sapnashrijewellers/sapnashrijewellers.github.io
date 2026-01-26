@@ -1,6 +1,4 @@
 import { ProductVariant, Rates, Cart, PaymentMethod, PriceSummaryType } from "@/types/catalog";
-import products from "@/data/products.json"
-
 
 export function calculatePrice({
   purity = "gold24K",
@@ -49,11 +47,11 @@ export function calculatePrice({
   };
 }
 
-export function calculateFinal(cart: Cart, paymentMethod: PaymentMethod, rates?: Rates) {
+export function calculateFinal(cart: Cart, rates?: Rates) {
   // 1. Calculate the total by iterating through cart items
   const totalAmount = cart.items.reduce((accumulator, item) => {
     // Find the product data
-    const productData = products.find(p => p.id === item.productId);
+    const productData = item.product;
     
     // Safety check: if product doesn't exist, don't add to total
     if (!productData) return accumulator;

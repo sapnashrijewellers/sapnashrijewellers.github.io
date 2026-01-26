@@ -1,13 +1,13 @@
 import { Cart } from "@/types/catalog";
 import ProductCard from "../product/ProductCard";
-import products from "@/data/products.json";
-import { updateCartQty } from "@/utils/cart";
+import { Dispatch, SetStateAction } from "react";
 import { QuantityControl } from "./QuantityControl";
+
 
 type CartStepProps = {
   cart: Cart;
-  setCart: (cart: Cart) => void;
-  onNext: () => void;
+  setCart?: Dispatch<SetStateAction<Cart>>;
+  onNext?: () => void;
 };
 
 export default function CartStep({
@@ -15,16 +15,29 @@ export default function CartStep({
   setCart,
   onNext,
 }: CartStepProps) {
+
+  function updateCartQtyInState(
+    cart: Cart,
+    productId: number,
+    variantIndex: number,
+    qty: number
+  ): Cart {
+    return {
+      ...cart,
+      items: cart.items.map(item =>
+        item.productId === productId && item.variantIndex === variantIndex
+          ? { ...item, qty: Math.max(1, Math.min(10, qty)) }
+          : item
+      ),
+    };
+  }
+
   return (
     <>
       <h2 className="text-xl mb-4 font-yatra">Your Cart</h2>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3  gap-4">
         {cart.items.map(item => {
-          const productData = products.find(
-            p => p.id === item.productId
-          );
-          if (!productData) return null;
 
           return (
             <div
@@ -32,35 +45,37 @@ export default function CartStep({
               className="bg-surface border border-theme rounded-lg p-2"
             >
               <ProductCard
-                product={productData}
+                product={item.product}
                 variant={item.variantIndex}
               />
-
-              <QuantityControl
+              {setCart && (<QuantityControl
                 qty={item.qty}
                 onChange={(newQty) => {
-                  const updatedCart = updateCartQty(
-                    item.productId,
-                    item.variantIndex,
-                    newQty
+                  setCart(prev =>
+                    updateCartQtyInState(
+                      prev,
+                      item.productId,
+                      item.variantIndex,
+                      newQty
+                    )
                   );
-                  setCart(updatedCart);
                 }}
-              />
+              />)}
+              {!setCart && (
+                <p>Quantity: {item.qty}</p>
+              )}
+
             </div>
           );
         })}
-      </div>      
+      </div>
 
       {onNext && (
-
-
         <button className="ssj-btn w-full mt-6" onClick={onNext}>
           Continue
         </button>
-
       )
-}
+      }
     </>
   );
 }

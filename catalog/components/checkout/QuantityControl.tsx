@@ -2,6 +2,7 @@ type QuantityControlProps = {
   qty: number;
   onChange: (qty: number) => void;
 };
+//Must implement delete button
 
 export function QuantityControl({ qty, onChange }: QuantityControlProps) {
   return (

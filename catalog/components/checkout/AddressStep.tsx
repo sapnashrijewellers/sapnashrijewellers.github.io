@@ -2,7 +2,7 @@ import {Address} from "@/types/catalog"
 import { useEffect, useState } from "react";
 
 type AddressStepProps = {
-  address: Address | null;
+  address: Address | undefined;
   onSave: (address: Address) => void;
   onNext: () => void;
   onBack: () => void;

@@ -7,9 +7,6 @@ export function getCart(): Cart {
   return JSON.parse(localStorage.getItem(CART_KEY) || '{"items":[]}');
 }
 
-export function saveCart(cart: Cart) {
-  localStorage.setItem(CART_KEY, JSON.stringify(cart));
-}
 
 export function addToCart(item: CartItem) {
   const cart = getCart();
@@ -21,6 +18,9 @@ export function addToCart(item: CartItem) {
   else cart.items.push(item);
 
   saveCart(cart);
+}
+export function saveCart(cart: Cart) {
+  localStorage.setItem(CART_KEY, JSON.stringify(cart));
 }
 
 export function updateCartQty(
@@ -40,3 +40,4 @@ export function updateCartQty(
   saveCart(cart);
   return cart;
 }
+

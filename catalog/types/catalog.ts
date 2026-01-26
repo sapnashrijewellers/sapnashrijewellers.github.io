@@ -1,8 +1,8 @@
 import { LucideIcon } from "lucide-react";
 
 /** Represents a single jewelry product item */
-export interface ProductVariant {  
-  SKU:string;
+export interface ProductVariant {
+  SKU: string;
   productId: number;
   weight: number;
   active: boolean;
@@ -12,7 +12,7 @@ export interface ProductVariant {
   discount: number;
   price?: number;
   MRP?: number;
-  priceAdjustment? : number;
+  priceAdjustment?: number;
 }
 
 export interface Product {
@@ -43,7 +43,7 @@ export interface Category {
   name: string;
   englishName: string,
   rank: number,
-  slug: string,  
+  slug: string,
   description: string,
   active: boolean
 }
@@ -82,7 +82,7 @@ export interface Rates {
 export interface Type {
   type: string,
   rank: number,
-  slug: string,  
+  slug: string,
   description: string,
   icon: string,
   active: boolean
@@ -105,14 +105,18 @@ export interface CalcRates {
 
 export type CartItem = {
   productId: number;
+  product:Product
   variantIndex: number;
+  variant:string;
   qty: number;
+  
 };
 
 export type Cart = {
-  items: CartItem[];
-  priceSummary?: PriceSummaryType;
+  items: CartItem[];      
 };
+
+
 
 export class Address {
   uid!: string;
@@ -124,10 +128,24 @@ export class Address {
   pin!: string;
 }
 
-export type PriceSummaryType={
+export type PriceSummaryType = {
   productTotal: number,
-  shipping:number,
-  paymentMethod:string,
+  shipping: number,
+  finalPrice: number,  
 }
 
 export type PaymentMethod = "UPI" | "COD";
+
+// export type Cart = {
+//   items: CartItem[];
+
+//   address?: Address;
+
+//   paymentMethod: PaymentMethod;
+
+//   priceSummary: {
+//     productTotal: number;
+//     shipping: number;
+//     grandTotal: number;
+//   };
+// };

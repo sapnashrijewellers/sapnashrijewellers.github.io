@@ -15,19 +15,27 @@
   color-scheme: light dark;
 
   /* Core Surfaces */
-  --color-bg: #f7f9fc;                 /* Page background */
-  --color-surface: #ffffff;            /* Cards / sections */
-  --color-border: #d6deeb;              /* Subtle dividers */
+  --color-bg: #f7f9fc;
+  /* Page background */
+  --color-surface: #ffffff;
+  /* Cards / sections */
+  --color-border: #d6deeb;
+  /* Subtle dividers */
 
   /* Text */
-  --color-text: #0a2a66;/* #0f172a;                /* Primary text */  
+  --color-text: #0a2a66;
+  /* #0f172a;                /* Primary text */
   --color-primary: #c9a24d;
-  --color-primary-dark: #081f4d; /*#a8832f;*/
+  --color-primary-dark: #081f4d;
+  /*#a8832f;*/
 
   /* Brand Blues */
-  --color-accent: #0a2a66;              /* Royal blue */
-  --color-accent-bg: #081f4d;           /* Deep navy */
-  --color-accent-text: #f8f4e6;         /* Ivory gold */
+  --color-accent: #0a2a66;
+  /* Royal blue */
+  --color-accent-bg: #081f4d;
+  /* Deep navy */
+  --color-accent-text: #f8f4e6;
+  /* Ivory gold */
 
   /* Footer */
   --color-footer-bg: #050e24;
@@ -49,21 +57,24 @@
 ============================ */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: #000;/*#020617;*/
-    --color-accent-bg: #f9f6ea;/*#071a3a;*/
+    --color-bg: #000;
+    /*#020617;*/
+    --color-accent-bg: #f9f6ea;
+    /*#071a3a;*/
     --color-surface: #000000;
 
-    --color-border: #0f1f3d;
+    --color-border: #f7e2b2;
 
-    --color-text: #f7e2b2; /*rgba(255, 255, 255, 0.92);*/
-    --color-primary: #c4a458; 
+    --color-text: #f7e2b2;
+    /*rgba(255, 255, 255, 0.92);*/
+    --color-primary: #c4a458;
     --color-primary-dark: #b38511;
-    --color-accent: #0a2a66;      
-    --color-accent-text: #071a3a; 
+    --color-accent: #0a2a66;
+    --color-accent-text: #071a3a;
 
     --color-footer-bg: #020617;
     --color-footer-text: #94a3b8;
-    --color-footer-heading: #ffffff; 
+    --color-footer-heading: #ffffff;
     --color-footer-border: #0b1d3a;
 
     --color-footer-trust-bg: #050f2a;
@@ -78,31 +89,78 @@
 @layer utilities {
 
   /* Backgrounds */
-  .bg-page { background-color: var(--color-bg); }
-  .bg-surface { background-color: var(--color-surface); }
-  .bg-accent { background-color: var(--color-accent-bg); color: var(--color-accent-text); }
+  .bg-page {
+    background-color: var(--color-bg);
+  }
+
+  .bg-surface {
+    background-color: var(--color-surface);
+  }
+
+  .bg-accent {
+    background-color: var(--color-accent-bg);
+    color: var(--color-accent-text);
+  }
 
   /* Borders */
-  .border-theme { border-color: var(--color-border); }
-  .border-accent { border-color: var(--color-accent); }
-  .border-primary { border-color: var(--color-primary); }
+  .border-theme {
+    border-color: var(--color-border);
+  }
+
+  .border-accent {
+    border-color: var(--color-accent);
+  }
+
+  .border-primary {
+    border-color: var(--color-primary);
+  }
 
   /* Text */
-  .text-normal { color: var(--color-text); }
-  .text-primary { color: var(--color-primary); }
-  .text-primary-dark { color: var(--color-primary-dark); }
-  .text-muted { color: color-mix(in srgb, var(--color-text) 65%, transparent); }
+  .text-normal {
+    color: var(--color-text);
+  }
+
+  .text-primary {
+    color: var(--color-primary);
+  }
+
+  .text-primary-dark {
+    color: var(--color-primary-dark);
+  }
+
+  .text-muted {
+    color: color-mix(in srgb, var(--color-text) 65%, transparent);
+  }
 
   /* Footer */
-  .bg-footer { background-color: var(--color-footer-bg); }
-  .text-footer { color: var(--color-footer-text); }
-  .border-footer { border-color: var(--color-footer-border); }
-  .footer-heading { color: var(--color-footer-heading)!important; }
+  .bg-footer {
+    background-color: var(--color-footer-bg);
+  }
+
+  .text-footer {
+    color: var(--color-footer-text);
+  }
+
+  .border-footer {
+    border-color: var(--color-footer-border);
+  }
+
+  .footer-heading {
+    color: var(--color-footer-heading) !important;
+  }
 
   /* Footer Trust */
-  .bg-footer-trust { background-color: var(--color-footer-trust-bg); }
-  .text-footer-trust { color: var(--color-footer-trust-text); }
-  .icon-footer-trust { color: var(--color-footer-trust-icon); }
+  .bg-footer-trust {
+    background-color: var(--color-footer-trust-bg);
+  }
+
+  .text-footer-trust {
+    color: var(--color-footer-trust-text);
+  }
+
+  .icon-footer-trust {
+    color: var(--color-footer-trust-icon);
+  }
 
   /* Font */
   .font-yatra {
@@ -121,14 +179,15 @@
     @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 transition-all;
     color: var(--color-accent-text);
     background-color: var(--color-accent-bg);
-    cursor:pointer
+    cursor: pointer
   }
+
   .ssj-btn svg {
-  width: 1.1em;
-  height: 1.1em;
-  stroke-width: 1.75;
-  flex-shrink: 0;
-}
+    width: 1.1em;
+    height: 1.1em;
+    stroke-width: 1.75;
+    flex-shrink: 0;
+  }
 
   .ssj-btn:hover {
     background-color: color-mix(in srgb, var(--color-accent-bg) 85%, black);
@@ -139,10 +198,17 @@
   }
 
   .ssj-btn-outline {
-    @apply rounded-md px-4 py-2 transition-all;
-    color: var(--color-accent);
-    border: 1px solid var(--color-accent);
-    background: transparent;
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 transition-all;
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+    background: transparent;    
+  }
+
+  .ssj-btn-outline svg {
+    width: 1.1em;
+    height: 1.1em;
+    stroke-width: 1.75;
+    flex-shrink: 0;
   }
 
   .ssj-btn-outline:hover {
@@ -174,12 +240,12 @@
 /* ============================
    BASE ELEMENTS
 ============================ */
-html, 
+html,
 body {
   background-color: var(--color-bg);
   height: 100%;
   color: var(--color-text);
-  transition: background-color 0.3s ease, color 0.3s ease;  
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 button {
@@ -199,7 +265,6 @@ h3 {
 .au-h2 {
   @apply text-3xl mb-8 text-center;
   color: var(--color-primary-dark)
-  
 }
 
 /* ============================
@@ -223,8 +288,13 @@ h3 {
 }
 
 @keyframes testimonial-track-scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-40%); }
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-40%);
+  }
 }
 
 .testimonial-track-auto:hover {
@@ -273,9 +343,10 @@ h3 {
   margin-bottom: 1rem;
 }
 
-.policy-container ul, 
+.policy-container ul,
 .policy-container ol {
   margin-bottom: 1rem;
   padding-left: 1.5rem;
 }
+
 /* POLICY CONTENT*/

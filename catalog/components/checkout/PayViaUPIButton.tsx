@@ -13,8 +13,8 @@ export default function PayViaUPIButton({ finalPrice }: { finalPrice: number }) 
 
 
     return (
-        <div>
-            <button className="ssj-btn w-full" onClick={openUPI}>
+        <div className="m-2">
+            <button className="ssj-btn w-full " onClick={openUPI}>
                 Pay ₹{finalPrice} via UPI
             </button>
 

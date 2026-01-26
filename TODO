@@ -109,21 +109,26 @@ Completed Tasks:
   ✔ Search mic is not working @done(26-01-21 12:43)
   ✔ check for favicon @started(26-01-16 11:46) @done(26-01-22 11:05) @lasted(5d23h19m5s)
   ✔ Category page SEO @done(26-01-22 11:48)
+  ✔ Delete button on Quantity control @done(26-01-26 15:51)
+  ✔ Not binding City & Address only mobile and pin is working @done(26-01-26 13:59)
+  ✔ Payment Method is not binding @done(26-01-26 13:59)
+  ✔ Change WhatsApp message for multiple products @done(26-01-26 14:08)
+  ✔ Quantity button text color and hand cursor @done(26-01-26 14:53)
+  ✔ Add Checkout icon on NavBar @done(26-01-26 14:56)
+  ✔ Adding another product leading to error @done(26-01-26 15:06)
+  ✔ Test for multiple product & save into local storage @done(26-01-26 15:07)
+  ✔ Use + - icon on Quantity button @done(26-01-26 15:50)
 Staged:
   ☐ App on play store @started(25-12-27 18:57)  
   
 Working:  
-  ☐ Price filter
-  ☐ Save Address in cloudFlare KV
-  ☐ Delete button on Quantity control
-  ☐ Change WhatsApp message for multiple products
-  ☐ Test for multiple product & save into local storage
-  ☐ Remove products from cart on place order
-  ☐ Generate orderid and save order on place order
-
-
-
+  ☐ Price filter 
   
 
-Not Started:
-  ☐ Shiprocket integration
+  ☐ Remove products from cart on place order
+  ☐ Generate order id and save order on place order
+  ☐ Save Address in cloudFlare KV
+  
+  
+  
+  

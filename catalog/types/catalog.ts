@@ -132,6 +132,7 @@ export type PriceSummaryType = {
   productTotal: number,
   shipping: number,
   finalPrice: number,  
+  cod: number
 }
 
 export type PaymentMethod = "UPI" | "COD";

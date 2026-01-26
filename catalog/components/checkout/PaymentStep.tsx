@@ -1,4 +1,5 @@
 import { PaymentMethod} from "@/types/catalog"
+import { Trash2, Save, Check, ChevronLeft } from "lucide-react";
 
 export default function PaymentStep({
     method,
@@ -16,7 +17,7 @@ export default function PaymentStep({
 
     return (
         <>
-            <h2 className="text-xl mb-4">Payment Method</h2>
+            <h2 className="text-xl mb-4">Cart / Payment Method</h2>
 
             <label>
                 <input
@@ -40,13 +41,14 @@ export default function PaymentStep({
                     className="ssj-btn-outline w-full"
                     onClick={onBack}
                 >
+                    <ChevronLeft size={16} strokeWidth={3} />
                     Back
                 </button>
 
                 <button
                     className="ssj-btn w-full"
                     onClick={onNext}
-                >
+                ><Save size={16} strokeWidth={3} />
                     Save & Continue
                 </button>
             </div>

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Calculator, Heart, Triangle, Activity, Menu, X } from "lucide-react";
+import { Calculator, Heart, Triangle, Activity, Menu, X, ShoppingCart } from "lucide-react";
 import { useState } from "react";
 
 type NavItem = {
@@ -31,6 +31,12 @@ const PRIMARY_NAV: NavItem[] = [
     href: "/wishlist/",
     title: "Wishlist",
     icon: <Heart size={22} />,
+  },
+  {
+    label: "Cart",
+    href: "/cart/",
+    title: "Cart",
+    icon: <ShoppingCart size={22} />,
   },
   {
     label: "Rates",

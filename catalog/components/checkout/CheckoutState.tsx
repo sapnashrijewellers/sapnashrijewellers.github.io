@@ -56,6 +56,7 @@ export default function CheckoutState() {
               paymentMethod: "UPI",
             }
           };
+          if (!rates) return;
 
           // Calculate final price using your utility
           updatedCart.priceSummary.productTotal = calculateFinal(updatedCart, rates);
@@ -81,6 +82,7 @@ export default function CheckoutState() {
     return {
       productTotal,
       shipping,
+      cod:cod,
       finalPrice: productTotal + shipping + cod,
     };
   }, [cart, paymentMethod, rates]); // Specific dependencies are better than the whole 'cart'
@@ -98,6 +100,14 @@ export default function CheckoutState() {
     });
     return () => unsub();
   }, []);
+
+  if (isLoading) {
+  return (
+    <div className="p-6 text-center text-muted">
+      Loading your cart…
+    </div>
+  );
+}
 
   if (!user) return null; // auth guard already exists
 
@@ -137,6 +147,7 @@ export default function CheckoutState() {
           priceSummary={priceSummary}
           onEditAddress={() => setStep("ADDRESS")}
           onEditPayment={() => setStep("PAYMENT")}
+          onBack={() => setStep("PAYMENT")}
         />
       )}
     </div>

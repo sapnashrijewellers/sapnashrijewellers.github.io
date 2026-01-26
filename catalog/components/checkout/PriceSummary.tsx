@@ -1,16 +1,19 @@
-import { PriceSummaryType } from "@/types/catalog";
+import { PaymentMethod, PriceSummaryType } from "@/types/catalog";
 
 type PriceSummaryProps = {
-  priceSummary:PriceSummaryType,
+  priceSummary: PriceSummaryType,
+  paymentMethod: PaymentMethod,
   onEditPayment: () => void;
 };
 
 export function PriceSummary({
   priceSummary,
+  paymentMethod,
   onEditPayment,
 }: PriceSummaryProps) {
-  const COD_CHARGE = priceSummary.paymentMethod === "COD" ? 200 : 0;
-  const total = priceSummary.productTotal + priceSummary.shipping + COD_CHARGE;
+
+  const total = priceSummary.productTotal + priceSummary.shipping + (paymentMethod == "COD" ? priceSummary.cod : 0);
+  const payNow = paymentMethod === "COD" ? priceSummary.cod + priceSummary.shipping : total
 
   return (
     <div className="bg-surface border border-theme rounded-lg p-4 mt-4">
@@ -19,7 +22,7 @@ export function PriceSummary({
 
         <button
           onClick={onEditPayment}
-          className="text-sm underline text-primary"
+          className="text-sm underline cursor-pointer"
         >
           Edit
         </button>
@@ -27,7 +30,7 @@ export function PriceSummary({
 
       <div className="mt-3 text-sm space-y-1">
         <div className="flex justify-between">
-          <span>Products</span>
+          <span>Products Total</span>
           <span>₹{priceSummary.productTotal}</span>
         </div>
 
@@ -36,10 +39,10 @@ export function PriceSummary({
           <span>₹{priceSummary.shipping}</span>
         </div>
 
-        {priceSummary.paymentMethod === "COD" && (
+        {paymentMethod === "COD" && (
           <div className="flex justify-between">
             <span>COD Charges</span>
-            <span>₹200</span>
+            <span>₹{priceSummary.cod}</span>
           </div>
         )}
 
@@ -47,11 +50,15 @@ export function PriceSummary({
           <span>Total</span>
           <span>₹{total}</span>
         </div>
+        <div className="border-t border-theme pt-2 mt-2 flex justify-between font-semibold text-base">
+          <span>Pay Now</span>
+          <span>₹{payNow}</span>
+        </div>
       </div>
 
-      {priceSummary.paymentMethod === "COD" && (
-        <p className="text-xs text-muted mt-2">
-          Product price will be paid at delivery.
+      {paymentMethod === "COD" && (
+        <p className="text-lg mt-2">
+          Product price <b>{priceSummary.productTotal}</b> will be paid at the time of delivery.
         </p>
       )}
     </div>

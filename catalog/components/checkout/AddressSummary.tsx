@@ -14,7 +14,7 @@ export function AddressSummary({ address, onEdit }: AddressSummaryProps) {
 
         <button
           onClick={onEdit}
-          className="text-sm underline text-primary"
+          className="text-sm underline cursor-pointer"
         >
           Edit
         </button>

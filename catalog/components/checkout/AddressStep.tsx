@@ -1,5 +1,6 @@
 import {Address} from "@/types/catalog"
 import { useEffect, useState } from "react";
+import { Trash2, Save, Check, ChevronLeft, ChevronRight } from "lucide-react";
 
 type AddressStepProps = {
   address: Address | undefined;
@@ -20,17 +21,17 @@ export default function AddressStep({ address,
   }, [address]);
 
   async function save() {
-    await fetch("/api/address", {
-      method: "POST",
-      body: JSON.stringify(draft),
-    });
+    // await fetch("/api/address", {
+    //   method: "POST",
+    //   body: JSON.stringify(draft),
+    // });
     onSave(draft);
     onNext();
   }
 
   return (
     <>
-      <h2 className="text-xl mb-4">Delivery Address</h2>
+      <h2 className="text-xl mb-4 inline-flex">Cart  / Delivery Address</h2>
      {/* Address */}
       <div className="bg-surface p-4 rounded-lg border border-default mt-4">
         <label className="labelClasses">Delivery Address</label>
@@ -51,28 +52,30 @@ export default function AddressStep({ address,
         <input
           className="inputClasses"
           value={address?.city}
-          onChange={(e) => setDraft({ ...draft, address:e.target.value})}
+          onChange={(e) => setDraft({ ...draft, city:e.target.value})}
         />
 
         <label className="labelClasses mt-3">Pin Code</label>
         <input
           className="inputClasses"
           value={address?.pin}
-          onChange={(e) => setDraft({ ...draft, address:e.target.value})}
+          onChange={(e) => setDraft({ ...draft, pin:e.target.value})}
         />
       </div>
       <div className="flex gap-3 mt-6">
         <button
-          className="ssj-btn-outline w-full"
+          className="ssj-btn ssj-btn-outline w-full"
           onClick={onBack}
         >
+          <ChevronLeft size={16} strokeWidth={3} />
           Back
         </button>
 
         <button
-          className="ssj-btn w-full"
+          className="ssj-btn  w-full"
           onClick={save}
         >
+          <Save size={16} strokeWidth={3} />
           Save & Continue
         </button>
       </div>

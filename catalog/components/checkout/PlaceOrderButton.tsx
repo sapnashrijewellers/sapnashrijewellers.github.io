@@ -3,20 +3,43 @@ import { Address, Cart, PaymentMethod, PriceSummaryType } from "@/types/catalog"
 import { fireConfetti } from "@/components/checkout/FireConfetti";
 import { useState } from "react";
 import Link from "next/link";
+import {PackageCheck} from "lucide-react"
 
-export default function PayViaUPIButton({ 
-    cart,address,paymentMethod, priceSummary }: { 
+export default function PayViaUPIButton({
+    cart, address, paymentMethod, priceSummary, className }: {
         cart: Cart,
-    address: Address | undefined,paymentMethod:PaymentMethod, priceSummary: PriceSummaryType }) {
-    const product = cart.items[0].product;    
+        address: Address | undefined,
+        paymentMethod: PaymentMethod,
+        priceSummary: PriceSummaryType,
+        className: string
+    }) {
+    const product = cart.items[0].product;
     const selectedVariant = cart.items[0].product.variants[cart.items[0].variantIndex];
-    
+
     if (!priceSummary && !address && !paymentMethod)
         return;
+
+
+
+
+
     function buildWhatsAppMessage() {
-        if(!address) return;
-        return `
-🛍️ 
+  if (!address || !cart?.items?.length) return;
+
+  const productLines = cart.items
+    .map((item, index) => {
+      const variant = item.product.variants[item.variantIndex];
+      return `
+${index + 1}. ${item.product.name}
+   Variant: ${variant?.size ?? "-"}
+   Qty: ${item.qty}
+   Link: ${process.env.NEXT_PUBLIC_BASE_URL}/product/${item.product.slug}
+      `.trim();
+    })
+    .join("\n\n");
+
+  return `
+🛍️ Order Details
 
 👤 Name: ${address.name || "Customer"}
 📞 Mobile: ${address.mobile}
@@ -24,26 +47,26 @@ export default function PayViaUPIButton({
 📍 Delivery Address:
 ${address.address}
 City: ${address.city}
-Pincode: ${address.pin}
+Pin Code: ${address.pin}
 
-💍 Product:
-${product.name}
-Variant: ${selectedVariant?.size}
-
-🔗 Product Link:
-${process.env.NEXT_PUBLIC_BASE_URL}/product/${product?.slug}
+💍 Products:
+${productLines}
 
 💰 Price Summary:
-Product: ₹${priceSummary?.productTotal}
-Shipping: ₹60
-${paymentMethod === "COD" ? "COD Charge: ₹200" : ""}
+Products Total: ₹${priceSummary?.productTotal}
+Shipping: ₹${priceSummary?.shipping ?? 0}
+${paymentMethod === "COD" && priceSummary?.cod
+  ? `COD Charge: ₹${priceSummary.cod}`
+  : ""}
 Total: ₹${priceSummary?.finalPrice}
 
 💳 Payment Method: ${paymentMethod}
 
 🙏 Please confirm availability.
   `.trim();
-    }
+}
+
+
 
     function sendWhatsAppMessage() {
         const message = buildWhatsAppMessage();
@@ -63,16 +86,12 @@ Total: ₹${priceSummary?.finalPrice}
     const [orderPlaced, setOrderPlaced] = useState(false);
 
     return (
-        <div>
-            <button className="ssj-btn m-2" onClick={placeOrder}>
+        <div className="w-full">
+            <button className={`ssj-btn bg-amber-500 ${className}`} onClick={placeOrder}>
+                <PackageCheck size={40}/>
                 Place Order
             </button>
-            <div className="text-xs p-2 text-right">
-                By clicking “Place Order”, you agree to our &nbsp;
-                <Link href={`/policies/terms/`} className="underline">Terms</Link>
-                &nbsp;and &nbsp;
-                <Link href={`/policies/privacy/`} className="underline">Privacy Policy</Link>.
-            </div>
+
 
             {orderPlaced && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
@@ -88,6 +107,7 @@ Total: ₹${priceSummary?.finalPrice}
                             className="ssj-btn w-full"
                             onClick={sendWhatsAppMessage}
                         >
+
                             Send Order on WhatsApp
                         </button>
 

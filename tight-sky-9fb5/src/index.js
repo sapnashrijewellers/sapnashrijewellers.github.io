@@ -13,7 +13,8 @@
  */
 //import {createOrder, placeOrder,getOrder} from "./order";
 //import {updateUser,getUser} from "./user";
-import {subscribeUser,deleteSubscription,listSubs } from "./subscription"
+import {subscribeUser,deleteSubscription,listSubs } from "./subscription";
+import {getAddress, updateAddress} from "./address";
 
 export default {
 	async fetch(request, env, ctx) {
@@ -63,6 +64,12 @@ async function handleRequest(request, env) {
 
 		if (url.pathname === "/user" && request.method === "POST") {
 			return await updateUser(request, env, headers);
+		}
+		if (url.pathname === "/address" && request.method === "POST") {
+			return await updateAddress(request, env, headers);
+		}
+		if (url.pathname === "/address" && request.method === "GET") {
+			return await getAddress(request, env, headers);
 		}
 		return new Response(JSON.stringify({ error: "Invalid request" }), { headers, status: 400 });
 	}

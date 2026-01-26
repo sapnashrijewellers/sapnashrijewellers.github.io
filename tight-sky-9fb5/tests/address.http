@@ -1,0 +1,17 @@
+
+### Test Web Push (Example)
+POST http://localhost:8787/address
+Content-Type: application/json
+
+{
+    "uid": "1234",
+    "mobile": "987987987",
+    "email":"vipul@gmail.com",
+    "city":"indore",
+    "address":"197 goyal nagar",
+    "pin":"452018"
+}
+
+### Test Local Worker
+GET http://localhost:8787/address?uid=1234
+Content-Type: application/json

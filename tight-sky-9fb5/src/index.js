@@ -11,13 +11,13 @@
  *
  * Learn more at https://developers.cloudflare.com/workers/
  */
-//import {createOrder, placeOrder,getOrder} from "./order";
-//import {updateUser,getUser} from "./user";
-import {subscribeUser,deleteSubscription,listSubs } from "./subscription";
-import {getAddress, updateAddress} from "./address";
 
+
+import { subscribeUser, deleteSubscription, listSubs } from "./subscription";
+import { getAddress, updateAddress } from "./address";
+import { createOrder, getOrdersByUser } from "./orderManager";
 export default {
-	async fetch(request, env, ctx) {
+	async fetch(request, env) {
 		return handleRequest(request, env);
 	},
 };
@@ -40,31 +40,20 @@ async function handleRequest(request, env) {
 		}
 
 		if (url.pathname === "/subscription" && request.method === "DELETE") {
-			return deleteSubscription(request, env);
+			return await deleteSubscription(request, env);
 		}
 
 		if (url.pathname === "/subscriptions") {
 			return await listSubs(env.USER_SUBSCRIPTIONS);
 		}
 
-		if (url.pathname === "/order" && request.method === "PUT") {
+		if (url.pathname === "/order" && request.method === "POST") {
 			return await createOrder(request, env, headers);
 		}
-
-		if (url.pathname === "/order" && request.method === "POST") {
-			return await placeOrder(request, env, headers);
+		if (url.pathname === "/orders" && request.method === "GET") {			
+			return await getOrdersByUser(request, env, headers);
 		}
 
-		if (url.pathname === "/cart" && request.method === "PUT") {
-			return await addToCart(request, env, headers);
-		}
-		if (url.pathname === "/cart" && request.method === "DELETE") {
-			return await deleteFromCart(request, env, headers);
-		}
-
-		if (url.pathname === "/user" && request.method === "POST") {
-			return await updateUser(request, env, headers);
-		}
 		if (url.pathname === "/address" && request.method === "POST") {
 			return await updateAddress(request, env, headers);
 		}

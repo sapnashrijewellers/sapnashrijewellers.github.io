@@ -4,7 +4,8 @@
   "homepage": "https://sapnashrijewellers.github.io/",
   "private": true,
   "workspaces": [
-    "catalog"
+    "catalog",
+    "tight-sky-9fb5"
   ],
   "scripts": {
     "build": "turbo run build",
@@ -13,7 +14,7 @@
   },
   "devDependencies": {
     "@types/canvas-confetti": "^1.9.0",
-    "turbo": "^2.7.5"
+    "turbo": "^2.7.6"
   },
   "packageManager": "npm@10.9.3",
   "dependencies": {

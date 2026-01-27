@@ -5,7 +5,7 @@ import CartStep from "@/components/checkout/CartStep"
 import PayViaUPIButton from "./PayViaUPIButton";
 import PlaceOrderButton from "./PlaceOrderButton";
 import Link from "next/link";
-import { Trash2, Save, Check, ChevronLeft } from "lucide-react";
+import { ChevronLeft, ChevronRight, PackageCheck } from "lucide-react";
 
 export default function ReviewStep(
   {
@@ -15,7 +15,8 @@ export default function ReviewStep(
     paymentMethod,
     onEditAddress,
     onEditPayment,
-    onBack }:
+    onBack,
+    onNext }:
     {
       cart: Cart,
       address: Address | undefined,
@@ -24,6 +25,7 @@ export default function ReviewStep(
       onEditAddress: () => void;
       onEditPayment: () => void;
       onBack: () => void;
+      onNext: () => void;
     }) {
 
 
@@ -35,17 +37,12 @@ export default function ReviewStep(
       <PriceSummary paymentMethod={paymentMethod} priceSummary={priceSummary} onEditPayment={onEditPayment} />
       <PayViaUPIButton finalPrice={paymentMethod == "UPI" ? priceSummary.finalPrice : priceSummary.shipping + priceSummary.cod} />
       <div className="flex gap-3 mt-6">
-        <button
-          className="ssj-btn-outline w-full"
-          onClick={onBack}
-        >          <ChevronLeft size={16} strokeWidth={3} />Back
+        <button className="ssj-btn-outline w-full" onClick={onBack}>
+          <ChevronLeft size={16} strokeWidth={3} />Back
         </button>
-
-        <PlaceOrderButton cart={cart}
-          address={address}
-          paymentMethod={paymentMethod}
-          priceSummary={priceSummary}
-          className="ssj-btn w-full" />
+        <button className="ssj-btn-outline w-full bg-amber-600 font-bold" onClick={onNext}>
+          <PackageCheck size={16} strokeWidth={3} />Place Order
+        </button>
       </div>
       <div className="text-xs p-2 text-right">
         By clicking “Place Order”, you agree to our &nbsp;
@@ -53,7 +50,6 @@ export default function ReviewStep(
         &nbsp;and &nbsp;
         <Link href={`/policies/privacy/`} className="underline">Privacy Policy</Link>.
       </div>
-
     </>
   );
 }

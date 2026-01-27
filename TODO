@@ -1,4 +1,15 @@
+Staged:
+  ☐ App on play store @started(25-12-27 18:57)  
+  
+Working:  
+  ☐ Price filter
+  ☐ Remove products from cart on place order
+  
+
+
 Completed Tasks:
+  ✔ Generate order id and save order on place order @done(26-01-27 03:42)
+  ✔ Save Address in cloudFlare KV @done(26-01-27 01:02)
   ✔ WhatsApp button @started(25-12-13 03:18) @done(25-12-13 03:39) @lasted(21m51s)
   ✔ product details english highlights @done(25-12-13 03:39)  
   ✔ calculator fix @done(25-12-13 04:12)
@@ -118,16 +129,7 @@ Completed Tasks:
   ✔ Adding another product leading to error @done(26-01-26 15:06)
   ✔ Test for multiple product & save into local storage @done(26-01-26 15:07)
   ✔ Use + - icon on Quantity button @done(26-01-26 15:50)
-Staged:
-  ☐ App on play store @started(25-12-27 18:57)  
-  
-Working:  
-  ☐ Price filter 
-  
 
-  ☐ Remove products from cart on place order
-  ☐ Generate order id and save order on place order
-  ☐ Save Address in cloudFlare KV
   
   
   

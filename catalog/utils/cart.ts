@@ -41,3 +41,6 @@ export function updateCartQty(
   return cart;
 }
 
+export function clearCartStorage() {
+    localStorage.removeItem(CART_KEY);    
+  };

@@ -1,10 +1,9 @@
 "use client";
 
-import { onAuthStateChanged } from "firebase/auth";
+import { useAuth } from "@/context/AuthContext";
 import { auth, googleProvider } from "@/utils/firebase";
 import { signInWithPopup } from "firebase/auth";
-import { useAuth } from "@/context/AuthContext";
-import { Address, Cart, PaymentMethod, PriceSummaryType } from "@/types/catalog";
+import { Address, Cart, PaymentMethod, PriceSummaryType, Product } from "@/types/catalog";
 import { getCart, saveCart } from "@/utils/cart";
 import { useEffect, useMemo, useState } from "react";
 import CartStep from "@/components/checkout/CartStep";
@@ -13,23 +12,84 @@ import PaymentStep from "@/components/checkout/PaymentStep";
 import ReviewStep from "@/components/checkout/ReviewStep";
 import { useRates } from "@/context/RateContext"
 import { calculateFinal } from "@/utils/calculatePrice";
+import PaymentVerificationStep from "./PaymentVerificationStep";
+import { clearCartStorage } from "@/utils/cart"
 
 
 type CheckoutStep =
   | "CART"
   | "ADDRESS"
   | "PAYMENT"
-  | "REVIEW";
+  | "REVIEW"
+  | "VERIFY";
 export default function CheckoutState() {
   const [isLoading, setIsLoading] = useState(true);
   const [cart, setCart] = useState<Cart>(() => getCart());
   const rates = useRates();
   const user = useAuth();
   const [step, setStep] = useState<CheckoutStep>("CART");
-  const [address, setAddress] = useState<Address>();
   const [paymentMethod, setPaymentMethod] = useState<PaymentMethod>("UPI");
+  const [address, setAddress] = useState<Address>(new Address());
+  const [addressLoading, setAddressLoading] = useState(false); 
 
 
+  useEffect(() => {
+    if (user) return;
+
+    async function ensureAuth() {
+      await signInWithPopup(auth, googleProvider);
+    }
+
+    ensureAuth();
+  }, [user]);
+
+
+
+
+  useEffect(() => {
+
+    async function load() {
+      setAddressLoading(true);
+
+      const res = await fetch(`${process.env.NEXT_PUBLIC_WORKER_URL}/address?uid=${user?.uid}`);
+      if (!res.ok) setAddress(new Address());
+      const data = await res.json();
+
+      // Check if data.address exists (based on your worker returning { address: ... })
+      if (data ) {
+        setAddress(data);
+      } else {
+        // FALLBACK: Populate from the Firebase User object
+        setAddress((prev) => ({
+          ...prev,
+          uid: user?.uid || "",
+          name: user?.displayName || "",
+          email: user?.email || "",
+          // mobile might be null in Firebase depending on provider
+          mobile: user?.phoneNumber || prev.mobile || "", 
+        }));
+      }
+      setAddressLoading(false);
+    }
+
+    load();
+  }, [user]);
+
+  async function saveAddress() {
+    setAddressLoading(true);
+    const saveRes = fetch(`${process.env.NEXT_PUBLIC_WORKER_URL}/address`, {
+      method: "POST",
+      body: JSON.stringify(address),
+    });
+    setAddressLoading(false);
+    setStep("PAYMENT");
+  }
+
+  const clearCart = () => {
+    clearCartStorage();
+    setCart({ items: [] });
+    setStep("CART");
+  };
 
   useEffect(() => {
     async function hydrateCart() {
@@ -40,7 +100,7 @@ export default function CheckoutState() {
 
         // 2. Map existing cart items to full product objects
         const populatedItems = cart.items.map(item => {
-          const fullProduct = allProducts.find((p: any) => p.id === item.productId);
+          const fullProduct = allProducts.find((p: Product) => p.id === item.productId);
           return { ...item, product: fullProduct };
         });
 
@@ -82,32 +142,22 @@ export default function CheckoutState() {
     return {
       productTotal,
       shipping,
-      cod:cod,
+      cod: cod,
       finalPrice: productTotal + shipping + cod,
     };
   }, [cart, paymentMethod, rates]); // Specific dependencies are better than the whole 'cart'
 
   useEffect(() => saveCart(cart), [cart]);
 
-  /* -------------------------------
-     AUTH GUARD (SINGLE SOURCE)
-  --------------------------------*/
-  useEffect(() => {
-    const unsub = onAuthStateChanged(auth, async (u) => {
-      if (!u) {
-        await signInWithPopup(auth, googleProvider);
-      }
-    });
-    return () => unsub();
-  }, []);
+
 
   if (isLoading) {
-  return (
-    <div className="p-6 text-center text-muted">
-      Loading your cart…
-    </div>
-  );
-}
+    return (
+      <div className="p-6 text-center text-muted">
+        Loading your cart…
+      </div>
+    );
+  }
 
   if (!user) return null; // auth guard already exists
 
@@ -123,9 +173,10 @@ export default function CheckoutState() {
 
       {step === "ADDRESS" && (
         <AddressStep
-          address={address}
-          onSave={(addr) => setAddress(addr)}
-          onNext={() => setStep("PAYMENT")}
+          value={address}
+          loading={addressLoading}
+          onChange={setAddress}
+          onSubmit={saveAddress}
           onBack={() => setStep("CART")}
         />
       )}
@@ -148,6 +199,18 @@ export default function CheckoutState() {
           onEditAddress={() => setStep("ADDRESS")}
           onEditPayment={() => setStep("PAYMENT")}
           onBack={() => setStep("PAYMENT")}
+          onNext={() => setStep("VERIFY")}
+        />
+      )}
+
+      {step === "VERIFY" && (
+        <PaymentVerificationStep
+          cart={cart}
+          address={address}
+          paymentMethod={paymentMethod}
+          priceSummary={priceSummary}
+          clearCart={clearCart}
+
         />
       )}
     </div>

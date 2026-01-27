@@ -33,6 +33,10 @@
 		{
 			"binding": "USER_ADDRESSES",
 			"id": "7938cc2a53e14f93b7c44470f772f3f0"
+		},
+		{
+			"binding": "ORDERS_KV",
+			"id": "4dc8697447b5409ebe123b3fad868fed"
 		}
 	],
 	/**

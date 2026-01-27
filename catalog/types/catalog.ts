@@ -137,16 +137,32 @@ export type PriceSummaryType = {
 
 export type PaymentMethod = "UPI" | "COD";
 
-// export type Cart = {
-//   items: CartItem[];
+export type OrderStatus =
+  | "CREATED"
+  | "CONFIRMED"
+  | "CANCELLED";
 
-//   address?: Address;
+export type Order = {
+  orderId: string;
+  userId: string;
 
-//   paymentMethod: PaymentMethod;
+  items: Array<{
+    productId: number;
+    slug: string;
+    title: string;
+    variant: string;
+    variantIndex: number;
+    qty: number;
+  }>;
 
-//   priceSummary: {
-//     productTotal: number;
-//     shipping: number;
-//     grandTotal: number;
-//   };
-// };
+  address: Address;
+
+  payment: {
+    method: PaymentMethod;
+    reference: string;          // REQUIRED
+  };
+
+  priceSummary: PriceSummaryType;
+
+  createdAt: number;
+};

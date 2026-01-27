@@ -1,30 +1,139 @@
-/**
- * ORDER MANAGER
- * Cloudflare Workers + KV
- *
- * KV STRUCTURE (ORDERS_KV):
- * Key   : userId
- * Value : {
- *   orders: {
- *     [orderId]: {
- *       orderId,
- *       userId,
- *       items: [ { productId, variantIndex, snapshot } ],
- *       priceSnapshot,
- *       status: "PAYMENT_PENDING" | "PAID" | "EXPIRED" | "CANCELLED",
- *       createdAt,
- *       expiresAt
- *     }
- *   }
- * }
- */
 
-const ORDER_TTL_MINUTES = 15;
+export async function createOrder(request, env, headers) {
+  try {
+    const body = await request.json();
+    const {
+      cart,
+      address,
+      paymentMethod,
+      paymentRef,
+      priceSummary,
+    } = body;
+    const order = await createOrderCore({
+      ORDERS_KV: env.ORDERS_KV,
+      cart,
+      address,
+      paymentMethod,
+      paymentRef,
+      priceSummary,
+    });
+    console.log(order);
+    return json(
+      { success: true, address },
+      200,
+      headers
+    );
 
-/* -----------------------------
-   HELPERS
---------------------------------*/
+  } catch (err) {
+    return json({ error: "Failed to update order", details: err.message }, 400, headers);
+  }
 
+}
+
+export async function getOrder({
+  ORDERS_KV,
+  userId,
+  orderId,
+}) {
+  const order = await ORDERS_KV.get(`order:${orderId}`, "json");
+  if (!order) return null;
+  if (order.userId !== userId) return null;
+  return order;
+}
+
+
+async function createOrderCore({
+  ORDERS_KV,
+  cart,
+  address,
+  paymentMethod,
+  paymentRef,
+  priceSummary,
+}) {
+  const userId = address.uid;
+  if (!userId) throw new Error("User not authenticated");
+  if (!paymentRef) throw new Error("Payment reference is required");
+  if (!cart?.items?.length) throw new Error("Cart is empty");
+  if (!address?.mobile) throw new Error("Address incomplete");
+
+  const orderId = generateOrderId();
+
+  const order = {
+    orderId,
+    userId,
+
+    items: cart.items.map(item => ({
+      productId: item.productId,
+      variantIndex: item.variantIndex,
+      slug: item.product.slug,
+      title: item.product.name,
+      variant: item.product.variants[item.variantIndex],
+      qty: item.qty,
+      purity: item.product.purity,
+    })),
+
+    address,
+
+    payment: {
+      method: paymentMethod,
+      reference: paymentRef,
+    },
+
+    priceSummary,
+    createdAt: now(),
+  };
+
+  /* ---------------- Persist order ---------------- */
+
+  await ORDERS_KV.put(`order:${orderId}`, JSON.stringify(order));
+
+  /* ---------------- Update user index ---------------- */
+
+  const userOrdersKey = `user:${userId}:orders`;
+
+  const existing =
+    (await ORDERS_KV.get(userOrdersKey, "json")) || [];
+
+  if (existing.includes(orderId)) {
+    throw new Error("Duplicate order");
+  }
+
+  existing.push(orderId);
+
+  await ORDERS_KV.put(userOrdersKey, JSON.stringify(existing));
+
+  return order;
+}
+
+export async function getOrdersByUser(request, env, headers) {
+  const url = new URL(request.url);
+
+  const userId = url.searchParams.get("uid");
+
+  if (!userId) return [];
+
+  const indexKey = `user:${userId}:orders`;
+  const orderIds = await env.ORDERS_KV.get(indexKey, "json");
+  console.log(orderIds);
+
+  if (!orderIds?.length) return [];
+
+  const orders = await Promise.all(
+    orderIds.map(id =>
+      env.ORDERS_KV.get(`order:${id}`, "json")
+    )
+  );
+  const sortedOrders = orders
+      .filter(Boolean)
+      .sort((a, b) => b.createdAt - a.createdAt);
+
+    // ✅ FIX: Return the response correctly
+    return json({ orders: sortedOrders }, 200, headers);
+}
+
+
+
+/*=============== HELPERS ===============*/
 function now() {
   return Date.now();
 }
@@ -32,156 +141,14 @@ function now() {
 function generateOrderId() {
   return `ORD-${now()}-${Math.floor(Math.random() * 10000)}`;
 }
+/*=======================================*/
 
-function isExpired(order) {
-  return now() > order.expiresAt;
-}
-
-/* -----------------------------
-   LOAD / SAVE
---------------------------------*/
-
-async function loadOrders(ORDERS_KV, userId) {
-  const data = await ORDERS_KV.get(userId, "json");
-  return data?.orders ?? {};
-}
-
-async function saveOrders(ORDERS_KV, userId, orders) {
-  await ORDERS_KV.put(
-    userId,
-    JSON.stringify({ orders })
-  );
-}
-
-/* -----------------------------
-   CREATE ORDER (checkout init)
---------------------------------*/
-
-export async function createOrder({
-  ORDERS_KV,
-  userId,
-  items,               // [{ productId, variantIndex, snapshot }]
-  priceSnapshot        // final locked price
-}) {
-  const orders = await loadOrders(ORDERS_KV, userId);
-
-  const orderId = generateOrderId();
-  const createdAt = now();
-
-  orders[orderId] = {
-    orderId,
-    userId,
-    items,
-    priceSnapshot,
-    status: "PAYMENT_PENDING",
-    createdAt,
-    expiresAt: createdAt + ORDER_TTL_MINUTES * 60 * 1000
-  };
-
-  await saveOrders(ORDERS_KV, userId, orders);
-
-  return orders[orderId];
-}
-
-/* -----------------------------
-   GET ACTIVE ORDERS
---------------------------------*/
-
-export async function getActiveOrders({ ORDERS_KV, userId }) {
-  const orders = await loadOrders(ORDERS_KV, userId);
-
-  return Object.values(orders).filter(
-    o => o.status === "PAYMENT_PENDING" && !isExpired(o)
-  );
-}
-
-/* -----------------------------
-   GET SINGLE ORDER (secure)
---------------------------------*/
-
-export async function getOrder({
-  ORDERS_KV,
-  userId,
-  orderId
-}) {
-  const orders = await loadOrders(ORDERS_KV, userId);
-  const order = orders[orderId];
-
-  if (!order) return null;
-  if (order.userId !== userId) return null;
-
-  if (isExpired(order)) {
-    order.status = "EXPIRED";
-    await saveOrders(ORDERS_KV, userId, orders);
-    return null;
-  }
-
-  return order;
-}
-
-/* -----------------------------
-   MARK ORDER PAID
---------------------------------*/
-
-export async function markOrderPaid({
-  ORDERS_KV,
-  userId,
-  orderId,
-  paymentRef
-}) {
-  const orders = await loadOrders(ORDERS_KV, userId);
-  const order = orders[orderId];
-
-  if (!order) throw new Error("Order not found");
-  if (isExpired(order)) throw new Error("Order expired");
-
-  order.status = "PAID";
-  order.paymentRef = paymentRef;
-  order.paidAt = now();
-
-  await saveOrders(ORDERS_KV, userId, orders);
-
-  return order;
-}
-
-/* -----------------------------
-   CANCEL ORDER (manual discard)
---------------------------------*/
-
-export async function cancelOrder({
-  ORDERS_KV,
-  userId,
-  orderId
-}) {
-  const orders = await loadOrders(ORDERS_KV, userId);
-  const order = orders[orderId];
-
-  if (!order) return;
-
-  order.status = "CANCELLED";
-  await saveOrders(ORDERS_KV, userId, orders);
-}
-
-/* -----------------------------
-   CLEANUP EXPIRED ORDERS
-   (call on login / cron / checkout load)
---------------------------------*/
-
-export async function cleanupExpiredOrders({
-  ORDERS_KV,
-  userId
-}) {
-  const orders = await loadOrders(ORDERS_KV, userId);
-  let changed = false;
-
-  for (const o of Object.values(orders)) {
-    if (o.status === "PAYMENT_PENDING" && isExpired(o)) {
-      o.status = "EXPIRED";
-      changed = true;
-    }
-  }
-
-  if (changed) {
-    await saveOrders(ORDERS_KV, userId, orders);
-  }
+function json(body, status = 200, headers = {}) {
+  return new Response(JSON.stringify(body), {
+    status,
+    headers: {
+      "Content-Type": "application/json",
+      ...headers,
+    },
+  });
 }

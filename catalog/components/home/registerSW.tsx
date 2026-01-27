@@ -3,11 +3,13 @@
 import { useEffect } from "react";
 import { subscribeUser } from "@/utils/pubsub.js";
 
-const workerURL = "https://tight-sky-9fb5.ssjn.workers.dev/";
+const workerURL = process.env.NEXT_PUBLIC_WORKER_URL;
+
 export default function RegisterSW() {
   useEffect(() => {
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", async () => {
+        if(!workerURL) return;
         try {
           const registration = await navigator.serviceWorker.register("/service-worker.js", {
             scope: "/",

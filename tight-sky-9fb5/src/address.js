@@ -63,7 +63,7 @@ export async function getAddress(request, env, headers) {
     }
 
     return json(
-      { address: JSON.parse(data) },
+       JSON.parse(data) ,
       200,
       headers
     );

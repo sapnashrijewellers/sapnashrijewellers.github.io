@@ -20,7 +20,7 @@ export default function BuyNowButton({ product, activeVariant = 0 }: { product: 
     try {      
       await ensureLogin();      
       addToCart({ productId:product.id, variantIndex: activeVariant, qty: 1 });
-      router.push("/checkout");
+      router.push("/cart");
 
 
     } catch (err) {

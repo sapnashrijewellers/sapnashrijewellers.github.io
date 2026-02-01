@@ -5,7 +5,7 @@ import { auth, googleProvider } from "@/utils/firebase";
 import { signInWithPopup } from "firebase/auth";
 import { Address, Cart, PaymentMethod, PriceSummaryType, Product } from "@/types/catalog";
 import { getCart, saveCart } from "@/utils/cart";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import CartStep from "@/components/checkout/CartStep";
 import AddressStep from "@/components/checkout/AddressStep";
 import PaymentStep from "@/components/checkout/PaymentStep";
@@ -26,22 +26,26 @@ export default function CheckoutState() {
   const [isLoading, setIsLoading] = useState(true);
   const [cart, setCart] = useState<Cart>(() => getCart());
   const rates = useRates();
-  const user = useAuth();
+  const { user, loading: authLoading } = useAuth();
   const [step, setStep] = useState<CheckoutStep>("CART");
   const [paymentMethod, setPaymentMethod] = useState<PaymentMethod>("UPI");
   const [address, setAddress] = useState<Address>(new Address());
-  const [addressLoading, setAddressLoading] = useState(false); 
+  const [addressLoading, setAddressLoading] = useState(false);
 
 
-  useEffect(() => {
-    if (user) return;
 
-    async function ensureAuth() {
-      await signInWithPopup(auth, googleProvider);
-    }
+ const hasRequestedAuth = useRef(false);
 
-    ensureAuth();
-  }, [user]);
+useEffect(() => {
+  if (!authLoading && !user && !hasRequestedAuth.current) {
+    hasRequestedAuth.current = true; // Prevents the second trigger
+    signInWithPopup(auth, googleProvider).catch(err => {
+      hasRequestedAuth.current = false; // Reset if they closed it/errored
+      console.error("Auth failed", err);
+    });
+  }
+}, [authLoading, user]);
+
 
 
 
@@ -50,23 +54,20 @@ export default function CheckoutState() {
 
     async function load() {
       setAddressLoading(true);
-
-      const res = await fetch(`${process.env.NEXT_PUBLIC_WORKER_URL}/address?uid=${user?.user?.uid}`);
-      if (!res.ok) setAddress(new Address());
-      const data = await res.json();
-
-      // Check if data.address exists (based on your worker returning { address: ... })
-      if (data ) {
+      if (!user) return;
+      const res = await fetch(`${process.env.NEXT_PUBLIC_WORKER_URL}/address?uid=${user.uid}`);
+      if (res.ok ) {
+        const data = await res.json();
         setAddress(data);
       } else {
         // FALLBACK: Populate from the Firebase User object
         setAddress((prev) => ({
           ...prev,
-          uid: user?.user?.uid || "",
-          name: user?.user?.displayName || "",
-          email: user?.user?.email || "",
+          uid: user.uid || "",
+          name: user.displayName || "",
+          email: user.email || "",
           // mobile might be null in Firebase depending on provider
-          mobile: user?.user?.phoneNumber || prev.mobile || "", 
+          mobile: user.phoneNumber || prev.mobile || "",
         }));
       }
       setAddressLoading(false);

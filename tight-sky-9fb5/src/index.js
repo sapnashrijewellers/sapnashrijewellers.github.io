@@ -14,7 +14,7 @@
 
 
 import { subscribeUser, deleteSubscription, listSubs } from "./subscription";
-import { getAddress, updateAddress } from "./address";
+import { getAddress, updateAddress, deleteAllAddresses } from "./address";
 import { createOrder, getOrdersByUser } from "./orderManager";
 export default {
 	async fetch(request, env) {
@@ -59,6 +59,9 @@ async function handleRequest(request, env) {
 		}
 		if (url.pathname === "/address" && request.method === "GET") {
 			return await getAddress(request, env, headers);
+		}
+		if (url.pathname === "/address" && request.method === "DELETE") {
+			return await deleteAllAddresses(request, env, headers);
 		}
 		return new Response(JSON.stringify({ error: "Invalid request" }), { headers, status: 400 });
 	}

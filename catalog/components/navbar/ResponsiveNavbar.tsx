@@ -2,8 +2,11 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Calculator, Heart, Triangle, Activity, Menu, X, ShoppingCart } from "lucide-react";
+import { Calculator, Heart, Triangle, Activity, Menu, X, ShoppingCart, LogIn, LogOut, ClipboardList, History } from "lucide-react";
 import { useState } from "react";
+import { auth, googleProvider } from "@/utils/firebase";
+import { signInWithPopup, signOut } from "firebase/auth";
+import { useAuth } from "@/context/AuthContext";
 
 type NavItem = {
   label: string;
@@ -13,50 +16,90 @@ type NavItem = {
   onClick?: () => void;
 };
 
-const PRIMARY_NAV: NavItem[] = [
-  {
-    label: "Hallmark",
-    href: "/huid/",
-    title: "Hallmark",
-    icon: <Triangle size={22} />,
-  },
-  {
-    label: "Calculator",
-    href: "/calculator/",
-    title: "Jewellery Price Calculator",
-    icon: <Calculator size={22} />,
-  },
-  {
-    label: "Wishlist",
-    href: "/wishlist/",
-    title: "Wishlist",
-    icon: <Heart size={22} />,
-  },
-  {
-    label: "Cart",
-    href: "/cart/",
-    title: "Cart",
-    icon: <ShoppingCart size={22} />,
-  },
-  {
-    label: "Rates",
-    title: "Gold & Silver Rates",
-    icon: <Activity size={22} className="animate-pulse" />,
-    onClick: () => window.dispatchEvent(new Event("open-live-rates")),
-  },
-];
 
 export default function ResponsiveNavbar() {
+  const { user, loading: authLoading } = useAuth();
+
+    const login = async () => {
+    await signInWithPopup(auth, googleProvider);
+    //onAction?.();
+  };
+
+  const logout = async () => {
+    await signOut(auth);
+    //onAction?.();
+  };
+
+  const PRIMARY_NAV: NavItem[] = [
+    {
+      label: "Hallmark",
+      href: "/huid/",
+      title: "Hallmark",
+      icon: <Triangle size={22} />,
+    },
+    {
+      label: "Calculator",
+      href: "/calculator/",
+      title: "Jewellery Price Calculator",
+      icon: <Calculator size={22} />,
+    },
+    {
+      label: "Wishlist",
+      href: "/wishlist/",
+      title: "Wishlist",
+      icon: <Heart size={22} />,
+    },
+    {
+      label: "Cart",
+      href: "/cart/",
+      title: "Cart",
+      icon: <ShoppingCart size={22} />,
+    },
+    ...(user ? [{
+    label: "Orders",
+    href: "/orders/",
+    title: "Your Orders",
+    icon: <ClipboardList size={22} />, // Or use 'Package' from lucide-react
+  }] : []),
+    {
+      label: "Rates",
+      title: "Gold & Silver Rates",
+      icon: <Activity size={22} className="animate-pulse" />,
+      onClick: () => window.dispatchEvent(new Event("open-live-rates")),
+    },
+    {
+      label: user ? "Sign Out" : "Sign In",
+      title: "Authentication",
+      icon: user ? (
+        user?.photoURL ? (
+          <img
+            src={user?.photoURL}
+            alt={user?.displayName || "User"}
+            className="h-6 w-6 rounded-full object-cover border border-gray-200"
+            referrerPolicy="no-referrer"
+          />
+        ) : (
+          <LogOut size={22} />
+        )
+      ) : (
+        <LogIn size={22} />
+      ),
+      // FIXED: Actually call the functions here
+      onClick: () => (user ? logout() : login()),
+    },
+  ];
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+
+
 
   const isActive = (href?: string) =>
     href ? (href === "/" ? pathname === "/" : pathname.startsWith(href)) : false;
 
-const renderItem = (item: NavItem) => {
-  const active = isActive(item.href);
+  const renderItem = (item: NavItem) => {
+    const active = isActive(item.href);
 
-const cls = `
+    const cls = `
   flex flex-row md:flex-col
   items-center md:items-center
   gap-1 md:gap-1.5
@@ -64,42 +107,42 @@ const cls = `
   transition cursor-pointer
   ${active ? "text-primary-dark" : ""}
 `;
-  const content = (
-    <>
-  <span className="flex  text-start items-center justify-center">
-    {item.icon}
-  </span>
-  <span className="text-sm md:text-xs leading-none justify-center">
-    {item.label}
-  </span>
-</>
-  );
+    const content = (
+      <>
+        <span className="flex  text-start items-center justify-center">
+          {item.icon}
+        </span>
+        <span className="text-sm md:text-xs leading-none justify-center">
+          {item.label}
+        </span>
+      </>
+    );
 
-  if (item.onClick) {
+    if (item.onClick) {
+      return (
+        <button
+          key={item.label}
+          onClick={item.onClick}
+          title={item.title}
+          className={cls}
+        >
+          {content}
+        </button>
+      );
+    }
+
     return (
-      <button
-        key={item.label}
-        onClick={item.onClick}
+      <Link
+        key={item.href}
+        href={item.href!}
         title={item.title}
+        aria-current={active ? "page" : undefined}
         className={cls}
       >
         {content}
-      </button>
+      </Link>
     );
-  }
-
-  return (
-    <Link
-      key={item.href}
-      href={item.href!}
-      title={item.title}
-      aria-current={active ? "page" : undefined}
-      className={cls}
-    >
-      {content}
-    </Link>
-  );
-};
+  };
 
   return (
     <div className="flex items-start md:items-center gap-1">

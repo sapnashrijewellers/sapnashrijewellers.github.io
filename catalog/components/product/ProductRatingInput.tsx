@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Star } from "lucide-react";
 import { useAuth } from "@/context/AuthContext";
 import { signInWithPopup } from "firebase/auth";
@@ -11,17 +11,22 @@ export default function ProductRatingInput({
 }: {
   productId: number;
 }) {
-  const user = useAuth();
+  const {user,loading:authLoading} = useAuth();
 
   const [hovered, setHovered] = useState(0);
   const [selected, setSelected] = useState(0);
   const [loading, setLoading] = useState(false);
 
-  async function ensureLogin() {
-    if (!user) {
-      await signInWithPopup(auth, googleProvider);
+  const hasRequestedAuth = useRef(false);
+    async function ensureLogin() {
+      if (!authLoading && !user && !hasRequestedAuth.current) {
+        hasRequestedAuth.current = true; // Prevents the second trigger
+        signInWithPopup(auth, googleProvider).catch(err => {
+          hasRequestedAuth.current = false; // Reset if they closed it/errored
+          console.error("Auth failed", err);
+        });
+      }
     }
-  }
 
   async function submitRating(rating: number) {
     try {

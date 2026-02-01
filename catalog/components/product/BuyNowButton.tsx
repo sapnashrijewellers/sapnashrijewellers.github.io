@@ -5,21 +5,27 @@ import { useAuth } from "@/context/AuthContext";
 import { signInWithPopup } from "firebase/auth";
 import { auth, googleProvider } from "@/utils/firebase";
 import { useRouter } from "next/navigation";
-import {addToCart} from "@/utils/cart"
+import { addToCart } from "@/utils/cart"
+import { useRef } from "react";
 
 export default function BuyNowButton({ product, activeVariant = 0 }: { product: Product, activeVariant: number }) {
-  const user = useAuth();
+  const { user, loading: authLoading } = useAuth();
   const router = useRouter();
+  const hasRequestedAuth = useRef(false);
   async function ensureLogin() {
-    if (!user) {
-      await signInWithPopup(auth, googleProvider);
+    if (!authLoading && !user && !hasRequestedAuth.current) {
+      hasRequestedAuth.current = true; // Prevents the second trigger
+      signInWithPopup(auth, googleProvider).catch(err => {
+        hasRequestedAuth.current = false; // Reset if they closed it/errored
+        console.error("Auth failed", err);
+      });
     }
   }
 
   const handleClick = async () => {
-    try {      
-      await ensureLogin();      
-      addToCart({ productId:product.id, variantIndex: activeVariant, qty: 1, product: product, variant:product.variants[activeVariant].size });
+    try {
+      await ensureLogin();
+      addToCart({ productId: product.id, variantIndex: activeVariant, qty: 1, product: product, variant: product.variants[activeVariant].size });
       router.push("/cart");
 
 

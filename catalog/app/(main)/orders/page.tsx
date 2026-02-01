@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import ProductCard from "@/components/product/ProductCard";
 import { Loader2, Package } from "lucide-react";
 import { Order, Product } from "@/types/catalog";
@@ -17,11 +17,15 @@ export default function OrdersPage() {
   const [loading, setLoading] = useState(true);
 
   /* ---------------- Auth Enforcement ---------------- */
+  const hasRequestedAuth = useRef(false);
+
   useEffect(() => {
-    if (!authLoading && !user) {
-      signInWithPopup(auth, googleProvider).catch(err =>
-        console.error("Auth failed", err)
-      );
+    if (!authLoading && !user && !hasRequestedAuth.current) {
+      hasRequestedAuth.current = true; // Prevents the second trigger
+      signInWithPopup(auth, googleProvider).catch(err => {
+        hasRequestedAuth.current = false; // Reset if they closed it/errored
+        console.error("Auth failed", err);
+      });
     }
   }, [authLoading, user]);
 

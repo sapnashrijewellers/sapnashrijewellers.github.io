@@ -1,0 +1,17 @@
+generate a detailed blog post 
+
+Blog must be mix of Hindi and English and highly targeted and boosted for SEO keywords. Do not include keywords section inside blog post.
+SEO-optimized output specifically for: category pages where i am listing around 20 products. As of now google penalize because of thin content. schema.org description. Google Merchant / catalog feeds
+
+SEO-Optimized Category Blog Post (Hindi + English mix)
+Ignore duplicate description and highlights.
+No content rewrite, just a detailed blog post. 
+
+
+OUTPUT must be in markdown format (.md). OUTPUT markdown format is important for me.  
+
+Below are category title &  description: 
+
+Gold Necklace	Elevate your look with exquisite gold necklaces designed to shine with unmatched craftsmanship and luxurious brilliance.
+
+Below are the details of the product from category use it find good keywords and optimize blog post for those keywords:

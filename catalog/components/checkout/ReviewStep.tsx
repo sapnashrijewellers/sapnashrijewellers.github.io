@@ -3,7 +3,6 @@ import { AddressSummary } from "./AddressSummary";
 import { PriceSummary } from "./PriceSummary";
 import CartStep from "@/components/checkout/CartStep"
 import PayViaUPIButton from "./PayViaUPIButton";
-import PlaceOrderButton from "./PlaceOrderButton";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight, PackageCheck } from "lucide-react";
 

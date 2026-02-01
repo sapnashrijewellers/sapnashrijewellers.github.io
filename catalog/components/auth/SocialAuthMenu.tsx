@@ -34,10 +34,10 @@ export default function SocialAuthMenu({ onAction, mobile }: Props) {
         role={mobile ? "menuitem" : undefined}
         className={baseClasses}
       >
-        {user.photoURL ? (
+        {user.user?.photoURL ? (
           <img
-            src={user.photoURL}
-            alt={user.displayName || "User profile"}
+            src={user.user?.photoURL}
+            alt={user.user?.displayName || "User profile"}
             className="h-8 w-8 rounded-full"
             referrerPolicy="no-referrer"
           />

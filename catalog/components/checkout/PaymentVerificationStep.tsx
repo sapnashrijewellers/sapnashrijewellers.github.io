@@ -43,12 +43,12 @@ Link: ${process.env.NEXT_PUBLIC_BASE_URL}/product/${item.product.slug}`;
     return `
 🛍️ Order Confirmation
 
-👤 ${address.name}
-📞 ${address.mobile}
+👤 ${address?.name}
+📞 ${address?.mobile}
 
 📍 Address:
-${address.address}
-${address.city} - ${address.pin}
+${address?.address}
+${address?.city} - ${address?.pin}
 
 💍 Products:
 ${productLines}

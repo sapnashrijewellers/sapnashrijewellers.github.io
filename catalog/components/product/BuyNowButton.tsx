@@ -19,7 +19,7 @@ export default function BuyNowButton({ product, activeVariant = 0 }: { product: 
   const handleClick = async () => {
     try {      
       await ensureLogin();      
-      addToCart({ productId:product.id, variantIndex: activeVariant, qty: 1 });
+      addToCart({ productId:product.id, variantIndex: activeVariant, qty: 1, product: product, variant:product.variants[activeVariant].size });
       router.push("/cart");
 
 

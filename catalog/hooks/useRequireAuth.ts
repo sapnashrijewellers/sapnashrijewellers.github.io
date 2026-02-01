@@ -15,7 +15,7 @@ export function useRequireAuth(onUnauth?: () => void) {
 
   return {
     user,
-    userId: user?.uid,
+    userId: user?.user?.uid,
     isAuthenticated: !!user,
     requireAuth,
   };

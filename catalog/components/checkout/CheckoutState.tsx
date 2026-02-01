@@ -51,7 +51,7 @@ export default function CheckoutState() {
     async function load() {
       setAddressLoading(true);
 
-      const res = await fetch(`${process.env.NEXT_PUBLIC_WORKER_URL}/address?uid=${user?.uid}`);
+      const res = await fetch(`${process.env.NEXT_PUBLIC_WORKER_URL}/address?uid=${user?.user?.uid}`);
       if (!res.ok) setAddress(new Address());
       const data = await res.json();
 
@@ -62,11 +62,11 @@ export default function CheckoutState() {
         // FALLBACK: Populate from the Firebase User object
         setAddress((prev) => ({
           ...prev,
-          uid: user?.uid || "",
-          name: user?.displayName || "",
-          email: user?.email || "",
+          uid: user?.user?.uid || "",
+          name: user?.user?.displayName || "",
+          email: user?.user?.email || "",
           // mobile might be null in Firebase depending on provider
-          mobile: user?.phoneNumber || prev.mobile || "", 
+          mobile: user?.user?.phoneNumber || prev.mobile || "", 
         }));
       }
       setAddressLoading(false);
@@ -116,7 +116,7 @@ export default function CheckoutState() {
               paymentMethod: "UPI",
             }
           };
-          if (!rates) return;
+          if (!rates) return prev;
 
           // Calculate final price using your utility
           updatedCart.priceSummary.productTotal = calculateFinal(updatedCart, rates);

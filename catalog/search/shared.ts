@@ -5,10 +5,8 @@ import {
 
 export const miniSearchIndexOptions: MiniSearchIndexOptions = {
   fields: [
-    "name",
-    "hindiName",
-    "highlights",
-    "englishHighlights",
+    "name",    
+    "highlights",    
     "category",    
     "description",
     "type",
@@ -19,8 +17,7 @@ export const miniSearchIndexOptions: MiniSearchIndexOptions = {
   storeFields: [
     "id",
     "slug",
-    "name",
-    "hindiName",
+    "name",    
     "images",
     "category",
     "purity",
@@ -55,9 +52,7 @@ export const miniSearchQueryOptions: MiniSearchSearchOptions = {
 
   boost: {
     name: 5,
-    highlights: 3.5,
-    hindiName: 3.5,
-    englishHighlights: 3,
+    highlights: 3.5,        
     category: 2.5,    
     description: 2,
     type: 1.3,

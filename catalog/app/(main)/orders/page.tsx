@@ -138,7 +138,7 @@ function OrderCard({
                   {/* Hydrated Product */}
                   <ProductCard
                     product={hydrated}
-                    variant={item.variantIndex}
+                    
                   />
                   <p className="text-sm text-muted text-center">
                     Qty: {item.qty}

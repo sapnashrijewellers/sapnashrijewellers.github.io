@@ -3,10 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.normalize = exports.miniSearchQueryOptions = exports.miniSearchIndexOptions = void 0;
 exports.miniSearchIndexOptions = {
     fields: [
-        "name",
-        "hindiName",
-        "highlights",
-        "englishHighlights",
+        "name",        
+        "highlights",        
         "category",
         "description",
         "type",
@@ -16,8 +14,7 @@ exports.miniSearchIndexOptions = {
     storeFields: [
         "id",
         "slug",
-        "name",
-        "hindiName",
+        "name",       
         "images",
         "category",
         "purity",
@@ -46,9 +43,7 @@ exports.miniSearchQueryOptions = {
     combineWith: "OR",
     boost: {
         name: 5,
-        highlights: 3.5,
-        hindiName: 3.5,
-        englishHighlights: 3,
+        highlights: 3.5,             
         category: 2.5,
         description: 2,
         type: 1.3,

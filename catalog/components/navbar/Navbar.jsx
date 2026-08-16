@@ -1,9 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import LiveRatePopup from "@/components/common/LiveRatePopup";
 import ResponsiveNavbar from "@/components/navbar/ResponsiveNavbar";
-import { useRates } from "@/context/RateContext";
 import BrandLogo from "../common/BrandLogo";
 
 const SearchBar = dynamic(
@@ -17,11 +15,11 @@ const SearchBar = dynamic(
 );
 
 export default function Navbar() {
-  const rates = useRates();
+  // const rates = useRates();
 
   return (    
     <header className="container mx-auto">
-      <LiveRatePopup rates={rates} />
+      {/* <LiveRatePopup rates={rates} /> */}
 
       <div className="">
         {/* TOP ROW */}

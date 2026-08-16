@@ -37,12 +37,12 @@ export default function ResponsiveNavbar() {
       title: "Hallmark",
       icon: <Triangle size={22} />,
     },
-    {
-      label: "Calculator",
-      href: "/calculator/",
-      title: "Jewellery Price Calculator",
-      icon: <Calculator size={22} />,
-    },
+    // {
+    //   label: "Calculator",
+    //   href: "/calculator/",
+    //   title: "Jewellery Price Calculator",
+    //   icon: <Calculator size={22} />,
+    // },
     {
       label: "Wishlist",
       href: "/wishlist/",
@@ -61,12 +61,12 @@ export default function ResponsiveNavbar() {
     title: "Your Orders",
     icon: <ClipboardList size={22} />, // Or use 'Package' from lucide-react
   }] : []),
-    {
-      label: "Rates",
-      title: "Gold & Silver Rates",
-      icon: <Activity size={22} className="animate-pulse" />,
-      onClick: () => window.dispatchEvent(new Event("open-live-rates")),
-    },
+    // {
+    //   label: "Rates",
+    //   title: "Gold & Silver Rates",
+    //   icon: <Activity size={22} className="animate-pulse" />,
+    //   onClick: () => window.dispatchEvent(new Event("open-live-rates")),
+    // },
     {
       label: user ? "Sign Out" : "Sign In",
       title: "Authentication",

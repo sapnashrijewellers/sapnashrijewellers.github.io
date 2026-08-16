@@ -28,7 +28,16 @@ import {
   Diamond, 
   Baby, 
   PartyPopper, 
-  Handshake,HeartHandshake
+  Handshake,
+  HeartHandshake,
+  HandHeart,
+  UsersRound,  
+  CakeSlice,
+  Briefcase,
+  Flower2,
+  BadgeIndianRupee,
+  User
+
 } from 'lucide-react';
 
 export const AppIconMap: Record<string, React.ElementType> = {
@@ -63,4 +72,11 @@ export const AppIconMap: Record<string, React.ElementType> = {
   "Moon": Moon,
   "Hammer": Hammer,
   "ShieldAlert": ShieldAlert,
+  "HandHeart": HandHeart,
+  "UsersRound": UsersRound,
+  "CakeSlice": CakeSlice,
+  "Briefcase": Briefcase,
+  "Flower2":Flower2,
+  "BadgeIndianRupee":BadgeIndianRupee,
+  "User": User 
 };

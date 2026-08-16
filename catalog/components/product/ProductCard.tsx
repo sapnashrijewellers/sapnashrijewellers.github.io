@@ -6,10 +6,9 @@ import Image from "next/image";
 import { Product } from "@/types/catalog";
 import WishlistButton from "@/components/common/WishlistButton";
 import ProductRating from "@/components/product/ProductRating";
-import formatPurity from "@/utils/utils";
 import ProductPrice from "./ProductCardPrice";
 
-export default function ProductCard({ product, variant = 0 }: { product: Product, variant?: number }) {
+export default function ProductCard({ product }: { product: Product }) {
   const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
   const images = product.images || [];
   const hasMultipleImages = images.length > 1;
@@ -89,7 +88,7 @@ export default function ProductCard({ product, variant = 0 }: { product: Product
             {product.name}
           </h3>
 
-          <ProductPrice product={product} variant={variant} />
+          <ProductPrice product={product} />
           {rating > 0 && ratingCount > 0 && (
             <div className="mt-1">
               <ProductRating
@@ -100,11 +99,6 @@ export default function ProductCard({ product, variant = 0 }: { product: Product
               />
             </div>
           )}
-
-          <div className="flex justify-between text-xs mt-1 opacity-80">
-            <span>{formatPurity(product.purity)}</span>
-            <span>{product.variants[variant].weight} gm</span>
-          </div>
         </div>
       </div>
     </Link>

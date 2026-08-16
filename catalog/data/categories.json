@@ -1,290 +1,245 @@
 [
   {
-    "name": "सोने की चैन",
-    "englishName": "Gold Chain",
-    "rank": 2,
-    "description": "Discover finely crafted gold chains made for everyday style, timeless appeal, and unmatched durability—perfect for every occasion.",
-    "active": true,
-    "material": "Gold",
-    "slug": "gold-chain"
-  },
-  {
-    "name": "सोने के ईयररिंग",
-    "englishName": "Gold Earrings (Tops)",
-    "rank": 14,
-    "description": "Enhance your style with gold earrings designed for comfort, brilliance, and effortless everyday beauty.",
-    "active": true,
-    "material": "Gold",
-    "slug": "gold-earrings-tops"
-  },
-  {
-    "name": "सोने के राजपूतानी आभूषण",
-    "englishName": "Rajputani Gold Jewellery",
     "rank": 1,
-    "description": "Experience the timeless grandeur of Rajasthan with handcrafted Rajputi gold designs that celebrate heritage, grace, and royal elegance.",
+    "name": "Mahadev Silver Rings",
+    "englishName": "Buy Shiva & Trishul Silver Rings",
+    "description": "Shop Mahadev Silver Rings for Men & Women. Explore Shiv, Mahakal & Trishul designs in 925 sterling silver. Daily wear, skin-friendly & handcrafted at Sapna Shri Jewellers.",
     "active": true,
-    "material": "Gold",
-    "slug": "rajputani-gold-jewellery"
+    "material": "Silver",
+    "slug": "mahadev-silver-rings-1"
   },
   {
-    "name": "सोने के आभूषण",
-    "englishName": "Gold Jewellery",
-    "rank": 9,
-    "description": "Explore a world of premium gold jewellery where modern elegance meets timeless tradition—crafted to perfection for every occasion.",
+    "rank": 2,
+    "name": "Silver Bali Earrings",
+    "englishName": "925 Sterling Silver Bali for Men, Women & Unisex",
+    "description": "Shop 925 silver bali earrings at Sapna Shri Jewellers. Shop plain, designer and Rudraksha bali earrings for everyday style.",
     "active": true,
-    "material": "Gold",
-    "slug": "gold-jewellery"
+    "material": "Silver",
+    "slug": "silver-bali-earrings-2"
   },
   {
-    "name": "सोने का हार",
-    "englishName": "Gold Necklace",
     "rank": 3,
-    "description": "Elevate your look with exquisite gold necklaces designed to shine with unmatched craftsmanship and luxurious brilliance.",
-    "active": true,
-    "material": "Gold",
-    "slug": "gold-necklace"
-  },
-  {
-    "name": "सिल्वर बार कॉइन",
-    "englishName": "Silver Bar Coin",
-    "rank": 6,
-    "description": "Invest smartly with high-purity silver bars and coins—trusted, timeless, and perfect for gifting or value building.",
-    "active": true,
-    "material": "Silver",
-    "slug": "silver-bar-coin"
-  },
-  {
-    "name": "चांदी की पायल",
-    "englishName": "Silver Anklet/Payal",
-    "rank": 7,
-    "description": "Embrace traditional beauty with elegant silver anklets crafted to add charm, grace, and rhythmic sparkle to every step.",
-    "active": true,
-    "material": "Silver",
-    "slug": "silver-anklet"
-  },
-  {
     "name": "सांवरिया सेठ रिंग",
     "englishName": "Sawariya Seth Ring",
-    "rank": 8,
     "description": "A devotional masterpiece symbolizing faith and protection—crafted with purity, devotion, and spiritual elegance.",
     "active": true,
     "material": "Silver",
-    "slug": "sawariya-seth-ring"
+    "slug": "-3"
   },
   {
-    "name": "रानी हार",
-    "englishName": "Rani Haar",
-    "rank": 18,
-    "description": "Rani Haar – a traditional royal long necklace worn for weddings and grand occasions.",
-    "active": true,
-    "material": "Gold",
-    "slug": "rani-haar"
-  },
-  {
-    "name": "चांदी के कड़े",
-    "englishName": "Silver kada",
-    "rank": 10,
-    "description": "Discover premium Pat silver bangles known for their rich weight, purity, and traditional artistry—perfect for festive and daily wear.",
-    "active": true,
-    "material": "Silver",
-    "slug": "pure-silver-bangles"
-  },
-  {
-    "name": "मंगलसूत्र",
-    "englishName": "Mangalsutra",
-    "rank": 17,
-    "description": "A symbol of love and tradition—crafted with premium gold detailing to honor every bride’s timeless journey.",
-    "active": true,
-    "material": "Gold",
-    "slug": "mangalsutra"
-  },
-  {
-    "name": "गिफ्ट आइटम",
-    "englishName": "Gift Item",
-    "rank": 24,
-    "description": "Find the perfect expression of love with our curated collection of unique gift items. Whether it's a special anniversary or a corporate celebration, explore gifts that truly delight and inspire.",
-    "active": true,
-    "material": "Silver",
-    "slug": "gift-item"
-  },
-  {
-    "name": "सोने की अंगुठी",
-    "englishName": "Gold womens Ring",
-    "rank": 5,
-    "description": "Adorn yourself with delicate yet striking gold rings designed to complement every mood, moment, and celebration.",
-    "active": true,
-    "material": "Gold",
-    "slug": "gold-ladies-ring"
-  },
-  {
-    "name": "गोल्ड कॉइन और बार",
-    "englishName": "Gold Coin & Bar",
-    "rank": 15,
-    "description": "Invest with confidence—premium purity gold coins and bars crafted for value, trust, and long-term security.",
-    "active": true,
-    "material": "Gold",
-    "slug": "gold-coin-bar"
-  },
-  {
-    "name": "सोने का कंदोरा",
-    "englishName": "Gold Kandora(Belt)",
-    "rank": 20,
-    "description": "Gold Kandora Belt crafted in traditional design, ideal for bridal and festive attire.",
-    "active": true,
-    "material": "Gold",
-    "slug": "gold-kandora-belt"
-  },
-  {
-    "name": "गोल्ड जेंट्स रिंग",
-    "englishName": "Gold Gents Ring",
     "rank": 4,
-    "description": "Showcase your personality with bold and elegant gents’ gold rings crafted for confidence, class, and daily sophistication.",
-    "active": true,
-    "material": "Gold",
-    "slug": "gold-gents-ring"
-  },
-  {
-    "name": "सोने की चूड़ी",
-    "englishName": "Gold bangles",
-    "rank": 21,
-    "description": "Gold Bangles with classic craftsmanship suitable for daily wear and festive dressing.",
-    "active": true,
-    "material": "Gold",
-    "slug": "gold-bangles"
-  },
-  {
-    "name": "गोल्ड एंटीक ज्वेलरी",
-    "englishName": "Gold Antique Sets",
-    "rank": 19,
-    "description": "Available on order only. Gold Antique Sets featuring vintage craftsmanship and intricate detailing.",
-    "active": true,
-    "material": "Gold",
-    "slug": "gold-antique-sets"
-  },
-  {
-    "name": "कस्टमाइज़्ड ज्वेलरी",
-    "englishName": "Customize Jewellery",
-    "rank": 23,
-    "description": "Unleash your creativity. Our expert artisans bring your vision to life with hand-crafted, bespoke jewellery. From personalized nameplates to custom-designed engagement rings, make it truly yours.",
+    "name": "Personalised Silver Rings",
+    "englishName": "Buy 925 Silver Name & Initial Rings",
+    "description": "Shop Personalised Silver Rings online. Get 925 Silver Name Rings & Initial Rings with Adjustable sizing. BIS Hallmarked with Certificate. COD & Express shipping across INDIA. Perfect for Gifting!",
     "active": true,
     "material": "Silver",
-    "slug": "customize-jewellery"
+    "slug": "personalised-silver-rings-4"
   },
   {
-    "name": "चांदी की पोची",
-    "englishName": "Silver Bracelet (Pochi)",
-    "rank": 16,
-    "description": "Traditional elegance meets modern design with pure silver toe rings made for comfort, beauty, and cultural significance.",
+    "rank": 5,
+    "name": "Baby Nazariya Bracelets",
+    "englishName": "Baby Bracelets Silver(Kids Bracelets)",
+    "description": "Shop 925 silver baby nazariya bracelets at Sapna Shri Jewellers. Discover adorable nazariya bracelets for newborns and kids, perfect for gifting and daily wear.",
     "active": true,
     "material": "Silver",
-    "slug": "silver-toe-ring-pochi"
+    "slug": "baby-nazariya-bracelets-5"
   },
   {
-    "name": "चांदी की चैन",
-    "englishName": "Silver Chain",
-    "rank": 12,
-    "description": "Simple, stylish, and versatile—our silver chains are crafted for everyday wear with purity, strength, and lasting shine.",
+    "rank": 6,
+    "name": "Krishna Silver Pendants",
+    "englishName": "Radha Krishna Silver Chain Pendants",
+    "description": "Shop 925 silver Krishna pendants at Sapna Shri Jewellers. Discover Lord Krishna silver pendants for men and women, crafted for devotion, elegance and everyday wear.",
     "active": true,
     "material": "Silver",
-    "slug": "silver-chain"
+    "slug": "krishna-silver-pendants-6"
   },
   {
-    "name": "चांदी के अन्य आभूषण",
-    "englishName": "Other Silver Jewellery",
-    "rank": 13,
-    "description": "Explore unique silver creations crafted with artistic detailing, premium purity, and everyday elegance.",
+    "rank": 7,
+    "name": "Silver Chain",
+    "englishName": "Buy Stylish Chain for Men & Women Online",
+    "description": "Shop 925 silver chains at Sapna Shri Jewellers. Discover stylish silver chains for men and women in Cuban, Figaro, Curb and everyday wear designs.",
     "active": true,
     "material": "Silver",
-    "slug": "other-silver-jewellery"
+    "slug": "silver-chain-7"
   },
   {
-    "name": "चांदी का कन्दोरा",
-    "englishName": "Silver Waist Belt",
+    "rank": 8,
+    "name": "Khatushyam Silver Rings",
+    "englishName": "Shyam Silver Rings",
+    "description": "Wear your devotion with 925 silver Khatu Shyam rings from Sapna Shri Jewellers. Explore meaningful spiritual rings designed for everyday comfort and lasting shine.",
+    "active": true,
+    "material": "Silver",
+    "slug": "khatushyam-silver-rings-8"
+  },
+  {
+    "rank": 9,
+    "name": "Hanuman Silver Rings",
+    "englishName": "Shree Ram & Bajrangbali Ring Designs",
+    "description": "Explore 925 sterling silver Hanuman rings at Sapna Shri Jewellers. Find spiritual silver rings inspired by Lord Hanuman for faith, strength and daily wear.",
+    "active": true,
+    "material": "Silver",
+    "slug": "hanuman-silver-rings-9"
+  },
+  {
+    "rank": 10,
+    "name": "Mahadev Silver Pendants",
+    "englishName": "Shiva, Rudraksha & OM Chain Pendants",
+    "description": "Shop 925 silver Mahadev pendants at Sapna Shri Jewellers. Discover Lord Shiva, Mahakal, Trishul and Om pendants crafted for faith and everyday wear.",
+    "active": true,
+    "material": "Silver",
+    "slug": "mahadev-silver-pendants-10"
+  },
+  {
     "rank": 11,
-    "description": "Make a statement with beautifully crafted silver waist belts that blend regal design with contemporary elegance.",
+    "name": "Silver Couple Rings",
+    "englishName": "Adjustable Silver Couple Rings",
+    "description": "Shop 925 Hallmarked Silver Couple Rings for husband, wife, or partners. Handcrafted by karigars. Anti-tarnish & skin-safe. Fast shipping! Customize with names/dates via WhatsApp.",
     "active": true,
     "material": "Silver",
-    "slug": "silver-waist-belt"
+    "slug": "silver-couple-rings-11"
   },
   {
-    "name": "नग स्टोन",
-    "englishName": "Gems And Jewellery",
+    "rank": 12,
+    "name": "Silver Bracelets",
+    "englishName": "Silver Thread Bracelets & Chain Bracelets",
+    "description": "Discover elegant Silver Bracelets (चांदी के ब्रेसलेट – Chandi ke Bracelet) designed for everyday style and special occasions. Explore delicate silver thread bracelets, chain bracelets and 925 sterling silver designs that combine traditional Indian charm with a modern look. Perfect for women, men and kids, these silver bracelets make beautiful everyday jewellery and thoughtful gifts.",
+    "active": true,
+    "material": "Silver",
+    "slug": "silver-bracelets-12"
+  },
+  {
+    "rank": 13,
+    "name": "Buy Silver Rakhi",
+    "englishName": "Bracelet Style & Spiritual Rakhi Designs",
+    "description": "",
+    "active": true,
+    "material": "Silver",
+    "slug": "buy-silver-rakhi-13"
+  },
+  {
+    "rank": 14,
+    "name": "Hanuman Silver Pendants",
+    "englishName": "Bajrangbali Silver Lockets & Gada Designs",
+    "description": "",
+    "active": true,
+    "material": "Silver",
+    "slug": "hanuman-silver-pendants-14"
+  },
+  {
+    "rank": 15,
+    "name": "Krishna Silver Rings",
+    "englishName": "Morpankh & Flute Ring Designs",
+    "description": "",
+    "active": true,
+    "material": "Silver",
+    "slug": "krishna-silver-rings-15"
+  },
+  {
+    "rank": 16,
+    "name": "Silver Chain with Pendant",
+    "englishName": "Buy Silver Chain Pendant Set",
+    "description": "",
+    "active": true,
+    "material": "Silver",
+    "slug": "silver-chain-with-pendant-16"
+  },
+  {
+    "rank": 17,
+    "name": "Kids Silver Chains",
+    "englishName": "Baby 925 Silver Chain and Pendants",
+    "description": "Explore charming Kids Silver Chains (बच्चों की चांदी की चेन – Bachchon Ki Chandi Ki Chain) crafted for little ones. Our collection features baby 925 silver chains and silver pendants with lightweight, comfortable designs. Choose a beautiful silver chain for baby boys and girls that adds a traditional yet stylish touch to their look.",
+    "active": true,
+    "material": "Silver",
+    "slug": "kids-silver-chains-17"
+  },
+  {
+    "rank": 18,
+    "name": "Baby Silver Payal",
+    "englishName": "Kids Payal & Anklet",
+    "description": "Adorn little feet with beautiful Baby Silver Payal (बच्चों की चांदी की पायल – Bachchon Ki Chandi Ki Payal). Discover delicate kids silver payal and anklets designed with traditional Indian craftsmanship and charming details. These lightweight silver anklets are ideal for babies and children and make a meaningful gift for birthdays, naming ceremonies and special occasions.",
+    "active": true,
+    "material": "Silver",
+    "slug": "baby-silver-payal-18"
+  },
+  {
+    "rank": 19,
+    "name": "Baby Silver Kada",
+    "englishName": "Baby Silver Bangles (Kids Kada Silver)",
+    "description": "Shop beautiful Baby Silver Kada (बच्चों का चांदी का कड़ा – Bachchon Ka Chandi Ka Kada) specially suited for little wrists. Our collection includes baby silver bangles and kids kada silver designs featuring traditional patterns with a comfortable fit. A silver kada is a timeless Indian jewellery choice and a wonderful gift for babies and children.",
+    "active": true,
+    "material": "Silver",
+    "slug": "baby-silver-kada-19"
+  },
+  {
+    "rank": 20,
+    "name": "Lord Ganesha Silver Pendants",
+    "englishName": "Ganesha Silver Lockets",
+    "description": "",
+    "active": true,
+    "material": "Silver",
+    "slug": "lord-ganesha-silver-pendants-20"
+  },
+  {
+    "rank": 21,
+    "name": "Rudraksha Silver Bracelets",
+    "englishName": "Chandi ke Rudraksha Bracelets",
+    "description": "Discover spiritual elegance with Rudraksha Silver Bracelets (चांदी के रुद्राक्ष ब्रेसलेट – Chandi ke Rudraksha Bracelet) combining the natural appeal of Rudraksha with the timeless beauty of silver. These Rudraksha bracelets in silver are inspired by traditional Indian jewellery and are ideal for everyday wear, gifting and devotees looking for a meaningful spiritual accessory.",
+    "active": true,
+    "material": "Silver",
+    "slug": "rudraksha-silver-bracelets-21"
+  },
+  {
     "rank": 22,
-    "description": "Discover the vibrancy of nature with our hand-selected, certified gemstones and jewellery. Find your Rashi Ratna or a stunning natural diamond piece for every occasion.",
+    "name": "Religious Gold Rings",
+    "englishName": "Sone Ki Ring",
+    "description": "",
     "active": true,
-    "material": "Silver",
-    "slug": "gems-and-jewellery"
+    "material": "GOLD",
+    "slug": "religious-gold-rings-22"
   },
   {
-    "name": "चांदी की एंटिक ज्वेलरी",
-    "englishName": "Premium Silver Jewellery",
+    "rank": 23,
+    "name": "Silver Stud Earrings",
+    "englishName": "Buy 925 Sterling Silver Studs Online",
+    "description": "Explore elegant Silver Stud Earrings (चांदी की स्टड बालियां – Chandi Ki Stud Baliyan) crafted for effortless everyday style. Shop 925 sterling silver studs in delicate, classic and contemporary designs that pair beautifully with both Indian and Western outfits. Lightweight and versatile, silver studs make an excellent choice for daily wear and gifting.",
+    "active": true,
+    "material": "Silver",
+    "slug": "silver-stud-earrings-23"
+  },
+  {
+    "rank": 24,
+    "name": "Silver Rudraksha Mala",
+    "englishName": "925 Silver Rudraksha Chain Designs",
+    "description": "Explore traditional Silver Rudraksha Mala (चांदी की रुद्राक्ष माला – Chandi Ki Rudraksha Mala) featuring the spiritual appeal of Rudraksha with beautifully crafted silver elements. Discover 925 silver Rudraksha chain designs and malas suitable for devotional wear, gifting and those who appreciate traditional Indian jewellery with a contemporary finish.",
+    "active": true,
+    "material": "Silver",
+    "slug": "silver-rudraksha-mala-24"
+  },
+  {
     "rank": 25,
-    "description": "Step into timeless elegance with our Premium Antique Silver Jewellery collection. Explore 925 sterling silver sets, oxidised designs, and traditional temple jewellery that capture the essence of heritage.",
+    "name": "Mahadev Silver Bracelets",
+    "englishName": "Shiva Silver Kada Designs",
+    "description": "Celebrate devotion with Mahadev Silver Bracelets (महादेव चांदी के ब्रेसलेट – Mahadev Chandi ke Bracelet) inspired by Lord Shiva and traditional Indian symbolism. Explore Shiva silver kada and bracelet designs crafted to combine spiritual significance with everyday style. A meaningful choice for Mahadev devotees and a thoughtful spiritual jewellery gift.",
     "active": true,
     "material": "Silver",
-    "slug": "antic-Sets-Gift-Item"
+    "slug": "mahadev-silver-bracelets-25"
   },
   {
-    "name": "चांदी की बिछिया",
-    "englishName": "Silver Toe Ring",
     "rank": 26,
-    "description": "Elegant handcrafted silver toe rings for traditional and daily wear.",
+    "name": "Silver Payal",
+    "englishName": "Silver Threas Payal & Anklets",
+    "description": "Discover timeless Silver Payal (चांदी की पायल – Chandi Ki Payal) featuring elegant silver thread payal, silver anklets and traditional Indian designs. From delicate everyday styles to beautifully detailed anklets for special occasions, our collection brings together traditional craftsmanship and contemporary elegance for women and girls.",
     "active": true,
     "material": "Silver",
-    "slug": "silver-toe-ring"
+    "slug": "silver-payal-26"
   },
   {
-    "name": "चांदी की बाली",
-    "englishName": "Silver Bali Studs",
     "rank": 27,
-    "description": "Classic silver bali and stud earrings featuring intricate craftsmanship.",
+    "name": "Silver Kada",
+    "englishName": "Silver Bangles",
+    "description": "Shop classic Silver Kada (चांदी का कड़ा – Chandi Ka Kada) and elegant silver bangles (चांदी की चूड़ियां – Chandi Ki Chudiyan) designed for timeless Indian style. Explore traditional and contemporary silver kada designs for everyday wear, festive occasions and gifting. Crafted in beautiful silver styles, these bangles are perfect for adding a graceful ethnic touch to any outfit.",
     "active": true,
     "material": "Silver",
-    "slug": "silver-bali-studs"
-  },
-  {
-    "name": "चांदी के मंगलसूत्र",
-    "englishName": "Silver MangalSutra",
-    "rank": 28,
-    "description": "Beautifully designed silver mangalsutras blending tradition with modern style.",
-    "active": true,
-    "material": "Silver",
-    "slug": "silver-mangalsutra"
-  },
-  {
-    "name": "बच्चो की सिल्वर ज्वेलरी",
-    "englishName": "Kids Silver Jewellery",
-    "rank": 29,
-    "description": "Safe and charming silver jewellery collection specially designed for children.",
-    "active": true,
-    "material": "Silver",
-    "slug": "kids-silver-jewellery"
-  },
-  {
-    "name": "चांदी की अंगुठी",
-    "englishName": "Silver Ring",
-    "rank": 30,
-    "description": "Exquisite silver rings available in various designs for all occasions.",
-    "active": true,
-    "material": "Silver",
-    "slug": "silver-ring"
-  },
-  {
-    "name": "पुरुषों के चांदी के आभूषण",
-    "englishName": "Gents Silver Accessories",
-    "rank": 31,
-    "description": "Bold and stylish silver accessories including kadas and rings for men.",
-    "active": true,
-    "material": "Silver",
-    "slug": "gents-silver-accessories"
-  },
-  {
-    "name": "महिलाओं के चांदी के आभूषण",
-    "englishName": "Women Silver Accessories",
-    "rank": 32,
-    "description": "A premium range of silver jewellery and accessories for the modern woman.",
-    "active": true,
-    "material": "Silver",
-    "slug": "women-silver-jewellery"
+    "slug": "silver-kada-27"
   }
 ]

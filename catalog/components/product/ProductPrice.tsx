@@ -1,25 +1,25 @@
 "use client";
 
 
-import { useRates } from "@/context/RateContext";
+
 import { calculatePrice } from "@/utils/calculatePrice";
 import OrderViaWhatsappButton from "@/components/product/OrderViaWhatsappButton";
 import BuyNowButton from "./BuyNowButton";
-import CalculatePriceButton from "@/components/product/CalculatePriceButton";
 import { Product } from "@/types/catalog";
 import Tooltip from "@/components/common/Tooltip"
 import JsonLd from "@/components/common/JsonLd";
 import buildProductJsonLd from "@/utils/buildProductJsonLd";
+import rates from "@/data/rates.json";
 
-export default function ProductPrice({ product, activeVariant = 0 }: { product: Product, activeVariant?: number }) {
-  const rates = useRates();
+export default function ProductPrice({ product }: { product: Product }) {
+  
   const productJsonLd = buildProductJsonLd(product, rates);
-  const popV = calculatePrice({ purity: product.purity, variant: product.variants[activeVariant], rates });
+  const popV = calculatePrice({product, rates });
 
   if (popV?.price === null) return null;
 
-  const isAvailable = product.variants[activeVariant].available;
-  const hasMakingCharges = product.variants[activeVariant].makingCharges > 0;
+  const isAvailable = product.available;
+  const hasMakingCharges = product.makingCharges > 0;
   const formattedFinal = popV?.price?.toLocaleString("en-IN");
   const formattedMRP = popV?.MRP?.toLocaleString("en-IN");
 
@@ -66,18 +66,17 @@ export default function ProductPrice({ product, activeVariant = 0 }: { product: 
 
       {/* 3. CTA Logic */}
       {isAvailable && hasMakingCharges && (
-        <BuyNowButton product={product} activeVariant={activeVariant} />
+        <BuyNowButton product={product}  />
       )}
       {!(isAvailable && hasMakingCharges) && (
         <OrderViaWhatsappButton
           product={product}
-          title="Order via WhatsApp"
-          activeVariant={activeVariant}
+          title="Order via WhatsApp"          
         />
 
       )}
       {/* 4. Price Calculator Logic (Only when making charges are missing) */}
-      {!hasMakingCharges && <CalculatePriceButton product={product} />}
+      {/* {!hasMakingCharges && <CalculatePriceButton product={product} />} */}
 
     </div>
   );

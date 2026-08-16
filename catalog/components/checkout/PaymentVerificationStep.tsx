@@ -32,9 +32,9 @@ export default function PaymentVerificationStep({
   function buildWhatsAppMessage() {
     const productLines = cart.items
       .map((item, i) => {
-        const v = item.product.variants[item.variantIndex];
+        const v = item.product;
         return `${i + 1}. ${item.product.name}
-Variant: ${v?.size ?? "-"}
+Variant: ${"-"}
 Qty: ${item.qty}
 Link: ${process.env.NEXT_PUBLIC_BASE_URL}/product/${item.product.slug}`;
       })

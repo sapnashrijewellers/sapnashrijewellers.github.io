@@ -1,4 +1,4 @@
-import {Cart , CartItem} from "@/types/catalog"
+import { Cart, CartItem } from "@/types/catalog"
 
 const CART_KEY = "ssj_cart";
 
@@ -10,9 +10,7 @@ export function getCart(): Cart {
 
 export function addToCart(item: CartItem) {
   const cart = getCart();
-  const existing = cart.items.find(
-    i => i.productId === item.productId && i.variantIndex === item.variantIndex
-  );
+  const existing = cart.items.find(i => i.productId === item.productId);
 
   if (existing) existing.qty += item.qty;
   else cart.items.push(item);
@@ -25,22 +23,17 @@ export function saveCart(cart: Cart) {
 
 export function updateCartQty(
   productId: number,
-  variantIndex: number,
   qty: number
 ): Cart {
   const cart = getCart();
 
-  const item = cart.items.find(
-    i => i.productId === productId && i.variantIndex === variantIndex
-  );
-
+  const item = cart.items.find(i => i.productId === productId);
   if (!item) return cart;
-
   item.qty = Math.max(1, Math.min(10, qty));
   saveCart(cart);
   return cart;
 }
 
 export function clearCartStorage() {
-    localStorage.removeItem(CART_KEY);    
-  };
+  localStorage.removeItem(CART_KEY);
+};

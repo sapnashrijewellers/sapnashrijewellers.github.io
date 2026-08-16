@@ -10,10 +10,10 @@ import CartStep from "@/components/checkout/CartStep";
 import AddressStep from "@/components/checkout/AddressStep";
 import PaymentStep from "@/components/checkout/PaymentStep";
 import ReviewStep from "@/components/checkout/ReviewStep";
-import { useRates } from "@/context/RateContext"
 import { calculateFinal } from "@/utils/calculatePrice";
 import PaymentVerificationStep from "./PaymentVerificationStep";
 import { clearCartStorage } from "@/utils/cart"
+import rates from "@/data/rates.json";
 
 
 type CheckoutStep =
@@ -24,8 +24,7 @@ type CheckoutStep =
   | "VERIFY";
 export default function CheckoutState() {
   const [isLoading, setIsLoading] = useState(true);
-  const [cart, setCart] = useState<Cart>(() => getCart());
-  const rates = useRates();
+  const [cart, setCart] = useState<Cart>(() => getCart());  
   const { user, loading: authLoading } = useAuth();
   const [step, setStep] = useState<CheckoutStep>("CART");
   const [paymentMethod, setPaymentMethod] = useState<PaymentMethod>("UPI");

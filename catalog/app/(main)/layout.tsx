@@ -10,7 +10,6 @@ import RegisterSW from "@/components/home/registerSW";
 import Script from "next/script"
 import { AuthProvider } from "@/context/AuthContext";
 import BadgeHandler from "@/components/common/BadgeHandler";
-import { RateProvider } from "@/context/RateContext";
 import GoToTop from "@/components/common/GoToTop";
 
 const notoDevanagari = Noto_Sans_Devanagari({
@@ -75,8 +74,7 @@ export default function RootLayout({ children, }: { children: React.ReactNode; }
       </head>
 
       <body className={`${notoDevanagari.className} flex flex-col min-h-screen transition-colors`}>
-        <BadgeHandler />
-        <RateProvider>
+        <BadgeHandler />     
           <AuthProvider>
             <RegisterSW />
             {/* Floating WhatsApp Button */}
@@ -101,8 +99,7 @@ export default function RootLayout({ children, }: { children: React.ReactNode; }
               <Script src="https://mehtalogy.in/pb/v1.js"
                 strategy="afterInteractive" />
             <GoToTop />
-          </AuthProvider>
-        </RateProvider>
+          </AuthProvider>       
       </body>
     </html>
   );

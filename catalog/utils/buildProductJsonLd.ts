@@ -10,11 +10,7 @@ export default function buildProductJsonLd(
   const imageUrl = `${driveURL}${product.images?.[0]}`;
   const baseProductUrl = `${baseURL}/product/${product.slug}`;
 
-  const vPop = calculatePrice({
-    purity: product.purity,
-    variant: product.variants?.[0],
-    rates,
-  });
+  const vPop = calculatePrice({product, rates});
 
   const hasValidPrice =
     vPop?.price !== null && vPop?.price !== undefined;

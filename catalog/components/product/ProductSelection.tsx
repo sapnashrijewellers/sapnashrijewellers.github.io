@@ -1,41 +1,23 @@
-"use client";
-
-import { useState } from 'react';
 import ProductPrice from './ProductPrice';
-import ProductSizeSelector from './ProductSizeSelector';
 import { Product } from "@/types/catalog"
 import Image from 'next/image';
-import formatPurity from "@/utils/utils.js";
 
-export default function ProductSelection({ product }: { product: Product }) {
-  const [activeVariant, setActiveVariant] = useState(0);
+
+export default function ProductSelection({ product }: { product: Product }) {  
   const isHallmarked = (product.purity?.toLowerCase().startsWith("gold") && product.weight > 2) || !!product.HUID;
 
   return (
     <>
-      <ProductPrice product={product} activeVariant={activeVariant} />
-      <ProductSizeSelector
-        variants={product.variants}
-        onChange={(index) => setActiveVariant(index)}
-      />
+      <ProductPrice product={product}  />
+      
       {/* Specs + Hallmark */}
       <div className="flex items-center justify-between border-t border-theme pt-3">
-        <div className="text-sm space-y-1">
-          <p>
-            <span className="font-medium">Purity:</span>{" "}
-            {formatPurity(product.purity)}
-          </p>
-
-          <div className="flex items-center gap-1">
-            <span className="font-medium">Weight:</span>
-            <span>{product.variants[activeVariant].weight} g</span>
-
-
-          </div>
+        <div className="text-sm space-y-1">         
 
           {product.brandText && product.brandText.length > 2 && (
             <p>
-              <span className="font-medium">Brand:</span> {product.brandText}
+              {/* <span className="font-medium">Brand:</span> */}
+               {product.brandText}
             </p>
           )}
         </div>

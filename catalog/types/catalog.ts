@@ -1,27 +1,13 @@
 import { LucideIcon } from "lucide-react";
 
-/** Represents a single jewelry product item */
-export interface ProductVariant {
-  SKU: string;
-  productId: number;
-  weight: number;
-  active: boolean;
-  makingCharges: number;
-  available?: boolean;
-  size: string;
-  discount: number;
-  price?: number;
-  MRP?: number;
-  priceAdjustment?: number;
-}
+
 
 export interface Product {
   id: number;
   name: string;
   purity: string;
   images: string[];
-  highlights: string[];
-  englishHighlights: string[];
+  highlights: string[];  
   newArrival: boolean;
   category: string;
   type: string[];
@@ -32,11 +18,13 @@ export interface Product {
   available?: boolean;
   rating: number;
   ratingCount: number;
-  brandText: string;
-  hindiName: string;
+  brandText: string;  
   HUID: boolean;
-  weight: number;
-  variants: ProductVariant[]
+  weight: number;  
+  makingCharges: number;
+  discount: number;
+  price?: number;
+  MRP?: number;
 }
 
 export interface Category {
@@ -70,21 +58,19 @@ export interface BannerItem {
   rank: number;
   active: boolean;
 }
-export interface Rates {
-  asOn: Date;
-  gold24K: number;
-  gold22K: number;
-  gold18K: number;
-  silver: number;
-  silverJewelry: number;
+export interface Rates {  
+  gold: number;  
+  silver: number;  
 }
 
 export interface Type {
+  id: number,
   type: string,
   rank: number,
   slug: string,
   description: string,
   icon: string,
+  icon1: string,
   active: boolean
 }
 
@@ -105,11 +91,8 @@ export interface CalcRates {
 
 export type CartItem = {
   productId: number;
-  product:Product
-  variantIndex: number;
-  variant:string;
-  qty: number;
-  
+  product:Product    
+  qty: number;  
 };
 
 export type Cart = {
@@ -149,9 +132,7 @@ export type Order = {
   items: Array<{
     productId: number;
     slug: string;
-    title: string;
-    variant: string;
-    variantIndex: number;
+    title: string;    
     qty: number;
   }>;
 

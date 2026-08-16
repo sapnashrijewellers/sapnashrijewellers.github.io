@@ -19,14 +19,13 @@ export default function CartStep({
 
   function updateCartQtyInState(
     cart: Cart,
-    productId: number,
-    variantIndex: number,
+    productId: number,    
     qty: number
   ): Cart {
     return {
       ...cart,
       items: cart.items.map(item =>
-        item.productId === productId && item.variantIndex === variantIndex
+        item.productId === productId
           ? { ...item, qty: Math.max(1, Math.min(10, qty)) }
           : item
       ),
@@ -36,21 +35,19 @@ export default function CartStep({
   function removeItemFromCart(
     cart: Cart,
     productId: number,
-    variantIndex: number
   ): Cart {
     return {
       ...cart,
       items: cart.items.filter(
         item =>
           !(
-            item.productId === productId &&
-            item.variantIndex === variantIndex
+            item.productId === productId
           )
       ),
     };
   }
 
-  const isEmpty = cart.items.length === 0;  
+  const isEmpty = cart.items.length === 0;
 
   return (
     <>
@@ -65,7 +62,7 @@ export default function CartStep({
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
           {cart.items.map(item => (
             <div
-              key={`${item.productId}-${item.variantIndex}`}
+              key={`${item.productId}`}
               className="bg-surface border border-theme rounded-lg p-2 relative"
             >
               {/* Delete button */}
@@ -76,8 +73,7 @@ export default function CartStep({
                     setCart(prev =>
                       removeItemFromCart(
                         prev,
-                        item.productId,
-                        item.variantIndex
+                        item.productId
                       )
                     )
                   }
@@ -87,10 +83,7 @@ export default function CartStep({
                 </button>
               )}
 
-              <ProductCard
-                product={item.product}
-                variant={item.variantIndex}
-              />
+              <ProductCard product={item.product} />
 
               {setCart ? (
                 <QuantityControl
@@ -99,8 +92,7 @@ export default function CartStep({
                     setCart(prev =>
                       updateCartQtyInState(
                         prev,
-                        item.productId,
-                        item.variantIndex,
+                        item.productId,                        
                         newQty
                       )
                     );

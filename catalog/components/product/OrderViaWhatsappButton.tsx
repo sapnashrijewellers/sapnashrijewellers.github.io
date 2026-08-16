@@ -5,10 +5,10 @@ import { Product } from "@/types/catalog";
 const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP;
 const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
-const OrderViaWhatsappButton = ({ product, title = "", activeVariant = 0 }: { product: Product, title?: string, activeVariant?: number }) => {
+const OrderViaWhatsappButton = ({ product, title = "" }: { product: Product, title?: string }) => {
   const baseProductUrl = `${baseURL}/product/${product.slug}`;
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${(
-    `Hi, I want more details and discount on ${baseProductUrl} SIZE: ${product.variants[activeVariant].size}`
+    `Hi, I want more details and discount on ${baseProductUrl}`
   )}`;
   return (
     <a

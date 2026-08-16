@@ -1,4 +1,4 @@
-
+"use client";
 import { Product } from "@/types/catalog";
 import { ShoppingCartIcon } from "lucide-react"
 import { useAuth } from "@/context/AuthContext";
@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 import { addToCart } from "@/utils/cart"
 import { useRef } from "react";
 
-export default function BuyNowButton({ product, activeVariant = 0 }: { product: Product, activeVariant: number }) {
+export default function BuyNowButton({ product }: { product: Product}) {
   const { user, loading: authLoading } = useAuth();
   const router = useRouter();
   const hasRequestedAuth = useRef(false);
@@ -25,7 +25,7 @@ export default function BuyNowButton({ product, activeVariant = 0 }: { product: 
   const handleClick = async () => {
     try {
       await ensureLogin();
-      addToCart({ productId: product.id, variantIndex: activeVariant, qty: 1, product: product, variant: product.variants[activeVariant].size });
+      addToCart({ productId: product.id, qty: 1, product: product });
       router.push("/cart");
 
 

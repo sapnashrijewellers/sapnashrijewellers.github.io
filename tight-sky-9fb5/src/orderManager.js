@@ -63,11 +63,10 @@ async function createOrderCore({
     userId,
 
     items: cart.items.map(item => ({
-      productId: item.productId,
-      variantIndex: item.variantIndex,
+      productId: item.productId,      
       slug: item.product.slug,
       title: item.product.name,
-      variant: item.product.variants[item.variantIndex],
+      variant: item.product,
       qty: item.qty,
       purity: item.product.purity,
     })),

@@ -16,8 +16,7 @@ export default async function buildSearchIndex() {
       .map(p => ({
          id: p.id,
          name: normalize(p.name),
-         highlights: normalize(p.highlights?.join(' ')),
-         englishHighlights: normalize(p.englishHighlights?.join(' ')),
+         highlights: normalize(p.highlights?.join(' ')),         
          category: normalize(p.category),         
          description: normalize(p.description),
          type: p.type?.join(' '),

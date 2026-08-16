@@ -22,6 +22,7 @@ import JewelleryTypeBar from "@/components/home/JewelleryType";
 import Tooltip from "@/components/common/Tooltip";
 import ProductSelection from "@/components/product/ProductSelection"
 import StoreAvailability from "@/components/product/StoreAvailability" 
+import FAQ from "@/components/product/FAQ";
 
 const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 const driveURL = `${baseURL}/static/img/products/thumbnail/`;
@@ -33,7 +34,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!product) return {};
 
   const baseProductUrl = `${baseURL}/product/${product.slug}`;
-  const title = `${product.name} | ${product.hindiName} | by Sapna Shri Jewellers`;
+  const title = `${product.name} | by Sapna Shri Jewellers`;
   const description = `${product.description}`;
   const imageUrl = `${driveURL}${product.images?.[0]}`;
 
@@ -93,7 +94,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
         items={[
           { name: "Home", href: "/" },
           { name: product.category, href: `/category/${category?.slug}/` },
-          { name: `${product.name} | ${product.hindiName}` },
+          { name: `${product.name}` },
         ]}
       />
 
@@ -114,7 +115,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
         </div>
         <div className="space-y-4">
           <h1 className="text-2xl md:text-3xl font-semibold">
-            {product.name} | {product.hindiName}
+            {product.name} 
           </h1>
           <ProductRating
             rating={product.rating ?? 4.6}
@@ -141,6 +142,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
       </div>
 
       <TrustSignalsRibbon product={product} />
+      <FAQ product={product} />
       <BulkEnquiry product={product} />
       <CareInstructions careKey={product.care} />
 

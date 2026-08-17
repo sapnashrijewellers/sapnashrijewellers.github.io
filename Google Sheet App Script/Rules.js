@@ -5,7 +5,8 @@ const PRODUCT_RULES = {
   'weight': 'NUMBER',
   'makingcharges': 'NUMBER',
   'display': 'NUMBER',
-  'gst': 'NUMBER',  
+  'gst': 'NUMBER',
+  'englishhighlights': 'ARRAY_NEWLINE',
   'highlights': 'ARRAY_NEWLINE',
   'images': 'ARRAY_IMAGES',
   'type': 'ARRAY_COMMA',
@@ -13,8 +14,8 @@ const PRODUCT_RULES = {
   'newarrival': 'BOOLEAN',
   'available': 'BOOLEAN',
   'huid': 'BOOLEAN',
-  'discount': 'NUMBER'
-
+  'discount': 'NUMBER',
+  'slug':'name'
 };
 const PV_RULES = {
   'id': 'NUMBER',
@@ -28,16 +29,20 @@ const PV_RULES = {
 };
 
 const TYPE_RULES = {
+  'id':'NUMBER',
   'rank': 'NUMBER',
-  'active': 'BOOLEAN'
+  'active': 'BOOLEAN',
+  'slug':'type'
 };
 const BANNER_RULES = {
   'rank': 'NUMBER',
   'active': 'BOOLEAN'
 };
 const CATEGORY_RULES = {
+  'id':'NUMBER',
   'rank': 'NUMBER',
-  'active': 'BOOLEAN'
+  'active': 'BOOLEAN',
+  'slug':'name'
 };
 const TESTIMONIALS_RULES = {
   'rating': 'NUMBER'

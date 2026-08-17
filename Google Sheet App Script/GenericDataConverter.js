@@ -16,12 +16,12 @@ function getData(sheetName, primaryKeyIndex = 0, typeConfig = {}) {
 
   const results = [];
 
-// Find slug source field from configuration
+  // Find slug source field from configuration
   // Example: { slug: 'name' } → use item.name
   const slugSourceKey = typeConfig.slug
     ? String(typeConfig.slug).trim()
     : null;
-  
+
 
   for (const row of dataRows) { // OUTER LOOP (Row Loop)
     const primaryValue = String(row[primaryKeyIndex]).trim();
@@ -39,29 +39,30 @@ function getData(sheetName, primaryKeyIndex = 0, typeConfig = {}) {
 
       // --- THE GENERIC CONVERSION LOGIC ---
       const rule = typeConfig[key.toLowerCase()] || 'STRING';
-      item[key] = processValue(key, value, rule,primaryValue);
+      item[key] = processValue(key, value, rule, primaryValue);
       // ------------------------------------
     }
 
-    
+
     if (item.hasOwnProperty('active') && item.active === false) {
-        continue; // Skip the entire row if 'active' is present and reliably false
-    }   
+      continue; // Skip the entire row if 'active' is present and reliably false
+    }
 
     // Generate slug if configured
     if (slugSourceKey) {
       const sourceValue = item[slugSourceKey];
 
       if (sourceValue !== undefined && sourceValue !== null) {
-        item.slug = generateSlug(sourceValue, primaryValue);
+        item.slug = generateSlug(sourceValue);
+        item.slug = `${item.slug}-${primaryValue}`
       }
     }
-    
+
     results.push(item);
   }
 
-  
-    
+
+
 
   return results;
 }
@@ -92,19 +93,24 @@ function processValue(key, value, rule) {
     case 'ARRAY_IMAGES':
       // Array of strings, split by newline or whitespace, filtering empty strings, and converting file extension
       return strValue
-        .split(/\n|\s+/)
-        .filter(item => item.trim() !== '')
-        .map(img => img.trim().replace(/\.(jpg|jpeg|png|gif|svg)$/i, '.webp'));
+        .split(/\r?\n/)
+        .map(img => img.trim())
+        .filter(img => img !== '')
+        .map(img =>
+          generateSlug(
+            img.replace(/\.(jpg|jpeg|png|gif|svg)$/i, '.webp')
+          )
+        );
 
     case 'ARRAY_NEWLINE':
       // Array of strings, split by newline, filtering empty strings
       return strValue
-      .split(/[\n•;]/)      
-      .filter(item => item.trim() !== '').map(s => s.trim());
+        .split(/[\n•;]/)
+        .filter(item => item.trim() !== '').map(s => s.trim());
 
     case 'ARRAY_COMMA':
       // Array of strings, split by comma, filtering empty strings
-      return strValue.split(',').filter(item => item.trim() !== '').map(s => s.trim());    
+      return strValue.split(',').filter(item => item.trim() !== '').map(s => s.trim());
 
     case 'STRING':
     default:
@@ -113,13 +119,11 @@ function processValue(key, value, rule) {
   }
 }
 
-function generateSlug(name, id) {
-  const slug = String(name)
+function generateSlug(str) {
+  return String(str)
     .normalize("NFKD")
-    .replace(/[\u0300-\u036f]/g, "") // Remove accents
+    .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")      // Everything else → hyphen
-    .replace(/^-+|-+$/g, "");         // Remove leading/trailing hyphens
-
-  return `${slug}-${id}`;
+    .replace(/[^a-z0-9.]+/g, "-")
+    .replace(/^-+|-+$/g, "");
 }

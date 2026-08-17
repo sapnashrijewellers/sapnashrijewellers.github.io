@@ -7,7 +7,7 @@ export function buildCategoryPageJsonLd(products: Product[], category: Category)
     "@context": "https://schema.org",
     "@type": "ItemList", 
     "@id": `${baseURL}/category/${category.slug}`,
-    "name": `${category.englishName} | ${category.name} by Sapna Shri Jewellers`,
+    "name": `${category.title} | ${category.name} by Sapna Shri Jewellers`,
     "description": category.description,
     "url": `${baseURL}/category/${category.slug}`,
     "numberOfItems": products.length,

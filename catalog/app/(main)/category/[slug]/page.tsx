@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         && p.weight > 0
         && p.name.length > 4);
 
-    const title = `${category.name} | ${category.englishName} by Sapna Shri Jewellers`;
+    const title = `${category.name} | ${category.title} by Sapna Shri Jewellers`;
     const description = category.description;
 
     const imageUrl =
@@ -91,14 +91,14 @@ export default async function CategoryPage({ params }: { params: { slug: string 
             <JsonLd json={JsonLdObj} />
             <div className="pl-4 border-l-4 border-primary/70 mb-4">
                 <h1 className="text-2xl md:text-3xl font-yatra font-bold">
-                    {category.name} | {category.englishName}
+                    {category.name} | {category.title}
                 </h1>
                 <p className="mt-1 text-sm md:text-base text-muted-foreground/90 leading-relaxed">
                     {category.description}
                 </p>
             </div>
             <div className="mb-6">
-                    <RotatingBanner key={category.slug}  page={category.slug} />
+                    <RotatingBanner key={category.slug}  page={category.slug}  />
                   </div>
             {filtered.length === 0 ? (
                 <p>इस श्रेणी में कोई उत्पाद नहीं मिला.</p>

@@ -29,7 +29,7 @@ export interface Product {
 
 export interface Category {
   name: string;
-  englishName: string,
+  title: string,
   rank: number,
   slug: string,
   description: string,

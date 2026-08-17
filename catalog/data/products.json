@@ -121,7 +121,7 @@
   {
     "id": 4,
     "name": "Sawariya Seth Silver Ring",
-    "category": "सांवरिया सेठ रिंग",
+    "category": "Sawariya Seth Ring",
     "highlights": [
       "Symbol of devotion to Sawariya Seth",
       "intricately carved silver ring with floral and wave patterns",
@@ -231,7 +231,7 @@
   },
   {
     "id": 7,
-    "name": "Personalised Couple Initials 925 Sterling Silver Band Set",
+    "name": "Naam Wali Chandi Ki Ring",
     "category": "Personalised Silver Rings",
     "highlights": [
       "💍 Made for Your Personal Story",
@@ -267,11 +267,11 @@
     "rating": 4,
     "ratingCount": 112,
     "Lock": "",
-    "slug": "personalised-couple-initials-925-sterling-silver-band-set-7"
+    "slug": "naam-wali-chandi-ki-ring-7"
   },
   {
     "id": 8,
-    "name": "Naam Wali Chandi Ki Ring",
+    "name": "Personalised Couple Initials 925 Sterling Silver Band Set",
     "category": "Personalised Silver Rings",
     "highlights": [
       "✨ Modern Personalised Ring Design",
@@ -307,7 +307,7 @@
     "rating": 4.1,
     "ratingCount": 113,
     "Lock": "",
-    "slug": "naam-wali-chandi-ki-ring-8"
+    "slug": "personalised-couple-initials-925-sterling-silver-band-set-8"
   },
   {
     "id": 9,
@@ -389,7 +389,7 @@
   },
   {
     "id": 11,
-    "name": "Hindi Name Silver Ring",
+    "name": "Silver Name Ring",
     "category": "Personalised Silver Rings",
     "highlights": [
       "✨ Express Yourself with Custom Jewellery",
@@ -398,7 +398,7 @@
       "🎁 Perfect Birthday & Anniversary Gift",
       "🔒 Secure Online Purchase"
     ],
-    "description": "",
+    "description": "Make a striking statement of heritage and individuality with the Bold Look Rajwadi Silver Ring. Expertly crafted from genuine 925 Sterling Silver, this ring merges royal traditional aesthetics with modern personalized flair. Featuring a commanding square top surface adorned with a raised initial letter (customizable) and intricate vintage-inspired detailing along the bands, this piece is designed for those who appreciate substantial, masculine, and culturally rich statement jewellery.",
     "images": [
       "hindi-name-silver-ring-devnagri-ssj-11-a.webp",
       "devnagri-font-closeup-ssj-11-b.webp",
@@ -424,7 +424,7 @@
     "rating": 4.7,
     "ratingCount": 37,
     "Lock": "",
-    "slug": "hindi-name-silver-ring-11"
+    "slug": "silver-name-ring-11"
   },
   {
     "id": 12,
@@ -668,7 +668,7 @@
   },
   {
     "id": 18,
-    "name": "Photo Engraved Silver Ring",
+    "name": "Alphabet Letter Engraved Silver Ring",
     "category": "Personalised Silver Rings",
     "highlights": [
       "💎 Custom Silver Ring Made for You",
@@ -704,7 +704,7 @@
     "rating": 4.4,
     "ratingCount": 23,
     "Lock": "",
-    "slug": "photo-engraved-silver-ring-18"
+    "slug": "alphabet-letter-engraved-silver-ring-18"
   },
   {
     "id": 19,
@@ -747,7 +747,7 @@
   },
   {
     "id": 22,
-    "name": "Date Engraved Silver Ring",
+    "name": "Name Engraved Silver Ring",
     "category": "Personalised Silver Rings",
     "highlights": [
       "💍 Personalised Jewellery Made Specially For You",
@@ -763,7 +763,7 @@
       "ring-on-hand-unisex-ssj-22-c.webp",
       "925-unisex-hallmark-ssj-22-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Authentic Silver Jewellery with 925 Purity",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -782,12 +782,12 @@
     "rating": 4.6,
     "ratingCount": 106,
     "Lock": "",
-    "slug": "date-engraved-silver-ring-22"
+    "slug": "name-engraved-silver-ring-22"
   },
   {
     "id": 23,
     "name": "Sawariya Seth Silver Ring",
-    "category": "सांवरिया सेठ रिंग",
+    "category": "Sawariya Seth Ring",
     "highlights": [
       "Symbol of devotion to Sawariya Seth",
       "intricately carved silver ring with floral and wave patterns",
@@ -798,7 +798,7 @@
     "images": [
       "IMG_20251003_061845.webp"
     ],
-    "brandText": "",
+    "brandText": "Made with 92.5% Silver Purity (925 Silver)",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -809,7 +809,7 @@
     "weight": 6,
     "makingCharges": 55,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -821,18 +821,18 @@
   {
     "id": 24,
     "name": "Sawariya Seth Silver Ring",
-    "category": "सांवरिया सेठ रिंग",
+    "category": "Sawariya Seth Ring",
     "highlights": [
       "Symbol of devotion to Sawariya Seth",
       "intricately carved silver ring with floral and wave patterns",
       "90% purity",
       "elegant devotional jewelry."
     ],
-    "description": "",
+    "description": "A meaningful jewellery piece for devotees, this Silver Rajwadi Sawariya Seth Ji Ring carries a unique spiritual essence. Its refined design and premium silver finish create a sophisticated look that can be worn on every occasion. This Sawariya Seth Chandi Ring is a beautiful expression of faith and devotion.",
     "images": [
       "IMG_20251003_062427.webp"
     ],
-    "brandText": "",
+    "brandText": "Crafted in 925 Silver with 92.5% Purity",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -843,7 +843,7 @@
     "weight": 5.5,
     "makingCharges": 55,
     "discount": 0,
-    "newArrival": true,
+    "newArrival": false,
     "HUID": false,
     "available": true,
     "active": true,
@@ -869,7 +869,7 @@
       "alphabet-engraving-closeup-detail-ssj-25-b.webp",
       "alphabet-name-ring-on-hand-ssj-25-c.webp"
     ],
-    "brandText": "",
+    "brandText": "Genuine 925 Silver (92.5% Pure Silver)",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -908,7 +908,7 @@
       "initial-ring-closeup-ssj-26-b.webp",
       "initial-ring-on-finger-ssj-26-c.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium Quality 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -948,7 +948,7 @@
       "both-name-initial-ring-hand-ssj-27-c.webp",
       "925-two-letter-hallmark-ssj-27-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Authentic 925 Silver Purity",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -971,7 +971,7 @@
   },
   {
     "id": 28,
-    "name": "Heart with Name Silver Ring Customised Gift",
+    "name": "Initial Name Silver Ring Customised Gift",
     "category": "Personalised Silver Rings",
     "highlights": [
       "✨ Exclusive Personalised Silver Jewellery",
@@ -986,7 +986,7 @@
       "heart-design-closeup-ssj-28-b.webp",
       "romantic-ring-on-hand-ssj-28-c.webp"
     ],
-    "brandText": "",
+    "brandText": "Designed with 92.5% Pure Silver Quality",
     "care": "SILVER_GENERAL",
     "for": "her",
     "type": [
@@ -1005,7 +1005,7 @@
     "rating": 4.6,
     "ratingCount": 11,
     "Lock": "",
-    "slug": "heart-with-name-silver-ring-customised-gift-28"
+    "slug": "initial-name-silver-ring-customised-gift-28"
   },
   {
     "id": 29,
@@ -1024,7 +1024,7 @@
       "love-engraving-closeup-ssj-29-b.webp",
       "love-ring-on-finger-ssj-29-c.webp"
     ],
-    "brandText": "",
+    "brandText": "Made from 925 Sterling Silver",
     "care": "SILVER_GENERAL",
     "for": "her",
     "type": [
@@ -1064,7 +1064,7 @@
       "two-name-ring-on-hand-ssj-30-c.webp",
       "925-couple-ring-hallmark-ssj-30-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Quality Crafted with 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -1103,7 +1103,7 @@
       "ear-bali-silver-modern-design-ssj-31-c.webp",
       "modern-silver-hoops-ssj-31-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Pure Elegance with 925 Silver Quality",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -1143,7 +1143,7 @@
       "ear-bali-silver-modern-design-ssj-32-c.webp",
       "modern-silver-hoops-ssj-32-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Trusted 92.5% Silver Purity",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -1182,7 +1182,7 @@
       "ear-bali-silver-modern-design-ssj-33-c.webp",
       "modern-silver-hoops-ssj-33-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Crafted Using Authentic 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "her",
     "type": [
@@ -1223,7 +1223,7 @@
       "ear-bali-silver-modern-design-ssj-34-c.webp",
       "modern-silver-hoops-ssj-34-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Made with 92.5% Silver Quality",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -1263,7 +1263,7 @@
       "ear-bali-silver-new-design-ssj-35-c.webp",
       "filgree-silver-hoops-ssj-35-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Experience Genuine 925 Silver Jewellery",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -1302,7 +1302,7 @@
       "ear-bali-silver-modern-design-ssj-36-c.webp",
       "modern-silver-hoops-ssj-36-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium Finish with 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "her",
     "type": [
@@ -1343,7 +1343,7 @@
       "ear-bali-silver-modern-design-ssj-37-c.webp",
       "silver-spiral-bali-ssj-37-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Authentic Silver Jewellery with 925 Purity",
     "care": "SILVER_GENERAL",
     "for": "her",
     "type": [
@@ -1383,7 +1383,7 @@
       "silver-dangle-bali-blue-ssj-38-c.webp",
       "modern-blue-stone-bali-ssj-38-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Crafted for You in 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "her",
     "type": [
@@ -1423,7 +1423,7 @@
       "silver-bali-carved-design-ssj-39-c.webp",
       "modern-bali-silver-ssj-39-d.webp"
     ],
-    "brandText": "",
+    "brandText": "High-Quality 925 Silver Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -1464,7 +1464,7 @@
       "premium-silver-bali-design-ssj-40-c.webp",
       "silver-bali-loop-ssj-40-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Elegant Designs in 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "her",
     "type": [
@@ -1504,7 +1504,7 @@
       "lightweight-silver-bali-ssj-41-c.webp",
       "classic-silver-bali-ssj-41-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Original 925 Silver Purity Jewellery",
     "care": "SILVER_GENERAL",
     "for": "her",
     "type": [
@@ -1545,7 +1545,7 @@
       "spiritual-silver-bali-ssj-42-c.webp",
       "designer-rudraksha-bali-ssj-42-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Finely Crafted in Genuine 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -1584,7 +1584,7 @@
       "beaded-bali-with-rudraksha-ssj-43-b.webp",
       "traditional-silver-rudraksha-bali-ssj-43-c.webp"
     ],
-    "brandText": "",
+    "brandText": "Made with Premium 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -1622,7 +1622,7 @@
       "silver-bali-pattern-rudraksha-ssj-44-a.webp",
       "engraved-bali-with-rudraksha-ssj-44-b.webp"
     ],
-    "brandText": "",
+    "brandText": "Crafted with 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -1662,7 +1662,7 @@
       "everyday-wear-silver-bali-ssj-45-c.webp",
       "elegant-silver-earrings-for-women-ssj-45-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Genuine Silver Quality with 925 Purity",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -1701,7 +1701,7 @@
       "silver-heart-dangle-hoops-ssj-46-b.webp",
       "romantic-heart-silver-earrings-ssj-46-c.webp"
     ],
-    "brandText": "",
+    "brandText": "925 Silver Crafted for Lasting Elegance",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -1741,7 +1741,7 @@
       "handcrafted-silver-jewelry-nagda-ssj-47-c.webp",
       "premium-quality-chandi-bali-ssj-47-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium 92.5% Silver Jewellery",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -1781,7 +1781,7 @@
       "designer-silver-jewelry-wedding-ssj-48-c.webp",
       "premium-bridal-silver-earrings-ssj-48-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Made Using Genuine 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -1794,7 +1794,7 @@
     "weight": 4.39,
     "makingCharges": 80,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -1821,7 +1821,7 @@
       "modern-925-sterling-silver-hoops-ssj-49-c.webp",
       "lightweight-silver-earrings-urban-ssj-49-d.webp"
     ],
-    "brandText": "",
+    "brandText": "92.5% Pure Silver for Elegant Styling",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -1861,7 +1861,7 @@
       "durable-silver-hoop-earrings-men-ssj-50-c.webp",
       "minimalist-silver-accessories-men-ssj-50-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Authentic 925 Silver Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -1901,7 +1901,7 @@
       "peacock-feather-krishna-silver-pendant-ssj-51-c.webp",
       "devotional-radha-krishna-silver-jewellery-ssj-51-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Crafted in Premium 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -1941,7 +1941,7 @@
       "peacock-feather-krishna-pendant-ssj-52-c.webp",
       "lord-krishna-silver-jewellery-ssj-52-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Elegant Jewellery Made with 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -1982,7 +1982,7 @@
       "jai-shree-krishna-silver-pendant-ssj-53-c.webp",
       "radhe-krishna-devotional-silver-jewellery-ssj-53-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Genuine 92.5% Silver Quality",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -2022,7 +2022,7 @@
       "mor-pankh-silver-pendant-ssj-54-c.webp",
       "spiritual-krishna-silver-pendant-ssj-54-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Made with Authentic 925 Silver Quality",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -2062,7 +2062,7 @@
       "premium-radha-krishna-silver-jewellery-ssj-55-c.webp",
       "peacock-feather-krishna-pendant-set-ssj-55-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium Craftsmanship in 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -2103,7 +2103,7 @@
       "krishna-mor-pankh-silver-pendant-ssj-56-c.webp",
       "devotional-peacock-feather-silver-jewellery-ssj-56-d.webp"
     ],
-    "brandText": "",
+    "brandText": "925 Silver Jewellery with 92.5% Purity",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -2143,7 +2143,7 @@
       "mor-pankh-krishna-silver-pendant-ssj-57-c.webp",
       "lord-krishna-devotional-pendant-ssj-57-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Crafted from High-Quality 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -2156,7 +2156,7 @@
     "weight": 2.28,
     "makingCharges": 60,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -2183,7 +2183,7 @@
       "spiritual-om-silver-pendant-ssj-58-c.webp",
       "krishna-inspired-silver-jewellery-ssj-58-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Pure Silver Elegance with 925 Quality",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -2223,7 +2223,7 @@
       "lord-krishna-silver-necklace-ssj-59-c.webp",
       "spiritual-silver-pendant-for-men-and-women-ssj-59-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Made with Genuine 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -2264,7 +2264,7 @@
       "premium-peacock-feather-silver-pendant-ssj-60-d.webp",
       "krishna-silver-chain-pendat-ssj-60-e.webp"
     ],
-    "brandText": "",
+    "brandText": "Fine Craftsmanship in 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -2304,7 +2304,7 @@
       "mor-pankh-devotional-silver-pendants-ssj-61-c.webp",
       "premium-krishna-silver-jewellery-ssj-61-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Authentic 92.5% Pure Silver Jewellery",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -2344,7 +2344,7 @@
       "personalised-krishna-silver-pendant-ssj-62-c.webp",
       "krishna-flute-name-silver-jewellery-ssj-62-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium Silver Jewellery in 925 Purity",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -2357,7 +2357,7 @@
     "weight": 4,
     "makingCharges": 60,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -2383,7 +2383,7 @@
       "925-silver-radha-krishna-pendant-ssj-63-b.webp",
       "radha-krishna-devotional-jewellery-ssj-63-c.webp"
     ],
-    "brandText": "",
+    "brandText": "Crafted with Genuine 925 Silver Quality",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -2423,7 +2423,7 @@
       "radha-krishna-flute-silver-pendant-ssj-64-c.webp",
       "devotional-radha-silver-jewellery-ssj-64-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Elegant Craftsmanship with 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -2463,7 +2463,7 @@
       "mor-pankh-flute-silver-jewellery-ssj-65-c.webp",
       "premium-krishna-pendant-set-ssj-65-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Made from Premium 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -2503,7 +2503,7 @@
       "double-peacock-feather-necklace-ssj-66-c.webp",
       "ethnic-silver-peacock-pendant-ssj-66-d.webp"
     ],
-    "brandText": "",
+    "brandText": "92.5% Pure Silver Crafted with Care",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -2543,7 +2543,7 @@
       "spiritual-wheel-silver-pendant-ssj-67-c.webp",
       "traditional-dharmachakra-jewellery-ssj-67-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Genuine 925 Silver for Timeless Elegance",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -2581,7 +2581,7 @@
       "radhe-flute-silver-pendant-ssj-68-a.webp",
       "925-sterling-silver-radhe-pendant-ssj-68-b.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium Quality Crafted in 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -2621,7 +2621,7 @@
       "om-design-silver-pendant-ssj-69-c.webp",
       "minimalist-om-silver-jewellery-ssj-69-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Authentic Silver with 92.5% Purity",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -2661,7 +2661,7 @@
       "krishna-flute-silver-pendant-ssj-70-c.webp",
       "artistic-enamel-silver-pendant-ssj-70-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Beautifully Crafted in 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -2674,7 +2674,7 @@
     "weight": 1.67,
     "makingCharges": 60,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -2701,7 +2701,7 @@
       "shree-krishna-name-silver-necklace-ssj-72-c.webp",
       "devotional-krishna-english-pendant-ssj-72-d.webp"
     ],
-    "brandText": "",
+    "brandText": "925 Silver Quality You Can Trust",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -2741,7 +2741,7 @@
       "shree-krishna-script-silver-necklace-ssj-73-c.webp",
       "traditional-hindi-krishna-pendant-ssj-73-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Made with Fine 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -2781,7 +2781,7 @@
       "radha-krishna-couple-silver-necklace-ssj-74-c.webp",
       "traditional-radha-krishna-jewellery-ssj-74-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Genuine 925 Silver Jewellery Quality",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -2816,7 +2816,7 @@
       "red-yellow-mauli-shiv-silver-rakhi-ssj-75-c.webp",
       "rudraksha-shiv-silver-rakhi-ssj-75-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium 925 Silver Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [],
@@ -2845,7 +2845,7 @@
       "red-yellow-mauli-silver-rakhi-ssj-76-c.webp",
       "traditional-silver-rakhi-with-beads-ssj-76-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Crafted Using 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [],
@@ -2874,7 +2874,7 @@
       "traditional-ganesha-silver-rakhi-ssj-77-c.webp",
       "red-braided-silver-ganesha-rakhi-ssj-77-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Elegant 925 Silver Jewellery",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [],
@@ -2910,7 +2910,7 @@
       "devotional-sanwariya-seth-jewellery-ssj-78-d.webp",
       "sanwariya-seth-silver-locketssj-78-e.webp"
     ],
-    "brandText": "",
+    "brandText": "Authentic 925 Silver Quality",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -2922,7 +2922,7 @@
     "weight": 3,
     "makingCharges": 50,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -2947,7 +2947,7 @@
       "textured-sanwariya-silver-pendant-ssj-79-a.webp",
       "modern-sanwariya-name-necklace-ssj-79-b.webp"
     ],
-    "brandText": "",
+    "brandText": "Made with Premium 92.5% Silver Purity",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -2980,8 +2980,13 @@
       "🔒 Secure Payment Experience"
     ],
     "description": "Discover the elegance of devotion with this classic Sanwariya silver pendant. Featuring graceful Hindi calligraphy, this timeless piece is a heartfelt tribute to the Lord and a stylish addition to your collection.",
-    "images": [],
-    "brandText": "",
+    "images": [
+      "calligraphic-sanwariya-silver-pendant-ssj-80-a.webp",
+      "hindi-script-sanwariya-necklace-ssj-80-b",
+      "elegant-sanwariya-hindi-pendant-ssj-80-c",
+      "traditional-sanwariya-calligraphy-ssj-80-d"
+    ],
+    "brandText": "Fine Jewellery Crafted in 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -3015,55 +3020,12 @@
     ],
     "description": "Carry the divine blessings of Lord Shiva with this \n925 Sterling Silver Har Har Mahadev Ring. \nDesigned with the sacred \"हर हर महादेव\" inscription\n and a beautifully crafted Trishul motif, this ring \nsymbolizes faith, courage, and inner strength.\n Its traditional styling makes it a perfect choice\n for devotees who appreciate spiritual jewellery\n with a timeless look. Crafted from genuine \n925 sterling silver, the ring offers lasting quality\n and everyday comfort. Whether worn during \ntemple visits, meditation, festivals, or as part \nof your daily style, this Mahadev silver ring \nserves as a meaningful expression of devotion.\n It also makes a thoughtful gift for Mahashivratri,\n Raksha Bandhan, birthdays, anniversaries,\n and other special occasions.",
     "images": [
-      "Har",
-      "Har",
-      "Mahadev",
-      "925",
-      "Sterling",
-      "Silver",
-      "Ring",
-      "for",
-      "Men",
-      "with",
-      "Trishul",
-      "Design",
-      "ssj-81-a.webp",
-      "Premium",
-      "925",
-      "Sterling",
-      "Silver",
-      "Har",
-      "Har",
-      "Mahadev",
-      "Devotional",
-      "Ring",
-      "for",
-      "Men",
-      "ssj-81-b.webp",
-      "Genuine",
-      "925",
-      "Silver",
-      "Shiva",
-      "Har",
-      "Har",
-      "Mahadev",
-      "Ring",
-      "with",
-      "Sacred",
-      "Trishul",
-      "ssj-81-c.webp",
-      "Men's",
-      "925",
-      "Sterling",
-      "Silver",
-      "Har",
-      "Har",
-      "Mahadev",
-      "Religious",
-      "Ring",
-      "ssj-81-d.webp"
+      "har-har-mahadev-925-sterling-silver-ring-for-men-with-trishul-design-ssj-81-a.webp",
+      "premium-925-sterling-silver-har-har-mahadev-devotional-ring-for-men-ssj-81-b.webp",
+      "genuine-925-silver-shiva-har-har-mahadev-ring-with-sacred-trishul-ssj-81-c.webp",
+      "mens-925-sterling-silver-har-har-mahadev-religious-ring-ssj-81-d.webp"
     ],
-    "brandText": "",
+    "brandText": "92.5% Pure Silver for Premium Quality",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -3076,7 +3038,7 @@
     "weight": 6.5,
     "makingCharges": 60,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -3098,46 +3060,12 @@
     ],
     "description": "Carry the blessings of Baba Mahakal with this beautifully crafted silver ring featuring the sacred \"बाबा महाकाल\" inscription and a finely detailed Trishul at the top. Designed for devotees of Lord Shiva, this ring represents faith, courage, and spiritual strength while offering a clean, premium look suitable for everyday wear. The smooth polished finish highlights the intricate lettering, making it an elegant choice for temple visits, religious occasions, festivals, and daily styling. Whether worn as a symbol of devotion or gifted to someone who follows Mahadev, this ring is a meaningful addition to any spiritual jewellery collection.",
     "images": [
-      "Baba",
-      "Mahakal",
-      "Silver",
-      "Ring",
-      "for",
-      "Men",
-      "with",
-      "Sacred",
-      "Trishul",
-      "Design",
-      "ssj-82-a.webp",
-      "Baba",
-      "Mahakal",
-      "Devotional",
-      "Silver",
-      "Ring",
-      "for",
-      "Men",
-      "ssj-82-b.webp",
-      "Religious",
-      "Silver",
-      "Ring",
-      "with",
-      "Baba",
-      "Mahakal",
-      "Engraving",
-      "and",
-      "Trishul",
-      "ssj-82-c.webp",
-      "Premium",
-      "Baba",
-      "Mahakal",
-      "Spiritual",
-      "Silver",
-      "Ring",
-      "for",
-      "Men",
-      "ssj-82-d.webp"
+      "baba-mahakal-silver-ring-for-men-with-sacred-trishul-design-ssj-82-a.webp",
+      "baba-mahakal-devotional-silver-ring-for-men-ssj-82-b.webp",
+      "religious-silver-ring-with-baba-mahakal-engraving-and-trishul-ssj-82-c.webp",
+      "premium-baba-mahakal-spiritual-silver-ring-for-men-ssj-82-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Genuine 925 Silver Crafted with Precision",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -3171,49 +3099,12 @@
     ],
     "description": "Made with 92.5% silver purity (925 sterling silver certified), this devotional Bhole Baba Ring is designed for those who carry their faith with pride. The ring features the sacred \"भोले बाबा\" inscription in an elegant engraved style, creating a timeless spiritual look for everyday wear. Its polished finish enhances the clean detailing, making it suitable for temple visits, religious gatherings, festivals, and daily styling. If you're searching for a meaningful Mahadev Silver Ring or a classic Shiva Silver Ring, this design beautifully reflects devotion while complementing both traditional and modern outfits. It also makes a thoughtful gift for Mahashivratri, birthdays, anniversaries, and anyone devoted to Lord Shiva.",
     "images": [
-      "Bhole",
-      "Baba",
-      "Silver",
-      "Ring",
-      "for",
-      "Men",
-      "with",
-      "Sacred",
-      "Hindi",
-      "Engraving",
-      "ssj-83-a.webp",
-      "Premium",
-      "Bhole",
-      "Baba",
-      "Devotional",
-      "Silver",
-      "Ring",
-      "for",
-      "Men",
-      "ssj-83-b.webp",
-      "Mahadev",
-      "Silver",
-      "Ring",
-      "with",
-      "Bhole",
-      "Baba",
-      "Hindi",
-      "Script",
-      "Design",
-      "ssj-83-c.webp",
-      "Religious",
-      "Shiva",
-      "Silver",
-      "Ring",
-      "for",
-      "Men",
-      "with",
-      "Bhole",
-      "Baba",
-      "Inscription",
-      "ssj-83-d.webp"
+      "bhole-baba-silver-ring-for-men-with-sacred-hindi-engraving-ssj-83-a.webp",
+      "premium-bhole-baba-devotional-silver-ring-for-men-ssj-83-b.webp",
+      "mahadev-silver-ring-with-bhole-baba-hindi-script-design-ssj-83-c.webp",
+      "religious-shiva-silver-ring-for-men-with-bhole-baba-inscription-ssj-83-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium Silver Finish with 925 Purity",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -3247,36 +3138,12 @@
     ],
     "description": "Featuring the powerful Sanskrit phrase \"अंतः अस्ति प्रारंभः\" with a finely engraved Trishul, this spiritual band ring represents new beginnings, inner strength, and the continuous journey of life. Its sleek minimalist profile makes it suitable for daily wear while allowing the meaningful mantra to remain the focal point of the design. This piece appeals to those who value motivational symbolism along with spiritual craftsmanship. It naturally complements collections inspired by Mahadev silver jewellery and devotional accessories without being overly ornate. Made with 92.5% silver purity (925 sterling silver certified), it delivers premium quality, comfort, and enduring elegance for everyday use.",
     "images": [
-      "Anta",
-      "Asti",
-      "Prarambh",
-      "Silver",
-      "Band",
-      "Ring",
-      "ssj-84-a.webp",
-      "Spiritual",
-      "Sanskrit",
-      "Mantra",
-      "Silver",
-      "Ring",
-      "ssj-84-b.webp",
-      "Trishul",
-      "Mantra",
-      "Sterling",
-      "Silver",
-      "Band",
-      "Ring",
-      "ssj-84-c.webp",
-      "Premium",
-      "Sanskrit",
-      "Engraved",
-      "Silver",
-      "Ring",
-      "for",
-      "Men",
-      "ssj-84-d.webp"
+      "anta-asti-prarambh-silver-band-ring-ssj-84-a.webp",
+      "spiritual-sanskrit-mantra-silver-ring-ssj-84-b.webp",
+      "trishul-mantra-sterling-silver-band-ring-ssj-84-c.webp",
+      "premium-sanskrit-engraved-silver-ring-for-men-ssj-84-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Made Using 92.5% Pure Silver Quality",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -3311,36 +3178,12 @@
     ],
     "description": "The sacred Om (ॐ) symbol has long represented peace, spiritual awareness, and positive energy. This beautifully crafted ring highlights the iconic symbol with intricate detailing, making it an ideal choice for devotees and anyone who appreciates meaningful jewellery. The elegant design pairs effortlessly with both traditional and contemporary outfits while serving as a subtle reminder of inner balance and mindfulness. Whether worn during meditation, temple visits, or everyday life, it carries timeless spiritual significance. Made with 92.5% silver purity (925 sterling silver certified), this ring combines devotional symbolism with premium craftsmanship for lasting everyday wear.",
     "images": [
-      "Om",
-      "Symbol",
-      "Silver",
-      "Ring",
-      "for",
-      "Men",
-      "ssj-85-a.webp",
-      "925",
-      "Sterling",
-      "Silver",
-      "Om",
-      "Devotional",
-      "Ring",
-      "ssj-85-b.webp",
-      "Religious",
-      "Om",
-      "Silver",
-      "Ring",
-      "with",
-      "Spiritual",
-      "Design",
-      "ssj-85-c.webp",
-      "Premium",
-      "Om",
-      "Engraved",
-      "Silver",
-      "Ring",
-      "ssj-85-d.webp"
+      "om-symbol-silver-ring-for-men-ssj-85-a.webp",
+      "925-sterling-silver-om-devotional-ring-ssj-85-b.webp",
+      "religious-om-silver-ring-with-spiritual-design-ssj-85-c.webp",
+      "premium-om-engraved-silver-ring-ssj-85-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Authentic 925 Silver Jewellery",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -3374,37 +3217,12 @@
     ],
     "description": "Embodying profound spiritual connection, this square-profile ring features the sacred \"ॐ नमः शिवाय\" mantra, meticulously embossed to inspire devotion. Crafted from certified 925 sterling silver, the ring combines a bold, modern silhouette with traditional holiness, making it a perfect accessory for spiritual seekers and those who value meaningful jewellery. Its polished finish ensures a sophisticated look suitable for both daily wear and religious ceremonies, while the high-quality silver construction guarantees lasting durability and shine. This piece is a testament to timeless faith, designed for the modern man who appreciates elegant, spirit-centered craftsmanship.",
     "images": [
-      "Om",
-      "Namah",
-      "Shivaya",
-      "Silver",
-      "Ring",
-      "for",
-      "Men",
-      "ssj-86-a.webp",
-      "Spiritual",
-      "Square",
-      "Mantra",
-      "Sterling",
-      "Silver",
-      "Ring",
-      "ssj-86-b.webp",
-      "Detailed",
-      "Om",
-      "Namah",
-      "Shivaya",
-      "Devotional",
-      "Ring",
-      "ssj-86-c.webp",
-      "Premium",
-      "Square",
-      "Shiva",
-      "Mantra",
-      "Silver",
-      "Ring",
-      "ssj-86-d.webp"
+      "om-namah-shivaya-silver-ring-for-men-ssj-86-a.webp",
+      "spiritual-square-mantra-sterling-silver-ring-ssj-86-b.webp",
+      "detailed-om-namah-shivaya-devotional-ring-ssj-86-c.webp",
+      "premium-square-shiva-mantra-silver-ring-ssj-86-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Crafted in Genuine 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -3438,33 +3256,12 @@
     ],
     "description": "Embrace divine strength with this elegant band ring, featuring the powerful \"महाकाल\" inscription alongside the sacred Trishul symbol. Expertly crafted from certified 925 sterling silver, this minimalist band offers a sophisticated, modern aesthetic that carries deep spiritual significance. Its smooth, polished finish and comfortable fit make it an ideal choice for daily wear, allowing you to carry a symbol of faith with effortless style. Whether for personal devotion or as a meaningful gift, this hallmarked silver ring represents a perfect blend of timeless tradition and contemporary craftsmanship.",
     "images": [
-      "Minimalist",
-      "Mahakal",
-      "Sterling",
-      "Silver",
-      "Band",
-      "ssj-87-a.webp",
-      "Mahakal",
-      "Trishul",
-      "Symbol",
-      "Silver",
-      "Ring",
-      "ssj-87-b.webp",
-      "Engraved",
-      "Mahakal",
-      "Devotional",
-      "Band",
-      "Ring",
-      "ssj-87-c.webp",
-      "925",
-      "Silver",
-      "Mahakal",
-      "Band",
-      "for",
-      "Men",
-      "ssj-87-d.webp"
+      "minimalist-mahakal-sterling-silver-band-ssj-87-a.webp",
+      "mahakal-trishul-symbol-silver-ring-ssj-87-b.webp",
+      "engraved-mahakal-devotional-band-ring-ssj-87-c.webp",
+      "925-silver-mahakal-band-for-men-ssj-87-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium Elegance in 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -3499,38 +3296,13 @@
     ],
     "description": "Celebrate your devotion with this refined band ring, featuring the sacred \"महादेव\" inscription beautifully paired with the divine Trishul symbol. Meticulously fashioned from certified 925 sterling silver, this ring offers a minimalist and contemporary design that seamlessly integrates spirituality into your everyday wardrobe. The polished surface ensures a sleek, high-end look, while the solid construction provides the durability required for daily wear. Reflecting our commitment to quality, this hallmarked piece is an essential addition for those who appreciate understated, faith-inspired jewellery that stands the test of time.",
     "images": [
-      "Polished",
-      "Mahadev",
-      "Sterling",
-      "Silver",
-      "Band",
-      "ssj-88-a.webp",
-      "Minimalist",
-      "Mahadev",
-      "Trishul",
-      "Silver",
-      "Ring",
-      "ssj-88-b.webp",
-      "Engraved",
-      "Mahadev",
-      "Spiritual",
-      "Band",
-      "Ring",
-      "ssj-88-c.webp",
-      "925",
-      "Silver",
-      "Mahadev",
-      "Devotional",
-      "Ring",
-      "ssj-88-d.webp",
-      "Shiva",
-      "Silver",
-      "Band",
-      "Unisex",
-      "Design",
-      "ssj-88-e.webp"
+      "polished-mahadev-sterling-silver-band-ssj-88-a.webp",
+      "minimalist-mahadev-trishul-silver-ring-ssj-88-b.webp",
+      "engraved-mahadev-spiritual-band-ring-ssj-88-c.webp",
+      "925-silver-mahadev-devotional-ring-ssj-88-d.webp",
+      "shiva-silver-band-unisex-design-ssj-88-e.webp"
     ],
-    "brandText": "",
+    "brandText": "925 Silver Crafted for Quality",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -3564,30 +3336,10 @@
     ],
     "description": "Inspired by the simple yet powerful devotion to Lord Shiva, this Square Bhole Baba Ring features the sacred \"भोले बाबा\" inscription in a bold square centerpiece that gives it a distinctive spiritual appeal. The clean polished finish enhances the elegant craftsmanship, making it suitable for everyday wear, temple visits, religious ceremonies, and festive occasions. Whether paired with ethnic attire or modern outfits, this ring reflects faith while maintaining a refined look. If you're searching for a timeless Mahadev Silver Ring or a meaningful Shiva Silver Ring, this design is a perfect choice for expressing your devotion in everyday life. Made with 92.5% silver purity (925 sterling silver certified), it combines premium craftsmanship with lasting quality, making it a treasured addition to any spiritual jewellery collection.",
     "images": [
-      "925",
-      "Sterling",
-      "Silver",
-      "Square",
-      "Shiva",
-      "Ring",
-      "with",
-      "Bhole",
-      "Baba",
-      "Design",
-      "ssj-89-a.webp",
-      "Devotional",
-      "Square",
-      "Bhole",
-      "Baba",
-      "Ring",
-      "for",
-      "Men",
-      "in",
-      "Sterling",
-      "Silver",
-      "ssj-89-b.webp"
+      "925-sterling-silver-square-shiva-ring-with-bhole-baba-design-ssj-89-a.webp",
+      "devotional-square-bhole-baba-ring-for-men-in-sterling-silver-ssj-89-b.webp"
     ],
-    "brandText": "",
+    "brandText": "Made with Genuine Silver at 92.5% Purity",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -3599,7 +3351,7 @@
     "weight": 5.5,
     "makingCharges": 60,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -3621,37 +3373,12 @@
     ],
     "description": "Elevate your spiritual collection with this masterfully designed ring, featuring an elegant and artistic representation of the sacred \"Om\" symbol. Crafted from high-quality 925 sterling silver, this ring showcases intricate detailing that captures the essence of devotion with a contemporary, high-fashion aesthetic. Its bold silhouette and polished finish make it an exceptional choice for daily wear, festive celebrations, or spiritual gatherings. Every piece is hallmarked for purity and quality, ensuring a lasting and meaningful accessory for those who appreciate the intersection of traditional symbolism and modern craftsmanship.",
     "images": [
-      "Artistic",
-      "Om",
-      "Symbol",
-      "Sterling",
-      "Silver",
-      "Ring",
-      "ssj-90-a.webp",
-      "Detailed",
-      "Om",
-      "Devotional",
-      "Silver",
-      "Ring",
-      "for",
-      "Men",
-      "ssj-90-b.webp",
-      "Premium",
-      "925",
-      "Silver",
-      "Spiritual",
-      "Om",
-      "Ring",
-      "ssj-90-c.webp",
-      "Elegant",
-      "Divine",
-      "Om",
-      "Sterling",
-      "Silver",
-      "Jewellery",
-      "ssj-90-d.webp"
+      "artistic-om-symbol-sterling-silver-ring-ssj-90-a.webp",
+      "detailed-om-devotional-silver-ring-for-men-ssj-90-b.webp",
+      "premium-925-silver-spiritual-om-ring-ssj-90-c.webp",
+      "elegant-divine-om-sterling-silver-jewellery-ssj-90-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Fine 925 Silver Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -3685,29 +3412,11 @@
     ],
     "description": "Deepen your spiritual journey with this exquisitely crafted band ring, featuring the holy \"ॐ नमः शिवाय\" mantra elegantly flanked by the divine Damru and Trishul symbols. Precision-engineered from certified 925 sterling silver, this ring offers a seamless fusion of traditional devotion and contemporary minimalist design. Its polished finish provides a sophisticated look, while the durable construction ensures it remains a cherished piece for daily wear and religious ceremonies. Hallmarked for authenticity, this ring is a perfect tribute to Lord Shiva for those seeking an accessory that embodies faith, elegance, and premium quality craftsmanship.",
     "images": [
-      "Om",
-      "Namah",
-      "Shivaya",
-      "Damru",
-      "Silver",
-      "Band",
-      "ssj-91-a.webp",
-      "Engraved",
-      "Mantra",
-      "925",
-      "Sterling",
-      "Silver",
-      "Ring",
-      "ssj-91-b.webp",
-      "Premium",
-      "Devotional",
-      "Shiva",
-      "Band",
-      "for",
-      "Men",
-      "ssj-91-c.webp"
+      "om-namah-shivaya-damru-silver-band-ssj-91-a.webp",
+      "engraved-mantra-925-sterling-silver-ring-ssj-91-b.webp",
+      "premium-devotional-shiva-band-for-men-ssj-91-c.webp"
     ],
-    "brandText": "",
+    "brandText": "Crafted with Premium 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -3742,33 +3451,12 @@
     ],
     "description": "Discover the beauty of subtle devotion with this delicate and minimalist ring, featuring a finely engraved \"ॐ\" (Om) symbol. Expertly crafted from certified 925 sterling silver, this ring offers a refined and lightweight design, perfect for those who appreciate understated elegance in their spiritual jewellery. Its polished, sleek band ensures maximum comfort for everyday wear, making it a versatile piece that complements any style. Hallmarked for quality, this ring serves as a timeless reminder of peace and spirituality, meticulously designed to be both durable and beautifully simple.",
     "images": [
-      "Minimalist",
-      "Om",
-      "Sterling",
-      "Silver",
-      "Signet",
-      "Ring",
-      "ssj-92-a.webp",
-      "Delicate",
-      "Om",
-      "Symbol",
-      "Silver",
-      "Ring",
-      "ssj-92-b.webp",
-      "925",
-      "Silver",
-      "Minimalist",
-      "Spiritual",
-      "Ring",
-      "ssj-92-c.webp",
-      "Polished",
-      "Om",
-      "Signet",
-      "Silver",
-      "Band",
-      "ssj-92-d.webp"
+      "minimalist-om-sterling-silver-signet-ring-ssj-92-a.webp",
+      "delicate-om-symbol-silver-ring-ssj-92-b.webp",
+      "925-silver-minimalist-spiritual-ring-ssj-92-c.webp",
+      "polished-om-signet-silver-band-ssj-92-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Authentic Silver Jewellery with 925 Quality",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -3802,47 +3490,12 @@
     ],
     "description": "Embrace the divine energy of Lord Shiva with this beautifully crafted Rudra Mahadev Ring, featuring the sacred \"रुद्र\" inscription topped with a finely detailed Trishul. The clean polished finish and bold devotional design make it a meaningful choice for devotees who appreciate spiritual jewellery with a modern yet traditional appeal. Whether worn during temple visits, festivals, meditation, or everyday life, this ring serves as a constant reminder of strength, protection, and unwavering faith. Made with 92.5% silver purity (925 sterling silver certified), it offers lasting quality and a comfortable wearing experience. If you're looking for a premium Mahadev Silver Ring or a distinctive Shiva Silver Ring, this design is a timeless addition to your collection and an ideal gift for Mahashivratri, birthdays, anniversaries, and other special occasions.",
     "images": [
-      "Rudra",
-      "Mahadev",
-      "Silver",
-      "Ring",
-      "for",
-      "Men",
-      "with",
-      "Trishul",
-      "Design",
-      "ssj-93-a.webp",
-      "925",
-      "Sterling",
-      "Silver",
-      "Rudra",
-      "Shiva",
-      "Ring",
-      "for",
-      "Men",
-      "ssj-93-b.webp",
-      "Religious",
-      "Rudra",
-      "Mahadev",
-      "Silver",
-      "Ring",
-      "with",
-      "Sacred",
-      "Trishul",
-      "Motif",
-      "ssj-93-c.webp",
-      "Premium",
-      "Shiva",
-      "Silver",
-      "Ring",
-      "with",
-      "Rudra",
-      "Engraving",
-      "for",
-      "Men",
-      "ssj-93-d.webp"
+      "rudra-mahadev-silver-ring-for-men-with-trishul-design-ssj-93-a.webp",
+      "925-sterling-silver-rudra-shiva-ring-for-men-ssj-93-b.webp",
+      "religious-rudra-mahadev-silver-ring-with-sacred-trishul-motif-ssj-93-c.webp",
+      "premium-shiva-silver-ring-with-rudra-engraving-for-men-ssj-93-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Elegant Jewellery Crafted in 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -3855,7 +3508,7 @@
     "weight": 7,
     "makingCharges": 55,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -3877,32 +3530,12 @@
     ],
     "description": "Embodying serenity and spiritual focus, this minimalist band ring features a finely engraved \"ॐ\" (Om) symbol. Expertly crafted from certified 925 sterling silver, this ring offers a clean, sophisticated aesthetic that seamlessly integrates spirituality into your daily style. Its polished surface ensures a smooth, high-end feel, while the durable construction is designed for comfortable, consistent wear. Reflecting our commitment to authenticity, this hallmarked piece is an essential choice for those who appreciate understated, faith-inspired jewellery that maintains its elegance over time.",
     "images": [
-      "Polished",
-      "Om",
-      "Sterling",
-      "Silver",
-      "Band",
-      "ssj-94-a.webp",
-      "Minimalist",
-      "Om",
-      "Symbol",
-      "Silver",
-      "Ring",
-      "ssj-94-b.webp",
-      "Engraved",
-      "Om",
-      "Spiritual",
-      "Band",
-      "Ring",
-      "ssj-94-c.webp",
-      "925",
-      "Silver",
-      "Om",
-      "Devotional",
-      "Band",
-      "ssj-94-d.webp"
+      "polished-om-sterling-silver-band-ssj-94-a.webp",
+      "minimalist-om-symbol-silver-ring-ssj-94-b.webp",
+      "engraved-om-spiritual-band-ring-ssj-94-c.webp",
+      "925-silver-om-devotional-band-ssj-94-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Genuine 925 Silver with Premium Finish",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -3926,7 +3559,7 @@
   {
     "id": 95,
     "name": "925 Sterling Silver Sanwariya Seth Ring for Men",
-    "category": "सांवरिया सेठ रिंग",
+    "category": "Sawariya Seth Ring",
     "highlights": [
       "💎 Material: 925 Sterling Silver (92.5% Silver Purity)",
       "✨ Finish: Premium Handmade Silver Finish",
@@ -3941,7 +3574,7 @@
       "Sapna-Shri-Jewellers-Sawariya-Seth-silver-ring-ssj-95-c.webp",
       "Designer-Sawariya-Seth-sterling-silver-ring-ssj-95-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Made from Authentic 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -3966,7 +3599,7 @@
   {
     "id": 96,
     "name": "Sawariya Seth ji ki Chandi ki Ring",
-    "category": "सांवरिया सेठ रिंग",
+    "category": "Sawariya Seth Ring",
     "highlights": [
       "💎 Material: 925 Silver with 92.5% Silver Purity",
       "🙏 Design: Sawariya Seth Devotional Ring with Elegant Detailing",
@@ -3980,7 +3613,7 @@
       "Traditional-Sawariya-Seth-design-silver-ring-ssj-96-b.webp",
       "Modern-Sawariya-Seth-religious-silver-band-ssj-96-c.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium 925 Silver Jewellery Quality",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -4005,7 +3638,7 @@
   {
     "id": 97,
     "name": "Chandi ki Sawariya Seth Ring",
-    "category": "सांवरिया सेठ रिंग",
+    "category": "Sawariya Seth Ring",
     "highlights": [
       "💎 Material: 925 Sterling Silver Jewellery",
       "✨ Finish: Fine Polished Handmade Finish",
@@ -4020,7 +3653,7 @@
       "Daily-wear-Sawariya-Seth-silver-ring-online-ssj-97-c.webp",
       "Spiritual-Sawariya-Seth-silver-accessory-ssj-97-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Crafted for Elegance in Genuine 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -4045,8 +3678,14 @@
   {
     "id": 98,
     "name": "925 Silver Sawariya Seth Ring",
-    "category": "सांवरिया सेठ रिंग",
-    "highlights": [],
+    "category": "Sawariya Seth Ring",
+    "highlights": [
+      "💎 Material: 925 Silver with 92.5% Silver Purity",
+      "🙏 Design: Sawariya Seth Devotional Ring with Elegant Detailing",
+      "✨ Finish: Smooth Premium Craftsmanship",
+      "💳 Cash on Delivery Available*",
+      "🚚 Pan India Delivery Available"
+    ],
     "description": "Premium Sawariya Seth Religious Silver Ring: Add a touch of divinity to your ensemble with this premium Sawariya Seth silver ring. Lightweight, stylish, and durable—this handcrafted silver ring is designed for those who appreciate traditional values. Visit Sapna Shri Jewellers today.",
     "images": [
       "Latest-Sawariya-Seth-silver-ring-design-ssj-98-a.webp",
@@ -4054,7 +3693,7 @@
       "Custom-Sawariya-Seth-silver-jewelry-for-men-ssj-98-c.webp",
       "Divine-Sawariya-Seth-silver-ring-Sapna-Shri-Jewellers-ssj-98-d.webp"
     ],
-    "brandText": "",
+    "brandText": "92.5% Silver Purity with Fine Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -4067,7 +3706,7 @@
     "weight": 7,
     "makingCharges": 55,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -4079,7 +3718,7 @@
   {
     "id": 99,
     "name": "Most Iconic Sawariya Seth Ring",
-    "category": "सांवरिया सेठ रिंग",
+    "category": "Sawariya Seth Ring",
     "highlights": [
       "💎 Material: 92.5% Silver Purity",
       "🙏 Design: Traditional Sawariya Seth Ring Design",
@@ -4094,7 +3733,7 @@
       "Handcrafted-silver-Sawariya-Seth-finger-ring-ssj-99-c.webp",
       "Traditional-Sawariya-Seth-jewelry-by-Sapna-Shri-Jewellers-ssj-99-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Authentic 925 Silver for Everyday Elegance",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -4119,7 +3758,7 @@
   {
     "id": 100,
     "name": "Divine Sawariya Seth Silver Ring Flute Design",
-    "category": "सांवरिया सेठ रिंग",
+    "category": "Sawariya Seth Ring",
     "highlights": [
       "💎 Material: 925 Sterling Silver",
       "✨ Finish: Elegant Handmade Craftsmanship",
@@ -4134,7 +3773,7 @@
       "Premium-Sawariya-Seth-silver-ring-for-devotees-ssj-100-c.webp",
       "Authentic-Sawariya-Seth-collection-silver-ring-ssj-100-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Made with High-Quality 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -4174,7 +3813,7 @@
       "925-sterling-silver-chain-pendant-set-ssj-101-c.webp",
       "teardrop-silver-pendant-necklace-set-ssj-101-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium Craftsmanship Using 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "her",
     "type": [
@@ -4187,7 +3826,7 @@
     "weight": 4.1,
     "makingCharges": 130,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -4214,7 +3853,7 @@
       "elegant-silver-necklace-earring-set-ssj-102-c.webp",
       "cats-eye-silver-pendant-set-ssj-102-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Genuine 92.5% Pure Silver Craft",
     "care": "SILVER_GENERAL",
     "for": "her",
     "type": [
@@ -4254,7 +3893,7 @@
       "sterling-silver-necklace-for-girls-ssj-103-c.webp",
       "square-pendant-silver-chain-set-ssj-103-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Elegant Designs Crafted in 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "her",
     "type": [
@@ -4293,7 +3932,7 @@
       "rectangle-crystal-silver-chain-ssj-104-c.webp",
       "lightweight-silver-pendant-set-ssj-104-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Authentic Silver Quality with 92.5% Purity",
     "care": "SILVER_GENERAL",
     "for": "her",
     "type": [
@@ -4332,7 +3971,7 @@
       "crystal-silver-necklace-set-ssj-105-b.webp",
       "elegant-womens-silver-pendant-ssj-105-c.webp"
     ],
-    "brandText": "",
+    "brandText": "Made with Premium Genuine 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "her",
     "type": [
@@ -4372,7 +4011,7 @@
       "designer-silver-pendant-set-ssj-106-c.webp",
       "party-wear-silver-chain-set-ssj-106-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Fine Quality 92.5% Silver Jewellery",
     "care": "SILVER_GENERAL",
     "for": "her",
     "type": [
@@ -4411,7 +4050,7 @@
       "womens-heart-pendant-set-ssj-107-c.webp",
       "daily-wear-silver-chain-set-ssj-107-d.webp"
     ],
-    "brandText": "",
+    "brandText": "925 Silver Crafted for Elegant Looks",
     "care": "SILVER_GENERAL",
     "for": "her",
     "type": [
@@ -4451,7 +4090,7 @@
       "pearl-pendant-jewellery-set-ssj-108-c.webp",
       "luxury-womens-silver-chain-set-ssj-108-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Genuine 925 Silver with Fine Finish",
     "care": "SILVER_GENERAL",
     "for": "her",
     "type": [
@@ -4491,7 +4130,7 @@
       "daily-wear-silver-chain-pendant-ssj-109-c.webp",
       "925-sterling-silver-heart-pendant-ssj-109-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium Jewellery Made with 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "her",
     "type": [
@@ -4530,7 +4169,7 @@
       "latest-design-silver-chain-pendant-ssj-110-c.webp",
       "dainty-silver-chain-pendant-set-ssj-110-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Crafted with Authentic 925 Silver Purity",
     "care": "SILVER_GENERAL",
     "for": "her",
     "type": [
@@ -4543,7 +4182,7 @@
     "weight": 2.34,
     "makingCharges": 150,
     "discount": 2,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -4570,7 +4209,7 @@
       "party-wear-silver-chain-pendant-ssj-111-c.webp",
       "925-silver-leaf-necklace-pendant-ssj-111-d.webp"
     ],
-    "brandText": "",
+    "brandText": "92.5% Pure Silver Crafted for You",
     "care": "SILVER_GENERAL",
     "for": "her",
     "type": [
@@ -4610,7 +4249,7 @@
       "stylish-silver-chain-pendant-for-women-ssj-113-c.webp",
       "silver-chain-pendant-set-for-daily-wear-ssj-113-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Elegant 925 Silver with Genuine Quality",
     "care": "SILVER_GENERAL",
     "for": "her",
     "type": [
@@ -4650,7 +4289,7 @@
       "latest-design-silver-chain-pendant-ssj-114-c.webp",
       "casual-silver-chain-pendant-for-girls-ssj-114-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Made from Fine 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "her",
     "type": [
@@ -4690,7 +4329,7 @@
       "classic-silver-chain-pendant-set-ssj-115-c.webp",
       "luxury-silver-chain-pendant-for-women-ssj-115-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Authentic 925 Silver with Premium Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "her",
     "type": [
@@ -4729,7 +4368,7 @@
       "stylish-silver-chain-pendant-for-women-ssj-116-c.webp",
       "unique-silver-chain-pendant-set-ssj-116-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium Finish Crafted in 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "her",
     "type": [
@@ -4762,7 +4401,7 @@
       "colourful-bhai-silver-rakhi-raksha-bandhan-ssj-118-c.webp",
       "stylish-silver-bhai-rakhi-pink-beads-ssj-118-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Genuine Silver Jewellery in 925 Purity",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [],
@@ -4791,7 +4430,7 @@
       "devotional-shyam-silver-rakhi-raksha-bandhan-ssj-119-c.webp",
       "traditional-blue-thread-shyam-silver-rakhi-ssj-119-d.webp"
     ],
-    "brandText": "",
+    "brandText": "925 Silver Elegance with 92.5% Purity",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [],
@@ -4820,7 +4459,7 @@
       "red-yellow-thread-ganesha-silver-rakhi-ssj-120-c.webp",
       "lord-ganesha-silver-rakhi-raksha-bandhan-ssj-120-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Crafted from Authentic 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [],
@@ -4855,7 +4494,7 @@
       "bold-look-silver-rudraksha-bali-design-ssj-121-c.webp",
       "spiritual-silver-bali-for-men-ssj-121-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium Quality Jewellery in Genuine 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -4894,7 +4533,7 @@
       "silver-bali-for-women-ssj-122-c.webp",
       "elegant-silver-hoop-earrings-ssj-122-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Made with Genuine 925 Silver Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -4934,7 +4573,7 @@
       "thick-rudraksha-silver-bali-ssj-123-c.webp",
       "spiritual-silver-bali-for-men-ssj-123-d.webp"
     ],
-    "brandText": "",
+    "brandText": "92.5% Pure Silver Crafted for Timeless Style",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -4973,7 +4612,7 @@
       "twisted-silver-bali-earrings-ssj-124-c.webp",
       "minimalist-silver-hoop-earrings-ssj-124-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Authentic 925 Silver with Refined Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -5012,7 +4651,7 @@
       "plain-rudraksha-silver-bali-ssj-125-c.webp",
       "spiritual-silver-bali-earrings-ssj-125-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium 92.5% Silver Quality for Elegant Jewellery",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -5051,7 +4690,7 @@
       "textured-silver-bali-hoops-ssj-126-c.webp",
       "classic-silver-hoop-earrings-ssj-126-d.webp"
     ],
-    "brandText": "",
+    "brandText": "92.5% Pure Silver Crafted for Timeless Style",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -5090,7 +4729,7 @@
       "minimal-silver-hoop-design-ssj-127-b.webp",
       "plain-classic-silver-bali-ssj-127-c.webp"
     ],
-    "brandText": "",
+    "brandText": "Crafted with 925 Silver and 92.5% Silver Purity",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -5102,7 +4741,7 @@
     "weight": 0.62,
     "makingCharges": 50,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -5129,7 +4768,7 @@
       "925-sterling-silver-rudraksha-bali-ssj-128-c.webp",
       "minimal-rudraksha-silver-bali-earring-ssj-128-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Made from Genuine 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -5168,7 +4807,7 @@
       "minimal-silver-hoop-earring-ssj-129-c.webp",
       "classic-silver-bali-design-ssj-129-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium Jewellery Crafted in 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -5208,7 +4847,7 @@
       "925-silver-twisted-bali-earring-ssj-130-c.webp",
       "stylish-rudraksha-silver-bali-ssj-130-d.webp"
     ],
-    "brandText": "",
+    "brandText": "925 Silver with Genuine 92.5% Purity",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -5247,7 +4886,7 @@
       "925-silver-beaded-hoop-ssj-131-c.webp",
       "minimal-beaded-silver-bali-ssj-131-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Beautifully Made with 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -5285,7 +4924,7 @@
       "925-silver-hoop-earring-ssj-132-b.webp",
       "silver-bali-for-men-ssj-132-c.webp"
     ],
-    "brandText": "",
+    "brandText": "Genuine 925 Silver for Premium Jewellery",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -5322,7 +4961,7 @@
       "mini-silver-bali-earring-ssj-133-a.webp",
       "925-mini-hoop-earring-ssj-133-b.webp"
     ],
-    "brandText": "",
+    "brandText": "Crafted in Authentic 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -5361,7 +5000,7 @@
       "925-silver-rudraksha-hoop-ssj-134-b.webp",
       "spiritual-silver-bali-earring-ssj-134-c.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium 925 Silver with Fine Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -5400,7 +5039,7 @@
       "traditional-baby-protection-bracelet-ssj-136-c.webp",
       "adjustable-rudraksha-silver-bracelet-ssj-136-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Made with High-Quality 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -5439,7 +5078,7 @@
       "black-bead-silver-baby-bracelet-ssj-137-c.webp",
       "adjustable-evil-eye-bracelet-ssj-137-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Authentic 925 Silver for Elegant Jewellery",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -5478,7 +5117,7 @@
       "handmade-baby-charm-bracelet-ssj-138-c.webp",
       "kids-silver-bead-bracelet-ssj-138-d.webp"
     ],
-    "brandText": "",
+    "brandText": "92.5% Silver Purity with Premium Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -5518,7 +5157,7 @@
       "colorful-baby-bead-bracelet-ssj-139-c.webp",
       "adorable-kids-silver-bracelet-ssj-139-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Crafted from Genuine 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -5558,7 +5197,7 @@
       "lord-hanuman-sacred-silver-ring-ssj-141-c.webp",
       "hanuman-band-silver-jewellery-ssj-141-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Fine Jewellery Made with 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -5570,7 +5209,7 @@
     "weight": 6,
     "makingCharges": 55,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -5597,7 +5236,7 @@
       "minimalist-hanuman-gada-silver-band-ssj-142-c.webp",
       "religious-silver-band-for-men-ssj-142-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium Quality with Authentic 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -5635,7 +5274,7 @@
       "925-silver-ram-mandir-inspired-ring-ssj-143-b.webp",
       "traditional-jai-shree-ram-silver-ring-ssj-143-c.webp"
     ],
-    "brandText": "",
+    "brandText": "925 Silver Jewellery Crafted with Care",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -5672,7 +5311,7 @@
       "jai-shree-ram-engraved-silver-ring-ssj-144-a.webp",
       "925-silver-ring-for-ram-bhakt-ssj-144-b.webp"
     ],
-    "brandText": "",
+    "brandText": "Made with Genuine 92.5% Silver Purity",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -5709,7 +5348,7 @@
       "hanuman-ji-gada-silver-ring-ssj-145-a.webp",
       "designer-hanuman-silver-ring-ssj-145-b.webp"
     ],
-    "brandText": "",
+    "brandText": "Authentic 925 Silver with Elegant Finish",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -5748,7 +5387,7 @@
       "hanuman-pawanputra-silver-band-ssj-146-c.webp",
       "spiritual-silver-band-with-gada-ssj-146-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium Jewellery in 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -5785,7 +5424,7 @@
       "radhe-shyam-silver-square-ring-ssj-151-a.webp",
       "925-silver-radhe-shyam-band-ssj-151-b.webp"
     ],
-    "brandText": "",
+    "brandText": "Crafted Using Premium 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -5797,7 +5436,7 @@
     "weight": 6.5,
     "makingCharges": 50,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -5824,7 +5463,7 @@
       "minimalist-radhe-krishna-silver-band-ssj-152-c.webp",
       "radhe-krishna-matching-silver-rings-ssj-152-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Genuine 92.5% Silver for Refined Elegance",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -5863,7 +5502,7 @@
       "traditional-jai-shree-krishna-silver-ring-ssj-153-c.webp",
       "premium-krishna-bhakt-silver-ring-ssj-153-d.webp"
     ],
-    "brandText": "",
+    "brandText": "925 Silver Jewellery with Premium Quality",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -5901,7 +5540,7 @@
       "925-silver-krishna-mantra-band-ssj-154-b.webp",
       "elegant-jai-shree-krishna-silver-band-ssj-154-c.webp"
     ],
-    "brandText": "",
+    "brandText": "Made from Authentic 925 Silver Purity",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -5938,7 +5577,7 @@
       "925-silver-square-band-krishna-ssj-155-b.webp",
       "designer-jai-shree-krishna-silver-ring-ssj-155-c.webp"
     ],
-    "brandText": "",
+    "brandText": "Fine Craftsmanship in Genuine 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -5975,7 +5614,7 @@
       "jai-shree-krishna-silver-band-ssj-156-a.webp",
       "925-silver-simple-krishna-ring-ssj-156-b.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium Finish in Authentic 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -6012,7 +5651,7 @@
       "shri-krishna-silver-square-ring-ssj-157-a.webp",
       "925-silver-shri-krishna-band-ssj-157-b.webp"
     ],
-    "brandText": "",
+    "brandText": "Crafted with Genuine Silver at 92.5% Purity",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -6049,7 +5688,7 @@
       "jai-shree-krishna-silver-octagonal-ring-ssj-158-a.webp",
       "925-sterling-silver-jai-shree-krishna-ring-ssj-158-b.webp"
     ],
-    "brandText": "",
+    "brandText": "Elegant Jewellery in Premium 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -6060,7 +5699,7 @@
     "weight": 5.5,
     "makingCharges": 50,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -6087,7 +5726,7 @@
       "jai-shree-shyam-silver-ring-ssj-162-c.webp",
       "925-khatushyam-ring-ssj-162-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Made with 925 Silver for Lasting Quality",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -6126,7 +5765,7 @@
       "designer-khatushyam-silver-ring-ssj-163-c.webp",
       "silver-ring-for-shyam-bhakt-ssj-163-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Authentic 92.5% Silver with Fine Detailing",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -6164,7 +5803,7 @@
       "925-silver-khatushyam-hexagonal-ring-ssj-164-b.webp",
       "spiritual-silver-ring-for-men-ssj-164-c.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium Craftsmanship in Genuine Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -6203,7 +5842,7 @@
       "khatushyam-mantra-silver-band-ssj-165-c.webp",
       "peacock-feather-design-silver-band-ssj-165-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Crafted from 92.5% Pure Silver Quality",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -6215,7 +5854,7 @@
     "weight": 4,
     "makingCharges": 40,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -6241,7 +5880,7 @@
       "925-silver-ring-bow-arrow-motif-ssj-166-b.webp",
       "khatushyam-symbol-silver-band-ssj-166-c.webp"
     ],
-    "brandText": "",
+    "brandText": "Genuine 925 Silver with Refined Finish",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -6280,7 +5919,7 @@
       "traditional-khatushyam-silver-ring-ssj-167-c.webp",
       "premium-silver-ring-for-men-ssj-167-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Made with Premium 925 Silver Quality",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -6319,7 +5958,7 @@
       "minimalist-shyam-baba-silver-band-ssj-168-c.webp",
       "spiritual-silver-ring-with-peacock-feather-ssj-168-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Elegant Craftsmanship Using 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -6357,7 +5996,7 @@
       "925-silver-octagonal-shyam-ring-with-stones-ssj-169-b.webp",
       "designer-spiritual-ring-for-men-ssj-169-c.webp"
     ],
-    "brandText": "",
+    "brandText": "Authentic Silver Crafted in 925 Purity",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -6396,7 +6035,7 @@
       "personalized-925-silver-ring-ssj-170-c.webp",
       "custom-text-silver-name-ring-ssj-170-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium 92.5% Pure Silver Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -6434,7 +6073,7 @@
       "silver-mahakal-nandi-pendant-ssj-171-c.webp",
       "lord-shiva-devotional-pendant-ssj-171-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Designed in Genuine 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -6473,7 +6112,7 @@
       "silver-rudraksha-necklace-ssj-172-c.webp",
       "lord-shiva-rudraksha-pendant-ssj-172-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Fine Quality Crafted with 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -6513,7 +6152,7 @@
       "mahadev-om-locket-ssj-173-c.webp",
       "trishul-peacock-feather-pendant-ssj-173-d.webp"
     ],
-    "brandText": "",
+    "brandText": "925 Silver Jewellery with Authentic Quality",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -6553,7 +6192,7 @@
       "mahadev-silver-pendant-ssj-174-c.webp",
       "shiva-devotional-necklace-ssj-174-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Made from Premium Genuine Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -6592,7 +6231,7 @@
       "custom-shiva-name-locket-ssj-175-c.webp",
       "mahakal-name-pendant-ssj-175-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Authentic 925 Silver with Premium Quality",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -6604,7 +6243,7 @@
     "weight": 4.6,
     "makingCharges": 50,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -6631,7 +6270,7 @@
       "spiritual-om-necklace-ssj-176-c.webp",
       "silver-om-jewellery-ssj-176-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Crafted in 92.5% Pure Silver for Elegance",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -6671,7 +6310,7 @@
       "modern-om-necklace-ssj-177-c.webp",
       "devotional-om-pendant-silver-ssj-177-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium Silver Jewellery with 925 Purity",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -6711,7 +6350,7 @@
       "shiva-om-pendant-necklace-ssj-178-c.webp",
       "mahakal-silver-pendant-online-ssj-178-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Genuine 925 Silver Crafted to Perfection",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -6750,7 +6389,7 @@
       "hindu-om-necklace-pendant-ssj-179-c.webp",
       "spiritual-om-pendant-online-ssj-179-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Made with Authentic 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -6790,7 +6429,7 @@
       "shivling-silver-pendant-for-men-ssj-180-c.webp",
       "mahakal-devotional-pendant-ssj-180-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Fine Jewellery Crafted from 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -6802,7 +6441,7 @@
     "weight": 0.88,
     "makingCharges": 50,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -6829,7 +6468,7 @@
       "spiritual-sun-om-necklace-ssj-181-c.webp",
       "om-designer-pendant-for-men-ssj-181-d.webp"
     ],
-    "brandText": "",
+    "brandText": "92.5% Silver Quality with Elegant Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -6869,7 +6508,7 @@
       "om-necklace-for-men-ssj-182-c.webp",
       "everyday-spiritual-pendant-ssj-182-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium 925 Silver Made for You",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -6908,7 +6547,7 @@
       "stylish-om-pendant-for-men-ssj-183-c.webp",
       "om-silver-jewellery-pendant-ssj-183-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Crafted with Genuine 92.5% Silver Quality",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -6946,7 +6585,7 @@
       "mahadev-rudraksha-locket-ssj-184-b.webp",
       "shiva-rudraksha-pendant-for-men-ssj-184-c.webp"
     ],
-    "brandText": "",
+    "brandText": "Authentic 925 Silver for Timeless Style",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -6985,7 +6624,7 @@
       "shiva-om-rudraksha-pendant-ssj-185-c.webp",
       "devotional-mahadev-silver-pendant-ssj-185-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Made with Premium Pure Silver Quality",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -7024,7 +6663,7 @@
       "hindu-om-necklace-pendant-ssj-186-c.webp",
       "minimalist-om-pendant-online-ssj-186-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Elegant Jewellery Crafted with 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -7036,7 +6675,7 @@
     "weight": 1.31,
     "makingCharges": 50,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -7063,7 +6702,7 @@
       "shiva-name-damru-necklace-ssj-187-c.webp",
       "mahadev-silver-name-pendant-ssj-187-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Genuine 92.5% Pure Silver Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -7103,7 +6742,7 @@
       "shiva-mahakal-name-necklace-ssj-188-c.webp",
       "mahakal-silver-pendant-online-ssj-188-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium Quality Jewellery in Authentic Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -7142,7 +6781,7 @@
       "lord-shiva-name-necklace-ssj-189-c.webp",
       "shiv-silver-pendant-online-ssj-189-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Crafted Using Genuine 925 Silver Purity",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -7181,7 +6820,7 @@
       "lord-shiva-black-bead-necklace-ssj-190-c.webp",
       "shiva-devotional-silver-pendant-ssj-190-d.webp"
     ],
-    "brandText": "",
+    "brandText": "925 Silver with Premium 92.5% Quality",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -7221,7 +6860,7 @@
       "shiva-rudraksha-necklace-pendant-ssj-191-c.webp",
       "rudraksha-silver-pendant-online-ssj-191-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Made with Fine Genuine Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -7261,7 +6900,7 @@
       "sterling-ganesh-charm-ssj-192-c.webp",
       "silver-ganpati-pendant-ssj-192-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Authentic 92.5% Silver for Elegant Designs",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -7273,7 +6912,7 @@
     "weight": 0.95,
     "makingCharges": 50,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -7300,7 +6939,7 @@
       "ganesh-ji-silver-pendant-ssj-193-c.webp",
       "pure-silver-ganesh-locket-ssj-193-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium Craftsmanship with 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -7339,7 +6978,7 @@
       "silver-ganesh-elephant-pendant-ssj-194-c.webp",
       "traditional-silver-ganpati-ssj-194-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Crafted in Genuine 925 Silver Quality",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -7378,7 +7017,7 @@
       "silver-ganesh-daily-wear-ssj-195-c.webp",
       "small-silver-ganesh-locket-ssj-195-d.webp"
     ],
-    "brandText": "",
+    "brandText": "92.5% Pure Silver for Sophisticated Style",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -7417,7 +7056,7 @@
       "silver-ganesh-ji-pendant-ssj-196-c.webp",
       "auspicious-silver-ganesh-ssj-196-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Made from Premium 925 Silver Purity",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -7456,7 +7095,7 @@
       "trendy-ganesh-locket-ssj-197-c.webp",
       "unique-silver-ganesh-ssj-197-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Genuine Silver Jewellery Crafted with Precision",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -7495,7 +7134,7 @@
       "premium-silver-ganesh-pendant-ssj-198-c.webp",
       "ganesha-silver-jewelry-ssj-198-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Authentic 925 Silver with Fine Quality",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -7506,7 +7145,7 @@
     "weight": 5.81,
     "makingCharges": 50,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -7533,7 +7172,7 @@
       "classic-herringbone-silver-chain-ssj-201-c.webp",
       "premium-flat-silver-chain-ssj-201-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium 92.5% Silver for Beautiful Designs",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -7572,7 +7211,7 @@
       "everyday-silver-chain-design-ssj-202-c.webp",
       "classic-curb-link-chain-ssj-202-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Crafted from Genuine Silver with 925 Purity",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -7611,7 +7250,7 @@
       "polished-sterling-chain-ssj-203-c.webp",
       "classic-figaro-neck-chain-ssj-203-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Made with 92.5% Pure Silver Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -7650,7 +7289,7 @@
       "minimalist-paperclip-chain-ssj-204-c.webp",
       "sterling-paperclip-necklace-ssj-204-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Elegant Finish in Authentic 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -7689,7 +7328,7 @@
       "premium-cuban-link-chain-ssj-205-c.webp",
       "stylish-silver-neck-chain-ssj-205-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium Jewellery Crafted with Genuine Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -7701,7 +7340,7 @@
     "weight": 5,
     "makingCharges": 50,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -7728,7 +7367,7 @@
       "everyday-cuban-link-chain-ssj-206-c.webp",
       "premium-sterling-silver-chain-ssj-206-d.webp"
     ],
-    "brandText": "",
+    "brandText": "925 Silver Purity with Refined Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -7767,7 +7406,7 @@
       "premium-herringbone-necklace-ssj-207-c.webp",
       "elegant-sterling-silver-chain-ssj-207-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Made from High-Quality Genuine 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -7805,7 +7444,7 @@
       "sterling-silver-curb-link-chain-necklace-ssj-208-b.webp",
       "925-silver-daily-wear-chain-ssj-208-c.webp"
     ],
-    "brandText": "",
+    "brandText": "Authentic 92.5% Pure Silver for Premium Style",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -7844,7 +7483,7 @@
       "bajrang-bali-gada-pendant-ssj-211-c.webp",
       "lord-hanuman-mace-pendant-ssj-211-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Crafted with Premium Silver and 925 Purity",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -7883,7 +7522,7 @@
       "devotional-gada-locket-ssj-212-c.webp",
       "bajrangbali-silver-gada-pendant-ssj-212-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Genuine 925 Silver for Elegant Everyday Style",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -7922,7 +7561,7 @@
       "custom-bajrangbali-name-locket-ssj-213-c.webp",
       "hanuman-gada-name-pendant-ssj-213-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Fine Craftsmanship with 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -7961,7 +7600,7 @@
       "custom-pavanputra-locket-ssj-214-c.webp",
       "hanuman-pavanputra-pendant-ssj-214-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium Quality Crafted from Authentic Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -7973,7 +7612,7 @@
     "weight": 3.5,
     "makingCharges": 50,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -8000,7 +7639,7 @@
       "custom-hanuman-name-jewellery-ssj-215-c.webp",
       "bajrangbali-devotional-locket-ssj-215-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Made with Genuine 925 Silver for Elegance",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -8012,7 +7651,7 @@
     "weight": 3.5,
     "makingCharges": 50,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -8039,7 +7678,7 @@
       "custom-ajaneya-silver-locket-ssj-216-c.webp",
       "hanuman-ajaneya-name-pendant-ssj-216-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Authentic 92.5% Silver Jewellery Craft",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -8078,7 +7717,7 @@
       "hanuman-gada-jai-shri-ram-locket-ssj-217-c.webp",
       "devotional-jai-shri-ram-pendant-ssj-217-d.webp"
     ],
-    "brandText": "",
+    "brandText": "925 Silver with Premium Fine Finish",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -8116,7 +7755,7 @@
       "sankatmochan-name-locket-ssj-218-b.webp",
       "hanuman-sankat-mochan-pendant-ssj-218-c.webp"
     ],
-    "brandText": "",
+    "brandText": "Crafted in High-Quality 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "type": [
@@ -8128,7 +7767,7 @@
     "weight": 4,
     "makingCharges": 50,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -8155,7 +7794,7 @@
       "designer-dual-tone-silver-chain-ssj-221-c.webp",
       "lightweight-ladies-silver-chain-ssj-221-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Genuine Silver Jewellery with 925 Purity",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -8194,7 +7833,7 @@
       "layered-silver-necklace-ssj-222-c.webp",
       "italian-style-silver-chain-ssj-222-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium 925 Silver Crafted with Precision",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -8232,7 +7871,7 @@
       "multi-strand-silver-chain-ssj-223-b.webp",
       "sparkle-silver-necklace-ssj-223-c.webp"
     ],
-    "brandText": "",
+    "brandText": "Made with Authentic Silver and Fine Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -8244,7 +7883,7 @@
     "weight": 12,
     "makingCharges": 30,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -8271,7 +7910,7 @@
       "party-wear-silver-chain-ssj-224-c.webp",
       "premium-ladies-silver-chain-ssj-224-d.webp"
     ],
-    "brandText": "",
+    "brandText": "92.5% Pure Silver for Elegant Jewellery Designs",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -8310,7 +7949,7 @@
       "designer-dokiya-chain-ssj-225-c.webp",
       "traditional-silver-necklace-ssj-225-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Crafted from Premium Genuine 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -8348,7 +7987,7 @@
       "flat-silver-chain-for-women-ssj-226-b.webp",
       "woven-silver-chain-ssj-226-c.webp"
     ],
-    "brandText": "",
+    "brandText": "Authentic 925 Silver with Superior Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -8360,7 +7999,7 @@
     "weight": 10,
     "makingCharges": 28,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -8387,7 +8026,7 @@
       "beaded-silver-chain-ssj-227-c.webp",
       "minimal-silver-chain-ssj-227-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Fine Jewellery in 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -8426,7 +8065,7 @@
       "silver-couple-ring-ssj-231-c.webp",
       "silver-couple-bands-ssj-231-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Made with Premium Silver at 925 Purity",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -8465,7 +8104,7 @@
       "silver-couple-ring-ssj-232-c.webp",
       "silver-couple-bands-ssj-232-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Genuine 92.5% Silver with Elegant Detailing",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -8502,7 +8141,7 @@
       "textured-silver-couple-ring-ssj-233-a.webp",
       "silver-ring-for-couple-ssj-233-b.webp"
     ],
-    "brandText": "",
+    "brandText": "925 Silver Crafted for Premium Quality",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -8515,7 +8154,7 @@
     "weight": 8,
     "makingCharges": 50,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -8542,7 +8181,7 @@
       "silver-couple-ring-ssj-234-c.webp",
       "silver-couple-bands-ssj-234-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Authentic Silver Purity with 92.5% Quality",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -8581,7 +8220,7 @@
       "silver-couple-ring-ssj-235-c.webp",
       "silver-couple-bands-ssj-235-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium Jewellery Made from Genuine 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -8620,7 +8259,7 @@
       "classic-silver-couple-band-ssj-236-c.webp",
       "designer-silver-couple-ring-ssj-236-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Crafted with 92.5% Silver for Refined Style",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -8632,7 +8271,7 @@
     "weight": 7,
     "makingCharges": 50,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -8658,7 +8297,7 @@
       "greek-key-silver-couple-band-ssj-237-b.webp",
       "stylish-silver-couple-ring-ssj-237-c.webp"
     ],
-    "brandText": "",
+    "brandText": "Genuine 925 Silver with Beautiful Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -8697,7 +8336,7 @@
       "simple-silver-couple-band-ssj-238-b.webp",
       "classic-silver-couple-ring-ssj-238-c.webp"
     ],
-    "brandText": "",
+    "brandText": "Made from Authentic 92.5% Silver Quality",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -8736,7 +8375,7 @@
       "artisanal-silver-couple-ring-ssj-239-c.webp",
       "stylish-silver-couple-band-ssj-239-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium Finish with Genuine 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -8773,7 +8412,7 @@
       "artistic-silver-couple-ring-ssj-240-a.webp",
       "unique-silver-couple-band-ssj-240-b.webp"
     ],
-    "brandText": "",
+    "brandText": "Elegant Designs Made with 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -8813,7 +8452,7 @@
       "textured-silver-couple-band-ssj-241-c.webp",
       "interwoven-silver-ring-ssj-241-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Crafted in Genuine Silver with 925 Purity",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -8850,7 +8489,7 @@
       "diamond-pattern-silver-couple-ring-ssj-242-a.webp",
       "hallmark-silver-couple-band-ssj-242-b.webp"
     ],
-    "brandText": "",
+    "brandText": "Authentic 925 Silver for Premium Elegance",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -8862,7 +8501,7 @@
     "weight": 8.3,
     "makingCharges": 50,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -8889,7 +8528,7 @@
       "textured-band-silver-couple-ssj-243-c.webp",
       "stylish-silver-couple-ring-ssj-243-d.webp"
     ],
-    "brandText": "",
+    "brandText": "92.5% Pure Silver with Fine Jewellery Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -8927,7 +8566,7 @@
       "silver-couple-ring-new-ssj-246-a.webp",
       "silver-ring-for-couple-ssj-246-b.webp"
     ],
-    "brandText": "",
+    "brandText": "Fine Elegance in Genuine 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -8965,7 +8604,7 @@
       "trendy-silver-couple-ring-ssj-247-a.webp",
       "greek-key-silver-couple-band-ssj-247-b.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium 925 Silver with Authentic Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -8997,7 +8636,7 @@
       "silver-couple-band-ssj-248-b.webp",
       "textured-silver-ring-ssj-248-c.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium 925 Silver with Authentic Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "",
     "type": [
@@ -9009,7 +8648,7 @@
     "weight": 7.5,
     "makingCharges": 50,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -9017,334 +8656,6 @@
     "ratingCount": 102,
     "Lock": "",
     "slug": "silver-couple-band-248"
-  },
-  {
-    "id": 251,
-    "name": "925 Sterling Silver Rakhi for Brother",
-    "category": "Buy Silver Rakhi",
-    "highlights": [
-      "💎 Material: 925 Sterling Silver (92.5% Silver Purity)",
-      "🪷 Design: Elegant Silver Rakhi with Traditional Appeal",
-      "✨ Finish: Premium Handmade Silver Craftsmanship",
-      "🎁 Perfect Rakhi Gift for Brother",
-      "🚚 Pan India Delivery Available"
-    ],
-    "description": "",
-    "images": [],
-    "brandText": "",
-    "care": "SILVER_GENERAL",
-    "for": "him",
-    "type": [
-      "Silver Gift for Him",
-      "Silver Jewellery for Men"
-    ],
-    "purity": "silverJewellery",
-    "weight": 17.12,
-    "makingCharges": 30,
-    "discount": 0,
-    "newArrival": false,
-    "HUID": false,
-    "available": true,
-    "active": true,
-    "rating": 4.3,
-    "ratingCount": 94,
-    "Lock": "",
-    "slug": "925-sterling-silver-rakhi-for-brother-251"
-  },
-  {
-    "id": 252,
-    "name": "Evil Eye Silver Rakhi",
-    "category": "Buy Silver Rakhi",
-    "highlights": [
-      "💎 Material: 925 Silver Purity Jewellery",
-      "✨ Finish: Smooth Premium Silver Finish",
-      "🪷 Design: Stylish Silver Rakhi for Raksha Bandhan",
-      "🎁 Memorable Gift to Celebrate Brother-Sister Bond",
-      "💳 Cash on Delivery Available*"
-    ],
-    "description": "",
-    "images": [],
-    "brandText": "",
-    "care": "SILVER_GENERAL",
-    "for": "him",
-    "type": [
-      "Silver Jewellery for Women"
-    ],
-    "purity": "silverJewellery",
-    "weight": 15.99,
-    "makingCharges": 30,
-    "discount": 0,
-    "newArrival": false,
-    "HUID": false,
-    "available": true,
-    "active": true,
-    "rating": 4.7,
-    "ratingCount": 97,
-    "Lock": "",
-    "slug": "evil-eye-silver-rakhi-252"
-  },
-  {
-    "id": 253,
-    "name": "Rudraksha Silver Rakhi Spritual Design",
-    "category": "Buy Silver Rakhi",
-    "highlights": [
-      "💎 Material: 92.5% Silver Purity",
-      "🪷 Design: Divine Silver Rakhi with Beautiful Detailing",
-      "✨ Finish: Fine Artisan Craftsmanship",
-      "📦 Gift Ready Secure Packaging",
-      "🚚 Safe Delivery Across India"
-    ],
-    "description": "",
-    "images": [],
-    "brandText": "",
-    "care": "SILVER_GENERAL",
-    "for": "him",
-    "type": [
-      "Spiritual Silver Jewellery"
-    ],
-    "purity": "silverJewellery",
-    "weight": 38.32,
-    "makingCharges": 30,
-    "discount": 0,
-    "newArrival": false,
-    "HUID": false,
-    "available": true,
-    "active": true,
-    "rating": 4.1,
-    "ratingCount": 108,
-    "Lock": "",
-    "slug": "rudraksha-silver-rakhi-spritual-design-253"
-  },
-  {
-    "id": 254,
-    "name": "Silver Rakhi Online Trending Design",
-    "category": "Buy Silver Rakhi",
-    "highlights": [
-      "💎 Material: 925 Sterling Silver",
-      "✨ Finish: Premium Polished Silver Look",
-      "🪷 Design: Traditional Rakhi Design with Modern Touch",
-      "🎁 Special Gift for Your Beloved Brother",
-      "🔒 Secure Payment & Safe Checkout"
-    ],
-    "description": "",
-    "images": [],
-    "brandText": "",
-    "care": "SILVER_GENERAL",
-    "for": "him",
-    "type": [
-      "Silver Gift for Him",
-      "Silver Jewellery for Men"
-    ],
-    "purity": "silverJewellery",
-    "weight": 44.21,
-    "makingCharges": 30,
-    "discount": 0,
-    "newArrival": false,
-    "HUID": false,
-    "available": true,
-    "active": true,
-    "rating": 5,
-    "ratingCount": 102,
-    "Lock": "",
-    "slug": "silver-rakhi-online-trending-design-254"
-  },
-  {
-    "id": 255,
-    "name": "Silver Bhai Rakhi Unique Design",
-    "category": "Buy Silver Rakhi",
-    "highlights": [
-      "💎 Material: 925 Silver Jewellery",
-      "🪷 Design: Designer Silver Rakhi Collection",
-      "✨ Finish: Elegant Detailing with Premium Finish",
-      "💳 COD Facility Available*",
-      "📦 Protective Gift Packaging"
-    ],
-    "description": "",
-    "images": [],
-    "brandText": "",
-    "care": "SILVER_GENERAL",
-    "for": "him",
-    "type": [
-      "Silver Gift for Him",
-      "Silver Jewellery for Men"
-    ],
-    "purity": "silverJewellery",
-    "weight": 14.84,
-    "makingCharges": 30,
-    "discount": 0,
-    "newArrival": false,
-    "HUID": false,
-    "available": true,
-    "active": true,
-    "rating": 4.7,
-    "ratingCount": 119,
-    "Lock": "",
-    "slug": "silver-bhai-rakhi-unique-design-255"
-  },
-  {
-    "id": 256,
-    "name": "925 Silver Rakhi for Men",
-    "category": "Buy Silver Rakhi",
-    "highlights": [
-      "💎 Material: 92.5% Silver Purity",
-      "✨ Finish: Handmade Silver Jewellery Finish",
-      "🪷 Design: Unique Rakhi for Raksha Bandhan Celebration",
-      "🎁 Symbol of Love & Blessings",
-      "🚚 Fast Pan India Shipping"
-    ],
-    "description": "",
-    "images": [],
-    "brandText": "",
-    "care": "SILVER_GENERAL",
-    "for": "him",
-    "type": [
-      "Silver Gift for Him",
-      "Silver Jewellery for Men"
-    ],
-    "purity": "silverJewellery",
-    "weight": 12.68,
-    "makingCharges": 30,
-    "discount": 0,
-    "newArrival": false,
-    "HUID": false,
-    "available": true,
-    "active": true,
-    "rating": 4.6,
-    "ratingCount": 26,
-    "Lock": "",
-    "slug": "925-silver-rakhi-for-men-256"
-  },
-  {
-    "id": 257,
-    "name": "Silver Rakhi for Bhabhi",
-    "category": "Buy Silver Rakhi",
-    "highlights": [
-      "💎 Material: 925 Sterling Silver (92.5% Purity)",
-      "🪷 Design: Premium Silver Rakhi with Spiritual Elegance",
-      "✨ Finish: Fine Quality Silver Craftsmanship",
-      "🎁 Beautiful Gift Choice for Brothers",
-      "🔒 Secure Online Shopping Experience"
-    ],
-    "description": "",
-    "images": [],
-    "brandText": "",
-    "care": "SILVER_GENERAL",
-    "for": "him",
-    "type": [
-      "Silver Jewellery for Women"
-    ],
-    "purity": "silverJewellery",
-    "weight": 23.13,
-    "makingCharges": 30,
-    "discount": 0,
-    "newArrival": false,
-    "HUID": false,
-    "available": true,
-    "active": true,
-    "rating": 4.4,
-    "ratingCount": 120,
-    "Lock": "",
-    "slug": "silver-rakhi-for-bhabhi-257"
-  },
-  {
-    "id": 258,
-    "name": "Chandi ki Rakhi",
-    "category": "Buy Silver Rakhi",
-    "highlights": [
-      "💎 Material: 925 Silver Purity Jewellery",
-      "✨ Finish: Smooth & Premium Silver Finishing",
-      "🪷 Design: Stylish Rakhi with Elegant Traditional Look",
-      "🎁 Create Special Raksha Bandhan Memories",
-      "🚚 Delivered Safely Across India"
-    ],
-    "description": "",
-    "images": [],
-    "brandText": "",
-    "care": "SILVER_GENERAL",
-    "for": "him",
-    "type": [
-      "Silver Gift for Him",
-      "Silver Jewellery for Men"
-    ],
-    "purity": "silverJewellery",
-    "weight": 21.68,
-    "makingCharges": 30,
-    "discount": 0,
-    "newArrival": false,
-    "HUID": false,
-    "available": true,
-    "active": true,
-    "rating": 5,
-    "ratingCount": 51,
-    "Lock": "",
-    "slug": "chandi-ki-rakhi-258"
-  },
-  {
-    "id": 259,
-    "name": "Buy Silver Rakhi for Brother Online",
-    "category": "Buy Silver Rakhi",
-    "highlights": [
-      "💎 Material: 925 Sterling Silver",
-      "🪷 Design: Exclusive Silver Rakhi Collection",
-      "✨ Finish: Detailed Handmade Craftsmanship",
-      "💳 Cash on Delivery Available*",
-      "📦 Secure Jewellery Packaging"
-    ],
-    "description": "",
-    "images": [],
-    "brandText": "",
-    "care": "SILVER_GENERAL",
-    "for": "him",
-    "type": [
-      "Silver Gift for Him",
-      "Silver Jewellery for Men"
-    ],
-    "purity": "silverJewellery",
-    "weight": 24.46,
-    "makingCharges": 30,
-    "discount": 0,
-    "newArrival": false,
-    "HUID": false,
-    "available": true,
-    "active": true,
-    "rating": 4,
-    "ratingCount": 92,
-    "Lock": "",
-    "slug": "buy-silver-rakhi-for-brother-online-259"
-  },
-  {
-    "id": 260,
-    "name": "Silver Rakhi for Brother under Rs 500",
-    "category": "Buy Silver Rakhi",
-    "highlights": [
-      "💎 Material: 92.5% Silver Purity",
-      "✨ Finish: Premium Designer Silver Finish",
-      "🪷 Design: Beautiful Rakhi Crafted with Love",
-      "🎁 Perfect Festival Gift for Brother",
-      "🚚 Pan India Delivery Available"
-    ],
-    "description": "",
-    "images": [],
-    "brandText": "",
-    "care": "SILVER_GENERAL",
-    "for": "him",
-    "type": [
-      "Silver Gift for Him",
-      "Silver Jewellery for Men",
-      "Silver Jewellery\nUnder ₹999"
-    ],
-    "purity": "silverJewellery",
-    "weight": 10.68,
-    "makingCharges": 30,
-    "discount": 0,
-    "newArrival": false,
-    "HUID": false,
-    "available": true,
-    "active": true,
-    "rating": 4.9,
-    "ratingCount": 27,
-    "Lock": "",
-    "slug": "silver-rakhi-for-brother-under-rs-500-260"
   },
   {
     "id": 261,
@@ -9364,7 +8675,7 @@
       "handmade-rajput-925-silver-ring-ssj-261-c.webp",
       "square-rajput-name-ring-design-ssj-261-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Crafted with Genuine 925 Silver Purity",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -9375,7 +8686,7 @@
     "weight": 6,
     "makingCharges": 50,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -9402,7 +8713,7 @@
       "925-sterling-rajput-ring-ssj-262-c.webp",
       "royal-rajput-name-ring-for-men-ssj-262-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Made with Premium 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -9440,7 +8751,7 @@
       "925-silver-mahadev-ring-design-ssj-263-c.webp",
       "spiritual-silver-ring-for-men-ssj-263-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Authentic 925 Silver Crafted with Care",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -9478,7 +8789,7 @@
       "925-silver-banna-ring-design-ssj-264-c.webp",
       "handmade-banna-name-ring-ssj-264-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Elegant Jewellery Made from Genuine Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -9516,7 +8827,7 @@
       "alphabet-a-925-silver-ring-ssj-265-c.webp",
       "personalized-initial-ring-ssj-265-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium Quality 925 Silver Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -9554,7 +8865,7 @@
       "personalized-925-silver-name-ring-ssj-266-c.webp",
       "premium-silver-name-ring-for-men-ssj-266-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Crafted from 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -9565,7 +8876,7 @@
     "weight": 7,
     "makingCharges": 50,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -9592,7 +8903,7 @@
       "925-silver-mahakal-ring-for-men-ssj-267-c.webp",
       "lord-shiva-silver-name-ring-ssj-267-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Genuine Silver Jewellery with Premium 925 Quality",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -9629,7 +8940,7 @@
       "925-silver-rakhi-hindi-ssj-269-c.webp",
       "designer-silver-rakhi-for-brother-ssj-269-b.webp"
     ],
-    "brandText": "",
+    "brandText": "Fine Craftsmanship with Genuine 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -9666,7 +8977,7 @@
       "stylish-brother-rakhi-ssj-270-c.webp",
       "handmade-silver-rakhi-ssj-270-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium 925 Silver for Elegant Designs",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -9703,7 +9014,7 @@
       "925-sterling-silver-rakhi-ssj-271-c.webp",
       "unique-brother-rakhi-ssj-271-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Crafted with 92.5% Pure Silver Excellence",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -9714,7 +9025,7 @@
     "weight": 3,
     "makingCharges": 30,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -9741,7 +9052,7 @@
       "sterling-silver-bhai-rakhi-ssj-272-c.webp",
       "latest-silver-rakhi-design-ssj-272-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Authentic Silver Jewellery Crafted in 925 Purity",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -9778,7 +9089,7 @@
       "lotus-om-rakhi-925-silver-ssj-273-c.webp",
       "divine-brother-rakhi-ssj-273-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Made from Genuine 925 Silver Quality",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -9816,7 +9127,7 @@
       "spiritual-rakhi-for-brother-ssj-274-c.webp",
       "designer-om-silver-rakhi-ssj-274-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium Finish with Authentic Silver Purity",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -9854,7 +9165,7 @@
       "925-silver-ram-rakhi-ssj-275-c.webp",
       "devotional-silver-rakhi-ssj-275-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Elegant Craftsmanship in 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -9865,7 +9176,7 @@
     "weight": 2,
     "makingCharges": 30,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -9890,7 +9201,7 @@
       "silver-rakhi-brother-ssj-276-a.webp",
       "sawariya-seth-name-silver-rakhi-ssj-276-b.webp"
     ],
-    "brandText": "",
+    "brandText": "Genuine 925 Silver with Premium Detailing",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -9928,7 +9239,7 @@
       "stylish-bhai-rakhi-925-silver-ssj-277-c.webp",
       "designer-silver-rakhi-for-brother-ssj-277-d.webp"
     ],
-    "brandText": "",
+    "brandText": "Crafted Using High-Quality 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -9964,7 +9275,7 @@
       "bro-mustache-silver-rakhi-ssj-278-b.webp",
       "modern-silver-rakhi-design-ssj-278-c.webp"
     ],
-    "brandText": "",
+    "brandText": "Made with Authentic 925 Silver Craft",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -10000,7 +9311,7 @@
       "trishul-om-silver-rakhi-ssj-279-b.webp",
       "spiritual-silver-rakhi-design-ssj-279-c.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium Jewellery in Genuine 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -10011,7 +9322,7 @@
     "weight": 4,
     "makingCharges": 30,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -10019,6 +9330,1301 @@
     "ratingCount": 28,
     "Lock": "",
     "slug": "mahadev-trishul-silver-rakhi-bracelet-279"
+  },
+  {
+    "id": 280,
+    "name": "Lord Ganesha Silver Rakhi",
+    "category": "Buy Silver Rakhi",
+    "highlights": [
+      "💎 Material: 92.5% Silver Jewellery",
+      "🪷 Design: Elegant Rakhi Crafted in Silver",
+      "✨ Finish: Detailed Handmade Craftsmanship",
+      "🎁 Ideal Gift for Brother & Loved Ones",
+      "🚚 Reliable Pan India Delivery"
+    ],
+    "description": "Honor faith and tradition with this Ganesha Face Symbol 925 Sterling Silver Rakhi. Crafted in premium 925 sterling silver, the iconic Lord Ganesha represents courage, unity, and spirituality. Finished with a polished shine, it is perfect for Raksha Bandhan and everyday wear.",
+    "images": [
+      "ganesha-silver-rakhi-ssj-280-a.webp",
+      "ganesha-symbol-silver-rakhi-ssj-280-b.webp",
+      "spiritual-925-silver-rakhi-ssj-280-c.webp",
+      "silver-rakhi-for-brother-ssj-280-d.webp"
+    ],
+    "brandText": "925 Silver Purity with Elegant Finish",
+    "care": "SILVER_GENERAL",
+    "for": "him",
+    "type": [
+      "Spiritual Silver Jewellery",
+      "Silver Jewellery for Men"
+    ],
+    "purity": "silverJewellery",
+    "weight": 3,
+    "makingCharges": 30,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 4.7,
+    "ratingCount": 117,
+    "Lock": "",
+    "slug": "lord-ganesha-silver-rakhi-280"
+  },
+  {
+    "id": 281,
+    "name": "Lotus Design Silver Rakhi Bracelet",
+    "category": "Buy Silver Rakhi",
+    "highlights": [
+      "💎 Material: 925 Sterling Silver",
+      "✨ Finish: Smooth Premium Finishing",
+      "🪷 Design: Stylish Silver Rakhi with Traditional Touch",
+      "🎁 Create Beautiful Raksha Bandhan Memories",
+      "🔒 Secure Online Payment"
+    ],
+    "description": "Inspired by purity and positivity, this Lotus Flower 925 Sterling Silver Rakhi features an elegant floral design crafted in authentic 925 sterling silver. Its timeless beauty makes it a meaningful Raksha Bandhan gift and a stylish bracelet for everyday wear.",
+    "images": [
+      "lotus-silver-rakhi-ssj-281-a.webp",
+      "floral-silver-rakhi-design-ssj-281-b.webp",
+      "elegant-925-silver-rakhi-ssj-281-c.webp",
+      "stylish-lotus-rakhi-ssj-281-d.webp"
+    ],
+    "brandText": "Crafted from Premium 92.5% Pure Silver",
+    "care": "SILVER_GENERAL",
+    "for": "him",
+    "type": [
+      "Silver Jewellery for Men"
+    ],
+    "purity": "silverJewellery",
+    "weight": 3,
+    "makingCharges": 30,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 4.4,
+    "ratingCount": 67,
+    "Lock": "",
+    "slug": "lotus-design-silver-rakhi-bracelet-281"
+  },
+  {
+    "id": 282,
+    "name": "Om Spiritual Silver Rakhi Bracelet",
+    "category": "Buy Silver Rakhi",
+    "highlights": [
+      "💎 Material: 925 Silver (92.5% Silver Purity)",
+      "🪷 Design: Spiritual & Elegant Silver Rakhi Design",
+      "✨ Finish: Premium Silver Detailing",
+      "🎁 Thoughtful Festival Gift Choice",
+      "📦 Gift Ready Packaging Available"
+    ],
+    "description": "Celebrate Raksha Bandhan with divine blessings through this Om Symbol 925 Sterling Silver Rakhi. Featuring the sacred Om engraved on a round silver charm, this rakhi is handcrafted in pure 925 sterling silver with a mirror-polished finish. A perfect spiritual gift for your brother.",
+    "images": [
+      "om-silver-rakhi-ssj-282-a.webp",
+      "spiritual-om-rakhi-925-silver-ssj-282-b.webp",
+      "round-om-silver-rakhi-ssj-282-c.webp",
+      "designer-silver-rakhi-ssj-282-d.webp"
+    ],
+    "brandText": "Genuine 925 Silver with Fine Craftsmanship",
+    "care": "SILVER_GENERAL",
+    "for": "him",
+    "type": [
+      "Spiritual Silver Jewellery",
+      "Silver Jewellery for Men"
+    ],
+    "purity": "silverJewellery",
+    "weight": 3,
+    "makingCharges": 30,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 4.4,
+    "ratingCount": 52,
+    "Lock": "",
+    "slug": "om-spiritual-silver-rakhi-bracelet-282"
+  },
+  {
+    "id": 283,
+    "name": "Infinity BRO Silver Rakhi Bracelet",
+    "category": "Buy Silver Rakhi",
+    "highlights": [
+      "💎 Material: 925 Sterling Silver Jewellery",
+      "✨ Finish: Fine Handmade Silver Finish",
+      "🪷 Design: Classic Silver Rakhi for Brothers",
+      "🎁 A Precious Symbol of Sibling Love",
+      "🚚 Fast Delivery Across India"
+    ],
+    "description": "Celebrate an unbreakable sibling bond with this Infinity BRO 925 Sterling Silver Rakhi. Designed with an infinity symbol and \"BRO\" lettering, this rakhi represents everlasting love and friendship. Crafted from premium 925 sterling silver, it is lightweight, durable, and ideal for modern brothers.",
+    "images": [
+      "infinity-bro-silver-rakhi-ssj-283-a.webp",
+      "brother-infinity-rakhi-ssj-283-b.webp",
+      "trendy-bro-silver-rakhi-ssj-283-c.webp",
+      "925-sterling-silver-bro-rakhi-ssj-283-d.webp"
+    ],
+    "brandText": "Made with 92.5% Silver for Premium Quality",
+    "care": "SILVER_GENERAL",
+    "for": "him",
+    "type": [
+      "Silver Jewellery for Men"
+    ],
+    "purity": "silverJewellery",
+    "weight": 3.5,
+    "makingCharges": 30,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 4.8,
+    "ratingCount": 102,
+    "Lock": "",
+    "slug": "infinity-bro-silver-rakhi-bracelet-283"
+  },
+  {
+    "id": 284,
+    "name": "Pink Bead Bhai Silver Rakhi – Elegant Silver Rakhi for Brother",
+    "category": "Buy Silver Rakhi",
+    "highlights": [
+      "💎 Material: 92.5% Silver Purity",
+      "🪷 Design: Designer Silver Rakhi with Premium Style",
+      "✨ Finish: Elegant Polished Craftsmanship",
+      "💳 Cash on Delivery Available*",
+      "📦 Secure Packaging Before Dispatch"
+    ],
+    "description": "Add a soft and elegant touch to Raksha Bandhan with this beautiful Pink Bead Silver Rakhi. The rakhi features polished silver beads paired with attractive pink beads and a stylish central silver name-style element. The combination of pink and silver gives it a modern yet traditional festive look.\n\nIts lightweight thread design makes it comfortable to wear, while the delicate detailing makes this silver rakhi a thoughtful choice for celebrating the special bond between brother and sister. It can also be chosen as a meaningful Raksha Bandhan gift for a brother who prefers simple and stylish accessories.",
+    "images": [
+      "original-silver-rakhi-pink-beads-ssj-284-a.webp",
+      "sterling-silver-rakhi-pink-beads-ssj-284-b.webp",
+      "pink-bead-raksha-bandhan-silver-rakhi-ssj-284-c.webp",
+      "lightweight-silver-rakhi-pink-beads-ssj-284-d.webp"
+    ],
+    "brandText": "Authentic 925 Silver with Refined Design",
+    "care": "SILVER_GENERAL",
+    "for": "him",
+    "type": [],
+    "purity": "silverJewellery",
+    "weight": 0.6,
+    "makingCharges": 50,
+    "discount": 0,
+    "newArrival": true,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 4.9,
+    "ratingCount": 99,
+    "Lock": "",
+    "slug": "pink-bead-bhai-silver-rakhi-elegant-silver-rakhi-for-brother-284"
+  },
+  {
+    "id": 285,
+    "name": "Ganesh Silver Rakhi – Red & Yellow Mauli Rakhi for Brother",
+    "category": "Buy Silver Rakhi",
+    "highlights": [
+      "💎 Material: 925 Sterling Silver",
+      "✨ Finish: Premium Quality Silver Finish",
+      "🪷 Design: Beautiful Rakhi Inspired by Tradition",
+      "🎁 Perfect Gift for Raksha Bandhan",
+      "🚚 Pan India Shipping Available"
+    ],
+    "description": "Celebrate Raksha Bandhan with the divine presence of Lord Ganesha through this Ganesh Silver Rakhi. Designed with a traditional red and yellow braided mauli thread, this rakhi features a detailed silver Ganesh centrepiece that gives the design a meaningful spiritual appeal.\n\nThe vibrant thread combination beautifully complements the silver detailing, creating a traditional Rakhi look that feels both festive and devotional. It is a thoughtful choice for brothers who appreciate religious symbols and traditional Indian jewellery.",
+    "images": [
+      "original-ganesh-silver-rakhi-red-yellow-ssj-285-a.webp",
+      "ganesh-silver-rakhi-new-design-ssj-285-b.webp",
+      "red-yellow-mauli-ganesh-silver-rakhi-ssj-285-c.webp",
+      "traditional-ganesh-silver-rakhi-ssj-285-d.webp"
+    ],
+    "brandText": "Premium Craftsmanship in 92.5% Pure Silver",
+    "care": "SILVER_GENERAL",
+    "for": "him",
+    "type": [],
+    "purity": "silverJewellery",
+    "weight": 0.4,
+    "makingCharges": 50,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 4.3,
+    "ratingCount": 62,
+    "Lock": "",
+    "slug": "ganesh-silver-rakhi-red-yellow-mauli-rakhi-for-brother-285"
+  },
+  {
+    "id": 286,
+    "name": "Ganesh Floral Silver Rakhi – Traditional Red Yellow Silver Rakhi",
+    "category": "Buy Silver Rakhi",
+    "highlights": [
+      "💎 Material: 925 Silver Purity Jewellery",
+      "🪷 Design: Exclusive Silver Rakhi with Artistic Details",
+      "✨ Finish: Fine Silver Craftsmanship",
+      "🎁 Luxury Gift Choice for Brother",
+      "🔒 Secure Payment Facility"
+    ],
+    "description": "This Ganesh Floral Silver Rakhi beautifully combines traditional symbolism with delicate floral detailing. The centre features a silver Lord Ganesha motif, complemented by small floral silver elements arranged along a red and yellow braided thread.\n\nThe balanced combination of devotional detailing and floral accents gives the rakhi an attractive festive appearance without making it overly heavy. It is a beautiful choice for Raksha Bandhan and a meaningful way to celebrate the bond between brother and sister.",
+    "images": [
+      "original-ganesh-floral-silver-rakhi-ssj-286-a.webp",
+      "traditional-ganesh-silver-rakhi-red-yellow-ssj-286-b.webp",
+      "floral-silver-rakhi-lord-ganesh-design-ssj-286-c.webp",
+      "beautiful-ganesh-raksha-bandhan-silver-rakhi-ssj-286-d.webp"
+    ],
+    "brandText": "Elegant Jewellery Crafted from Authentic 925 Silver",
+    "care": "SILVER_GENERAL",
+    "for": "",
+    "type": [],
+    "purity": "silverJewellery",
+    "weight": 0.6,
+    "makingCharges": 50,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 4.8,
+    "ratingCount": 66,
+    "Lock": "",
+    "slug": "ganesh-floral-silver-rakhi-traditional-red-yellow-silver-rakhi-286"
+  },
+  {
+    "id": 287,
+    "name": "Rudraksha Silver Rakhi – Two Bead Spiritual Rakhi",
+    "category": "Buy Silver Rakhi",
+    "highlights": [
+      "💎 Material: 92.5% Silver Jewellery",
+      "✨ Finish: Premium Handmade Silver Work",
+      "🪷 Design: Elegant Rakhi with Festive Appeal",
+      "🎁 Celebrate Your Special Bond",
+      "📦 Protective Gift Packaging"
+    ],
+    "description": "Bring a spiritual touch to Raksha Bandhan with this Rudraksha Silver Rakhi featuring two natural-looking Rudraksha beads beautifully finished with silver bead accents. The bright yellow thread gives the rakhi a traditional Indian appearance while keeping the overall design simple and understated.\n\nIts minimal design makes it a suitable choice for brothers who prefer meaningful and lightweight rakhis. The combination of Rudraksha and silver detailing gives this Raksha Bandhan accessory a distinctive devotional character.",
+    "images": [
+      "original-two-rudraksha-silver-rakhi-ssj-287-a.webp",
+      "yellow-thread-rudraksha-silver-rakhi-ssj-287-b.webp",
+      "spiritual-two-bead-silver-rudraksha-rakhi-ssj-287-c.webp",
+      "simple-rudraksha-raksha-bandhan-silver-rakhi-ssj-287-d.webp"
+    ],
+    "brandText": "Genuine 92.5% Silver with Premium Finish",
+    "care": "SILVER_GENERAL",
+    "for": "",
+    "type": [],
+    "purity": "silverJewellery",
+    "weight": 0.4,
+    "makingCharges": 50,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 4,
+    "ratingCount": 29,
+    "Lock": "",
+    "slug": "rudraksha-silver-rakhi-two-bead-spiritual-rakhi-287"
+  },
+  {
+    "id": 288,
+    "name": "Three Rudraksha Silver Rakhi – Red & Yellow Spiritual Rakhi",
+    "category": "Buy Silver Rakhi",
+    "highlights": [
+      "💎 Material: 925 Sterling Silver (92.5% Purity)",
+      "🪷 Design: Premium Rakhi Collection for Brothers",
+      "✨ Finish: Designer Silver Finishing",
+      "💳 Cash on Delivery Available*",
+      "🚚 Safe Pan India Delivery"
+    ],
+    "description": "Designed for those who love traditional and spiritual jewellery, this Three Rudraksha Silver Rakhi features three Rudraksha beads arranged beautifully along a vibrant red and yellow thread. Silver accents around the beads add a refined touch to the natural Rudraksha design.\n\nThe combination of traditional colours, Rudraksha beads and silver detailing creates a distinctive Raksha Bandhan accessory with a spiritual feel. Its simple thread construction also gives it a comfortable and easy-to-wear design for the festive occasion.",
+    "images": [
+      "original-three-rudraksha-silver-rakhi-ssj-288-a.webp",
+      "red-yellow-thread-rudraksha-silver-rakhi-ssj-288-b.webp",
+      "three-bead-spiritual-silver-rakhi-brother-ssj-288-c.webp",
+      "traditional-rudraksha-raksha-bandhan-silver-rakhi-ssj-288-d.webp"
+    ],
+    "brandText": "Made with Fine 925 Silver Craftsmanship",
+    "care": "SILVER_GENERAL",
+    "for": "",
+    "type": [],
+    "purity": "silverJewellery",
+    "weight": 0.6,
+    "makingCharges": 50,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 4.8,
+    "ratingCount": 22,
+    "Lock": "",
+    "slug": "three-rudraksha-silver-rakhi-red-yellow-spiritual-rakhi-288"
+  },
+  {
+    "id": 289,
+    "name": "Single Rudraksha Silver Rakhi – Minimal Red Thread Rakhi",
+    "category": "Buy Silver Rakhi",
+    "highlights": [
+      "💎 Material: 925 Silver Purity",
+      "✨ Finish: Elegant Silver Craftsmanship with Fine Details",
+      "🪷 Design: Beautiful Silver Rakhi for Raksha Bandhan",
+      "🎁 Memorable Gift Full of Emotions",
+      "🔒 Secure Shopping Experience"
+    ],
+    "description": "Simple, meaningful and easy to wear, this Single Rudraksha Silver Rakhi features a single Rudraksha bead placed at the centre with silver accents on both sides. The classic red thread gives the rakhi a traditional appearance while keeping the overall design minimal.\n\nThis rakhi is ideal for brothers who prefer understated festive accessories with a spiritual touch. Its clean design makes it suitable for Raksha Bandhan gifting while the Rudraksha centrepiece adds character to the traditional thread rakhi.",
+    "images": [
+      "original-single-rudraksha-silver-rakhi-ssj-289-a.webp",
+      "minimal-red-thread-rudraksha-silver-rakhi-ssj-289-b.webp",
+      "single-bead-spiritual-silver-rakhi-brother-ssj-289-c.webp",
+      "simple-rudraksha-raksha-bandhan-silver-rakhi-ssj-289-d.webp"
+    ],
+    "brandText": "Authentic Silver Quality in 92.5% Purity",
+    "care": "SILVER_GENERAL",
+    "for": "",
+    "type": [],
+    "purity": "silverJewellery",
+    "weight": 0.2,
+    "makingCharges": 110,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 5,
+    "ratingCount": 71,
+    "Lock": "",
+    "slug": "single-rudraksha-silver-rakhi-minimal-red-thread-rakhi-289"
+  },
+  {
+    "id": 290,
+    "name": "925 Silver Rudraksha Rakhi with Yellow & Red Mauli Thread",
+    "category": "Buy Silver Rakhi",
+    "highlights": [
+      "💎 Material: 925 Sterling Silver",
+      "✨ Finish: Premium Polished Silver Look",
+      "🪷 Design: Traditional Rakhi with Modern Elegance",
+      "🎁 Meaningful Gift for Your Brother",
+      "🔒 Secure Payment & Checkout"
+    ],
+    "description": "Celebrate the special bond of Raksha Bandhan with this elegant silver Rudraksha Rakhi. Designed with a natural Rudraksha bead, silver beads and traditional yellow-red Mauli thread, this rakhi offers a perfect combination of spirituality and simplicity. The lightweight design makes it comfortable for daily wear while adding a divine touch to your brother’s wrist. A meaningful Raksha Bandhan gift that reflects love, blessings and traditional values.",
+    "images": [
+      "original-silver-rudraksha-rakhi-ssj-290-a.webp",
+      "925-silver-rudraksha-rakhi-design-ssj-290-b.webp",
+      "spiritual-silver-rakhi-for-brother-ssj-290-c.webp",
+      "yellow-red-mauli-rudraksha-rakhi-ssj-290-d.webp"
+    ],
+    "brandText": "Crafted in Premium Genuine 925 Silver",
+    "care": "SILVER_GENERAL",
+    "for": "",
+    "type": [],
+    "purity": "silverJewellery",
+    "weight": 0.15,
+    "makingCharges": 110,
+    "discount": 0,
+    "newArrival": true,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 5,
+    "ratingCount": 82,
+    "Lock": "",
+    "slug": "925-silver-rudraksha-rakhi-with-yellow-red-mauli-thread-290"
+  },
+  {
+    "id": 291,
+    "name": "925 Silver Rudraksha Rakhi with Designer Silver Caps & Mauli Thread",
+    "category": "Buy Silver Rakhi",
+    "highlights": [
+      "💎 Material: 925 Silver Jewellery",
+      "🪷 Design: Designer Silver Rakhi Collection",
+      "✨ Finish: Elegant Craftsmanship with Fine Details",
+      "🎁 Premium Festival Gift Choice",
+      "💳 COD Facility Available*"
+    ],
+    "description": "This beautiful Rudraksha Rakhi combines traditional spiritual elements with modern silver craftsmanship. The natural Rudraksha beads are beautifully arranged with designer silver caps and bright Mauli thread to create a unique Raksha Bandhan accessory. Its premium look and comfortable design make it an ideal choice for brothers who appreciate devotional jewellery with a stylish touch.",
+    "images": [
+      "new-silver-rudraksha-rakhi-ssj-291-a.webp",
+      "designer-rudraksha-rakhi-with-silver-cap-ssj-291-b.webp",
+      "spiritual-rakhi-for-brother-ssj-291-c.webp",
+      "premium-silver-rudraksha-rakhi-design-ssj-291-d.webp"
+    ],
+    "brandText": "925 Silver Jewellery with Fine Craftsmanship",
+    "care": "SILVER_GENERAL",
+    "for": "",
+    "type": [],
+    "purity": "silverJewellery",
+    "weight": 0.55,
+    "makingCharges": 50,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 4.8,
+    "ratingCount": 15,
+    "Lock": "",
+    "slug": "925-silver-rudraksha-rakhi-with-designer-silver-caps-mauli-thread-291"
+  },
+  {
+    "id": 292,
+    "name": "925 Silver Rudraksha Rakhi with Silver Beads & Traditional Thread",
+    "category": "Buy Silver Rakhi",
+    "highlights": [
+      "💎 Material: 92.5% Silver Purity",
+      "✨ Finish: Handmade Silver Jewellery Finish",
+      "🪷 Design: Attractive Rakhi Design for Brothers",
+      "🎁 Symbol of Love, Care & Blessings",
+      "🚚 Fast Pan India Shipping"
+    ],
+    "description": "Add a divine touch to Raksha Bandhan celebrations with this beautifully crafted Rudraksha Silver Rakhi. Featuring a natural Rudraksha bead surrounded by polished silver beads, this design represents simplicity, devotion and elegance. The traditional red-yellow thread gives it an authentic festive appeal, making it a perfect choice for your brother.",
+    "images": [
+      "silver-rudraksha-rakhi-new-design-ssj-292-a.webp",
+      "925-silver-bead-rakhi-for-brother-ssj-292-b.webp",
+      "traditional-rudraksha-silver-rakhi-ssj-292-c.webp",
+      "elegant-mauli-thread-rakhi-design-ssj-292-d.webp"
+    ],
+    "brandText": "Made from Authentic 92.5% Pure Silver Quality",
+    "care": "SILVER_GENERAL",
+    "for": "",
+    "type": [],
+    "purity": "silverJewellery",
+    "weight": 0.15,
+    "makingCharges": 110,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 4.7,
+    "ratingCount": 16,
+    "Lock": "",
+    "slug": "925-silver-rudraksha-rakhi-with-silver-beads-traditional-thread-292"
+  },
+  {
+    "id": 293,
+    "name": "925 Silver Minimal Rudraksha Rakhi with Silver Beads & Mauli Thread",
+    "category": "Buy Silver Rakhi",
+    "highlights": [
+      "💎 Material: 925 Sterling Silver (92.5% Purity)",
+      "🪷 Design: Premium Silver Rakhi with Elegant Look",
+      "✨ Finish: Detailed Silver Craftsmanship",
+      "🎁 Special Gift for Raksha Bandhan Celebration",
+      "📦 Secure Gift Packaging"
+    ],
+    "description": "A simple yet elegant Rudraksha Rakhi designed for brothers who prefer minimal jewellery styles. This rakhi features a natural Rudraksha bead paired with finely finished silver beads and a traditional Mauli thread. The clean design reflects spiritual beauty and makes it a perfect Raksha Bandhan gift with timeless appeal.",
+    "images": [
+      "minimal-silver-rudraksha-rakhi-ssj-293-a.webp",
+      "simple-925-silver-rakhi-design-ssj-293-b.webp",
+      "lightweight-rudraksha-rakhi-for-brother-ssj-293-c.webp",
+      "traditional-mauli-silver-rakhi-ssj-293-d.webp"
+    ],
+    "brandText": "Premium 925 Silver with Elegant Detailing",
+    "care": "SILVER_GENERAL",
+    "for": "",
+    "type": [],
+    "purity": "silverJewellery",
+    "weight": 0.2,
+    "makingCharges": 110,
+    "discount": 0,
+    "newArrival": true,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 3.7,
+    "ratingCount": 23,
+    "Lock": "",
+    "slug": "925-silver-minimal-rudraksha-rakhi-with-silver-beads-mauli-thread-293"
+  },
+  {
+    "id": 294,
+    "name": "925 Silver Five Rudraksha Rakhi with Silver Beads & Traditional Thread",
+    "category": "Buy Silver Rakhi",
+    "highlights": [
+      "💎 Material: 925 Silver Purity Jewellery",
+      "✨ Finish: Smooth Silver Finishing with Premium Shine",
+      "🪷 Design: Modern Silver Rakhi Style",
+      "🎁 Make Raksha Bandhan More Memorable",
+      "🚚 Delivered Safely Across India"
+    ],
+    "description": "Designed with multiple natural Rudraksha beads and detailed silver elements, this Raksha Bandhan Rakhi creates a premium spiritual look. The combination of Rudraksha beads, silver accents and colourful Mauli thread gives this rakhi a traditional yet attractive appearance. A perfect choice for brothers who prefer meaningful and devotional jewellery designs.",
+    "images": [
+      "premium-rudraksha-silver-rakhi-ssj-294-a.webp",
+      "five-rudraksha-bead-rakhi-design-ssj-294-b.webp",
+      "designer-silver-rakhi-for-brother-ssj-294-c.webp",
+      "spiritual-rudraksha-jewellery-rakhi-ssj-294-d.webp"
+    ],
+    "brandText": "Genuine Silver Crafted with 925 Purity",
+    "care": "SILVER_GENERAL",
+    "for": "",
+    "type": [],
+    "purity": "silverJewellery",
+    "weight": 0.8,
+    "makingCharges": 50,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 5,
+    "ratingCount": 76,
+    "Lock": "",
+    "slug": "925-silver-five-rudraksha-rakhi-with-silver-beads-traditional-thread-294"
+  },
+  {
+    "id": 295,
+    "name": "925 Silver Rudraksha Rakhi with Dual Rudraksha Beads & Designer Silver Centre",
+    "category": "Buy Silver Rakhi",
+    "highlights": [
+      "💎 Material: 925 Sterling Silver",
+      "🪷 Design: Exclusive Silver Rakhi with Fine Detailing",
+      "✨ Finish: Premium Handmade Finish",
+      "💳 Cash on Delivery Available*",
+      "🔒 Safe & Secure Shopping"
+    ],
+    "description": "This premium Rudraksha Rakhi showcases a beautiful combination of natural Rudraksha beads and artistic silver detailing. The unique centre design with silver elements gives it a stylish appearance while maintaining its spiritual essence. Crafted for brothers who appreciate traditional jewellery with a modern look, this rakhi makes Raksha Bandhan more memorable.",
+    "images": [
+      "designer-silver-rudraksha-rakhi-ssj-295-a.webp",
+      "dual-rudraksha-rakhi-with-silver-design-ssj-295-b.webp",
+      "premium-rakhi-for-brother-ssj-295-c.webp",
+      "traditional-spiritual-silver-rakhi-ssj-295-d.webp"
+    ],
+    "brandText": "Elegant Finish Crafted in 92.5% Silver",
+    "care": "SILVER_GENERAL",
+    "for": "",
+    "type": [],
+    "purity": "silverJewellery",
+    "weight": 0.75,
+    "makingCharges": 50,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 4.3,
+    "ratingCount": 21,
+    "Lock": "",
+    "slug": "925-silver-rudraksha-rakhi-with-dual-rudraksha-beads-designer-silver-centre-295"
+  },
+  {
+    "id": 296,
+    "name": "925 Silver Om Swastik Trishul Rudraksha Rakhi with Red & Yellow Mauli",
+    "category": "Buy Silver Rakhi",
+    "highlights": [
+      "💎 Material: 92.5% Silver Purity",
+      "✨ Finish: High Quality Silver Craftsmanship",
+      "🪷 Design: Elegant Rakhi for Brother’s Wrist",
+      "🎁 Beautiful Gift for Family Bond",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Celebrate Raksha Bandhan with a divine combination of spirituality and elegance. This Rudraksha Silver Rakhi features sacred Om, Swastik and Trishul symbols beautifully crafted on natural Rudraksha beads. The traditional red and yellow mauli thread adds a festive touch, making it a meaningful Rakhi gift for your brother. Designed with premium silver detailing, this Rakhi represents blessings, protection and a strong brother-sister bond.",
+    "images": [
+      "original-silver-rakhi-om-swastik-trishul-ssj-296-a.webp",
+      "sterling-silver-rakhi-new-design-ssj-296-b.webp",
+      "rudraksha-silver-rakhi-for-brother-ssj-296-c.webp",
+      "spiritual-silver-rakhi-design-ssj-296-d.webp"
+    ],
+    "brandText": "Made with Premium Authentic 925 Silver",
+    "care": "SILVER_GENERAL",
+    "for": "",
+    "type": [],
+    "purity": "silverJewellery",
+    "weight": 0.26,
+    "makingCharges": 110,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 3.9,
+    "ratingCount": 35,
+    "Lock": "",
+    "slug": "925-silver-om-swastik-trishul-rudraksha-rakhi-with-red-yellow-mauli-296"
+  },
+  {
+    "id": 297,
+    "name": "925 Silver Rudraksha Beads Rakhi with Traditional Mauli Thread",
+    "category": "Buy Silver Rakhi",
+    "highlights": [
+      "💎 Material: 925 Sterling Silver Jewellery",
+      "🪷 Design: Traditional Silver Rakhi with Premium Appeal",
+      "✨ Finish: Fine Polished Silver Work",
+      "🎁 Perfect Gift for Raksha Bandhan Festival",
+      "📦 Secure Jewellery Packaging"
+    ],
+    "description": "A simple yet elegant Raksha Bandhan choice, this Rudraksha Silver Rakhi is designed with multiple natural Rudraksha beads complemented by silver beads for a stylish appearance. The traditional red and yellow thread enhances its festive charm. Lightweight and comfortable to wear, this Rakhi is perfect for brothers who prefer a minimal spiritual design with timeless appeal.",
+    "images": [
+      "new-silver-rakhi-rudraksha-design-ssj-297-a.webp",
+      "rudraksha-beads-silver-rakhi-ssj-297-b.webp",
+      "traditional-silver-rakhi-for-brother-ssj-297-c.webp",
+      "lightweight-rudraksha-rakhi-design-ssj-297-d.webp"
+    ],
+    "brandText": "Fine Jewellery in Genuine 92.5% Pure Silver",
+    "care": "SILVER_GENERAL",
+    "for": "",
+    "type": [],
+    "purity": "silverJewellery",
+    "weight": 0.7,
+    "makingCharges": 50,
+    "discount": 0,
+    "newArrival": true,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 4.1,
+    "ratingCount": 42,
+    "Lock": "",
+    "slug": "925-silver-rudraksha-beads-rakhi-with-traditional-mauli-thread-297"
+  },
+  {
+    "id": 298,
+    "name": "925 Silver Rudraksha Cap Rakhi with Elegant Silver Detailing",
+    "category": "Buy Silver Rakhi",
+    "highlights": [
+      "💎 Material: 925 Silver Purity",
+      "✨ Finish: Premium Designer Silver Finish",
+      "🪷 Design: Unique Silver Rakhi Collection",
+      "🎁 Express Your Love with a Silver Gift",
+      "💳 COD Available*"
+    ],
+    "description": "This elegant Rudraksha Silver Rakhi combines natural Rudraksha beads with beautifully designed silver caps for a premium traditional look. The simple yet attractive design makes it suitable for brothers who love spiritual jewellery. Finished with a vibrant red and yellow mauli thread, this Rakhi carries a perfect balance of devotion, style and festive emotion.",
+    "images": [
+      "original-rudraksha-silver-rakhi-ssj-298-a.webp",
+      "silver-cap-rudraksha-rakhi-new-design-ssj-298-b.webp",
+      "spiritual-rakhi-for-brother-ssj-298-c.webp",
+      "premium-silver-rakhi-collection-ssj-298-d.webp"
+    ],
+    "brandText": "Authentic 925 Silver with Premium Finish",
+    "care": "SILVER_GENERAL",
+    "for": "",
+    "type": [],
+    "purity": "silverJewellery",
+    "weight": 0.55,
+    "makingCharges": 50,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 4.1,
+    "ratingCount": 64,
+    "Lock": "",
+    "slug": "925-silver-rudraksha-cap-rakhi-with-elegant-silver-detailing-298"
+  },
+  {
+    "id": 299,
+    "name": "925 Silver Twin Rudraksha Rakhi with Minimal Silver Beads",
+    "category": "Buy Silver Rakhi",
+    "highlights": [
+      "💎 Material: 92.5% Silver Jewellery",
+      "🪷 Design: Elegant Rakhi Crafted in Silver",
+      "✨ Finish: Detailed Handmade Craftsmanship",
+      "🎁 Ideal Gift for Brother & Loved Ones",
+      "🚚 Reliable Pan India Delivery"
+    ],
+    "description": "Designed for brothers who prefer simplicity, this Twin Rudraksha Silver Rakhi features two natural Rudraksha beads beautifully placed with silver bead detailing. The braided red and yellow thread gives it a traditional Raksha Bandhan feel while maintaining a modern minimal style. A meaningful spiritual gift that represents love, care and protection between siblings.",
+    "images": [
+      "new-rudraksha-silver-rakhi-design-ssj-299-a.webp",
+      "minimal-silver-rakhi-for-men-ssj-299-b.webp",
+      "twin-rudraksha-rakhi-with-silver-beads-ssj-299-c.webp",
+      "traditional-rakhi-design-for-brother-ssj-299-d.webp"
+    ],
+    "brandText": "Crafted for Elegance with 92.5% Pure Silver",
+    "care": "SILVER_GENERAL",
+    "for": "",
+    "type": [],
+    "purity": "silverJewellery",
+    "weight": 0.42,
+    "makingCharges": 60,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 4.8,
+    "ratingCount": 80,
+    "Lock": "",
+    "slug": "925-silver-twin-rudraksha-rakhi-with-minimal-silver-beads-299"
+  },
+  {
+    "id": 301,
+    "name": "Minimalist Silver Bead Payal",
+    "category": "Silver Payal",
+    "highlights": [
+      "💎 Material: 925 Silver (92.5% Silver Purity)",
+      "🪷 Design: Spiritual & Elegant Silver Rakhi Design",
+      "✨ Finish: Premium Silver Detailing",
+      "🎁 Thoughtful Festival Gift Choice",
+      "📦 Gift Ready Packaging Available"
+    ],
+    "description": "Add elegance to your everyday style with this beautifully crafted 925 Sterling Silver Payal featuring textured silver beads on a sleek snake chain. Its lightweight and adjustable design ensures a comfortable fit, making it perfect for daily wear, office, college, festive occasions, and gifting. The modern yet timeless look pairs effortlessly with both ethnic and western outfits.",
+    "images": [
+      "silver-payal-new-ssj-301-a.webp",
+      "lightweight-daily-wear-silver-payal-ssj-301-b.webp"
+    ],
+    "brandText": "Made from Genuine 925 Silver with Fine Finish",
+    "care": "SILVER_GENERAL",
+    "for": "",
+    "type": [
+      "Silver Jewellery for Women",
+      "Anniversary Silver Gifts",
+      "Party Wear"
+    ],
+    "purity": "silverJewellery",
+    "weight": 8.67,
+    "makingCharges": 80,
+    "discount": 0,
+    "newArrival": true,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 4.1,
+    "ratingCount": 15,
+    "Lock": "",
+    "slug": "minimalist-silver-bead-payal-301"
+  },
+  {
+    "id": 302,
+    "name": "Designer Wavy Silver Payal",
+    "category": "Silver Payal",
+    "highlights": [
+      "💎 Material: 925 Sterling Silver Jewellery",
+      "✨ Finish: Fine Handmade Silver Finish",
+      "🪷 Design: Classic Silver Rakhi for Brothers",
+      "🎁 A Precious Symbol of Sibling Love",
+      "🚚 Fast Delivery Across India"
+    ],
+    "description": "Enhance your traditional look with this stylish 925 Sterling Silver Payal featuring an elegant wavy engraved pattern. Designed for women who love classic jewellery with a modern finish, this lightweight anklet is comfortable for long wear and perfect for weddings, festivals, family functions, and daily styling.",
+    "images": [
+      "bridal-silver-payal-design-ssj-302-a.webp",
+      "engraved-wave-pattern-payal-ssj-302-b.webp"
+    ],
+    "brandText": "92.5% Pure Silver Crafted with Precision",
+    "care": "SILVER_GENERAL",
+    "for": "",
+    "type": [
+      "Party Wear",
+      "Silver Gift for Her",
+      "Birthday Silver Gifts"
+    ],
+    "purity": "silverJewellery",
+    "weight": 9.73,
+    "makingCharges": 80,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 4.2,
+    "ratingCount": 11,
+    "Lock": "",
+    "slug": "designer-wavy-silver-payal-302"
+  },
+  {
+    "id": 303,
+    "name": "Heart Charm Silver Payal",
+    "category": "Silver Payal",
+    "highlights": [
+      "💎 Material: 92.5% Silver Purity",
+      "✨ Finish: Fine Artisan Silver Craftsmanship",
+      "🌸 Design: Classic Payal Design with Modern Appeal",
+      "👣 Fit: Lightweight & Comfortable Wearing",
+      "📦 Secure Jewellery Packaging"
+    ],
+    "description": "Celebrate love and elegance with this charming 925 Sterling Silver Payal featuring sparkling heart-shaped danglers. The delicate chain and shimmering heart charms create a graceful movement while walking, making it an ideal accessory for parties, birthdays, anniversaries, romantic gifting, and everyday fashion.",
+    "images": [
+      "heart-charm-silver-payal-ssj-303-a.webp",
+      "cubic-zirconia-heart-anklet-ssj-303-b.webp"
+    ],
+    "brandText": "Authentic Silver Jewellery with Premium Craft",
+    "care": "SILVER_GENERAL",
+    "for": "",
+    "type": [],
+    "purity": "silverJewellery",
+    "weight": 12.38,
+    "makingCharges": 80,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 3.9,
+    "ratingCount": 11,
+    "Lock": "",
+    "slug": "heart-charm-silver-payal-303"
+  },
+  {
+    "id": 304,
+    "name": "Evil Eye Silver Payal",
+    "category": "Silver Payal",
+    "highlights": [
+      "💎 Material: 925 Sterling Silver",
+      "🌸 Design: Traditional Silver Anklet with Elegant Look",
+      "✨ Finish: Premium Polished Silver Finish",
+      "🎁 Meaningful Gift for Special Occasions",
+      "🔒 Secure Payment & Checkout"
+    ],
+    "description": "This elegant 925 Sterling Silver Payal features beautiful Evil Eye bead accents that add a modern touch while symbolizing protection and positivity. Lightweight, adjustable, and comfortable for daily use, it pairs beautifully with casual outfits as well as festive attire, making it a thoughtful gift for loved ones.",
+    "images": [
+      "evil-eye-silver-payal-ssj-304-a.webp",
+      "black-bead-silver-anklet-ssj-304-b.webp"
+    ],
+    "brandText": "Crafted in Genuine 925 Silver for Quality",
+    "care": "SILVER_GENERAL",
+    "for": "",
+    "type": [
+      "Silver Jewellery for Women",
+      "Anniversary Silver Gifts",
+      "Party Wear"
+    ],
+    "purity": "silverJewellery",
+    "weight": 8.27,
+    "makingCharges": 80,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 4.7,
+    "ratingCount": 67,
+    "Lock": "",
+    "slug": "evil-eye-silver-payal-304"
+  },
+  {
+    "id": 306,
+    "name": "Two Tone Twisted Silver Payal",
+    "category": "Silver Payal",
+    "highlights": [
+      "💎 Material: 92.5% Silver Purity",
+      "🌸 Design: Beautiful Silver Anklet with Graceful Style",
+      "✨ Finish: Smooth & Attractive Silver Finish",
+      "🎁 Ideal Gift for Wife, Sister & Loved Ones",
+      "💳 COD Facility Available*"
+    ],
+    "description": "Designed with an attractive twisted rope pattern and elegant two-tone finish, this 925 Sterling Silver Payal offers a luxurious look without compromising comfort. Its timeless design complements both traditional and western outfits, making it an excellent choice for weddings, festive celebrations, office wear, and everyday elegance.",
+    "images": [
+      "dual-tone-silver-payal-ssj-306-a.webp",
+      "twisted-rope-anklet-design-ssj-306-b.webp"
+    ],
+    "brandText": "Made with Authentic 925 Silver for Elegance",
+    "care": "SILVER_GENERAL",
+    "for": "",
+    "type": [
+      "Silver Jewellery for Women",
+      "Anniversary Silver Gifts",
+      "Party Wear"
+    ],
+    "purity": "silverJewellery",
+    "weight": 7.74,
+    "makingCharges": 80,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 5,
+    "ratingCount": 75,
+    "Lock": "",
+    "slug": "two-tone-twisted-silver-payal-306"
+  },
+  {
+    "id": 307,
+    "name": "Silver Daily Wear Designer Payal",
+    "category": "Silver Payal",
+    "highlights": [
+      "💎 Material: 925 Sterling Silver (92.5% Purity)",
+      "✨ Finish: Premium Silver Work with Fine Details",
+      "🌸 Design: Lightweight Daily Wear Payal",
+      "👣 Fit: Comfortable for Long Hours",
+      "📦 Gift Ready Packaging Available"
+    ],
+    "description": "Add a touch of elegance to your everyday style with this beautifully crafted 925 silver payal. Designed with a sleek and lightweight pattern, this payal offers a perfect balance of traditional charm and modern simplicity. Its comfortable design makes it suitable for daily wear, office wear, college wear, and casual occasions. The fine detailing and smooth finish give this silver anklet a graceful look that complements every outfit.\n\nA perfect choice for women who love minimal yet stylish jewellery, this lightweight silver payal is also an ideal gift option for birthdays, anniversaries, and special moments.",
+    "images": [
+      "silver-daily-wear-payal-new-ssj-307-a.webp",
+      "designer-silver-payal-for-women-ssj-307-b.webp"
+    ],
+    "brandText": "Genuine 92.5% Silver with Fine Finish",
+    "care": "SILVER_GENERAL",
+    "for": "",
+    "type": [
+      "Party Wear",
+      "Silver Gift for Her",
+      "Birthday Silver Gifts"
+    ],
+    "purity": "silverJewellery",
+    "weight": 9.43,
+    "makingCharges": 80,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 4.7,
+    "ratingCount": 40,
+    "Lock": "",
+    "slug": "silver-daily-wear-designer-payal-307"
+  },
+  {
+    "id": 308,
+    "name": "Bridal Lightweight Silver Payal",
+    "category": "Silver Payal",
+    "highlights": [
+      "💎 Material: 925 Silver Purity Jewellery",
+      "🌸 Design: Elegant Payal Inspired by Traditional Indian Style",
+      "✨ Finish: Fine Polished Handmade Finish",
+      "🎁 Perfect Choice for Festivals & Celebrations",
+      "🚚 Pan India Shipping Available"
+    ],
+    "description": "Enhance your traditional look with this elegant lightweight bridal silver payal crafted with beautiful detailing and a premium finish. The graceful design adds a royal touch to ethnic outfits, making it perfect for weddings, festivals, and special occasions. Its lightweight structure provides comfortable wearing while maintaining a rich and attractive appearance.\n\nThis designer silver anklet is a wonderful choice for brides, newly married women, and those who love traditional jewellery with a modern touch. Pair it with sarees, lehengas, and ethnic wear to complete your festive look.",
+    "images": [
+      "bridal-silver-lightweight-payal-ssj-308-a.webp",
+      "traditional-silver-payal-design-for-bride-ssj-308-b.webp"
+    ],
+    "brandText": "925 Silver Crafted for Refined Elegance",
+    "care": "SILVER_GENERAL",
+    "for": "",
+    "type": [
+      "Silver Jewellery for Women",
+      "Anniversary Silver Gifts",
+      "Party Wear"
+    ],
+    "purity": "silverJewellery",
+    "weight": 12.37,
+    "makingCharges": 80,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 4.2,
+    "ratingCount": 65,
+    "Lock": "",
+    "slug": "bridal-lightweight-silver-payal-308"
+  },
+  {
+    "id": 309,
+    "name": "Triple Layer Designer Silver Payal",
+    "category": "Silver Payal",
+    "highlights": [
+      "💎 Material: 925 Sterling Silver",
+      "✨ Finish: Premium Designer Silver Finish",
+      "🌸 Design: Trendy Payal for Modern Women",
+      "👣 Fit: Lightweight & Easy to Wear",
+      "🔒 Safe & Secure Online Shopping"
+    ],
+    "description": "This stunning triple layer silver payal is designed for women who love a bold yet elegant jewellery style. Featuring a beautifully structured multi-layer pattern, this anklet creates a rich and fashionable look on the feet. The detailed craftsmanship and shining finish make it suitable for festive occasions, parties, and traditional celebrations.\n\nMade for modern women, this designer silver payal combines traditional beauty with contemporary fashion. It is a perfect addition to your silver jewellery collection and makes a thoughtful gifting option.",
+    "images": [
+      "triple-layer-silver-payal-design-ssj-309-a.webp",
+      "heavy-look-lightweight-silver-payal-ssj-309-b.webp"
+    ],
+    "brandText": "Premium Jewellery Crafted from Authentic Silver",
+    "care": "SILVER_GENERAL",
+    "for": "",
+    "type": [],
+    "purity": "silverJewellery",
+    "weight": 14.6,
+    "makingCharges": 80,
+    "discount": 0,
+    "newArrival": true,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 4.1,
+    "ratingCount": 13,
+    "Lock": "",
+    "slug": "triple-layer-designer-silver-payal-309"
+  },
+  {
+    "id": 310,
+    "name": "Simple Pattern Silver Payal",
+    "category": "Silver Payal",
+    "highlights": [
+      "💎 Material: 92.5% Silver Jewellery",
+      "🌸 Design: Classic Silver Payal with Premium Appeal",
+      "✨ Finish: Detailed Silver Craftsmanship",
+      "🎁 Beautiful Gift for Women",
+      "💳 Cash on Delivery Available*"
+    ],
+    "description": "Discover the beauty of simplicity with this stylish 925 silver payal featuring a sleek and elegant design. Crafted for women who prefer lightweight and comfortable jewellery, this anklet is perfect for everyday styling. The fine pattern work gives it a graceful appearance while keeping the design minimal and classy.\n\nIdeal for daily wear, office wear, and casual occasions, this silver anklet adds a subtle shine to your overall look. A timeless jewellery piece that suits every age group and outfit style.",
+    "images": [
+      "simple-silver-payal-design-ssj-310-a.webp",
+      "daily-wear-silver-anklet-for-women-ssj-310-b.webp"
+    ],
+    "brandText": "Made with Genuine 92.5% Silver Craftsmanship",
+    "care": "SILVER_GENERAL",
+    "for": "",
+    "type": [
+      "Party Wear",
+      "Silver Gift for Her",
+      "Birthday Silver Gifts"
+    ],
+    "purity": "silverJewellery",
+    "weight": 9.44,
+    "makingCharges": 80,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 4.6,
+    "ratingCount": 9,
+    "Lock": "",
+    "slug": "simple-pattern-silver-payal-310"
+  },
+  {
+    "id": 311,
+    "name": "Gold Polish Silver Charm Payal",
+    "category": "Silver Payal",
+    "highlights": [
+      "💎 Material: 925 Sterling Silver",
+      "✨ Finish: Elegant Smooth Silver Finishing",
+      "🌸 Design: Stylish Anklet for Daily & Occasion Wear",
+      "👣 Fit: Comfortable Traditional Jewellery Style",
+      "🚚 Reliable Pan India Delivery"
+    ],
+    "description": "Add a trendy and feminine touch to your jewellery collection with this beautiful gold polish silver charm payal. Designed with delicate charms and attractive detailing, this anklet creates a stylish fusion of traditional and modern fashion. The charming elements add a playful look, making it perfect for young women and girls.\n\nThis designer silver payal is ideal for casual outings, festive occasions, gifting, and daily styling. Its elegant design makes it a must-have accessory for those who love fashionable silver jewellery.",
+    "images": [
+      "gold-polish-silver-charm-payal-ssj-311-a.webp",
+      "designer-charm-anklet-for-girls-ssj-311-b.webp"
+    ],
+    "brandText": "Authentic 925 Silver Quality with Elegant Finish",
+    "care": "SILVER_GENERAL",
+    "for": "",
+    "type": [
+      "Party Wear",
+      "Silver Gift for Her",
+      "Birthday Silver Gifts"
+    ],
+    "purity": "silverJewellery",
+    "weight": 10.66,
+    "makingCharges": 80,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 5,
+    "ratingCount": 90,
+    "Lock": "",
+    "slug": "gold-polish-silver-charm-payal-311"
+  },
+  {
+    "id": 312,
+    "name": "Wave Pattern Silver Payal",
+    "category": "Silver Payal",
+    "highlights": [
+      "💎 Material: 925 Silver (92.5% Silver Purity)",
+      "🌸 Design: Premium Silver Payal Collection",
+      "✨ Finish: Handmade Silver Detailing",
+      "🎁 Special Gift for Wedding & Festive Moments",
+      "📦 Secure Packaging Before Dispatch"
+    ],
+    "description": "Bring elegance to your traditional and modern looks with this beautiful wave pattern silver payal. The unique curved design creates a stylish appearance while the smooth finishing provides a comfortable wearing experience. This lightweight anklet is perfect for women who prefer elegant jewellery with a unique pattern.\n\nSuitable for daily wear, festive occasions, and special events, this silver payal reflects a perfect combination of simplicity and modern craftsmanship. It is also a thoughtful gift choice for loved ones.",
+    "images": [
+      "wave-pattern-silver-payal-ssj-312-a.webp",
+      "unique-silver-anklet-design-for-women-ssj-312-b.webp"
+    ],
+    "brandText": "Made with Genuine 92.5% Silver Craftsmanship",
+    "care": "SILVER_GENERAL",
+    "for": "",
+    "type": [
+      "Silver Jewellery for Women",
+      "Anniversary Silver Gifts",
+      "Party Wear"
+    ],
+    "purity": "silverJewellery",
+    "weight": 11.16,
+    "makingCharges": 80,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 3.9,
+    "ratingCount": 20,
+    "Lock": "",
+    "slug": "wave-pattern-silver-payal-312"
+  },
+  {
+    "id": 313,
+    "name": "silver payal",
+    "category": "Silver Payal",
+    "highlights": [
+      "💎 Material: 92.5% Silver Purity Jewellery",
+      "✨ Finish: Fine Quality Silver Craftsmanship",
+      "🌸 Design: Modern Payal with Traditional Touch",
+      "👣 Fit: Comfortable Lightweight Design",
+      "💳 COD Available for Easy Shopping*"
+    ],
+    "description": "Add a touch of elegance to your everyday style with this beautifully crafted silver payal. Designed with a lightweight structure and delicate detailing, this anklet offers a comfortable fit for daily wear. The modern pattern with subtle silver accents makes it perfect for office wear, college looks, casual outings, and traditional occasions. Its simple yet stylish design gives a graceful charm to your feet while maintaining a minimal and trendy appearance.",
+    "images": [
+      "silver-daily-wear-payal-new-ssj-313-a.webp",
+      "designer-silver-payal-for-women-ssj-313-b.webp"
+    ],
+    "brandText": "Made with Premium 925 Silver Purity",
+    "care": "SILVER_GENERAL",
+    "for": "",
+    "type": [
+      "Party Wear",
+      "Silver Gift for Her",
+      "Birthday Silver Gifts"
+    ],
+    "purity": "silverJewellery",
+    "weight": 13.97,
+    "makingCharges": 80,
+    "discount": 0,
+    "newArrival": true,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 4.5,
+    "ratingCount": 47,
+    "Lock": "",
+    "slug": "silver-payal-313"
+  },
+  {
+    "id": 314,
+    "name": "silver anklet",
+    "category": "Silver Payal",
+    "highlights": [
+      "💎 Material: 925 Sterling Silver",
+      "🌸 Design: Beautiful Silver Anklet with Elegant Patterns",
+      "✨ Finish: Premium Polished Silver Look",
+      "🎁 Thoughtful Gift Choice for Loved Ones",
+      "🚚 Fast Delivery Across India"
+    ],
+    "description": "This premium silver payal features a beautiful braided texture design that reflects traditional craftsmanship with a modern touch. The sleek pattern gives a rich and stylish look, making it suitable for women who prefer elegant and lightweight jewellery. Perfect for festive wear, traditional outfits, and daily styling, this silver anklet adds a graceful shine to your feet while offering comfortable wear throughout the day.",
+    "images": [
+      "bridal-silver-lightweight-payal-ssj-314-a.webp",
+      "braided-design-silver-payal-for-women-ssj-314-b.webp"
+    ],
+    "brandText": "Crafted from Genuine 92.5% Pure Silver",
+    "care": "SILVER_GENERAL",
+    "for": "",
+    "type": [
+      "Party Wear",
+      "Silver Gift for Her",
+      "Birthday Silver Gifts"
+    ],
+    "purity": "silverJewellery",
+    "weight": 11.46,
+    "makingCharges": 80,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 4.9,
+    "ratingCount": 67,
+    "Lock": "",
+    "slug": "silver-anklet-314"
+  },
+  {
+    "id": 315,
+    "name": "lightweight payal",
+    "category": "Silver Payal",
+    "highlights": [
+      "💎 Material: 925 Silver Purity",
+      "✨ Finish: Premium Handmade Jewellery Finish",
+      "🌸 Design: Fancy Silver Payal with Attractive Detailing",
+      "👣 Fit: Suitable for Daily & Special Wear",
+      "🔒 Secure Payment Facility"
+    ],
+    "description": "A timeless silver payal designed for those who love simplicity and elegance. This classic anklet features a smooth and sleek finish that gives a sophisticated look without being too heavy. Its minimal design makes it an ideal choice for everyday wear, office styling, and casual occasions. Comfortable, versatile, and easy to pair with different outfits, this silver payal is a must-have addition to every jewellery collection.",
+    "images": [
+      "classic-silver-payal-design-for-women-ssj-315-a.webp",
+      "simple-daily-wear-silver-anklet-ssj-315-b.webp"
+    ],
+    "brandText": "Authentic 925 Silver with Premium Quality",
+    "care": "SILVER_GENERAL",
+    "for": "",
+    "type": [
+      "Silver Jewellery for Women",
+      "Anniversary Silver Gifts",
+      "Party Wear"
+    ],
+    "purity": "silverJewellery",
+    "weight": 12.86,
+    "makingCharges": 80,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 3.9,
+    "ratingCount": 58,
+    "Lock": "",
+    "slug": "lightweight-payal-315"
+  },
+  {
+    "id": 316,
+    "name": "designer payal",
+    "category": "Silver Payal",
+    "highlights": [
+      "💎 Material: 92.5% Silver Jewellery",
+      "🌸 Design: Exclusive Silver Payal Collection",
+      "✨ Finish: Designer Silver Finish with Fine Work",
+      "🎁 Gift Ready Presentation Available",
+      "📦 Protective Jewellery Packaging"
+    ],
+    "description": "Enhance your jewellery collection with this beautifully designed silver payal featuring an attractive diamond-cut pattern. The detailed finishing creates a sparkling effect that catches attention with every movement. Designed for women who love traditional jewellery with a contemporary feel, this anklet is perfect for festive occasions, weddings, and special celebrations. Its elegant design adds charm and sophistication to any ethnic outfit.",
+    "images": [
+      "diamond-cut-silver-payal-design-ssj-316-a.webp",
+      "designer-silver-anklet-for-women-ssj-316-b.webp"
+    ],
+    "brandText": "Elegant Craftsmanship in Genuine 925 Silver",
+    "care": "SILVER_GENERAL",
+    "for": "",
+    "type": [
+      "Party Wear",
+      "Silver Gift for Her",
+      "Birthday Silver Gifts"
+    ],
+    "purity": "silverJewellery",
+    "weight": 9.44,
+    "makingCharges": 80,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 5,
+    "ratingCount": 98,
+    "Lock": "",
+    "slug": "designer-payal-316"
+  },
+  {
+    "id": 317,
+    "name": "daily wear silver payal",
+    "category": "Silver Payal",
+    "highlights": [
+      "💎 Material: 925 Sterling Silver (92.5% Purity)",
+      "✨ Finish: Luxury Silver Craftsmanship",
+      "🌸 Design: Elegant Payal Designed for Modern Women",
+      "👣 Fit: Comfortable & Stylish Everyday Wear",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Bring elegance to your traditional and modern looks with this beautiful wave pattern silver payal. The unique curved design creates a stylish appearance while the smooth finishing provides a comfortable wearing experience. This lightweight anklet is perfect for women who prefer elegant jewellery with a unique pattern.\n\nSuitable for daily wear, festive occasions, and special events, this silver payal reflects a perfect combination of simplicity and modern craftsmanship. It is also a thoughtful gift choice for loved ones.",
+    "images": [
+      "cute-charm-silver-payal-for-girls-ssj-317-a.webp",
+      "smiley-star-design-silver-anklet-ssj-317-b.webp",
+      "'"
+    ],
+    "brandText": "Made from High-Quality 92.5% Pure Silver",
+    "care": "SILVER_GENERAL",
+    "for": "",
+    "type": [
+      "Silver Jewellery for Women",
+      "Anniversary Silver Gifts",
+      "Party Wear"
+    ],
+    "purity": "silverJewellery",
+    "weight": 9.92,
+    "makingCharges": 80,
+    "discount": 0,
+    "newArrival": true,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 4.7,
+    "ratingCount": 102,
+    "Lock": "",
+    "slug": "daily-wear-silver-payal-317"
   },
   {
     "id": 661,
@@ -10034,7 +10640,7 @@
       "IMG20251228140911.webp",
       "IMG20251228140931.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium 925 Silver Crafted with Fine Detail",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -10067,7 +10673,7 @@
       "IMG20251228141044.webp",
       "IMG20251228143447.webp"
     ],
-    "brandText": "",
+    "brandText": "Genuine Silver Jewellery with 92.5% Purity",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -10100,7 +10706,7 @@
       "IMG20251228143723.webp",
       "IMG20251228143731.webp"
     ],
-    "brandText": "",
+    "brandText": "Crafted Using Authentic 925 Silver Quality",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -10133,7 +10739,7 @@
       "IMG20251228143926.webp",
       "IMG20251228143935.webp"
     ],
-    "brandText": "",
+    "brandText": "92.5% Pure Silver with Premium Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -10157,7 +10763,7 @@
   {
     "id": 665,
     "name": "Sawariya Seth Silver Ring",
-    "category": "सांवरिया सेठ रिंग",
+    "category": "Sawariya Seth Ring",
     "highlights": [
       "\"Lord Sanwariya Seth is known as the ultimate 'Seth' (Master) of all wealth—both material and spiritual. Wearing his name is a reminder that you are always guided and protected by his infinite grace.\""
     ],
@@ -10168,7 +10774,7 @@
       "a1.webp",
       "a3.webp"
     ],
-    "brandText": "",
+    "brandText": "Made with Genuine 925 Silver for Lasting Elegance",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -10181,7 +10787,7 @@
     "weight": 7,
     "makingCharges": 55,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -10203,7 +10809,7 @@
       "IMG20251228144203.webp",
       "IMG20251228144148.webp"
     ],
-    "brandText": "",
+    "brandText": "Fine Jewellery Crafted in Authentic 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -10235,7 +10841,7 @@
     "images": [
       "IMG20251228143844.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium Silver Quality with 92.5% Purity",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -10260,15 +10866,21 @@
   {
     "id": 955,
     "name": "Sawariya seth ring",
-    "category": "सांवरिया सेठ रिंग",
-    "highlights": [],
-    "description": "",
+    "category": "Sawariya Seth Ring",
+    "highlights": [
+      "💎 Material: 925 Sterling Silver",
+      "🪷 Design: Divine Sawariya Seth Ji Ring Design",
+      "✨ Finish: Premium Polished Silver Look",
+      "🙏 Spiritual Symbol of Faith & Devotion",
+      "🔒 Secure Payment & Checkout"
+    ],
+    "description": "सांवरिया सेठ जी के प्रति आस्था को दर्शाने वाली यह खूबसूरत Chandi ki Sawariya Seth Ji ki Ring भक्तों के लिए एक खास आध्यात्मिक आभूषण है। बारीक नक्काशी और सुंदर डिजाइन के साथ बनी यह Sawariya Seth Silver Ring आपके हाथों में भक्ति और शाही अंदाज दोनों का एहसास देती है। रोजाना पहनने के लिए आरामदायक और भगवान सांवरिया सेठ के आशीर्वाद को साथ रखने का एक सुंदर माध्यम है।",
     "images": [
       "ssj-sawariya-seth-ring-955-1.webp",
       "ssj-sawariya-seth-ring-955-2.webp",
       "ssj-sawariya-seth-ring-955-3.webp"
     ],
-    "brandText": "",
+    "brandText": "Crafted from Genuine 925 Silver with Care",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -10293,14 +10905,20 @@
   {
     "id": 956,
     "name": "Sawariya seth ring",
-    "category": "सांवरिया सेठ रिंग",
-    "highlights": [],
-    "description": "",
+    "category": "Sawariya Seth Ring",
+    "highlights": [
+      "💎 Material: 925 Silver Jewellery",
+      "🪷 Design: Elegant Sawariya Seth Devotional Ring",
+      "✨ Finish: Fine Silver Craftsmanship with Smooth Finish",
+      "🎁 Meaningful Gift for Devotees",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "अगर आप एक ऐसी अंगूठी चाहते हैं जिसमें फैशन के साथ भक्ति भी जुड़ी हो, तो यह 925 Silver Sawariya Seth Ring एक शानदार विकल्प है। चांदी की सांवरिया सेठ जी की अंगूठी पर किया गया पारंपरिक काम इसे साधारण रिंग से अलग बनाता है। यह रिंग पुरुषों के लिए devotional jewellery के रूप में एक आकर्षक और meaningful choice है।",
     "images": [
       "ssj-sawariya-seth-ring-956-1.webp",
       "ssj-sawariya-seth-ring-956-2.webp"
     ],
-    "brandText": "",
+    "brandText": "Authentic 92.5% Pure Silver Jewellery",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -10313,7 +10931,7 @@
     "weight": 6.72,
     "makingCharges": 55,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -10325,14 +10943,20 @@
   {
     "id": 957,
     "name": "Sawariya seth ring",
-    "category": "सांवरिया सेठ रिंग",
-    "highlights": [],
-    "description": "",
+    "category": "Sawariya Seth Ring",
+    "highlights": [
+      "💎 Material: 92.5% Silver Purity",
+      "🪷 Design: Traditional Sawariya Seth Ji Engraved Ring",
+      "✨ Finish: Premium Silver Shine & Detailing",
+      "🙏 Carry Divine Blessings with You",
+      "📦 Secure Jewellery Packaging"
+    ],
+    "description": "Sanwariya Seth Silver Ring सिर्फ एक jewellery piece नहीं बल्कि विश्वास और श्रद्धा का प्रतीक है। इस सांवरिया सेठ की चांदी की अंगूठी में सुंदर carving और devotional touch दिया गया है, जो इसे हर भक्त के लिए खास बनाता है। पूजा, त्योहार या daily wear के लिए यह एक elegant spiritual accessory है।",
     "images": [
       "ssj-sawariya-seth-ring-957-1.webp",
       "ssj-sawariya-seth-ring-957-2.webp"
     ],
-    "brandText": "",
+    "brandText": "Made with Premium Silver and 925 Purity",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -10357,14 +10981,20 @@
   {
     "id": 959,
     "name": "Sawariya seth ring",
-    "category": "सांवरिया सेठ रिंग",
-    "highlights": [],
-    "description": "",
+    "category": "Sawariya Seth Ring",
+    "highlights": [
+      "💎 Material: 925 Sterling Silver (92.5% Purity)",
+      "🪷 Design: Spiritual Sawariya Seth Ring for Men",
+      "✨ Finish: Detailed Silver Work with Elegant Appeal",
+      "🎁 Perfect Devotional Gift Choice",
+      "🔒 Safe & Secure Shopping"
+    ],
+    "description": "अपने हाथों में प्रभु सांवरिया सेठ जी की कृपा का एहसास पाने के लिए पहनें यह आकर्षक Chandi ki Sawariya Seth Ring। इसकी traditional design और premium finishing इसे एक unique devotional ring बनाती है। यह उन लोगों के लिए perfect है जो modern style के साथ अपनी आस्था को भी दिखाना चाहते हैं।",
     "images": [
       "ssj-sawariya-seth-ring-959-1.webp",
       "ssj-sawariya-seth-ring-959-2.webp"
     ],
-    "brandText": "",
+    "brandText": "Elegant Designs Crafted in Genuine 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -10389,14 +11019,20 @@
   {
     "id": 960,
     "name": "Sawariya seth ring",
-    "category": "सांवरिया सेठ रिंग",
-    "highlights": [],
-    "description": "",
+    "category": "Sawariya Seth Ring",
+    "highlights": [
+      "💎 Material: 925 Silver Purity Jewellery",
+      "🪷 Design: Unique Sawariya Seth Silver Ring Style",
+      "✨ Finish: Smooth Polished Silver Finish",
+      "🙏 Symbol of Faith, Positivity & Devotion",
+      "🚚 Delivered Safely Across India"
+    ],
+    "description": "यह Sawariya Seth Ji Silver Ring भक्ति, सुंदरता और craftsmanship का सुंदर संगम है। चांदी की इस अंगूठी पर बना सांवरिया सेठ जी का नाम इसे एक खास धार्मिक पहचान देता है। चाहे खुद के लिए खरीदें या किसी प्रियजन को gift करें, यह devotional silver jewellery एक यादगार उपहार बन सकती है।",
     "images": [
       "ssj-sawariya-seth-ring-960-1.webp",
       "ssj-sawariya-seth-ring-960-2.webp"
     ],
-    "brandText": "",
+    "brandText": "Genuine 925 Silver with Premium Craft Quality",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -10409,7 +11045,7 @@
     "weight": 4.97,
     "makingCharges": 60,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -10421,14 +11057,20 @@
   {
     "id": 961,
     "name": "Sawariya seth ring",
-    "category": "सांवरिया सेठ रिंग",
-    "highlights": [],
-    "description": "",
+    "category": "Sawariya Seth Ring",
+    "highlights": [
+      "💎 Material: 925 Sterling Silver",
+      "🪷 Design: Sawariya Seth Ji Devotional Ring Design",
+      "✨ Finish: Premium Silver Polish with Fine Detailing",
+      "🙏 Represents Faith, Blessings & Spiritual Connection",
+      "🎁 Perfect Gift for Religious Occasions"
+    ],
+    "description": "Chandi ki Sawariya Seth Ji ki Anguthi पहनना कई भक्तों के लिए आस्था और सकारात्मक ऊर्जा से जुड़ा अनुभव है। इस रिंग का traditional look और detailed design इसे हर उम्र के पुरुषों के लिए suitable बनाता है। यह एक ऐसी silver ring है जो style के साथ spiritual connection भी महसूस कराती है।",
     "images": [
       "ssj-sawariya-seth-ring-961-1.webp",
       "ssj-sawariya-seth-ring-961-2.webp"
     ],
-    "brandText": "",
+    "brandText": "Crafted with High-Quality 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -10453,14 +11095,20 @@
   {
     "id": 962,
     "name": "Sawariya seth ring",
-    "category": "सांवरिया सेठ रिंग",
-    "highlights": [],
-    "description": "",
+    "category": "Sawariya Seth Ring",
+    "highlights": [
+      "💎 Material: 92.5% Silver Purity",
+      "🪷 Design: Chandi ki Sawariya Seth Ji ki Anguthi",
+      "✨ Finish: Elegant Silver Finish with Premium Look",
+      "🙏 Keep Divine Faith Close to Your Heart",
+      "🚚 Fast & Safe Pan India Delivery"
+    ],
+    "description": "अगर आप भगवान सांवरिया सेठ जी के भक्त हैं, तो यह Sawariya Seth Silver Ring for Men आपकी jewellery collection में एक खास जगह बना सकती है। इसकी elegant finishing, devotional pattern और comfortable design इसे daily पहनने के लिए एक बेहतरीन choice बनाते हैं। सेठों के सेठ सांवरिया सेठ जी के प्रति श्रद्धा को दर्शाने वाली यह रिंग एक सुंदर spiritual symbol है।",
     "images": [
       "ssj-sawariya-seth-ring-962-1.webp",
       "ssj-sawariya-seth-ring-962-2.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium Finish in Genuine 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -10485,14 +11133,20 @@
   {
     "id": 963,
     "name": "Sawariya seth ring",
-    "category": "सांवरिया सेठ रिंग",
-    "highlights": [],
-    "description": "",
+    "category": "Sawariya Seth Ring",
+    "highlights": [
+      "💎 Material: 925 Silver Jewellery",
+      "🪷 Design: Premium Sawariya Seth Ring for Men",
+      "✨ Finish: Smooth Craftsmanship with Elegant Shine",
+      "🎁 Meaningful Jewellery for Devotees",
+      "🔒 Secure Payment & Checkout"
+    ],
+    "description": "भक्ति और royal look का सुंदर मेल है यह Silver Sawariya Seth Ring। चांदी की सांवरिया सेठ जी की रिंग अपने आकर्षक design और धार्मिक महत्व के कारण खास पसंद की जाती है। यह devotional ring उन लोगों के लिए बनाई गई है जो अपनी आस्था को stylish और elegant तरीके से carry करना चाहते हैं।",
     "images": [
       "ssj-sawariya-seth-ring-963-1.webp",
       "ssj-sawariya-seth-ring-963-2.webp"
     ],
-    "brandText": "",
+    "brandText": "Made from Authentic Silver with 925 Purity",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -10517,13 +11171,19 @@
   {
     "id": 965,
     "name": "Sawariya seth ring",
-    "category": "सांवरिया सेठ रिंग",
-    "highlights": [],
-    "description": "",
+    "category": "Sawariya Seth Ring",
+    "highlights": [
+      "💎 Material: 925 Sterling Silver (92.5% Purity)",
+      "🪷 Design: Spiritual Sawariya Seth Ji Silver Ring",
+      "✨ Finish: Detailed Engraving with Premium Polish",
+      "🙏 A Symbol of Devotion & Positivity",
+      "📦 Secure Jewellery Packaging Available"
+    ],
+    "description": "Bring devotion and elegance together with this beautifully crafted Sawariya Seth Silver Ring. Designed for devotees who believe in the blessings of Shri Sawariya Seth Ji, this ring features a spiritual design with a premium silver finish. A perfect choice for those looking for a Chandi ki Sawariya Seth Ji ki Ring that reflects faith, tradition, and modern style.",
     "images": [
       "ssj-sawariya-seth-ring-965-1.webp"
     ],
-    "brandText": "",
+    "brandText": "925 Silver Crafted with Premium Quality Standards",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -10536,7 +11196,7 @@
     "weight": 7.28,
     "makingCharges": 55,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -10548,13 +11208,19 @@
   {
     "id": 966,
     "name": "Sawariya seth ring",
-    "category": "सांवरिया सेठ रिंग",
-    "highlights": [],
-    "description": "",
+    "category": "Sawariya Seth Ring",
+    "highlights": [
+      "💎 Material: 925 Silver Purity Jewellery",
+      "🪷 Design: Traditional Sawariya Seth Chandi Ring",
+      "✨ Finish: Fine Silver Craftsmanship & Smooth Texture",
+      "🎁 Thoughtful Gift for Family & Loved Ones",
+      "🚚 Reliable Delivery Across India"
+    ],
+    "description": "This elegant 925 Silver Sawariya Seth Ring is a symbol of devotion and positivity. With its detailed craftsmanship and divine appeal, it adds a spiritual touch to your everyday style. Wear this Sawariya Seth Ji ki Chandi ki Anguthi as a reminder of faith and blessings while enjoying a classy silver jewellery look.",
     "images": [
       "ssj-sawariya-seth-ring-966-1.webp"
     ],
-    "brandText": "",
+    "brandText": "Genuine 92.5% Silver with Refined Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -10579,13 +11245,19 @@
   {
     "id": 967,
     "name": "Sawariya seth ring",
-    "category": "सांवरिया सेठ रिंग",
-    "highlights": [],
-    "description": "",
+    "category": "Sawariya Seth Ring",
+    "highlights": [
+      "💎 Material: 92.5% Pure Silver Quality",
+      "🪷 Design: Divine Sawariya Seth Maharaj Ring",
+      "✨ Finish: Premium Handmade Silver Detailing",
+      "🙏 Carry Spiritual Elegance Every Day",
+      "💳 COD Facility Available*"
+    ],
+    "description": "A perfect blend of spirituality and contemporary design, this Sawariya Seth Silver Ring for Men is created for devotees who love meaningful jewellery. The beautiful detailing and smooth finishing make it comfortable for daily wear. This Chandi ki Sawariya Seth Ring represents devotion with a premium and elegant appearance.",
     "images": [
       "ssj-sawariya-seth-ring-967-1.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium Jewellery Made with Authentic 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -10610,13 +11282,19 @@
   {
     "id": 968,
     "name": "Sawariya seth ring",
-    "category": "सांवरिया सेठ रिंग",
-    "highlights": [],
-    "description": "",
+    "category": "Sawariya Seth Ring",
+    "highlights": [
+      "💎 Material: 925 Sterling Silver",
+      "🪷 Design: Elegant Sawariya Seth Ji Silver Anguthi",
+      "✨ Finish: High Quality Polished Silver Look",
+      "🙏 Perfect Blend of Faith & Modern Style",
+      "🎁 Ideal Devotional Gift Choice"
+    ],
+    "description": "Celebrate your faith with this premium Silver Sawariya Seth Ring, designed with a devotional theme and elegant craftsmanship. The unique design makes it more than just jewellery; it becomes a symbol of your connection with Shri Sawariya Seth Ji. A beautiful choice for gifting or personal devotion.",
     "images": [
       "ssj-sawariya-seth-ring-968-1.webp"
     ],
-    "brandText": "",
+    "brandText": "Crafted in 92.5% Pure Silver for Elegant Style",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -10629,7 +11307,7 @@
     "weight": 6,
     "makingCharges": 55,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -10641,14 +11319,20 @@
   {
     "id": 969,
     "name": "Sawariya seth ring",
-    "category": "सांवरिया सेठ रिंग",
-    "highlights": [],
-    "description": "",
+    "category": "Sawariya Seth Ring",
+    "highlights": [
+      "💎 Material: 925 Silver Jewellery",
+      "🪷 Design: Unique Sawariya Seth Spiritual Ring",
+      "✨ Finish: Premium Silver Shine with Fine Work",
+      "🙏 Designed for True Devotees",
+      "🔒 Safe & Secure Shopping Experience"
+    ],
+    "description": "This Sawariya Seth Ji Silver Ring combines traditional devotion with modern silver jewellery aesthetics. Crafted with attention to detail, it offers a stylish yet spiritual look for men who prefer devotional accessories. The सांवरिया सेठ जी की चांदी की अंगूठी is a meaningful addition to your jewellery collection.",
     "images": [
       "ssj-sawariya-seth-ring-969-1.webp",
       "ssj-sawariya-seth-ring-969-2.webp"
     ],
-    "brandText": "",
+    "brandText": "Fine Craftsmanship Using Genuine 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -10673,15 +11357,21 @@
   {
     "id": 970,
     "name": "Sawariya seth ring",
-    "category": "सांवरिया सेठ रिंग",
-    "highlights": [],
-    "description": "",
+    "category": "Sawariya Seth Ring",
+    "highlights": [
+      "💎 Material: 92.5% Silver Purity",
+      "🪷 Design: Classic Sawariya Seth Ji Ring Collection",
+      "✨ Finish: Smooth Finish with Elegant Detailing",
+      "🙏 Symbol of Trust, Faith & Devotion",
+      "📦 Gift Ready Packaging Available"
+    ],
+    "description": "Experience the divine charm of this beautifully designed Sawariya Seth Silver Ring. Made for devotees who carry their faith close to their heart, this ring showcases a graceful design and premium finishing. A perfect Chandi ki Sawariya Seth Ji ki Ring for daily wear, festivals, and special occasions.",
     "images": [
       "ssj-sawariya-seth-ring-970-1.webp",
       "ssj-sawariya-seth-ring-970-2.webp",
       "ssj-sawariya-seth-ring-970-3.webp"
     ],
-    "brandText": "",
+    "brandText": "Made with Authentic 92.5% Silver Quality",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -10706,13 +11396,19 @@
   {
     "id": 972,
     "name": "Sawariya seth ring",
-    "category": "सांवरिया सेठ रिंग",
-    "highlights": [],
-    "description": "",
+    "category": "Sawariya Seth Ring",
+    "highlights": [
+      "💎 Material: 925 Sterling Silver",
+      "🪷 Design: Sawariya Seth Devotional Ring for Men",
+      "✨ Finish: Premium Craftsmanship with Bright Finish",
+      "🙏 Add Spiritual Charm to Your Style",
+      "🚚 Pan India Shipping Available"
+    ],
+    "description": "Add a touch of spirituality to your personality with this stylish 925 Silver Sawariya Seth Ring. Its devotional design, elegant shine, and comfortable fit make it a preferred choice among silver jewellery lovers. This Sawariya Seth Ji ki Silver Ring beautifully represents faith, tradition, and timeless style.",
     "images": [
       "ssj-sawariya-seth-ring-972-1.webp"
     ],
-    "brandText": "",
+    "brandText": "Premium 925 Silver with Genuine Purity",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -10737,13 +11433,19 @@
   {
     "id": 973,
     "name": "Sawariya seth ring",
-    "category": "सांवरिया सेठ रिंग",
-    "highlights": [],
-    "description": "",
+    "category": "Sawariya Seth Ring",
+    "highlights": [
+      "💎 Material: 925 Silver Purity Jewellery",
+      "🪷 Design: Chandi ki Sawariya Seth Ring Design",
+      "✨ Finish: Refined Silver Work with Premium Appeal",
+      "🙏 A Beautiful Reminder of Divine Blessings",
+      "🎁 Special Gift for Bhakts"
+    ],
+    "description": "Designed for true devotees, this Sawariya Seth Ring reflects the blessings and divine presence of Shri Sawariya Seth Ji. The premium silver craftsmanship and attractive design make it suitable for men who appreciate spiritual jewellery. This Chandi ki Sawariya Seth Anguthi is a perfect combination of devotion and elegance.",
     "images": [
       "ssj-sawariya-seth-ring-973-1.webp"
     ],
-    "brandText": "",
+    "brandText": "Elegant Jewellery in Authentic 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -10756,7 +11458,7 @@
     "weight": 5.48,
     "makingCharges": 60,
     "discount": 0,
-    "newArrival": false,
+    "newArrival": true,
     "HUID": false,
     "available": true,
     "active": true,
@@ -10768,14 +11470,20 @@
   {
     "id": 974,
     "name": "Sawariya seth ring",
-    "category": "सांवरिया सेठ रिंग",
-    "highlights": [],
-    "description": "",
+    "category": "Sawariya Seth Ring",
+    "highlights": [
+      "💎 Material: 92.5% Silver Quality",
+      "🪷 Design: Sawariya Seth Ji Spiritual Jewellery Design",
+      "✨ Finish: Elegant Polish with Detailed Crafting",
+      "🙏 Wear Your Devotion with Pride",
+      "🔒 Secure Online Shopping Available |"
+    ],
+    "description": "A meaningful jewellery piece for devotees, this Silver Sawariya Seth Ji Ring carries a unique spiritual essence. Its refined design and premium silver finish create a sophisticated look that can be worn on every occasion. This Sawariya Seth Chandi Ring is a beautiful expression of faith and devotion.",
     "images": [
       "ssj-sawariya-seth-ring-974-1.webp",
       "ssj-sawariya-seth-ring-974-2.webp"
     ],
-    "brandText": "",
+    "brandText": "Crafted with Genuine Silver at 925 Purity",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [
@@ -10800,15 +11508,21 @@
   {
     "id": 975,
     "name": "Sawariya seth ring",
-    "category": "सांवरिया सेठ रिंग",
-    "highlights": [],
-    "description": "",
+    "category": "Sawariya Seth Ring",
+    "highlights": [
+      "\"💎 Material: 925 Sterling Silver",
+      "🪷 Design: Sawariya Seth Devotional Ring for Men",
+      "✨ Finish: Premium Craftsmanship with Bright Finish",
+      "🙏 Add Spiritual Charm to Your Style",
+      "🚚 Pan India Shipping Available\""
+    ],
+    "description": "Discover the beauty of devotional jewellery with this premium Sawariya Seth Silver Ring. Created with elegant detailing and a spiritual touch, it is perfect for those who want to keep their devotion close while maintaining a modern style. This Chandi ki Sawariya Seth Ji ki Anguthi makes a thoughtful gift for yourself or your loved ones.",
     "images": [
       "ssj-sawariya-seth-ring-975-1.webp",
       "ssj-sawariya-seth-ring-975-2.webp",
       "ssj-sawariya-seth-ring-975-3.webp"
     ],
-    "brandText": "",
+    "brandText": "Made from Premium 925 Silver for Elegant Looks",
     "care": "SILVER_GENERAL",
     "for": "him",
     "type": [

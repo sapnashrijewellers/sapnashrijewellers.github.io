@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ProductCard from "@/components/product/ProductCard";
 import { Loader2, Package } from "lucide-react";
 import { Order, Product } from "@/types/catalog";

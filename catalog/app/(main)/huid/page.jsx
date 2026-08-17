@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Breadcrumb from "@/components/navbar/BreadcrumbItem";
+import JsonLd from "@/components/common/JsonLd";
 
 const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 const imageUrl = `${baseURL}/icons/android-chrome-512x512.png`;
@@ -82,6 +83,7 @@ export default function HUIDInfo() {
   return (
     <div className="">
       <Breadcrumb items={[{ name: "Home", href: "/" }, { name: "Hallmark" }]} />
+      <JsonLd json={ldjson} />
       {/* Header */}
       <div className="flex items-center gap-3 mb-4">
         <span className="text-2xl text-accent">ℹ️</span>

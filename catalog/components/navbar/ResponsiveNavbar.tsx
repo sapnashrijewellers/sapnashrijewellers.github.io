@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Calculator, Heart, Triangle, Activity, Menu, X, ShoppingCart, LogIn, LogOut, ClipboardList, History } from "lucide-react";
+import { Heart, Triangle, Menu, X, ShoppingCart, LogIn, LogOut, ClipboardList } from "lucide-react";
 import { useState } from "react";
 import { auth, googleProvider } from "@/utils/firebase";
 import { signInWithPopup, signOut } from "firebase/auth";
 import { useAuth } from "@/context/AuthContext";
+import Image from "next/image"
 
 type NavItem = {
   label: string;
@@ -36,13 +37,7 @@ export default function ResponsiveNavbar() {
       href: "/huid/",
       title: "Hallmark",
       icon: <Triangle size={22} />,
-    },
-    // {
-    //   label: "Calculator",
-    //   href: "/calculator/",
-    //   title: "Jewellery Price Calculator",
-    //   icon: <Calculator size={22} />,
-    // },
+    },    
     {
       label: "Wishlist",
       href: "/wishlist/",
@@ -61,18 +56,12 @@ export default function ResponsiveNavbar() {
     title: "Your Orders",
     icon: <ClipboardList size={22} />, // Or use 'Package' from lucide-react
   }] : []),
-    // {
-    //   label: "Rates",
-    //   title: "Gold & Silver Rates",
-    //   icon: <Activity size={22} className="animate-pulse" />,
-    //   onClick: () => window.dispatchEvent(new Event("open-live-rates")),
-    // },
     {
       label: user ? "Sign Out" : "Sign In",
       title: "Authentication",
       icon: user ? (
         user?.photoURL ? (
-          <img
+          <Image
             src={user?.photoURL}
             alt={user?.displayName || "User"}
             className="h-6 w-6 rounded-full object-cover border border-gray-200"

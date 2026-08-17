@@ -4,19 +4,19 @@
   "homepage": "https://sapnashrijewellers.github.io/",
   "private": true,
   "workspaces": [
-    "catalog"    
+    "catalog"
   ],
   "scripts": {
-    "build": "turbo run build",
-    "deploy": "turbo run deploy",
+    "build": "turbo run build",    
     "dev": "turbo run dev"
   },
-  "devDependencies": {    
-    "baseline-browser-mapping": "^2.11.14",
+  "devDependencies": {
+    "@types/canvas-confetti": "^1.9.0",
+    "baseline-browser-mapping": "^2.11.15",
     "turbo": "^2.10.10"
   },
   "packageManager": "npm@10.9.3",
-  "dependencies": {
+  "dependencies": {    
     "workbox-cacheable-response": "^7.3.0"
   }
 }

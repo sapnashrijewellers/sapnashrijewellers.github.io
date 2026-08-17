@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import QRCode from "qrcode";
 import {generateUPIString} from "@/utils/generateUPI";
+import Image from "next/image";
+
 
 export default function UPIPaymentQR({
   amount,
@@ -31,7 +33,7 @@ export default function UPIPaymentQR({
       <p className="mb-2 font-medium">
         Scan & pay ₹{amount} via UPI
       </p>
-      <img src={qr} alt="UPI QR Code" className="mx-auto w-48 h-48" />
+      <Image src={qr} alt="UPI QR Code" className="mx-auto w-48 h-48" />
       <p className="text-sm mt-2 text-muted">
         After payment, click “I have paid”
       </p>

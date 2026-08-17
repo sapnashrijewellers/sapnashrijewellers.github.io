@@ -4,6 +4,7 @@ import { signInWithPopup, signOut } from "firebase/auth";
 import { auth, googleProvider } from "@/utils/firebase";
 import { useAuth } from "@/context/AuthContext";
 import { LogIn, LogOut } from "lucide-react";
+import Image from "next/image";
 
 type Props = {
   onAction?: () => void; // close hamburger on mobile
@@ -35,7 +36,7 @@ export default function SocialAuthMenu({ onAction, mobile }: Props) {
         className={baseClasses}
       >
         {user.user?.photoURL ? (
-          <img
+          <Image
             src={user.user?.photoURL}
             alt={user.user?.displayName || "User profile"}
             className="h-8 w-8 rounded-full"

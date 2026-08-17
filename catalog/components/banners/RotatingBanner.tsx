@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { motion, AnimatePresence, useInView, useReducedMotion } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -44,21 +44,24 @@ interface Props {
 /* --------------------------------------------
    Component
 --------------------------------------------- */
+
+
 export default function RotatingBanner({
   interval = 10000,
   height = "h-120",
   page = "home"
 }: Props) {
+
+  const [index, setIndex] = useState(0);
+  const reducedMotion = useReducedMotion();
+  const bannerRef = useRef<HTMLDivElement | null>(null);
   const items = banners
     .filter(b => b.page === page)
     .sort((a, b) => a.rank - b.rank);
   if (items.length === 0) {
     return null;
   }
-  const [index, setIndex] = useState(0);
 
-  const reducedMotion = useReducedMotion();
-  const bannerRef = useRef<HTMLDivElement | null>(null);
 
   /* --------------------------------------------
      Rotation timer
@@ -75,7 +78,7 @@ export default function RotatingBanner({
   }, [items.length, interval]);
 
   const current = items[index];
-  
+
 
   /* --------------------------------------------
      Resolve animations safely
@@ -96,7 +99,7 @@ export default function RotatingBanner({
   --------------------------------------------- */
   return (
     <div className="w-full">
-      <Link href={current.link} aria-label= "Banner Link">
+      <Link href={current.link} aria-label="Banner Link">
         <div
           ref={bannerRef}
           className={`relative w-full overflow-hidden rounded-2xl shadow-lg ${height}`}
@@ -122,8 +125,8 @@ export default function RotatingBanner({
             </motion.div>
           </AnimatePresence>
 
-        
-         
+
+
         </div>
       </Link>
 

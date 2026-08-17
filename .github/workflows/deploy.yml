@@ -177,7 +177,19 @@ jobs:
       - name: Install npm dependencies
         run: npm ci
 
+      - name: Verify production environment
+        working-directory: catalog
+        run: |
+          if [ -z "$NEXT_PUBLIC_FIREBASE_API_KEY" ]; then
+            echo "::error::NEXT_PUBLIC_FIREBASE_API_KEY is not available."
+            exit 1
+          fi
 
+          echo "Firebase API key is available."
+
+        env:
+          NEXT_PUBLIC_FIREBASE_API_KEY: ${{ vars.NEXT_PUBLIC_FIREBASE_API_KEY }}
+          
       # ---------------------------------------------------------------------
       # Generate website data
       # ---------------------------------------------------------------------

@@ -1,0 +1,47 @@
+1:"$Sreact.fragment"
+2:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/04d977fb0585339d.js"],"ViewportBoundary"]
+4:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/04d977fb0585339d.js"],"MetadataBoundary"]
+5:"$Sreact.suspense"
+16:I[27201,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/04d977fb0585339d.js"],"IconMark"]
+0:{"buildId":"rpkDG69peim0YcVk1fsE_","rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":"$@3"}],["$","div",null,{"hidden":true,"children":["$","$L4",null,{"children":["$","$5",null,{"name":"Next.Metadata","children":"$@6"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"loading":null,"isPartial":false}
+3:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1, viewport-fit=cover"}],["$","meta","2",{"name":"theme-color","media":"(prefers-color-scheme: light)","content":"#ffffff"}],["$","meta","3",{"name":"theme-color","media":"(prefers-color-scheme: dark)","content":"#000000"}]]
+7:T4dd,Celebrate Raksha Bandhan with a meaningful blend of tradition and spirituality with this 925 Silver Shiv Rakhi. The centre features a beautifully crafted “शिव” design, paired with a Rudraksha bead and traditional red and yellow Mauli threads. The combination gives the Rakhi a distinctive devotional appeal while keeping its overall look elegant and wearable.
+
+The Shiv motif represents the divine presence of Lord Shiva, while the Rudraksha adds a traditional spiritual element to the design. The colourful Mauli thread gives the Rakhi its classic Indian festive character, making it a thoughtful choice for brothers who appreciate devotional jewellery and traditional designs. This Shiv silver Rakhi is also a meaningful Raksha Bandhan gift that can be treasured beyond the festival.
+
+Key Highlights
+Shiv Design: Features a distinctive silver “शिव” motif at the centre.
+Rudraksha Detail: Includes a Rudraksha bead for a traditional spiritual touch.
+Traditional Mauli: Red and yellow threads add a classic Raksha Bandhan look.
+Silver Craftsmanship: A silver centrepiece gives the Rakhi an elegant jewellery-inspired appearance.
+Meaningful Gift: A thoughtful choice for brothers who have a special connection with Lord Shiva.8:T4dd,Celebrate Raksha Bandhan with a meaningful blend of tradition and spirituality with this 925 Silver Shiv Rakhi. The centre features a beautifully crafted “शिव” design, paired with a Rudraksha bead and traditional red and yellow Mauli threads. The combination gives the Rakhi a distinctive devotional appeal while keeping its overall look elegant and wearable.
+
+The Shiv motif represents the divine presence of Lord Shiva, while the Rudraksha adds a traditional spiritual element to the design. The colourful Mauli thread gives the Rakhi its classic Indian festive character, making it a thoughtful choice for brothers who appreciate devotional jewellery and traditional designs. This Shiv silver Rakhi is also a meaningful Raksha Bandhan gift that can be treasured beyond the festival.
+
+Key Highlights
+Shiv Design: Features a distinctive silver “शिव” motif at the centre.
+Rudraksha Detail: Includes a Rudraksha bead for a traditional spiritual touch.
+Traditional Mauli: Red and yellow threads add a classic Raksha Bandhan look.
+Silver Craftsmanship: A silver centrepiece gives the Rakhi an elegant jewellery-inspired appearance.
+Meaningful Gift: A thoughtful choice for brothers who have a special connection with Lord Shiva.6:[["$","title","0",{"children":"925 Silver Shiv Rudraksha Rakhi with Red & Yellow Mauli | by Sapna Shri Jewellers"}],["$","meta","1",{"name":"description","content":"$7"}],["$","meta","2",{"name":"author","content":"Sapna Shri Jewellers"}],["$","link","3",{"rel":"manifest","href":"/manifest.webmanifest"}],["$","meta","4",{"name":"robots","content":"index, follow"}],["$","meta","5",{"name":"color-scheme","content":"light dark"}],["$","link","6",{"rel":"canonical","href":"https://sapnashrijewellers.in/product/925-silver-shiv-rudraksha-rakhi-with-red-yellow-mauli-75/"}],["$","meta","7",{"name":"mobile-web-app-capable","content":"yes"}],["$","meta","8",{"name":"apple-mobile-web-app-title","content":"SSJ"}],["$","meta","9",{"name":"apple-mobile-web-app-status-bar-style","content":"black-translucent"}],["$","meta","10",{"property":"og:title","content":"925 Silver Shiv Rudraksha Rakhi with Red & Yellow Mauli | by Sapna Shri Jewellers"}],["$","meta","11",{"property":"og:description","content":"$8"}],"$L9","$La","$Lb","$Lc","$Ld","$Le","$Lf","$L10","$L11","$L12","$L13","$L14"]
+9:["$","meta","12",{"property":"og:url","content":"https://sapnashrijewellers.in/product/925-silver-shiv-rudraksha-rakhi-with-red-yellow-mauli-75/"}]
+a:["$","meta","13",{"property":"og:image","content":"https://sapnashrijewellers.in/static/img/products/thumbnail/silver-shiv-rakhi-new-ssj-75-a.webp"}]
+b:["$","meta","14",{"property":"og:type","content":"website"}]
+c:["$","meta","15",{"name":"twitter:card","content":"summary_large_image"}]
+d:["$","meta","16",{"name":"twitter:title","content":"925 Silver Shiv Rudraksha Rakhi with Red & Yellow Mauli | by Sapna Shri Jewellers"}]
+15:T4dd,Celebrate Raksha Bandhan with a meaningful blend of tradition and spirituality with this 925 Silver Shiv Rakhi. The centre features a beautifully crafted “शिव” design, paired with a Rudraksha bead and traditional red and yellow Mauli threads. The combination gives the Rakhi a distinctive devotional appeal while keeping its overall look elegant and wearable.
+
+The Shiv motif represents the divine presence of Lord Shiva, while the Rudraksha adds a traditional spiritual element to the design. The colourful Mauli thread gives the Rakhi its classic Indian festive character, making it a thoughtful choice for brothers who appreciate devotional jewellery and traditional designs. This Shiv silver Rakhi is also a meaningful Raksha Bandhan gift that can be treasured beyond the festival.
+
+Key Highlights
+Shiv Design: Features a distinctive silver “शिव” motif at the centre.
+Rudraksha Detail: Includes a Rudraksha bead for a traditional spiritual touch.
+Traditional Mauli: Red and yellow threads add a classic Raksha Bandhan look.
+Silver Craftsmanship: A silver centrepiece gives the Rakhi an elegant jewellery-inspired appearance.
+Meaningful Gift: A thoughtful choice for brothers who have a special connection with Lord Shiva.e:["$","meta","17",{"name":"twitter:description","content":"$15"}]
+f:["$","meta","18",{"name":"twitter:image","content":"https://sapnashrijewellers.in/static/img/products/thumbnail/silver-shiv-rakhi-new-ssj-75-a.webp"}]
+10:["$","link","19",{"rel":"icon","href":"/favicon-96x96-v4.png","sizes":"96x96","type":"image/png"}]
+11:["$","link","20",{"rel":"icon","href":"/favicon-v4.ico","sizes":"48x48","type":"image/x-icon"}]
+12:["$","link","21",{"rel":"icon","href":"/favicon.svg","type":"image/svg+xml"}]
+13:["$","link","22",{"rel":"apple-touch-icon","href":"/apple-touch-icon.png"}]
+14:["$","$L16","23",{}]

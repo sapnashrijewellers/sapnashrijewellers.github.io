@@ -145,8 +145,22 @@ jobs:
         with:
           node-version: "22"
           cache: "npm"
-
-
+      #------------    
+      # setting up environment variable for application
+      - name: Create production environment
+        working-directory: catalog
+        run: |
+          cat > .env.production <<EOF
+          NEXT_PUBLIC_BASE_URL=${{ vars.NEXT_PUBLIC_BASE_URL }}
+          NEXT_PUBLIC_FIREBASE_API_KEY=${{ vars.NEXT_PUBLIC_FIREBASE_API_KEY }}
+          NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=${{ vars.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN }}
+          NEXT_PUBLIC_FIREBASE_PROJECT_ID=${{ vars.NEXT_PUBLIC_FIREBASE_PROJECT_ID }}
+          NEXT_PUBLIC_FIREBASE_APP_ID=${{ vars.NEXT_PUBLIC_FIREBASE_APP_ID }}
+          NEXT_PUBLIC_FIREBASE_STORAGEBUCKET=${{ vars.NEXT_PUBLIC_FIREBASE_STORAGEBUCKET }}
+          NEXT_PUBLIC_FIREBASE_MESSAGINGSENDERID=${{ vars.NEXT_PUBLIC_FIREBASE_MESSAGINGSENDERID }}
+          NEXT_PUBLIC_FIREBASE_MEASUREMENTID=${{ vars.NEXT_PUBLIC_FIREBASE_MEASUREMENTID }}
+          NEXT_PUBLIC_WORKER_URL=${{ vars.NEXT_PUBLIC_WORKER_URL }}
+          EOF
       # ---------------------------------------------------------------------
       # Install dependencies
       # ---------------------------------------------------------------------
@@ -216,12 +230,12 @@ jobs:
       #
       - name: Verify Next.js output
         run: |
-          if [ ! -d "out" ]; then
+          if [ ! -d "catalog/out" ]; then
             echo "::error::Next.js did not generate the out directory."
             exit 1
           fi
 
-          if [ ! -f "out/index.html" ]; then
+          if [ ! -f "catalog/out/index.html" ]; then
             echo "::error::out/index.html was not generated."
             exit 1
           fi
@@ -229,7 +243,7 @@ jobs:
           echo "Static site generated successfully."
 
           echo "Output size:"
-          du -sh out
+          du -sh catalog/out
 
 
       # ---------------------------------------------------------------------
@@ -267,7 +281,7 @@ jobs:
       #
       - name: Disable Jekyll processing
         run: |
-          touch out/.nojekyll
+          touch catalog/out/.nojekyll
 
 
       # ---------------------------------------------------------------------
@@ -294,7 +308,7 @@ jobs:
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: "./out"
+          path: "./catalog/out"
 
 
   # =========================================================================

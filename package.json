@@ -1,19 +1,17 @@
 {
-  "name": "sapnashrijewellers.github.io",
+  "name": "ssjWeb",
   "version": "1.0.0",
   "homepage": "https://sapnashrijewellers.github.io/",
   "private": true,
   "workspaces": [
-    "catalog",
-    "tight-sky-9fb5"
+    "catalog"    
   ],
   "scripts": {
     "build": "turbo run build",
     "deploy": "turbo run deploy",
     "dev": "turbo run dev"
   },
-  "devDependencies": {
-    "@types/canvas-confetti": "^1.9.0",
+  "devDependencies": {    
     "baseline-browser-mapping": "^2.11.14",
     "turbo": "^2.10.10"
   },

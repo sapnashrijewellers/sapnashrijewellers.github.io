@@ -279,7 +279,7 @@ jobs:
       #
       - name: Configure custom domain
         run: |
-          echo "sapnashrijewellers.in" > out/CNAME
+          echo "sapnashrijewellers.in" > catalog/out/CNAME
 
 
       # ---------------------------------------------------------------------

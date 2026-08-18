@@ -2,12 +2,21 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Heart, Triangle, Menu, X, ShoppingCart, LogIn, LogOut, ClipboardList } from "lucide-react";
+import {
+  Heart,
+  Triangle,
+  Menu,
+  X,
+  ShoppingCart,
+  LogIn,
+  LogOut,
+  ClipboardList,
+} from "lucide-react";
 import { useState } from "react";
 import { auth, googleProvider } from "@/utils/firebase";
 import { signInWithPopup, signOut } from "firebase/auth";
 import { useAuth } from "@/context/AuthContext";
-import Image from "next/image"
+import Image from "next/image";
 
 type NavItem = {
   label: string;
@@ -17,19 +26,34 @@ type NavItem = {
   onClick?: () => void;
 };
 
-
 export default function ResponsiveNavbar() {
   const { user, loading: authLoading } = useAuth();
+  const pathname = usePathname();
+  const [menuOpen, setMenuOpen] = useState(false);
 
-    const login = async () => {
-    await signInWithPopup(auth, googleProvider);
-    //onAction?.();
+  const login = async () => {
+    try {
+      await signInWithPopup(auth, googleProvider);
+      setMenuOpen(false);
+    } catch (error) {
+      console.error("Login failed:", error);
+    }
   };
 
   const logout = async () => {
-    await signOut(auth);
-    //onAction?.();
+    try {
+      await signOut(auth);
+      setMenuOpen(false);
+    } catch (error) {
+      console.error("Logout failed:", error);
+    }
   };
+
+  // Do not render the navbar until Firebase has
+  // finished determining the authentication state.
+  if (authLoading) {
+    return null;
+  }
 
   const PRIMARY_NAV: NavItem[] = [
     {
@@ -37,7 +61,7 @@ export default function ResponsiveNavbar() {
       href: "/huid/",
       title: "Hallmark",
       icon: <Triangle size={22} />,
-    },    
+    },
     {
       label: "Wishlist",
       href: "/wishlist/",
@@ -50,20 +74,29 @@ export default function ResponsiveNavbar() {
       title: "Cart",
       icon: <ShoppingCart size={22} />,
     },
-    ...(user ? [{
-    label: "Orders",
-    href: "/orders/",
-    title: "Your Orders",
-    icon: <ClipboardList size={22} />, // Or use 'Package' from lucide-react
-  }] : []),
+
+    ...(user
+      ? [
+          {
+            label: "Orders",
+            href: "/orders/",
+            title: "Your Orders",
+            icon: <ClipboardList size={22} />,
+          },
+        ]
+      : []),
+
     {
       label: user ? "Sign Out" : "Sign In",
       title: "Authentication",
+
       icon: user ? (
-        user?.photoURL ? (
+        user.photoURL ? (
           <Image
-            src={user?.photoURL}
-            alt={user?.displayName || "User"}
+            src={user.photoURL}
+            alt={user.displayName || "User"}
+            width={24}
+            height={24}
             className="h-6 w-6 rounded-full object-cover border border-gray-200"
             referrerPolicy="no-referrer"
           />
@@ -73,34 +106,36 @@ export default function ResponsiveNavbar() {
       ) : (
         <LogIn size={22} />
       ),
-      // FIXED: Actually call the functions here
-      onClick: () => (user ? logout() : login()),
+
+      onClick: user ? logout : login,
     },
   ];
-  const pathname = usePathname();
-  const [menuOpen, setMenuOpen] = useState(false);
-
-
 
   const isActive = (href?: string) =>
-    href ? (href === "/" ? pathname === "/" : pathname.startsWith(href)) : false;
+    href
+      ? href === "/"
+        ? pathname === "/"
+        : pathname.startsWith(href)
+      : false;
 
   const renderItem = (item: NavItem) => {
     const active = isActive(item.href);
 
     const cls = `
-  flex flex-row md:flex-col
-  items-center md:items-center
-  gap-1 md:gap-1.5
-  text-left md:text-center
-  transition cursor-pointer
-  ${active ? "text-primary-dark" : ""}
-`;
+      flex flex-row md:flex-col
+      items-center md:items-center
+      gap-1 md:gap-1.5
+      text-left md:text-center
+      transition cursor-pointer
+      ${active ? "text-primary-dark" : ""}
+    `;
+
     const content = (
       <>
-        <span className="flex  text-start items-center justify-center">
+        <span className="flex text-start items-center justify-center">
           {item.icon}
         </span>
+
         <span className="text-sm md:text-xs leading-none justify-center">
           {item.label}
         </span>
@@ -111,6 +146,7 @@ export default function ResponsiveNavbar() {
       return (
         <button
           key={item.label}
+          type="button"
           onClick={item.onClick}
           title={item.title}
           className={cls}
@@ -127,6 +163,7 @@ export default function ResponsiveNavbar() {
         title={item.title}
         aria-current={active ? "page" : undefined}
         className={cls}
+        onClick={() => setMenuOpen(false)}
       >
         {content}
       </Link>
@@ -135,12 +172,15 @@ export default function ResponsiveNavbar() {
 
   return (
     <div className="flex items-start md:items-center gap-1">
-      {/* Hamburger for other items */}
+
+      {/* Mobile hamburger */}
       <div className="md:hidden relative">
         <button
+          type="button"
           className="ssj-btn"
-          onClick={() => setMenuOpen(!menuOpen)}
+          onClick={() => setMenuOpen((open) => !open)}
           aria-label="Menu"
+          aria-expanded={menuOpen}
         >
           {menuOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
@@ -152,10 +192,11 @@ export default function ResponsiveNavbar() {
         )}
       </div>
 
-      {/* Desktop nav */}
+      {/* Desktop navigation */}
       <div className="hidden md:flex items-center gap-2">
         {PRIMARY_NAV.map(renderItem)}
       </div>
+
     </div>
   );
 }

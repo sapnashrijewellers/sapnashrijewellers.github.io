@@ -1,21 +1,16 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getContent } from "@/utils/content"
 
-
-
-
-export default async function SEO({slug}:{slug: string}) {
+export default async function SEO({ slug }: { slug: string }) {
   const data = getContent(slug);
 
   if (!data) { return <div></div>; }
 
-  const { content, data: frontmatter } = data;
-  return (
-    <main className="max-w-5xl mx-auto px-4 py-16">      
+  const { content } = data;
+  return (    
 
-      <article className="prose prose-neutral dark:prose-invert max-w-none">
+      <article className="policy-container max-w-6xl mx-auto px-4 py-16">
         <MDXRemote source={content} />
-      </article>
-    </main>
+      </article>    
   );
 }

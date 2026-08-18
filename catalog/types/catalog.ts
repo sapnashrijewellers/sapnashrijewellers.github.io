@@ -1,13 +1,9 @@
-import { LucideIcon } from "lucide-react";
-
-
-
 export interface Product {
   id: number;
   name: string;
   purity: string;
   images: string[];
-  highlights: string[];  
+  highlights: string[];
   newArrival: boolean;
   category: string;
   type: string[];
@@ -18,9 +14,9 @@ export interface Product {
   available?: boolean;
   rating: number;
   ratingCount: number;
-  brandText: string;  
+  brandText: string;
   HUID: boolean;
-  weight: number;  
+  weight: number;
   makingCharges: number;
   discount: number;
   price?: number;
@@ -28,6 +24,7 @@ export interface Product {
 }
 
 export interface Category {
+  id: number;
   name: string;
   title: string,
   rank: number,
@@ -45,22 +42,14 @@ export interface SearchFilters {
 
 export interface BannerItem {
   id: string;
-  title: string;
-  subtitle?: string;
-  subtitle1?: string;
-  icon?: LucideIcon | string; // JSON uses string
-  textColor?: string;
-  gradientFrom?: string;
-  gradientTo?: string;
   link: string;
-  fontFamily: string;
-  bgImage: string;
+  bannerImage: string;
   rank: number;
   active: boolean;
 }
-export interface Rates {  
-  gold: number;  
-  silver: number;  
+export interface Rates {
+  gold: number;
+  silver: number;
 }
 
 export interface Type {
@@ -74,29 +63,23 @@ export interface Type {
   active: boolean
 }
 
-export interface CalculatorForm {
-  purity: string;
-  weight: number;
-  makingCharges: number | ""; // ← key fix
-  gst: number;
-}
 
-export interface CalcRates {
-  gold24K: number;
-  gold22K: number;
-  gold18K: number;
-  silver: number;
-  silverJewellery: number;
-}
+// export interface CalcRates {
+//   gold24K: number;
+//   gold22K: number;
+//   gold18K: number;
+//   silver: number;
+//   silverJewellery: number;
+// }
 
 export type CartItem = {
   productId: number;
-  product:Product    
-  qty: number;  
+  product: Product
+  qty: number;
 };
 
 export type Cart = {
-  items: CartItem[];      
+  items: CartItem[];
 };
 
 
@@ -114,7 +97,7 @@ export class Address {
 export type PriceSummaryType = {
   productTotal: number,
   shipping: number,
-  finalPrice: number,  
+  finalPrice: number,
   cod: number
 }
 
@@ -132,7 +115,7 @@ export type Order = {
   items: Array<{
     productId: number;
     slug: string;
-    title: string;    
+    title: string;
     qty: number;
   }>;
 

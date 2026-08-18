@@ -40,8 +40,7 @@ export default async function sitemap() {
 
     // Static / policy pages
     ...[
-      "/about-us/",
-      "/calculator/",
+      "/about-us/",      
       "/huid/",
       "/policies/privacy/",
       "/policies/terms/",

@@ -1,60 +1,44 @@
+import type { Product as SchemaProduct, Offer as SchemaOffer, WithContext } from "schema-dts";
 import type { Product, Rates } from "@/types/catalog";
 import { calculatePrice } from "@/utils/calculatePrice";
+
+/**
+ * Sanitizes plain text for JSON-LD:
+ * - Strips HTML tags
+ * - Replaces multiple newlines/tabs with a single space
+ * - Removes problematic unescaped control characters
+ */
+function sanitizeDescription(text?: string): string {
+  if (!text) return "";
+  return text
+    .replace(/<[^>]*>/g, "") // Remove HTML tags
+    .replace(/[\r\n\t]+/g, " ") // Normalize newlines & tabs to spaces
+    .replace(/"/g, "'") // Convert unescaped double quotes to single quotes
+    .trim();
+}
 
 export default function buildProductJsonLd(
   product: Product,
   rates: Rates
-) {
-  const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
-  const driveURL = `${baseURL}/img/products/optimized/`;
-  const imageUrl = `${driveURL}${product.images?.[0]}`;
+): WithContext<SchemaProduct> {
+  const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "";
+  const firstImage = product.images?.[0] ? `/static/img/products/optimized/${product.images[0]}` : "";
+  const imageUrl = firstImage ? `${baseURL}${firstImage}` : undefined;
   const baseProductUrl = `${baseURL}/product/${product.slug}`;
 
-  const vPop = calculatePrice({product, rates});
+  const vPop = calculatePrice({ product, rates });
+  const hasValidPrice = vPop?.price !== null && vPop?.price !== undefined;
 
-  const hasValidPrice =
-    vPop?.price !== null && vPop?.price !== undefined;
-
-  // Price valid for next 24 hours
+  const now = new Date();
+  const validFrom = hasValidPrice ? now.toISOString().split("T")[0] : undefined;
   const priceValidUntil = hasValidPrice
-    ? new Date(Date.now() + 24 * 60 * 60 * 1000)
-      .toISOString()
-      .split("T")[0]
+    ? new Date(now.getTime() + 3 * 24 * 60 * 60 * 1000).toISOString().split("T")[0]
     : undefined;
-  const brandName =
-    product.brandText && product.brandText.trim().length > 0
-      ? product.brandText.trim()
-      : "SSJ Brand";
 
-  const productJsonLd: any = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "@id": `${baseProductUrl}#product`,
-    name: product.name,
-    image: imageUrl,
-    description: product.description,
-    sku: product.id,
-    url: baseProductUrl,
+  const brandName = "SSJ Brand";
 
-    brand: {
-      "@type": "Brand",
-      name: brandName,
-    },
-  };
-
-  /* ✅ Aggregate Rating (only if real data exists) */
-  if (product.rating > 0 && product.ratingCount > 0) {
-    productJsonLd.aggregateRating = {
-      "@type": "AggregateRating",
-      ratingValue: product.rating,
-      reviewCount: product.ratingCount,
-      bestRating: 5,
-      worstRating: 1,
-    };
-  }
-
-  /* ✅ Offers (price only when available) */
-  const offer: any = {
+  /* Offer Definition */
+  const offer: SchemaOffer = {
     "@type": "Offer",
     url: baseProductUrl,
     priceCurrency: "INR",
@@ -64,45 +48,44 @@ export default function buildProductJsonLd(
 
     hasMerchantReturnPolicy: {
       "@type": "MerchantReturnPolicy",
-      returnPolicyCategory:
-        "MerchantReturnNotPermitted",
+      returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted",
       applicableCountry: "IN",
     },
 
-    shippingDetails: {
-      "@type": "OfferShippingDetails",
-
-      shippingRate: {
-        "@type": "MonetaryAmount",
-        value: 60,
-        currency: "INR",
-      },
-
-      shippingDestination: {
-        "@type": "DefinedRegion",
-        addressCountry: "IN",
-      },
-
-      deliveryTime: {
-        "@type": "ShippingDeliveryTime",
-        handlingTime: {
-          "@type": "QuantitativeValue",
-          minValue: 1,
-          maxValue: 2,
-          unitCode: "DAY",
+    shippingDetails: [
+      {
+        "@type": "OfferShippingDetails",
+        shippingRate: {
+          "@type": "MonetaryAmount",
+          value: 60,
+          currency: "INR",
         },
-        transitTime: {
-          "@type": "QuantitativeValue",
-          minValue: 5,
-          maxValue: 7,
-          unitCode: "DAY",
+        shippingDestination: {
+          "@type": "DefinedRegion",
+          addressCountry: "IN",
+        },
+        deliveryTime: {
+          "@type": "ShippingDeliveryTime",
+          handlingTime: {
+            "@type": "QuantitativeValue",
+            minValue: 1,
+            maxValue: 2,
+            unitCode: "DAY",
+          },
+          transitTime: {
+            "@type": "QuantitativeValue",
+            minValue: 5,
+            maxValue: 7,
+            unitCode: "DAY",
+          },
         },
       },
-    },
+    ],
   };
 
-  if (hasValidPrice) {
+  if (hasValidPrice && vPop?.price !== undefined) {
     offer.price = vPop.price;
+    offer.validFrom = validFrom; // Correct Schema.org attribute
     offer.priceValidUntil = priceValidUntil;
 
     if (vPop.MRP) {
@@ -119,7 +102,33 @@ export default function buildProductJsonLd(
     }
   }
 
-  productJsonLd.offers = offer;
+  /* Product Schema */
+  const productJsonLd: WithContext<SchemaProduct> = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "@id": `${baseProductUrl}#product`,
+    name: product.name,
+    image: imageUrl,
+    description: sanitizeDescription(product.description),
+    sku: String(product.id),
+    url: baseProductUrl,
+    brand: {
+      "@type": "Brand",
+      name: brandName,
+    },
+    offers: offer,
+  };
+
+  /* Aggregate Rating */
+  if (product.rating > 0 && product.ratingCount > 0) {
+    productJsonLd.aggregateRating = {
+      "@type": "AggregateRating",
+      ratingValue: product.rating,
+      ratingCount: product.ratingCount,
+      bestRating: 5,
+      worstRating: 1,
+    };
+  }
 
   return productJsonLd;
 }

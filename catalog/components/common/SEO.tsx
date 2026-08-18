@@ -11,7 +11,7 @@ export default async function SEO({slug}:{slug: string}) {
 
   const { content, data: frontmatter } = data;
   return (
-    <main className="max-w-5xl mx-auto px-4 py-16 policy-container">      
+    <main className="max-w-5xl mx-auto px-4 py-16">      
 
       <article className="prose prose-neutral dark:prose-invert max-w-none">
         <MDXRemote source={content} />

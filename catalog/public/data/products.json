@@ -103,7 +103,7 @@
     "type": [
       "Silver Jewellery for Men",
       "Daily Wear",
-      "Silver Jewellery\nUnder ₹999"
+      "Silver Jewellery Under ₹3000"
     ],
     "purity": "silverJewellery",
     "weight": 6.5,
@@ -125,7 +125,7 @@
     "highlights": [
       "Symbol of devotion to Sawariya Seth",
       "intricately carved silver ring with floral and wave patterns",
-      "90% purity",
+      "92.5% purity",
       "elegant devotional jewelry."
     ],
     "description": "Beautiful Sawariya Seth silver ring with intricate carving and 90% purity—perfect devotional jewelry for daily wear or gifting.",
@@ -793,7 +793,7 @@
       "90% purity",
       "elegant devotional jewelry."
     ],
-    "description": "Beautiful Sawariya Seth silver ring with intricate carving and 90% purity—perfect devotional jewelry for daily wear or gifting.",
+    "description": "Beautiful Sawariya Seth silver ring with intricate carving and 92.5% purity—perfect devotional jewelry for daily wear or gifting.",
     "images": [
       "img-20251003-061845.webp"
     ],
@@ -2956,7 +2956,7 @@
     ],
     "purity": "silverJewellery",
     "weight": 10,
-    "makingCharges": 0,
+    "makingCharges": 50,
     "discount": 0,
     "newArrival": false,
     "HUID": false,
@@ -2995,7 +2995,7 @@
     ],
     "purity": "silverJewellery",
     "weight": 4,
-    "makingCharges": 0,
+    "makingCharges": 50,
     "discount": 0,
     "newArrival": false,
     "HUID": false,
@@ -10438,7 +10438,7 @@
   },
   {
     "id": 313,
-    "name": "silver payal",
+    "name": "Silver Payal",
     "category": "Silver Payal",
     "highlights": [
       "💎 Material: 92.5% Silver Purity Jewellery",
@@ -10475,7 +10475,7 @@
   },
   {
     "id": 314,
-    "name": "silver anklet",
+    "name": "Silver Anklet",
     "category": "Silver Payal",
     "highlights": [
       "💎 Material: 925 Sterling Silver",
@@ -10512,7 +10512,7 @@
   },
   {
     "id": 315,
-    "name": "lightweight payal",
+    "name": "Lightweight Payal",
     "category": "Silver Payal",
     "highlights": [
       "💎 Material: 925 Silver Purity",
@@ -10549,7 +10549,7 @@
   },
   {
     "id": 316,
-    "name": "designer payal",
+    "name": "Designer Payal",
     "category": "Silver Payal",
     "highlights": [
       "💎 Material: 92.5% Silver Jewellery",
@@ -10586,7 +10586,7 @@
   },
   {
     "id": 317,
-    "name": "daily wear silver payal",
+    "name": "Daily Wear Silver Payal",
     "category": "Silver Payal",
     "highlights": [
       "💎 Material: 925 Sterling Silver (92.5% Purity)",
@@ -10624,9 +10624,9 @@
   {
     "id": 661,
     "name": "Sawariya Seth Silver Kada",
-    "category": "Silver Payal",
+    "category": "Silver Kada",
     "highlights": [
-      "Sanwariya Seth: The Divine Treasurer who blesses his devotees with courage and prosperity. Wear His name, feel His power.\""
+      "Sanwariya Seth: The Divine Treasurer who blesses his devotees with courage and prosperity. Wear His name, feel His power."
     ],
     "description": "Introducing the Sanwariya Seth Signature Silver Kada—a masterpiece designed for the man of today. Crafted with premium silver and featuring bold, this Kada isn't just an accessory; it’s a symbol of strength and divine connection.",
     "images": [
@@ -10658,7 +10658,7 @@
   },
   {
     "id": 662,
-    "name": "Sawariya Seth Silver Kada",
+    "name": "925 Sawariya Seth Silver Kada",
     "category": "Silver Kada",
     "highlights": [
       "\"A symbol of surrender and strength. May Sanwariya Seth guide your hands to do great things.\""
@@ -10687,11 +10687,11 @@
     "rating": 4,
     "ratingCount": 44,
     "Lock": "",
-    "slug": "sawariya-seth-silver-kada-662"
+    "slug": "925-sawariya-seth-silver-kada-662"
   },
   {
     "id": 663,
-    "name": "Sawariya Seth Silver Kada",
+    "name": "Sawariya Seth Silver Kada for Men",
     "category": "Silver Kada",
     "highlights": [
       "\"The Sanwariya Seth Kada is a constant reminder that the Great Provider is always by your side. Like the silver it’s made of, may your life shine with His eternal grace and abundance.\""
@@ -10720,7 +10720,7 @@
     "rating": 4.7,
     "ratingCount": 78,
     "Lock": "",
-    "slug": "sawariya-seth-silver-kada-663"
+    "slug": "sawariya-seth-silver-kada-for-men-663"
   },
   {
     "id": 664,
@@ -10860,7 +10860,7 @@
   },
   {
     "id": 955,
-    "name": "Sawariya seth ring",
+    "name": "Sawariya seth ring for Men",
     "category": "Sawariya Seth Ring",
     "highlights": [
       "💎 Material: 925 Sterling Silver",
@@ -10895,11 +10895,11 @@
     "rating": 4.7,
     "ratingCount": 37,
     "Lock": "",
-    "slug": "sawariya-seth-ring-955"
+    "slug": "sawariya-seth-ring-for-men-955"
   },
   {
     "id": 956,
-    "name": "Sawariya seth ring",
+    "name": "Chandi ki Sawariya Seth Ring",
     "category": "Sawariya Seth Ring",
     "highlights": [
       "💎 Material: 925 Silver Jewellery",
@@ -10933,11 +10933,11 @@
     "rating": 3.9,
     "ratingCount": 24,
     "Lock": "",
-    "slug": "sawariya-seth-ring-956"
+    "slug": "chandi-ki-sawariya-seth-ring-956"
   },
   {
     "id": 957,
-    "name": "Sawariya seth ring",
+    "name": "Sawariya seth ring Handmade Design",
     "category": "Sawariya Seth Ring",
     "highlights": [
       "💎 Material: 92.5% Silver Purity",
@@ -10971,11 +10971,11 @@
     "rating": 4.6,
     "ratingCount": 114,
     "Lock": "",
-    "slug": "sawariya-seth-ring-957"
+    "slug": "sawariya-seth-ring-handmade-design-957"
   },
   {
     "id": 959,
-    "name": "Sawariya seth ring",
+    "name": "Sawariya Seth Ring Name Engraved",
     "category": "Sawariya Seth Ring",
     "highlights": [
       "💎 Material: 925 Sterling Silver (92.5% Purity)",
@@ -11009,11 +11009,11 @@
     "rating": 4.2,
     "ratingCount": 17,
     "Lock": "",
-    "slug": "sawariya-seth-ring-959"
+    "slug": "sawariya-seth-ring-name-engraved-959"
   },
   {
     "id": 960,
-    "name": "Sawariya seth ring",
+    "name": "Sawariya seth ring in Silver",
     "category": "Sawariya Seth Ring",
     "highlights": [
       "💎 Material: 925 Silver Purity Jewellery",
@@ -11047,11 +11047,11 @@
     "rating": 4.9,
     "ratingCount": 91,
     "Lock": "",
-    "slug": "sawariya-seth-ring-960"
+    "slug": "sawariya-seth-ring-in-silver-960"
   },
   {
     "id": 961,
-    "name": "Sawariya seth ring",
+    "name": "Sawariya Seth Ring Latest Design",
     "category": "Sawariya Seth Ring",
     "highlights": [
       "💎 Material: 925 Sterling Silver",
@@ -11085,11 +11085,11 @@
     "rating": 4.5,
     "ratingCount": 80,
     "Lock": "",
-    "slug": "sawariya-seth-ring-961"
+    "slug": "sawariya-seth-ring-latest-design-961"
   },
   {
     "id": 962,
-    "name": "Sawariya seth ring",
+    "name": "Sawariya seth ring for Boys",
     "category": "Sawariya Seth Ring",
     "highlights": [
       "💎 Material: 92.5% Silver Purity",
@@ -11123,11 +11123,11 @@
     "rating": 4.4,
     "ratingCount": 23,
     "Lock": "",
-    "slug": "sawariya-seth-ring-962"
+    "slug": "sawariya-seth-ring-for-boys-962"
   },
   {
     "id": 963,
-    "name": "Sawariya seth ring",
+    "name": "Most Iconic Sawariya Seth Ring",
     "category": "Sawariya Seth Ring",
     "highlights": [
       "💎 Material: 925 Silver Jewellery",
@@ -11161,11 +11161,11 @@
     "rating": 4.9,
     "ratingCount": 45,
     "Lock": "",
-    "slug": "sawariya-seth-ring-963"
+    "slug": "most-iconic-sawariya-seth-ring-963"
   },
   {
     "id": 965,
-    "name": "Sawariya seth ring",
+    "name": "925 Sterling Silver Sawariya Seth Ring",
     "category": "Sawariya Seth Ring",
     "highlights": [
       "💎 Material: 925 Sterling Silver (92.5% Purity)",
@@ -11198,11 +11198,11 @@
     "rating": 4.5,
     "ratingCount": 85,
     "Lock": "",
-    "slug": "sawariya-seth-ring-965"
+    "slug": "925-sterling-silver-sawariya-seth-ring-965"
   },
   {
     "id": 966,
-    "name": "Sawariya seth ring",
+    "name": "Sawariya Seth Ring Engraved",
     "category": "Sawariya Seth Ring",
     "highlights": [
       "💎 Material: 925 Silver Purity Jewellery",
@@ -11235,11 +11235,11 @@
     "rating": 4.6,
     "ratingCount": 106,
     "Lock": "",
-    "slug": "sawariya-seth-ring-966"
+    "slug": "sawariya-seth-ring-engraved-966"
   },
   {
     "id": 967,
-    "name": "Sawariya seth ring",
+    "name": "Trending Sawariya Seth Ring",
     "category": "Sawariya Seth Ring",
     "highlights": [
       "💎 Material: 92.5% Pure Silver Quality",
@@ -11272,11 +11272,11 @@
     "rating": 4.8,
     "ratingCount": 34,
     "Lock": "",
-    "slug": "sawariya-seth-ring-967"
+    "slug": "trending-sawariya-seth-ring-967"
   },
   {
     "id": 968,
-    "name": "Sawariya seth ring",
+    "name": "Modern Sawariya seth ring",
     "category": "Sawariya Seth Ring",
     "highlights": [
       "💎 Material: 925 Sterling Silver",
@@ -11294,7 +11294,6 @@
     "for": "him",
     "type": [
       "Daily Wear",
-      "Silver Jewellery Under ₹3000",
       "Spiritual Silver Jewellery",
       "Silver Gift for Him"
     ],
@@ -11309,11 +11308,11 @@
     "rating": 4.1,
     "ratingCount": 71,
     "Lock": "",
-    "slug": "sawariya-seth-ring-968"
+    "slug": "modern-sawariya-seth-ring-968"
   },
   {
     "id": 969,
-    "name": "Sawariya seth ring",
+    "name": "Pure Silver 925 Sawariya seth ring",
     "category": "Sawariya Seth Ring",
     "highlights": [
       "💎 Material: 925 Silver Jewellery",
@@ -11347,11 +11346,11 @@
     "rating": 4.9,
     "ratingCount": 114,
     "Lock": "",
-    "slug": "sawariya-seth-ring-969"
+    "slug": "pure-silver-925-sawariya-seth-ring-969"
   },
   {
     "id": 970,
-    "name": "Sawariya seth ring",
+    "name": "Original Sawariya seth ring",
     "category": "Sawariya Seth Ring",
     "highlights": [
       "💎 Material: 92.5% Silver Purity",
@@ -11386,11 +11385,11 @@
     "rating": 4,
     "ratingCount": 10,
     "Lock": "",
-    "slug": "sawariya-seth-ring-970"
+    "slug": "original-sawariya-seth-ring-970"
   },
   {
     "id": 972,
-    "name": "Sawariya seth ring",
+    "name": "Sawariya Seth ji ki Chandi ki Ring",
     "category": "Sawariya Seth Ring",
     "highlights": [
       "💎 Material: 925 Sterling Silver",
@@ -11423,11 +11422,11 @@
     "rating": 4.6,
     "ratingCount": 11,
     "Lock": "",
-    "slug": "sawariya-seth-ring-972"
+    "slug": "sawariya-seth-ji-ki-chandi-ki-ring-972"
   },
   {
     "id": 973,
-    "name": "Sawariya seth ring",
+    "name": "Sawariya seth Chandi ki Anguthi",
     "category": "Sawariya Seth Ring",
     "highlights": [
       "💎 Material: 925 Silver Purity Jewellery",
@@ -11460,11 +11459,11 @@
     "rating": 4.8,
     "ratingCount": 63,
     "Lock": "",
-    "slug": "sawariya-seth-ring-973"
+    "slug": "sawariya-seth-chandi-ki-anguthi-973"
   },
   {
     "id": 974,
-    "name": "Sawariya seth ring",
+    "name": "Sawariya seth Vinti",
     "category": "Sawariya Seth Ring",
     "highlights": [
       "💎 Material: 92.5% Silver Quality",
@@ -11498,11 +11497,11 @@
     "rating": 4.4,
     "ratingCount": 13,
     "Lock": "",
-    "slug": "sawariya-seth-ring-974"
+    "slug": "sawariya-seth-vinti-974"
   },
   {
     "id": 975,
-    "name": "Sawariya seth ring",
+    "name": "Bold Look Sawariya seth ring",
     "category": "Sawariya Seth Ring",
     "highlights": [
       "\"💎 Material: 925 Sterling Silver",
@@ -11537,6 +11536,6 @@
     "rating": 4.8,
     "ratingCount": 21,
     "Lock": "",
-    "slug": "sawariya-seth-ring-975"
+    "slug": "bold-look-sawariya-seth-ring-975"
   }
 ]

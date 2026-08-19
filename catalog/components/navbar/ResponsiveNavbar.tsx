@@ -3,8 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
-  Heart,
-  Triangle,
+  Heart,  
   Menu,
   X,
   ShoppingCart,
@@ -12,104 +11,145 @@ import {
   LogOut,
   ClipboardList,
 } from "lucide-react";
-import { useState } from "react";
+import { useState, useCallback, useId, useEffect, useRef } from "react";
 import { auth, googleProvider } from "@/utils/firebase";
 import { signInWithPopup, signOut } from "firebase/auth";
 import { useAuth } from "@/context/AuthContext";
 import Image from "next/image";
 
-type NavItem = {
-  label: string;
+interface NavItem {
+  label: string;  
   title: string;
-  ariaLabel?: string;
+  ariaLabel: string;
   icon: React.ReactNode;
   href?: string;
   onClick?: () => void;
-};
+}
 
 export default function ResponsiveNavbar() {
   const { user, loading: authLoading } = useAuth();
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [authPending, setAuthPending] = useState(false);
 
-  const login = async () => {
+  const menuContainerRef = useRef<HTMLDivElement | null>(null);
+  const menuId = useId();
+
+  const closeMenu = useCallback(() => {
+    setMenuOpen(false);
+  }, []);
+
+  const login = useCallback(async () => {
     try {
+      setAuthPending(true);
       await signInWithPopup(auth, googleProvider);
-      setMenuOpen(false);
+      closeMenu();
     } catch (error) {
       console.error("Login failed:", error);
+    } finally {
+      setAuthPending(false);
     }
-  };
+  }, [closeMenu]);
 
-  const logout = async () => {
+  const logout = useCallback(async () => {
     try {
+      setAuthPending(true);
       await signOut(auth);
-      setMenuOpen(false);
+      closeMenu();
     } catch (error) {
       console.error("Logout failed:", error);
+    } finally {
+      setAuthPending(false);
     }
-  };
+  }, [closeMenu]);
 
-  // Do not render the navbar until Firebase has finished resolving auth state
-  if (authLoading) {
-    return null;
-  }
+  /** Close mobile dropdown on outside click or ESC key */
+  useEffect(() => {
+    if (!menuOpen) return;
+
+    function handleClickOutside(e: MouseEvent) {
+      if (
+        menuContainerRef.current &&
+        !menuContainerRef.current.contains(e.target as Node)
+      ) {
+        setMenuOpen(false);
+      }
+    }
+
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") {
+        setMenuOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [menuOpen]);
+
+  const displayName = user?.displayName || "User account";
 
   const PRIMARY_NAV: NavItem[] = [
+    // {
+    //   label: "Hallmark",      
+    //   href: "/huid/",
+    //   title: "BIS Hallmark & HUID Verification",
+    //   ariaLabel: "View BIS Hallmark and HUID Jewellery Verification",
+    //   icon: <Triangle className="w-5 h-5 md:w-5 md:h-5 text-current" aria-hidden="true" />,
+    // },
     {
-      label: "Hallmark",
-      href: "/huid/",
-      title: "Hallmark Verification",
-      ariaLabel: "View Hallmark and HUID Verification",
-      icon: <Triangle size={22} aria-hidden="true" />,
-    },
-    {
-      label: "Wishlist",
+      label: "Wishlist",      
       href: "/wishlist/",
       title: "Wishlist",
-      ariaLabel: "View your Wishlist items",
-      icon: <Heart size={22} aria-hidden="true" />,
+      ariaLabel: "View your saved Wishlist items",
+      icon: <Heart className="w-5 h-5 md:w-5 md:h-5 text-current" aria-hidden="true" />,
     },
     {
       label: "Cart",
-      href: "/cart/",
-      title: "Cart",
-      ariaLabel: "View your Shopping Cart",
-      icon: <ShoppingCart size={22} aria-hidden="true" />,
+            href: "/cart/",
+      title: "Shopping Cart",
+      ariaLabel: "View items in your Shopping Cart",
+      icon: <ShoppingCart className="w-5 h-5 md:w-5 md:h-5 text-current" aria-hidden="true" />,
     },
-
     ...(user
       ? [
           {
-            label: "Orders",
+            label: "Orders",            
             href: "/orders/",
             title: "Your Orders",
-            ariaLabel: "View your previous orders and purchases",
-            icon: <ClipboardList size={22} aria-hidden="true" />,
+            ariaLabel: "View your previous jewellery orders and purchases",
+            icon: <ClipboardList className="w-5 h-5 md:w-5 md:h-5 text-current" aria-hidden="true" />,
           },
         ]
       : []),
-
     {
-      label: user ? "Sign Out" : "Sign In",
-      title: user ? "Sign out of your account" : "Sign in with Google",
-      ariaLabel: user ? "Sign out of your account" : "Sign in to your account with Google",
+      label: user ? "Sign Out" : "Sign In",      
+      title: user ? `Sign out of ${displayName}` : "Sign in with Google",
+      ariaLabel: user
+        ? `Sign out of account (${displayName})`
+        : "Sign in to account with Google",
       icon: user ? (
         user.photoURL ? (
           <Image
             src={user.photoURL}
-            alt={user.displayName || "User profile photo"}
-            width={24}
-            height={24}
-            className="h-6 w-6 rounded-full object-cover border border-gray-200"
+            alt={`${displayName} profile avatar`}
+            width={22}
+            height={22}
+            sizes="22px"
+            loading="lazy"
+            decoding="async"
+            className="w-5 h-5 rounded-full object-cover border border-theme/40"
             referrerPolicy="no-referrer"
-            priority
           />
         ) : (
-          <LogOut size={22} aria-hidden="true" />
+          <LogOut className="w-5 h-5 text-current" aria-hidden="true" />
         )
       ) : (
-        <LogIn size={22} aria-hidden="true" />
+        <LogIn className="w-5 h-5 text-current" aria-hidden="true" />
       ),
       onClick: user ? logout : login,
     },
@@ -122,27 +162,27 @@ export default function ResponsiveNavbar() {
         : pathname.startsWith(href)
       : false;
 
-  const renderItem = (item: NavItem) => {
+  const renderItem = (item: NavItem, isMobileDropdown = false) => {
     const active = isActive(item.href);
-    const itemAriaLabel = item.ariaLabel || item.title || item.label;
 
-    const cls = `
-      flex flex-row md:flex-col
-      items-center md:items-center
-      gap-1 md:gap-1.5
-      text-left md:text-center
-      transition cursor-pointer
-      ${active ? "text-primary-dark font-semibold" : ""}
-    `;
+    const baseClass = isMobileDropdown
+      ? `flex items-center gap-3 w-full px-3 py-2.5 rounded-xl text-sm font-medium transition-[background-color,color] duration-150 ease-out focus:outline-none focus:ring-2 focus:ring-primary ${
+          active
+            ? "bg-accent text-accent-foreground font-semibold"
+            : "text-foreground/85 hover:bg-theme/10 hover:text-foreground"
+        }`
+      : `inline-flex flex-col items-center justify-center gap-1 px-2.5 py-1.5 rounded-xl text-foreground/80 hover:text-foreground hover:bg-theme/10 transition-[color,transform,background-color] duration-150 ease-out active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary will-change-[transform] ${
+          active ? "text-primary font-bold" : ""
+        }`;
 
     const content = (
       <>
-        <span className="flex text-start items-center justify-center">
+        <span className="flex items-center justify-center shrink-0">
           {item.icon}
         </span>
-        <span className="text-sm md:text-xs leading-none justify-center">
+        <span className={isMobileDropdown ? "leading-tight" : "text-xs leading-none font-medium"}>
           {item.label}
-        </span>
+        </span>        
       </>
     );
 
@@ -151,10 +191,11 @@ export default function ResponsiveNavbar() {
         <button
           key={item.label}
           type="button"
+          disabled={authPending || authLoading}
           onClick={item.onClick}
           title={item.title}
-          aria-label={itemAriaLabel}
-          className={cls}
+          aria-label={item.ariaLabel}
+          className={baseClass}
         >
           {content}
         </button>
@@ -166,10 +207,10 @@ export default function ResponsiveNavbar() {
         key={item.href}
         href={item.href!}
         title={item.title}
-        aria-label={itemAriaLabel}
+        aria-label={item.ariaLabel}
         aria-current={active ? "page" : undefined}
-        className={cls}
-        onClick={() => setMenuOpen(false)}
+        className={baseClass}
+        onClick={closeMenu}
       >
         {content}
       </Link>
@@ -177,34 +218,52 @@ export default function ResponsiveNavbar() {
   };
 
   return (
-    <nav aria-label="Main Navigation" className="flex items-start md:items-center gap-1">
-      {/* Mobile hamburger menu */}
-      <div className="md:hidden relative">
+    <div className="flex items-center">
+      {/* Mobile Navigation Drawer / Dropdown */}
+      <div ref={menuContainerRef} className="md:hidden relative">
         <button
           type="button"
-          className="ssj-btn"
           onClick={() => setMenuOpen((open) => !open)}
-          aria-label={menuOpen ? "Close menu" : "Open navigation menu"}
+          aria-label={menuOpen ? "Close navigation menu" : "Open primary navigation menu"}
           aria-expanded={menuOpen}
-          aria-controls="mobile-nav-dropdown"
+          aria-haspopup="menu"
+          aria-controls={menuId}
+          className="inline-flex items-center justify-center p-2 rounded-xl border border-theme/40 bg-surface text-foreground shadow-sm hover:bg-theme/10 active:scale-95 transition-[transform,background-color] duration-150 ease-out focus:outline-none focus:ring-2 focus:ring-primary will-change-[transform]"
         >
-          {menuOpen ? <X size={22} aria-hidden="true" /> : <Menu size={22} aria-hidden="true" />}
+          {menuOpen ? (
+            <X className="w-5 h-5" aria-hidden="true" />
+          ) : (
+            <Menu className="w-5 h-5" aria-hidden="true" />
+          )}
         </button>
 
-        {menuOpen && (
-          <div
-            id="mobile-nav-dropdown"
-            className="absolute right-0 mt-2 w-48 bg-surface shadow-lg rounded-md p-2 flex flex-col gap-2 z-50"
-          >
-            {PRIMARY_NAV.map(renderItem)}
-          </div>
-        )}
+        <div
+          id={menuId}
+          role="menu"
+          aria-label="Mobile navigation options"
+          aria-hidden={!menuOpen}
+          className={`
+            absolute right-0 top-full mt-2 w-56 bg-surface border border-theme 
+            rounded-2xl shadow-xl z-50 p-2 flex flex-col gap-1 transition-[opacity,transform] duration-150 ease-out will-change-[transform,opacity]
+            ${
+              menuOpen
+                ? "opacity-100 scale-100 pointer-events-auto visible"
+                : "opacity-0 scale-95 pointer-events-none hidden"
+            }
+          `}
+        >
+          {PRIMARY_NAV.map((item) => renderItem(item, true))}
+        </div>
       </div>
 
-      {/* Desktop navigation bar */}
-      <div className="hidden md:flex items-center gap-3">
-        {PRIMARY_NAV.map(renderItem)}
+      {/* Desktop Navigation Links */}
+      <div
+        role="navigation"
+        aria-label="Desktop primary menu"
+        className="hidden md:flex items-center gap-1.5"
+      >
+        {PRIMARY_NAV.map((item) => renderItem(item, false))}
       </div>
-    </nav>
+    </div>
   );
 }

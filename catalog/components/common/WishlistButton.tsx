@@ -1,7 +1,13 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { Heart } from "lucide-react";
+
+interface WishlistButtonProps {
+  slug: string;
+  size?: number;
+  productName?: string;
+}
 
 function safeReadWishlist(): string[] {
   try {
@@ -17,32 +23,23 @@ function safeReadWishlist(): string[] {
 export default function WishlistButton({
   slug,
   size = 20,
-}: {
-  slug: string;
-  size?: number;
-}) {
+  productName,
+}: WishlistButtonProps) {
   const [isWishlisted, setIsWishlisted] = useState(false);
   const ref = useRef<HTMLButtonElement | null>(null);
 
-  // Stable function to update internal UI state
+  // Synchronize internal state from localStorage
   const refreshStatus = useCallback(() => {
     const stored = safeReadWishlist();
     setIsWishlisted(stored.includes(slug));
   }, [slug]);
 
-  //
-  // 1️⃣ INITIAL LOAD
-  //
+  // Initial read on mount
   useEffect(() => {
-    // Defer setState to avoid "setState inside effect" warning
-    queueMicrotask(() => {
-      refreshStatus();
-    });
+    refreshStatus();
   }, [refreshStatus]);
 
-  //
-  // 2️⃣ LISTEN TO LOCALSTORAGE + CUSTOM EVENT
-  //
+  // Cross-tab and intra-app event synchronization
   useEffect(() => {
     const onStorage = (e: StorageEvent) => {
       if (e.key === "wishlist") refreshStatus();
@@ -59,9 +56,7 @@ export default function WishlistButton({
     };
   }, [refreshStatus]);
 
-  //
-  // 3️⃣ REFRESH WHEN BUTTON BECOMES VISIBLE
-  //
+  // Refresh status when returning to viewport or window refocus
   useEffect(() => {
     let observer: IntersectionObserver | null = null;
 
@@ -77,7 +72,9 @@ export default function WishlistButton({
       observer.observe(ref.current);
     }
 
-    const onVisibility = () => refreshStatus();
+    const onVisibility = () => {
+      if (document.visibilityState === "visible") refreshStatus();
+    };
     const onFocus = () => refreshStatus();
 
     window.addEventListener("visibilitychange", onVisibility);
@@ -90,36 +87,64 @@ export default function WishlistButton({
     };
   }, [refreshStatus]);
 
-  //
-  // 4️⃣ TOGGLE WISHLIST
-  //
-  const toggleWishlist = () => {
-    const stored = safeReadWishlist();
-    const exists = stored.includes(slug);
+  // Toggle wishlist state
+  const toggleWishlist = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>) => {
+      e.preventDefault();
+      e.stopPropagation();
 
-    const next = exists
-      ? stored.filter((s) => s !== slug)
-      : [...stored, slug];
+      const stored = safeReadWishlist();
+      const exists = stored.includes(slug);
 
-    localStorage.setItem("wishlist", JSON.stringify(next));
-    setIsWishlisted(!exists);
+      const next = exists
+        ? stored.filter((s) => s !== slug)
+        : [...stored, slug];
 
-    window.dispatchEvent(new CustomEvent("wishlist-updated"));
-  };
+      try {
+        localStorage.setItem("wishlist", JSON.stringify(next));
+      } catch (err) {
+        console.error("Failed to update wishlist in localStorage:", err);
+      }
+
+      setIsWishlisted(!exists);
+      window.dispatchEvent(new CustomEvent("wishlist-updated"));
+    },
+    [slug]
+  );
+
+  const targetLabel = productName ? ` "${productName}"` : "";
+  const accessibleActionLabel = isWishlisted
+    ? `हटाएं: पसंद सूची से निकालें (Remove${targetLabel} from wishlist)`
+    : `जोड़ें: पसंद सूची में जोड़ें (Save${targetLabel} to wishlist)`;
 
   return (
     <button
       ref={ref}
+      type="button"
       onClick={toggleWishlist}
-      className="p-1 rounded-full bg-white/80 hover:bg-white transition shadow-sm"
-      aria-label={isWishlisted ? "Remove from wishlist" : "Add to wishlist"}
+      aria-label={accessibleActionLabel}
+      aria-pressed={isWishlisted}
+      className="
+        inline-flex items-center justify-center p-2 rounded-full
+        bg-surface/90 backdrop-blur-sm border border-theme/40 text-foreground
+        shadow-sm hover:bg-surface hover:scale-105 active:scale-95
+        transition-[transform,background-color,border-color] duration-150 ease-out
+        focus:outline-none focus:ring-2 focus:ring-primary will-change-[transform]
+      "
     >
       <Heart
         size={size}
-        className={`transition-all ${
-          isWishlisted ? "fill-red-500 text-red-500" : "text-gray-600"
-        }`}
+        className={`
+          transition-[fill,color,transform] duration-150 ease-out will-change-[transform]
+          ${
+            isWishlisted
+              ? "fill-red-500 text-red-500 scale-110"
+              : "text-muted-foreground hover:text-foreground"
+          }
+        `}
+        aria-hidden="true"
       />
+      <span className="sr-only">{accessibleActionLabel}</span>
     </button>
   );
 }

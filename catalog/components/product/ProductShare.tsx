@@ -1,65 +1,85 @@
-"use client";
+import type { Product } from "@/types/catalog";
 import NativeShare from "@/components/product/NativeShare";
-import { Product } from "@/types/catalog"
-import {
-    FaWhatsapp,
-    FaTelegramPlane,
-    FaSnapchatGhost,
-    FaInstagram,
-} from "react-icons/fa";
+import { FaWhatsapp, FaTelegramPlane } from "react-icons/fa";
 
+interface ProductShareProps {
+  product: Product;
+  phone?: string;
+  className?: string;
+}
 
-export default function ProductShare({ product }: { product: Product }) {
-    const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
-    const baseProductUrl = `${baseURL}/product/${product.slug}`;
-    const encodedUrl = (baseProductUrl);
-    const encodedText = (`Check out this product: ${product.name}`);
-    const whatsappShare = `https://wa.me/?text=${encodedText}%20${encodedUrl}`;
-    const telegramShare = `https://t.me/share/url?url=${encodedUrl}&text=${encodedText}`;
-    const snapchatShare = `https://www.snapchat.com/scan?attachmentUrl=${encodedUrl}`;
-    const instagramShare = `https://www.instagram.com/?url=${encodedUrl}`;
+export default function ProductShare({
+  product,
+  phone = "8234042231",
+  className = "",
+}: ProductShareProps) {
+  const baseURL = (
+    process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in"
+  ).replace(/\/+$/, "");
+  const baseProductUrl = `${baseURL}/product/${product.slug}/`;
 
-    return (
-        <div className="py-2 mt-2">
-            <h2 className="text-lg  mb-3">Share this product</h2>
-            <div className="flex gap-5 items-center flex-wrap">
-                <a
-                    href={whatsappShare}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-3xl !text-green-500 hover:scale-110 transition-transform"
-                >
-                    <FaWhatsapp />
-                </a>
-                <a
-                    href={telegramShare}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-3xl !text-sky-500 hover:scale-110 transition-transform"
-                >
-                    <FaTelegramPlane />
-                </a>
-                <a
-                    href={snapchatShare}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-3xl !text-yellow-400 hover:scale-110 transition-transform"
-                >
-                    <FaSnapchatGhost />
-                </a>
-                <a
-                    href={instagramShare}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-3xl !text-pink-500 hover:scale-110 transition-transform"
-                >
-                    <FaInstagram />
-                </a>
-                <NativeShare
-                    productName={product.name}
-                    productUrl={baseProductUrl}
-                    phone="8234042231" />
-            </div>
-        </div>
-    );
+  const shareText = `Check out this jewellery design: ${product.name} at Sapna Shri Jewellers 💎`;
+  const encodedText = encodeURIComponent(shareText);
+  const encodedUrl = encodeURIComponent(baseProductUrl);
+
+  const whatsappShareUrl = `https://wa.me/?text=${encodedText}%20${encodedUrl}`;
+  const telegramShareUrl = `https://t.me/share/url?url=${encodedUrl}&text=${encodedText}`;
+
+  return (
+    <section
+      aria-label="Share product options"
+      className={`py-2 mt-2 ${className}`}
+    >
+      <h3 className="text-xs sm:text-sm font-medium text-muted-foreground mb-2.5">
+        Share this product
+      </h3>
+
+      <div className="flex items-center gap-3 flex-wrap">
+        {/* Direct WhatsApp Share */}
+        <a
+          href={whatsappShareUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          title={`Share ${product.name} on WhatsApp`}
+          aria-label={`Share ${product.name} on WhatsApp`}
+          className="
+            inline-flex items-center justify-center p-2 rounded-xl
+            bg-surface border border-theme/40 text-[#25D366] shadow-sm
+            hover:bg-[#25D366] hover:text-white hover:border-[#25D366]
+            transition-[color,background-color,border-color,transform] duration-150 ease-out will-change-[transform]
+            active:scale-95 focus:outline-none focus:ring-2 focus:ring-[#25D366]
+          "
+        >
+          <FaWhatsapp className="w-5 h-5 shrink-0" aria-hidden="true" />
+          <span className="sr-only">Share on WhatsApp</span>
+        </a>
+
+        {/* Direct Telegram Share */}
+        <a
+          href={telegramShareUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          title={`Share ${product.name} on Telegram`}
+          aria-label={`Share ${product.name} on Telegram`}
+          className="
+            inline-flex items-center justify-center p-2 rounded-xl
+            bg-surface border border-theme/40 text-[#229ED9] shadow-sm
+            hover:bg-[#229ED9] hover:text-white hover:border-[#229ED9]
+            transition-[color,background-color,border-color,transform] duration-150 ease-out will-change-[transform]
+            active:scale-95 focus:outline-none focus:ring-2 focus:ring-[#229ED9]
+          "
+        >
+          <FaTelegramPlane className="w-5 h-5 shrink-0" aria-hidden="true" />
+          <span className="sr-only">Share on Telegram</span>
+        </a>
+
+        {/* Native Web Share API + Direct Clipboard & Fallback */}
+        <NativeShare
+          productName={product.name}
+          productUrl={baseProductUrl}
+          phone={phone}
+        />
+      </div>
+    </section>
+  );
 }

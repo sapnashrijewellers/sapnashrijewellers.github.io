@@ -168,4 +168,4 @@ Live Rate Sources
 - Strictly follow ESLint rules and avoid errors
 - Use Link and Iamge rather than HTML anchor and img tags in next.js
 - Avoid using generic type like any, use Declared type whereever possible
-- HTML must be optimized for LCP / Core Web Vitals, Accessibility (a11y), and LLM & Search Engine Crawlability
+- Code must be optimized for LCP / Core Web Vitals, Accessibility (a11y), and LLM & Search Engine Crawlability

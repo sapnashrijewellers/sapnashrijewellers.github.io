@@ -144,11 +144,17 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
             <p>इस श्रेणी में वर्तमान में कोई उत्पाद उपलब्ध नहीं है।</p>
           </div>
         ) : (
-           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-                    {filtered.map((p: Product) => (
-                        <ProductCard key={p.id} product={p} />
-                    ))}
-                </div>
+          <ul
+            role="list"
+            aria-label={`${category.name} products list`}
+            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 list-none p-0"
+          >
+            {filtered.map((p: Product, idx: number) => (
+              <li key={p.id || p.slug || idx} className="flex justify-stretch">
+                <ProductCard product={p} priority={idx < 4} />
+              </li>
+            ))}
+          </ul>
         )}
       </section>
 

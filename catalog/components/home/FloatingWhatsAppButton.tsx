@@ -1,25 +1,45 @@
-"use client";
-
 import { FaWhatsapp } from "react-icons/fa";
 
-export default function FloatingWhatsAppButton() {
-  const MY_PHONE_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP;
-  const whatsappUrl = `https://wa.me/${MY_PHONE_NUMBER}?text=Hello!%20I%20have%20a%20question%20about%20your%20service.`;
+interface FloatingWhatsAppButtonProps {
+  phoneNumber?: string;
+  defaultMessage?: string;
+  className?: string;
+}
 
-  const handleClick = () => {
-    window.open(whatsappUrl, "_blank");
-  };
+export default function FloatingWhatsAppButton({
+  phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP,
+  defaultMessage = "Hello! I have a question about your jewellery collection and services.",
+  className = "",
+}: FloatingWhatsAppButtonProps) {
+  if (!phoneNumber) return null;
+
+  const sanitizedNumber = phoneNumber.replace(/[^0-9]/g, "");
+  const encodedText = encodeURIComponent(defaultMessage);
+  const whatsappUrl = `https://wa.me/${sanitizedNumber}?text=${encodedText}`;
+  const accessibleActionLabel = `WhatsApp पर चैट करें: प्रश्न पूछें (Chat on WhatsApp with customer support at +${sanitizedNumber})`;
 
   return (
-    <div className="fixed bottom-15 right-6 sm:bottom-10 sm:right-10 z-50 flex flex-col items-end space-y-3">
-      <button
-        className="p-4 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-105 active:scale-95 bg-green-500 hover:bg-green-600 text-white"
-        title={`Chat on WhatsApp: +${MY_PHONE_NUMBER}`}
-        aria-label="Click to start whatsapp chat"
-        onClick={handleClick}
+    <aside
+      aria-label="Direct customer support contact"
+      className={`fixed bottom-16 right-5 sm:bottom-8 sm:right-8 z-40 flex flex-col items-end ${className}`}
+    >
+      <a
+        href={whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={accessibleActionLabel}
+        title={`Chat on WhatsApp: +${sanitizedNumber}`}
+        className="
+          inline-flex items-center justify-center p-3.5 sm:p-4 rounded-full
+          bg-[#25D366] text-white shadow-xl
+          hover:bg-[#20bd5a] hover:scale-105 active:scale-95
+          transition-[transform,background-color] duration-150 ease-out will-change-[transform]
+          focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 focus:ring-offset-background
+        "
       >
-        <FaWhatsapp size={30} />
-      </button>
-    </div>
+        <FaWhatsapp className="w-7 h-7 sm:w-8 sm:h-8 shrink-0 text-white" aria-hidden="true" />
+        <span className="sr-only">व्हाट्सएप पर सहायता प्राप्त करें (Contact support on WhatsApp)</span>
+      </a>
+    </aside>
   );
 }

@@ -1,140 +1,147 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState, useId } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
 import banners from "@/data/banners.json";
-const baseURL = process.env.NEXT_PUBLIC_BASE_URL ?? "";
 
-/* --------------------------------------------
-   Image animation map
---------------------------------------------- */
-const imageAnimationMap = {
-  none: {
-    initial: {},
-    animate: {},
-    exit: {},
-  },
-  "subtle-zoom": {
-    initial: { scale: 1.08 },
-    animate: { scale: 1 },
-    exit: { scale: 1.05 },
-  },
-  fade: {
-    initial: { opacity: 0 },
-    animate: { opacity: 1 },
-    exit: { opacity: 0 },
-  },
-  "pan-right": {
-    initial: { scale: 1.1, x: -30 },
-    animate: { scale: 1, x: 0 },
-    exit: { scale: 1.05, x: 30 },
-  },
-} as const;
-
-interface Props {
-  interval?: number;
-  height?: string;
+interface BannerItem {
   page?: string;
+  rank?: number;
+  bannerImage: string;
+  link?: string;
+  title?: string;
+  alt?: string;
 }
 
-/* --------------------------------------------
-   Component
---------------------------------------------- */
-export default function RotatingBanner({
-  interval = 10000,
-  height = "h-120",
-  page = "home",
-}: Props) {
-  const [index, setIndex] = useState(0);
-  const bannerRef = useRef<HTMLDivElement | null>(null);
+interface RotatingBannerProps {
+  interval?: number;
+  page?: string;
+  className?: string;
+}
 
-  const items = banners
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL ?? "";
+
+export default function RotatingBanner({
+  interval = 8000,
+  page = "home",
+  className = "",
+}: RotatingBannerProps) {
+  const [index, setIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const carouselId = useId();
+
+  const items: BannerItem[] = banners
     .filter((b) => b.page === page)
-    .sort((a, b) => a.rank - b.rank);
+    .sort((a, b) => (a.rank ?? 0) - (b.rank ?? 0));
 
   /* --------------------------------------------
-     Rotation timer
+     Auto-Rotation Timer (Pauses on Hover / Focus)
   --------------------------------------------- */
   useEffect(() => {
-    if (items.length <= 1) return;
+    if (items.length <= 1 || isPaused) return;
 
-    const id = setInterval(
-      () => setIndex((i) => (i + 1) % items.length),
-      interval
-    );
+    const timer = setInterval(() => {
+      setIndex((prev) => (prev + 1) % items.length);
+    }, interval);
 
-    return () => clearInterval(id);
-  }, [items.length, interval]);
+    return () => clearInterval(timer);
+  }, [items.length, interval, isPaused]);
 
   if (items.length === 0) {
     return null;
   }
 
   const current = items[index];
+  const bannerHref = current.link || "#";
+  const bannerAlt =
+    current.alt ||
+    current.title ||
+    `Featured promotional jewellery banner ${index + 1}`;
 
-  /* --------------------------------------------
-     Resolve animations safely
-  --------------------------------------------- */
-  const imageAnimationKey =
-    current.imageAnimation in imageAnimationMap
-      ? (current.imageAnimation as keyof typeof imageAnimationMap)
-      : "pan-right";
-
-  const imageMotion = imageAnimationMap[imageAnimationKey];
-
-  /* --------------------------------------------
-     Render
-  --------------------------------------------- */
   return (
-    <div className="w-full">
-      <Link href={current.link} aria-label="Banner Link">
-        <div
-          ref={bannerRef}
-          className={`relative w-full overflow-hidden rounded-2xl shadow-lg ${height}`}
+    <section
+      id={carouselId}
+      aria-roledescription="carousel"
+      aria-label="Promotional announcements and featured offers"
+      className={`relative w-full ${className}`}
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      onFocus={() => setIsPaused(true)}
+      onBlur={() => setIsPaused(false)}
+    >
+      {/* 1. Main Banner Surface with Pre-defined Aspect Ratio (Prevents CLS) */}
+      <div className="relative w-full aspect-[2/1] sm:aspect-[2.3/1] md:aspect-[2.8/1] lg:aspect-[3/1] overflow-hidden rounded-2xl shadow-md bg-muted/40 border border-theme/30">
+        <Link
+          href={bannerHref}
+          aria-label={current.title || bannerAlt}
+          className="group block relative w-full h-full focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-2xl"
+          tabIndex={0}
         >
-          {/* ================= Image ================= */}
-          <AnimatePresence mode="wait" initial={false}>
-            <motion.div
-              key={`${current.bannerImage}-${imageAnimationKey}`}
-              className="absolute inset-0"
-              initial={imageMotion.initial}
-              animate={imageMotion.animate}
-              exit={imageMotion.exit}
-              transition={{ duration: 1.2, ease: "easeOut" }}
-            >
-              <Image
-                src={`${baseURL}/static/img/banner/${current.bannerImage}`}
-                alt="Banner"
-                fill
-                priority
-                loading="eager"
-                className="object-cover opacity-95"
-              />
-            </motion.div>
-          </AnimatePresence>
-        </div>
-      </Link>
+          {items.map((item, idx) => {
+            const isActive = idx === index;
+            const itemAlt =
+              item.alt ||
+              item.title ||
+              `Featured jewellery banner ${idx + 1}`;
 
-      {/* ================= Pagination ================= */}
+            return (
+              <div
+                key={item.bannerImage || idx}
+                aria-hidden={!isActive}
+                className={`absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out ${
+                  isActive
+                    ? "opacity-100 z-10 pointer-events-auto"
+                    : "opacity-0 z-0 pointer-events-none"
+                }`}
+              >
+                <Image
+                  src={`${baseURL}/static/img/banner/${item.bannerImage}`}
+                  alt={itemAlt}
+                  fill
+                  priority={idx === 0} // ✅ Immediate preload only for the first LCP slide
+                  loading={idx === 0 ? "eager" : "lazy"}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 95vw, 1200px"
+                  className="object-cover transition-transform duration-700 group-hover:scale-[1.01]"
+                />
+              </div>
+            );
+          })}
+        </Link>
+      </div>
+
+      {/* 2. Accessible Carousel Pagination Controls */}
       {items.length > 1 && (
-        <div className="mt-4 flex justify-center gap-2">
-          {items.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setIndex(i)}
-              aria-label={`Go to banner ${i + 1}`}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                i === index
-                  ? "bg-black scale-125"
-                  : "bg-black/30 hover:bg-black/50"
-              }`}
-            />
-          ))}
+        <div
+          role="tablist"
+          aria-label="Banner navigation controls"
+          className="mt-3 flex items-center justify-center gap-2"
+        >
+          {items.map((item, i) => {
+            const isSelected = i === index;
+            const slideLabel = item.title
+              ? `Go to slide ${i + 1}: ${item.title}`
+              : `Go to slide ${i + 1} of ${items.length}`;
+
+            return (
+              <button
+                key={i}
+                type="button"
+                role="tab"
+                aria-selected={isSelected}
+                aria-current={isSelected ? "true" : undefined}
+                aria-label={slideLabel}
+                onClick={() => setIndex(i)}
+                className={`h-2.5 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary ${
+                  isSelected
+                    ? "w-7 bg-primary shadow-xs"
+                    : "w-2.5 bg-muted-foreground/30 hover:bg-muted-foreground/60"
+                }`}
+              />
+            );
+          })}
         </div>
       )}
-    </div>
+    </section>
   );
 }

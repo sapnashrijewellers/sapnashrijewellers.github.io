@@ -1,4 +1,4 @@
-
+import Link from "next/link";
 import {
   FaFacebookF,
   FaInstagram,
@@ -6,115 +6,252 @@ import {
   FaWhatsapp,
   FaClock,
 } from "react-icons/fa";
-import Link from "next/link";
+import { Phone, MapPin } from "lucide-react";
 import BrandLogo from "../common/BrandLogo";
 
 
-export default function Footer() {  
-  const year = new Date().getFullYear();
+export default function Footer() {
+  const currentYear = new Date().getFullYear()
+  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP || "8234042231";
+  const sanitizedWhatsApp = whatsappNumber.replace(/[^0-9]/g, "");
 
   return (
-    <footer className="bg-footer text-footer">
-      <div className="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+    <footer
+      aria-label="Site footer and store information"
+      className="bg-footer text-footer border-t border-theme/30"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10">
 
-        {/* BRAND */}
-        <div>
-          <h1 className="text-2xl font-yatra footer-heading">
+        {/* 1. BRAND & TRUST PILLARS */}
+        <section aria-label="Brand overview" className="space-y-3">
+          <div className="flex items-center gap-2">
             <BrandLogo view="lg" />
-            Sapna Shri Jewellers
-          </h1>
-          <p className="mt-2 text-sm italic opacity-90">
-            Crafting Trust in Gold & Silver Since Generations
-          </p>
-          <div className="mt-4 text-xs opacity-80">
-            BIS Hallmarked Jewellery • Transparent Pricing
-          </div>
-        </div>
 
-        {/* QUICK LINKS */}
-        <div>
-          <h2 className="footer-heading font-yatra text-lg mb-3">Policies</h2>
-          <p className="text-xs mt-3 opacity-75">
-            Prices may vary based on live market rates... <Link href="/policies/disclaimer/" className="text-xs underline">
-              Read full disclaimer
+          </div>
+          <h2 className="text-xl sm:text-2xl font-yatra footer-heading tracking-wide">
+            Sapna Shri Jewellers
+          </h2>
+          <p className="text-sm italic opacity-90 leading-relaxed">
+            Crafting Trust in Gold &amp; Silver Since Generations
+          </p>
+
+          <p className="text-xs opacity-80 leading-normal">
+            BIS Hallmarked Jewellery &bull; Transparent Live Pricing
+          </p>
+        </section>
+
+        {/* 2. POLICIES & LEGAL */}
+        <nav aria-label="Store policies and customer protection">
+          <h3 className="footer-heading font-yatra text-base sm:text-lg mb-3">
+            नीतियां (Policies)
+          </h3>
+
+          <p className="text-xs mb-3 opacity-75 leading-relaxed">
+            Prices may vary based on live market rates...{" "}
+            <Link
+              href="/policies/disclaimer/"
+              className="underline hover:text-primary transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded"
+            >
+              Read disclaimer
             </Link>
           </p>
 
+          <ul className="space-y-2 text-sm">
+            <li>
+              <Link
+                href="/policies/terms/"
+                className="hover:text-primary hover:underline transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded"
+              >
+                Terms of Service
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/policies/privacy/"
+                className="hover:text-primary hover:underline transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded"
+              >
+                Privacy Policy
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/policies/returns/"
+                className="hover:text-primary hover:underline transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded"
+              >
+                Return &amp; Exchange Policy
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/policies/shipping/"
+                className="hover:text-primary hover:underline transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded"
+              >
+                Shipping Policy
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/policies/warranty/"
+                className="hover:text-primary hover:underline transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded"
+              >
+                Warranty &amp; Purity Assurance
+              </Link>
+            </li>
+          </ul>
+        </nav>
+
+        {/* 3. QUICK LINKS & UTILITIES */}
+        <nav aria-label="Quick catalog navigation">
+          <h3 className="footer-heading font-yatra text-base sm:text-lg mb-3">
+            त्वरित लिंक (Quick Links)
+          </h3>
 
           <ul className="space-y-2 text-sm">
-            <li><Link href="/policies/terms/">Terms of Service</Link></li>
-            <li><Link href="/policies/privacy/">Privacy Policy</Link></li>
-            <li><Link href="/policies/returns/">Return Policy</Link></li>
-            <li><Link href="/policies/shipping/">Shipping Policy</Link></li>
-            <li><Link href="/policies/warranty/">Warranty Policy</Link></li>
+            <li>
+              <Link
+                href="/about-us/"
+                className="hover:text-primary hover:underline transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded"
+              >
+                About Our Heritage
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/#shop-by-category"
+                className="hover:text-primary hover:underline transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded"
+              >
+                Shop by Category
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/#shop-by-occasion"
+                className="hover:text-primary hover:underline transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded"
+              >
+                Shop by Occasion
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/calculator/"
+                className="hover:text-primary hover:underline transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded"
+              >
+                Live Rate Calculator
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/qr/"
+                className="hover:text-primary hover:underline transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded"
+              >
+                QR Code for Payment
+              </Link>
+            </li>
           </ul>
-        </div>
+        </nav>
 
-        {/* QUICK LINKS */}
-        <div>
-          <h2 className="footer-heading font-yatra text-lg mb-3">Quick Links</h2>
-          <ul className="space-y-2 text-sm">
-            <li><Link href="/about-us/">About Us</Link></li>            
-            <li><Link href="/#shop-by-category">Shop by Category</Link></li>
-            <li><Link href="/#shop-by-occasion">Shop by Occasion</Link></li>
-            <li><Link href="/qr/">QR code for Payment</Link></li>            
-          </ul>
-        </div>
+        {/* 4. PHYSICAL STORE ADDRESS & HOURS */}
+        <section aria-label="Physical showroom address and hours">
+          <h3 className="footer-heading font-yatra text-base sm:text-lg mb-3">
+            दुकान का पता (Store Address)
+          </h3>
 
-        {/* STORE & LEGAL */}
-        <div>
-          <h2 className="footer-heading font-yatra text-lg mb-3 ">Store Address</h2>
+          <address className="not-italic text-sm space-y-2.5 text-footer/90">
+            <div className="flex items-start gap-2">
+              <MapPin className="w-4 h-4 shrink-0 mt-1 text-primary" aria-hidden="true" />
+              <div>
+                <p className="font-tiro leading-snug">
+                  सपना श्री ज्वैलर्स, रेलवे स्टेशन मेन रोड, नागदा जंक्शन, उज्जैन
+                </p>
+                <p className="font-cinzel text-xs opacity-80 mt-0.5">
+                  M G Road, Near Jain Mandir, Nagda Jn., Ujjain (M.P.)
+                </p>
+              </div>
+            </div>
 
-          <div className="text-sm space-y-3">
-            <p className="font-tiro">
-              सपना श्री ज्वैलर्स,<br />
-              रेलवे स्टेशन मेन रोड,<br />
-              नागदा जंक्शन, उज्जैन
-            </p>
-
-            <p className="font-cinzel">
-              M G Road, Near Jain Mandir, <br />
-              Nagda Junction, Ujjain
+            <p className="flex items-center gap-2">
+              <FaClock className="w-3.5 h-3.5 shrink-0" aria-hidden="true" />
+              <span>
+                11:00 AM – 8:00 PM
+                <br />
+                Monday Closed
+              </span>
             </p>
 
             <p className="flex items-center gap-2">
-              <FaClock /> 11:00 AM – 8:00 PM
-            </p>
-            <p className="flex items-center gap-2">
-              📞 Mobile: +91-8234042231
+              <Phone className="w-3.5 h-3.5 shrink-0" aria-hidden="true" />
+              <a
+                href="tel:+918234042231"
+                className="hover:underline focus:outline-none focus:ring-1 focus:ring-primary rounded"
+              >
+                +91-8234042231
+              </a>
             </p>
 
-
-            <p className="text-xs opacity-80">
-              GSTIN: 23AFFPG2954P1Z8
+            <p className="text-xs opacity-80 pt-1">
+              GSTIN: <span className="font-mono">23AFFPG2954P1Z8</span>
             </p>
-          </div>
-        </div>
+          </address>
+        </section>
 
-        {/* CONNECT */}
-        <div>
-          <h2 className="footer-heading font-yatra text-lg mb-3">Connect With Us</h2>
+        {/* 5. DIRECT CONTACT & SOCIAL PROFILES */}
+        <section aria-label="Customer communication channels">
+          <h3 className="footer-heading font-yatra text-base sm:text-lg mb-3">
+            संपर्क करें (Connect With Us)
+          </h3>
 
           <a
-            href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP}`}
-            className="inline-flex items-center gap-2 text-sm ssj-btn"
+            href={`https://wa.me/${sanitizedWhatsApp}?text=${encodeURIComponent("Hello! I want to enquire about jewellery designs.")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Chat directly on WhatsApp with Sapna Shri Jewellers"
+            className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2.5 rounded-xl bg-[#25D366] text-white hover:bg-[#20bd5a] hover:scale-105 active:scale-95 transition-[transform,background-color] duration-150 ease-out will-change-[transform] shadow-md focus:outline-none focus:ring-2 focus:ring-[#25D366]"
           >
-            <FaWhatsapp /> Ask on WhatsApp
+            <FaWhatsapp className="w-4 h-4 shrink-0" aria-hidden="true" />
+            <span>WhatsApp पर पूछें</span>
           </a>
 
-          <div className="flex gap-4 mt-4 text-xl">
-            <a href="https://www.facebook.com/share/14JjQReswYv/" target="_blank"><FaFacebookF className="icon-footer-trust" /></a>
-            <a href="https://www.instagram.com/sapna_shri_jewllers/" target="_blank"><FaInstagram className="icon-footer-trust"/></a>
-            <a href="https://www.youtube.com/@SapnaShriJewellers-b1f/shorts" target="_blank"><FaYoutube className="icon-footer-trust"/></a>
+          <div className="flex items-center gap-4 mt-5 text-xl">
+            <a
+              href="https://www.facebook.com/share/14JjQReswYv/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Sapna Shri Jewellers on Facebook"
+              className="p-2 rounded-full border border-theme/40 hover:text-primary hover:border-primary transition-[color,border-color,transform] duration-150 hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary will-change-[transform]"
+            >
+              <FaFacebookF className="w-4 h-4 shrink-0" aria-hidden="true" />
+              <span className="sr-only">Facebook</span>
+            </a>
+
+            <a
+              href="https://www.instagram.com/sapna_shri_jewllers/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow Sapna Shri Jewellers on Instagram"
+              className="p-2 rounded-full border border-theme/40 hover:text-primary hover:border-primary transition-[color,border-color,transform] duration-150 hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary will-change-[transform]"
+            >
+              <FaInstagram className="w-4 h-4 shrink-0" aria-hidden="true" />
+              <span className="sr-only">Instagram</span>
+            </a>
+
+            <a
+              href="https://www.youtube.com/@SapnaShriJewellers-b1f/shorts"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Subscribe to Sapna Shri Jewellers on YouTube"
+              className="p-2 rounded-full border border-theme/40 hover:text-primary hover:border-primary transition-[color,border-color,transform] duration-150 hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary will-change-[transform]"
+            >
+              <FaYoutube className="w-4 h-4 shrink-0" aria-hidden="true" />
+              <span className="sr-only">YouTube</span>
+            </a>
           </div>
-          
-        </div>
+        </section>
       </div>
 
-      {/* BOTTOM BAR */}
-      <div className="border-t border-theme text-center py-4 text-xs opacity-70">
-        © {year} Sapna Shri Jewellers. All Rights Reserved.
-      </div>      
+      {/* COPYRIGHT & CREDITS */}
+      <div className="border-t border-theme/20 text-center py-4 px-4 text-xs opacity-75">
+        &copy; {currentYear} Sapna Shri Jewellers. All Rights Reserved.
+      </div>
     </footer>
   );
 }

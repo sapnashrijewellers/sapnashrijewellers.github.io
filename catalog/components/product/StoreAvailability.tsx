@@ -1,57 +1,97 @@
-import { MapPin, Clock, Store } from "lucide-react";
+import { MapPin, Clock, Store, Phone } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
-export default function StoreAvailability() {
+interface StoreAvailabilityProps {
+  productName?: string;
+  className?: string;
+}
+
+export default function StoreAvailability({
+  productName = "Jewellery Item",
+  className = "",
+}: StoreAvailabilityProps) {
+  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP || "918234042231";
+  const sanitizedWhatsApp = whatsappNumber.replace(/[^0-9]/g, "");
+
+  const appointmentMessage = `Hello Sapna Shri Jewellers, I would like to book an in-store appointment for local pickup of: ${productName}.`;
+  const whatsappUrl = `https://wa.me/${sanitizedWhatsApp}?text=${encodeURIComponent(appointmentMessage)}`;
+
   return (
-    <section className="mt-6 rounded-2xl border border-primary/30 bg-surface p-5 shadow-sm">
+    <section
+      aria-labelledby="store-availability-heading"
+      className={`mt-6 rounded-2xl border border-theme/40 bg-surface/90 p-4 sm:p-5 shadow-sm ${className}`}
+    >
       {/* Header */}
-      <div className="mb-4 flex items-center gap-2">
-        <Store className="h-5 w-5 " />
-        <h3 className="text-sm font-semibold uppercase tracking-wide text-primary-dark">
-          Store Availability
+      <div className="mb-3 flex items-center gap-2 border-b border-theme/20 pb-2.5">
+        <Store className="h-5 w-5 text-primary shrink-0" aria-hidden="true" />
+        <h3
+          id="store-availability-heading"
+          className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-primary"
+        >
+          Store Availability &bull; स्टोर उपलब्धता
         </h3>
       </div>
 
-      {/* Availability Message */}
-      <p className="mb-4 text-sm text-normal">
-        This product is available for <span className="font-medium">local pickup</span>.
+      {/* Availability Status */}
+      <p className="mb-3.5 text-xs sm:text-sm text-foreground/90 leading-relaxed">
+        This product is available for{" "}
+        <span className="font-semibold text-foreground">Local Store Pickup</span> (MG Road, Nagda).
       </p>
 
-      {/* Store Card */}
-      <div className="rounded-xl border border-theme bg-highlight p-4">
-        <div className="flex items-start justify-between gap-4">
-          <div className="space-y-1">
-            <h2>Sapna Shri Jewellers</h2>
-            <p className="flex items-center gap-1 text-sm opacity-80">
-              <MapPin className="h-4 w-4" />
-              MG Road, Nagda Jn., India
+      {/* Showroom Card */}
+      <div className="rounded-xl border border-theme/50 bg-background/60 p-3.5 sm:p-4 space-y-3">
+        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+          <address className="not-italic space-y-1 text-xs sm:text-sm text-foreground/85">
+            <h4 className="text-sm sm:text-base font-semibold text-foreground font-yatra">
+              Sapna Shri Jewellers
+            </h4>
+            
+            <p className="flex items-center gap-1.5 opacity-90">
+              <MapPin className="h-3.5 w-3.5 text-primary shrink-0" aria-hidden="true" />
+              <span>MG Road, Near Jain Mandir, Nagda Jn., MP, India</span>
             </p>
-            <a
-              href={`tel:+${process.env.NEXT_PUBLIC_WHATSAPP}`}
-              className="text-sm font-medium"
-            >
-              +{process.env.NEXT_PUBLIC_WHATSAPP}
-            </a>
-          </div>
 
-          
-        </div>
-        <div className="flex items-center gap-1 rounded-full bg-page px-3 py-1 text-xs">
-            <Clock className="h-3.5 w-3.5" />
-            Usually ready in 24 hours
+            <p className="flex items-center gap-1.5">
+              <Phone className="h-3.5 w-3.5 text-primary shrink-0" aria-hidden="true" />
+              <a
+                href={`tel:+${sanitizedWhatsApp}`}
+                aria-label={`Call Sapna Shri Jewellers at +${sanitizedWhatsApp}`}
+                className="font-medium text-foreground hover:text-primary transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded"
+              >
+                +{sanitizedWhatsApp}
+              </a>
+            </p>
+          </address>
+
+          {/* Turnaround Badge */}
+          <div className="inline-flex items-center gap-1.5 self-start rounded-full bg-surface border border-theme/40 px-3 py-1 text-[11px] sm:text-xs font-medium text-foreground/90 shrink-0">
+            <Clock className="h-3.5 w-3.5 text-primary shrink-0" aria-hidden="true" />
+            <span>Usually ready in 24 hours</span>
           </div>
-              {/* Appointment CTA */}
-        <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between ">
-          <p className="text-sm opacity-80">
-            Want a personalized in-store experience? Book an appointment so we can serve you better.
+        </div>
+
+        {/* In-Store Appointment CTA Section */}
+        <div className="pt-3 border-t border-theme/20 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <p className="text-xs text-muted-foreground leading-snug">
+            Want a personalized in-store preview? Book an appointment via WhatsApp.
           </p>
 
           <a
-            href="https://wa.me/91888XXXXXXX?text=Hello%20Sapna%20Shri%20Jewellers,%20I%20would%20like%20to%20book%20an%20appointment%20for%20local%20pickup."
+            href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center text-center border border-primary px-5 py-2 text-sm ssj-btn"
+            title="Book an appointment via WhatsApp"
+            aria-label={`Book an in-store appointment for ${productName} on WhatsApp`}
+            className="
+              inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl
+              bg-[#25D366] text-white font-medium text-xs sm:text-sm shadow-sm
+              hover:bg-[#20bd5a] hover:scale-[1.01] active:scale-95
+              transition-[transform,background-color] duration-150 ease-out will-change-[transform]
+              focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-1 shrink-0
+            "
           >
-            Book an Appointment
+            <FaWhatsapp className="h-4 w-4 shrink-0" aria-hidden="true" />
+            <span>Book Appointment</span>
           </a>
         </div>
       </div>

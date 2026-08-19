@@ -1,45 +1,77 @@
 "use client";
 
-import { useEffect, useRef, useState, RefObject } from "react";
+import { useEffect, useRef, useState, useId, useCallback, type RefObject } from "react";
+import { Check } from "lucide-react";
+
+interface SortOption {
+  value: string;
+  label: string;
+  hindiLabel: string;
+}
 
 interface SortPanelProps {
   sortBy: string;
-  onSortChange: (value: string) => void;   // FIXED NAME
+  onSortChange: (value: string) => void;
   triggerRef: RefObject<HTMLButtonElement | null>;
 }
+
+const SORT_OPTIONS: readonly SortOption[] = [
+  { value: "best-match", label: "Best Match", hindiLabel: "सर्वोत्तम मिलान" },
+  { value: "name-asc", label: "Product Name A–Z", hindiLabel: "नाम: A से Z" },
+  { value: "name-desc", label: "Product Name Z–A", hindiLabel: "नाम: Z से A" },
+  { value: "weight-asc", label: "Weight Low → High", hindiLabel: "वज़न: कम से ज़्यादा" },
+  { value: "weight-desc", label: "Weight High → Low", hindiLabel: "वज़न: ज़्यादा से कम" },
+] as const;
 
 export function SortPanel({ sortBy, onSortChange, triggerRef }: SortPanelProps) {
   const [open, setOpen] = useState(false);
   const panelRef = useRef<HTMLDivElement | null>(null);
 
-  /** Toggle panel when clicking trigger */
+  const panelId = useId();
+  const titleId = useId();
+
+  const closePanel = useCallback(() => {
+    setOpen(false);
+    triggerRef.current?.focus();
+  }, [triggerRef]);
+
+  /** Synchronize trigger element attributes & toggle listener */
   useEffect(() => {
     const btn = triggerRef.current;
     if (!btn) return;
 
+    btn.setAttribute("aria-haspopup", "listbox");
+    btn.setAttribute("aria-expanded", String(open));
+    btn.setAttribute("aria-controls", panelId);
+
     const toggle = (e: MouseEvent) => {
       e.stopPropagation();
-      setOpen((o) => !o);
+      setOpen((prev) => !prev);
     };
 
     btn.addEventListener("click", toggle);
     return () => btn.removeEventListener("click", toggle);
-  }, [triggerRef]);
+  }, [triggerRef, open, panelId]);
 
-  /** Outside click + ESC close */
+  /** Outside click + ESC key dismissal */
   useEffect(() => {
+    if (!open) return;
+
     function handleClickOutside(e: MouseEvent) {
+      const target = e.target as Node;
       if (
         panelRef.current &&
-        !panelRef.current.contains(e.target as Node) &&
-        !triggerRef.current?.contains(e.target as Node)
+        !panelRef.current.contains(target) &&
+        !triggerRef.current?.contains(target)
       ) {
         setOpen(false);
       }
     }
 
     function handleEsc(e: KeyboardEvent) {
-      if (e.key === "Escape") setOpen(false);
+      if (e.key === "Escape") {
+        closePanel();
+      }
     }
 
     document.addEventListener("mousedown", handleClickOutside);
@@ -49,43 +81,76 @@ export function SortPanel({ sortBy, onSortChange, triggerRef }: SortPanelProps) 
       document.removeEventListener("mousedown", handleClickOutside);
       document.removeEventListener("keydown", handleEsc);
     };
-  }, [triggerRef]);
+  }, [open, closePanel, triggerRef]);
 
-  const options = [
-    { value: "best-match", label: "Best Match" },
-    { value: "name-asc", label: "Product Name A–Z" },
-    { value: "name-desc", label: "Product Name Z–A" },
-    { value: "weight-asc", label: "Weight Low → High" },
-    { value: "weight-desc", label: "Weight High → Low" },
-  ];
+  const handleSelect = (val: string) => {
+    onSortChange(val);
+    closePanel();
+  };
 
   return (
     <div
+      id={panelId}
       ref={panelRef}
-      className={`absolute right-0 top-full mt-4 w-72 bg-surface border border-theme 
-        rounded-xl shadow-lg z-50 p-4 transition-all duration-150        
-        ${open ? "opacity-100 scale-100 visible" : "opacity-0 scale-95 invisible"}
+      role="dialog"
+      aria-modal="false"
+      aria-labelledby={titleId}
+      className={`
+        absolute right-0 top-full mt-3 w-64 sm:w-72 bg-surface border border-theme 
+        rounded-2xl shadow-xl z-50 p-3 transition-[opacity,transform] duration-150 ease-out will-change-[transform,opacity]
+        ${
+          open
+            ? "opacity-100 scale-100 pointer-events-auto visible"
+            : "opacity-0 scale-95 pointer-events-none hidden"
+        }
       `}
     >
-      <h3 className="mb-3">Sort By</h3>
+      <div className="flex items-center justify-between pb-2.5 mb-2 border-b border-theme/30">
+        <h3 id={titleId} className="font-semibold text-sm text-foreground">
+          क्रमबद्ध करें (Sort By)
+        </h3>
+      </div>
 
-      <div className="grid grid-cols-1 gap-2">
-        {options.map((opt) => (
-          <button
-            key={opt.value}
-            aria-label={`sort by ${opt.value}`}
-            onClick={() => {
-              onSortChange(opt.value);
-              setOpen(false); // good UX
-            }}
-            className={`
-              p-2 border border-theme rounded
-              ${sortBy === opt.value ? "bg-accent" : "bg-surface text-normal"}
-            `}
-          >
-            {opt.label}
-          </button>
-        ))}
+      {/* Screen-reader descriptive context */}
+      <div className="sr-only">
+        Current sort selection: {SORT_OPTIONS.find((o) => o.value === sortBy)?.label || sortBy}
+      </div>
+
+      {/* Sort Options Listbox */}
+      <div
+        role="listbox"
+        aria-label="Sort product catalog by criteria"
+        className="grid grid-cols-1 gap-1"
+      >
+        {SORT_OPTIONS.map((opt) => {
+          const isSelected = sortBy === opt.value;
+
+          return (
+            <button
+              key={opt.value}
+              type="button"
+              role="option"
+              aria-selected={isSelected}
+              aria-label={`Sort by ${opt.label} (${opt.hindiLabel})`}
+              onClick={() => handleSelect(opt.value)}
+              className={`
+                flex items-center justify-between w-full px-3 py-2 text-xs sm:text-sm font-medium rounded-xl
+                transition-[background-color,color] duration-150 ease-out text-left
+                focus:outline-none focus:ring-2 focus:ring-primary
+                ${
+                  isSelected
+                    ? "bg-accent text-accent-foreground font-semibold"
+                    : "bg-surface text-foreground/80 hover:bg-theme/10 hover:text-foreground"
+                }
+              `}
+            >
+              <span>{opt.label}</span>
+              {isSelected && (
+                <Check className="w-4 h-4 shrink-0 text-current" aria-hidden="true" />
+              )}
+            </button>
+          );
+        })}
       </div>
     </div>
   );

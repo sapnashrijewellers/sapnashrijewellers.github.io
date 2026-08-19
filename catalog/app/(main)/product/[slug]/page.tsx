@@ -1,42 +1,68 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
+import Image from "next/image";
+import { notFound } from "next/navigation";
 import type { Product } from "@/types/catalog";
 import products from "@/data/products.json";
+import rates from "@/data/rates.json";
 import categories from "@/data/categories.json";
-import { notFound } from "next/navigation";
 import ProductShare from "@/components/product/ProductShare";
 import { HighlightsTabs } from "@/components/product/Highlights";
 import ProductGallery from "@/components/product/ProductGallery";
 import OrderViaWhatsappButton from "@/components/product/OrderViaWhatsappButton";
-import Image from "next/image"
 import Breadcrumb from "@/components/navbar/BreadcrumbItem";
 import ProductRating from "@/components/product/ProductRating";
 import WishListBar from "@/components/common/WishlistBar";
 import ProductRatingInput from "@/components/product/ProductRatingInput";
 import NewArrivals from "@/components/product/NewArrivals";
 import YouMAyAlsoLike from "@/components/product/YouMayAlsoLike";
-import TestimonialScroller from "@/components/common/Testimonials"
+import TestimonialScroller from "@/components/common/Testimonials";
 import TrustSignalsRibbon from "@/components/product/TrustSignalsRibbon";
 import CareInstructions from "@/components/product/CareInstructions";
 import BulkEnquiry from "@/components/product/BulkEnquiry";
 import JewelleryTypeBar from "@/components/home/JewelleryType";
 import Tooltip from "@/components/common/Tooltip";
-import ProductSelection from "@/components/product/ProductSelection"
-import StoreAvailability from "@/components/product/StoreAvailability" 
+import ProductSelection from "@/components/product/ProductSelection";
+import StoreAvailability from "@/components/product/StoreAvailability";
 import FAQ from "@/components/product/FAQ";
+import buildProductJsonLd from "@/utils/buildProductJsonLd";
 
-const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
-const driveURL = `${baseURL}/static/img/products/thumbnail/`;
+interface ProductDetailPageProps {
+  params: Promise<{ slug: string }>;
+}
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const slug = await params;
-  const product = products.find((p: Product) => p.slug === slug.slug && p.active);
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in";
+const driveURL = `${baseURL}/static/img/products/optimized/`;
+
+export async function generateStaticParams() {
+  return products
+    .filter(
+      (p: Product) =>
+        p.active &&
+        p.slug?.length >= 5 &&
+        p.category?.length > 3 &&
+        p.weight > 0
+    )
+    .map((p: Product) => ({
+      slug: p.slug,
+    }));
+}
+
+// ---- METADATA (Search Engines, Social Media & Crawlers) ----
+export async function generateMetadata({ params }: ProductDetailPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const product = products.find((p: Product) => p.slug === slug && p.active);
 
   if (!product) return {};
 
-  const baseProductUrl = `${baseURL}/product/${product.slug}`;
-  const title = `${product.name} | by Sapna Shri Jewellers`;
-  const description = `${product.description}`;
-  const imageUrl = `${driveURL}${product.images?.[0]}`;
+  const baseProductUrl = `${baseURL}/product/${product.slug}/`;
+  const title = `${product.name} | Sapna Shri Jewellers Nagda`;
+  const description =
+    product.description ||
+    `Buy authentic ${product.name} crafted with BIS Hallmark certified purity at Sapna Shri Jewellers Nagda.`;
+  const imageUrl =
+    product.images?.[0]
+      ? `${driveURL}${product.images[0]}`
+      : `${baseURL}/icons/android-chrome-512x512.png`;
 
   return {
     title,
@@ -46,7 +72,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description,
       url: baseProductUrl,
       type: "website",
-      images: [{ url: imageUrl }],
+      images: [
+        {
+          url: imageUrl,
+          width: 800,
+          height: 800,
+          alt: `${product.name} - Sapna Shri Jewellers`,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
@@ -60,112 +93,136 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-
-export async function generateStaticParams() {
-  return products
-    .filter((p: Product) => p.active
-      && p.slug.length >= 5
-      && p.category.length > 3
-      && p.active
-      && p.weight > 0)
-    .map((p: Product) => ({
-      slug: p.slug
-    }));
-}
-
-export default async function ProductDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+// ---- MAIN PRODUCT DETAIL PAGE ----
+export default async function ProductDetailPage({ params }: ProductDetailPageProps) {
   const { slug } = await params;
-  
-  const product = products.find(
-    (p: Product) =>
-      p.active &&
-      p.slug === slug
-  );
 
-  if (!product) notFound();
-  
-  const category = categories.find(c => c.name === product.category);
+  const product = products.find((p: Product) => p.active && p.slug === slug);
 
+  if (!product) {
+    notFound();
+  }
+
+  const category = categories.find((c) => c.name === product.category);
+
+  // Schema.org Structured Data for LLMs and Google Rich Results
+  const productSchema = buildProductJsonLd(product, rates);
 
   return (
-    <div className="container mx-auto">
-      
+    <main className="container mx-auto px-4 py-4 max-w-7xl">
+      {/* Schema.org Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+
+      {/* 1. Breadcrumbs */}
       <Breadcrumb
         items={[
           { name: "Home", href: "/" },
-          { name: product.category, href: `/category/${category?.slug}/` },
-          { name: `${product.name}` },
+          {
+            name: product.category,
+            href: category?.slug ? `/category/${category.slug}/` : "/category/",
+          },
+          { name: product.name },
         ]}
       />
 
-      <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-6 py-6 px-3">
-        <div className="space-y-3 md:sticky md:top-20 self-start">
+      {/* 2. Product Hero Section (Gallery + Details) */}
+      <section aria-labelledby="product-title" className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-8 py-6">
+        {/* Left Column: Gallery & Instant CTA */}
+        <div className="space-y-4 md:sticky md:top-20 self-start">
           <div className="space-y-2">
-            <div className="flex items-center gap-1 text-xs text-muted">
+            <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
               <span>Product images</span>
-              <Tooltip
-                text="Product appearance may vary slightly due to lighting and photography."
-              />
+              <Tooltip text="Product appearance may vary slightly due to photographic lighting." />
             </div>
 
             <ProductGallery product={product} />
           </div>
 
-          <OrderViaWhatsappButton product={product} />          
+          <OrderViaWhatsappButton product={product} />
         </div>
-        <div className="space-y-4">
-          <h1 className="text-2xl md:text-3xl font-semibold">
-            {product.name} 
-          </h1>
-          <ProductRating
-            rating={product.rating ?? 4.6}
-            count={product.ratingCount ?? 12}
-            showExpert
-          />
-          <ProductSelection product={product} />          
 
+        {/* Right Column: Key Details, Customization & Highlights */}
+        <div className="space-y-5">
+          <header className="space-y-2">
+            <h1 id="product-title" className="text-2xl sm:text-3xl font-semibold text-foreground leading-tight">
+              {product.name}
+            </h1>
 
-          <p className="text-muted-foreground text-sm">
-            {product.description}
-          </p>
+            <div aria-label="Customer ratings and reviews">
+              <ProductRating
+                rating={product.rating ?? 4.6}
+                count={product.ratingCount ?? 12}
+                showExpert
+              />
+            </div>
+          </header>
+
+          <ProductSelection product={product} />
+
+          {product.description && (
+            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
+              {product.description}
+            </p>
+          )}
 
           <HighlightsTabs product={product} />
 
           <ProductShare product={product} />
 
-          <div className="pt-2 min-h-[72px]">
-            <p className="text-xs text-muted-foreground">Rate this jewellery</p>
+          {/* User Review / Interactive Rating */}
+          <section aria-label="Submit jewellery rating" className="pt-2 min-h-[72px] border-t border-theme/30">
+            <p className="text-xs font-medium text-muted-foreground mb-1">Rate this jewellery</p>
             <ProductRatingInput productId={product.id} />
-          </div>
+          </section>
+
           <StoreAvailability />
         </div>
-      </div>
+      </section>
 
-      <TrustSignalsRibbon product={product} />
-      <FAQ product={product} />
-      <BulkEnquiry product={product} />
-      <CareInstructions careKey={product.care} />
+      {/* 3. Auxiliary Information Sections */}
+      <section aria-label="Trust signals and guarantees">
+        <TrustSignalsRibbon product={product} />
+      </section>
 
+      <section aria-label="Frequently asked questions about this product">
+        <FAQ product={product} />
+      </section>
+
+      <section aria-label="Bulk purchase and custom order enquiry">
+        <BulkEnquiry product={product} />
+      </section>
+
+      <section aria-label="Jewellery care instructions">
+        <CareInstructions careKey={product.care} />
+      </section>
+
+      {/* 4. Social Proof & Recommendations */}
       <TestimonialScroller />
       <WishListBar />
-      <YouMAyAlsoLike product={product} products={products} />
-      <NewArrivals products={products} product={product} />
-      <JewelleryTypeBar />
 
-      {/* ---------------- Trust Banner (Moved Below) ---------------- */}
-      <div className="max-w-6xl mx-auto px-3 pb-6">
-        <Image
-          src={`${process.env.NEXT_PUBLIC_BASE_URL}/static/img/before-buy-banner.png`}
-          alt="Points to consider before you buy jewellery"
-          title="Points to consider before you buy jewellery"
-          className="object-cover w-full rounded-lg"
-          loading="lazy"
-          width={1200}
-          height={400}
-          sizes="100vw"
-        />
-      </div>
-    </div>
+      <aside aria-label="Recommended and related products">
+        <YouMAyAlsoLike product={product} products={products} />
+        <NewArrivals products={products} product={product} />
+        <JewelleryTypeBar />
+      </aside>
 
+      {/* 5. Trust / Pre-purchase Guidance Banner */}
+      <section aria-label="Important points before purchasing jewellery" className="max-w-6xl mx-auto py-8">
+        <div className="relative w-full aspect-[3/1] overflow-hidden rounded-2xl border border-theme/40 shadow-sm">
+          <Image
+            src={`${baseURL}/static/img/before-buy-banner.png`}
+            alt="Important points to consider before you buy jewellery at Sapna Shri Jewellers Nagda"
+            title="Points to consider before you buy jewellery"
+            fill
+            sizes="(max-width: 1200px) 100vw, 1152px"
+            className="object-cover"
+            loading="lazy"
+          />
+        </div>
+      </section>
+    </main>
   );
 }

@@ -1,71 +1,126 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useId, useMemo } from "react";
 import CategoryCard from "./CategoryCard";
-import { Category, Product } from "@/types/catalog";
+import type { Category, Product } from "@/types/catalog";
 
 type Material = "Gold" | "Silver";
 
-interface Props {
+interface SignatureCollectionsProps {
   categories: Category[];
   products: Product[];
+  className?: string;
 }
+
+const MATERIALS: readonly Material[] = ["Silver", "Gold"] as const;
 
 export default function SignatureCollections({
   categories,
   products,
-}: Props) {
+  className = "",
+}: SignatureCollectionsProps) {
   const [material, setMaterial] = useState<Material>("Silver");
+  const sectionTitleId = useId();
 
-  const filteredCategories = categories
-    .filter(
-      (c) =>
-        c.active &&
-        c.material === material
-    )
-    .sort((a, b) => a.rank - b.rank);
+  // Filter active categories for the selected metal type
+  const filteredCategories = useMemo(() => {
+    return categories
+      .filter((c) => c.active && c.material === material)
+      .sort((a, b) => a.rank - b.rank);
+  }, [categories, material]);
+
+  // Pre-group products by category name for O(1) grid lookups
+  const productsByCategory = useMemo(() => {
+    const map = new Map<string, Product[]>();
+    products.forEach((p) => {
+      if (!p.category) return;
+      const list = map.get(p.category) || [];
+      list.push(p);
+      map.set(p.category, list);
+    });
+    return map;
+  }, [products]);
+
+  const visibleCategories = useMemo(() => {
+    return filteredCategories.filter((cat) => {
+      const items = productsByCategory.get(cat.name);
+      return items && items.length > 0;
+    });
+  }, [filteredCategories, productsByCategory]);
 
   return (
-    <section>
-      <h2 className="au-h2" id="shop-by-category">Our Signature Collections</h2>
+    <section
+      id="shop-by-category"
+      aria-labelledby={sectionTitleId}
+      className={`relative w-full my-8 ${className}`}
+    >
+      {/* Header */}
+      <div className="flex flex-col items-center text-center px-4 mb-6">
+        <h2
+          id={sectionTitleId}
+          className="au-h2 text-2xl sm:text-3xl font-bold text-foreground tracking-tight"
+        >
+          सिग्नेचर कलेक्शंस (Our Signature Collections)
+        </h2>
+        <p className="text-xs sm:text-sm text-muted-foreground mt-1">
+          हॉलमार्क प्रमाणित सोने और चांदी के आभूषण (Hallmarked Pure {material} Jewellery)
+        </p>
+      </div>
 
-      {/* 🔘 Material Latch */}
+      {/* Material Selector Toggle */}
       <div className="flex justify-center mb-8">
-        <div className="inline-flex rounded-full border border-primary overflow-hidden">
-          {(["Silver", "Gold"] as Material[]).map((m) => (
-            <button
-              key={m}
-              onClick={() => setMaterial(m)}
-              aria-label={`click to go to ${m} category collection`}
-              className={`
-                px-6 py-2 text-sm font-medium transition 
-                ${
-                  material === m
-                    ? "bg-accent  font-bold"
-                    : "bg-surface hover:bg-primary/10 cursor-pointer"
-                }
-              `}
-            >
-              {m}
-            </button>
-          ))}
+        <div
+          role="tablist"
+          aria-label="Filter signature collections by metal type"
+          className="inline-flex p-1 rounded-full bg-surface border border-theme/60 shadow-sm"
+        >
+          {MATERIALS.map((m) => {
+            const isSelected = material === m;
+            const hindiLabel = m === "Gold" ? "सोना (Gold)" : "चांदी (Silver)";
+
+            return (
+              <button
+                key={m}
+                type="button"
+                role="tab"
+                aria-selected={isSelected}
+                aria-label={`Show ${m} jewellery collections (${hindiLabel})`}
+                onClick={() => setMaterial(m)}
+                className={`
+                  px-6 py-2 text-sm font-medium rounded-full
+                  transition-[background-color,color,transform] duration-150 ease-out will-change-[transform]
+                  focus:outline-none focus:ring-2 focus:ring-primary
+                  ${
+                    isSelected
+                      ? "bg-accent text-accent-foreground font-bold shadow-sm scale-100"
+                      : "text-foreground/80 hover:text-foreground hover:bg-theme/10 cursor-pointer"
+                  }
+                `}
+              >
+                {m === "Gold" ? "सोना (Gold)" : "चांदी (Silver)"}
+              </button>
+            );
+          })}
         </div>
       </div>
 
-      {/* 📦 Category Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {filteredCategories.map((cat) => {
-          const productsForCategory =
-            products.filter((p) => p.category === cat.name) || [];
+      {/* Screen Reader & Agentic Context */}
+      <div className="sr-only" aria-live="polite">
+        Showing {visibleCategories.length} {material} jewellery categories.
+      </div>
 
-          if (productsForCategory.length === 0) return null;
+      {/* Uniform Width Category Grid */}
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5 w-full items-stretch">
+        {visibleCategories.map((cat) => {
+          const categoryProducts = productsByCategory.get(cat.name) || [];
 
           return (
-            <CategoryCard
-              key={cat.name}
-              category={cat}
-              products={productsForCategory}
-            />
+            <div key={cat.name} className="w-full flex">
+              <CategoryCard
+                category={cat}
+                products={categoryProducts}
+              />
+            </div>
           );
         })}
       </div>

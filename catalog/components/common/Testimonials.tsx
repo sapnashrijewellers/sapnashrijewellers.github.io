@@ -1,12 +1,17 @@
 "use client";
 
+import { useEffect, useRef, useState, useCallback, useId } from "react";
 import { Star, BadgeCheck, ChevronLeft, ChevronRight } from "lucide-react";
-import { motion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
 import testimonials from "@/data/testimonials.json";
 
-const SPEED_PX_PER_SEC = 40; // constant, length-independent
-const RESUME_DELAY = 1200;  // ms after user stops interacting
+interface TestimonialItem {
+  name: string;
+  text: string;
+  rating: number;
+}
+
+const SPEED_PX_PER_SEC = 40;
+const RESUME_DELAY = 1200;
 
 export default function TestimonialScroller() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -14,6 +19,7 @@ export default function TestimonialScroller() {
   const pauseTimeout = useRef<NodeJS.Timeout | null>(null);
 
   const [paused, setPaused] = useState(false);
+  const sectionTitleId = useId();
 
   /* ---------------- Auto Scroll Engine ---------------- */
   useEffect(() => {
@@ -37,27 +43,29 @@ export default function TestimonialScroller() {
 
     rafRef.current = requestAnimationFrame(step);
 
-    // ✅ CLEANUP — must return void
     return () => {
       if (rafRef.current !== null) {
         cancelAnimationFrame(rafRef.current);
         rafRef.current = null;
       }
+      if (pauseTimeout.current) {
+        clearTimeout(pauseTimeout.current);
+      }
     };
   }, [paused]);
 
   /* ---------------- Pause on User Interaction ---------------- */
-  const pauseAutoScroll = () => {
+  const pauseAutoScroll = useCallback(() => {
     setPaused(true);
     if (pauseTimeout.current) clearTimeout(pauseTimeout.current);
 
     pauseTimeout.current = setTimeout(() => {
       setPaused(false);
     }, RESUME_DELAY);
-  };
+  }, []);
 
   /* ---------------- Button Controls ---------------- */
-  const scrollByCard = (dir: "left" | "right") => {
+  const scrollByCard = useCallback((dir: "left" | "right") => {
     const container = containerRef.current;
     if (!container) return;
 
@@ -68,80 +76,117 @@ export default function TestimonialScroller() {
       left: dir === "left" ? -cardWidth : cardWidth,
       behavior: "smooth",
     });
-  };
+  }, [pauseAutoScroll]);
+
+  const items = testimonials as TestimonialItem[];
 
   return (
-    <section className="my-14">
-      <h2 className="au-h2">ग्राहकों की आवाज़</h2>
+    <section aria-labelledby={sectionTitleId} className="my-14">
+      {/* Section Heading with bilingual context for Agentic Crawlers */}
+      <div className="flex items-baseline justify-between px-4 mb-4">
+        <h2 id={sectionTitleId} className="au-h2 text-foreground font-bold">
+          ग्राहकों की आवाज़ (Customer Reviews)
+        </h2>
+        <span className="text-xs text-muted-foreground">
+          {items.length}+ प्रमाणित समीक्षाएं (Verified Reviews)
+        </span>
+      </div>
 
-      <motion.div
-        initial={{ opacity: 0, scale: 0.97 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-        className="relative"
-      >
-        {/* Controls */}
+      <div className="relative group">
+        {/* Navigation Controls */}
         <button
+          type="button"
           onClick={() => scrollByCard("left")}
-          aria-label="click to scroll left testimonial card"
-          className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-10
-                     bg-surface border border-theme rounded-full p-2 shadow"
+          aria-label="Scroll testimonials backward"
+          className="hidden md:inline-flex absolute left-2 top-1/2 -translate-y-1/2 z-10
+                     bg-surface border border-theme text-foreground/80 hover:text-foreground
+                     rounded-full p-2.5 shadow-md transition-[background-color,color,transform]
+                     duration-150 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary"
         >
-          <ChevronLeft size={18} />
+          <ChevronLeft className="w-5 h-5" aria-hidden="true" />
+          <span className="sr-only">Previous review</span>
         </button>
 
         <button
+          type="button"
           onClick={() => scrollByCard("right")}
-          aria-label="click to scroll right testimonial card"
-          className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-10
-                     bg-surface border border-theme rounded-full p-2 shadow"
+          aria-label="Scroll testimonials forward"
+          className="hidden md:inline-flex absolute right-2 top-1/2 -translate-y-1/2 z-10
+                     bg-surface border border-theme text-foreground/80 hover:text-foreground
+                     rounded-full p-2.5 shadow-md transition-[background-color,color,transform]
+                     duration-150 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary"
         >
-          <ChevronRight size={18} />
+          <ChevronRight className="w-5 h-5" aria-hidden="true" />
+          <span className="sr-only">Next review</span>
         </button>
 
         {/* Scroll Container */}
         <div
           ref={containerRef}
+          role="region"
+          aria-label="Customer review carousel"
+          tabIndex={0}
+          onMouseEnter={pauseAutoScroll}
           onWheel={pauseAutoScroll}
           onTouchStart={pauseAutoScroll}
           onMouseDown={pauseAutoScroll}
-          className="flex gap-6 overflow-x-auto px-4 scroll-smooth
-                     scrollbar-hide"
+          onFocus={pauseAutoScroll}
+          className="flex gap-4 sm:gap-6 overflow-x-auto px-4 py-2 scroll-smooth
+                     scrollbar-hide focus:outline-none focus:ring-1 focus:ring-primary/40 rounded-2xl"
         >
-          {[...testimonials, ...testimonials].map((t, i) => (
-            <div
-              key={i}
-              className="min-w-[280px] sm:min-w-[340px] max-w-[360px]
-                         bg-surface border border-theme rounded-2xl p-4"
-            >
-              <div className="flex items-center gap-2 mb-2">
-                <div className="flex">
-                  {Array.from({ length: t.rating }).map((_, idx) => (
-                    <Star
-                      key={idx}
-                      size={14}
-                      className="text-amber-500 fill-current"
-                    />
-                  ))}
+          {[...items, ...items].map((t, i) => {
+            const isDuplicate = i >= items.length;
+
+            return (
+              <article
+                key={`${t.name}-${i}`}
+                aria-hidden={isDuplicate ? "true" : undefined}
+                className="flex flex-col justify-between shrink-0 min-w-[280px] sm:min-w-[340px] max-w-[360px]
+                           bg-surface border border-theme rounded-2xl p-4 sm:p-5 shadow-sm
+                           transition-[transform,border-color] duration-150 will-change-[transform]"
+              >
+                <div>
+                  {/* Rating Header */}
+                  <div className="flex items-center justify-between gap-2 mb-3">
+                    <div
+                      className="flex items-center"
+                      role="img"
+                      aria-label={`Rating: ${t.rating} out of 5 stars`}
+                    >
+                      {Array.from({ length: 5 }).map((_, idx) => (
+                        <Star
+                          key={idx}
+                          className={`w-3.5 h-3.5 ${
+                            idx < t.rating
+                              ? "text-amber-500 fill-amber-500"
+                              : "text-muted-foreground/30"
+                          }`}
+                          aria-hidden="true"
+                        />
+                      ))}
+                    </div>
+
+                    <span className="inline-flex items-center gap-1 text-[11px] text-emerald-600 dark:text-emerald-400 font-medium">
+                      <BadgeCheck className="w-3.5 h-3.5 shrink-0" aria-hidden="true" />
+                      <span>प्रमाणित खरीदार (Verified Buyer)</span>
+                    </span>
+                  </div>
+
+                  {/* Review Body */}
+                  <blockquote className="text-sm leading-relaxed text-foreground/90 mb-4 italic">
+                    &ldquo;{t.text}&rdquo;
+                  </blockquote>
                 </div>
-                <span className=" flex items-center gap-1 text-xs">
-                  <BadgeCheck size={14} className="text-green-600" />
-                  Verified Buyer
-                </span>
-              </div>
 
-              <p className="text-sm leading-relaxed mb-3 text-normal">
-                {t.text}
-              </p>
-
-              <p className="text-sm font-semibold">
-                — {t.name}
-              </p>
-            </div>
-          ))}
+                {/* Author attribution */}
+                <footer className="text-xs font-semibold text-foreground/80 border-t border-theme/30 pt-2.5">
+                  <cite className="not-italic">— {t.name}</cite>
+                </footer>
+              </article>
+            );
+          })}
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }

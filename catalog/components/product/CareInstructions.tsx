@@ -1,71 +1,129 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useId, useMemo, useCallback } from "react";
 import careData from "@/data/careInstructions.json";
 import { AppIconMap } from "@/utils/appIcons";
 import { FaPlus, FaMinus } from "react-icons/fa";
+import { Sparkles } from "lucide-react";
 
-type Props = {
-    careKey: string;
-};
+interface CareInstructionItem {
+  id: string | number;
+  instructionType: string;
+  instruction: string;
+  iconKey: string;
+}
 
-export default function CareInstructions({ careKey }: Props) {
-    const [open, setOpen] = useState(false);
-    const careKeys = careKey.split(",").map(key => key.trim());
+interface CareInstructionsProps {
+  careKey: string;
+  className?: string;
+}
 
-    const instructions = careData.filter(item =>
-        careKeys.includes(item.instructionType)
+export default function CareInstructions({
+  careKey,
+  className = "",
+}: CareInstructionsProps) {
+  const [open, setOpen] = useState(false);
+  const sectionId = useId();
+  const headingId = useId();
+
+  const toggleOpen = useCallback(() => {
+    setOpen((prev) => !prev);
+  }, []);
+
+  // Filter instructions based on parsed care keys
+  const instructions = useMemo(() => {
+    if (!careKey) return [];
+    const keys = new Set(
+      careKey
+        .split(",")
+        .map((k) => k.trim())
+        .filter(Boolean)
     );
-
-    if (instructions.length === 0) return null;
-
-    return (
-        <div className="mt-6 border border-theme rounded-lg bg-surface">
-            {/* Header */}
-            <button
-                onClick={() => setOpen(!open)}
-                className="w-full flex items-center justify-between px-4 py-3 cursor-pointer"
-                aria-expanded={open}
-            >
-                <span className="font-semibold text-lg text-primary-dark">
-                    Care Instructions
-                </span>
-
-
-                <span className="">
-                    {open ? <FaMinus /> : <FaPlus />}
-                </span>
-
-            </button>
-
-            {/* Content */}
-            {open && (
-                <ul className="px-4 pb-4 space-y-3">
-                    {instructions.map((item) => {
-                        // 1. Lookup the component from the map
-                        const IconComponent = AppIconMap[item.iconKey];
-
-                        return (
-                            <li key={item.id} className="flex items-start gap-3">
-                                {/* 2. Render the component only if it exists */}
-                                {IconComponent ? (
-                                    <IconComponent
-                                        className="w-5 h-5 text-primary mt-0.5 shrink-0"
-                                        strokeWidth={1.5} // Optional: Adjust for a more premium jewelry feel
-                                    />
-                                ) : (
-                                    /* 3. Fallback: Render a default icon or a spacer so the text doesn't shift */
-                                    <div className="w-5 h-5 mt-0.5 shrink-0 bg-muted rounded-full" />
-                                )}
-
-                                <span className="text-sm text-normal leading-relaxed">
-                                    {item.instruction}
-                                </span>
-                            </li>
-                        );
-                    })}
-                </ul>
-            )}
-        </div>
+    return (careData as CareInstructionItem[]).filter((item) =>
+      keys.has(item.instructionType)
     );
+  }, [careKey]);
+
+  if (instructions.length === 0) return null;
+
+  return (
+    <section
+      aria-labelledby={headingId}
+      className={`border border-theme/40 rounded-2xl bg-surface shadow-sm overflow-hidden transition-[box-shadow,border-color] duration-150 ease-out will-change-[box-shadow] ${className}`}
+    >
+      {/* Accordion Trigger Header */}
+      <h2>
+        <button
+          id={headingId}
+          type="button"
+          onClick={toggleOpen}
+          aria-expanded={open}
+          aria-controls={sectionId}
+          className="w-full flex items-center justify-between px-4 py-3.5 text-left text-foreground hover:bg-theme/5 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-inset transition-colors duration-150 cursor-pointer"
+        >
+          <span className="font-semibold text-base sm:text-lg text-foreground tracking-tight flex items-center gap-2">
+            <Sparkles className="w-4 h-4 text-primary shrink-0" aria-hidden="true" />
+            <span>देखभाल निर्देश (Care Instructions)</span>
+          </span>
+
+          <span
+            className="p-1 rounded-lg text-primary bg-primary/10 transition-transform duration-150 will-change-transform"
+            aria-hidden="true"
+          >
+            {open ? <FaMinus className="w-3.5 h-3.5" /> : <FaPlus className="w-3.5 h-3.5" />}
+          </span>
+        </button>
+      </h2>
+
+      {/* Screen Reader & LLM Machine-Readable Context */}
+      <div className="sr-only">
+        Jewellery maintenance and care instructions for longevity and shine.
+      </div>
+
+      {/* Collapsible Content */}
+      <div
+        id={sectionId}
+        role="region"
+        aria-labelledby={headingId}
+        aria-hidden={!open}
+        className={`
+          px-4 transition-[opacity,transform] duration-150 ease-out will-change-[transform,opacity]
+          ${
+            open
+              ? "pb-4 pt-1 opacity-100 scale-100 pointer-events-auto visible"
+              : "opacity-0 scale-95 pointer-events-none hidden"
+          }
+        `}
+      >
+        <ul className="space-y-3 pt-1">
+          {instructions.map((item) => {
+            const IconComponent = AppIconMap[item.iconKey];
+
+            return (
+              <li key={item.id} className="flex items-start gap-3 text-sm text-foreground/90">
+                {IconComponent ? (
+                  <IconComponent
+                    className="w-5 h-5 text-primary mt-0.5 shrink-0"
+                    strokeWidth={1.5}
+                    aria-hidden="true"
+                  />
+                ) : (
+                  <div
+                    className="w-5 h-5 mt-0.5 shrink-0 bg-muted rounded-full flex items-center justify-center text-[10px] text-muted-foreground"
+                    aria-hidden="true"
+                  >
+                    •
+                  </div>
+                )}
+
+                <span className="leading-relaxed font-normal">
+                  {item.instruction}
+                </span>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </section>
+  );
 }

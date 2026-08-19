@@ -9,23 +9,28 @@ type BrandLogoProps = {
 export default function BrandLogo({
   pulse = true,
   className = "",
-}: BrandLogoProps) {  
-
+}: BrandLogoProps) {
   return (
-    <div className={`flex items-center leading-none ${className}`}>
+    <div className={`flex items-center shrink-0 leading-none ${className}`}>
       <Link
         href="/"
-        title="Go to Home Page of Sapna Shri Jewellers"
-        className="inline-flex items-center"        
+        title="Sapna Shri Jewellers - Homepage"
+        aria-label="Sapna Shri Jewellers - Homepage"
+        className="inline-flex items-center rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
       >
-        <span className={pulse ? "brand-pulse inline-block" : "inline-block"}>
+        <span
+          className={`inline-block ${
+            pulse ? "brand-pulse motion-reduce:animate-none" : ""
+          }`}
+        >
           <Image
             src="/icons/logo-wide.png"
-            alt="Sapna Shri Jewellers Nagda | Wide Logo"
-            width={320}
-            height={120}
+            alt="Sapna Shri Jewellers Nagda Official Logo"
+            width={200}
+            height={56}
             priority
-            className="h-14 w-auto rounded-xl"
+            sizes="(max-width: 640px) 160px, 200px"
+            className="h-14 w-auto object-contain rounded-xl"
           />
         </span>
       </Link>

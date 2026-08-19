@@ -1,48 +1,111 @@
 import ProductCard from "@/components/product/ProductCard";
 import type { Product } from "@/types/catalog";
+import { Sparkles } from "lucide-react";
 
-function groupByCategory<T extends { category: string }>(products: T[]) {
-    return products.reduce<Record<string, T[]>>((acc, product) => {
-        const key = product.category;
-        if (!acc[key]) acc[key] = [];
-        acc[key].push(product);
-        return acc;
-    }, {});
+interface NewArrivalsProps {
+  products: Product[];
+  product?: Product;
+  className?: string;
 }
 
-const NewArrivals = ({ products, product = undefined }: { products: Product[], product?: Product }) => {
-    let newArrivals;
-    if (product === undefined)
-        newArrivals = Object.values(
-            groupByCategory(
-                products.filter(p => p.active && p.newArrival)))
-            .map(categoryProducts =>
-                categoryProducts
-                    .sort((a, b) =>                        
-                        Number(b.available) - Number(a.available) ||                        
-                        a.weight - b.weight
-                    )[0] 
-            )
-    else
-        newArrivals = products
-            .filter(p => p.active && p.newArrival && p.purity === product.purity)
-            .sort((a, b) => Number(b.available) - Number(a.available))
-            .slice(0, 15);
+function groupByCategory<T extends { category?: string }>(items: T[]): Record<string, T[]> {
+  return items.reduce<Record<string, T[]>>((acc, item) => {
+    const key = item.category || "uncategorized";
+    if (!acc[key]) acc[key] = [];
+    acc[key].push(item);
+    return acc;
+  }, {});
+}
 
-    if (newArrivals.length === 0) return null;
+export default function NewArrivals({
+  products,
+  product,
+  className = "",
+}: NewArrivalsProps) {
+  let newArrivals: Product[];
 
-    return (
-        <div className="relative">
-            <h2 className={` ${!product ? "au-h2" : ""} text-2xl p-2 font-semibold`}>New Arrivals</h2>
-            <div className="flex gap-4 overflow-x-auto scrollbar-hide pb-2 snap-x snap-mandatory">
-                {newArrivals.map((p: Product) => (
-                    <div key={p.id} className="flex-shrink-0 w-[160px] sm:w-[200px] lg:w-[220px] snap-start">
-                        <ProductCard product={p} />
-                    </div>
-                ))}
-            </div>
+  if (product === undefined) {
+    // Top-level showcase: one prioritized new arrival product per active category
+    const activeNewArrivals = products.filter((p) => p.active && p.newArrival);
+    const grouped = groupByCategory(activeNewArrivals);
+
+    newArrivals = Object.values(grouped)
+      .map((categoryProducts) => {
+        return [...categoryProducts].sort(
+          (a, b) =>
+            Number(b.available) - Number(a.available) ||
+            (a.weight || 0) - (b.weight || 0)
+        )[0];
+      })
+      .filter(Boolean);
+  } else {
+    // Product Detail Page context: new arrivals filtered by matching purity
+    newArrivals = products
+      .filter(
+        (p) =>
+          p.active &&
+          p.newArrival &&
+          p.id !== product.id &&
+          (!product.purity || p.purity === product.purity)
+      )
+      .sort((a, b) => Number(b.available) - Number(a.available))
+      .slice(0, 15);
+  }
+
+  if (newArrivals.length === 0) return null;
+
+  return (
+    <section
+      aria-labelledby="new-arrivals-heading"
+      className={`relative w-full py-4 my-6 ${className}`}
+    >
+      {/* Header with Bilingual Support for Search Engines and Screen Readers */}
+      <div className="flex items-baseline justify-between px-2 sm:px-4 mb-3 border-b border-theme/20 pb-2">
+        <div className="flex items-center gap-2">
+          <Sparkles className="w-5 h-5 text-primary shrink-0" aria-hidden="true" />
+          <h2
+            id="new-arrivals-heading"
+            className={`font-semibold text-foreground tracking-tight ${
+              !product ? "au-h2 text-xl sm:text-2xl" : "text-lg sm:text-xl"
+            }`}
+          >
+            नवीनतम आभूषण (New Arrivals)
+          </h2>
         </div>
-    );
-};
+        <span className="text-xs text-muted-foreground font-medium hidden sm:inline-block">
+          {newArrivals.length} {newArrivals.length === 1 ? "डिज़ाइन (Design)" : "डिज़ाइन उपलब्ध (Designs)"}
+        </span>
+      </div>
 
-export default NewArrivals;
+      {/* Screen Reader & LLM Structured Context */}
+      <div className="sr-only">
+        Explore recently launched gold and silver jewellery designs and latest hallmark collections.
+      </div>
+
+      {/* Horizontally Scrollable Snap Track with Hardware-Accelerated Transforms */}
+      <div
+        role="region"
+        aria-label="New arrivals jewellery carousel"
+        tabIndex={0}
+        className="
+          flex gap-3 sm:gap-4 overflow-x-auto px-2 sm:px-4 pb-3 pt-1
+          scrollbar-hide snap-x snap-mandatory
+          focus:outline-none focus:ring-1 focus:ring-primary/40 rounded-2xl
+        "
+      >
+        {newArrivals.map((p) => (
+          <article
+            key={p.id}
+            aria-label={`${p.name} new arrival`}
+            className="
+              shrink-0 w-[160px] sm:w-[200px] lg:w-[220px] snap-start
+              transition-transform duration-150 ease-out will-change-transform
+            "
+          >
+            <ProductCard product={p} />
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}

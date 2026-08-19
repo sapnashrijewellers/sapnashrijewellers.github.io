@@ -11,30 +11,38 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType>({
   user: null,
-  loading: true,
+  loading: false,
 });
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     let unsubscribe: (() => void) | undefined;
 
-    const initAuth = async () => {
-      const [{ onAuthStateChanged }, { getFirebaseAuthInstance }] = await Promise.all([
-        import("firebase/auth"),
-        import("@/utils/firebase"),
-      ]);
+    // Defer Firebase Auth listener until after initial paint & idle
+    const handleIdle = () => {
+      const init = async () => {
+        const [{ onAuthStateChanged }, { getFirebaseAuthInstance }] = await Promise.all([
+          import("firebase/auth"),
+          import("@/utils/firebase"),
+        ]);
 
-      const { auth } = await getFirebaseAuthInstance();
-      unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-        setUser(currentUser);
-        setLoading(false);
-      });
+        const { auth } = await getFirebaseAuthInstance();
+        unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+          setUser(currentUser);
+          setLoading(false);
+        });
+      };
+      init();
     };
 
-    initAuth();
+    if ("requestIdleCallback" in window) {
+      window.requestIdleCallback(handleIdle, { timeout: 3000 });
+    } else {
+      setTimeout(handleIdle, 1500);
+    }
 
     return () => {
       if (unsubscribe) unsubscribe();

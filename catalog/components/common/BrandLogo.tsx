@@ -24,7 +24,7 @@ export default function BrandLogo({
           }`}
         >
           <Image
-            src="/icons/logo-wide.png"
+            src="/icons/logo-wide.webp"
             alt="Sapna Shri Jewellers Nagda Official Logo"
             width={200}
             height={56}

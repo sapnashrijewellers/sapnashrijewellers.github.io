@@ -2,12 +2,13 @@
 
 import { useState } from "react";
 import CategoryCard from "./CategoryCard";
+import { Category, Product } from "@/types/catalog";
 
 type Material = "Gold" | "Silver";
 
 interface Props {
-  categories: any[];
-  products: any[];
+  categories: Category[];
+  products: Product[];
 }
 
 export default function SignatureCollections({

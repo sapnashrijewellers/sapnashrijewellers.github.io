@@ -5,7 +5,7 @@ import { SearchFilters } from "@/types/catalog";
 
 interface FilterPanelProps {
   filters: SearchFilters;
-  onChange: (key: keyof SearchFilters, value: any) => void;
+  onChange: (key: keyof SearchFilters, value: SearchFilters) => void;
   triggerRef: RefObject<HTMLButtonElement | null>;
 }
 

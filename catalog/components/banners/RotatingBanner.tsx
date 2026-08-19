@@ -58,9 +58,7 @@ export default function RotatingBanner({
   const items = banners
     .filter(b => b.page === page)
     .sort((a, b) => a.rank - b.rank);
-  if (items.length === 0) {
-    return null;
-  }
+  
 
 
   /* --------------------------------------------
@@ -77,6 +75,10 @@ export default function RotatingBanner({
     return () => clearInterval(id);
   }, [items.length, interval]);
 
+  if (items.length === 0) {
+    return null;
+  }
+  
   const current = items[index];
 
 

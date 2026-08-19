@@ -1,29 +1,34 @@
-import type { Type, Product } from "@/types/catalog";
+import type { Type, Product, Rates } from "@/types/catalog";
+import buildProductJsonLd from "@/utils/buildProductJsonLd"; // adjust import path as needed
 
 export function buildJewelryTypePageJsonLd(
   products: Product[],
-  t: Type
+  t: Type,
+  rates: Rates
 ) {
-  const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
-  const driveURL = `${baseURL}/img/products/optimized/`;
+  const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in";
+
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "@id": `${baseURL}/jewelry-type/${t.slug}`,
+    "@id": `${baseURL}/jewelry-type/${t.slug}/#itemlist`,
     "name": `${t.type} by Sapna Shri Jewellers`,
     "description": t.description,
-    "url": `${baseURL}/jewelry-type/${t.slug}`,
+    "url": `${baseURL}/jewelry-type/${t.slug}/`,
     "numberOfItems": products.length,
-    "itemListElement": products.map((product, index) => ({
-      "@type": "ListItem",
-      "position": index + 1,
-      "item": {
-        "@type": "Product",
-        "url": `${baseURL}/product/${product.slug}`,
-        "name": product.name,
-        "image": `${driveURL}${product.images[0]}`,
-        "sku": product.id
-      }
-    }))
-  }
+    "itemListElement": products.map((product, index) => {
+      // 1. Generate full, validated Product JSON-LD (includes offers, price, rating, etc.)
+      const fullProductJsonLd = buildProductJsonLd(product, rates);
+
+      // 2. Strip root @context to maintain a clean nested structure and avoid unused var ESLint warnings
+      const productData = { ...fullProductJsonLd };
+      delete (productData as Record<string, unknown>)["@context"];
+
+      return {
+        "@type": "ListItem",
+        "position": index + 1,
+        "item": productData,
+      };
+    }),
+  };
 }

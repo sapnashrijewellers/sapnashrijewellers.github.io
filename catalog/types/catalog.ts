@@ -31,6 +31,7 @@ export interface Category {
   slug: string,
   description: string,
   active: boolean
+  material:string
 }
 
 export interface SearchFilters {

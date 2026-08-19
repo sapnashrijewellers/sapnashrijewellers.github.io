@@ -9,27 +9,21 @@ interface BreadcrumbItem {
 }
 
 export default function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL!;
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "";
 
   const ldjson = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: items.map((item, i) => {
-      const listItem: any = {
-        "@type": "ListItem",
-        position: i + 1,
-        name: item.name,
-      };
-
-      // ✅ Deterministic, absolute URLs only
-      if (item.href) {
-        listItem.item = item.href.startsWith("http")
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      ...(item.href && {
+        item: item.href.startsWith("http")
           ? item.href
-          : `${baseUrl}${item.href}`;
-      }
-
-      return listItem;
-    }),
+          : `${baseUrl}${item.href}`,
+      }),
+    })),
   };
 
   return (

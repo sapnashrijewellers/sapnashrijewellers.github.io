@@ -10,7 +10,7 @@ export function calculatePrice({
 
   if (!rates || !product) return null;
 
-  let productRate: number = product.purity === "gold" ? rates.gold : rates.silver;
+  const productRate: number = product.purity === "gold" ? rates.gold : rates.silver;
 
   if (!productRate) return null;
   if (!product.makingCharges && product.makingCharges < 0)

@@ -261,7 +261,10 @@ function OrderCard({ order, productsMap }: OrderCardProps) {
             </span>
           </p>
           <p className="text-xs text-muted-foreground">
-            Placed on: <time dateTime={order.createdAt}>{formattedDate}</time>
+            Placed on:{" "}
+            <time dateTime={new Date(order.createdAt).toISOString()}>
+              {formattedDate}
+            </time>
           </p>
         </div>
 

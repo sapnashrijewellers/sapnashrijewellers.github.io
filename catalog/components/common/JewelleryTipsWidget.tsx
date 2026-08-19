@@ -1,141 +1,294 @@
-"use client";
+// "use client";
 
-import { useEffect, useState } from "react";
-import { X, Gem, Search, Scale, Percent, ShieldCheck } from "lucide-react";
-import { getWithExpiry, setWithExpiry } from "./TipsKeyStorage";
-import { motion } from "framer-motion";
+// import {
+//     useEffect,
+//     useState,
+//     useSyncExternalStore,
+// } from "react";
+// import {
+//     X,
+//     Gem,
+//     Search,
+//     Scale,
+//     Percent,
+//     ShieldCheck,
+// } from "lucide-react";
+// import {
+//     getWithExpiry,
+//     setWithExpiry,
+// } from "./TipsKeyStorage";
+// import { motion } from "framer-motion";
 
-const STORAGE_KEY = "jewellery_tips_dismissed";
+// const STORAGE_KEY = "jewellery_tips_dismissed";
 
-type Props = {
-    isOpen: boolean;
-    onClose: () => void;
-    onOpen: () => void;
-};
+// /* -------------------------------------------------------------------------- */
+// /* localStorage subscription                                                  */
+// /* -------------------------------------------------------------------------- */
 
-export default function JewelleryTipsWidget({
-    isOpen,
-    onClose,
-    onOpen,
-}: Props) {
-    const [showTeaser, setShowTeaser] = useState(false);
-    const [shakeTick, setShakeTick] = useState(0);
+// function subscribeToDismissal(callback: () => void) {
+//     /*
+//      * storage events fire in other browser tabs/windows.
+//      */
+//     const handleStorage = (event: StorageEvent) => {
+//         if (event.key === STORAGE_KEY) {
+//             callback();
+//         }
+//     };
 
-    useEffect(() => {
-        if (!showTeaser || isOpen) return;
+//     window.addEventListener("storage", handleStorage);
 
-        const interval = setInterval(() => {
-            setShakeTick((t) => t + 1);
-        }, 10000); // 10 seconds
+//     return () => {
+//         window.removeEventListener("storage", handleStorage);
+//     };
+// }
 
-        return () => clearInterval(interval);
-    }, [showTeaser, isOpen]);
+// function getDismissedSnapshot() {
+//     return getWithExpiry<boolean>(STORAGE_KEY) ?? false;
+// }
 
-    useEffect(() => {
-        const dismissed = getWithExpiry<boolean>(STORAGE_KEY);
-        if (!dismissed) {
-            setShowTeaser(true);
-        }
-    }, []);
+// /*
+//  * IMPORTANT:
+//  *
+//  * The server snapshot MUST always be the same value that the server
+//  * renders. We cannot access localStorage during SSR.
+//  */
+// function getServerDismissedSnapshot() {
+//     return false;
+// }
 
-    const dismissTeaser = () => {
-        setShowTeaser(false);
-        setWithExpiry(STORAGE_KEY, true); // defaults to 24h
-    };
+// /* -------------------------------------------------------------------------- */
+// /* Component                                                                  */
+// /* -------------------------------------------------------------------------- */
 
-    return (
-        <>
-            {/* Teaser chip */}
-            {showTeaser && !isOpen && (
-                <motion.div
-                    key={shakeTick} // <-- important
-                    initial={{ x: 0 }}
-                    animate={{ x: [0, -4, 4, -3, 3, 0] }}
-                    transition={{
-                        duration: 0.5,
-                        ease: "easeInOut",
-                    }}
-                    className="fixed bottom-15 left-4 z-40 bg-accent shadow-lg rounded-full px-4 py-2 flex items-center gap-2"
-                >
-                    <Gem className="w-4 h-4 text-yellow-500" />
-                    <button
-                        onClick={onOpen}
-                        className="cursor-pointer text-sm font-medium hover:underline"
-                    >
-                        Jewellery Buying Tips
-                    </button>
-                    <button onClick={dismissTeaser}>
-                        <X className="w-4 h-4" />
-                    </button>
-                </motion.div>
-            )}
+// type Props = {
+//     isOpen: boolean;
+//     onClose: () => void;
+//     onOpen: () => void;
+// };
 
-            {/* Modal */}
-            {isOpen && (
-                <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4">
-                    <div className="relative bg-surface rounded-xl max-w-lg w-full max-h-[90vh] overflow-y-auto p-6">
-                        <button 
-                            onClick={onClose}
-                            className="ssj-btn absolute top-2 right-2 p-1 rounded-full hover:bg-gray-200"
-                        >
-                            <X className="w-6 h-6" />
-                        </button>
+// export default function JewelleryTipsWidget({
+//     isOpen,
+//     onClose,
+//     onOpen,
+// }: Props) {
+//     /*
+//      * useSyncExternalStore gives us:
+//      *
+//      * - stable SSR output
+//      * - no hydration mismatch
+//      * - no setState() inside useEffect
+//      * - automatic update when storage changes
+//      */
+//     const dismissed = useSyncExternalStore(
+//         subscribeToDismissal,
+//         getDismissedSnapshot,
+//         getServerDismissedSnapshot
+//     );
 
-                        {/* ---- CONTENT ---- */}
-                        <section className="space-y-6">
-                            <h2 className="text-xl md:text-2xl font-bold text-center">
-                                सोना खरीदने से पहले इन 3 बातों का विशेष ध्यान रखें
-                            </h2>
+//     const showTeaser = !dismissed;
+//     const [shakeTick, setShakeTick] = useState(0);
 
-                            <Tip
-                                icon={<Search />}
-                                title="1. BIS HUID हॉलमार्किंग है अनिवार्य"
-                                text="2 ग्राम या उससे अधिक वजन की ज्वेलरी पर हमेशा BIS मान्यता प्राप्त 6 अंकों वाला HUID कोड जांचें। यह शुद्धता की गारंटी है।"
-                            />
+//     /*
+//      * Shake the teaser every 10 seconds while visible.
+//      *
+//      * This setState is inside the interval callback, so it does NOT
+//      * violate react-hooks/set-state-in-effect.
+//      */
+//     useEffect(() => {
+//         if (!showTeaser || isOpen) {
+//             return;
+//         }
 
-                            <Tip
-                                icon={<Scale />}
-                                title="2. सही कैरेट का सही दाम"
-                                text="22 कैरेट आभूषण के लिए सिर्फ 22 कैरेट का भाव चुकाएं। 24 कैरेट (शुद्ध सोना) का रेट अलग होता है।"
-                            />
+//         const intervalId = window.setInterval(() => {
+//             setShakeTick((tick) => tick + 1);
+//         }, 10000);
 
-                            <Tip
-                                icon={<Percent />}
-                                title="3. मेकिंग चार्ज (बनवाई) जानें"
-                                text="खरीदारी करते समय हमेशा पूछें कि आभूषण पर कितने प्रतिशत (%) मेकिंग चार्ज लग रहा है। पारदर्शी रहें।"
-                            />
+//         return () => {
+//             window.clearInterval(intervalId);
+//         };
+//     }, [showTeaser, isOpen]);
 
-                            <Tip
-                                icon={<ShieldCheck className="text-green-500" />}
-                                title="सपना श्री ज्वेलर्स का वादा: विश्वास और बचत"
-                                text="हम इन तीनों पैमानों पर खरे उतरते हैं। HUID हॉलमार्क ज्वेलरी और मेकिंग चार्ज मात्र 3.5% से शुरू।"
-                            />
-                        </section>
-                    </div>
-                </div>
-            )}
-        </>
-    );
-}
+//     const dismissTeaser = () => {
+//         setWithExpiry(STORAGE_KEY, true);
 
-function Tip({
-    icon,
-    title,
-    text,
-}: {
-    icon: React.ReactNode;
-    title: string;
-    text: string;
-}) {
-    return (
-        <div className="flex flex-col md:flex-row gap-4 bg-accent p-4 rounded-lg">
-            <div className="w-12 h-12 flex items-center justify-center text-yellow-500">
-                {icon}
-            </div>
-            <div>
-                <h3 className="font-semibold">{title}</h3>
-                <p className="text-sm mt-1">{text}</p>
-            </div>
-        </div>
-    );
-}
+//         /*
+//          * localStorage's "storage" event does not fire in the same tab.
+//          *
+//          * Dispatch a custom event so useSyncExternalStore can update
+//          * immediately in this tab too.
+//          */
+//         window.dispatchEvent(
+//             new CustomEvent("jewellery-tips-dismissed")
+//         );
+//     };
+
+//     return (
+//         <>
+//             {/* Teaser chip */}
+//             {showTeaser && !isOpen && (
+//                 <motion.div
+//                     key={shakeTick}
+//                     initial={{ x: 0 }}
+//                     animate={{
+//                         x: [0, -4, 4, -3, 3, 0],
+//                     }}
+//                     transition={{
+//                         duration: 0.5,
+//                         ease: "easeInOut",
+//                     }}
+//                     className="
+//                         fixed bottom-15 left-4 z-40
+//                         bg-accent
+//                         shadow-lg
+//                         rounded-full
+//                         px-4 py-2
+//                         flex items-center gap-2
+//                     "
+//                 >
+//                     <Gem className="w-4 h-4 text-yellow-500" />
+
+//                     <button
+//                         type="button"
+//                         onClick={onOpen}
+//                         className="
+//                             cursor-pointer
+//                             text-sm
+//                             font-medium
+//                             hover:underline
+//                         "
+//                     >
+//                         Jewellery Buying Tips
+//                     </button>
+
+//                     <button
+//                         type="button"
+//                         onClick={dismissTeaser}
+//                         aria-label="Dismiss jewellery buying tips"
+//                     >
+//                         <X className="w-4 h-4" />
+//                     </button>
+//                 </motion.div>
+//             )}
+
+//             {/* Modal */}
+//             {isOpen && (
+//                 <div className="
+//                     fixed inset-0
+//                     z-50
+//                     bg-black/50
+//                     flex items-center
+//                     justify-center
+//                     p-4
+//                 ">
+//                     <div className="
+//                         relative
+//                         bg-surface
+//                         rounded-xl
+//                         max-w-lg
+//                         w-full
+//                         max-h-[90vh]
+//                         overflow-y-auto
+//                         p-6
+//                     ">
+//                         <button
+//                             type="button"
+//                             onClick={onClose}
+//                             aria-label="Close jewellery buying tips"
+//                             className="
+//                                 ssj-btn
+//                                 absolute top-2 right-2
+//                                 p-1
+//                                 rounded-full
+//                                 hover:bg-gray-200
+//                             "
+//                         >
+//                             <X className="w-6 h-6" />
+//                         </button>
+
+//                         <section className="space-y-6">
+//                             <h2 className="
+//                                 text-xl
+//                                 md:text-2xl
+//                                 font-bold
+//                                 text-center
+//                             ">
+//                                 सोना खरीदने से पहले इन 3 बातों का विशेष ध्यान रखें
+//                             </h2>
+
+//                             <Tip
+//                                 icon={<Search />}
+//                                 title="1. BIS HUID हॉलमार्किंग है अनिवार्य"
+//                                 text="2 ग्राम या उससे अधिक वजन की ज्वेलरी पर हमेशा BIS मान्यता प्राप्त 6 अंकों वाला HUID कोड जांचें। यह शुद्धता की गारंटी है।"
+//                             />
+
+//                             <Tip
+//                                 icon={<Scale />}
+//                                 title="2. सही कैरेट का सही दाम"
+//                                 text="22 कैरेट आभूषण के लिए सिर्फ 22 कैरेट का भाव चुकाएं। 24 कैरेट (शुद्ध सोना) का रेट अलग होता है।"
+//                             />
+
+//                             <Tip
+//                                 icon={<Percent />}
+//                                 title="3. मेकिंग चार्ज (बनवाई) जानें"
+//                                 text="खरीदारी करते समय हमेशा पूछें कि आभूषण पर कितने प्रतिशत (%) मेकिंग चार्ज लग रहा है। पारदर्शी रहें।"
+//                             />
+
+//                             <Tip
+//                                 icon={<ShieldCheck className="text-green-500" />}
+//                                 title="सपना श्री ज्वेलर्स का वादा: विश्वास और बचत"
+//                                 text="हम इन तीनों पैमानों पर खरे उतरते हैं। HUID हॉलमार्क ज्वेलरी और मेकिंग चार्ज मात्र 3.5% से शुरू।"
+//                             />
+//                         </section>
+//                     </div>
+//                 </div>
+//             )}
+//         </>
+//     );
+// }
+
+// /* -------------------------------------------------------------------------- */
+// /* Tip                                                                         */
+// /* -------------------------------------------------------------------------- */
+
+// function Tip({
+//     icon,
+//     title,
+//     text,
+// }: {
+//     icon: React.ReactNode;
+//     title: string;
+//     text: string;
+// }) {
+//     return (
+//         <div className="
+//             flex
+//             flex-col
+//             md:flex-row
+//             gap-4
+//             bg-accent
+//             p-4
+//             rounded-lg
+//         ">
+//             <div className="
+//                 w-12
+//                 h-12
+//                 flex
+//                 items-center
+//                 justify-center
+//                 text-yellow-500
+//             ">
+//                 {icon}
+//             </div>
+
+//             <div>
+//                 <h3 className="font-semibold">
+//                     {title}
+//                 </h3>
+
+//                 <p className="text-sm mt-1">
+//                     {text}
+//                 </p>
+//             </div>
+//         </div>
+//     );
+// }

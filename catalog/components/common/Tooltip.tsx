@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Info } from "lucide-react";
-import { useState, useRef, useLayoutEffect } from "react";
+import { useState, useRef } from "react";
 
 export default function Tooltip({
   text,
@@ -15,29 +15,37 @@ export default function Tooltip({
 }) {
   const [open, setOpen] = useState(false);
   const [positionClass, setPositionClass] = useState("left-0");
-  
-  // FIX: Explicitly type the ref as an HTMLSpanElement
-  const tooltipRef = useRef<HTMLSpanElement>(null);
 
-  useLayoutEffect(() => {
-    if (open && tooltipRef.current) {
-      const rect = tooltipRef.current.getBoundingClientRect();
-      const viewportWidth = window.innerWidth;
+  const triggerRef = useRef<HTMLSpanElement>(null);
 
-      // Logic: If the right edge goes off-screen, switch to right-aligned
-      if (rect.right > viewportWidth) {
-        setPositionClass("right-0");
-      } else {
-        // Reset to left-aligned if there is space
-        setPositionClass("left-0");
-      }
+  const handleMouseEnter = () => {
+    const trigger = triggerRef.current;
+
+    if (trigger) {
+      const rect = trigger.getBoundingClientRect();
+
+      // Tailwind w-64 = 16rem = 256px
+      const tooltipWidth = 256;
+
+      // Keep a small margin from the viewport edge.
+      const viewportPadding = 8;
+
+      // If tooltip extending to the right would go outside
+      // the viewport, align it to the right side instead.
+      const wouldOverflowRight =
+        rect.left + tooltipWidth > window.innerWidth - viewportPadding;
+
+      setPositionClass(wouldOverflowRight ? "right-0" : "left-0");
     }
-  }, [open]); // Only run when the tooltip opens
+
+    setOpen(true);
+  };
 
   return (
     <span
+      ref={triggerRef}
       className={`relative inline-flex items-center align-middle ${className}`}
-      onMouseEnter={() => setOpen(true)}
+      onMouseEnter={handleMouseEnter}
       onMouseLeave={() => setOpen(false)}
     >
       <Info
@@ -48,19 +56,20 @@ export default function Tooltip({
       {open && (
         <>
           <span className="absolute top-full left-0 h-2 w-full" />
+
           <span
-            ref={tooltipRef}
-            /* FIX 1: 'font-normal' and 'not-italic' prevents bold/italic inheritance.
-              FIX 2: 'right-0' vs 'left-0' is now calculated before the browser paints.
-            */
-            className={`absolute z-50 top-[calc(100%+0.5rem)] ${positionClass} 
-                       w-64 rounded-lg border border-theme bg-surface shadow-lg p-3 
-                       text-sm text-normal font-normal not-italic antialiased
-                       whitespace-normal break-words text-left`}
+            className={`absolute z-50 top-[calc(100%+0.5rem)] ${positionClass}
+              w-64 max-w-[calc(100vw-1rem)]
+              rounded-lg border border-theme bg-surface shadow-lg p-3
+              text-sm text-normal font-normal not-italic antialiased
+              whitespace-normal break-words text-left`}
           >
-            <p className="leading-snug m-0 font-normal">{text}</p>
-            <Link 
-              href={href} 
+            <p className="leading-snug m-0 font-normal">
+              {text}
+            </p>
+
+            <Link
+              href={href}
               className="mt-2 inline-block text-xs text-primary font-normal hover:underline"
             >
               Read full policy

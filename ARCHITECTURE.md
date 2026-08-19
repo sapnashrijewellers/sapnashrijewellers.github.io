@@ -162,3 +162,9 @@ Live Rate Sources
 - Manual GitHub Trigger (workflow_dispatch): Gives the operations team total control over deployment timings after batch catalog edits.
 - Decoupled Pricing Engine: Combines static product base weights (SSG for SEO) with client-side live rate feeds for real-time price calculations at checkout.
 - Feed & JSON-LD Parity: Generates sitemap.xml, gmc-feed.xml, and on-page application/ld+json from identical source JSON to avoid data mismatches across Googlebot and Merchant Center.
+
+## Coding Guidelines
+- Avoid errors: Calling setState synchronously within an effect can trigger cascading renders
+- Strictly follow ESLint rules and avoid errors
+- Use Link and Iamge rather than HTML anchor and img tags in next.js
+- Avoid using generic type like any, use Declared type whereever possible

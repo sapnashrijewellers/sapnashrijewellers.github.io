@@ -1,4 +1,3 @@
-"use client";
 
 import {
   FaFacebookF,
@@ -7,13 +6,11 @@ import {
   FaWhatsapp,
   FaClock,
 } from "react-icons/fa";
-import { useState } from "react";
 import Link from "next/link";
-import JewelleryTipsWidget from "@/components/common/JewelleryTipsWidget";
 import BrandLogo from "../common/BrandLogo";
 
-export default function Footer() {
-  const [tipsOpen, setTipsOpen] = useState(false);
+
+export default function Footer() {  
   const year = new Date().getFullYear();
 
   return (
@@ -60,8 +57,7 @@ export default function Footer() {
             <li><Link href="/about-us/">About Us</Link></li>            
             <li><Link href="/#shop-by-category">Shop by Category</Link></li>
             <li><Link href="/#shop-by-occasion">Shop by Occasion</Link></li>
-            <li><Link href="/qr/">QR code for Payment</Link></li>
-            <li><Link href="#" onClick={() => setTipsOpen(true)}>Jewellery Buying Tips 💡</Link></li>
+            <li><Link href="/qr/">QR code for Payment</Link></li>            
           </ul>
         </div>
 
@@ -111,34 +107,14 @@ export default function Footer() {
             <a href="https://www.instagram.com/sapna_shri_jewllers/" target="_blank"><FaInstagram className="icon-footer-trust"/></a>
             <a href="https://www.youtube.com/@SapnaShriJewellers-b1f/shorts" target="_blank"><FaYoutube className="icon-footer-trust"/></a>
           </div>
-          {/* Play Store Widget */}
-          <div className="mt-6">
-            <p className="text-xs font-medium opacity-80 mb-2">📱 Download our Android App</p>
-            <a
-              href="https://play.google.com/store/apps/details?id=com.yourapp.package"
-              target="_blank"
-              className="inline-block"
-            >
-              <img
-                src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"
-                alt="Get it on Google Play"
-                className="h-16"  
-              />
-            </a>
-          </div>
+          
         </div>
       </div>
 
       {/* BOTTOM BAR */}
       <div className="border-t border-theme text-center py-4 text-xs opacity-70">
         © {year} Sapna Shri Jewellers. All Rights Reserved.
-      </div>
-
-      <JewelleryTipsWidget
-        isOpen={tipsOpen}
-        onOpen={() => setTipsOpen(true)}
-        onClose={() => setTipsOpen(false)}
-      />
+      </div>      
     </footer>
   );
 }

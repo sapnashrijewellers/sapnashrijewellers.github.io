@@ -131,15 +131,7 @@ export default function Footer() {
               >
                 Shop by Occasion
               </Link>
-            </li>
-            <li>
-              <Link
-                href="/calculator/"
-                className="hover:text-primary hover:underline transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded"
-              >
-                Live Rate Calculator
-              </Link>
-            </li>
+            </li>            
             <li>
               <Link
                 href="/qr/"

@@ -4,7 +4,7 @@
     "rank": 2,
     "link": "/category/mahadev-silver-rings-1/",
     "imageAnimation": "pan-right",
-    "bannerImage": "mahadev-silver-rings.png",
+    "bannerImage": "mahadev-silver-rings.webp",
     "page": "home"
   },
   {
@@ -12,7 +12,7 @@
     "rank": 1,
     "link": "/category/buy-silver-rakhi-13/",
     "imageAnimation": "pan-right",
-    "bannerImage": "rakhi.png",
+    "bannerImage": "rakhi.webp",
     "page": "home"
   },
   {
@@ -20,7 +20,7 @@
     "rank": 1,
     "link": "/category/sawariya-seth-ring-3/",
     "imageAnimation": "fade",
-    "bannerImage": "sawariya-seth-ring.png",
+    "bannerImage": "sawariya-seth-ring.webp",
     "page": "home"
   },
   {
@@ -28,7 +28,7 @@
     "rank": 3,
     "link": "/category/buy-silver-rakhi-13/",
     "imageAnimation": "fade",
-    "bannerImage": "rakhi.png",
+    "bannerImage": "rakhi.webp",
     "page": "sawariya-seth-ring-3"
   },
   {
@@ -36,7 +36,7 @@
     "rank": 3,
     "link": "/category/sawariya-seth-ring-3/",
     "imageAnimation": "fade",
-    "bannerImage": "sawariya-seth-ring.png",
+    "bannerImage": "sawariya-seth-ring.webp",
     "page": "buy-silver-rakhi-13"
   }
 ]

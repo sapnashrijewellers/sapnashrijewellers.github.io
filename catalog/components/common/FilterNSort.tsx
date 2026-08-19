@@ -4,7 +4,7 @@ import { Funnel, ArrowUpDown } from "lucide-react";
 import { FilterPanel } from "@/components/common/FilterPanel";
 import { SortPanel } from "@/components/common/SortPanel";
 import { SearchFilters } from "@/types/catalog";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 type Material = "Gold" | "Silver";
 export interface FilterNSortProps {
     filters: SearchFilters;
@@ -15,7 +15,7 @@ export interface FilterNSortProps {
     sortBy: string;
     onSortChange: (sort: string) => void;
 }
-export default function SearchBar({
+export default function FilterNSort({
     filters,
     onFilterChange,
     sortBy,
@@ -23,37 +23,36 @@ export default function SearchBar({
 }: FilterNSortProps) {
     const filterBtnRef = useRef<HTMLButtonElement>(null);
     const sortBtnRef = useRef<HTMLButtonElement>(null);
-    const [material, setMaterial] = useState<Material>("Silver");
     return (
         <div className="relative">
             <div className="flex items-center gap-2">
                 {(["Silver", "Gold"] as Material[]).map((m) => (
                     <button
                         key={m}
-                            onClick={() => { setMaterial(m); onFilterChange("material", m); }}
-                            className={`
-                border px-6 ssj-btn py-2 text-sm font-medium transition shrink-0 flex items-center justify-center
-                ${material === m
-                                    ? "bg-accent  font-bold"
-                                    : "bg-surface text-normal hover:bg-primary/10 cursor-pointer"
-                                }
-              `}
-                        >
-                            {m}
-                        </button>
-                    ))}
-                    <button ref={filterBtnRef}
-                        className="ssj-btn bg-accent shrink-0 flex items-center justify-center
-           w-10 h-10 sm:w-9 sm:h-9"
-                        title="Filter results">
-                        <Funnel size={16} />
+                        onClick={() => onFilterChange("material", m)}
+                        className={`
+      border px-6 ssj-btn py-2 text-sm font-medium transition shrink-0 flex items-center justify-center
+      ${filters.material?.toLowerCase() === m.toLowerCase()
+                                ? "bg-accent font-bold"
+                                : "bg-surface text-normal hover:bg-primary/10 cursor-pointer"
+                            }
+    `}
+                    >
+                        {m}
                     </button>
-                    <FilterPanel
-                        filters={filters}
-                        onChange={onFilterChange}
-                        triggerRef={filterBtnRef}
-                    />
-                
+                ))}
+                <button ref={filterBtnRef}
+                    className="ssj-btn bg-accent shrink-0 flex items-center justify-center
+           w-10 h-10 sm:w-9 sm:h-9"
+                    title="Filter results">
+                    <Funnel size={16} />
+                </button>
+                <FilterPanel
+                    filters={filters}
+                    onChange={onFilterChange}
+                    triggerRef={filterBtnRef}
+                />
+
 
                 <div className="relative">
                     <button ref={sortBtnRef}

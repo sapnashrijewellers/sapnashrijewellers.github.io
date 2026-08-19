@@ -146,7 +146,7 @@ export default function JewelrySearch() {
         <div className="flex-1 font-medium truncate">
           {loading
             ? <span className="opacity-60">Searching…</span>
-            : <span>{hydratedProducts.length} products found</span>
+            : <span>{filteredProducts.length} products found</span>
           }
         </div>
 

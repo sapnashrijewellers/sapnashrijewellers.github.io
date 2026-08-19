@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
-  Heart,  
+  Heart,
   Menu,
   X,
   ShoppingCart,
@@ -12,13 +12,11 @@ import {
   ClipboardList,
 } from "lucide-react";
 import { useState, useCallback, useId, useEffect, useRef } from "react";
-import { auth, googleProvider } from "@/utils/firebase";
-import { signInWithPopup, signOut } from "firebase/auth";
 import { useAuth } from "@/context/AuthContext";
 import Image from "next/image";
 
 interface NavItem {
-  label: string;  
+  label: string;
   title: string;
   ariaLabel: string;
   icon: React.ReactNode;
@@ -42,6 +40,12 @@ export default function ResponsiveNavbar() {
   const login = useCallback(async () => {
     try {
       setAuthPending(true);
+      const [{ signInWithPopup }, { getFirebaseAuthInstance }] = await Promise.all([
+        import("firebase/auth"),
+        import("@/utils/firebase"),
+      ]);
+
+      const { auth, googleProvider } = await getFirebaseAuthInstance();
       await signInWithPopup(auth, googleProvider);
       closeMenu();
     } catch (error) {
@@ -54,6 +58,12 @@ export default function ResponsiveNavbar() {
   const logout = useCallback(async () => {
     try {
       setAuthPending(true);
+      const [{ signOut }, { getFirebaseAuthInstance }] = await Promise.all([
+        import("firebase/auth"),
+        import("@/utils/firebase"),
+      ]);
+
+      const { auth } = await getFirebaseAuthInstance();
       await signOut(auth);
       closeMenu();
     } catch (error) {
@@ -94,40 +104,48 @@ export default function ResponsiveNavbar() {
   const displayName = user?.displayName || "User account";
 
   const PRIMARY_NAV: NavItem[] = [
-    // {
-    //   label: "Hallmark",      
-    //   href: "/huid/",
-    //   title: "BIS Hallmark & HUID Verification",
-    //   ariaLabel: "View BIS Hallmark and HUID Jewellery Verification",
-    //   icon: <Triangle className="w-5 h-5 md:w-5 md:h-5 text-current" aria-hidden="true" />,
-    // },
     {
-      label: "Wishlist",      
+      label: "Wishlist",
       href: "/wishlist/",
       title: "Wishlist",
       ariaLabel: "View your saved Wishlist items",
-      icon: <Heart className="w-5 h-5 md:w-5 md:h-5 text-current" aria-hidden="true" />,
+      icon: (
+        <Heart
+          className="w-5 h-5 md:w-5 md:h-5 text-current"
+          aria-hidden="true"
+        />
+      ),
     },
     {
       label: "Cart",
-            href: "/cart/",
+      href: "/cart/",
       title: "Shopping Cart",
       ariaLabel: "View items in your Shopping Cart",
-      icon: <ShoppingCart className="w-5 h-5 md:w-5 md:h-5 text-current" aria-hidden="true" />,
+      icon: (
+        <ShoppingCart
+          className="w-5 h-5 md:w-5 md:h-5 text-current"
+          aria-hidden="true"
+        />
+      ),
     },
     ...(user
       ? [
           {
-            label: "Orders",            
+            label: "Orders",
             href: "/orders/",
             title: "Your Orders",
             ariaLabel: "View your previous jewellery orders and purchases",
-            icon: <ClipboardList className="w-5 h-5 md:w-5 md:h-5 text-current" aria-hidden="true" />,
+            icon: (
+              <ClipboardList
+                className="w-5 h-5 md:w-5 md:h-5 text-current"
+                aria-hidden="true"
+              />
+            ),
           },
         ]
       : []),
     {
-      label: user ? "Sign Out" : "Sign In",      
+      label: user ? "Sign Out" : "Sign In",
       title: user ? `Sign out of ${displayName}` : "Sign in with Google",
       ariaLabel: user
         ? `Sign out of account (${displayName})`
@@ -180,9 +198,15 @@ export default function ResponsiveNavbar() {
         <span className="flex items-center justify-center shrink-0">
           {item.icon}
         </span>
-        <span className={isMobileDropdown ? "leading-tight" : "text-xs leading-none font-medium"}>
+        <span
+          className={
+            isMobileDropdown
+              ? "leading-tight"
+              : "text-xs leading-none font-medium"
+          }
+        >
           {item.label}
-        </span>        
+        </span>
       </>
     );
 
@@ -224,7 +248,9 @@ export default function ResponsiveNavbar() {
         <button
           type="button"
           onClick={() => setMenuOpen((open) => !open)}
-          aria-label={menuOpen ? "Close navigation menu" : "Open primary navigation menu"}
+          aria-label={
+            menuOpen ? "Close navigation menu" : "Open primary navigation menu"
+          }
           aria-expanded={menuOpen}
           aria-haspopup="menu"
           aria-controls={menuId}

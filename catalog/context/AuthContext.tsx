@@ -1,27 +1,44 @@
+// context/AuthContext.tsx
 "use client";
 
-import { createContext, useContext, useEffect, useState } from "react";
-import { User, onAuthStateChanged } from "firebase/auth";
-import { auth } from "@/utils/firebase";
+import { createContext, useContext, useEffect, useState, ReactNode } from "react";
+import type { User } from "firebase/auth";
 
-// Define a shape that includes the loading state
-type AuthContextType = {
+interface AuthContextType {
   user: User | null;
   loading: boolean;
-};
+}
 
-const AuthContext = createContext<AuthContextType>({ user: null, loading: true });
+const AuthContext = createContext<AuthContextType>({
+  user: null,
+  loading: true,
+});
 
-export function AuthProvider({ children }: { children: React.ReactNode }) {
+export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState(true); // Start as true
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const unsub = onAuthStateChanged(auth, (user) => {
-      setUser(user);
-      setLoading(false); // Auth state is now determined
-    });
-    return unsub;
+    let unsubscribe: (() => void) | undefined;
+
+    const initAuth = async () => {
+      const [{ onAuthStateChanged }, { getFirebaseAuthInstance }] = await Promise.all([
+        import("firebase/auth"),
+        import("@/utils/firebase"),
+      ]);
+
+      const { auth } = await getFirebaseAuthInstance();
+      unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+        setUser(currentUser);
+        setLoading(false);
+      });
+    };
+
+    initAuth();
+
+    return () => {
+      if (unsubscribe) unsubscribe();
+    };
   }, []);
 
   return (

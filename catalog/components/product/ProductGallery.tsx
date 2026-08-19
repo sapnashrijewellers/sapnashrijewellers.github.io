@@ -272,7 +272,7 @@ export default function ProductGallery({
         >
           {images.map((img, i) => {
             const isSelected = i === activeIndex;
-            const thumbUrl = `${baseURL}/static/img/products/optimized/${img}`;
+            const thumbUrl = `${baseURL}/static/img/products/thumbnail/${img}`;
 
             return (
               <button

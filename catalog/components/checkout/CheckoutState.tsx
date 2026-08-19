@@ -1,168 +1,252 @@
 "use client";
 
+import { useEffect, useMemo, useState, useCallback } from "react";
 import { useAuth } from "@/context/AuthContext";
-import { auth, googleProvider } from "@/utils/firebase";
-import { signInWithPopup } from "firebase/auth";
-import { Address, Cart, PaymentMethod, PriceSummaryType, Product } from "@/types/catalog";
-import { getCart, saveCart } from "@/utils/cart";
-import { useEffect, useMemo, useRef, useState } from "react";
+import {
+  Address,
+  Cart,
+  PaymentMethod,
+  PriceSummaryType,
+  Product,
+} from "@/types/catalog";
+import { getCart, saveCart, clearCartStorage } from "@/utils/cart";
+import { calculateFinal } from "@/utils/calculatePrice";
 import CartStep from "@/components/checkout/CartStep";
 import AddressStep from "@/components/checkout/AddressStep";
 import PaymentStep from "@/components/checkout/PaymentStep";
 import ReviewStep from "@/components/checkout/ReviewStep";
-import { calculateFinal } from "@/utils/calculatePrice";
 import PaymentVerificationStep from "./PaymentVerificationStep";
-import { clearCartStorage } from "@/utils/cart"
 import rates from "@/data/rates.json";
+import productsData from "@/data/products.json";
+import { Loader2, LogIn } from "lucide-react";
 
+type CheckoutStep = "CART" | "ADDRESS" | "PAYMENT" | "REVIEW" | "VERIFY";
 
-type CheckoutStep =
-  | "CART"
-  | "ADDRESS"
-  | "PAYMENT"
-  | "REVIEW"
-  | "VERIFY";
-export default function CheckoutState() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [cart, setCart] = useState<Cart>(() => getCart());  
+interface CheckoutStateProps {
+  className?: string;
+}
+
+export default function CheckoutState({ className = "" }: CheckoutStateProps) {
+  const [isHydrating, setIsHydrating] = useState(true);
+  const [cart, setCart] = useState<Cart>(() => getCart());
   const { user, loading: authLoading } = useAuth();
   const [step, setStep] = useState<CheckoutStep>("CART");
   const [paymentMethod, setPaymentMethod] = useState<PaymentMethod>("UPI");
   const [address, setAddress] = useState<Address>(new Address());
   const [addressLoading, setAddressLoading] = useState(false);
+  const [authPending, setAuthPending] = useState(false);
 
-
-
- const hasRequestedAuth = useRef(false);
-
-useEffect(() => {
-  if (!authLoading && !user && !hasRequestedAuth.current) {
-    hasRequestedAuth.current = true; // Prevents the second trigger
-    signInWithPopup(auth, googleProvider).catch(err => {
-      hasRequestedAuth.current = false; // Reset if they closed it/errored
-      console.error("Auth failed", err);
-    });
-  }
-}, [authLoading, user]);
-
-
-
-
-
+  /* ---------------- Step 1: Hydrate Cart Items (Local JSON to eliminate network waterfalls) ---------------- */
   useEffect(() => {
+    try {
+      const allProducts = productsData as Product[];
+      const productMap = new Map<number, Product>();
+      allProducts.forEach((p) => productMap.set(Number(p.id), p));
 
-    async function load() {
+      setCart((prevCart) => {
+        const populatedItems = (prevCart.items || []).map((item) => ({
+          ...item,
+          product: productMap.get(Number(item.productId)) || item.product,
+        }));
+
+        const updatedCart: Cart = {
+          ...prevCart,
+          items: populatedItems,
+        };
+
+        return updatedCart;
+      });
+    } catch (error) {
+      console.error("Failed to hydrate cart data:", error);
+    } finally {
+      setIsHydrating(false);
+    }
+  }, []);
+
+  /* ---------------- Step 2: Lazy User Authentication Action ---------------- */
+  const handleLogin = useCallback(async () => {
+    try {
+      setAuthPending(true);
+      const [{ signInWithPopup }, { getFirebaseAuthInstance }] =
+        await Promise.all([
+          import("firebase/auth"),
+          import("@/utils/firebase"),
+        ]);
+
+      const { auth, googleProvider } = await getFirebaseAuthInstance();
+      await signInWithPopup(auth, googleProvider);
+    } catch (err) {
+      console.error("Checkout sign-in failed:", err);
+    } finally {
+      setAuthPending(false);
+    }
+  }, []);
+
+  /* ---------------- Step 3: Fetch / Populate User Address ---------------- */
+  useEffect(() => {
+    if (!user) return;
+
+    let isMounted = true;
+
+    async function loadAddress() {
       setAddressLoading(true);
-      if (!user) return;
-      const res = await fetch(`${process.env.NEXT_PUBLIC_WORKER_URL}/address?uid=${user.uid}`);
-      if (res.ok ) {
-        const data = await res.json();
-        setAddress(data);
-      } else {
-        // FALLBACK: Populate from the Firebase User object
+      try {
+        const workerUrl = process.env.NEXT_PUBLIC_WORKER_URL || "";
+        const res = await fetch(
+          `${workerUrl}/address?uid=${encodeURIComponent(user!.uid)}`,
+          {
+            headers: { Accept: "application/json" },
+          }
+        );
+
+        if (res.ok) {
+          const data = await res.json();
+          if (isMounted && data) {
+            setAddress(data);
+            return;
+          }
+        }
+      } catch (err) {
+        console.error("Failed to retrieve stored user address:", err);
+      }
+
+      // Fallback pre-fill using Firebase user credentials
+      if (isMounted) {
         setAddress((prev) => ({
           ...prev,
-          uid: user.uid || "",
-          name: user.displayName || "",
-          email: user.email || "",
-          // mobile might be null in Firebase depending on provider
-          mobile: user.phoneNumber || prev.mobile || "",
+          uid: user!.uid || "",
+          name: prev.name || user!.displayName || "",
+          email: prev.email || user!.email || "",
+          mobile: prev.mobile || user!.phoneNumber || "",
         }));
       }
-      setAddressLoading(false);
+
+      if (isMounted) setAddressLoading(false);
     }
 
-    load();
+    loadAddress();
+
+    return () => {
+      isMounted = false;
+    };
   }, [user]);
 
-  async function saveAddress() {
+  /* ---------------- Step 4: Persist Address ---------------- */
+  const saveAddress = useCallback(async () => {
     setAddressLoading(true);
-    const saveRes = fetch(`${process.env.NEXT_PUBLIC_WORKER_URL}/address`, {
-      method: "POST",
-      body: JSON.stringify(address),
-    });
-    setAddressLoading(false);
-    setStep("PAYMENT");
-  }
-
-  const clearCart = () => {
-    clearCartStorage();
-    setCart({ items: [] });
-    setStep("CART");
-  };
-
-  useEffect(() => {
-    async function hydrateCart() {
-      try {
-        // 1. Fetch the master product list
-        const response = await fetch("/data/products.json");
-        const allProducts = await response.json();
-
-        // 2. Map existing cart items to full product objects
-        const populatedItems = cart.items.map(item => {
-          const fullProduct = allProducts.find((p: Product) => p.id === item.productId);
-          return { ...item, product: fullProduct };
-        });
-
-        // 3. Calculate initial totals
-        // We use a functional update to ensure we have the latest state
-        setCart(prev => {
-          const updatedCart = {
-            ...prev,
-            items: populatedItems,
-            priceSummary: {
-              productTotal: 0, // Will update below
-              shipping: 60.00,
-              paymentMethod: "UPI",
-            }
-          };
-          if (!rates) return prev;
-
-          // Calculate final price using your utility
-          updatedCart.priceSummary.productTotal = calculateFinal(updatedCart, rates);
-          return updatedCart;
-        });
-      } catch (error) {
-        console.error("Failed to hydrate cart:", error);
-      } finally {
-        setIsLoading(false);
-      }
+    try {
+      const workerUrl = process.env.NEXT_PUBLIC_WORKER_URL || "";
+      await fetch(`${workerUrl}/address`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(address),
+      });
+    } catch (err) {
+      console.error("Failed to save address:", err);
+    } finally {
+      setAddressLoading(false);
+      setStep("PAYMENT");
     }
+  }, [address]);
 
-    hydrateCart();
-  }, [rates]); // Re-run if rates change to keep pricing accurate
-
-  /* ---------- DERIVED PRICING ---------- */
+  /* ---------------- Step 5: Derived Pricing Summary ---------------- */
   const priceSummary = useMemo((): PriceSummaryType => {
     const productTotal = calculateFinal(cart, rates);
     const shipping = 60;
     const cod = paymentMethod === "COD" ? 200 : 0;
 
-    // We return the object directly to satisfy the PriceSummaryType
     return {
       productTotal,
       shipping,
-      cod: cod,
+      cod,
       finalPrice: productTotal + shipping + cod,
     };
-  }, [cart, paymentMethod, rates]); // Specific dependencies are better than the whole 'cart'
+  }, [cart, paymentMethod]);
 
-  useEffect(() => saveCart(cart), [cart]);
+  // Synchronize cart changes to localStorage
+  useEffect(() => {
+    if (!isHydrating) {
+      saveCart(cart);
+    }
+  }, [cart, isHydrating]);
 
+  const clearCart = useCallback(() => {
+    clearCartStorage();
+    setCart({ items: [] });
+    setStep("CART");
+  }, []);
 
+  /* ---------------- UI Render State Routing ---------------- */
 
-  if (isLoading) {
+  if (isHydrating || authLoading) {
     return (
-      <div className="p-6 text-center text-muted">
-        Loading your cart…
-      </div>
+      <main
+        aria-busy="true"
+        aria-live="polite"
+        className="max-w-5xl mx-auto p-8 flex flex-col items-center justify-center min-h-[40vh] space-y-3"
+      >
+        <Loader2 className="w-8 h-8 animate-spin text-primary" aria-hidden="true" />
+        <p className="text-sm text-muted-foreground">
+          सुरक्षित चेकआउट लोड हो रहा है... (Loading secure checkout...)
+        </p>
+      </main>
     );
   }
 
-  if (!user) return null; // auth guard already exists
+  // Actionable Guest Sign-In Screen (No Auto-Popup Blocker Violations)
+  if (!user) {
+    return (
+      <main className="max-w-md mx-auto px-4 py-16 text-center space-y-5">
+        <div className="p-4 rounded-full bg-primary/10 text-primary w-16 h-16 mx-auto flex items-center justify-center">
+          <LogIn className="w-8 h-8" aria-hidden="true" />
+        </div>
+
+        <div className="space-y-1.5">
+          <h1 className="text-2xl font-bold text-foreground font-yatra">
+            चेकआउट के लिए साइन इन करें (Sign In to Checkout)
+          </h1>
+          <p className="text-sm text-muted-foreground">
+            Please authenticate with Google to attach your delivery address and finalize your order.
+          </p>
+        </div>
+
+        <button
+          type="button"
+          onClick={handleLogin}
+          disabled={authPending}
+          aria-label="Sign in with Google to continue checkout"
+          className="
+            inline-flex items-center justify-center gap-2.5 px-6 py-3 rounded-xl
+            bg-primary text-primary-foreground font-semibold text-sm sm:text-base shadow-sm
+            hover:bg-primary/90 hover:scale-[1.02] active:scale-95
+            transition-[transform,background-color] duration-150 ease-out will-change-[transform]
+            focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2
+            disabled:opacity-60 disabled:pointer-events-none cursor-pointer
+          "
+        >
+          {authPending ? (
+            <Loader2 className="w-5 h-5 animate-spin" aria-hidden="true" />
+          ) : (
+            <LogIn className="w-5 h-5" aria-hidden="true" />
+          )}
+          <span>{authPending ? "Signing in..." : "Sign in with Google"}</span>
+        </button>
+      </main>
+    );
+  }
 
   return (
-    <div className="max-w-5xl mx-auto p-4 bg-page">
+    <main
+      aria-label="Jewellery order checkout funnel"
+      className={`max-w-5xl mx-auto p-4 sm:p-6 bg-page space-y-6 ${className}`}
+    >
+      {/* Screen Reader Step Announcement */}
+      <div className="sr-only" aria-live="polite">
+        {`Current checkout step: ${step}. Total items in cart: ${
+          cart.items?.length || 0
+        }. Total payable: ₹${priceSummary.finalPrice}`}
+      </div>
+
       {step === "CART" && (
         <CartStep
           cart={cart}
@@ -210,9 +294,8 @@ useEffect(() => {
           paymentMethod={paymentMethod}
           priceSummary={priceSummary}
           clearCart={clearCart}
-
         />
       )}
-    </div>
+    </main>
   );
 }

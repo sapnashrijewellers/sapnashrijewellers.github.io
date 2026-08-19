@@ -2,9 +2,7 @@
 
 import { useCallback, useState } from "react";
 import { useRouter } from "next/navigation";
-import { ShoppingCart } from "lucide-react";
-import { signInWithPopup } from "firebase/auth";
-import { auth, googleProvider } from "@/utils/firebase";
+import { ShoppingCart, Loader2 } from "lucide-react";
 import { useAuth } from "@/context/AuthContext";
 import { addToCart } from "@/utils/cart";
 import type { Product } from "@/types/catalog";
@@ -28,12 +26,19 @@ export default function BuyNowButton({
     try {
       setIsProcessing(true);
 
-      // Authenticate if guest
+      // Lazy-load Firebase Auth only when guest checkout authentication is required
       if (!authLoading && !user) {
+        const [{ signInWithPopup }, { getFirebaseAuthInstance }] =
+          await Promise.all([
+            import("firebase/auth"),
+            import("@/utils/firebase"),
+          ]);
+
+        const { auth, googleProvider } = await getFirebaseAuthInstance();
         await signInWithPopup(auth, googleProvider);
       }
 
-      // Add item to cart and navigate immediately
+      // Add selected item to cart and proceed to checkout
       addToCart({ productId: product.id, qty: 1, product });
       router.push("/cart/");
     } catch (err) {
@@ -62,8 +67,16 @@ export default function BuyNowButton({
         ${className}
       `}
     >
-      <ShoppingCart className="w-5 h-5 shrink-0" aria-hidden="true" />
-      <span>{isProcessing ? "प्रक्रिया जारी... (Processing...)" : "अभी खरीदें (Buy Now)"}</span>
+      {isProcessing ? (
+        <Loader2 className="w-5 h-5 shrink-0 animate-spin" aria-hidden="true" />
+      ) : (
+        <ShoppingCart className="w-5 h-5 shrink-0" aria-hidden="true" />
+      )}
+      <span>
+        {isProcessing
+          ? "प्रक्रिया जारी... (Processing...)"
+          : "अभी खरीदें (Buy Now)"}
+      </span>
       <span className="sr-only">for {product.name}</span>
     </button>
   );

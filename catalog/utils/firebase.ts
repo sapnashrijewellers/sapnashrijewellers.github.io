@@ -1,5 +1,5 @@
+// utils/firebase.ts
 import { initializeApp, getApps, getApp } from "firebase/app";
-import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY!,
@@ -8,7 +8,16 @@ const firebaseConfig = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID!,
 };
 
-const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+// Initialize App (Lightweight)
+export function getFirebaseApp() {
+  return !getApps().length ? initializeApp(firebaseConfig) : getApp();
+}
 
-export const auth = getAuth(app);
-export const googleProvider = new GoogleAuthProvider();
+// Lazy-load Auth module only when triggered
+export async function getFirebaseAuthInstance() {
+  const { getAuth, GoogleAuthProvider } = await import("firebase/auth");
+  const app = getFirebaseApp();
+  const auth = getAuth(app);
+  const googleProvider = new GoogleAuthProvider();
+  return { auth, googleProvider };
+}

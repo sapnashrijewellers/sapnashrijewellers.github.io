@@ -3,8 +3,6 @@
 import { useState, useCallback, useId } from "react";
 import { Star, Loader2 } from "lucide-react";
 import { useAuth } from "@/context/AuthContext";
-import { signInWithPopup } from "firebase/auth";
-import { auth, googleProvider } from "@/utils/firebase";
 
 interface ProductRatingInputProps {
   productId: number;
@@ -37,6 +35,14 @@ export default function ProductRatingInput({
       try {
         setIsSubmitting(true);
         setStatusMessage("Saving rating...");
+
+        // Dynamically load Firebase Auth only when rating action is triggered
+        const [{ signInWithPopup }, { getFirebaseAuthInstance }] = await Promise.all([
+          import("firebase/auth"),
+          import("@/utils/firebase"),
+        ]);
+
+        const { auth, googleProvider } = await getFirebaseAuthInstance();
 
         // 1. Authenticate if not logged in
         if (!authLoading && !user) {
@@ -79,7 +85,7 @@ export default function ProductRatingInput({
 
   return (
     <div className={`inline-flex flex-wrap items-center gap-2 ${className}`}>
-      {/* Screen Reader & LLM Structured Status */}
+      {/* Screen Reader Live Status */}
       <div className="sr-only" aria-live="polite">
         {statusMessage ||
           (selected > 0
@@ -123,7 +129,11 @@ export default function ProductRatingInput({
               <Star
                 className={`
                   w-5 h-5 transition-transform duration-150 ease-out will-change-transform
-                  ${isFilled ? "text-amber-500 fill-amber-500 scale-110" : "text-muted-foreground/40 fill-none"}
+                  ${
+                    isFilled
+                      ? "text-amber-500 fill-amber-500 scale-110"
+                      : "text-muted-foreground/40 fill-none"
+                  }
                 `}
                 aria-hidden="true"
               />
@@ -132,7 +142,7 @@ export default function ProductRatingInput({
         })}
       </div>
 
-      {/* Contextual Status Badges */}
+      {/* Status Indicators */}
       {!user && !authLoading && (
         <span className="text-xs text-muted-foreground select-none">
           (Login to rate)
@@ -141,7 +151,10 @@ export default function ProductRatingInput({
 
       {isSubmitting && (
         <span className="inline-flex items-center gap-1 text-xs text-muted-foreground">
-          <Loader2 className="w-3.5 h-3.5 animate-spin text-primary" aria-hidden="true" />
+          <Loader2
+            className="w-3.5 h-3.5 animate-spin text-primary shrink-0"
+            aria-hidden="true"
+          />
           <span>Saving…</span>
         </span>
       )}

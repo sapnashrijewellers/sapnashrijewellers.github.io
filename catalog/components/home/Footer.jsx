@@ -1,11 +1,12 @@
 import Link from "next/link";
 import {
-  FaFacebookF,
-  FaInstagram,
-  FaYoutube,
-  FaWhatsapp,
-  FaClock,
-} from "react-icons/fa";
+  FacebookIcon,
+  InstagramIcon,  
+  WhatsappIcon,
+  YoutubeIcon,  
+  ClockIcon
+} from "@/components/common/BrandIcons";
+
 import { Phone, MapPin } from "lucide-react";
 import BrandLogo from "../common/BrandLogo";
 
@@ -170,7 +171,7 @@ export default function Footer() {
             </div>
 
             <p className="flex items-center gap-2">
-              <FaClock className="w-3.5 h-3.5 shrink-0" aria-hidden="true" />
+              <ClockIcon className="w-3.5 h-3.5 shrink-0" aria-hidden="true" />
               <span>
                 11:00 AM – 8:00 PM
                 <br />
@@ -207,7 +208,7 @@ export default function Footer() {
             aria-label="Chat directly on WhatsApp with Sapna Shri Jewellers"
             className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2.5 rounded-xl bg-[#25D366] text-white hover:bg-[#20bd5a] hover:scale-105 active:scale-95 transition-[transform,background-color] duration-150 ease-out will-change-[transform] shadow-md focus:outline-none focus:ring-2 focus:ring-[#25D366]"
           >
-            <FaWhatsapp className="w-4 h-4 shrink-0" aria-hidden="true" />
+            <WhatsappIcon className="w-4 h-4 shrink-0" aria-hidden="true" />
             <span>WhatsApp पर पूछें</span>
           </a>
 
@@ -219,7 +220,7 @@ export default function Footer() {
               aria-label="Visit Sapna Shri Jewellers on Facebook"
               className="p-2 rounded-full border border-theme/40 hover:text-primary hover:border-primary transition-[color,border-color,transform] duration-150 hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary will-change-[transform]"
             >
-              <FaFacebookF className="w-4 h-4 shrink-0" aria-hidden="true" />
+              <FacebookIcon className="w-4 h-4 shrink-0" aria-hidden="true" />
               <span className="sr-only">Facebook</span>
             </a>
 
@@ -230,7 +231,7 @@ export default function Footer() {
               aria-label="Follow Sapna Shri Jewellers on Instagram"
               className="p-2 rounded-full border border-theme/40 hover:text-primary hover:border-primary transition-[color,border-color,transform] duration-150 hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary will-change-[transform]"
             >
-              <FaInstagram className="w-4 h-4 shrink-0" aria-hidden="true" />
+              <InstagramIcon className="w-4 h-4 shrink-0" aria-hidden="true" />
               <span className="sr-only">Instagram</span>
             </a>
 
@@ -241,7 +242,7 @@ export default function Footer() {
               aria-label="Subscribe to Sapna Shri Jewellers on YouTube"
               className="p-2 rounded-full border border-theme/40 hover:text-primary hover:border-primary transition-[color,border-color,transform] duration-150 hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary will-change-[transform]"
             >
-              <FaYoutube className="w-4 h-4 shrink-0" aria-hidden="true" />
+              <YoutubeIcon className="w-4 h-4 shrink-0" aria-hidden="true" />
               <span className="sr-only">YouTube</span>
             </a>
           </div>

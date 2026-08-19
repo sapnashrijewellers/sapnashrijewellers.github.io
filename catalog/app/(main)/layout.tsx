@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { Yatra_One } from "next/font/google";
 import "@/app/globals.css";
 import "@/app/splash.css";
 import { Noto_Sans_Devanagari } from "next/font/google";
@@ -11,6 +12,16 @@ import Script from "next/script";
 import { AuthProvider } from "@/context/AuthContext";
 import BadgeHandler from "@/components/common/BadgeHandler";
 import GoToTop from "@/components/common/GoToTop";
+
+const yatraOne = Yatra_One({
+  weight: "400",
+  subsets: ["devanagari", "latin"],
+  display: "swap",
+  variable: "--font-yatra-one",
+  preload: true,
+  fallback: ["Noto Sans Devanagari", "serif"],
+  adjustFontFallback: true, // Prevents Cumulative Layout Shift (CLS)
+});
 
 const notoDevanagari = Noto_Sans_Devanagari({
   subsets: ["latin", "devanagari"],
@@ -81,9 +92,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="hi" className={notoDevanagari.variable}>
+    <html lang="hi" className={`${yatraOne.variable} ${notoDevanagari.variable}`}>
       <body
-        className={`${notoDevanagari.className} flex flex-col min-h-screen transition-colors antialiased`}
+        className={`flex flex-col min-h-screen transition-colors antialiased`}
       >
         {/* Accessible Skip Link for Keyboard & Screen Reader Users */}
         <a

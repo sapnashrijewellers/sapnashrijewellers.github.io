@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useId, useCallback } from "react";
-import { FaWhatsapp, FaPlus, FaMinus } from "react-icons/fa";
+import { WhatsappIcon } from "@/components/common/BrandIcons";
+import {Plus, Minus} from "lucide-react"
 import type { Product } from "@/types/catalog";
 
 interface BulkEnquiryProps {
@@ -72,7 +73,7 @@ ${requirements.trim() || "कोई नहीं (None)"}
             className="p-1 rounded-lg text-primary bg-primary/10 transition-transform duration-150 will-change-transform"
             aria-hidden="true"
           >
-            {open ? <FaMinus className="w-3.5 h-3.5" /> : <FaPlus className="w-3.5 h-3.5" />}
+            {open ? <Minus className="w-3.5 h-3.5" /> : <Plus className="w-3.5 h-3.5" />}
           </span>
         </button>
       </h2>
@@ -152,7 +153,7 @@ ${requirements.trim() || "कोई नहीं (None)"}
               focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2
             "
           >
-            <FaWhatsapp className="w-5 h-5 shrink-0" aria-hidden="true" />
+            <WhatsappIcon className="w-5 h-5 shrink-0" aria-hidden="true" />
             <span>व्हाट्सएप पर पूछताछ भेजें (Send on WhatsApp)</span>
           </a>
         </form>

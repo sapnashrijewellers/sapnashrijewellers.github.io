@@ -92,6 +92,7 @@ export default function ProductCard({
             alt={`${product.name} - Sapna Shri Jewellers`}
             fill
             priority={priority}
+            fetchPriority={priority ? "high" : "auto"}
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
             loading={priority ? "eager" : "lazy"}
             decoding="async"

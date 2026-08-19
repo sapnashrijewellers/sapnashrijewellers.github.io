@@ -1,6 +1,6 @@
 import type { Product } from "@/types/catalog";
 import NativeShare from "@/components/product/NativeShare";
-import { FaWhatsapp, FaTelegramPlane } from "react-icons/fa";
+import { WhatsappIcon, TelegramIcon } from "@/components/common/BrandIcons";
 
 interface ProductShareProps {
   product: Product;
@@ -50,7 +50,7 @@ export default function ProductShare({
             active:scale-95 focus:outline-none focus:ring-2 focus:ring-[#25D366]
           "
         >
-          <FaWhatsapp className="w-5 h-5 shrink-0" aria-hidden="true" />
+          <WhatsappIcon className="w-5 h-5 shrink-0" aria-hidden="true" />
           <span className="sr-only">Share on WhatsApp</span>
         </a>
 
@@ -69,7 +69,7 @@ export default function ProductShare({
             active:scale-95 focus:outline-none focus:ring-2 focus:ring-[#229ED9]
           "
         >
-          <FaTelegramPlane className="w-5 h-5 shrink-0" aria-hidden="true" />
+          <TelegramIcon className="w-5 h-5 shrink-0" aria-hidden="true" />
           <span className="sr-only">Share on Telegram</span>
         </a>
 

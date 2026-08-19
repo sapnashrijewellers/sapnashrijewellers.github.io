@@ -7,7 +7,7 @@
     "catalog"
   ],
   "scripts": {
-    "build": "turbo run build",    
+    "build": "turbo run build",
     "dev": "turbo run dev"
   },
   "devDependencies": {
@@ -16,7 +16,7 @@
     "turbo": "^2.10.10"
   },
   "packageManager": "npm@10.9.3",
-  "dependencies": {    
+  "dependencies": {
     "workbox-cacheable-response": "^7.3.0"
   }
 }

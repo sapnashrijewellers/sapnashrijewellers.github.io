@@ -1,4 +1,4 @@
-import { FaWhatsapp } from "react-icons/fa";
+import { WhatsappIcon } from "@/components/common/BrandIcons";
 import type { Product } from "@/types/catalog";
 
 interface OrderViaWhatsappButtonProps {
@@ -54,7 +54,7 @@ export default function OrderViaWhatsappButton({
       `}
     >
       {/* WhatsApp Brand Icon */}
-      <FaWhatsapp
+      <WhatsappIcon
         className="w-7 h-7 sm:w-8 sm:h-8 text-[#25D366] shrink-0"
         aria-hidden="true"
       />

@@ -1,4 +1,4 @@
-import { FaWhatsapp } from "react-icons/fa";
+import { WhatsappIcon } from "@/components/common/BrandIcons";
 
 interface FloatingWhatsAppButtonProps {
   phoneNumber?: string;
@@ -37,7 +37,7 @@ export default function FloatingWhatsAppButton({
           focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 focus:ring-offset-background
         "
       >
-        <FaWhatsapp className="w-7 h-7 sm:w-8 sm:h-8 shrink-0 text-white" aria-hidden="true" />
+        <WhatsappIcon className="w-7 h-7 sm:w-8 sm:h-8 shrink-0 text-white" aria-hidden="true" />
         <span className="sr-only">व्हाट्सएप पर सहायता प्राप्त करें (Contact support on WhatsApp)</span>
       </a>
     </aside>

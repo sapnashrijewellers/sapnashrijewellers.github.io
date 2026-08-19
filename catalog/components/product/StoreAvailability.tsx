@@ -1,5 +1,5 @@
 import { MapPin, Clock, Store, Phone } from "lucide-react";
-import { FaWhatsapp } from "react-icons/fa";
+import { WhatsappIcon } from "@/components/common/BrandIcons";
 
 interface StoreAvailabilityProps {
   productName?: string;
@@ -90,7 +90,7 @@ export default function StoreAvailability({
               focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-1 shrink-0
             "
           >
-            <FaWhatsapp className="h-4 w-4 shrink-0" aria-hidden="true" />
+            <WhatsappIcon className="h-4 w-4 shrink-0" aria-hidden="true" />
             <span>Book Appointment</span>
           </a>
         </div>

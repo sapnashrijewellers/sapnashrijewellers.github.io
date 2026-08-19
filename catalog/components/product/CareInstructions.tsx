@@ -3,7 +3,7 @@
 import { useState, useId, useMemo, useCallback } from "react";
 import careData from "@/data/careInstructions.json";
 import { AppIconMap } from "@/utils/appIcons";
-import { FaPlus, FaMinus } from "react-icons/fa";
+import { Plus, Minus } from "lucide-react";
 import { Sparkles } from "lucide-react";
 
 interface CareInstructionItem {
@@ -70,7 +70,7 @@ export default function CareInstructions({
             className="p-1 rounded-lg text-primary bg-primary/10 transition-transform duration-150 will-change-transform"
             aria-hidden="true"
           >
-            {open ? <FaMinus className="w-3.5 h-3.5" /> : <FaPlus className="w-3.5 h-3.5" />}
+            {open ? <Minus className="w-3.5 h-3.5" /> : <Plus className="w-3.5 h-3.5" />}
           </span>
         </button>
       </h2>

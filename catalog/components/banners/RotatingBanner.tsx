@@ -89,11 +89,10 @@ export default function RotatingBanner({
               <div
                 key={item.bannerImage || idx}
                 aria-hidden={!isActive}
-                className={`absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out ${
-                  isActive
+                className={`absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out ${isActive
                     ? "opacity-100 z-10 pointer-events-auto"
                     : "opacity-0 z-0 pointer-events-none"
-                }`}
+                  }`}
               >
                 <Image
                   src={`${baseURL}/static/img/banner/${item.bannerImage}`}
@@ -101,6 +100,7 @@ export default function RotatingBanner({
                   fill
                   priority={idx === 0} // ✅ Immediate preload only for the first LCP slide
                   loading={idx === 0 ? "eager" : "lazy"}
+                  fetchPriority="high"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 95vw, 1200px"
                   className="object-cover transition-transform duration-700 group-hover:scale-[1.01]"
                 />
@@ -132,11 +132,10 @@ export default function RotatingBanner({
                 aria-current={isSelected ? "true" : undefined}
                 aria-label={slideLabel}
                 onClick={() => setIndex(i)}
-                className={`h-2.5 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary ${
-                  isSelected
+                className={`h-2.5 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary ${isSelected
                     ? "w-7 bg-primary shadow-xs"
                     : "w-2.5 bg-muted-foreground/30 hover:bg-muted-foreground/60"
-                }`}
+                  }`}
               />
             );
           })}

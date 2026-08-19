@@ -1,7 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
-
 @import "tailwindcss";
 @import "tailwindcss/utilities";
+
+@theme {
+  --font-yatra: var(--font-yatra-one), "Noto Sans Devanagari", serif;
+  --font-noto-devanagari: var(--font-noto-devanagari), sans-serif;
+}
 
 /* ============================
    ROOT THEME VARIABLES
@@ -16,26 +19,18 @@
 
   /* Core Surfaces */
   --color-bg: #f7f9fc;
-  /* Page background */
   --color-surface: #ffffff;
-  /* Cards / sections */
   --color-border: #d6deeb;
-  /* Subtle dividers */
 
   /* Text */
   --color-text: #0a2a66;
-  /* #0f172a;                /* Primary text */
   --color-primary: #c9a24d;
   --color-primary-dark: #081f4d;
-  /*#a8832f;*/
 
   /* Brand Blues */
   --color-accent: #0a2a66;
-  /* Royal blue */
   --color-accent-bg: #081f4d;
-  /* Deep navy */
   --color-accent-text: #f8f4e6;
-  /* Ivory gold */
 
   /* Footer */
   --color-footer-bg: #050e24;
@@ -49,7 +44,7 @@
   --color-footer-trust-icon: #c9a24d;
 
   /* Fonts */
-  --font-yatra: 'Yatra One', 'Noto Sans Devanagari', serif;
+  --font-yatra: var(--font-yatra-one), "Noto Sans Devanagari", serif;
 }
 
 /* ============================
@@ -57,16 +52,12 @@
 ============================ */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: #000;
-    /*#020617;*/
+    --color-bg: #000000;
     --color-accent-bg: #f9f6ea;
-    /*#071a3a;*/
     --color-surface: #000000;
-
     --color-border: #f7e2b2;
 
     --color-text: #f7e2b2;
-    /*rgba(255, 255, 255, 0.92);*/
     --color-primary: #c4a458;
     --color-primary-dark: #b38511;
     --color-accent: #0a2a66;
@@ -82,7 +73,6 @@
     --color-footer-trust-icon: #d6b35f;
   }
 }
-
 /* ============================
    UTILITIES
 ============================ */

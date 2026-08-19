@@ -21,6 +21,7 @@ import Image from "next/image";
 type NavItem = {
   label: string;
   title: string;
+  ariaLabel?: string;
   icon: React.ReactNode;
   href?: string;
   onClick?: () => void;
@@ -49,8 +50,7 @@ export default function ResponsiveNavbar() {
     }
   };
 
-  // Do not render the navbar until Firebase has
-  // finished determining the authentication state.
+  // Do not render the navbar until Firebase has finished resolving auth state
   if (authLoading) {
     return null;
   }
@@ -59,20 +59,23 @@ export default function ResponsiveNavbar() {
     {
       label: "Hallmark",
       href: "/huid/",
-      title: "Hallmark",
-      icon: <Triangle size={22} />,
+      title: "Hallmark Verification",
+      ariaLabel: "View Hallmark and HUID Verification",
+      icon: <Triangle size={22} aria-hidden="true" />,
     },
     {
       label: "Wishlist",
       href: "/wishlist/",
       title: "Wishlist",
-      icon: <Heart size={22} />,
+      ariaLabel: "View your Wishlist items",
+      icon: <Heart size={22} aria-hidden="true" />,
     },
     {
       label: "Cart",
       href: "/cart/",
       title: "Cart",
-      icon: <ShoppingCart size={22} />,
+      ariaLabel: "View your Shopping Cart",
+      icon: <ShoppingCart size={22} aria-hidden="true" />,
     },
 
     ...(user
@@ -81,32 +84,33 @@ export default function ResponsiveNavbar() {
             label: "Orders",
             href: "/orders/",
             title: "Your Orders",
-            icon: <ClipboardList size={22} />,
+            ariaLabel: "View your previous orders and purchases",
+            icon: <ClipboardList size={22} aria-hidden="true" />,
           },
         ]
       : []),
 
     {
       label: user ? "Sign Out" : "Sign In",
-      title: "Authentication",
-
+      title: user ? "Sign out of your account" : "Sign in with Google",
+      ariaLabel: user ? "Sign out of your account" : "Sign in to your account with Google",
       icon: user ? (
         user.photoURL ? (
           <Image
             src={user.photoURL}
-            alt={user.displayName || "User"}
+            alt={user.displayName || "User profile photo"}
             width={24}
             height={24}
             className="h-6 w-6 rounded-full object-cover border border-gray-200"
             referrerPolicy="no-referrer"
+            priority
           />
         ) : (
-          <LogOut size={22} />
+          <LogOut size={22} aria-hidden="true" />
         )
       ) : (
-        <LogIn size={22} />
+        <LogIn size={22} aria-hidden="true" />
       ),
-
       onClick: user ? logout : login,
     },
   ];
@@ -120,6 +124,7 @@ export default function ResponsiveNavbar() {
 
   const renderItem = (item: NavItem) => {
     const active = isActive(item.href);
+    const itemAriaLabel = item.ariaLabel || item.title || item.label;
 
     const cls = `
       flex flex-row md:flex-col
@@ -127,7 +132,7 @@ export default function ResponsiveNavbar() {
       gap-1 md:gap-1.5
       text-left md:text-center
       transition cursor-pointer
-      ${active ? "text-primary-dark" : ""}
+      ${active ? "text-primary-dark font-semibold" : ""}
     `;
 
     const content = (
@@ -135,7 +140,6 @@ export default function ResponsiveNavbar() {
         <span className="flex text-start items-center justify-center">
           {item.icon}
         </span>
-
         <span className="text-sm md:text-xs leading-none justify-center">
           {item.label}
         </span>
@@ -149,6 +153,7 @@ export default function ResponsiveNavbar() {
           type="button"
           onClick={item.onClick}
           title={item.title}
+          aria-label={itemAriaLabel}
           className={cls}
         >
           {content}
@@ -161,6 +166,7 @@ export default function ResponsiveNavbar() {
         key={item.href}
         href={item.href!}
         title={item.title}
+        aria-label={itemAriaLabel}
         aria-current={active ? "page" : undefined}
         className={cls}
         onClick={() => setMenuOpen(false)}
@@ -171,32 +177,34 @@ export default function ResponsiveNavbar() {
   };
 
   return (
-    <div className="flex items-start md:items-center gap-1">
-
-      {/* Mobile hamburger */}
+    <nav aria-label="Main Navigation" className="flex items-start md:items-center gap-1">
+      {/* Mobile hamburger menu */}
       <div className="md:hidden relative">
         <button
           type="button"
           className="ssj-btn"
           onClick={() => setMenuOpen((open) => !open)}
-          aria-label="Menu"
+          aria-label={menuOpen ? "Close menu" : "Open navigation menu"}
           aria-expanded={menuOpen}
+          aria-controls="mobile-nav-dropdown"
         >
-          {menuOpen ? <X size={22} /> : <Menu size={22} />}
+          {menuOpen ? <X size={22} aria-hidden="true" /> : <Menu size={22} aria-hidden="true" />}
         </button>
 
         {menuOpen && (
-          <div className="absolute right-0 mt-2 w-48 bg-surface shadow-lg rounded-md p-2 flex flex-col gap-2 z-50">
+          <div
+            id="mobile-nav-dropdown"
+            className="absolute right-0 mt-2 w-48 bg-surface shadow-lg rounded-md p-2 flex flex-col gap-2 z-50"
+          >
             {PRIMARY_NAV.map(renderItem)}
           </div>
         )}
       </div>
 
-      {/* Desktop navigation */}
-      <div className="hidden md:flex items-center gap-2">
+      {/* Desktop navigation bar */}
+      <div className="hidden md:flex items-center gap-3">
         {PRIMARY_NAV.map(renderItem)}
       </div>
-
-    </div>
+    </nav>
   );
 }

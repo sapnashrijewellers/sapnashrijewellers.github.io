@@ -12,6 +12,7 @@ export function QuantityControl({ qty, onChange }: QuantityControlProps) {
         className="ssj-btn-outline px-3"
         disabled={qty <= 1}
         onClick={() => onChange(qty - 1)}
+        aria-label="Decrease product quantity by one"
       >
         <Minus size={16} strokeWidth={3} />
       </button>
@@ -24,6 +25,7 @@ export function QuantityControl({ qty, onChange }: QuantityControlProps) {
         className="ssj-btn-outline px-3"
         disabled={qty >= 10}
         onClick={() => onChange(qty + 1)}
+        aria-label="Increase product quantity by one"
       >
         <Plus size={16} strokeWidth={3} />
       </button>

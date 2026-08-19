@@ -84,6 +84,7 @@ export default function TestimonialScroller() {
         {/* Controls */}
         <button
           onClick={() => scrollByCard("left")}
+          aria-label="click to scroll left testimonial card"
           className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-10
                      bg-surface border border-theme rounded-full p-2 shadow"
         >
@@ -92,6 +93,7 @@ export default function TestimonialScroller() {
 
         <button
           onClick={() => scrollByCard("right")}
+          aria-label="click to scroll right testimonial card"
           className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-10
                      bg-surface border border-theme rounded-full p-2 shadow"
         >

@@ -40,6 +40,7 @@ export default function PaymentStep({
                 <button
                     className="ssj-btn-outline w-full"
                     onClick={onBack}
+                    aria-label="Go to privious step"
                 >
                     <ChevronLeft size={16} strokeWidth={3} />
                     Back

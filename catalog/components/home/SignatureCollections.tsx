@@ -36,6 +36,7 @@ export default function SignatureCollections({
             <button
               key={m}
               onClick={() => setMaterial(m)}
+              aria-label={`click to go to ${m} category collection`}
               className={`
                 px-6 py-2 text-sm font-medium transition 
                 ${

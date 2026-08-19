@@ -31,7 +31,7 @@ export default function SocialAuthMenu({ onAction, mobile }: Props) {
     return (
       <button
         onClick={logout}
-        aria-label="Logout"
+        aria-label="Logout from application"
         role={mobile ? "menuitem" : undefined}
         className={baseClasses}
       >

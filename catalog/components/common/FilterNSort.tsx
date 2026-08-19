@@ -30,6 +30,7 @@ export default function FilterNSort({
                     <button
                         key={m}
                         onClick={() => onFilterChange("material", m)}
+                        aria-label={`Material filter choose ${m}`}
                         className={`
       border px-6 ssj-btn py-2 text-sm font-medium transition shrink-0 flex items-center justify-center
       ${filters.material?.toLowerCase() === m.toLowerCase()
@@ -42,8 +43,8 @@ export default function FilterNSort({
                     </button>
                 ))}
                 <button ref={filterBtnRef}
-                    className="ssj-btn bg-accent shrink-0 flex items-center justify-center
-           w-10 h-10 sm:w-9 sm:h-9"
+                    className="ssj-btn bg-accent shrink-0 flex items-center justify-center w-10 h-10 sm:w-9 sm:h-9"
+                    aria-label="Click to expland filter options like weight, gender etc."
                     title="Filter results">
                     <Funnel size={16} />
                 </button>
@@ -56,8 +57,8 @@ export default function FilterNSort({
 
                 <div className="relative">
                     <button ref={sortBtnRef}
-                        className="ssj-btn bg-accent shrink-0 flex items-center justify-center
-           w-10 h-10 sm:w-9 sm:h-9"
+                        className="ssj-btn bg-accent shrink-0 flex items-center justify-center w-10 h-10 sm:w-9 sm:h-9"
+                        aria-label="Click to see sort options like by name, weight and best match"
                         title="Sort results">
                         <ArrowUpDown size={16} />
                     </button>

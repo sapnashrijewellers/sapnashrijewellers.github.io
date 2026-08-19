@@ -15,6 +15,7 @@ export default function FloatingWhatsAppButton() {
       <button
         className="p-4 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-105 active:scale-95 bg-green-500 hover:bg-green-600 text-white"
         title={`Chat on WhatsApp: +${MY_PHONE_NUMBER}`}
+        aria-label="Click to start whatsapp chat"
         onClick={handleClick}
       >
         <FaWhatsapp size={30} />

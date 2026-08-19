@@ -23,6 +23,7 @@ export function PriceSummary({
         <button
           onClick={onEditPayment}
           className="text-sm underline cursor-pointer"
+          aria-label="Edit cart items"
         >
           Edit
         </button>

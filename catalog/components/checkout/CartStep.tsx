@@ -77,7 +77,7 @@ export default function CartStep({
                       )
                     )
                   }
-                  aria-label="Remove item"
+                  aria-label="Remove item from the cart"
                 >
                   <Trash2 size={22} />
                 </button>

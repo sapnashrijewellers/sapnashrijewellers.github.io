@@ -36,10 +36,14 @@ export default function ReviewStep(
       <PriceSummary paymentMethod={paymentMethod} priceSummary={priceSummary} onEditPayment={onEditPayment} />
       <PayViaUPIButton finalPrice={paymentMethod == "UPI" ? priceSummary.finalPrice : priceSummary.shipping + priceSummary.cod} />
       <div className="flex gap-3 mt-6">
-        <button className="ssj-btn-outline w-full" onClick={onBack}>
+        <button className="ssj-btn-outline w-full" onClick={onBack}
+        aria-label="Go to privious step"
+        >
           <ChevronLeft size={16} strokeWidth={3} />Back
         </button>
-        <button className="ssj-btn-outline w-full bg-amber-600 font-bold" onClick={onNext}>
+        <button className="ssj-btn-outline w-full bg-amber-600 font-bold" onClick={onNext}
+        aria-label="Place order and make payment"
+        >
           <PackageCheck size={16} strokeWidth={3} />Place Order
         </button>
       </div>

@@ -141,6 +141,7 @@ ${productLines}
         onClick={submitOrder}
         disabled={submitting}
         className="ssj-btn w-full"
+        aria-label="Confirm and place order"
       >
         {submitting ? (
           <>

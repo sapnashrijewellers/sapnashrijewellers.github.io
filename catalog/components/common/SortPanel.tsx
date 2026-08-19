@@ -73,6 +73,7 @@ export function SortPanel({ sortBy, onSortChange, triggerRef }: SortPanelProps) 
         {options.map((opt) => (
           <button
             key={opt.value}
+            aria-label={`sort by ${opt.value}`}
             onClick={() => {
               onSortChange(opt.value);
               setOpen(false); // good UX

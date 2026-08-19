@@ -7,6 +7,7 @@ import Breadcrumb from "@/components/navbar/BreadcrumbItem";
 import JewelryTypeClient from "./JewelryTypeClient";
 import { buildJewelryTypePageJsonLd } from "@/utils/buildJewelryTypePageJsonLd";
 import JsonLd from "@/components/common/JsonLd";
+import rates from "@/data/rates.json";
 
 const baseURL = process.env.NEXT_PUBLIC_BASE_URL!;
 
@@ -20,13 +21,13 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const t = types.find(t => t.slug === slug);
-  if (!t) return {};  
+  if (!t) return {};
 
   const imageUrl = `${baseURL}/android-chrome-192x192.png`;
-  
+
   return {
     title: `${t.type} jewelry collection by Sapna Shri Jewellers`,
-    description: t.description,    
+    description: t.description,
     alternates: {
       canonical: `${baseURL}/jewelry-type/${slug}`,
     },
@@ -38,25 +39,22 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-export default async  function JewelryTypePage(
+export default async function JewelryTypePage(
   { params }: { params: { slug: string } }
 ) {
-    const { slug } = await params;
-    const t = types.find(
-        (t: Type) => t.slug === slug && t.active
-    );
-     if (!t) notFound();
+  const { slug } = await params;
+  const t = types.find(
+    (t: Type) => t.slug === slug && t.active
+  );
+  if (!t) notFound();
 
   const baseProducts = products
     .filter(p => p.type.includes(t.type) && p.active)
     .sort((a, b) =>
       Number(b.available) - Number(a.available)
     );
- 
-  const JsonLdObj = buildJewelryTypePageJsonLd(
-      baseProducts,
-      t      
-    );
+
+  const JsonLdObj = buildJewelryTypePageJsonLd(baseProducts, t, rates);
 
   return (
     <div className="container mx-auto">

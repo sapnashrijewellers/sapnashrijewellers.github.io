@@ -9,6 +9,7 @@ import { buildCategoryPageJsonLd } from "@/utils/buildCategoryPageJsonLd";
 import JsonLd from "@/components/common/JsonLd";
 import RotatingBanner from "@/components/banners/RotatingBanner";
 import SEO from "@/components/common/SEO";
+import rates from "@/data/rates.json";
 
 
 const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
@@ -82,7 +83,7 @@ export default async function CategoryPage({ params }: { params: { slug: string 
             }            
             return 0;
         });
-    const JsonLdObj = buildCategoryPageJsonLd(filtered, category);
+    const JsonLdObj = buildCategoryPageJsonLd(filtered, category, rates);
 
     return (
         <div className="container mx-auto">

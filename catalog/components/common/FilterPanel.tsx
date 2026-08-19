@@ -5,7 +5,10 @@ import { SearchFilters } from "@/types/catalog";
 
 interface FilterPanelProps {
   filters: SearchFilters;
-  onChange: (key: keyof SearchFilters, value: SearchFilters) => void;
+  onChange: <K extends keyof SearchFilters>(
+    key: K,
+    value: SearchFilters[K]
+  ) => void;
   triggerRef: RefObject<HTMLButtonElement | null>;
 }
 
@@ -49,7 +52,6 @@ export function FilterPanel({ filters, onChange, triggerRef }: FilterPanelProps)
     };
   }, [triggerRef]);
 
-  
   return (
     <div
       ref={panelRef}
@@ -67,7 +69,10 @@ export function FilterPanel({ filters, onChange, triggerRef }: FilterPanelProps)
           placeholder="Min Weight (g)"
           value={filters.minWeight ?? ""}
           onChange={(e) =>
-            onChange("minWeight", e.target.value ? parseFloat(e.target.value) : undefined)
+            onChange(
+              "minWeight",
+              (e.target.value ? parseFloat(e.target.value) : undefined) as SearchFilters["minWeight"]
+            )
           }
           className="p-2 border border-theme rounded"
         />
@@ -77,15 +82,23 @@ export function FilterPanel({ filters, onChange, triggerRef }: FilterPanelProps)
           placeholder="Max Weight (g)"
           value={filters.maxWeight ?? ""}
           onChange={(e) =>
-            onChange("maxWeight", e.target.value ? parseFloat(e.target.value) : undefined)
+            onChange(
+              "maxWeight",
+              (e.target.value ? parseFloat(e.target.value) : undefined) as SearchFilters["maxWeight"]
+            )
           }
-          className="p-2 border border-theme rounded "
+          className="p-2 border border-theme rounded"
         />
 
         <select
           value={filters.forWhom ?? ""}
-          onChange={(e) => onChange("forWhom", e.target.value || undefined)}
-          className="p-2 border border-theme rounded "
+          onChange={(e) =>
+            onChange(
+              "forWhom",
+              (e.target.value || undefined) as SearchFilters["forWhom"]
+            )
+          }
+          className="p-2 border border-theme rounded"
         >
           <option value="">For Everyone</option>
           <option value="her">For Her</option>

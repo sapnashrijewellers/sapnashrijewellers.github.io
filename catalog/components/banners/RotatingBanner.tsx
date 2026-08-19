@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -15,23 +15,23 @@ const imageAnimationMap = {
   none: {
     initial: {},
     animate: {},
-    exit: {}
+    exit: {},
   },
   "subtle-zoom": {
     initial: { scale: 1.08 },
     animate: { scale: 1 },
-    exit: { scale: 1.05 }
+    exit: { scale: 1.05 },
   },
   fade: {
     initial: { opacity: 0 },
     animate: { opacity: 1 },
-    exit: { opacity: 0 }
+    exit: { opacity: 0 },
   },
   "pan-right": {
     initial: { scale: 1.1, x: -30 },
     animate: { scale: 1, x: 0 },
-    exit: { scale: 1.05, x: 30 }
-  }
+    exit: { scale: 1.05, x: 30 },
+  },
 } as const;
 
 interface Props {
@@ -40,26 +40,20 @@ interface Props {
   page?: string;
 }
 
-
 /* --------------------------------------------
    Component
 --------------------------------------------- */
-
-
 export default function RotatingBanner({
   interval = 10000,
   height = "h-120",
-  page = "home"
+  page = "home",
 }: Props) {
-
   const [index, setIndex] = useState(0);
-  const reducedMotion = useReducedMotion();
   const bannerRef = useRef<HTMLDivElement | null>(null);
-  const items = banners
-    .filter(b => b.page === page)
-    .sort((a, b) => a.rank - b.rank);
-  
 
+  const items = banners
+    .filter((b) => b.page === page)
+    .sort((a, b) => a.rank - b.rank);
 
   /* --------------------------------------------
      Rotation timer
@@ -68,7 +62,7 @@ export default function RotatingBanner({
     if (items.length <= 1) return;
 
     const id = setInterval(
-      () => setIndex(i => (i + 1) % items.length),
+      () => setIndex((i) => (i + 1) % items.length),
       interval
     );
 
@@ -78,23 +72,18 @@ export default function RotatingBanner({
   if (items.length === 0) {
     return null;
   }
-  
-  const current = items[index];
 
+  const current = items[index];
 
   /* --------------------------------------------
      Resolve animations safely
   --------------------------------------------- */
-
   const imageAnimationKey =
     current.imageAnimation in imageAnimationMap
       ? (current.imageAnimation as keyof typeof imageAnimationMap)
       : "pan-right";
 
-  const imageMotion =
-    reducedMotion
-      ? imageAnimationMap.fade
-      : imageAnimationMap[imageAnimationKey];
+  const imageMotion = imageAnimationMap[imageAnimationKey];
 
   /* --------------------------------------------
      Render
@@ -107,7 +96,7 @@ export default function RotatingBanner({
           className={`relative w-full overflow-hidden rounded-2xl shadow-lg ${height}`}
         >
           {/* ================= Image ================= */}
-          <AnimatePresence mode="wait">
+          <AnimatePresence mode="wait" initial={false}>
             <motion.div
               key={`${current.bannerImage}-${imageAnimationKey}`}
               className="absolute inset-0"
@@ -118,7 +107,7 @@ export default function RotatingBanner({
             >
               <Image
                 src={`${baseURL}/static/img/banner/${current.bannerImage}`}
-                alt={"Banner"}
+                alt="Banner"
                 fill
                 priority
                 loading="eager"
@@ -126,9 +115,6 @@ export default function RotatingBanner({
               />
             </motion.div>
           </AnimatePresence>
-
-
-
         </div>
       </Link>
 
@@ -140,10 +126,11 @@ export default function RotatingBanner({
               key={i}
               onClick={() => setIndex(i)}
               aria-label={`Go to banner ${i + 1}`}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${i === index
-                ? "bg-black scale-125"
-                : "bg-black/30 hover:bg-black/50"
-                }`}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                i === index
+                  ? "bg-black scale-125"
+                  : "bg-black/30 hover:bg-black/50"
+              }`}
             />
           ))}
         </div>

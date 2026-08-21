@@ -6,13 +6,13 @@ import Link from "next/link";
 import banners from "@/data/banners.json";
 
 interface BannerItem {
-  page?: string;
-  rank?: number;
-  bannerImage: string;
-  link?: string;
-  title?: string;
-  alt?: string;
-}
+  rank: number;
+  bannerDesktop: string;
+  bannerMobile?: string;
+  link: string;
+  text: string;
+  imageAnimation: string
+} 
 
 interface RotatingBannerProps {
   interval?: number;
@@ -20,7 +20,7 @@ interface RotatingBannerProps {
   className?: string;
 }
 
-const baseURL = process.env.NEXT_PUBLIC_BASE_URL ?? "";
+const baseURL = (process.env.NEXT_PUBLIC_BASE_URL ?? "").replace(/\/+$/, "");
 
 export default function RotatingBanner({
   interval = 8000,
@@ -31,33 +31,21 @@ export default function RotatingBanner({
   const [isPaused, setIsPaused] = useState(false);
   const carouselId = useId();
 
-  const items: BannerItem[] = banners
-    .filter((b) => b.page === page)
+  const items: BannerItem[] = (banners as BannerItem[])
     .sort((a, b) => (a.rank ?? 0) - (b.rank ?? 0));
 
-  /* --------------------------------------------
-     Auto-Rotation Timer (Pauses on Hover / Focus)
-  --------------------------------------------- */
   useEffect(() => {
     if (items.length <= 1 || isPaused) return;
-
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % items.length);
     }, interval);
-
     return () => clearInterval(timer);
   }, [items.length, interval, isPaused]);
 
-  if (items.length === 0) {
-    return null;
-  }
+  if (items.length === 0) return null;
 
   const current = items[index];
   const bannerHref = current.link || "#";
-  const bannerAlt =
-    current.alt ||
-    current.title ||
-    `Featured promotional jewellery banner ${index + 1}`;
 
   return (
     <section
@@ -70,47 +58,63 @@ export default function RotatingBanner({
       onFocus={() => setIsPaused(true)}
       onBlur={() => setIsPaused(false)}
     >
-      {/* 1. Main Banner Surface with Pre-defined Aspect Ratio (Prevents CLS) */}
-      <div className="relative w-full aspect-[2/1] sm:aspect-[2.3/1] md:aspect-[2.8/1] lg:aspect-[3/1] overflow-hidden rounded-2xl shadow-md bg-muted/40 border border-theme/30">
+      {/* Aspect Ratio Container preventing CLS across breakpoints */}
+      <div className="relative w-full aspect-[4/3] sm:aspect-[2.2/1] lg:aspect-[3/1] max-h-[520px] overflow-hidden rounded-2xl shadow-md bg-muted/20 border border-theme/30">
         <Link
           href={bannerHref}
-          aria-label={current.title || bannerAlt}
+          aria-label={current.text}
           className="group block relative w-full h-full focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-2xl"
-          tabIndex={0}
         >
           {items.map((item, idx) => {
             const isActive = idx === index;
-            const itemAlt =
-              item.alt ||
-              item.title ||
-              `Featured jewellery banner ${idx + 1}`;
+            const itemAlt = item.text;
+            const desktopImg = `${baseURL}/static/img/banner/optimized/${item.bannerDesktop}`;
+            const mobileImg =  `${baseURL}/static/img/banner/optimized/${item.bannerMobile}`;
+              
 
             return (
               <div
-                key={item.bannerImage || idx}
+                key={item.bannerDesktop || idx}
                 aria-hidden={!isActive}
                 className={`absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out ${isActive
                     ? "opacity-100 z-10 pointer-events-auto"
                     : "opacity-0 z-0 pointer-events-none"
                   }`}
               >
-                <Image
-                  src={`${baseURL}/static/img/banner/${item.bannerImage}`}
-                  alt={itemAlt}
-                  fill
-                  priority={idx === 0} // ✅ Immediate preload only for the first LCP slide
-                  loading={idx === 0 ? "eager" : "lazy"}
-                  fetchPriority="high"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 95vw, 1200px"
-                  className="object-cover transition-transform duration-700 group-hover:scale-[1.01]"
-                />
+                {/* Mobile Viewport Image */}
+                <div className="block sm:hidden relative w-full h-full">
+                  <Image
+                    src={mobileImg}
+                    alt={itemAlt}
+                    fill
+                    priority={idx === 0}
+                    loading={idx === 0 ? "eager" : "lazy"}
+                    fetchPriority={idx === 0 ? "high" : "auto"}
+                    sizes="100vw"
+                    className="object-cover object-center"
+                  />
+                </div>
+
+                {/* Tablet & Desktop Viewport Image */}
+                <div className="hidden sm:block relative w-full h-full">
+                  <Image
+                    src={desktopImg}
+                    alt={itemAlt}
+                    fill
+                    priority={idx === 0}
+                    loading={idx === 0 ? "eager" : "lazy"}
+                    fetchPriority={idx === 0 ? "high" : "auto"}
+                    sizes="(max-width: 1024px) 100vw, (max-width: 1536px) 1400px, 1920px"
+                    className="object-cover object-center"
+                  />
+                </div>
               </div>
             );
           })}
         </Link>
       </div>
 
-      {/* 2. Accessible Carousel Pagination Controls */}
+      {/* Accessible Navigation Controls */}
       {items.length > 1 && (
         <div
           role="tablist"
@@ -119,22 +123,17 @@ export default function RotatingBanner({
         >
           {items.map((item, i) => {
             const isSelected = i === index;
-            const slideLabel = item.title
-              ? `Go to slide ${i + 1}: ${item.title}`
-              : `Go to slide ${i + 1} of ${items.length}`;
-
             return (
               <button
                 key={i}
                 type="button"
                 role="tab"
                 aria-selected={isSelected}
-                aria-current={isSelected ? "true" : undefined}
-                aria-label={slideLabel}
+                aria-label={`Go to slide ${i + 1}: ${item.text || "Featured banner"}`}
                 onClick={() => setIndex(i)}
-                className={`h-2.5 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary ${isSelected
-                    ? "w-7 bg-primary shadow-xs"
-                    : "w-2.5 bg-muted-foreground/30 hover:bg-muted-foreground/60"
+                className={`h-2 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary ${isSelected
+                    ? "w-6 bg-primary shadow-xs"
+                    : "w-2 bg-muted-foreground/30 hover:bg-muted-foreground/60"
                   }`}
               />
             );

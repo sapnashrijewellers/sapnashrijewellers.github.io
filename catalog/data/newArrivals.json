@@ -252,7 +252,6 @@
     "type": [
       "Party Wear",
       "Kids Silver Jewellery",
-      "Silver Couple Jewellery",
       "Birthday Silver Gifts"
     ],
     "highlights": [
@@ -271,7 +270,7 @@
     ],
     "brandText": "Crafted from Genuine 925 Silver",
     "care": "SILVER_GENERAL",
-    "for": "him",
+    "for": "unisex",
     "purity": "silverJewellery",
     "weight": 4.5,
     "makingCharges": 50,

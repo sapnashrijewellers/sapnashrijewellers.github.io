@@ -10,7 +10,7 @@ const title = "Sapna Shri Jewellers Nagda | सपना श्री ज्व�
 const description =
   "Sapna Shri Jewellers Nagda - सोने और चांदी के आभूषणों में 35+ वर्षों का अनुभव। BIS 916 हॉलमार्क गोल्ड, सर्टिफाइड डायमंड और पारदर्शी सेवा।";
 const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in";
-const imageUrl = `${baseURL}/static/img/shop.png`;
+const imageUrl = `${baseURL}/static/img/shop.webp`;
 
 export const metadata: Metadata = {
   title,
@@ -156,8 +156,8 @@ export default function AboutUsPage() {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto">
           {[
-            { img: "blgang.png", name: "श्री भवरलाल गांग", title: "संस्थापक" },
-            { img: "amish.png", name: "अमीश कुमार गांग", title: "स्वामी / उत्तराधिकारी" },
+            { img: "blgang.webp", name: "श्री भवरलाल गांग", title: "संस्थापक" },
+            { img: "amish.webp", name: "अमीश कुमार गांग", title: "स्वामी / उत्तराधिकारी" },
           ].map((owner) => (
             <div key={owner.name} className="text-center">
               <div className="relative w-48 h-64 mx-auto mb-3">

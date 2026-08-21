@@ -5301,7 +5301,7 @@
     ],
     "brandText": "Made with High-Quality 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
-    "for": "him",
+    "for": "unisex",
     "purity": "silverJewellery",
     "weight": 8.04,
     "makingCharges": 50,
@@ -5323,8 +5323,7 @@
     "category": "Baby Nazariya Bracelets",
     "type": [
       "Party Wear",
-      "Kids Silver Jewellery",
-      "Silver Couple Jewellery"
+      "Kids Silver Jewellery"
     ],
     "highlights": [
       "💎 Material: 925 Silver with 92.5% Silver Purity",
@@ -5342,7 +5341,7 @@
     ],
     "brandText": "Authentic 925 Silver for Elegant Jewellery",
     "care": "SILVER_GENERAL",
-    "for": "him",
+    "for": "unisex",
     "purity": "silverJewellery",
     "weight": 5.37,
     "makingCharges": 50,
@@ -5363,8 +5362,8 @@
     "name": "Baby Red Bird Silver Bracelet",
     "category": "Baby Nazariya Bracelets",
     "type": [
-      "Silver Couple Jewellery",
-      "Daily Wear"
+      "Daily Wear",
+      "Kids Silver Jewellery"
     ],
     "highlights": [
       "💎 Material: 925 Sterling Silver Jewellery",
@@ -5382,7 +5381,7 @@
     ],
     "brandText": "92.5% Silver Purity with Premium Craftsmanship",
     "care": "SILVER_GENERAL",
-    "for": "him",
+    "for": "unisex",
     "purity": "silverJewellery",
     "weight": 4.82,
     "makingCharges": 50,
@@ -5405,7 +5404,6 @@
     "type": [
       "Party Wear",
       "Kids Silver Jewellery",
-      "Silver Couple Jewellery",
       "Birthday Silver Gifts"
     ],
     "highlights": [
@@ -5424,7 +5422,7 @@
     ],
     "brandText": "Crafted from Genuine 925 Silver",
     "care": "SILVER_GENERAL",
-    "for": "him",
+    "for": "unisex",
     "purity": "silverJewellery",
     "weight": 4.5,
     "makingCharges": 50,
@@ -11176,6 +11174,340 @@
     "MRP": 4966
   },
   {
+    "id": 318,
+    "name": "Sawariya Seth Gold Ring",
+    "category": "Religious Gold Rings",
+    "type": [
+      "Daily Wear"
+    ],
+    "highlights": [
+      "Design: Sawariya Seth Inspired Traditional Gold Ring",
+      "Metal: Pure Gold Jewellery",
+      "Finish: Premium High Polish Finish",
+      "Style: Religious & Traditional Ring Design",
+      "Suitable For: Men",
+      "Occasion: Daily Wear, Festivals & Spiritual Gifting",
+      "Craftsmanship: Detailed Handmade Jewellery Work"
+    ],
+    "description": "Celebrate devotion and elegance with this beautifully crafted Sawariya Seth Gold Ring, inspired by the divine charm of Lord Krishna. Designed with a detailed square top surface featuring traditional motifs, this gold ring showcases a perfect blend of spirituality, royal craftsmanship, and timeless style.\n\nThe intricate side patterns and premium gold finish enhance its traditional appeal, making it an ideal choice for devotees and jewellery lovers who appreciate unique religious designs. This Sawariya Seth Gold Ring can be worn for daily spiritual connection or special occasions, adding a divine touch to your jewellery collection.\\",
+    "images": [
+      "original-sawariya-seth-gold-ring-ssj-318-a.webp",
+      "seth-gold-ring-new-design-ssj-318-b.webp",
+      "traditional-sawariya-seth-gold-ring-ssj-318-c.webp",
+      "premium-sawariya-seth-gold-ring-ssj-318-d.webp"
+    ],
+    "brandText": "",
+    "care": "",
+    "for": "",
+    "purity": "",
+    "weight": 6.151,
+    "makingCharges": 0,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": false,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "slug": "sawariya-seth-gold-ring-318",
+    "price": 1711,
+    "MRP": 1711
+  },
+  {
+    "id": 319,
+    "name": "Mahadev Trishul Gold Ring",
+    "category": "Religious Gold Rings",
+    "type": [
+      "Office Wear"
+    ],
+    "highlights": [
+      "Design: Lord Mahadev Trishul Inspired Ring",
+      "Metal: Pure Gold Jewellery",
+      "Finish: Premium Polished Gold Finish",
+      "Style: Religious & Spiritual Jewellery",
+      "Suitable For: Men",
+      "Occasion: Daily Wear, Mahashivratri, Festivals & Gifting",
+      "Craftsmanship: Detailed Traditional Gold Work"
+    ],
+    "description": "Bring divine energy and traditional elegance together with this beautifully designed Mahadev Trishul Gold Ring. Inspired by Lord Shiva’s powerful Trishul symbol, this ring represents strength, protection, devotion, and spiritual connection.\n\nThe circular Trishul design on the top with detailed golden craftsmanship gives this ring a unique religious appeal. Crafted for those who admire spiritual jewellery, this Lord Mahadev Gold Ring is perfect for daily wear, festive occasions, and devotional gifting.",
+    "images": [
+      "new-gold-mahadev-trishul-ring-ssj-319-a.webp",
+      "mahadev-trishul-gold-ring-design-ssj-319-b.webp",
+      "trishul-symbol-gold-ring-men-ssj-319-c.webp",
+      "handmade-mahadev-gold-ring-ssj-319-d.webp"
+    ],
+    "brandText": "",
+    "care": "",
+    "for": "",
+    "purity": "",
+    "weight": 3.42,
+    "makingCharges": 0,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": false,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "slug": "mahadev-trishul-gold-ring-319",
+    "price": 951,
+    "MRP": 951
+  },
+  {
+    "id": 320,
+    "name": "Seth Sawra Gold Ring",
+    "category": "Religious Gold Rings",
+    "type": [
+      "Party Wear"
+    ],
+    "highlights": [
+      "Design: Sawariya Seth Religious Gold Ring",
+      "Metal: Pure Gold",
+      "Style: Traditional & Devotional Jewellery",
+      "Comfortable Fit for Daily Wear",
+      "Premium Finish & Elegant Craftsmanship",
+      "Perfect Gift for Devotees & Special Occasions",
+      "Made in India"
+    ],
+    "description": "Bring divine blessings and traditional elegance to your jewellery collection with this beautiful Sawariya Seth Gold Ring. Inspired by the devotion of Lord Sawariya Seth, this ring features a unique square-shaped top design with a detailed religious motif that represents faith, prosperity, and positivity.\n\nCrafted with premium quality gold, this Sawariya Seth Gold Ring showcases a rich traditional look with a stylish finish, making it perfect for daily wear as well as special occasions. The artistic detailing, comfortable fitting, and royal design make it an ideal choice for devotees and jewellery lovers who prefer spiritual gold jewellery.\n\nWhether gifted to a loved one or worn as a personal symbol of devotion, this Gold Sawariya Seth Ring adds a divine touch to your personality while reflecting timeless Indian craftsmanship.",
+    "images": [
+      "latest-sawariya-seth-gold-ring-ssj-320-a.webp"
+    ],
+    "brandText": "",
+    "care": "",
+    "for": "",
+    "purity": "",
+    "weight": 6.5,
+    "makingCharges": 0,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": false,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "slug": "seth-sawra-gold-ring-320",
+    "price": 1808,
+    "MRP": 1808
+  },
+  {
+    "id": 321,
+    "name": "Damru Silver Rudraksha Mala",
+    "category": "Silver Rudraksha Mala",
+    "type": [
+      "Spiritual Silver Jewellery",
+      "Silver Gift for Him",
+      "Silver Jewellery for Women",
+      "Daily Wear"
+    ],
+    "highlights": [],
+    "description": "This Damru Silver Rudraksha Mala beautifully combines natural-looking red Rudraksha beads with intricately designed silver Damru-shaped elements. Crafted in 925 silver, the mala features a traditional spiritual design with evenly arranged Rudraksha beads and polished silver detailing. The distinctive Damru-inspired silver beads give this mala a strong Mahadev-inspired appeal, making it suitable for devotees who prefer spiritual jewellery with a stylish and elegant finish. It can be worn for daily spiritual styling, religious occasions and as a meaningful devotional accessory.",
+    "images": [
+      "original-silver-rudraksha-mala-ssj-321-a.webp",
+      "damru-silver-rudraksha-mala-new-design-ssj-321-b.webp",
+      "925-silver-damru-rudraksha-mala-ssj-321-c.webp",
+      "mahadev-damru-silver-rudraksha-mala-ssj-321-d.webp"
+    ],
+    "brandText": "",
+    "care": "",
+    "for": "",
+    "purity": "",
+    "weight": 29.66,
+    "makingCharges": 0,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": false,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "slug": "damru-silver-rudraksha-mala-321",
+    "price": 8248,
+    "MRP": 8248
+  },
+  {
+    "id": 322,
+    "name": "Om Silver Rudraksha Mala",
+    "category": "Silver Rudraksha Mala",
+    "type": [
+      "Spiritual Silver Jewellery",
+      "Office Wear",
+      "Birthday Silver Gifts"
+    ],
+    "highlights": [],
+    "description": "The Om Silver Rudraksha Mala features vibrant red Rudraksha beads beautifully arranged with detailed silver spiritual motif beads. Made with 925 silver, this mala brings together traditional Rudraksha styling and meaningful devotional design. The contrasting red Rudraksha and antique-style silver detailing create a distinctive look that works well for devotees who want to wear spiritual jewellery with a refined traditional appearance. Its lightweight and elegant construction makes it suitable for everyday devotional wear as well as religious occasions.",
+    "images": [
+      "new-silver-rudraksh-om-ssj-322-a.webp",
+      "om-design-silver-rudraksha-mala-ssj-322-b.webp",
+      "925-silver-om-rudraksha-mala-ssj-322-c.webp",
+      "spiritual-om-silver-rudraksha-mala-ssj-322-d.webp"
+    ],
+    "brandText": "",
+    "care": "",
+    "for": "",
+    "purity": "",
+    "weight": 26.66,
+    "makingCharges": 0,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": false,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "slug": "om-silver-rudraksha-mala-322",
+    "price": 7414,
+    "MRP": 7414
+  },
+  {
+    "id": 323,
+    "name": "Antique Om Silver Rudraksha Mala",
+    "category": "Silver Rudraksha Mala",
+    "type": [
+      "Spiritual Silver Jewellery",
+      "Party Wear",
+      "Silver Gift for Him",
+      "Silver Jewellery for Men"
+    ],
+    "highlights": [],
+    "description": "This Antique Om Silver Rudraksha Mala features deep red Rudraksha beads paired with beautifully detailed silver beads carrying an antique-style finish. Crafted in 925 silver, the mala has a traditional spiritual appearance enhanced by the Om motif and darkened silver detailing. The alternating Rudraksha and silver beads create a balanced pattern throughout the mala, giving it a distinctive devotional look. It is an excellent choice for devotees looking for a meaningful spiritual accessory that combines traditional Rudraksha styling with the timeless symbolism of Om.",
+    "images": [
+      "antique-om-silver-rudraksha-mala-ssj-323-a.webp",
+      "om-design-rudraksha-silver-mala-ssj-323-b.webp",
+      "925-silver-antique-rudraksha-mala-ssj-323-c.webp",
+      "mahadev-spiritual-silver-rudraksha-mala-ssj-323-d.webp"
+    ],
+    "brandText": "",
+    "care": "",
+    "for": "",
+    "purity": "",
+    "weight": 35.19,
+    "makingCharges": 0,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": false,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "slug": "antique-om-silver-rudraksha-mala-323",
+    "price": 9786,
+    "MRP": 9786
+  },
+  {
+    "id": 324,
+    "name": "Original Silver Rudraksha Mala with Silver Round Beads",
+    "category": "Silver Rudraksha Mala",
+    "type": [
+      "Spiritual Silver Jewellery",
+      "Silver Gift for Him",
+      "Silver Jewellery for Women",
+      "Daily Wear"
+    ],
+    "highlights": [],
+    "description": "This Silver Rudraksha Mala features natural-looking Rudraksha beads beautifully paired with finely detailed silver round beads for a traditional yet elegant spiritual look. The alternating Rudraksha and silver bead pattern gives the mala a balanced appearance, making it suitable for daily wear, devotional occasions and spiritual styling. Crafted in a classic design, this Rudraksha mala is a meaningful choice for devotees who appreciate the combination of Rudraksha and silver jewellery.",
+    "images": [
+      "original-silver-rudraksha-mala-ssj-324-a.webp",
+      "silver-rudraksha-mala-round-beads-new-design-ssj-324-b.webp",
+      "premium-silver-rudraksha-mala-ssj-324-c.webp",
+      "traditional-silver-rudraksha-mala-ssj-324-d.webp"
+    ],
+    "brandText": "",
+    "care": "",
+    "for": "",
+    "purity": "",
+    "weight": 30.75,
+    "makingCharges": 0,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": false,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "slug": "original-silver-rudraksha-mala-with-silver-round-beads-324",
+    "price": 8552,
+    "MRP": 8552
+  },
+  {
+    "id": 325,
+    "name": "Silver Rudraksha Mala with Oxidised Silver Beads",
+    "category": "Silver Rudraksha Mala",
+    "type": [
+      "Spiritual Silver Jewellery",
+      "Office Wear",
+      "Birthday Silver Gifts"
+    ],
+    "highlights": [],
+    "description": "This Silver Rudraksha Mala combines natural Rudraksha beads with uniquely designed oxidised silver beads featuring a textured geometric pattern. The darker silver detailing creates a striking contrast with the warm Rudraksha beads, giving the mala a distinctive traditional appearance. Its detailed beadwork makes it a beautiful choice for devotees looking for a spiritual accessory with a more bold and artistic silver design.",
+    "images": [
+      "new-silver-rudraksha-oxidised-beads-ssj-325-a.webp",
+      "silver-rudraksha-mala-oxidised-design-ssj-325-b.webp",
+      "premium-oxidised-silver-rudraksha-mala-ssj-325-c.webp",
+      "traditional-rudraksha-mala-silver-oxidised-beads-ssj-325-d.webp"
+    ],
+    "brandText": "",
+    "care": "",
+    "for": "",
+    "purity": "",
+    "weight": 32,
+    "makingCharges": 0,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": false,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "slug": "silver-rudraksha-mala-with-oxidised-silver-beads-325",
+    "price": 8899,
+    "MRP": 8899
+  },
+  {
+    "id": 326,
+    "name": "Oxidised Rudraksha Mala with Silver Round Beads",
+    "category": "Silver Rudraksha Mala",
+    "type": [
+      "Spiritual Silver Jewellery",
+      "Party Wear",
+      "Silver Gift for Him",
+      "Silver Jewellery for Men"
+    ],
+    "highlights": [],
+    "description": "This Black Rudraksha Mala features dark Rudraksha-style beads arranged with beautifully detailed silver round beads in an alternating pattern. The contrast between the black beads and bright silver elements gives the mala a sophisticated and contemporary spiritual appearance. Its clean design makes it suitable for devotees who prefer a subtle yet distinctive Rudraksha accessory for daily devotional and traditional wear.",
+    "images": [
+      "black-silver-rudraksha-mala-ssj-326-a.webp",
+      "black-rudraksha-mala-silver-beads-new-design-ssj-326-b.webp",
+      "premium-black-rudraksha-silver-mala-ssj-326-c.webp",
+      "traditional-black-rudraksha-mala-silver-beads-ssj-326-d.webp"
+    ],
+    "brandText": "",
+    "care": "",
+    "for": "",
+    "purity": "",
+    "weight": 24.9,
+    "makingCharges": 0,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": false,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "slug": "oxidised-rudraksha-mala-with-silver-round-beads-326",
+    "price": 6925,
+    "MRP": 6925
+  },
+  {
     "id": 661,
     "name": "Sawariya Seth Silver Kada",
     "category": "Silver Kada",
@@ -11323,7 +11655,6 @@
     "category": "Sawariya Seth Ring",
     "type": [
       "Daily Wear",
-      "Silver Jewellery Under ₹3000",
       "Spiritual Silver Jewellery",
       "Silver Gift for Him"
     ],
@@ -11397,7 +11728,6 @@
     "category": "Silver Kada",
     "type": [
       "Daily Wear",
-      "Silver Jewellery Under ₹3000",
       "Spiritual Silver Jewellery",
       "Silver Gift for Him"
     ],
@@ -11831,7 +12161,6 @@
     "category": "Sawariya Seth Ring",
     "type": [
       "Daily Wear",
-      "Silver Jewellery Under ₹3000",
       "Spiritual Silver Jewellery",
       "Silver Gift for Him"
     ],
@@ -11989,7 +12318,6 @@
     "category": "Sawariya Seth Ring",
     "type": [
       "Daily Wear",
-      "Silver Jewellery Under ₹3000",
       "Spiritual Silver Jewellery",
       "Silver Gift for Him"
     ],
@@ -12067,7 +12395,6 @@
     "category": "Sawariya Seth Ring",
     "type": [
       "Daily Wear",
-      "Silver Jewellery Under ₹3000",
       "Spiritual Silver Jewellery",
       "Silver Gift for Him"
     ],

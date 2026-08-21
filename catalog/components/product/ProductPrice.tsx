@@ -1,9 +1,8 @@
-import { calculatePrice } from "@/utils/calculatePrice";
 import OrderViaWhatsappButton from "@/components/product/OrderViaWhatsappButton";
 import BuyNowButton from "./BuyNowButton";
 import type { Product } from "@/types/catalog";
 import Tooltip from "@/components/common/Tooltip";
-import rates from "@/data/rates.json";
+
 
 interface ProductPriceProps {
   product: Product;
@@ -15,18 +14,18 @@ export default function ProductPrice({
   className = "",
 }: ProductPriceProps) {
   
-  const popV = calculatePrice({ product, rates });
+  
 
-  if (popV?.price == null) return null;
+  if (product.price == null) return null;
 
   const isAvailable = Boolean(product.available);
   const hasMakingCharges = Number(product.makingCharges || 0) > 0;
   const canDirectCheckout = isAvailable && hasMakingCharges;
 
-  const formattedFinalPrice = popV.price.toLocaleString("en-IN");
-  const formattedMRP = popV.MRP?.toLocaleString("en-IN");
+  const formattedFinalPrice = product.price.toLocaleString("en-IN");
+  const formattedMRP = product.MRP?.toLocaleString("en-IN");
   const hasDiscount = Boolean(
-    popV.MRP && popV.discount && popV.discount > 0 && popV.MRP > popV.price
+    product.MRP && product.discount && product.discount > 0 && product.MRP > product.price
   );
 
   return (
@@ -46,9 +45,9 @@ export default function ProductPrice({
               </span>
               <span
                 className="inline-flex items-center rounded-full bg-emerald-600/10 text-emerald-700 dark:text-emerald-400 border border-emerald-600/20 px-2 py-0.5 text-xs font-bold"
-                aria-label={`${popV.discount}% discount`}
+                aria-label={`${product.discount}% discount`}
               >
-                {popV.discount}% OFF
+                {product.discount}% OFF
               </span>
             </div>
           )}
@@ -57,7 +56,7 @@ export default function ProductPrice({
           <div className="flex items-baseline flex-wrap gap-2">
             <span
               className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground"
-              aria-label={`${!isAvailable ? "Estimated price" : "Price"}: ${popV.price} Indian Rupees`}
+              aria-label={`${!isAvailable ? "Estimated price" : "Price"}: ${product.price} Indian Rupees`}
             >
               {!isAvailable && (
                 <span className="text-sm sm:text-base font-normal text-muted-foreground mr-1.5">

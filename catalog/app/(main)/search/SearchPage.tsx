@@ -110,11 +110,11 @@ export default function JewelrySearch() {
     let items = [...hydratedProducts];
 
     // Filter by criteria
-    if (filters.minWeight !== undefined) {
-      items = items.filter((p) => p.weight >= filters.minWeight!);
+    if (filters.minPrice !== undefined) {
+      items = items.filter((p) => p.price >= filters.minPrice!);
     }
-    if (filters.maxWeight !== undefined) {
-      items = items.filter((p) => p.weight <= filters.maxWeight!);
+    if (filters.maxPrice !== undefined) {
+      items = items.filter((p) => p.price <= filters.maxPrice!);
     }
     if (filters.forWhom) {
       items = items.filter((p) => p.for === filters.forWhom);
@@ -123,9 +123,7 @@ export default function JewelrySearch() {
       items = items.filter((p) =>
         p.purity?.toLowerCase().startsWith(filters.material!.toLowerCase())
       );
-    }
-
-    items = items.filter((p) => p.active && p.weight > 0);
+    }    
 
     // Apply Sorting
     switch (sortBy) {
@@ -135,11 +133,11 @@ export default function JewelrySearch() {
       case "name-desc":
         items.sort((a, b) => b.name.localeCompare(a.name));
         break;
-      case "weight-asc":
-        items.sort((a, b) => a.weight - b.weight);
+      case "price-asc":
+        items.sort((a, b) => a.price - b.price);
         break;
-      case "weight-desc":
-        items.sort((a, b) => b.weight - a.weight);
+      case "price-desc":
+        items.sort((a, b) => b.price - a.price);
         break;
       default:
         // Default keep MiniSearch relevance order, placing available products first

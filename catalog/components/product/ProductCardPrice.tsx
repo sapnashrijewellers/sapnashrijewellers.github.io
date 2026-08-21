@@ -1,33 +1,29 @@
-import { calculatePrice } from "@/utils/calculatePrice";
-import type { Product, Rates } from "@/types/catalog";
-import ratesData from "@/data/rates.json";
+import type { Product } from "@/types/catalog";
 
 interface ProductCardPriceProps {
-  product: Product;
-  rates?: Rates;
+  product: Product;  
   className?: string;
 }
 
 export default function ProductCardPrice({
-  product,
-  rates = ratesData as Rates,
+  product,  
   className = "",
 }: ProductCardPriceProps) {
   // Products without making charges are "Made to Order" / price-on-request
   const hasMakingCharges = Number(product.makingCharges || 0) > 0;
   if (!hasMakingCharges) return null;
 
-  const priceResult = calculatePrice({ product, rates });
-  if (!priceResult || priceResult.price == null) return null;
+  
+  if (!product || product.price == null) return null;
 
   const isAvailable = Boolean(product.available);
-  const formattedFinal = priceResult.price.toLocaleString("en-IN");
-  const formattedMRP = priceResult.MRP?.toLocaleString("en-IN");
+  const formattedFinal = product.price.toLocaleString("en-IN");
+  const formattedMRP = product.MRP?.toLocaleString("en-IN");
   const hasDiscount = Boolean(
-    priceResult.MRP &&
-    priceResult.discount &&
-    priceResult.discount > 0 &&
-    priceResult.MRP > priceResult.price
+    product.MRP &&
+    product.discount &&
+    product.discount > 0 &&
+    product.MRP > product.price
   );
 
   return (
@@ -40,9 +36,9 @@ export default function ProductCardPrice({
           </span>
           <span
             className="inline-flex items-center rounded-full bg-emerald-600/10 text-emerald-700 dark:text-emerald-400 border border-emerald-600/20 px-1.5 py-0.2 text-[10px] sm:text-[11px] font-bold"
-            aria-label={`${priceResult.discount}% discount`}
+            aria-label={`${product.discount}% discount`}
           >
-            {priceResult.discount}% OFF
+            {product.discount}% OFF
           </span>
         </div>
       )}

@@ -1,10 +1,10 @@
-import type { Product, Category, Rates } from "@/types/catalog";
+import type { Product, Category } from "@/types/catalog";
 import buildProductJsonLd from "@/utils/buildProductJsonLd";
 
 export function buildCategoryPageJsonLd(
   products: Product[],
-  category: Category,
-  rates: Rates
+  category: Category
+  
 ) {
   const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in";
 
@@ -17,7 +17,7 @@ export function buildCategoryPageJsonLd(
     "url": `${baseURL}/category/${category.slug}/`,
     "numberOfItems": products.length,
     "itemListElement": products.map((product, index) => {
-      const fullProductJsonLd = buildProductJsonLd(product, rates);
+      const fullProductJsonLd = buildProductJsonLd(product);
 
       // Create a clean item payload without top-level @context
       const productData = { ...fullProductJsonLd };

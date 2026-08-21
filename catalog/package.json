@@ -6,7 +6,7 @@
     "dev": "next dev -p 3003",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint . --quiet"
+    "lint": "eslint . --quiet"    
   },
   "dependencies": {
     "canvas-confetti": "^1.9.4",

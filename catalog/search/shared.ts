@@ -27,7 +27,9 @@ export const miniSearchIndexOptions: MiniSearchIndexOptions = {
     "type",
     "rating",
     "ratingCount",
-    "discount"
+    "discount",
+    "MRP",
+    "price"
   ],
 
   tokenize(text: string) {

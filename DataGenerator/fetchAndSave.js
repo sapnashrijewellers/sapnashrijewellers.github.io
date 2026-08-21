@@ -12,7 +12,6 @@ const PublicDataFolder = "./catalog/public/data/";
 // The URL of your Google Apps Script Web App
 const API_URL =
     "https://script.google.com/macros/s/AKfycbwNQ9fFmV0MqVEKg6pk-x56FsCw-xOnV__A3l6hqrlUVukKyx6gf31DpiO4hn4Vep6U5w/exec";
-
 /**
  * Fetches data from the API and saves each top-level key as a separate JSON file.
  *
@@ -28,17 +27,18 @@ async function fetchAndSaveData() {
 
     try {
         // 1. Fetch the data using the native 'fetch' API
-        const response = await fetch(API_URL);
+        //const response = await fetch(API_URL);        
 
-        // Check for HTTP errors (e.g., 404, 500)
-        if (!response.ok) {
-            throw new Error(
-                `HTTP error! Status: ${response.status} ${response.statusText}`
-            );
-        }
-
+        const response = await fetch(API_URL, {
+            method: "GET",
+            redirect: "follow",
+            headers: {
+                "Accept": "application/json"
+            }
+        });
         // 2. Parse the response body as JSON
         apiResponse = await response.json();
+console.log(apiResponse);
 
         console.log("Successfully fetched and parsed data.");
 

@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import type { Product, Category } from "@/types/catalog";
 import products from "@/data/products.json";
 import categories from "@/data/categories.json";
-import rates from "@/data/rates.json";
 import ProductCard from "@/components/product/ProductCard";
 import Breadcrumb from "@/components/navbar/BreadcrumbItem";
 import { buildCategoryPageJsonLd } from "@/utils/buildCategoryPageJsonLd";
@@ -34,12 +33,7 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   if (!category) return {};
 
   const filtered = products.filter(
-    (p: Product) =>
-      p.category === category.name &&
-      p.active &&
-      p.weight > 0 &&
-      p.name.length > 4
-  );
+    (p: Product) => p.category === category.name);
 
   const title = `${category.name} - ${category.title} | Sapna Shri Jewellers Nagda`;
   const description = category.description;
@@ -98,7 +92,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       return 0;
     });
 
-  const JsonLdObj = buildCategoryPageJsonLd(filtered, category, rates);
+  const JsonLdObj = buildCategoryPageJsonLd(filtered, category);
 
   return (
     <main className="container mx-auto px-4 py-4 max-w-7xl">

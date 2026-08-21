@@ -11,8 +11,7 @@ export default async function buildSearchIndex() {
    const catalogPath = path.join(__dirname, '../catalog/data/products.json');
    const catalog = JSON.parse(fs.readFileSync(catalogPath, 'utf-8'));
 
-   const productsForIndex = catalog
-      .filter(p => p.active && p.name?.length > 3 && p.weight > 0)
+   const productsForIndex = catalog      
       .map(p => ({
          id: p.id,
          name: normalize(p.name),
@@ -27,7 +26,9 @@ export default async function buildSearchIndex() {
          images: p.images,
          newArrival: p.newArrival,
          rating: p.rating,
-         ratingCount: p.ratingCount
+         ratingCount: p.ratingCount,
+         MRP: p.MRP,
+         price:p.price
       }));
 
    const miniSearch = new MiniSearch(miniSearchIndexOptions);

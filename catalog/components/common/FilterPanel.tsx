@@ -19,8 +19,8 @@ export function FilterPanel({ filters, onChange, triggerRef }: FilterPanelProps)
 
   const panelId = useId();
   const titleId = useId();
-  const minWeightId = useId();
-  const maxWeightId = useId();
+  const minPriceId = useId();
+  const maxPriceId = useId();
   const forWhomId = useId();
 
   const closePanel = useCallback(() => {
@@ -76,14 +76,14 @@ export function FilterPanel({ filters, onChange, triggerRef }: FilterPanelProps)
   }, [open, closePanel, triggerRef]);
 
   const hasActiveFilters = Boolean(
-    filters.minWeight !== undefined ||
-    filters.maxWeight !== undefined ||
+    filters.minPrice !== undefined ||
+    filters.maxPrice !== undefined ||
     filters.forWhom
   );
 
   const clearFilters = () => {
-    onChange("minWeight", undefined);
-    onChange("maxWeight", undefined);
+    onChange("minPrice", undefined);
+    onChange("maxPrice", undefined);
     onChange("forWhom", undefined);
   };
 
@@ -107,7 +107,7 @@ export function FilterPanel({ filters, onChange, triggerRef }: FilterPanelProps)
       {/* Header */}
       <div className="flex items-center justify-between pb-3 mb-3 border-b border-theme/30">
         <h3 id={titleId} className="font-semibold text-base text-foreground">
-          फ़िल्टर विकल्प (Filters)
+          Filters
         </h3>
 
         <div className="flex items-center gap-1">
@@ -119,7 +119,7 @@ export function FilterPanel({ filters, onChange, triggerRef }: FilterPanelProps)
               className="inline-flex items-center gap-1 text-xs text-primary hover:underline font-medium focus:outline-none focus:ring-2 focus:ring-primary rounded px-1.5 py-0.5"
             >
               <RotateCcw className="w-3 h-3" aria-hidden="true" />
-              <span>रीसेट (Reset)</span>
+              <span>Reset</span>
             </button>
           )}
 
@@ -136,54 +136,54 @@ export function FilterPanel({ filters, onChange, triggerRef }: FilterPanelProps)
 
       {/* Structured Machine-Readable Filter Metadata for LLM Scraping */}
       <div className="sr-only" aria-hidden="true">
-        <p>Available filters: Minimum Weight in Grams, Maximum Weight in Grams, Target Audience (For Whom).</p>
+        <p>Available filters: Minimum Price, Maximum Price, Target Audience (For Whom).</p>
       </div>
 
       {/* Filter Form Controls */}
       <form onSubmit={(e) => { e.preventDefault(); closePanel(); }} className="space-y-3.5 text-sm">
-        {/* Min Weight Input */}
+        {/* Min Price Input */}
         <div>
           <label
-            htmlFor={minWeightId}
+            htmlFor={minPriceId}
             className="block text-xs font-medium text-muted-foreground mb-1"
           >
-            न्यूनतम वज़न (Min Weight in Grams)
+            Min Price
           </label>
           <input
-            id={minWeightId}
+            id={minPriceId}
             type="number"
             min="0"
             step="0.1"
             inputMode="decimal"
-            placeholder="e.g. 5"
-            value={filters.minWeight ?? ""}
+            placeholder="e.g. 500"
+            value={filters.minPrice ?? ""}
             onChange={(e) => {
               const val = parseFloat(e.target.value);
-              onChange("minWeight", Number.isNaN(val) ? undefined : (val as SearchFilters["minWeight"]));
+              onChange("minPrice", Number.isNaN(val) ? undefined : (val as SearchFilters["minPrice"]));
             }}
             className="w-full p-2.5 bg-background border border-theme/60 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary text-foreground placeholder:text-muted-foreground/60"
           />
         </div>
 
-        {/* Max Weight Input */}
+        {/* Max Price Input */}
         <div>
           <label
-            htmlFor={maxWeightId}
+            htmlFor={maxPriceId}
             className="block text-xs font-medium text-muted-foreground mb-1"
           >
-            अधिकतम वज़न (Max Weight in Grams)
+            Max Price
           </label>
           <input
-            id={maxWeightId}
+            id={maxPriceId}
             type="number"
             min="0"
             step="0.1"
             inputMode="decimal"
-            placeholder="e.g. 50"
-            value={filters.maxWeight ?? ""}
+            placeholder="e.g. 1000"
+            value={filters.maxPrice ?? ""}
             onChange={(e) => {
               const val = parseFloat(e.target.value);
-              onChange("maxWeight", Number.isNaN(val) ? undefined : (val as SearchFilters["maxWeight"]));
+              onChange("maxPrice", Number.isNaN(val) ? undefined : (val as SearchFilters["maxPrice"]));
             }}
             className="w-full p-2.5 bg-background border border-theme/60 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary text-foreground placeholder:text-muted-foreground/60"
           />
@@ -195,7 +195,7 @@ export function FilterPanel({ filters, onChange, triggerRef }: FilterPanelProps)
             htmlFor={forWhomId}
             className="block text-xs font-medium text-muted-foreground mb-1"
           >
-            किसके लिए (For Whom)
+            For Whom
           </label>
           <select
             id={forWhomId}
@@ -206,13 +206,13 @@ export function FilterPanel({ filters, onChange, triggerRef }: FilterPanelProps)
                 e.target.value ? (e.target.value as SearchFilters["forWhom"]) : undefined
               )
             }
-            className="w-full p-2.5 bg-background border border-theme/60 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
+            className="w-full p-2.5  border border-theme/60 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
           >
-            <option value="">सभी के लिए (For Everyone)</option>
-            <option value="her">महिलाओं के लिए (For Her)</option>
-            <option value="him">पुरुषों के लिए (For Him)</option>
-            <option value="kids">बच्चों के लिए (For Kids)</option>
-            <option value="unisex">यूनिसेक्स (Unisex)</option>
+            <option className="bg-surface text-primary-dark" value="">सभी के लिए (For Everyone)</option>
+            <option className="bg-surface text-primary-dark" value="her">महिलाओं के लिए (For Her)</option>
+            <option className="bg-surface text-primary-dark" value="him">पुरुषों के लिए (For Him)</option>
+            <option className="bg-surface text-primary-dark" value="kids">बच्चों के लिए (For Kids)</option>
+            <option className="bg-surface text-primary-dark" value="unisex">यूनिसेक्स (Unisex)</option>
           </select>
         </div>
 
@@ -222,7 +222,7 @@ export function FilterPanel({ filters, onChange, triggerRef }: FilterPanelProps)
           aria-label="Apply chosen filters and close dialog"
           className="w-full mt-2 py-2 text-center text-xs font-semibold bg-accent text-accent-foreground rounded-xl hover:bg-accent/80 transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
         >
-          लागू करें (Apply Filters)
+          Apply Filters
         </button>
       </form>
     </div>

@@ -13,18 +13,15 @@ export default function JewelryTypeClient({ products }: JewelryTypeClientProps) 
   const [filters, setFilters] = useState<SearchFilters>({ material: "Silver" });
   const [sortBy, setSortBy] = useState("best-match");
 
-  const visibleProducts = useMemo(() => {
-    // 1. Initial base filtering (active and valid items only)
-    let items = products.filter(
-      (p) => p.active && p.weight > 0 && p.name && p.name.trim().length > 4
-    );
+  const visibleProducts = useMemo(() => {    
+    let items = products
 
     // 2. Multi-criteria filtering
-    if (filters.minWeight !== undefined) {
-      items = items.filter((p) => p.weight >= filters.minWeight!);
+    if (filters.minPrice !== undefined) {
+      items = items.filter((p) => p.price >= filters.minPrice!);
     }
-    if (filters.maxWeight !== undefined) {
-      items = items.filter((p) => p.weight <= filters.maxWeight!);
+    if (filters.maxPrice !== undefined) {
+      items = items.filter((p) => p.price <= filters.maxPrice!);
     }
     if (filters.forWhom) {
       items = items.filter((p) => p.for === filters.forWhom);
@@ -43,11 +40,11 @@ export default function JewelryTypeClient({ products }: JewelryTypeClientProps) 
       case "name-desc":
         items.sort((a, b) => b.name.localeCompare(a.name));
         break;
-      case "weight-asc":
-        items.sort((a, b) => a.weight - b.weight);
+      case "price-asc":
+        items.sort((a, b) => a.price - b.price);
         break;
-      case "weight-desc":
-        items.sort((a, b) => b.weight - a.weight);
+      case "price-desc":
+        items.sort((a, b) => b.price - a.price);
         break;
       default:
         // Prioritize available products in default/best-match view

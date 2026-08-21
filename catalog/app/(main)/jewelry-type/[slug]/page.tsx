@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import type { Type } from "@/types/catalog";
 import products from "@/data/products.json";
 import types from "@/data/types.json";
-import rates from "@/data/rates.json";
 import Breadcrumb from "@/components/navbar/BreadcrumbItem";
 import JewelryTypeClient from "./JewelryTypeClient";
 import { buildJewelryTypePageJsonLd } from "@/utils/buildJewelryTypePageJsonLd";
@@ -87,7 +86,7 @@ export default async function JewelryTypePage({ params }: JewelryTypePageProps) 
     .filter((p) => p.type?.includes(t.type) && p.active)
     .sort((a, b) => Number(b.available) - Number(a.available));
 
-  const JsonLdObj = buildJewelryTypePageJsonLd(baseProducts, t, rates);
+  const JsonLdObj = buildJewelryTypePageJsonLd(baseProducts, t);
 
   return (
     <main className="container mx-auto px-4 py-4 max-w-7xl">

@@ -16,7 +16,6 @@ import AddressStep from "@/components/checkout/AddressStep";
 import PaymentStep from "@/components/checkout/PaymentStep";
 import ReviewStep from "@/components/checkout/ReviewStep";
 import PaymentVerificationStep from "./PaymentVerificationStep";
-import rates from "@/data/rates.json";
 import productsData from "@/data/products.json";
 import { Loader2, LogIn } from "lucide-react";
 
@@ -151,7 +150,7 @@ export default function CheckoutState({ className = "" }: CheckoutStateProps) {
 
   /* ---------------- Step 5: Derived Pricing Summary ---------------- */
   const priceSummary = useMemo((): PriceSummaryType => {
-    const productTotal = calculateFinal(cart, rates);
+    const productTotal = calculateFinal(cart);
     const shipping = 60;
     const cod = paymentMethod === "COD" ? 200 : 0;
 

@@ -1,8 +1,6 @@
 export const dynamic = "force-static";
 
 import products from "@/data/products.json";
-import { calculatePrice } from "@/utils/calculatePrice";
-import rates from "@/data/rates.json"
 
 /**
  * Escapes XML entities and strips raw HTML tags to prevent schema breaks
@@ -29,16 +27,14 @@ export async function GET() {
       const productUrl = `${baseUrl}/product/${product.slug}/`;
       const imageUrl = product.images?.[0]
         ? `${baseUrl}/static/img/products/optimized/${product.images[0]}`
-        : "";
-
-      // Dynamic price calculation
-      const vPop = calculatePrice({ product, rates });
-      const hasValidPrice = vPop?.price !== undefined && vPop?.price !== null;
+        : "";      
+      
+      const hasValidPrice = product.price !== undefined && product.price !== null;
 
       // Skip products without valid pricing
       if (!hasValidPrice) return "";
 
-      const formattedPrice = `${Number(vPop.price).toFixed(2)} INR`;
+      const formattedPrice = `${Number(product.price).toFixed(2)} INR`;
       const availability = product.available ? "in_stock" : "out_of_stock";
       const title = sanitizeXml(product.name);
       const description = sanitizeXml(product.description || product.name);

@@ -1,6 +1,6 @@
 import type { Product as SchemaProduct, Offer as SchemaOffer, WithContext } from "schema-dts";
-import type { Product, Rates } from "@/types/catalog";
-import { calculatePrice } from "@/utils/calculatePrice";
+import type { Product } from "@/types/catalog";
+
 
 /**
  * Sanitizes plain text for JSON-LD:
@@ -18,16 +18,15 @@ function sanitizeDescription(text?: string): string {
 }
 
 export default function buildProductJsonLd(
-  product: Product,
-  rates: Rates
+  product: Product  
 ): WithContext<SchemaProduct> {
   const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "";
   const firstImage = product.images?.[0] ? `/static/img/products/optimized/${product.images[0]}` : "";
   const imageUrl = firstImage ? `${baseURL}${firstImage}` : undefined;
   const baseProductUrl = `${baseURL}/product/${product.slug}`;
 
-  const vPop = calculatePrice({ product, rates });
-  const hasValidPrice = vPop?.price !== null && vPop?.price !== undefined;
+  
+  const hasValidPrice = product.price !== null && product.price !== undefined;
 
   const now = new Date();
   const validFrom = hasValidPrice ? now.toISOString().split("T")[0] : undefined;
@@ -83,15 +82,15 @@ export default function buildProductJsonLd(
     ],
   };
 
-  if (hasValidPrice && vPop?.price !== undefined) {
-    offer.price = vPop.price;
+  if (hasValidPrice && product.price !== undefined) {
+    offer.price = product.price;
     offer.validFrom = validFrom; // Correct Schema.org attribute
     offer.priceValidUntil = priceValidUntil;
 
-    if (vPop.MRP) {
+    if (product.MRP) {
       offer.priceSpecification = {
         "@type": "UnitPriceSpecification",
-        price: vPop.price,
+        price: product.price,
         priceCurrency: "INR",
         referenceQuantity: {
           "@type": "QuantitativeValue",

@@ -19,8 +19,8 @@ export interface Product {
   weight: number;
   makingCharges: number;
   discount: number;
-  price?: number;
-  MRP?: number;
+  price: number;
+  MRP: number;
 }
 
 export interface Category {
@@ -36,8 +36,8 @@ export interface Category {
 
 export interface SearchFilters {
   material: string;
-  minWeight?: number;
-  maxWeight?: number;
+  minPrice?: number;
+  maxPrice?: number;
   forWhom?: string;
 }
 
@@ -64,15 +64,6 @@ export interface Type {
   active: boolean
 }
 
-
-// export interface CalcRates {
-//   gold24K: number;
-//   gold22K: number;
-//   gold18K: number;
-//   silver: number;
-//   silverJewellery: number;
-// }
-
 export type CartItem = {
   productId: number;
   product: Product
@@ -82,8 +73,6 @@ export type CartItem = {
 export type Cart = {
   items: CartItem[];
 };
-
-
 
 export class Address {
   uid!: string;

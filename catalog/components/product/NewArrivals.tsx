@@ -1,56 +1,17 @@
 import ProductCard from "@/components/product/ProductCard";
 import type { Product } from "@/types/catalog";
 import { Sparkles } from "lucide-react";
-
+import newArrivals from "@/data/newArrivals.json";
 interface NewArrivalsProps {
-  products: Product[];
-  product?: Product;
+  product: Product;  
   className?: string;
 }
 
-function groupByCategory<T extends { category?: string }>(items: T[]): Record<string, T[]> {
-  return items.reduce<Record<string, T[]>>((acc, item) => {
-    const key = item.category || "uncategorized";
-    if (!acc[key]) acc[key] = [];
-    acc[key].push(item);
-    return acc;
-  }, {});
-}
 
 export default function NewArrivals({
-  products,
   product,
   className = "",
-}: NewArrivalsProps) {
-  let newArrivals: Product[];
-
-  if (product === undefined) {
-    // Top-level showcase: one prioritized new arrival product per active category
-    const activeNewArrivals = products.filter((p) => p.active && p.newArrival);
-    const grouped = groupByCategory(activeNewArrivals);
-
-    newArrivals = Object.values(grouped)
-      .map((categoryProducts) => {
-        return [...categoryProducts].sort(
-          (a, b) =>
-            Number(b.available) - Number(a.available) ||
-            (a.weight || 0) - (b.weight || 0)
-        )[0];
-      })
-      .filter(Boolean);
-  } else {
-    // Product Detail Page context: new arrivals filtered by matching purity
-    newArrivals = products
-      .filter(
-        (p) =>
-          p.active &&
-          p.newArrival &&
-          p.id !== product.id &&
-          (!product.purity || p.purity === product.purity)
-      )
-      .sort((a, b) => Number(b.available) - Number(a.available))
-      .slice(0, 15);
-  }
+}: NewArrivalsProps) {     
 
   if (newArrivals.length === 0) return null;
 

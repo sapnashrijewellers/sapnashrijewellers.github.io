@@ -58,7 +58,7 @@ export default function FilterNSort({
                 ${
                   isSelected
                     ? "bg-accent font-bold text-accent-foreground border-theme"
-                    : "bg-surface text-foreground hover:bg-primary/10 cursor-pointer border-theme/40"
+                    : "bg-surface text-primary-dark hover:bg-primary/10 cursor-pointer border-theme/40"
                 }
               `}
             >
@@ -74,7 +74,7 @@ export default function FilterNSort({
           ref={filterBtnRef}
           type="button"
           aria-haspopup="dialog"
-          aria-label="Open detailed filter options (weight, purity, category)"
+          aria-label="Open detailed filter options (price, purity, category)"
           title="Filter results"
           className="ssj-btn bg-accent text-accent-foreground shrink-0 flex items-center justify-center w-10 h-10 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1 transition-colors hover:bg-accent/80"
         >

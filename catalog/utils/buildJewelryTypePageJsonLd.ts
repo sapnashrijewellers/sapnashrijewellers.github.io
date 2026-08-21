@@ -1,10 +1,9 @@
-import type { Type, Product, Rates } from "@/types/catalog";
+import type { Type, Product } from "@/types/catalog";
 import buildProductJsonLd from "@/utils/buildProductJsonLd"; // adjust import path as needed
 
 export function buildJewelryTypePageJsonLd(
   products: Product[],
-  t: Type,
-  rates: Rates
+  t: Type  
 ) {
   const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in";
 
@@ -18,7 +17,7 @@ export function buildJewelryTypePageJsonLd(
     "numberOfItems": products.length,
     "itemListElement": products.map((product, index) => {
       // 1. Generate full, validated Product JSON-LD (includes offers, price, rating, etc.)
-      const fullProductJsonLd = buildProductJsonLd(product, rates);
+      const fullProductJsonLd = buildProductJsonLd(product);
 
       // 2. Strip root @context to maintain a clean nested structure and avoid unused var ESLint warnings
       const productData = { ...fullProductJsonLd };

@@ -3,7 +3,6 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import type { Product } from "@/types/catalog";
 import products from "@/data/products.json";
-import rates from "@/data/rates.json";
 import categories from "@/data/categories.json";
 import ProductShare from "@/components/product/ProductShare";
 import { HighlightsTabs } from "@/components/product/Highlights";
@@ -34,14 +33,7 @@ const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.
 const driveURL = `${baseURL}/static/img/products/optimized/`;
 
 export async function generateStaticParams() {
-  return products
-    .filter(
-      (p: Product) =>
-        p.active &&
-        p.slug?.length >= 5 &&
-        p.category?.length > 3 &&
-        p.weight > 0
-    )
+  return products    
     .map((p: Product) => ({
       slug: p.slug,
     }));
@@ -106,7 +98,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
   const category = categories.find((c) => c.name === product.category);
 
   // Schema.org Structured Data for LLMs and Google Rich Results
-  const productSchema = buildProductJsonLd(product, rates);
+  const productSchema = buildProductJsonLd(product);
 
   return (
     <main className="container mx-auto px-4 py-4 max-w-7xl">

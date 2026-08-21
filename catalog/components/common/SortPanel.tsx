@@ -5,8 +5,7 @@ import { Check } from "lucide-react";
 
 interface SortOption {
   value: string;
-  label: string;
-  hindiLabel: string;
+  label: string;  
 }
 
 interface SortPanelProps {
@@ -16,11 +15,11 @@ interface SortPanelProps {
 }
 
 const SORT_OPTIONS: readonly SortOption[] = [
-  { value: "best-match", label: "Best Match", hindiLabel: "सर्वोत्तम मिलान" },
-  { value: "name-asc", label: "Product Name A–Z", hindiLabel: "नाम: A से Z" },
-  { value: "name-desc", label: "Product Name Z–A", hindiLabel: "नाम: Z से A" },
-  { value: "weight-asc", label: "Weight Low → High", hindiLabel: "वज़न: कम से ज़्यादा" },
-  { value: "weight-desc", label: "Weight High → Low", hindiLabel: "वज़न: ज़्यादा से कम" },
+  { value: "best-match", label: "Best Match"},
+  { value: "name-asc", label: "Product Name A–Z"},
+  { value: "name-desc", label: "Product Name Z–A"},
+  { value: "price-asc", label: "Price Low → High"}, 
+  { value: "price-desc", label: "Price High → Low"}
 ] as const;
 
 export function SortPanel({ sortBy, onSortChange, triggerRef }: SortPanelProps) {
@@ -131,7 +130,7 @@ export function SortPanel({ sortBy, onSortChange, triggerRef }: SortPanelProps) 
               type="button"
               role="option"
               aria-selected={isSelected}
-              aria-label={`Sort by ${opt.label} (${opt.hindiLabel})`}
+              aria-label={`Sort by ${opt.label}`}
               onClick={() => handleSelect(opt.value)}
               className={`
                 flex items-center justify-between w-full px-3 py-2 text-xs sm:text-sm font-medium rounded-xl

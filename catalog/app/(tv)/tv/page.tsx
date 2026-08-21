@@ -59,13 +59,7 @@ export default function TV() {
       {/* Details panel */}
       <div className="flex flex-col gap-3 p-2 text-2xl leading-tight overflow-hidden">
         <div>
-          <h1 className="mb-2">{product.name}</h1>
-          <p>
-            <b>शुद्धता:</b> {product.purity}
-          </p>
-          <p>
-            <b>वज़न:</b> {product.weight} g
-          </p>
+          <h1 className="mb-2">{product.name}</h1>          
         </div>
       </div>
     </div>

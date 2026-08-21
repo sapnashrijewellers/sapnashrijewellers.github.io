@@ -166,7 +166,7 @@ export default function HUIDInfo() {
             <figure className="text-center w-full max-w-md">
               <div className="relative w-full aspect-[16/10] overflow-hidden rounded-xl shadow-sm border border-theme/60 bg-surface">
                 <Image
-                  src={`${baseURL}/static/img/hallmark-sample1.png`}
+                  src={`${baseURL}/static/img/hallmark-sample1.webp`}
                   alt="सोने की चूड़ी पर 6-डिजिट HUID और BIS हॉलमार्क का उदाहरण"
                   fill
                   sizes="(max-width: 640px) 100vw, 448px"

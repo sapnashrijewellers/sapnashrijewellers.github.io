@@ -46,7 +46,7 @@ export default function AboutUsPage() {
         name: "Sapna Shri Jewellers",
         alternateName: "सपना श्री ज्वेलर्स",
         url: `${baseURL}/about-us`,
-        logo: `${baseURL}/static/img/shop.png`,
+        logo: `${baseURL}/static/img/shop.webp`,
         image: imageUrl,
         description,
         telephone: "+91-8234042231",

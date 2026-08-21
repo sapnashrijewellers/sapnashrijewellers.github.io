@@ -21,7 +21,7 @@ export default function ProductSelection({
   const isGold = purityLower.startsWith("gold") || purityLower.includes("22k") || purityLower.includes("18k") || purityLower.includes("14k");
   const isHallmarked = (isGold && (product.weight || 0) > 2) || Boolean(product.HUID);
 
-  const hallmarkImageUrl = `${baseURL}/static/img/hallmark.png`;
+  const hallmarkImageUrl = `${baseURL}/static/img/hallmark.webp`;
 
   return (
     <div className={`w-full space-y-4 ${className}`}>

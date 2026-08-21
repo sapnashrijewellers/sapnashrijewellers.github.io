@@ -205,7 +205,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
       <section aria-label="Important points before purchasing jewellery" className="max-w-6xl mx-auto py-8">
         <div className="relative w-full aspect-[3/1] overflow-hidden rounded-2xl border border-theme/40 shadow-sm">
           <Image
-            src={`${baseURL}/static/img/before-buy-banner.png`}
+            src={`${baseURL}/static/img/before-buy-banner.webp`}
             alt="Important points to consider before you buy jewellery at Sapna Shri Jewellers Nagda"
             title="Points to consider before you buy jewellery"
             fill

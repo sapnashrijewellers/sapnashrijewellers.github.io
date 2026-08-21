@@ -59,7 +59,7 @@ export default function TVLayout({
               <WhatsAppContact />
               <div>
               <Image
-                      src={`${process.env.NEXT_PUBLIC_BASE_URL}/static/img/before-buy-banner.png`}
+                      src={`${process.env.NEXT_PUBLIC_BASE_URL}/static/img/before-buy-banner.webp`}
                       alt="Points to consider before you buy jewellery"
                       className="object-cover text-center items-center justify-center w-full h-full"
                       loading="eager"

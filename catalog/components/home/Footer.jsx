@@ -44,7 +44,7 @@ export default function Footer() {
         {/* 2. POLICIES & LEGAL */}
         <nav aria-label="Store policies and customer protection">
           <h3 className="footer-heading font-yatra text-base sm:text-lg mb-3">
-            नीतियां (Policies)
+            Policies
           </h3>
 
           <p className="text-xs mb-3 opacity-75 leading-relaxed">
@@ -104,7 +104,7 @@ export default function Footer() {
         {/* 3. QUICK LINKS & UTILITIES */}
         <nav aria-label="Quick catalog navigation">
           <h3 className="footer-heading font-yatra text-base sm:text-lg mb-3">
-            त्वरित लिंक (Quick Links)
+            Quick Links
           </h3>
 
           <ul className="space-y-2 text-sm">

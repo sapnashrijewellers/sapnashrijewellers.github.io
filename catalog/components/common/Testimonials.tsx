@@ -86,10 +86,7 @@ export default function TestimonialScroller() {
       <div className="flex items-baseline justify-between px-4 mb-4">
         <h2 id={sectionTitleId} className="au-h2 text-foreground font-bold">
           ग्राहकों की आवाज़ (Customer Reviews)
-        </h2>
-        <span className="text-xs text-muted-foreground">
-          {items.length}+ प्रमाणित समीक्षाएं (Verified Reviews)
-        </span>
+        </h2>        
       </div>
 
       <div className="relative group">

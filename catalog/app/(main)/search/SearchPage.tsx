@@ -177,11 +177,9 @@ export default function JewelrySearch() {
               <span className="opacity-70">खोज रहे हैं (Searching…)</span>
             ) : query ? (
               <span>
-                &ldquo;{query}&rdquo; के लिए{" "}
                 <strong className="text-foreground font-semibold">
                   {filteredProducts.length}
-                </strong>{" "}
-                उत्पाद मिले ({filteredProducts.length} results)
+                </strong> result(s) for &ldquo;{query}&rdquo; 
               </span>
             ) : (
               <span>खोज शुरू करने के लिए टाइप करें</span>

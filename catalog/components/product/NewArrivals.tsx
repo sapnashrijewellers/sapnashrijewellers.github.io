@@ -39,10 +39,7 @@ export default function NewArrivals({
           >
             New Arrivals
           </h2>
-        </div>
-        <span className="text-xs text-muted-foreground font-medium hidden sm:inline-block">
-          {count} {count === 1 ? "डिज़ाइन (Design)" : "डिज़ाइन उपलब्ध (Designs)"}
-        </span>
+        </div>        
       </div>
 
       {/* Screen Reader & LLM Structured Context */}

@@ -106,7 +106,7 @@ export function SortPanel({ sortBy, onSortChange, triggerRef }: SortPanelProps) 
     >
       <div className="flex items-center justify-between pb-2.5 mb-2 border-b border-theme/30">
         <h3 id={titleId} className="font-semibold text-sm text-foreground">
-          क्रमबद्ध करें (Sort By)
+          Sort By
         </h3>
       </div>
 

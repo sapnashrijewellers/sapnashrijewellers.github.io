@@ -34,9 +34,7 @@ export default function JewelleryTypeBar({
         >
           हर अवसर के लिए आभूषण (Jewellery for Every Occasion)
         </h2>
-        <span className="text-xs text-muted-foreground hidden sm:inline-block">
-          {activeTypes.length} शैलियाँ उपलब्ध (Styles Available)
-        </span>
+        
       </div>
 
       {/* Screen Reader & Agentic Context */}

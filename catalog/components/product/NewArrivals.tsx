@@ -37,7 +37,7 @@ export default function NewArrivals({
               !product ? "au-h2 text-xl sm:text-2xl" : "text-lg sm:text-xl"
             }`}
           >
-            नवीनतम आभूषण (New Arrivals)
+            New Arrivals
           </h2>
         </div>
         <span className="text-xs text-muted-foreground font-medium hidden sm:inline-block">

@@ -92,7 +92,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="hi" className={`${yatraOne.variable} ${notoDevanagari.variable}`}>
+    <html lang="en" className={`${yatraOne.variable} ${notoDevanagari.variable}`}>
       <body
         className={`flex flex-col min-h-screen transition-colors antialiased`}
       >

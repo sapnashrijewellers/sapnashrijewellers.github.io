@@ -70,7 +70,7 @@ export default function JewelryTypeClient({ products }: JewelryTypeClientProps) 
           className="text-sm font-medium text-muted-foreground"
         >
           {visibleProducts.length}{" "}
-          {visibleProducts.length === 1 ? "उत्पाद मिला" : "उत्पाद उपलब्ध"}
+          {visibleProducts.length === 1 ? "product found" : "products found"}
         </div>
 
         {/* Filter and Sort controls */}

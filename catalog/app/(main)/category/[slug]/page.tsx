@@ -3,12 +3,12 @@ import { notFound } from "next/navigation";
 import type { Product, Category } from "@/types/catalog";
 import products from "@/data/products.json";
 import categories from "@/data/categories.json";
-import ProductCard from "@/components/product/ProductCard";
 import Breadcrumb from "@/components/navbar/BreadcrumbItem";
 import { buildCategoryPageJsonLd } from "@/utils/buildCategoryPageJsonLd";
 import JsonLd from "@/components/common/JsonLd";
 import RotatingBanner from "@/components/banners/RotatingBanner";
 import SEO from "@/components/common/SEO";
+import JewelryTypeClient from "../../jewelry-type/[slug]/JewelryTypeClient";
 
 interface CategoryPageProps {
   params: Promise<{ slug: string }>;
@@ -125,7 +125,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       </section>
 
       {/* 5. Product Grid / Catalog listing */}
-      <section
+      {/* <section
         aria-label={`${category.name} collection`}
         className="my-8"
       >
@@ -150,8 +150,10 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
             ))}
           </ul>
         )}
-      </section>
+      </section> */}
 
+{/* 4. Client-side Interactive Filter & Grid */}
+      <JewelryTypeClient products={filtered} />
       {/* 6. Contextual SEO Content */}
       <aside aria-label="Related category searches and information">
         <SEO slug={`/categories/${slug}`} />

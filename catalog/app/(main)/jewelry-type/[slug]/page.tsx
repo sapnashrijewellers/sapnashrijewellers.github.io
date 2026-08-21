@@ -7,6 +7,7 @@ import Breadcrumb from "@/components/navbar/BreadcrumbItem";
 import JewelryTypeClient from "./JewelryTypeClient";
 import { buildJewelryTypePageJsonLd } from "@/utils/buildJewelryTypePageJsonLd";
 import JsonLd from "@/components/common/JsonLd";
+import SEO from "@/components/common/SEO";
 
 interface JewelryTypePageProps {
   params: Promise<{ slug: string }>;
@@ -104,7 +105,7 @@ export default async function JewelryTypePage({ params }: JewelryTypePageProps) 
       {/* 3. Collection Header Information */}
       <header className="pl-4 border-l-4 border-primary/70 my-6">
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-yatra font-bold text-primary">
-          {t.type} jewellery collection
+          {t.type}
         </h1>
         {t.description && (
           <p className="mt-2 text-sm sm:text-base text-muted-foreground/90 leading-relaxed max-w-4xl">
@@ -115,6 +116,12 @@ export default async function JewelryTypePage({ params }: JewelryTypePageProps) 
 
       {/* 4. Client-side Interactive Filter & Grid */}
       <JewelryTypeClient products={baseProducts} />
+
+      {/* 6. Contextual SEO Content */}
+      <aside aria-label="Related category searches and information">
+        <SEO slug={`/jewelry-type/${slug}`} />
+      </aside>
+
     </main>
   );
 }

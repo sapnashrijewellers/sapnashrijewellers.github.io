@@ -1,19 +1,26 @@
 import ProductCard from "@/components/product/ProductCard";
 import type { Product } from "@/types/catalog";
 import { Sparkles } from "lucide-react";
-import newArrivals from "@/data/newArrivals.json";
+import newArrivalsData from "@/data/newArrivals.json";
+
 interface NewArrivalsProps {
-  product: Product;  
+  product?: Product;
   className?: string;
 }
-
 
 export default function NewArrivals({
   product,
   className = "",
-}: NewArrivalsProps) {     
+}: NewArrivalsProps) {
+  // Exclude the current product upfront so count and list stay synchronized
+  const filteredArrivals = product
+    ? (newArrivalsData as Product[]).filter((p) => p.id !== product.id)
+    : (newArrivalsData as Product[]);
 
-  if (newArrivals.length === 0) return null;
+  // If nothing remains to show, unmount gracefully
+  if (filteredArrivals.length === 0) return null;
+
+  const count = filteredArrivals.length;
 
   return (
     <section
@@ -34,7 +41,7 @@ export default function NewArrivals({
           </h2>
         </div>
         <span className="text-xs text-muted-foreground font-medium hidden sm:inline-block">
-          {newArrivals.length} {newArrivals.length === 1 ? "डिज़ाइन (Design)" : "डिज़ाइन उपलब्ध (Designs)"}
+          {count} {count === 1 ? "डिज़ाइन (Design)" : "डिज़ाइन उपलब्ध (Designs)"}
         </span>
       </div>
 
@@ -54,7 +61,7 @@ export default function NewArrivals({
           focus:outline-none focus:ring-1 focus:ring-primary/40 rounded-2xl
         "
       >
-        {newArrivals.map((p) => (
+        {filteredArrivals.map((p) => (
           <article
             key={p.id}
             aria-label={`${p.name} new arrival`}

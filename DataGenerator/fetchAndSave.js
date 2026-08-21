@@ -38,7 +38,6 @@ async function fetchAndSaveData() {
         });
         // 2. Parse the response body as JSON
         apiResponse = await response.json();
-console.log(apiResponse);
 
         console.log("Successfully fetched and parsed data.");
 

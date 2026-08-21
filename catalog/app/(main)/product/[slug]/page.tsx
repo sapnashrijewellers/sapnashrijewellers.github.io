@@ -197,7 +197,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
 
       <aside aria-label="Recommended and related products">
         <YouMAyAlsoLike product={product} products={products} />
-        <NewArrivals products={products} product={product} />
+        <NewArrivals product={product} />
         <JewelleryTypeBar />
       </aside>
 

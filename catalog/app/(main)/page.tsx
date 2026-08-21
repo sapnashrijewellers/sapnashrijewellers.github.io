@@ -110,7 +110,7 @@ export default function Home() {
 
       {/* 4. New Arrivals Showcase */}
       <section aria-label="New jewellery arrivals" className="my-8">
-        <NewArrivals products={products} />
+        <NewArrivals  />
       </section>
 
       {/* 5. Customer Testimonials & Social Proof */}

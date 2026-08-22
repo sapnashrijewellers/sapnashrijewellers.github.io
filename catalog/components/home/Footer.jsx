@@ -217,7 +217,7 @@ export default function Footer() {
             </a>
 
             <a
-              href="https://www.instagram.com/sapna_shri_jewllers/"
+              href="https://www.instagram.com/sapna_shri_jewllers_nagda/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Follow Sapna Shri Jewellers on Instagram"

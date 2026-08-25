@@ -34,7 +34,6 @@ export default function JewelleryTypeBar({
         >
           हर अवसर के लिए आभूषण (Jewellery for Every Occasion)
         </h2>
-        
       </div>
 
       {/* Screen Reader & Agentic Context */}
@@ -63,8 +62,8 @@ export default function JewelleryTypeBar({
               title={`${item.type} Jewellery Collection`}
               aria-label={`Explore ${item.type} jewellery collection`}
               className="
-                group relative flex shrink-0 min-w-[96px] sm:min-w-[112px] flex-col items-center
-                gap-2 rounded-2xl bg-surface  px-3 py-3.5 shadow-sm
+                group relative flex shrink-0 w-24 sm:w-28 flex-col items-center
+                gap-2 rounded-2xl bg-surface px-2.5 py-3.5 shadow-sm
                 snap-start text-center
                 transition-[transform,box-shadow,border-color] duration-150 ease-out will-change-[transform]
                 hover:-translate-y-1 hover:shadow-md hover:border-primary/40
@@ -123,10 +122,11 @@ export default function JewelleryTypeBar({
                 )}
               </div>
 
-              {/* Title & Screen Reader Description */}
-              <span className="text-xs sm:text-sm font-medium leading-tight text-foreground group-hover:text-primary transition-colors duration-150 line-clamp-1">
+              {/* Title with multi-line wrap and fixed container constraints */}
+              <h3 className="w-full text-xs sm:text-sm font-medium leading-snug text-foreground group-hover:text-primary transition-colors duration-150 break-words whitespace-normal">
                 {item.type}
-              </span>
+              </h3>
+
               <span className="sr-only">
                 {item.description || `Browse ${item.type} jewellery items`}
               </span>

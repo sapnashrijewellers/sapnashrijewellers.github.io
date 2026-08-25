@@ -5,7 +5,8 @@ import TestimonialScroller from "@/components/common/Testimonials";
 import SignatureCollections from "@/components/home/SignatureCollections";
 import NewArrivals from "@/components/product/NewArrivals";
 import WishlistBar from "@/components/common/WishlistBar";
-
+import buildHomePageJsonLd from "@/utils/buildHomePageJsonLd";
+import SEO from "@/components/common/SEO";
 import categories from "@/data/categories.json";
 import products from "@/data/products.json";
 
@@ -45,42 +46,7 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "JewelryStore",
-        "@id": `${baseURL}/#store`,
-        name: "Sapna Shri Jewellers",
-        alternateName: "सपना श्री ज्वेलर्स",
-        url: baseURL,
-        logo: imageUrl,
-        image: imageUrl,
-        description,
-        telephone: "+91-8234042231",
-        priceRange: "₹₹₹",
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: "Railway Station Main Road, Near Jain Mandir",
-          addressLocality: "Nagda",
-          addressRegion: "Madhya Pradesh",
-          postalCode: "456335",
-          addressCountry: "IN",
-        },
-      },
-      {
-        "@type": "WebSite",
-        "@id": `${baseURL}/#website`,
-        url: baseURL,
-        name: "Sapna Shri Jewellers",
-        potentialAction: {
-          "@type": "SearchAction",
-          target: `${baseURL}/search/?q={search_term_string}`,
-          "query-input": "required name=search_term_string",
-        },
-      },
-    ],
-  };
+  const jsonLd = buildHomePageJsonLd();
 
   return (
     <main className="container mx-auto px-4 py-4 max-w-7xl">
@@ -122,6 +88,7 @@ export default function Home() {
       <section aria-label="Signature jewellery collections" className="my-8">
         <SignatureCollections categories={categories} products={products} />
       </section>
+      <SEO slug="/home"></SEO>
     </main>
   );
 }

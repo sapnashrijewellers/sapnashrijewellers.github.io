@@ -125,34 +125,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       </section>
 
       {/* 5. Product Grid / Catalog listing */}
-      {/* <section
-        aria-label={`${category.name} collection`}
-        className="my-8"
-      >
-        {filtered.length === 0 ? (
-          <div
-            role="status"
-            aria-live="polite"
-            className="py-16 text-center text-muted-foreground text-lg bg-surface/50 rounded-2xl border border-dashed border-theme"
-          >
-            <p>इस श्रेणी में वर्तमान में कोई उत्पाद उपलब्ध नहीं है।</p>
-          </div>
-        ) : (
-          <ul
-            role="list"
-            aria-label={`${category.name} products list`}
-            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 list-none p-0"
-          >
-            {filtered.map((p: Product, idx: number) => (
-              <li key={p.id || p.slug || idx} className="flex justify-stretch">
-                <ProductCard product={p} priority={idx < 4} />
-              </li>
-            ))}
-          </ul>
-        )}
-      </section> */}
-
-{/* 4. Client-side Interactive Filter & Grid */}
+      {/* 4. Client-side Interactive Filter & Grid */}
       <JewelryTypeClient products={filtered} />
       {/* 6. Contextual SEO Content */}
       <aside aria-label="Related category searches and information">

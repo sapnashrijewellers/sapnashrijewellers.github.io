@@ -165,6 +165,11 @@
 @layer components {
 
   /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 transition-all;    
+    cursor: pointer
+  }
+
   .ssj-btn {
     @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 transition-all;
     color: var(--color-accent-text);

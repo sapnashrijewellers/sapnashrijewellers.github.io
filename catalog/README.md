@@ -34,3 +34,21 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+
+Project Name: projects/890100516231
+Project Number: 890100516231
+
+Public Source
+
+GMC Feed: https://sapnashrijewellers.in/gmc-feed.xml
+LLMs.txt: https://sapnashrijewellers.in/llms.txt
+Sitemap: https://sapnashrijewellers.in/sitemap.xml
+Products JSON: https://sapnashrijewellers.in/data/products.json
+Disclaimer: https://sapnashrijewellers.in/policies/disclaimer/
+Terms of Use: https://sapnashrijewellers.in/policies/terms/
+Privacy Policy: https://sapnashrijewellers.in/policies/privacy/
+Returns: https://sapnashrijewellers.in/policies/returns/
+Shipping: https://sapnashrijewellers.in/policies/shipping/
+Warranty: https://sapnashrijewellers.in/policies/warranty/

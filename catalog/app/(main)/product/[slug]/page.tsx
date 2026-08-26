@@ -24,6 +24,7 @@ import ProductSelection from "@/components/product/ProductSelection";
 import StoreAvailability from "@/components/product/StoreAvailability";
 import FAQ from "@/components/product/FAQ";
 import buildProductJsonLd from "@/utils/buildProductJsonLd";
+import ProductChatbot from "@/components/product/ProductChatbot";
 
 interface ProductDetailPageProps {
   params: Promise<{ slug: string }>;
@@ -131,6 +132,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
             </div>
 
             <ProductGallery product={product} />
+            <ProductChatbot product={product}/>
           </div>
 
           <OrderViaWhatsappButton product={product} />

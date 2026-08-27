@@ -16,7 +16,6 @@ interface ProductCardProps {
 
 export default function ProductCard({
   product,
-  priority = false,
   className = "",
 }: ProductCardProps) {
   const baseURL =
@@ -91,10 +90,9 @@ export default function ProductCard({
             src={imageSrc}
             alt={`${product.name} - Sapna Shri Jewellers`}
             fill
-            priority={priority}
-            fetchPriority={priority ? "high" : "auto"}
+            fetchPriority={"auto"}
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-            loading={priority ? "eager" : "lazy"}
+            loading={"lazy"}
             decoding="async"
             className="object-cover object-center transition-transform duration-300 ease-out group-hover:scale-105 will-change-transform"
           />
@@ -108,9 +106,8 @@ export default function ProductCard({
               {images.slice(0, 2).map((_, idx) => (
                 <span
                   key={idx}
-                  className={`h-1.5 rounded-full transition-all duration-150 ${
-                    activeImage === idx ? "w-3 bg-white" : "w-1.5 bg-white/60"
-                  }`}
+                  className={`h-1.5 rounded-full transition-all duration-150 ${activeImage === idx ? "w-3 bg-white" : "w-1.5 bg-white/60"
+                    }`}
                 />
               ))}
             </div>

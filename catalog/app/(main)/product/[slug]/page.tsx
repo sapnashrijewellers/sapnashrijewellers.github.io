@@ -34,7 +34,7 @@ const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.
 const driveURL = `${baseURL}/static/img/products/optimized/`;
 
 export async function generateStaticParams() {
-  return products    
+  return products
     .map((p: Product) => ({
       slug: p.slug,
     }));
@@ -52,10 +52,14 @@ export async function generateMetadata({ params }: ProductDetailPageProps): Prom
   const description =
     product.description ||
     `Buy authentic ${product.name} crafted with BIS Hallmark certified purity at Sapna Shri Jewellers Nagda.`;
-  const imageUrl =
-    product.images?.[0]
-      ? `${driveURL}${product.images[0]}`
-      : `${baseURL}/icons/icon-512x512.png`;
+  // const imageUrl =
+  //   product.images?.[0]
+  //     ? `${driveURL}${product.images[0]}`
+  //     : `${baseURL}/icons/icon-512x512.png`;
+
+  const primaryImageUrl = product.images?.[0]
+    ? `${driveURL}${product.images[0]}`
+    : `${baseURL}/icons/icon-512x512.png`;
 
   return {
     title,
@@ -67,7 +71,9 @@ export async function generateMetadata({ params }: ProductDetailPageProps): Prom
       type: "website",
       images: [
         {
-          url: imageUrl,
+          url: primaryImageUrl,
+          secureUrl: primaryImageUrl,
+          type: "image/webp",
           width: 800,
           height: 800,
           alt: `${product.name} - Sapna Shri Jewellers`,
@@ -78,7 +84,7 @@ export async function generateMetadata({ params }: ProductDetailPageProps): Prom
       card: "summary_large_image",
       title,
       description,
-      images: [imageUrl],
+      images: [primaryImageUrl],
     },
     alternates: {
       canonical: baseProductUrl,
@@ -132,7 +138,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
             </div>
 
             <ProductGallery product={product} />
-            <ProductChatbot product={product}/>
+            <ProductChatbot product={product} />
           </div>
 
           <OrderViaWhatsappButton product={product} />

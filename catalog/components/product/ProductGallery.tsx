@@ -166,15 +166,17 @@ export default function ProductGallery({
       >
         {/* Base Layer: Responsive Next.js Image with LCP priority */}
         <Image
-  src={imageUrl}
-  alt={`${product.name} - View ${activeIndex + 1}`}
-  fill
-  priority={activeIndex === 0}
-  loading={activeIndex === 0 ? "eager" : "lazy"}
-  fetchPriority={activeIndex === 0 ? "high" : "low"}
-  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 40vw"
-  className="object-contain p-2 sm:p-4 transition-transform duration-150 ease-out will-change-transform"
-/>
+          src={imageUrl}
+          alt={`${product.name} - View ${activeIndex + 1}`}
+          title={`${product.name} - Image ${activeIndex + 1} of ${images.length}  `}
+          itemProp="image"
+          fill
+          priority={activeIndex === 0}
+          loading={activeIndex === 0 ? "eager" : "lazy"}
+          fetchPriority={activeIndex === 0 ? "high" : "low"}
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 40vw"
+          className="object-contain p-2 sm:p-4 transition-transform duration-150 ease-out will-change-transform"
+        />
 
         {/* Desktop GPU-accelerated Zoom Overlay */}
         {!isTouchDevice && zoomPosition && (
@@ -287,10 +289,9 @@ export default function ProductGallery({
                   relative shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden
                   bg-surface border transition-[border-color,box-shadow,transform] duration-150 ease-out snap-start
                   focus:outline-none focus:ring-2 focus:ring-primary will-change-[transform]
-                  ${
-                    isSelected
-                      ? "border-primary ring-2 ring-primary/40 shadow-sm scale-95"
-                      : "border-theme/40 hover:border-primary/50 opacity-75 hover:opacity-100"
+                  ${isSelected
+                    ? "border-primary ring-2 ring-primary/40 shadow-sm scale-95"
+                    : "border-theme/40 hover:border-primary/50 opacity-75 hover:opacity-100"
                   }
                 `}
               >
@@ -302,7 +303,7 @@ export default function ProductGallery({
                   loading="eager"
                   decoding="async"
                   className="object-contain p-1"
-                  
+
                 />
               </button>
             );

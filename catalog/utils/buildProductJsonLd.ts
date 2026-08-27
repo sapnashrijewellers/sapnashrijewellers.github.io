@@ -18,14 +18,17 @@ function sanitizeDescription(text?: string): string {
 }
 
 export default function buildProductJsonLd(
-  product: Product  
+  product: Product
 ): WithContext<SchemaProduct> {
   const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "";
-  const firstImage = product.images?.[0] ? `/static/img/products/optimized/${product.images[0]}` : "";
-  const imageUrl = firstImage ? `${baseURL}${firstImage}` : undefined;
+  const imageBaseUrl = `${baseURL}/static/img/products/optimized/`;
+  const imageUrl = `${imageBaseUrl}${product.images[0]}`;
   const baseProductUrl = `${baseURL}/product/${product.slug}`;
 
-  
+  const productImages: string[] = product.images?.length
+    ? product.images.map((img: string) => `${imageBaseUrl}${img}`)
+    : [`${baseURL}/icons/icon-512x512.png`];
+  const primaryImageUrl = productImages[0];
   const hasValidPrice = product.price !== null && product.price !== undefined;
 
   const now = new Date();
@@ -107,7 +110,15 @@ export default function buildProductJsonLd(
     "@type": "Product",
     "@id": `${baseProductUrl}#product`,
     name: product.name,
-    image: imageUrl,
+    image: [
+      {
+        "@type": "ImageObject",
+        url: primaryImageUrl,
+        contentUrl: primaryImageUrl,
+        caption: `${product.name} - Sapna Shri Jewellers`,
+      },
+      ...productImages.slice(1),
+    ],
     description: sanitizeDescription(product.description),
     sku: String(product.id),
     url: baseProductUrl,

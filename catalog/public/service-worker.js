@@ -39,7 +39,7 @@ self.addEventListener("push", (event) => {
   const title = payload.title || "Sapna Shri Jewellers";
   const options = {
     body: payload.body || "Tap to open",
-    icon: "/icons/android-chrome-192x192.png",
+    icon: "/icons/icon-192x192.png",
     badge: "/icons/badge-icon-96x96.png",
     data: { url: payload.url || "/" },
     vibrate: [100, 50, 100],

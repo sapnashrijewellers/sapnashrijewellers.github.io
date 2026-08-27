@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   const imageUrl =
     filtered.length > 0 && filtered[0].images?.[0]
       ? `${driveURL}${filtered[0].images[0]}`
-      : `${baseURL}/android-chrome-512x512.png`;
+      : `${baseURL}/icon-512x512.png`;
 
   return {
     title,

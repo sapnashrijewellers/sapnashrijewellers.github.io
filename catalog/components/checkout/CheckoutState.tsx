@@ -81,35 +81,32 @@ export default function CheckoutState({ className = "" }: CheckoutStateProps) {
     }
   }, []);
 
-  /* ---------------- Step 3: Fetch / Populate User Address ---------------- */
-  useEffect(() => {
-    if (!user) return;
+/* ---------------- Step 3: Fetch / Populate User Address ---------------- */
+useEffect(() => {
+  if (!user) return;
 
-    let isMounted = true;
+  let isMounted = true;
 
-    async function loadAddress() {
-      setAddressLoading(true);
-      try {
-        const workerUrl = process.env.NEXT_PUBLIC_WORKER_URL || "";
-        const res = await fetch(
-          `${workerUrl}/address?uid=${encodeURIComponent(user!.uid)}`,
-          {
-            headers: { Accept: "application/json" },
-          }
-        );
-
-        if (res.ok) {
-          const data = await res.json();
-          if (isMounted && data) {
-            setAddress(data);
-            return;
-          }
+  async function loadAddress() {
+    setAddressLoading(true);
+    try {
+      const workerUrl = process.env.NEXT_PUBLIC_WORKER_URL || "";
+      const res = await fetch(
+        `${workerUrl}/address?uid=${encodeURIComponent(user!.uid)}`,
+        {
+          headers: { Accept: "application/json" },
         }
-      } catch (err) {
-        console.error("Failed to retrieve stored user address:", err);
+      );
+
+      if (res.ok) {
+        const data = await res.json();
+        if (isMounted && data) {
+          setAddress(data);
+          return;
+        }
       }
 
-      // Fallback pre-fill using Firebase user credentials
+      // Fallback pre-fill using Firebase user credentials if no remote data found
       if (isMounted) {
         setAddress((prev) => ({
           ...prev,
@@ -119,16 +116,21 @@ export default function CheckoutState({ className = "" }: CheckoutStateProps) {
           mobile: prev.mobile || user!.phoneNumber || "",
         }));
       }
-
-      if (isMounted) setAddressLoading(false);
+    } catch (err) {
+      console.error("Failed to retrieve stored user address:", err);
+    } finally {
+      if (isMounted) {
+        setAddressLoading(false);
+      }
     }
+  }
 
-    loadAddress();
+  loadAddress();
 
-    return () => {
-      isMounted = false;
-    };
-  }, [user]);
+  return () => {
+    isMounted = false;
+  };
+}, [user]);
 
   /* ---------------- Step 4: Persist Address ---------------- */
   const saveAddress = useCallback(async () => {

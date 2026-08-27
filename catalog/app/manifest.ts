@@ -17,7 +17,7 @@ export default function manifest(): MetadataRoute.Manifest {
       url: `/jewelry-type/${t.slug}?source=pwa_shortcut`,
       icons: [
         {
-          src: "/android-chrome-192x192.png", // Fallback to main icon
+          src: "/icon-192x192.png", // Fallback to main icon
           sizes: "192x192",
           type: "image/png",
         },
@@ -46,19 +46,19 @@ export default function manifest(): MetadataRoute.Manifest {
 
     icons: [
       {
-        src: "/web-app-manifest-192x192.png",
+        src: "/icon-192x192.png",
         sizes: "192x192",
         type: "image/png",
         purpose: "any",
       },
       {
         src: "/favicon-96x96.png",
-        sizes: "512x512",
+        sizes: "96x96",
         type: "image/png",
         purpose: "any",
       },
       {
-        src: "/web-app-manifest-512x512.png",
+        src: "/icon-512x512.png",
         sizes: "512x512",
         type: "image/png",
         purpose: "any",

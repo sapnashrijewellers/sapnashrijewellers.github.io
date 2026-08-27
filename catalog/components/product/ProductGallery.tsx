@@ -166,13 +166,15 @@ export default function ProductGallery({
       >
         {/* Base Layer: Responsive Next.js Image with LCP priority */}
         <Image
-          src={imageUrl}
-          alt={`${product.name} - View ${activeIndex + 1}`}
-          fill
-          priority
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 40vw"
-          className="object-contain p-2 sm:p-4 transition-transform duration-150 ease-out will-change-transform"
-        />
+  src={imageUrl}
+  alt={`${product.name} - View ${activeIndex + 1}`}
+  fill
+  priority={activeIndex === 0}
+  loading={activeIndex === 0 ? "eager" : "lazy"}
+  fetchPriority={activeIndex === 0 ? "high" : "low"}
+  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 40vw"
+  className="object-contain p-2 sm:p-4 transition-transform duration-150 ease-out will-change-transform"
+/>
 
         {/* Desktop GPU-accelerated Zoom Overlay */}
         {!isTouchDevice && zoomPosition && (
@@ -297,9 +299,10 @@ export default function ProductGallery({
                   alt={`${product.name} thumbnail ${i + 1}`}
                   fill
                   sizes="80px"
-                  loading="lazy"
+                  loading="eager"
                   decoding="async"
                   className="object-contain p-1"
+                  
                 />
               </button>
             );

@@ -11,7 +11,7 @@ import categories from "@/data/categories.json";
 import products from "@/data/products.json";
 
 const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in";
-const imageUrl = `${baseURL}/android-chrome-512x512.png`;
+const imageUrl = `${baseURL}/icon-512x512.png`;
 
 const title = "Sapna Shri Jewellers Nagda | Latest Gold & Silver Jewellery Collection";
 const description =

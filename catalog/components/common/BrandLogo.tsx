@@ -24,14 +24,14 @@ export default function BrandLogo({
           }`}
         >
           <Image
-            src="/icons/logo-wide.webp"
-            alt="Sapna Shri Jewellers Nagda Official Logo"
-            width={200}
-            height={56}
-            priority
-            sizes="(max-width: 640px) 160px, 200px"
-            className="h-14 w-auto object-contain rounded-xl"
-          />
+  src="/icons/logo-wide.webp"
+  alt="Sapna Shri Jewellers Nagda Official Logo"
+  width={200}
+  height={56}
+  priority
+  sizes="(max-width: 640px) 160px, 200px"
+  className="object-contain rounded-xl"
+/>
         </span>
       </Link>
     </div>

@@ -55,7 +55,7 @@ export async function generateMetadata({ params }: ProductDetailPageProps): Prom
   const imageUrl =
     product.images?.[0]
       ? `${driveURL}${product.images[0]}`
-      : `${baseURL}/icons/android-chrome-512x512.png`;
+      : `${baseURL}/icons/icon-512x512.png`;
 
   return {
     title,

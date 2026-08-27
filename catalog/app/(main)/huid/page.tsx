@@ -4,7 +4,7 @@ import Breadcrumb from "@/components/navbar/BreadcrumbItem";
 import JsonLd from "@/components/common/JsonLd";
 
 const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in";
-const imageUrl = `${baseURL}/icons/android-chrome-512x512.png`;
+const imageUrl = `${baseURL}/icons/icon-512x512.png`;
 
 export const metadata: Metadata = {
   title: "HUID Hallmarking Info - Sapna Shri Jewellers Nagda",

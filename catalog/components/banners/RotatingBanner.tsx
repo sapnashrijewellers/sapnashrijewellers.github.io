@@ -6,13 +6,13 @@ import Link from "next/link";
 import banners from "@/data/banners.json";
 
 interface BannerItem {
+  id: number;
   rank: number;
   bannerDesktop: string;
   bannerMobile?: string;
-  link: string;
+  categoryId: string;
   text: string;
-  imageAnimation: string
-} 
+}
 
 interface RotatingBannerProps {
   interval?: number;
@@ -20,7 +20,8 @@ interface RotatingBannerProps {
   className?: string;
 }
 
-const baseURL = (process.env.NEXT_PUBLIC_BASE_URL ?? "").replace(/\/+$/, "");
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
+const baseImageURL = process.env.NEXT_PUBLIC_BASE_IMAGE_URL;
 
 export default function RotatingBanner({
   interval = 8000,
@@ -45,7 +46,7 @@ export default function RotatingBanner({
   if (items.length === 0) return null;
 
   const current = items[index];
-  const bannerHref = current.link || "#";
+  const bannerHref = `${baseURL}/c/${current.categoryId}/`;
 
   return (
     <section
@@ -68,17 +69,17 @@ export default function RotatingBanner({
           {items.map((item, idx) => {
             const isActive = idx === index;
             const itemAlt = item.text;
-            const desktopImg = `${baseURL}/static/img/banner/optimized/${item.bannerDesktop}`;
-            const mobileImg =  `${baseURL}/static/img/banner/optimized/${item.bannerMobile}`;
-              
+            const desktopImg = `${baseImageURL}/banner/optimized/${item.bannerDesktop}`;
+            const mobileImg = `${baseImageURL}/banner/optimized/${item.bannerMobile}`;
+
 
             return (
               <div
                 key={item.bannerDesktop || idx}
                 aria-hidden={!isActive}
                 className={`absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out ${isActive
-                    ? "opacity-100 z-10 pointer-events-auto"
-                    : "opacity-0 z-0 pointer-events-none"
+                  ? "opacity-100 z-10 pointer-events-auto"
+                  : "opacity-0 z-0 pointer-events-none"
                   }`}
               >
                 {/* Mobile Viewport Image */}
@@ -132,8 +133,8 @@ export default function RotatingBanner({
                 aria-label={`Go to slide ${i + 1}: ${item.text || "Featured banner"}`}
                 onClick={() => setIndex(i)}
                 className={`h-2 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary ${isSelected
-                    ? "w-6 bg-primary shadow-xs"
-                    : "w-2 bg-muted-foreground/30 hover:bg-muted-foreground/60"
+                  ? "w-6 bg-primary shadow-xs"
+                  : "w-2 bg-muted-foreground/30 hover:bg-muted-foreground/60"
                   }`}
               />
             );

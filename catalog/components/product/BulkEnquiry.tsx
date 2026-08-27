@@ -25,7 +25,7 @@ export default function BulkEnquiry({
   const rawWhatsApp = process.env.NEXT_PUBLIC_WHATSAPP || "";
   const sanitizedWhatsApp = rawWhatsApp.replace(/[^0-9]/g, "");
   const baseUrl = (process.env.NEXT_PUBLIC_BASE_URL || "").replace(/\/+$/, "");
-  const productUrl = `${baseUrl}/product/${product.slug}/`;
+  const productUrl = `${baseUrl}/p/${product.id}/`;
 
   const toggleOpen = useCallback(() => {
     setOpen((prev) => !prev);

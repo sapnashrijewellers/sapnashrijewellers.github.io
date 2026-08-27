@@ -6,7 +6,7 @@ import categories from "@/data/categories.json";
 import types from "@/data/types.json";
 
 interface CatalogItem {
-  slug: string;
+  id: number;
   name?: string;
   title?: string;
   description?: string;
@@ -31,7 +31,7 @@ export async function GET() {
   const categoryLinks = categories 
     .map((cat) => {
       const title = cat.name;
-      return `- [${title}](${baseUrl}/category/${cat.slug}/): Explore all ${cleanText(title)} collections.`;
+      return `- [${title}](${baseUrl}/c/${cat.id}/): Explore all ${cleanText(title)} collections.`;
     })
     .join("\n");
 
@@ -39,7 +39,7 @@ export async function GET() {
   const jewelryTypeLinks = types
     .map((t) => {
       const title = t.type ;
-      return `- [${title}](${baseUrl}/jewelry-type/${t.slug}/): Browse specialized ${cleanText(title)}.`;
+      return `- [${title}](${baseUrl}/jt/${t.id}/): Browse specialized ${cleanText(title)}.`;
     })
     .join("\n");
 
@@ -49,7 +49,7 @@ export async function GET() {
       const title = cleanText(prod.name);
       const rawDesc = cleanText(prod.description);
       const shortDesc = rawDesc.length > 130 ? `${rawDesc.slice(0, 127)}...` : rawDesc;
-      return `- [${title}](${baseUrl}/product/${prod.slug}/): ${shortDesc}`;
+      return `- [${title}](${baseUrl}/p/${prod.id}/): ${shortDesc}`;
     })
     .join("\n");
 

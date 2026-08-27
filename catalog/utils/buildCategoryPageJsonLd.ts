@@ -11,10 +11,10 @@ export function buildCategoryPageJsonLd(
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "@id": `${baseURL}/category/${category.slug}/#itemlist`,
+    "@id": `${baseURL}/c/${category.id}/#itemlist`,
     "name": `${category.title || category.name} | Sapna Shri Jewellers`,
     "description": category.description,
-    "url": `${baseURL}/category/${category.slug}/`,
+    "url": `${baseURL}/c/${category.id}/`,
     "numberOfItems": products.length,
     "itemListElement": products.map((product, index) => {
       const fullProductJsonLd = buildProductJsonLd(product);

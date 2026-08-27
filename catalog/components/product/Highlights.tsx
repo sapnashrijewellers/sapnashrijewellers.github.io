@@ -39,7 +39,7 @@ export function HighlightsTabs({ product, className = "" }: HighlightsTabsProps)
       >
         {highlights.map((point, i) => (
           <li
-            key={`${product.id || product.slug}-highlight-${i}`}
+            key={`${product.id || product.id}-highlight-${i}`}
             className="flex items-start gap-2.5 leading-relaxed"
           >
             <CheckCircle2

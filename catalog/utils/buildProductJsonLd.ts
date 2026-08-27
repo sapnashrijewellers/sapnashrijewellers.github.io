@@ -21,9 +21,8 @@ export default function buildProductJsonLd(
   product: Product
 ): WithContext<SchemaProduct> {
   const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "";
-  const imageBaseUrl = `${baseURL}/static/img/products/optimized/`;
-  const imageUrl = `${imageBaseUrl}${product.images[0]}`;
-  const baseProductUrl = `${baseURL}/product/${product.slug}`;
+  const imageBaseUrl = `${baseURL}/static/img/products/optimized/`;  
+  const productUrl = `${baseURL}/p/${product.id}`;
 
   const productImages: string[] = product.images?.length
     ? product.images.map((img: string) => `${imageBaseUrl}${img}`)
@@ -42,7 +41,7 @@ export default function buildProductJsonLd(
   /* Offer Definition */
   const offer: SchemaOffer = {
     "@type": "Offer",
-    url: baseProductUrl,
+    url: productUrl,
     priceCurrency: "INR",
     availability: product.available
       ? "https://schema.org/InStock"
@@ -108,7 +107,7 @@ export default function buildProductJsonLd(
   const productJsonLd: WithContext<SchemaProduct> = {
     "@context": "https://schema.org",
     "@type": "Product",
-    "@id": `${baseProductUrl}#product`,
+    "@id": `${productUrl}#product`,
     name: product.name,
     image: [
       {
@@ -121,7 +120,7 @@ export default function buildProductJsonLd(
     ],
     description: sanitizeDescription(product.description),
     sku: String(product.id),
-    url: baseProductUrl,
+    url: productUrl,
     brand: {
       "@type": "Brand",
       name: brandName,

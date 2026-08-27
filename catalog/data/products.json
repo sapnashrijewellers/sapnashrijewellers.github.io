@@ -26,7 +26,7 @@
     "brandText": "Made with 92.5% Silver Purity (925 Silver)",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 3.5,
     "makingCharges": 50,
     "discount": 1,
@@ -37,9 +37,8 @@
     "rating": 4.9,
     "ratingCount": 64,
     "Lock": "",
-    "slug": "personalised-silver-name-ring-for-men-1",
-    "price": 1460,
-    "MRP": 1475
+    "price": 1622,
+    "MRP": 1638
   },
   {
     "id": 2,
@@ -68,7 +67,7 @@
     "brandText": "Crafted in 925 Silver with 92.5% Purity",
     "care": "SILVER_GENERAL",
     "for": "her",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 3,
     "makingCharges": 52,
     "discount": 1,
@@ -79,9 +78,8 @@
     "rating": 4.5,
     "ratingCount": 86,
     "Lock": "",
-    "slug": "personalised-silver-name-ring-for-women-2",
-    "price": 1268,
-    "MRP": 1281
+    "price": 1409,
+    "MRP": 1423
   },
   {
     "id": 3,
@@ -109,7 +107,7 @@
     "brandText": "Genuine 925 Silver (92.5% Pure Silver)",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 6.5,
     "makingCharges": 52,
     "discount": 2,
@@ -120,9 +118,8 @@
     "rating": 4,
     "ratingCount": 98,
     "Lock": "",
-    "slug": "buy-silver-name-ring-online-choose-your-design-3",
-    "price": 2748,
-    "MRP": 2804
+    "price": 3053,
+    "MRP": 3115
   },
   {
     "id": 4,
@@ -133,19 +130,21 @@
       "Silver Jewellery Under ₹3000"
     ],
     "highlights": [
-      "Symbol of devotion to Sawariya Seth",
-      "intricately carved silver ring with floral and wave patterns",
-      "92.5% purity",
-      "elegant devotional jewelry."
+      "💎 Premium 925 Pure Silver Craftsmanship",
+      "🪷 Sawariya Seth Divine Design Ring",
+      "✨ Detailed Handmade Finishing",
+      "🇮🇳 Proudly Made in India",
+      "🎁 Perfect Spiritual Gift for Loved Ones",
+      "🚚 Pan India Delivery Available"
     ],
-    "description": "Beautiful Sawariya Seth silver ring with intricate carving and 90% purity—perfect devotional jewelry for daily wear or gifting.",
+    "description": "Beautiful Sawariya Seth silver ring with intricate carving and 92.5% purity—perfect devotional jewelry for daily wear or gifting.",
     "images": [
       "img-20251003-062204.webp"
     ],
     "brandText": "Premium Quality 92.5% Pure Silver",
     "care": "SILVER_GENERAL, HANDCRAFTED_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 6,
     "makingCharges": 53,
     "discount": 2,
@@ -156,9 +155,8 @@
     "rating": 4.7,
     "ratingCount": 75,
     "Lock": "",
-    "slug": "sawariya-seth-silver-ring-4",
-    "price": 2553,
-    "MRP": 2605
+    "price": 2837,
+    "MRP": 2895
   },
   {
     "id": 5,
@@ -186,7 +184,7 @@
     "brandText": "Authentic 925 Silver Purity Guaranteed",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 6.5,
     "makingCharges": 55,
     "discount": 4,
@@ -197,9 +195,8 @@
     "rating": 5,
     "ratingCount": 90,
     "Lock": "",
-    "slug": "925-sterling-silver-gurjar-name-bold-rajwadi-ring-5",
-    "price": 2802,
-    "MRP": 2919
+    "price": 3113,
+    "MRP": 3243
   },
   {
     "id": 6,
@@ -226,7 +223,7 @@
     "brandText": "Designed with 92.5% Pure Silver Quality",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 5,
     "makingCharges": 33,
     "discount": 3,
@@ -237,9 +234,8 @@
     "rating": 4.9,
     "ratingCount": 93,
     "Lock": "",
-    "slug": "rajput-name-engraved-925-sterling-silver-sword-band-ring-6",
-    "price": 1849,
-    "MRP": 1906
+    "price": 2055,
+    "MRP": 2119
   },
   {
     "id": 7,
@@ -268,7 +264,7 @@
     "brandText": "Made from 925 Sterling Silver Purity",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 4.5,
     "makingCharges": 35,
     "discount": 0,
@@ -279,9 +275,8 @@
     "rating": 4,
     "ratingCount": 112,
     "Lock": "",
-    "slug": "naam-wali-chandi-ki-ring-7",
-    "price": 1689,
-    "MRP": 1689
+    "price": 1877,
+    "MRP": 1877
   },
   {
     "id": 8,
@@ -310,7 +305,7 @@
     "brandText": "Quality Crafted with 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 8,
     "makingCharges": 32,
     "discount": 2,
@@ -321,9 +316,8 @@
     "rating": 4.1,
     "ratingCount": 113,
     "Lock": "",
-    "slug": "personalised-couple-initials-925-sterling-silver-band-set-8",
-    "price": 2937,
-    "MRP": 2997
+    "price": 3263,
+    "MRP": 3330
   },
   {
     "id": 9,
@@ -350,7 +344,7 @@
     "brandText": "Pure Elegance with 925 Silver Quality",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 7,
     "makingCharges": 52,
     "discount": 2,
@@ -361,9 +355,8 @@
     "rating": 4.7,
     "ratingCount": 77,
     "Lock": "",
-    "slug": "silver-name-ring-for-men-online-9",
-    "price": 2959,
-    "MRP": 3019
+    "price": 3288,
+    "MRP": 3355
   },
   {
     "id": 10,
@@ -391,7 +384,7 @@
     "brandText": "Trusted 92.5% Silver Purity",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 4.5,
     "makingCharges": 32,
     "discount": 0,
@@ -402,9 +395,8 @@
     "rating": 4.6,
     "ratingCount": 57,
     "Lock": "",
-    "slug": "customize-name-ring-for-men-10",
-    "price": 1652,
-    "MRP": 1652
+    "price": 1835,
+    "MRP": 1835
   },
   {
     "id": 11,
@@ -432,7 +424,7 @@
     "brandText": "Crafted Using Authentic 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 6,
     "makingCharges": 55,
     "discount": 0,
@@ -443,9 +435,8 @@
     "rating": 4.7,
     "ratingCount": 37,
     "Lock": "",
-    "slug": "silver-name-ring-11",
-    "price": 2586,
-    "MRP": 2586
+    "price": 2874,
+    "MRP": 2874
   },
   {
     "id": 12,
@@ -474,7 +465,7 @@
     "brandText": "Made with Certified 92.5% Silver Purity",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 3.5,
     "makingCharges": 32,
     "discount": 0,
@@ -485,9 +476,8 @@
     "rating": 3.9,
     "ratingCount": 24,
     "Lock": "",
-    "slug": "silver-name-ring-925-personalised-bis-huid-hallmarked-12",
-    "price": 1285,
-    "MRP": 1285
+    "price": 1428,
+    "MRP": 1428
   },
   {
     "id": 13,
@@ -516,7 +506,7 @@
     "brandText": "Experience Genuine 925 Silver Jewellery",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 8,
     "makingCharges": 30,
     "discount": 0,
@@ -527,9 +517,8 @@
     "rating": 4.6,
     "ratingCount": 114,
     "Lock": "",
-    "slug": "engraved-silver-name-ring-925-hallmarked-13",
-    "price": 2892,
-    "MRP": 2892
+    "price": 3214,
+    "MRP": 3214
   },
   {
     "id": 14,
@@ -558,7 +547,7 @@
     "brandText": "Premium Finish with 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 8,
     "makingCharges": 30,
     "discount": 0,
@@ -569,9 +558,8 @@
     "rating": 4,
     "ratingCount": 86,
     "Lock": "",
-    "slug": "925-silver-name-ring-for-men-14",
-    "price": 2892,
-    "MRP": 2892
+    "price": 3214,
+    "MRP": 3214
   },
   {
     "id": 15,
@@ -600,7 +588,7 @@
     "brandText": "Authentic Silver Jewellery with 925 Purity",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 6,
     "makingCharges": 55,
     "discount": 0,
@@ -611,9 +599,8 @@
     "rating": 4.2,
     "ratingCount": 17,
     "Lock": "",
-    "slug": "silver-name-ring-15",
-    "price": 2586,
-    "MRP": 2586
+    "price": 2874,
+    "MRP": 2874
   },
   {
     "id": 16,
@@ -642,7 +629,7 @@
     "brandText": "Crafted for You in 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 5,
     "makingCharges": 30,
     "discount": 0,
@@ -653,9 +640,8 @@
     "rating": 4.9,
     "ratingCount": 91,
     "Lock": "",
-    "slug": "custom-silver-name-ring-925-hallmarked-16",
-    "price": 1808,
-    "MRP": 1808
+    "price": 2009,
+    "MRP": 2009
   },
   {
     "id": 17,
@@ -684,7 +670,7 @@
     "brandText": "High-Quality 925 Silver Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 3.5,
     "makingCharges": 32,
     "discount": 0,
@@ -695,9 +681,8 @@
     "rating": 4.5,
     "ratingCount": 80,
     "Lock": "",
-    "slug": "customised-silver-ring-trending-design-17",
-    "price": 1285,
-    "MRP": 1285
+    "price": 1428,
+    "MRP": 1428
   },
   {
     "id": 18,
@@ -726,7 +711,7 @@
     "brandText": "Elegant Designs in 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 6,
     "makingCharges": 55,
     "discount": 0,
@@ -737,9 +722,8 @@
     "rating": 4.4,
     "ratingCount": 23,
     "Lock": "",
-    "slug": "alphabet-letter-engraved-silver-ring-18",
-    "price": 2586,
-    "MRP": 2586
+    "price": 2874,
+    "MRP": 2874
   },
   {
     "id": 19,
@@ -767,7 +751,7 @@
     "brandText": "Original 925 Silver Purity Jewellery",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 5,
     "makingCharges": 33,
     "discount": 0,
@@ -778,9 +762,8 @@
     "rating": 4.9,
     "ratingCount": 45,
     "Lock": "",
-    "slug": "925-sterling-silver-personalised-name-ring-19",
-    "price": 1849,
-    "MRP": 1849
+    "price": 2055,
+    "MRP": 2055
   },
   {
     "id": 22,
@@ -808,7 +791,7 @@
     "brandText": "Authentic Silver Jewellery with 925 Purity",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 6,
     "makingCharges": 50,
     "discount": 0,
@@ -819,9 +802,8 @@
     "rating": 4.6,
     "ratingCount": 106,
     "Lock": "",
-    "slug": "name-engraved-silver-ring-22",
-    "price": 2503,
-    "MRP": 2503
+    "price": 2781,
+    "MRP": 2781
   },
   {
     "id": 23,
@@ -832,19 +814,21 @@
       "Daily Wear"
     ],
     "highlights": [
-      "Symbol of devotion to Sawariya Seth",
-      "intricately carved silver ring with floral and wave patterns",
-      "90% purity",
-      "elegant devotional jewelry."
+      "💎 925 Sterling Silver Purity",
+      "🙏 Blessed Sawariya Seth Religious Ring Design",
+      "✨ Elegant Traditional Look with Modern Finish",
+      "🪔 Ideal for Devotees & Daily Wear",
+      "🎁 A Meaningful Gift for Every Occasion",
+      "🚚 Safe & Secure Delivery Across India"
     ],
-    "description": "Beautiful Sawariya Seth silver ring with intricate carving and 92.5% purity—perfect devotional jewelry for daily wear or gifting.",
+    "description": "Bring home the blessings and divine charm of Sawariya Seth with this beautifully crafted 925 Silver Ring. Designed with intricate detailing and a premium finish, this religious silver ring reflects faith, tradition, and elegance. Made from high-quality 925 pure silver, it offers a comfortable fit and a timeless look suitable for daily wear as well as special occasions.\n\nThis Sawariya Seth Chandi Ring is not just a piece of jewellery but a symbol of devotion and positivity. Its unique design makes it a meaningful choice for devotees and a perfect spiritual gift for family, friends, and loved ones.",
     "images": [
       "img-20251003-061845.webp"
     ],
     "brandText": "Made with 92.5% Silver Purity (925 Silver)",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 6,
     "makingCharges": 55,
     "discount": 0,
@@ -855,9 +839,8 @@
     "rating": 4.8,
     "ratingCount": 34,
     "Lock": "",
-    "slug": "sawariya-seth-silver-ring-23",
-    "price": 2586,
-    "MRP": 2586
+    "price": 2874,
+    "MRP": 2874
   },
   {
     "id": 24,
@@ -868,10 +851,12 @@
       "Daily Wear"
     ],
     "highlights": [
-      "Symbol of devotion to Sawariya Seth",
-      "intricately carved silver ring with floral and wave patterns",
-      "90% purity",
-      "elegant devotional jewelry."
+      "💎 Authentic 925 Silver Jewellery",
+      "🪷 Sawariya Seth Inspired Premium Ring",
+      "✨ Unique Design with Fine Detailing",
+      "🇮🇳 Handcrafted in India",
+      "🎁 Perfect Gift for Festival & Special Moments",
+      "📦 All India Shipping Available"
     ],
     "description": "A meaningful jewellery piece for devotees, this Silver Rajwadi Sawariya Seth Ji Ring carries a unique spiritual essence. Its refined design and premium silver finish create a sophisticated look that can be worn on every occasion. This Sawariya Seth Chandi Ring is a beautiful expression of faith and devotion.",
     "images": [
@@ -880,7 +865,7 @@
     "brandText": "Crafted in 925 Silver with 92.5% Purity",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 5.5,
     "makingCharges": 55,
     "discount": 0,
@@ -891,9 +876,8 @@
     "rating": 4.1,
     "ratingCount": 71,
     "Lock": "",
-    "slug": "sawariya-seth-silver-ring-24",
-    "price": 2371,
-    "MRP": 2371
+    "price": 2634,
+    "MRP": 2634
   },
   {
     "id": 25,
@@ -921,7 +905,7 @@
     "brandText": "Genuine 925 Silver (92.5% Pure Silver)",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 5,
     "makingCharges": 55,
     "discount": 3,
@@ -932,9 +916,8 @@
     "rating": 4.9,
     "ratingCount": 114,
     "Lock": "",
-    "slug": "personalised-925-silver-ring-25",
-    "price": 2155,
-    "MRP": 2222
+    "price": 2395,
+    "MRP": 2469
   },
   {
     "id": 26,
@@ -962,7 +945,7 @@
     "brandText": "Premium Quality 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 5.5,
     "makingCharges": 55,
     "discount": 3,
@@ -973,9 +956,8 @@
     "rating": 4,
     "ratingCount": 10,
     "Lock": "",
-    "slug": "alphabet-silver-name-ring-26",
-    "price": 2371,
-    "MRP": 2444
+    "price": 2634,
+    "MRP": 2715
   },
   {
     "id": 27,
@@ -1003,7 +985,7 @@
     "brandText": "Authentic 925 Silver Purity",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 5.5,
     "makingCharges": 52,
     "discount": 2,
@@ -1014,9 +996,8 @@
     "rating": 4.9,
     "ratingCount": 46,
     "Lock": "",
-    "slug": "customize-letter-silver-name-ring-personalised-initial-27",
-    "price": 2325,
-    "MRP": 2372
+    "price": 2583,
+    "MRP": 2636
   },
   {
     "id": 28,
@@ -1043,7 +1024,7 @@
     "brandText": "Designed with 92.5% Pure Silver Quality",
     "care": "SILVER_GENERAL",
     "for": "her",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 5,
     "makingCharges": 52,
     "discount": 2,
@@ -1054,9 +1035,8 @@
     "rating": 4.6,
     "ratingCount": 11,
     "Lock": "",
-    "slug": "initial-name-silver-ring-customised-gift-28",
-    "price": 2114,
-    "MRP": 2157
+    "price": 2348,
+    "MRP": 2396
   },
   {
     "id": 29,
@@ -1083,7 +1063,7 @@
     "brandText": "Made from 925 Sterling Silver",
     "care": "SILVER_GENERAL",
     "for": "her",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 2.5,
     "makingCharges": 50,
     "discount": 0,
@@ -1094,9 +1074,8 @@
     "rating": 4.8,
     "ratingCount": 63,
     "Lock": "",
-    "slug": "date-engraved-silver-ring-personalised-29",
-    "price": 1043,
-    "MRP": 1043
+    "price": 1159,
+    "MRP": 1159
   },
   {
     "id": 30,
@@ -1124,7 +1103,7 @@
     "brandText": "Quality Crafted with 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 5,
     "makingCharges": 32,
     "discount": 0,
@@ -1135,9 +1114,8 @@
     "rating": 4.4,
     "ratingCount": 13,
     "Lock": "",
-    "slug": "two-names-with-arrow-silver-ring-design-30",
-    "price": 1835,
-    "MRP": 1835
+    "price": 2039,
+    "MRP": 2039
   },
   {
     "id": 31,
@@ -1166,7 +1144,7 @@
     "brandText": "Pure Elegance with 925 Silver Quality",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 1.01,
     "makingCharges": 60,
     "discount": 0,
@@ -1177,9 +1155,8 @@
     "rating": 4.8,
     "ratingCount": 21,
     "Lock": "",
-    "slug": "bali-earrings-silver-trendy-design-31",
-    "price": 449,
-    "MRP": 449
+    "price": 499,
+    "MRP": 499
   },
   {
     "id": 32,
@@ -1207,7 +1184,7 @@
     "brandText": "Trusted 92.5% Silver Purity",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 1.42,
     "makingCharges": 60,
     "discount": 0,
@@ -1218,9 +1195,8 @@
     "rating": 4.6,
     "ratingCount": 90,
     "Lock": "",
-    "slug": "925-real-sterling-silver-bali-for-men-classic-round-design-32",
-    "price": 632,
-    "MRP": 632
+    "price": 702,
+    "MRP": 702
   },
   {
     "id": 33,
@@ -1250,7 +1226,7 @@
     "brandText": "Crafted Using Authentic 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "her",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 1.41,
     "makingCharges": 60,
     "discount": 0,
@@ -1261,9 +1237,8 @@
     "rating": 4.6,
     "ratingCount": 24,
     "Lock": "",
-    "slug": "original-silver-bali-for-men-textured-design-33",
-    "price": 627,
-    "MRP": 627
+    "price": 697,
+    "MRP": 697
   },
   {
     "id": 34,
@@ -1292,7 +1267,7 @@
     "brandText": "Made with 92.5% Silver Quality",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 1.62,
     "makingCharges": 60,
     "discount": 0,
@@ -1303,9 +1278,8 @@
     "rating": 4.3,
     "ratingCount": 108,
     "Lock": "",
-    "slug": "silver-bali-for-men-34",
-    "price": 721,
-    "MRP": 721
+    "price": 801,
+    "MRP": 801
   },
   {
     "id": 35,
@@ -1333,7 +1307,7 @@
     "brandText": "Experience Genuine 925 Silver Jewellery",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 1.3,
     "makingCharges": 60,
     "discount": 0,
@@ -1344,9 +1318,8 @@
     "rating": 5,
     "ratingCount": 113,
     "Lock": "",
-    "slug": "silver-bali-trending-design-for-men-35",
-    "price": 578,
-    "MRP": 578
+    "price": 643,
+    "MRP": 643
   },
   {
     "id": 36,
@@ -1376,7 +1349,7 @@
     "brandText": "Premium Finish with 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "her",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 0.42,
     "makingCharges": 60,
     "discount": 0,
@@ -1387,9 +1360,8 @@
     "rating": 4.5,
     "ratingCount": 15,
     "Lock": "",
-    "slug": "925-sterling-silver-bali-earrings-for-women-and-girls-daily-wear-jewellery-36",
-    "price": 187,
-    "MRP": 187
+    "price": 208,
+    "MRP": 208
   },
   {
     "id": 37,
@@ -1418,7 +1390,7 @@
     "brandText": "Authentic Silver Jewellery with 925 Purity",
     "care": "SILVER_GENERAL",
     "for": "her",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 0.95,
     "makingCharges": 60,
     "discount": 0,
@@ -1429,9 +1401,8 @@
     "rating": 4.8,
     "ratingCount": 14,
     "Lock": "",
-    "slug": "silver-hoop-earrings-for-women-37",
-    "price": 423,
-    "MRP": 423
+    "price": 470,
+    "MRP": 470
   },
   {
     "id": 38,
@@ -1461,7 +1432,7 @@
     "brandText": "Crafted for You in 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "her",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 0.9,
     "makingCharges": 60,
     "discount": 0,
@@ -1472,9 +1443,8 @@
     "rating": 4.5,
     "ratingCount": 72,
     "Lock": "",
-    "slug": "buy-silver-bali-for-women-online-gift-for-girlfriend-38",
-    "price": 400,
-    "MRP": 400
+    "price": 445,
+    "MRP": 445
   },
   {
     "id": 39,
@@ -1504,7 +1474,7 @@
     "brandText": "High-Quality 925 Silver Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 0.91,
     "makingCharges": 50,
     "discount": 0,
@@ -1515,9 +1485,8 @@
     "rating": 4.9,
     "ratingCount": 110,
     "Lock": "",
-    "slug": "buy-silver-bali-for-men-online-gift-for-boyfriend-39",
-    "price": 380,
-    "MRP": 380
+    "price": 422,
+    "MRP": 422
   },
   {
     "id": 40,
@@ -1546,7 +1515,7 @@
     "brandText": "Elegant Designs in 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "her",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 1.09,
     "makingCharges": 60,
     "discount": 0,
@@ -1557,9 +1526,8 @@
     "rating": 4.9,
     "ratingCount": 101,
     "Lock": "",
-    "slug": "original-chandi-ki-bali-40",
-    "price": 485,
-    "MRP": 485
+    "price": 539,
+    "MRP": 539
   },
   {
     "id": 41,
@@ -1589,7 +1557,7 @@
     "brandText": "Original 925 Silver Purity Jewellery",
     "care": "SILVER_GENERAL",
     "for": "her",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 0.42,
     "makingCharges": 60,
     "discount": 0,
@@ -1600,9 +1568,8 @@
     "rating": 4.7,
     "ratingCount": 111,
     "Lock": "",
-    "slug": "925-sterling-silver-bali-earrings-perfect-gift-for-women-41",
-    "price": 187,
-    "MRP": 187
+    "price": 208,
+    "MRP": 208
   },
   {
     "id": 42,
@@ -1631,7 +1598,7 @@
     "brandText": "Finely Crafted in Genuine 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 1,
     "makingCharges": 62,
     "discount": 0,
@@ -1642,9 +1609,8 @@
     "rating": 4.4,
     "ratingCount": 31,
     "Lock": "",
-    "slug": "rudraksha-silver-bali-for-men-42",
-    "price": 451,
-    "MRP": 451
+    "price": 501,
+    "MRP": 501
   },
   {
     "id": 43,
@@ -1672,7 +1638,7 @@
     "brandText": "Made with Premium 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 1.3,
     "makingCharges": 60,
     "discount": 0,
@@ -1683,9 +1649,8 @@
     "rating": 4.9,
     "ratingCount": 49,
     "Lock": "",
-    "slug": "925-sterling-silver-rudraksha-bali-43",
-    "price": 578,
-    "MRP": 578
+    "price": 643,
+    "MRP": 643
   },
   {
     "id": 44,
@@ -1712,7 +1677,7 @@
     "brandText": "Crafted with 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 1.5,
     "makingCharges": 60,
     "discount": 0,
@@ -1723,9 +1688,8 @@
     "rating": 4.9,
     "ratingCount": 94,
     "Lock": "",
-    "slug": "real-silver-nattiyan-nanti-small-bali-for-men-boys-44",
-    "price": 667,
-    "MRP": 667
+    "price": 742,
+    "MRP": 742
   },
   {
     "id": 45,
@@ -1754,7 +1718,7 @@
     "brandText": "Genuine Silver Quality with 925 Purity",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 1.52,
     "makingCharges": 60,
     "discount": 0,
@@ -1765,9 +1729,8 @@
     "rating": 4.4,
     "ratingCount": 16,
     "Lock": "",
-    "slug": "classic-silver-bali-earrings-45",
-    "price": 676,
-    "MRP": 676
+    "price": 751,
+    "MRP": 751
   },
   {
     "id": 46,
@@ -1795,7 +1758,7 @@
     "brandText": "925 Silver Crafted for Lasting Elegance",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 2.08,
     "makingCharges": 55,
     "discount": 0,
@@ -1806,9 +1769,8 @@
     "rating": 4.6,
     "ratingCount": 111,
     "Lock": "",
-    "slug": "trendy-heart-drop-earrings-46",
-    "price": 897,
-    "MRP": 897
+    "price": 996,
+    "MRP": 996
   },
   {
     "id": 47,
@@ -1837,7 +1799,7 @@
     "brandText": "Premium 92.5% Silver Jewellery",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 6,
     "makingCharges": 80,
     "discount": 0,
@@ -1848,9 +1810,8 @@
     "rating": 4.5,
     "ratingCount": 86,
     "Lock": "",
-    "slug": "pure-silver-bali-47",
-    "price": 3003,
-    "MRP": 3003
+    "price": 3337,
+    "MRP": 3337
   },
   {
     "id": 48,
@@ -1879,7 +1840,7 @@
     "brandText": "Made Using Genuine 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 4.39,
     "makingCharges": 80,
     "discount": 0,
@@ -1890,9 +1851,8 @@
     "rating": 4.3,
     "ratingCount": 99,
     "Lock": "",
-    "slug": "925-sterling-silver-bali-earrings-for-men-thick-classic-hoop-design-48",
-    "price": 2198,
-    "MRP": 2198
+    "price": 2442,
+    "MRP": 2442
   },
   {
     "id": 49,
@@ -1921,7 +1881,7 @@
     "brandText": "92.5% Pure Silver for Elegant Styling",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 1.39,
     "makingCharges": 60,
     "discount": 0,
@@ -1932,9 +1892,8 @@
     "rating": 4.2,
     "ratingCount": 10,
     "Lock": "",
-    "slug": "versatile-silver-bali-for-women-49",
-    "price": 618,
-    "MRP": 618
+    "price": 687,
+    "MRP": 687
   },
   {
     "id": 50,
@@ -1962,7 +1921,7 @@
     "brandText": "Authentic 925 Silver Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 5.79,
     "makingCharges": 80,
     "discount": 0,
@@ -1973,9 +1932,8 @@
     "rating": 4.8,
     "ratingCount": 42,
     "Lock": "",
-    "slug": "bold-silver-bali-for-men-50",
-    "price": 2898,
-    "MRP": 2898
+    "price": 3220,
+    "MRP": 3220
   },
   {
     "id": 51,
@@ -2004,7 +1962,7 @@
     "brandText": "Crafted in Premium 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 2.18,
     "makingCharges": 60,
     "discount": 0,
@@ -2015,9 +1973,8 @@
     "rating": 4.3,
     "ratingCount": 56,
     "Lock": "",
-    "slug": "925-sterling-silver-lord-krishna-silver-pendant-symbol-of-love-51",
-    "price": 970,
-    "MRP": 970
+    "price": 1078,
+    "MRP": 1078
   },
   {
     "id": 52,
@@ -2047,7 +2004,7 @@
     "brandText": "Elegant Jewellery Made with 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 2.28,
     "makingCharges": 60,
     "discount": 0,
@@ -2058,9 +2015,8 @@
     "rating": 4.9,
     "ratingCount": 103,
     "Lock": "",
-    "slug": "krishna-silver-pendant-divine-krishna-jewellery-for-gifting-52",
-    "price": 1015,
-    "MRP": 1015
+    "price": 1127,
+    "MRP": 1127
   },
   {
     "id": 53,
@@ -2089,7 +2045,7 @@
     "brandText": "Genuine 92.5% Silver Quality",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 2.85,
     "makingCharges": 60,
     "discount": 0,
@@ -2100,9 +2056,8 @@
     "rating": 4.6,
     "ratingCount": 23,
     "Lock": "",
-    "slug": "925-silver-radha-krishna-pendant-and-locket-divine-design-53",
-    "price": 1268,
-    "MRP": 1268
+    "price": 1409,
+    "MRP": 1409
   },
   {
     "id": 54,
@@ -2131,7 +2086,7 @@
     "brandText": "Made with Authentic 925 Silver Quality",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 2.24,
     "makingCharges": 60,
     "discount": 0,
@@ -2142,9 +2097,8 @@
     "rating": 3.9,
     "ratingCount": 48,
     "Lock": "",
-    "slug": "krishna-flute-bansuri-pendant-for-men-and-women-in-silver-54",
-    "price": 997,
-    "MRP": 997
+    "price": 1107,
+    "MRP": 1107
   },
   {
     "id": 55,
@@ -2174,7 +2128,7 @@
     "brandText": "Premium Craftsmanship in 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 4.51,
     "makingCharges": 60,
     "discount": 0,
@@ -2185,9 +2139,8 @@
     "rating": 4,
     "ratingCount": 10,
     "Lock": "",
-    "slug": "radha-krishna-silver-pendant-religious-unisex-gift-jewellery-55",
-    "price": 2007,
-    "MRP": 2007
+    "price": 2230,
+    "MRP": 2230
   },
   {
     "id": 56,
@@ -2216,7 +2169,7 @@
     "brandText": "925 Silver Jewellery with 92.5% Purity",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 2.11,
     "makingCharges": 60,
     "discount": 0,
@@ -2227,9 +2180,8 @@
     "rating": 4.8,
     "ratingCount": 44,
     "Lock": "",
-    "slug": "925-silver-krishna-morpankh-pendant-for-men-and-women-56",
-    "price": 939,
-    "MRP": 939
+    "price": 1043,
+    "MRP": 1043
   },
   {
     "id": 57,
@@ -2258,7 +2210,7 @@
     "brandText": "Crafted from High-Quality 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 2.28,
     "makingCharges": 60,
     "discount": 0,
@@ -2269,9 +2221,8 @@
     "rating": 4.3,
     "ratingCount": 36,
     "Lock": "",
-    "slug": "krishna-silver-pendant-indian-spiritual-jewellery-57",
-    "price": 1015,
-    "MRP": 1015
+    "price": 1127,
+    "MRP": 1127
   },
   {
     "id": 58,
@@ -2300,7 +2251,7 @@
     "brandText": "Pure Silver Elegance with 925 Quality",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 1.93,
     "makingCharges": 60,
     "discount": 0,
@@ -2311,9 +2262,8 @@
     "rating": 4.1,
     "ratingCount": 31,
     "Lock": "",
-    "slug": "om-pendant-silver-with-morpankh-flute-design-58",
-    "price": 859,
-    "MRP": 859
+    "price": 954,
+    "MRP": 954
   },
   {
     "id": 59,
@@ -2343,7 +2293,7 @@
     "brandText": "Made with Genuine 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 1.7,
     "makingCharges": 60,
     "discount": 0,
@@ -2354,9 +2304,8 @@
     "rating": 3.9,
     "ratingCount": 12,
     "Lock": "",
-    "slug": "lord-krishna-925-silver-pendant-for-spirituality-59",
-    "price": 756,
-    "MRP": 756
+    "price": 840,
+    "MRP": 840
   },
   {
     "id": 60,
@@ -2386,7 +2335,7 @@
     "brandText": "Fine Craftsmanship in 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 1.78,
     "makingCharges": 60,
     "discount": 0,
@@ -2397,9 +2346,8 @@
     "rating": 4.5,
     "ratingCount": 22,
     "Lock": "",
-    "slug": "925-sterling-silver-krishna-locket-pendant-60",
-    "price": 792,
-    "MRP": 792
+    "price": 880,
+    "MRP": 880
   },
   {
     "id": 61,
@@ -2428,7 +2376,7 @@
     "brandText": "Authentic 92.5% Pure Silver Jewellery",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 3.88,
     "makingCharges": 60,
     "discount": 0,
@@ -2439,9 +2387,8 @@
     "rating": 4.8,
     "ratingCount": 65,
     "Lock": "",
-    "slug": "925-silver-krishna-flute-bansuri-pendant-for-couple-sound-of-love-61",
-    "price": 1726,
-    "MRP": 1726
+    "price": 1918,
+    "MRP": 1918
   },
   {
     "id": 62,
@@ -2470,7 +2417,7 @@
     "brandText": "Premium Silver Jewellery in 925 Purity",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 4,
     "makingCharges": 60,
     "discount": 0,
@@ -2481,9 +2428,8 @@
     "rating": 5,
     "ratingCount": 86,
     "Lock": "",
-    "slug": "krishna-silver-locket-pendant-spiritual-design-for-daily-wear-62",
-    "price": 1780,
-    "MRP": 1780
+    "price": 1978,
+    "MRP": 1978
   },
   {
     "id": 63,
@@ -2511,7 +2457,7 @@
     "brandText": "Crafted with Genuine 925 Silver Quality",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 3.97,
     "makingCharges": 60,
     "discount": 0,
@@ -2522,9 +2468,8 @@
     "rating": 4.5,
     "ratingCount": 13,
     "Lock": "",
-    "slug": "925-sterling-silver-radha-krishna-pendants-for-men-women-and-couples-63",
-    "price": 1766,
-    "MRP": 1766
+    "price": 1963,
+    "MRP": 1963
   },
   {
     "id": 64,
@@ -2553,7 +2498,7 @@
     "brandText": "Elegant Craftsmanship with 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 5,
     "makingCharges": 60,
     "discount": 0,
@@ -2564,9 +2509,8 @@
     "rating": 4.6,
     "ratingCount": 52,
     "Lock": "",
-    "slug": "pure-silver-925-krishna-pendant-spiritual-devotion-gift-64",
-    "price": 2225,
-    "MRP": 2225
+    "price": 2472,
+    "MRP": 2472
   },
   {
     "id": 65,
@@ -2595,7 +2539,7 @@
     "brandText": "Made from Premium 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 4,
     "makingCharges": 60,
     "discount": 0,
@@ -2606,9 +2550,8 @@
     "rating": 4.3,
     "ratingCount": 47,
     "Lock": "",
-    "slug": "buy-925-silver-krishna-pendant-collection-radha-krishna-lord-krishna-designs-65",
-    "price": 1780,
-    "MRP": 1780
+    "price": 1978,
+    "MRP": 1978
   },
   {
     "id": 66,
@@ -2637,7 +2580,7 @@
     "brandText": "92.5% Pure Silver Crafted with Care",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 3.89,
     "makingCharges": 60,
     "discount": 0,
@@ -2648,9 +2591,8 @@
     "rating": 4.3,
     "ratingCount": 73,
     "Lock": "",
-    "slug": "krishna-hindi-name-pendant-divine-couple-pendant-for-men-women-66",
-    "price": 1731,
-    "MRP": 1731
+    "price": 1923,
+    "MRP": 1923
   },
   {
     "id": 67,
@@ -2679,7 +2621,7 @@
     "brandText": "Genuine 925 Silver for Timeless Elegance",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 3.27,
     "makingCharges": 60,
     "discount": 0,
@@ -2690,9 +2632,8 @@
     "rating": 4.4,
     "ratingCount": 35,
     "Lock": "",
-    "slug": "krishna-name-silver-pendant-67",
-    "price": 1455,
-    "MRP": 1455
+    "price": 1617,
+    "MRP": 1617
   },
   {
     "id": 68,
@@ -2719,7 +2660,7 @@
     "brandText": "Premium Quality Crafted in 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 2.18,
     "makingCharges": 60,
     "discount": 0,
@@ -2730,9 +2671,8 @@
     "rating": 4.7,
     "ratingCount": 111,
     "Lock": "",
-    "slug": "925-silver-lord-krishna-bansuri-pendant-spiritual-unisex-gift-jewellery-68",
-    "price": 970,
-    "MRP": 970
+    "price": 1078,
+    "MRP": 1078
   },
   {
     "id": 69,
@@ -2761,7 +2701,7 @@
     "brandText": "Authentic Silver with 92.5% Purity",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 2,
     "makingCharges": 60,
     "discount": 0,
@@ -2772,9 +2712,8 @@
     "rating": 4.9,
     "ratingCount": 110,
     "Lock": "",
-    "slug": "925-silver-lord-krishna-pendant-for-men-and-women-shree-krishna-locket-69",
-    "price": 890,
-    "MRP": 890
+    "price": 989,
+    "MRP": 989
   },
   {
     "id": 70,
@@ -2803,7 +2742,7 @@
     "brandText": "Beautifully Crafted in 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 1.67,
     "makingCharges": 60,
     "discount": 0,
@@ -2814,9 +2753,8 @@
     "rating": 4.1,
     "ratingCount": 46,
     "Lock": "",
-    "slug": "shree-silver-pendant-with-morpankh-70",
-    "price": 743,
-    "MRP": 743
+    "price": 826,
+    "MRP": 826
   },
   {
     "id": 72,
@@ -2845,7 +2783,7 @@
     "brandText": "925 Silver Quality You Can Trust",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 3.5,
     "makingCharges": 60,
     "discount": 0,
@@ -2856,9 +2794,8 @@
     "rating": 5,
     "ratingCount": 92,
     "Lock": "",
-    "slug": "shop-925-sterling-silver-radha-krishna-locket-pendant-for-men-women-and-couples-72",
-    "price": 1557,
-    "MRP": 1557
+    "price": 1730,
+    "MRP": 1730
   },
   {
     "id": 73,
@@ -2887,7 +2824,7 @@
     "brandText": "Made with Fine 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 3,
     "makingCharges": 60,
     "discount": 0,
@@ -2898,9 +2835,8 @@
     "rating": 4.8,
     "ratingCount": 118,
     "Lock": "",
-    "slug": "pure-925-silver-lord-krishna-bansuri-pendant-unisex-gift-silver-jewellery-73",
-    "price": 1335,
-    "MRP": 1335
+    "price": 1483,
+    "MRP": 1483
   },
   {
     "id": 74,
@@ -2930,7 +2866,7 @@
     "brandText": "Genuine 925 Silver Jewellery Quality",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 1.15,
     "makingCharges": 60,
     "discount": 0,
@@ -2941,16 +2877,21 @@
     "rating": 4.5,
     "ratingCount": 106,
     "Lock": "",
-    "slug": "925-real-sterling-silver-lord-krishna-pendant-religious-unisex-gift-jewellery-74",
-    "price": 512,
-    "MRP": 512
+    "price": 569,
+    "MRP": 569
   },
   {
     "id": 75,
     "name": "925 Silver Shiv Rudraksha Rakhi with Red & Yellow Mauli",
     "category": "Buy Silver Rakhi",
     "type": [],
-    "highlights": [],
+    "highlights": [
+      "💎 Material: 92.5% Silver Purity",
+      "🪷 Design: Designer Silver Rakhi with Premium Style",
+      "✨ Finish: Elegant Polished Craftsmanship",
+      "💳 Cash on Delivery Available*",
+      "📦 Secure Packaging Before Dispatch"
+    ],
     "description": "Celebrate Raksha Bandhan with a meaningful blend of tradition and spirituality with this 925 Silver Shiv Rakhi. The centre features a beautifully crafted “शिव” design, paired with a Rudraksha bead and traditional red and yellow Mauli threads. The combination gives the Rakhi a distinctive devotional appeal while keeping its overall look elegant and wearable.\n\nThe Shiv motif represents the divine presence of Lord Shiva, while the Rudraksha adds a traditional spiritual element to the design. The colourful Mauli thread gives the Rakhi its classic Indian festive character, making it a thoughtful choice for brothers who appreciate devotional jewellery and traditional designs. This Shiv silver Rakhi is also a meaningful Raksha Bandhan gift that can be treasured beyond the festival.\n\nKey Highlights\nShiv Design: Features a distinctive silver “शिव” motif at the centre.\nRudraksha Detail: Includes a Rudraksha bead for a traditional spiritual touch.\nTraditional Mauli: Red and yellow threads add a classic Raksha Bandhan look.\nSilver Craftsmanship: A silver centrepiece gives the Rakhi an elegant jewellery-inspired appearance.\nMeaningful Gift: A thoughtful choice for brothers who have a special connection with Lord Shiva.",
     "images": [
       "925-silver-shiv-rakhi-ssj-75-b.webp",
@@ -2960,7 +2901,7 @@
     "brandText": "Premium 925 Silver Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 1.1,
     "makingCharges": 50,
     "discount": 0,
@@ -2971,16 +2912,21 @@
     "rating": 4.1,
     "ratingCount": 40,
     "Lock": "",
-    "slug": "925-silver-shiv-rudraksha-rakhi-with-red-yellow-mauli-75",
-    "price": 459,
-    "MRP": 459
+    "price": 510,
+    "MRP": 510
   },
   {
     "id": 76,
     "name": "925 Silver Mauli Rakhi with Silver Beads",
     "category": "Buy Silver Rakhi",
     "type": [],
-    "highlights": [],
+    "highlights": [
+      "💎 Material: 925 Sterling Silver",
+      "✨ Finish: Premium Quality Silver Finish",
+      "🪷 Design: Beautiful Rakhi Inspired by Tradition",
+      "🎁 Perfect Gift for Raksha Bandhan",
+      "🚚 Pan India Shipping Available"
+    ],
     "description": "Add a traditional touch to Raksha Bandhan with this elegant red and yellow Mauli Rakhi decorated with small silver beads. The simple threadwork keeps its traditional Indian character, while the silver accents give it a neat and attractive finish. Designed for brothers who prefer a lightweight and understated Rakhi, this piece beautifully blends cultural tradition with the charm of silver jewellery. It is a lovely choice for Raksha Bandhan gifting and can also be paired with a personalised gift for your brother.",
     "images": [
       "trendy-silver-rakhi-ssj-76-a.webp",
@@ -2991,7 +2937,7 @@
     "brandText": "Crafted Using 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 1.06,
     "makingCharges": 50,
     "discount": 0,
@@ -3002,16 +2948,21 @@
     "rating": 5,
     "ratingCount": 108,
     "Lock": "",
-    "slug": "925-silver-mauli-rakhi-with-silver-beads-76",
-    "price": 442,
-    "MRP": 442
+    "price": 491,
+    "MRP": 491
   },
   {
     "id": 77,
     "name": "925 Silver Ganesha Braided Rakhi with Red Thread",
     "category": "Buy Silver Rakhi",
     "type": [],
-    "highlights": [],
+    "highlights": [
+      "💎 Material: 925 Silver Purity Jewellery",
+      "🪷 Design: Exclusive Silver Rakhi with Artistic Details",
+      "✨ Finish: Fine Silver Craftsmanship",
+      "🎁 Luxury Gift Choice for Brother",
+      "🔒 Secure Payment Facility"
+    ],
     "description": "Bring an auspicious touch to Raksha Bandhan with this attractive Ganesha silver Rakhi featuring a detailed Lord Ganesha motif at the centre. The braided red thread creates a rich traditional look, while the small silver accents add subtle shine throughout the design. The combination of devotional symbolism and handcrafted threadwork makes this Rakhi a meaningful choice for your brother. Its elegant design is suitable for those looking for a spiritual silver Rakhi that feels traditional yet distinctive.",
     "images": [
       "silver-ganesha-rakhi-ssj-77-a.webp",
@@ -3022,7 +2973,7 @@
     "brandText": "Elegant 925 Silver Jewellery",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 0.7,
     "makingCharges": 50,
     "discount": 0,
@@ -3033,9 +2984,8 @@
     "rating": 4.7,
     "ratingCount": 80,
     "Lock": "",
-    "slug": "925-silver-ganesha-braided-rakhi-with-red-thread-77",
-    "price": 292,
-    "MRP": 292
+    "price": 324,
+    "MRP": 324
   },
   {
     "id": 78,
@@ -3064,7 +3014,7 @@
     "brandText": "Authentic 925 Silver Quality",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 3,
     "makingCharges": 50,
     "discount": 0,
@@ -3075,9 +3025,8 @@
     "rating": 4.8,
     "ratingCount": 38,
     "Lock": "",
-    "slug": "sawariya-seth-silver-pendant-78",
-    "price": 1251,
-    "MRP": 1251
+    "price": 1391,
+    "MRP": 1391
   },
   {
     "id": 79,
@@ -3103,7 +3052,7 @@
     "brandText": "Made with Premium 92.5% Silver Purity",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 10,
     "makingCharges": 50,
     "discount": 0,
@@ -3114,9 +3063,8 @@
     "rating": 4.6,
     "ratingCount": 62,
     "Lock": "",
-    "slug": "sanwariya-seth-silver-chain-pendant-79",
-    "price": 4172,
-    "MRP": 4172
+    "price": 4635,
+    "MRP": 4635
   },
   {
     "id": 80,
@@ -3144,7 +3092,7 @@
     "brandText": "Fine Jewellery Crafted in 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 4,
     "makingCharges": 50,
     "discount": 0,
@@ -3155,9 +3103,8 @@
     "rating": 4.2,
     "ratingCount": 50,
     "Lock": "",
-    "slug": "chandi-ka-sawariya-seth-pendant-80",
-    "price": 1669,
-    "MRP": 1669
+    "price": 1854,
+    "MRP": 1854
   },
   {
     "id": 81,
@@ -3186,7 +3133,7 @@
     "brandText": "92.5% Pure Silver for Premium Quality",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 6.5,
     "makingCharges": 60,
     "discount": 0,
@@ -3197,9 +3144,8 @@
     "rating": 4.9,
     "ratingCount": 52,
     "Lock": "",
-    "slug": "925-sterling-silver-har-har-mahadev-ring-81",
-    "price": 2892,
-    "MRP": 2892
+    "price": 3214,
+    "MRP": 3214
   },
   {
     "id": 82,
@@ -3227,7 +3173,7 @@
     "brandText": "Genuine 925 Silver Crafted with Precision",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 7,
     "makingCharges": 60,
     "discount": 0,
@@ -3238,9 +3184,8 @@
     "rating": 4.9,
     "ratingCount": 65,
     "Lock": "",
-    "slug": "mahakal-ring-for-men-82",
-    "price": 3115,
-    "MRP": 3115
+    "price": 3461,
+    "MRP": 3461
   },
   {
     "id": 83,
@@ -3268,7 +3213,7 @@
     "brandText": "Premium Silver Finish with 925 Purity",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 6,
     "makingCharges": 60,
     "discount": 0,
@@ -3279,9 +3224,8 @@
     "rating": 4.5,
     "ratingCount": 103,
     "Lock": "",
-    "slug": "bhole-baba-shiva-silver-ring-for-men-83",
-    "price": 2670,
-    "MRP": 2670
+    "price": 2966,
+    "MRP": 2966
   },
   {
     "id": 84,
@@ -3310,7 +3254,7 @@
     "brandText": "Made Using 92.5% Pure Silver Quality",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 4,
     "makingCharges": 50,
     "discount": 0,
@@ -3321,9 +3265,8 @@
     "rating": 4,
     "ratingCount": 63,
     "Lock": "",
-    "slug": "anta-asti-prarambh-mantra-ring-for-men-women-84",
-    "price": 1669,
-    "MRP": 1669
+    "price": 1854,
+    "MRP": 1854
   },
   {
     "id": 85,
@@ -3351,7 +3294,7 @@
     "brandText": "Authentic 925 Silver Jewellery",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 6,
     "makingCharges": 55,
     "discount": 0,
@@ -3362,9 +3305,8 @@
     "rating": 4.9,
     "ratingCount": 85,
     "Lock": "",
-    "slug": "om-symbol-ring-for-men-85",
-    "price": 2586,
-    "MRP": 2586
+    "price": 2874,
+    "MRP": 2874
   },
   {
     "id": 86,
@@ -3392,7 +3334,7 @@
     "brandText": "Crafted in Genuine 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 6,
     "makingCharges": 60,
     "discount": 0,
@@ -3403,9 +3345,8 @@
     "rating": 4.6,
     "ratingCount": 79,
     "Lock": "",
-    "slug": "om-namah-shivaya-square-ring-for-men-86",
-    "price": 2670,
-    "MRP": 2670
+    "price": 2966,
+    "MRP": 2966
   },
   {
     "id": 87,
@@ -3434,7 +3375,7 @@
     "brandText": "Premium Elegance in 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 4,
     "makingCharges": 40,
     "discount": 0,
@@ -3445,9 +3386,8 @@
     "rating": 4.9,
     "ratingCount": 43,
     "Lock": "",
-    "slug": "mahakal-trishul-band-ring-87",
-    "price": 1557,
-    "MRP": 1557
+    "price": 1730,
+    "MRP": 1730
   },
   {
     "id": 88,
@@ -3476,7 +3416,7 @@
     "brandText": "925 Silver Crafted for Quality",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 4,
     "makingCharges": 50,
     "discount": 0,
@@ -3487,9 +3427,8 @@
     "rating": 4.8,
     "ratingCount": 15,
     "Lock": "",
-    "slug": "mahadev-trishul-band-ring-88",
-    "price": 1669,
-    "MRP": 1669
+    "price": 1854,
+    "MRP": 1854
   },
   {
     "id": 89,
@@ -3515,7 +3454,7 @@
     "brandText": "Made with Genuine Silver at 92.5% Purity",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 5.5,
     "makingCharges": 60,
     "discount": 0,
@@ -3526,9 +3465,8 @@
     "rating": 4.5,
     "ratingCount": 54,
     "Lock": "",
-    "slug": "bhole-baba-ring-for-men-89",
-    "price": 2447,
-    "MRP": 2447
+    "price": 2719,
+    "MRP": 2719
   },
   {
     "id": 90,
@@ -3556,7 +3494,7 @@
     "brandText": "Fine 925 Silver Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 5.5,
     "makingCharges": 60,
     "discount": 0,
@@ -3567,9 +3505,8 @@
     "rating": 4.3,
     "ratingCount": 105,
     "Lock": "",
-    "slug": "divine-om-symbol-artistic-ring-90",
-    "price": 2447,
-    "MRP": 2447
+    "price": 2719,
+    "MRP": 2719
   },
   {
     "id": 91,
@@ -3597,7 +3534,7 @@
     "brandText": "Crafted with Premium 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 3,
     "makingCharges": 40,
     "discount": 0,
@@ -3608,9 +3545,8 @@
     "rating": 4.8,
     "ratingCount": 84,
     "Lock": "",
-    "slug": "om-namah-shivaya-damru-band-ring-91",
-    "price": 1168,
-    "MRP": 1168
+    "price": 1298,
+    "MRP": 1298
   },
   {
     "id": 92,
@@ -3638,7 +3574,7 @@
     "brandText": "Authentic Silver Jewellery with 925 Quality",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 3,
     "makingCharges": 40,
     "discount": 0,
@@ -3649,9 +3585,8 @@
     "rating": 5,
     "ratingCount": 60,
     "Lock": "",
-    "slug": "minimalist-om-signet-ring-92",
-    "price": 1168,
-    "MRP": 1168
+    "price": 1298,
+    "MRP": 1298
   },
   {
     "id": 93,
@@ -3680,7 +3615,7 @@
     "brandText": "Elegant Jewellery Crafted in 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 7,
     "makingCharges": 55,
     "discount": 0,
@@ -3691,9 +3626,8 @@
     "rating": 4.8,
     "ratingCount": 65,
     "Lock": "",
-    "slug": "rudra-square-devotional-ring-for-men-93",
-    "price": 3017,
-    "MRP": 3017
+    "price": 3353,
+    "MRP": 3353
   },
   {
     "id": 94,
@@ -3721,7 +3655,7 @@
     "brandText": "Genuine 925 Silver with Premium Finish",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 4,
     "makingCharges": 40,
     "discount": 0,
@@ -3732,9 +3666,8 @@
     "rating": 4.9,
     "ratingCount": 81,
     "Lock": "",
-    "slug": "om-band-ring-94",
-    "price": 1557,
-    "MRP": 1557
+    "price": 1730,
+    "MRP": 1730
   },
   {
     "id": 95,
@@ -3763,7 +3696,7 @@
     "brandText": "Made from Authentic 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 5,
     "makingCharges": 60,
     "discount": 0,
@@ -3774,9 +3707,8 @@
     "rating": 4.2,
     "ratingCount": 15,
     "Lock": "",
-    "slug": "925-sterling-silver-sanwariya-seth-ring-for-men-95",
-    "price": 2225,
-    "MRP": 2225
+    "price": 2472,
+    "MRP": 2472
   },
   {
     "id": 96,
@@ -3804,7 +3736,7 @@
     "brandText": "Premium 925 Silver Jewellery Quality",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 7,
     "makingCharges": 55,
     "discount": 0,
@@ -3815,9 +3747,8 @@
     "rating": 4.3,
     "ratingCount": 83,
     "Lock": "",
-    "slug": "sawariya-seth-ji-ki-chandi-ki-ring-96",
-    "price": 3017,
-    "MRP": 3017
+    "price": 3353,
+    "MRP": 3353
   },
   {
     "id": 97,
@@ -3846,7 +3777,7 @@
     "brandText": "Crafted for Elegance in Genuine 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 6.5,
     "makingCharges": 55,
     "discount": 0,
@@ -3857,9 +3788,8 @@
     "rating": 4.8,
     "ratingCount": 30,
     "Lock": "",
-    "slug": "chandi-ki-sawariya-seth-ring-97",
-    "price": 2802,
-    "MRP": 2802
+    "price": 3113,
+    "MRP": 3113
   },
   {
     "id": 98,
@@ -3889,7 +3819,7 @@
     "brandText": "92.5% Silver Purity with Fine Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 7,
     "makingCharges": 55,
     "discount": 0,
@@ -3900,9 +3830,8 @@
     "rating": 4.1,
     "ratingCount": 36,
     "Lock": "",
-    "slug": "925-silver-sawariya-seth-ring-98",
-    "price": 3017,
-    "MRP": 3017
+    "price": 3353,
+    "MRP": 3353
   },
   {
     "id": 99,
@@ -3930,7 +3859,7 @@
     "brandText": "Authentic 925 Silver for Everyday Elegance",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 7.5,
     "makingCharges": 55,
     "discount": 0,
@@ -3941,9 +3870,8 @@
     "rating": 5,
     "ratingCount": 110,
     "Lock": "",
-    "slug": "most-iconic-sawariya-seth-ring-99",
-    "price": 3233,
-    "MRP": 3233
+    "price": 3592,
+    "MRP": 3592
   },
   {
     "id": 100,
@@ -3970,7 +3898,7 @@
     "brandText": "Made with High-Quality 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 6,
     "makingCharges": 55,
     "discount": 0,
@@ -3981,9 +3909,8 @@
     "rating": 4.9,
     "ratingCount": 105,
     "Lock": "",
-    "slug": "divine-sawariya-seth-silver-ring-flute-design-100",
-    "price": 2586,
-    "MRP": 2586
+    "price": 2874,
+    "MRP": 2874
   },
   {
     "id": 101,
@@ -4012,7 +3939,7 @@
     "brandText": "Premium Craftsmanship Using 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "her",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 4.1,
     "makingCharges": 130,
     "discount": 0,
@@ -4023,9 +3950,8 @@
     "rating": 4.1,
     "ratingCount": 104,
     "Lock": "",
-    "slug": "925-sterling-silver-chain-pendant-set-for-women-101",
-    "price": 2622,
-    "MRP": 2622
+    "price": 2914,
+    "MRP": 2914
   },
   {
     "id": 102,
@@ -4054,7 +3980,7 @@
     "brandText": "Genuine 92.5% Pure Silver Craft",
     "care": "SILVER_GENERAL",
     "for": "her",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 4.7,
     "makingCharges": 130,
     "discount": 0,
@@ -4065,9 +3991,8 @@
     "rating": 4.7,
     "ratingCount": 84,
     "Lock": "",
-    "slug": "latest-design-women-s-silver-chain-pendant-102",
-    "price": 3006,
-    "MRP": 3006
+    "price": 3340,
+    "MRP": 3340
   },
   {
     "id": 103,
@@ -4095,7 +4020,7 @@
     "brandText": "Elegant Designs Crafted in 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "her",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 4.84,
     "makingCharges": 130,
     "discount": 0,
@@ -4106,9 +4031,8 @@
     "rating": 4.4,
     "ratingCount": 26,
     "Lock": "",
-    "slug": "925-sterling-silver-pink-stone-chain-pendant-set-for-girls-103",
-    "price": 3096,
-    "MRP": 3096
+    "price": 3440,
+    "MRP": 3440
   },
   {
     "id": 104,
@@ -4137,7 +4061,7 @@
     "brandText": "Authentic Silver Quality with 92.5% Purity",
     "care": "SILVER_GENERAL",
     "for": "her",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 7.39,
     "makingCharges": 130,
     "discount": 0,
@@ -4148,9 +4072,8 @@
     "rating": 4.3,
     "ratingCount": 55,
     "Lock": "",
-    "slug": "pure-silver-chain-pendant-set-for-daily-wear-104",
-    "price": 4727,
-    "MRP": 4727
+    "price": 5252,
+    "MRP": 5252
   },
   {
     "id": 105,
@@ -4178,7 +4101,7 @@
     "brandText": "Made with Premium Genuine 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "her",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 4.24,
     "makingCharges": 130,
     "discount": 0,
@@ -4189,9 +4112,8 @@
     "rating": 4.9,
     "ratingCount": 116,
     "Lock": "",
-    "slug": "elegant-silver-chain-pendant-jewellery-set-for-women-105",
-    "price": 2712,
-    "MRP": 2712
+    "price": 3013,
+    "MRP": 3013
   },
   {
     "id": 106,
@@ -4219,7 +4141,7 @@
     "brandText": "Fine Quality 92.5% Silver Jewellery",
     "care": "SILVER_GENERAL",
     "for": "her",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 5.47,
     "makingCharges": 130,
     "discount": 0,
@@ -4230,9 +4152,8 @@
     "rating": 4.5,
     "ratingCount": 20,
     "Lock": "",
-    "slug": "stylish-women-s-silver-chain-pendant-set-106",
-    "price": 3499,
-    "MRP": 3499
+    "price": 3888,
+    "MRP": 3888
   },
   {
     "id": 107,
@@ -4261,7 +4182,7 @@
     "brandText": "925 Silver Crafted for Elegant Looks",
     "care": "SILVER_GENERAL",
     "for": "her",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 3.23,
     "makingCharges": 130,
     "discount": 0,
@@ -4272,9 +4193,8 @@
     "rating": 4.6,
     "ratingCount": 41,
     "Lock": "",
-    "slug": "heart-design-silver-chain-pendant-set-for-women-107",
-    "price": 2066,
-    "MRP": 2066
+    "price": 2296,
+    "MRP": 2296
   },
   {
     "id": 108,
@@ -4303,7 +4223,7 @@
     "brandText": "Genuine 925 Silver with Fine Finish",
     "care": "SILVER_GENERAL",
     "for": "her",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 4.32,
     "makingCharges": 130,
     "discount": 2,
@@ -4314,9 +4234,8 @@
     "rating": 4.2,
     "ratingCount": 91,
     "Lock": "",
-    "slug": "pearl-silver-chain-pendant-set-for-women-108",
-    "price": 2763,
-    "MRP": 2819
+    "price": 3070,
+    "MRP": 3133
   },
   {
     "id": 109,
@@ -4345,7 +4264,7 @@
     "brandText": "Premium Jewellery Made with 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "her",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 2.25,
     "makingCharges": 150,
     "discount": 2,
@@ -4356,9 +4275,8 @@
     "rating": 4.8,
     "ratingCount": 33,
     "Lock": "",
-    "slug": "925-sterling-silver-planet-heart-chain-pendant-with-zircon-stones-109",
-    "price": 1564,
-    "MRP": 1596
+    "price": 1738,
+    "MRP": 1773
   },
   {
     "id": 110,
@@ -4387,7 +4305,7 @@
     "brandText": "Crafted with Authentic 925 Silver Purity",
     "care": "SILVER_GENERAL",
     "for": "her",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 2.34,
     "makingCharges": 150,
     "discount": 2,
@@ -4398,9 +4316,8 @@
     "rating": 4.1,
     "ratingCount": 39,
     "Lock": "",
-    "slug": "elegant-dual-flower-silver-chain-pendant-set-for-daily-wear-110",
-    "price": 1627,
-    "MRP": 1660
+    "price": 1808,
+    "MRP": 1845
   },
   {
     "id": 111,
@@ -4429,7 +4346,7 @@
     "brandText": "92.5% Pure Silver Crafted for You",
     "care": "SILVER_GENERAL",
     "for": "her",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 3.25,
     "makingCharges": 130,
     "discount": 2,
@@ -4440,9 +4357,8 @@
     "rating": 4.5,
     "ratingCount": 90,
     "Lock": "",
-    "slug": "leaf-vine-zircon-silver-necklace-for-women-111",
-    "price": 2079,
-    "MRP": 2121
+    "price": 2310,
+    "MRP": 2357
   },
   {
     "id": 113,
@@ -4471,7 +4387,7 @@
     "brandText": "Elegant 925 Silver with Genuine Quality",
     "care": "SILVER_GENERAL",
     "for": "her",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 2.26,
     "makingCharges": 150,
     "discount": 2,
@@ -4482,9 +4398,8 @@
     "rating": 4.8,
     "ratingCount": 11,
     "Lock": "",
-    "slug": "starry-night-cascading-silver-chain-pendant-for-girlfriend-113",
-    "price": 1571,
-    "MRP": 1603
+    "price": 1746,
+    "MRP": 1782
   },
   {
     "id": 114,
@@ -4513,7 +4428,7 @@
     "brandText": "Made from Fine 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "her",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 2.25,
     "makingCharges": 150,
     "discount": 2,
@@ -4524,9 +4439,8 @@
     "rating": 4.2,
     "ratingCount": 10,
     "Lock": "",
-    "slug": "chic-pink-crystal-planet-silver-chain-pendant-for-girls-114",
-    "price": 1564,
-    "MRP": 1596
+    "price": 1738,
+    "MRP": 1773
   },
   {
     "id": 115,
@@ -4554,7 +4468,7 @@
     "brandText": "Authentic 925 Silver with Premium Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "her",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 7.95,
     "makingCharges": 150,
     "discount": 2,
@@ -4565,9 +4479,8 @@
     "rating": 4.3,
     "ratingCount": 120,
     "Lock": "",
-    "slug": "silver-necklace-for-women-115",
-    "price": 5527,
-    "MRP": 5640
+    "price": 6141,
+    "MRP": 6266
   },
   {
     "id": 116,
@@ -4595,7 +4508,7 @@
     "brandText": "Premium Finish Crafted in 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "her",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 2.35,
     "makingCharges": 150,
     "discount": 2,
@@ -4606,16 +4519,21 @@
     "rating": 4.8,
     "ratingCount": 31,
     "Lock": "",
-    "slug": "designer-baroque-gold-polish-pearl-pendant-with-zircon-heart-and-star-in-925-silver-116",
-    "price": 1634,
-    "MRP": 1667
+    "price": 1815,
+    "MRP": 1852
   },
   {
     "id": 118,
     "name": "Bhai Silver Rakhi with Pink & Purple Beads",
     "category": "Buy Silver Rakhi",
     "type": [],
-    "highlights": [],
+    "highlights": [
+      "💎 Material: 92.5% Silver Jewellery",
+      "✨ Finish: Premium Handmade Silver Work",
+      "🪷 Design: Elegant Rakhi with Festive Appeal",
+      "🎁 Celebrate Your Special Bond",
+      "📦 Protective Gift Packaging"
+    ],
     "description": "Make Raksha Bandhan more special with this colourful Bhai Silver Rakhi, featuring a silver “Bhai” centre design surrounded by attractive pink and purple beads. The bright pink thread gives the Rakhi a cheerful and youthful look, while the silver centre adds a stylish traditional touch.\n\nDesigned especially for celebrating the bond between siblings, this Rakhi combines colourful beads with silver detailing for a unique festive appearance. It is a lovely choice for a brother who enjoys simple yet distinctive Rakhi designs.",
     "images": [
       "bhai-silver-rakhi-pink-purple-beads-ssj-118-a.webp",
@@ -4626,7 +4544,7 @@
     "brandText": "Genuine Silver Jewellery in 925 Purity",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 0.5,
     "makingCharges": 150,
     "discount": 2,
@@ -4637,16 +4555,21 @@
     "rating": 4.3,
     "ratingCount": 44,
     "Lock": "",
-    "slug": "bhai-silver-rakhi-with-pink-purple-beads-118",
-    "price": 348,
-    "MRP": 355
+    "price": 386,
+    "MRP": 394
   },
   {
     "id": 119,
     "name": "Shyam Silver Rakhi with Blue Beads & Traditional Thread",
     "category": "Buy Silver Rakhi",
     "type": [],
-    "highlights": [],
+    "highlights": [
+      "💎 Material: 925 Sterling Silver (92.5% Purity)",
+      "🪷 Design: Premium Rakhi Collection for Brothers",
+      "✨ Finish: Designer Silver Finishing",
+      "💳 Cash on Delivery Available*",
+      "🚚 Safe Pan India Delivery"
+    ],
     "description": "Celebrate the beautiful bond of Raksha Bandhan with this Shyam Silver Rakhi, featuring a circular silver centrepiece with “Shyam” written beautifully inside. The deep blue thread and matching blue beads create a distinctive traditional look, while the silver elements add a graceful jewellery-inspired finish.\n\nThe Shyam design gives this Rakhi a devotional and meaningful character, making it a thoughtful choice for brothers who admire traditional Indian spirituality. The combination of blue thread, silver detailing and decorative beads makes it suitable for a festive Raksha Bandhan celebration.",
     "images": [
       "shyam-silver-rakhi-blue-beads-thread-ssj-119-a.webp",
@@ -4657,7 +4580,7 @@
     "brandText": "925 Silver Elegance with 92.5% Purity",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 0.5,
     "makingCharges": 150,
     "discount": 2,
@@ -4668,16 +4591,21 @@
     "rating": 4.5,
     "ratingCount": 69,
     "Lock": "",
-    "slug": "shyam-silver-rakhi-with-blue-beads-traditional-thread-119",
-    "price": 348,
-    "MRP": 355
+    "price": 386,
+    "MRP": 394
   },
   {
     "id": 120,
     "name": "Ganesha Silver Rakhi with Red & Yellow Traditional Thread",
     "category": "Buy Silver Rakhi",
     "type": [],
-    "highlights": [],
+    "highlights": [
+      "💎 Material: 925 Sterling Silver",
+      "✨ Finish: Premium Polished Silver Look",
+      "🪷 Design: Traditional Rakhi with Modern Elegance",
+      "🎁 Meaningful Gift for Your Brother",
+      "🔒 Secure Payment & Checkout"
+    ],
     "description": "Add a traditional and festive touch to Raksha Bandhan with this beautiful Ganesha Silver Rakhi, designed with vibrant red and yellow woven threads and silver devotional elements. The centre features a detailed Ganesha motif, complemented by small silver decorative pieces arranged across the Rakhi.\n\nThe rich red and yellow thread combination gives the Rakhi a traditional Indian appearance, while the Ganesha design adds an auspicious and spiritual character. It is a meaningful choice for a brother who appreciates devotional designs and traditional Raksha Bandhan celebrations.",
     "images": [
       "ganesha-silver-rakhi-red-yellow-thread-ssj-120-a.webp",
@@ -4688,7 +4616,7 @@
     "brandText": "Crafted from Authentic 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 0.6,
     "makingCharges": 150,
     "discount": 0,
@@ -4699,9 +4627,8 @@
     "rating": 4.5,
     "ratingCount": 38,
     "Lock": "",
-    "slug": "ganesha-silver-rakhi-with-red-yellow-traditional-thread-120",
-    "price": 417,
-    "MRP": 417
+    "price": 464,
+    "MRP": 464
   },
   {
     "id": 121,
@@ -4729,7 +4656,7 @@
     "brandText": "Premium Quality Jewellery in Genuine 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 1.24,
     "makingCharges": 150,
     "discount": 0,
@@ -4740,9 +4667,8 @@
     "rating": 5,
     "ratingCount": 105,
     "Lock": "",
-    "slug": "925-sterling-silver-rudraksha-charm-bali-earrings-121",
-    "price": 862,
-    "MRP": 862
+    "price": 958,
+    "MRP": 958
   },
   {
     "id": 122,
@@ -4771,7 +4697,7 @@
     "brandText": "Made with Genuine 925 Silver Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 1,
     "makingCharges": 50,
     "discount": 0,
@@ -4782,9 +4708,8 @@
     "rating": 4.4,
     "ratingCount": 33,
     "Lock": "",
-    "slug": "925-sterling-silver-diamond-cut-ball-bali-earrings-122",
-    "price": 417,
-    "MRP": 417
+    "price": 464,
+    "MRP": 464
   },
   {
     "id": 123,
@@ -4812,7 +4737,7 @@
     "brandText": "92.5% Pure Silver Crafted for Timeless Style",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 1.88,
     "makingCharges": 50,
     "discount": 0,
@@ -4823,9 +4748,8 @@
     "rating": 3.9,
     "ratingCount": 56,
     "Lock": "",
-    "slug": "925-sterling-silver-thick-rudraksha-bali-earrings-123",
-    "price": 784,
-    "MRP": 784
+    "price": 871,
+    "MRP": 871
   },
   {
     "id": 124,
@@ -4853,7 +4777,7 @@
     "brandText": "Authentic 925 Silver with Refined Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 0.88,
     "makingCharges": 50,
     "discount": 0,
@@ -4864,9 +4788,8 @@
     "rating": 4.1,
     "ratingCount": 109,
     "Lock": "",
-    "slug": "twisted-silver-hoop-bali-earrings-124",
-    "price": 367,
-    "MRP": 367
+    "price": 408,
+    "MRP": 408
   },
   {
     "id": 125,
@@ -4894,7 +4817,7 @@
     "brandText": "Premium 92.5% Silver Quality for Elegant Jewellery",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 0.95,
     "makingCharges": 50,
     "discount": 0,
@@ -4905,9 +4828,8 @@
     "rating": 4.8,
     "ratingCount": 46,
     "Lock": "",
-    "slug": "silver-plain-rudraksha-bali-earrings-125",
-    "price": 396,
-    "MRP": 396
+    "price": 440,
+    "MRP": 440
   },
   {
     "id": 126,
@@ -4936,7 +4858,7 @@
     "brandText": "92.5% Pure Silver Crafted for Timeless Style",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 0.9,
     "makingCharges": 50,
     "discount": 2,
@@ -4947,9 +4869,8 @@
     "rating": 4.1,
     "ratingCount": 86,
     "Lock": "",
-    "slug": "925-silver-textured-bali-hoop-earrings-126",
-    "price": 375,
-    "MRP": 383
+    "price": 417,
+    "MRP": 426
   },
   {
     "id": 127,
@@ -4976,7 +4897,7 @@
     "brandText": "Crafted with 925 Silver and 92.5% Silver Purity",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 0.62,
     "makingCharges": 50,
     "discount": 0,
@@ -4987,9 +4908,8 @@
     "rating": 4.5,
     "ratingCount": 67,
     "Lock": "",
-    "slug": "silver-plain-classic-bali-earrings-127",
-    "price": 259,
-    "MRP": 259
+    "price": 287,
+    "MRP": 287
   },
   {
     "id": 128,
@@ -5017,7 +4937,7 @@
     "brandText": "Made from Genuine 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 0.95,
     "makingCharges": 50,
     "discount": 0,
@@ -5028,9 +4948,8 @@
     "rating": 4.6,
     "ratingCount": 115,
     "Lock": "",
-    "slug": "925-sterling-silver-rudraksha-bali-earrings-for-men-women-128",
-    "price": 396,
-    "MRP": 396
+    "price": 440,
+    "MRP": 440
   },
   {
     "id": 129,
@@ -5059,7 +4978,7 @@
     "brandText": "Premium Jewellery Crafted in 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 0.8,
     "makingCharges": 50,
     "discount": 0,
@@ -5070,9 +4989,8 @@
     "rating": 4.6,
     "ratingCount": 67,
     "Lock": "",
-    "slug": "925-sterling-silver-classic-plain-bali-hoop-earrings-for-men-women-129",
-    "price": 334,
-    "MRP": 334
+    "price": 371,
+    "MRP": 371
   },
   {
     "id": 130,
@@ -5100,7 +5018,7 @@
     "brandText": "925 Silver with Genuine 92.5% Purity",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 1.15,
     "makingCharges": 50,
     "discount": 0,
@@ -5111,9 +5029,8 @@
     "rating": 4,
     "ratingCount": 33,
     "Lock": "",
-    "slug": "925-sterling-silver-twisted-rudraksha-bali-earrings-for-men-women-130",
-    "price": 480,
-    "MRP": 480
+    "price": 533,
+    "MRP": 533
   },
   {
     "id": 131,
@@ -5141,7 +5058,7 @@
     "brandText": "Beautifully Made with 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 0.55,
     "makingCharges": 50,
     "discount": 0,
@@ -5152,9 +5069,8 @@
     "rating": 4.6,
     "ratingCount": 110,
     "Lock": "",
-    "slug": "925-sterling-silver-beaded-rudraksha-bali-earrings-for-men-women-131",
-    "price": 229,
-    "MRP": 229
+    "price": 255,
+    "MRP": 255
   },
   {
     "id": 132,
@@ -5181,7 +5097,7 @@
     "brandText": "Genuine 925 Silver for Premium Jewellery",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 0.6,
     "makingCharges": 50,
     "discount": 0,
@@ -5192,9 +5108,8 @@
     "rating": 4.9,
     "ratingCount": 37,
     "Lock": "",
-    "slug": "925-sterling-silver-thick-hoop-bali-earrings-for-men-women-132",
-    "price": 250,
-    "MRP": 250
+    "price": 278,
+    "MRP": 278
   },
   {
     "id": 133,
@@ -5221,7 +5136,7 @@
     "brandText": "Crafted in Authentic 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 1.58,
     "makingCharges": 50,
     "discount": 0,
@@ -5232,9 +5147,8 @@
     "rating": 4.4,
     "ratingCount": 56,
     "Lock": "",
-    "slug": "925-sterling-silver-mini-hoop-bali-earrings-for-men-women-133",
-    "price": 659,
-    "MRP": 659
+    "price": 732,
+    "MRP": 732
   },
   {
     "id": 134,
@@ -5261,7 +5175,7 @@
     "brandText": "Premium 925 Silver with Fine Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 0.45,
     "makingCharges": 50,
     "discount": 0,
@@ -5272,9 +5186,8 @@
     "rating": 4.2,
     "ratingCount": 106,
     "Lock": "",
-    "slug": "925-sterling-silver-minimal-rudraksha-bali-earrings-for-men-women-134",
-    "price": 188,
-    "MRP": 188
+    "price": 209,
+    "MRP": 209
   },
   {
     "id": 136,
@@ -5302,7 +5215,7 @@
     "brandText": "Made with High-Quality 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 8.04,
     "makingCharges": 50,
     "discount": 2,
@@ -5313,9 +5226,8 @@
     "rating": 4.8,
     "ratingCount": 89,
     "Lock": "",
-    "slug": "baby-rudraksha-nazariya-bracelet-136",
-    "price": 3354,
-    "MRP": 3422
+    "price": 3727,
+    "MRP": 3803
   },
   {
     "id": 137,
@@ -5342,7 +5254,7 @@
     "brandText": "Authentic 925 Silver for Elegant Jewellery",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 5.37,
     "makingCharges": 50,
     "discount": 2,
@@ -5353,9 +5265,8 @@
     "rating": 4.6,
     "ratingCount": 30,
     "Lock": "",
-    "slug": "baby-evil-eye-nazariya-bracelet-137",
-    "price": 2240,
-    "MRP": 2286
+    "price": 2489,
+    "MRP": 2540
   },
   {
     "id": 138,
@@ -5382,7 +5293,7 @@
     "brandText": "92.5% Silver Purity with Premium Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 4.82,
     "makingCharges": 50,
     "discount": 0,
@@ -5393,9 +5304,8 @@
     "rating": 4.5,
     "ratingCount": 16,
     "Lock": "",
-    "slug": "baby-red-bird-silver-bracelet-138",
-    "price": 2011,
-    "MRP": 2011
+    "price": 2234,
+    "MRP": 2234
   },
   {
     "id": 139,
@@ -5423,7 +5333,7 @@
     "brandText": "Crafted from Genuine 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 4.5,
     "makingCharges": 50,
     "discount": 0,
@@ -5434,9 +5344,8 @@
     "rating": 4.9,
     "ratingCount": 83,
     "Lock": "",
-    "slug": "baby-teddy-silver-bracelet-139",
-    "price": 1877,
-    "MRP": 1877
+    "price": 2086,
+    "MRP": 2086
   },
   {
     "id": 141,
@@ -5464,7 +5373,7 @@
     "brandText": "Fine Jewellery Made with 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 6,
     "makingCharges": 55,
     "discount": 0,
@@ -5475,9 +5384,8 @@
     "rating": 4,
     "ratingCount": 80,
     "Lock": "",
-    "slug": "hanuman-silver-ring-for-men-141",
-    "price": 2586,
-    "MRP": 2586
+    "price": 2874,
+    "MRP": 2874
   },
   {
     "id": 142,
@@ -5505,7 +5413,7 @@
     "brandText": "Premium Quality with Authentic 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 4,
     "makingCharges": 40,
     "discount": 0,
@@ -5516,9 +5424,8 @@
     "rating": 4.9,
     "ratingCount": 99,
     "Lock": "",
-    "slug": "925-silver-hanuman-ring-for-men-adjustable-spiritual-design-142",
-    "price": 1557,
-    "MRP": 1557
+    "price": 1730,
+    "MRP": 1730
   },
   {
     "id": 143,
@@ -5545,7 +5452,7 @@
     "brandText": "925 Silver Jewellery Crafted with Care",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 6,
     "makingCharges": 55,
     "discount": 0,
@@ -5556,9 +5463,8 @@
     "rating": 4.5,
     "ratingCount": 28,
     "Lock": "",
-    "slug": "shree-ram-silver-ring-for-men-engraved-spiritual-design-143",
-    "price": 2586,
-    "MRP": 2586
+    "price": 2874,
+    "MRP": 2874
   },
   {
     "id": 144,
@@ -5584,7 +5490,7 @@
     "brandText": "Made with Genuine 92.5% Silver Purity",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 6.5,
     "makingCharges": 55,
     "discount": 0,
@@ -5595,9 +5501,8 @@
     "rating": 5,
     "ratingCount": 93,
     "Lock": "",
-    "slug": "jai-shree-ram-silver-ring-144",
-    "price": 2802,
-    "MRP": 2802
+    "price": 3113,
+    "MRP": 3113
   },
   {
     "id": 145,
@@ -5623,7 +5528,7 @@
     "brandText": "Authentic 925 Silver with Elegant Finish",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 5.5,
     "makingCharges": 55,
     "discount": 0,
@@ -5634,9 +5539,8 @@
     "rating": 4.8,
     "ratingCount": 69,
     "Lock": "",
-    "slug": "hanuman-gada-silver-ring-for-men-925-silver-engraving-145",
-    "price": 2371,
-    "MRP": 2371
+    "price": 2634,
+    "MRP": 2634
   },
   {
     "id": 146,
@@ -5664,7 +5568,7 @@
     "brandText": "Premium Jewellery in 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 4,
     "makingCharges": 40,
     "discount": 0,
@@ -5675,9 +5579,8 @@
     "rating": 4.4,
     "ratingCount": 115,
     "Lock": "",
-    "slug": "sankat-mochan-hanuman-925-sterling-silver-protection-ring-146",
-    "price": 1557,
-    "MRP": 1557
+    "price": 1730,
+    "MRP": 1730
   },
   {
     "id": 151,
@@ -5703,7 +5606,7 @@
     "brandText": "Crafted Using Premium 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 6.5,
     "makingCharges": 50,
     "discount": 0,
@@ -5714,9 +5617,8 @@
     "rating": 4.8,
     "ratingCount": 86,
     "Lock": "",
-    "slug": "925-silver-krishna-ring-for-men-adjustable-spiritual-design-151",
-    "price": 2711,
-    "MRP": 2711
+    "price": 3013,
+    "MRP": 3013
   },
   {
     "id": 152,
@@ -5744,7 +5646,7 @@
     "brandText": "Genuine 92.5% Silver for Refined Elegance",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 7,
     "makingCharges": 50,
     "discount": 0,
@@ -5755,9 +5657,8 @@
     "rating": 4.2,
     "ratingCount": 102,
     "Lock": "",
-    "slug": "krishna-silver-ring-for-men-engraved-925-silver-152",
-    "price": 2920,
-    "MRP": 2920
+    "price": 3245,
+    "MRP": 3245
   },
   {
     "id": 153,
@@ -5785,7 +5686,7 @@
     "brandText": "925 Silver Jewellery with Premium Quality",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 6,
     "makingCharges": 50,
     "discount": 0,
@@ -5796,9 +5697,8 @@
     "rating": 3.6,
     "ratingCount": 14,
     "Lock": "",
-    "slug": "radha-krishna-adjustable-ring-for-him-925-sterling-silver-153",
-    "price": 2503,
-    "MRP": 2503
+    "price": 2781,
+    "MRP": 2781
   },
   {
     "id": 154,
@@ -5824,7 +5724,7 @@
     "brandText": "Made from Authentic 925 Silver Purity",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 4,
     "makingCharges": 50,
     "discount": 0,
@@ -5835,9 +5735,8 @@
     "rating": 4.2,
     "ratingCount": 72,
     "Lock": "",
-    "slug": "radha-krishna-couple-silver-ring-925-sterling-silver-154",
-    "price": 1669,
-    "MRP": 1669
+    "price": 1854,
+    "MRP": 1854
   },
   {
     "id": 155,
@@ -5864,7 +5763,7 @@
     "brandText": "Fine Craftsmanship in Genuine 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 6.5,
     "makingCharges": 30,
     "discount": 0,
@@ -5875,9 +5774,8 @@
     "rating": 4,
     "ratingCount": 113,
     "Lock": "",
-    "slug": "krishna-flute-silver-ring-bansuri-design-925-sterling-silver-155",
-    "price": 2350,
-    "MRP": 2350
+    "price": 2611,
+    "MRP": 2611
   },
   {
     "id": 156,
@@ -5903,7 +5801,7 @@
     "brandText": "Premium Finish in Authentic 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 4,
     "makingCharges": 30,
     "discount": 0,
@@ -5914,9 +5812,8 @@
     "rating": 3.6,
     "ratingCount": 9,
     "Lock": "",
-    "slug": "morpankh-krishna-silver-ring-peacock-feather-design-156",
-    "price": 1446,
-    "MRP": 1446
+    "price": 1607,
+    "MRP": 1607
   },
   {
     "id": 157,
@@ -5942,7 +5839,7 @@
     "brandText": "Crafted with Genuine Silver at 92.5% Purity",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 5.5,
     "makingCharges": 30,
     "discount": 0,
@@ -5953,9 +5850,8 @@
     "rating": 4.2,
     "ratingCount": 86,
     "Lock": "",
-    "slug": "lord-krishna-silver-ring-antique-finish-adjustable-157",
-    "price": 1988,
-    "MRP": 1988
+    "price": 2209,
+    "MRP": 2209
   },
   {
     "id": 158,
@@ -5980,7 +5876,7 @@
     "brandText": "Elegant Jewellery in Premium 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 5.5,
     "makingCharges": 50,
     "discount": 0,
@@ -5991,9 +5887,8 @@
     "rating": 4.7,
     "ratingCount": 110,
     "Lock": "",
-    "slug": "krishna-silver-ring-for-women-elegant-adjustable-design-158",
-    "price": 2294,
-    "MRP": 2294
+    "price": 2549,
+    "MRP": 2549
   },
   {
     "id": 162,
@@ -6021,7 +5916,7 @@
     "brandText": "Made with 925 Silver for Lasting Quality",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 6,
     "makingCharges": 55,
     "discount": 0,
@@ -6032,9 +5927,8 @@
     "rating": 4.6,
     "ratingCount": 96,
     "Lock": "",
-    "slug": "925-sterling-silver-khatushyam-ring-for-men-spiritual-design-162",
-    "price": 2586,
-    "MRP": 2586
+    "price": 2874,
+    "MRP": 2874
   },
   {
     "id": 163,
@@ -6062,7 +5956,7 @@
     "brandText": "Authentic 92.5% Silver with Fine Detailing",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 5.5,
     "makingCharges": 60,
     "discount": 0,
@@ -6073,9 +5967,8 @@
     "rating": 4.4,
     "ratingCount": 119,
     "Lock": "",
-    "slug": "pure-925-silver-khatushyam-silver-ring-for-men-antique-finish-163",
-    "price": 2447,
-    "MRP": 2447
+    "price": 2719,
+    "MRP": 2719
   },
   {
     "id": 164,
@@ -6102,7 +5995,7 @@
     "brandText": "Premium Craftsmanship in Genuine Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 6.5,
     "makingCharges": 55,
     "discount": 0,
@@ -6113,9 +6006,8 @@
     "rating": 4.7,
     "ratingCount": 116,
     "Lock": "",
-    "slug": "handmade-khatushyam-silver-ring-for-men-164",
-    "price": 2802,
-    "MRP": 2802
+    "price": 3113,
+    "MRP": 3113
   },
   {
     "id": 165,
@@ -6143,7 +6035,7 @@
     "brandText": "Crafted from 92.5% Pure Silver Quality",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 4,
     "makingCharges": 40,
     "discount": 0,
@@ -6154,9 +6046,8 @@
     "rating": 4.4,
     "ratingCount": 98,
     "Lock": "",
-    "slug": "shyam-baba-silver-ring-for-men-engraved-design-165",
-    "price": 1557,
-    "MRP": 1557
+    "price": 1730,
+    "MRP": 1730
   },
   {
     "id": 166,
@@ -6183,7 +6074,7 @@
     "brandText": "Genuine 925 Silver with Refined Finish",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 4,
     "makingCharges": 40,
     "discount": 0,
@@ -6194,9 +6085,8 @@
     "rating": 4.4,
     "ratingCount": 109,
     "Lock": "",
-    "slug": "khatushyam-couple-silver-ring-925-sterling-silver-166",
-    "price": 1557,
-    "MRP": 1557
+    "price": 1730,
+    "MRP": 1730
   },
   {
     "id": 167,
@@ -6224,7 +6114,7 @@
     "brandText": "Made with Premium 925 Silver Quality",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 7,
     "makingCharges": 55,
     "discount": 0,
@@ -6235,9 +6125,8 @@
     "rating": 4.4,
     "ratingCount": 44,
     "Lock": "",
-    "slug": "shyam-baba-couple-band-ring-in-925-silver-167",
-    "price": 3017,
-    "MRP": 3017
+    "price": 3353,
+    "MRP": 3353
   },
   {
     "id": 168,
@@ -6265,7 +6154,7 @@
     "brandText": "Elegant Craftsmanship Using 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 4,
     "makingCharges": 40,
     "discount": 0,
@@ -6276,9 +6165,8 @@
     "rating": 3.9,
     "ratingCount": 111,
     "Lock": "",
-    "slug": "khatushyam-silver-ring-for-women-adjustable-design-168",
-    "price": 1557,
-    "MRP": 1557
+    "price": 1730,
+    "MRP": 1730
   },
   {
     "id": 169,
@@ -6305,7 +6193,7 @@
     "brandText": "Authentic Silver Crafted in 925 Purity",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 5.5,
     "makingCharges": 60,
     "discount": 0,
@@ -6316,9 +6204,8 @@
     "rating": 4.6,
     "ratingCount": 81,
     "Lock": "",
-    "slug": "khatu-shyam-ji-silver-ring-divine-blessings-design-169",
-    "price": 2447,
-    "MRP": 2447
+    "price": 2719,
+    "MRP": 2719
   },
   {
     "id": 170,
@@ -6345,7 +6232,7 @@
     "brandText": "Premium 92.5% Pure Silver Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 6,
     "makingCharges": 55,
     "discount": 0,
@@ -6356,9 +6243,8 @@
     "rating": 4.6,
     "ratingCount": 27,
     "Lock": "",
-    "slug": "pure-silver-khatushyam-ji-ring-170",
-    "price": 2586,
-    "MRP": 2586
+    "price": 2874,
+    "MRP": 2874
   },
   {
     "id": 171,
@@ -6386,7 +6272,7 @@
     "brandText": "Designed in Genuine 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 4.01,
     "makingCharges": 50,
     "discount": 0,
@@ -6397,9 +6283,8 @@
     "rating": 4,
     "ratingCount": 42,
     "Lock": "",
-    "slug": "mahadev-nandi-trishul-damru-rudraksha-silver-pendant-171",
-    "price": 1673,
-    "MRP": 1673
+    "price": 1859,
+    "MRP": 1859
   },
   {
     "id": 172,
@@ -6428,7 +6313,7 @@
     "brandText": "Fine Quality Crafted with 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 5.36,
     "makingCharges": 50,
     "discount": 0,
@@ -6439,9 +6324,8 @@
     "rating": 4.7,
     "ratingCount": 58,
     "Lock": "",
-    "slug": "shiv-rudraksha-pendant-with-mahadev-face-silver-locket-172",
-    "price": 2236,
-    "MRP": 2236
+    "price": 2484,
+    "MRP": 2484
   },
   {
     "id": 173,
@@ -6470,7 +6354,7 @@
     "brandText": "925 Silver Jewellery with Authentic Quality",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 9.37,
     "makingCharges": 50,
     "discount": 0,
@@ -6481,9 +6365,8 @@
     "rating": 4.5,
     "ratingCount": 37,
     "Lock": "",
-    "slug": "om-trishul-damru-peacock-feather-silver-pendant-173",
-    "price": 3909,
-    "MRP": 3909
+    "price": 4343,
+    "MRP": 4343
   },
   {
     "id": 174,
@@ -6511,7 +6394,7 @@
     "brandText": "Made from Premium Genuine Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 2.13,
     "makingCharges": 50,
     "discount": 0,
@@ -6522,9 +6405,8 @@
     "rating": 4.8,
     "ratingCount": 104,
     "Lock": "",
-    "slug": "lord-shiva-face-antique-silver-pendant-174",
-    "price": 889,
-    "MRP": 889
+    "price": 987,
+    "MRP": 987
   },
   {
     "id": 175,
@@ -6552,7 +6434,7 @@
     "brandText": "Authentic 925 Silver with Premium Quality",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 4.6,
     "makingCharges": 50,
     "discount": 0,
@@ -6563,9 +6445,8 @@
     "rating": 5,
     "ratingCount": 68,
     "Lock": "",
-    "slug": "mahadev-name-pendant-with-trishul-silver-locket-175",
-    "price": 1919,
-    "MRP": 1919
+    "price": 2132,
+    "MRP": 2132
   },
   {
     "id": 176,
@@ -6594,7 +6475,7 @@
     "brandText": "Crafted in 92.5% Pure Silver for Elegance",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 4,
     "makingCharges": 50,
     "discount": 0,
@@ -6605,9 +6486,8 @@
     "rating": 4.5,
     "ratingCount": 28,
     "Lock": "",
-    "slug": "om-symbol-minimalist-silver-pendant-176",
-    "price": 1669,
-    "MRP": 1669
+    "price": 1854,
+    "MRP": 1854
   },
   {
     "id": 177,
@@ -6636,7 +6516,7 @@
     "brandText": "Premium Silver Jewellery with 925 Purity",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 0.86,
     "makingCharges": 50,
     "discount": 0,
@@ -6647,9 +6527,8 @@
     "rating": 4.2,
     "ratingCount": 101,
     "Lock": "",
-    "slug": "om-religious-silver-pendant-for-men-women-177",
-    "price": 359,
-    "MRP": 359
+    "price": 399,
+    "MRP": 399
   },
   {
     "id": 178,
@@ -6677,7 +6556,7 @@
     "brandText": "Genuine 925 Silver Crafted to Perfection",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 1.27,
     "makingCharges": 50,
     "discount": 0,
@@ -6688,9 +6567,8 @@
     "rating": 4.9,
     "ratingCount": 100,
     "Lock": "",
-    "slug": "om-trishul-damru-silver-pendant-for-men-and-women-178",
-    "price": 530,
-    "MRP": 530
+    "price": 589,
+    "MRP": 589
   },
   {
     "id": 179,
@@ -6719,7 +6597,7 @@
     "brandText": "Made with Authentic 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 3.34,
     "makingCharges": 50,
     "discount": 0,
@@ -6730,9 +6608,8 @@
     "rating": 4.9,
     "ratingCount": 117,
     "Lock": "",
-    "slug": "om-symbol-silver-pendant-for-men-and-women-179",
-    "price": 1393,
-    "MRP": 1393
+    "price": 1548,
+    "MRP": 1548
   },
   {
     "id": 180,
@@ -6760,7 +6637,7 @@
     "brandText": "Fine Jewellery Crafted from 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 0.88,
     "makingCharges": 50,
     "discount": 0,
@@ -6771,9 +6648,8 @@
     "rating": 4,
     "ratingCount": 81,
     "Lock": "",
-    "slug": "mahadev-shivling-trishul-silver-pendant-180",
-    "price": 367,
-    "MRP": 367
+    "price": 408,
+    "MRP": 408
   },
   {
     "id": 181,
@@ -6802,7 +6678,7 @@
     "brandText": "92.5% Silver Quality with Elegant Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 3,
     "makingCharges": 50,
     "discount": 0,
@@ -6813,9 +6689,8 @@
     "rating": 4.6,
     "ratingCount": 56,
     "Lock": "",
-    "slug": "designer-sun-om-silver-pendant-181",
-    "price": 1251,
-    "MRP": 1251
+    "price": 1391,
+    "MRP": 1391
   },
   {
     "id": 182,
@@ -6843,7 +6718,7 @@
     "brandText": "Premium 925 Silver Made for You",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 3,
     "makingCharges": 50,
     "discount": 0,
@@ -6854,9 +6729,8 @@
     "rating": 4,
     "ratingCount": 44,
     "Lock": "",
-    "slug": "classic-om-silver-locket-for-men-and-women-182",
-    "price": 1251,
-    "MRP": 1251
+    "price": 1391,
+    "MRP": 1391
   },
   {
     "id": 183,
@@ -6884,7 +6758,7 @@
     "brandText": "Crafted with Genuine 92.5% Silver Quality",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 3,
     "makingCharges": 50,
     "discount": 0,
@@ -6895,9 +6769,8 @@
     "rating": 4.7,
     "ratingCount": 78,
     "Lock": "",
-    "slug": "textured-om-silver-pendant-183",
-    "price": 1251,
-    "MRP": 1251
+    "price": 1391,
+    "MRP": 1391
   },
   {
     "id": 184,
@@ -6924,7 +6797,7 @@
     "brandText": "Authentic 925 Silver for Timeless Style",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 4.98,
     "makingCharges": 50,
     "discount": 0,
@@ -6935,9 +6808,8 @@
     "rating": 4.2,
     "ratingCount": 29,
     "Lock": "",
-    "slug": "natural-rudraksha-silver-pendant-with-beads-184",
-    "price": 2077,
-    "MRP": 2077
+    "price": 2308,
+    "MRP": 2308
   },
   {
     "id": 185,
@@ -6965,7 +6837,7 @@
     "brandText": "Made with Premium Pure Silver Quality",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 1.5,
     "makingCharges": 50,
     "discount": 0,
@@ -6976,9 +6848,8 @@
     "rating": 5,
     "ratingCount": 72,
     "Lock": "",
-    "slug": "om-namah-shivaya-damru-rudraksha-925-silver-pendant-185",
-    "price": 626,
-    "MRP": 626
+    "price": 695,
+    "MRP": 695
   },
   {
     "id": 186,
@@ -7006,7 +6877,7 @@
     "brandText": "Elegant Jewellery Crafted with 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 1.31,
     "makingCharges": 50,
     "discount": 0,
@@ -7017,9 +6888,8 @@
     "rating": 4.7,
     "ratingCount": 42,
     "Lock": "",
-    "slug": "om-symbol-triangle-silver-pendant-for-men-and-women-186",
-    "price": 546,
-    "MRP": 546
+    "price": 607,
+    "MRP": 607
   },
   {
     "id": 187,
@@ -7048,7 +6918,7 @@
     "brandText": "Genuine 92.5% Pure Silver Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 1.13,
     "makingCharges": 50,
     "discount": 0,
@@ -7059,9 +6929,8 @@
     "rating": 3.9,
     "ratingCount": 27,
     "Lock": "",
-    "slug": "mahadev-name-damru-silver-pendant-for-men-and-women-187",
-    "price": 471,
-    "MRP": 471
+    "price": 524,
+    "MRP": 524
   },
   {
     "id": 188,
@@ -7089,7 +6958,7 @@
     "brandText": "Premium Quality Jewellery in Authentic Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 1.41,
     "makingCharges": 50,
     "discount": 0,
@@ -7100,9 +6969,8 @@
     "rating": 4.3,
     "ratingCount": 9,
     "Lock": "",
-    "slug": "mahakal-name-trishul-silver-pendant-188",
-    "price": 588,
-    "MRP": 588
+    "price": 654,
+    "MRP": 654
   },
   {
     "id": 189,
@@ -7130,7 +6998,7 @@
     "brandText": "Crafted Using Genuine 925 Silver Purity",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 1.57,
     "makingCharges": 50,
     "discount": 0,
@@ -7141,9 +7009,8 @@
     "rating": 4.9,
     "ratingCount": 118,
     "Lock": "",
-    "slug": "shiv-name-silver-pendant-necklace-189",
-    "price": 655,
-    "MRP": 655
+    "price": 728,
+    "MRP": 728
   },
   {
     "id": 190,
@@ -7172,7 +7039,7 @@
     "brandText": "925 Silver with Premium 92.5% Quality",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 1.28,
     "makingCharges": 50,
     "discount": 0,
@@ -7183,9 +7050,8 @@
     "rating": 4.8,
     "ratingCount": 33,
     "Lock": "",
-    "slug": "lord-shiva-face-black-bead-silver-pendant-190",
-    "price": 534,
-    "MRP": 534
+    "price": 593,
+    "MRP": 593
   },
   {
     "id": 191,
@@ -7214,7 +7080,7 @@
     "brandText": "Made with Fine Genuine Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 1.61,
     "makingCharges": 50,
     "discount": 0,
@@ -7225,9 +7091,8 @@
     "rating": 4.2,
     "ratingCount": 93,
     "Lock": "",
-    "slug": "rudraksha-silver-pendant-for-mahadev-devotees-191",
-    "price": 672,
-    "MRP": 672
+    "price": 746,
+    "MRP": 746
   },
   {
     "id": 192,
@@ -7255,7 +7120,7 @@
     "brandText": "Authentic 92.5% Silver for Elegant Designs",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 0.95,
     "makingCharges": 50,
     "discount": 0,
@@ -7266,9 +7131,8 @@
     "rating": 3.9,
     "ratingCount": 93,
     "Lock": "",
-    "slug": "ganesha-silver-chain-pendants-192",
-    "price": 396,
-    "MRP": 396
+    "price": 440,
+    "MRP": 440
   },
   {
     "id": 193,
@@ -7296,7 +7160,7 @@
     "brandText": "Premium Craftsmanship with 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 1,
     "makingCharges": 50,
     "discount": 0,
@@ -7307,9 +7171,8 @@
     "rating": 4.6,
     "ratingCount": 20,
     "Lock": "",
-    "slug": "ganesh-silver-pendant-193",
-    "price": 417,
-    "MRP": 417
+    "price": 464,
+    "MRP": 464
   },
   {
     "id": 194,
@@ -7337,7 +7200,7 @@
     "brandText": "Crafted in Genuine 925 Silver Quality",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 1,
     "makingCharges": 50,
     "discount": 0,
@@ -7348,9 +7211,8 @@
     "rating": 4.5,
     "ratingCount": 86,
     "Lock": "",
-    "slug": "925-sterling-silver-ganesh-ji-pendant-194",
-    "price": 417,
-    "MRP": 417
+    "price": 464,
+    "MRP": 464
   },
   {
     "id": 195,
@@ -7378,7 +7240,7 @@
     "brandText": "92.5% Pure Silver for Sophisticated Style",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 1.2,
     "makingCharges": 50,
     "discount": 0,
@@ -7389,9 +7251,8 @@
     "rating": 5,
     "ratingCount": 104,
     "Lock": "",
-    "slug": "ganesha-ji-silver-locket-195",
-    "price": 501,
-    "MRP": 501
+    "price": 556,
+    "MRP": 556
   },
   {
     "id": 196,
@@ -7419,7 +7280,7 @@
     "brandText": "Made from Premium 925 Silver Purity",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 1.3,
     "makingCharges": 50,
     "discount": 0,
@@ -7430,9 +7291,8 @@
     "rating": 4.6,
     "ratingCount": 41,
     "Lock": "",
-    "slug": "chandi-ka-ganesh-ji-ka-pendant-196",
-    "price": 542,
-    "MRP": 542
+    "price": 603,
+    "MRP": 603
   },
   {
     "id": 197,
@@ -7460,7 +7320,7 @@
     "brandText": "Genuine Silver Jewellery Crafted with Precision",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 0.9,
     "makingCharges": 50,
     "discount": 0,
@@ -7471,9 +7331,8 @@
     "rating": 4.9,
     "ratingCount": 34,
     "Lock": "",
-    "slug": "divine-ganesha-pendant-in-925-silver-197",
-    "price": 375,
-    "MRP": 375
+    "price": 417,
+    "MRP": 417
   },
   {
     "id": 198,
@@ -7500,7 +7359,7 @@
     "brandText": "Authentic 925 Silver with Fine Quality",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 5.81,
     "makingCharges": 50,
     "discount": 0,
@@ -7511,9 +7370,8 @@
     "rating": 4.9,
     "ratingCount": 105,
     "Lock": "",
-    "slug": "ganesha-pendant-spiritual-design-198",
-    "price": 2424,
-    "MRP": 2424
+    "price": 2693,
+    "MRP": 2693
   },
   {
     "id": 201,
@@ -7541,7 +7399,7 @@
     "brandText": "Premium 92.5% Silver for Beautiful Designs",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 15,
     "makingCharges": 30,
     "discount": 0,
@@ -7552,9 +7410,8 @@
     "rating": 3.8,
     "ratingCount": 23,
     "Lock": "",
-    "slug": "classic-herringbone-silver-chain-201",
-    "price": 5423,
-    "MRP": 5423
+    "price": 6026,
+    "MRP": 6026
   },
   {
     "id": 202,
@@ -7582,7 +7439,7 @@
     "brandText": "Crafted from Genuine Silver with 925 Purity",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 6,
     "makingCharges": 50,
     "discount": 0,
@@ -7593,9 +7450,8 @@
     "rating": 4.7,
     "ratingCount": 18,
     "Lock": "",
-    "slug": "classic-curb-link-chain-in-925-silver-202",
-    "price": 2503,
-    "MRP": 2503
+    "price": 2781,
+    "MRP": 2781
   },
   {
     "id": 203,
@@ -7623,7 +7479,7 @@
     "brandText": "Made with 92.5% Pure Silver Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 7,
     "makingCharges": 50,
     "discount": 0,
@@ -7634,9 +7490,8 @@
     "rating": 4.7,
     "ratingCount": 16,
     "Lock": "",
-    "slug": "classic-figaro-neck-chain-203",
-    "price": 2920,
-    "MRP": 2920
+    "price": 3245,
+    "MRP": 3245
   },
   {
     "id": 204,
@@ -7664,7 +7519,7 @@
     "brandText": "Elegant Finish in Authentic 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 7,
     "makingCharges": 50,
     "discount": 0,
@@ -7675,9 +7530,8 @@
     "rating": 5,
     "ratingCount": 56,
     "Lock": "",
-    "slug": "paperclip-silver-chain-204",
-    "price": 2920,
-    "MRP": 2920
+    "price": 3245,
+    "MRP": 3245
   },
   {
     "id": 205,
@@ -7705,7 +7559,7 @@
     "brandText": "Premium Jewellery Crafted with Genuine Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 5,
     "makingCharges": 50,
     "discount": 0,
@@ -7716,9 +7570,8 @@
     "rating": 4.4,
     "ratingCount": 50,
     "Lock": "",
-    "slug": "bold-curb-silver-chain-205",
-    "price": 2086,
-    "MRP": 2086
+    "price": 2318,
+    "MRP": 2318
   },
   {
     "id": 206,
@@ -7746,7 +7599,7 @@
     "brandText": "925 Silver Purity with Refined Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 3,
     "makingCharges": 50,
     "discount": 0,
@@ -7757,9 +7610,8 @@
     "rating": 4.8,
     "ratingCount": 85,
     "Lock": "",
-    "slug": "polished-silver-chain-206",
-    "price": 1251,
-    "MRP": 1251
+    "price": 1391,
+    "MRP": 1391
   },
   {
     "id": 207,
@@ -7787,7 +7639,7 @@
     "brandText": "Made from High-Quality Genuine 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 20,
     "makingCharges": 50,
     "discount": 0,
@@ -7798,9 +7650,8 @@
     "rating": 5,
     "ratingCount": 96,
     "Lock": "",
-    "slug": "herringbone-silver-chain-207",
-    "price": 8343,
-    "MRP": 8343
+    "price": 9270,
+    "MRP": 9270
   },
   {
     "id": 208,
@@ -7827,7 +7678,7 @@
     "brandText": "Authentic 92.5% Pure Silver for Premium Style",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 5.5,
     "makingCharges": 50,
     "discount": 0,
@@ -7838,9 +7689,8 @@
     "rating": 4,
     "ratingCount": 45,
     "Lock": "",
-    "slug": "sterling-silver-curb-link-chain-necklace-208",
-    "price": 2294,
-    "MRP": 2294
+    "price": 2549,
+    "MRP": 2549
   },
   {
     "id": 211,
@@ -7868,7 +7718,7 @@
     "brandText": "Crafted with Premium Silver and 925 Purity",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 1.5,
     "makingCharges": 50,
     "discount": 0,
@@ -7879,9 +7729,8 @@
     "rating": 4.1,
     "ratingCount": 90,
     "Lock": "",
-    "slug": "bajrang-bali-gada-locket-211",
-    "price": 626,
-    "MRP": 626
+    "price": 695,
+    "MRP": 695
   },
   {
     "id": 212,
@@ -7909,7 +7758,7 @@
     "brandText": "Genuine 925 Silver for Elegant Everyday Style",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 2,
     "makingCharges": 50,
     "discount": 0,
@@ -7920,9 +7769,8 @@
     "rating": 3.6,
     "ratingCount": 10,
     "Lock": "",
-    "slug": "spiritual-bajrang-bali-pendant-212",
-    "price": 834,
-    "MRP": 834
+    "price": 927,
+    "MRP": 927
   },
   {
     "id": 213,
@@ -7950,7 +7798,7 @@
     "brandText": "Fine Craftsmanship with 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 3,
     "makingCharges": 50,
     "discount": 0,
@@ -7961,9 +7809,8 @@
     "rating": 4.5,
     "ratingCount": 48,
     "Lock": "",
-    "slug": "hanuman-gada-name-necklace-213",
-    "price": 1251,
-    "MRP": 1251
+    "price": 1391,
+    "MRP": 1391
   },
   {
     "id": 214,
@@ -7991,7 +7838,7 @@
     "brandText": "Premium Quality Crafted from Authentic Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 3.5,
     "makingCharges": 50,
     "discount": 0,
@@ -8002,9 +7849,8 @@
     "rating": 4.6,
     "ratingCount": 90,
     "Lock": "",
-    "slug": "925-sterling-silver-hanuman-necklace-214",
-    "price": 1460,
-    "MRP": 1460
+    "price": 1622,
+    "MRP": 1622
   },
   {
     "id": 215,
@@ -8032,7 +7878,7 @@
     "brandText": "Made with Genuine 925 Silver for Elegance",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 3.5,
     "makingCharges": 50,
     "discount": 0,
@@ -8043,9 +7889,8 @@
     "rating": 5,
     "ratingCount": 117,
     "Lock": "",
-    "slug": "custom-hanuman-gada-necklace-215",
-    "price": 1460,
-    "MRP": 1460
+    "price": 1622,
+    "MRP": 1622
   },
   {
     "id": 216,
@@ -8073,7 +7918,7 @@
     "brandText": "Authentic 92.5% Silver Jewellery Craft",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 3,
     "makingCharges": 50,
     "discount": 0,
@@ -8084,9 +7929,8 @@
     "rating": 4.3,
     "ratingCount": 73,
     "Lock": "",
-    "slug": "personalised-hanuman-silver-locket-216",
-    "price": 1251,
-    "MRP": 1251
+    "price": 1391,
+    "MRP": 1391
   },
   {
     "id": 217,
@@ -8114,7 +7958,7 @@
     "brandText": "925 Silver with Premium Fine Finish",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 4,
     "makingCharges": 50,
     "discount": 0,
@@ -8125,9 +7969,8 @@
     "rating": 4.4,
     "ratingCount": 46,
     "Lock": "",
-    "slug": "hanuman-gada-devotional-necklace-217",
-    "price": 1669,
-    "MRP": 1669
+    "price": 1854,
+    "MRP": 1854
   },
   {
     "id": 218,
@@ -8154,7 +7997,7 @@
     "brandText": "Crafted in High-Quality 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "unisex",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 4,
     "makingCharges": 50,
     "discount": 0,
@@ -8165,9 +8008,8 @@
     "rating": 3.8,
     "ratingCount": 91,
     "Lock": "",
-    "slug": "925-hanuman-devotional-locket-218",
-    "price": 1669,
-    "MRP": 1669
+    "price": 1854,
+    "MRP": 1854
   },
   {
     "id": 221,
@@ -8195,7 +8037,7 @@
     "brandText": "Genuine Silver Jewellery with 925 Purity",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 15,
     "makingCharges": 30,
     "discount": 0,
@@ -8206,9 +8048,8 @@
     "rating": 4.3,
     "ratingCount": 64,
     "Lock": "",
-    "slug": "elegant-dual-tone-silver-chain-for-women-221",
-    "price": 5423,
-    "MRP": 5423
+    "price": 6026,
+    "MRP": 6026
   },
   {
     "id": 222,
@@ -8237,7 +8078,7 @@
     "brandText": "Premium 925 Silver Crafted with Precision",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 13,
     "makingCharges": 30,
     "discount": 0,
@@ -8248,9 +8089,8 @@
     "rating": 4.8,
     "ratingCount": 54,
     "Lock": "",
-    "slug": "trendy-women-s-silver-chain-222",
-    "price": 4700,
-    "MRP": 4700
+    "price": 5222,
+    "MRP": 5222
   },
   {
     "id": 223,
@@ -8277,7 +8117,7 @@
     "brandText": "Made with Authentic Silver and Fine Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 12,
     "makingCharges": 30,
     "discount": 0,
@@ -8288,9 +8128,8 @@
     "rating": 3.5,
     "ratingCount": 10,
     "Lock": "",
-    "slug": "silver-chain-for-girls-223",
-    "price": 4338,
-    "MRP": 4338
+    "price": 4820,
+    "MRP": 4820
   },
   {
     "id": 224,
@@ -8318,7 +8157,7 @@
     "brandText": "92.5% Pure Silver for Elegant Jewellery Designs",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 15,
     "makingCharges": 30,
     "discount": 0,
@@ -8329,9 +8168,8 @@
     "rating": 3.9,
     "ratingCount": 116,
     "Lock": "",
-    "slug": "italian-mesh-silver-chain-for-ladies-224",
-    "price": 5423,
-    "MRP": 5423
+    "price": 6026,
+    "MRP": 6026
   },
   {
     "id": 225,
@@ -8359,7 +8197,7 @@
     "brandText": "Crafted from Premium Genuine 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 10,
     "makingCharges": 30,
     "discount": 0,
@@ -8370,9 +8208,8 @@
     "rating": 4.2,
     "ratingCount": 54,
     "Lock": "",
-    "slug": "925-sterling-silver-dokiya-silver-chain-225",
-    "price": 3615,
-    "MRP": 3615
+    "price": 4017,
+    "MRP": 4017
   },
   {
     "id": 226,
@@ -8399,7 +8236,7 @@
     "brandText": "Authentic 925 Silver with Superior Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 10,
     "makingCharges": 28,
     "discount": 0,
@@ -8410,9 +8247,8 @@
     "rating": 3.9,
     "ratingCount": 9,
     "Lock": "",
-    "slug": "italian-snake-silver-chain-226",
-    "price": 3560,
-    "MRP": 3560
+    "price": 3955,
+    "MRP": 3955
   },
   {
     "id": 227,
@@ -8440,7 +8276,7 @@
     "brandText": "Fine Jewellery in 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 7,
     "makingCharges": 30,
     "discount": 0,
@@ -8451,9 +8287,8 @@
     "rating": 4.8,
     "ratingCount": 56,
     "Lock": "",
-    "slug": "designer-ball-silver-chain-for-women-227",
-    "price": 2531,
-    "MRP": 2531
+    "price": 2812,
+    "MRP": 2812
   },
   {
     "id": 231,
@@ -8481,7 +8316,7 @@
     "brandText": "Made with Premium Silver at 925 Purity",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 7,
     "makingCharges": 50,
     "discount": 0,
@@ -8492,9 +8327,8 @@
     "rating": 4.8,
     "ratingCount": 29,
     "Lock": "",
-    "slug": "couple-engraved-ring-231",
-    "price": 2920,
-    "MRP": 2920
+    "price": 3245,
+    "MRP": 3245
   },
   {
     "id": 232,
@@ -8522,7 +8356,7 @@
     "brandText": "Genuine 92.5% Silver with Elegant Detailing",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 7.5,
     "makingCharges": 50,
     "discount": 0,
@@ -8533,9 +8367,8 @@
     "rating": 4.5,
     "ratingCount": 49,
     "Lock": "",
-    "slug": "husband-wife-name-ring-232",
-    "price": 3129,
-    "MRP": 3129
+    "price": 3476,
+    "MRP": 3476
   },
   {
     "id": 233,
@@ -8562,7 +8395,7 @@
     "brandText": "925 Silver Crafted for Premium Quality",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 8,
     "makingCharges": 50,
     "discount": 0,
@@ -8573,9 +8406,8 @@
     "rating": 5,
     "ratingCount": 110,
     "Lock": "",
-    "slug": "date-and-name-engraved-couple-ring-233",
-    "price": 3337,
-    "MRP": 3337
+    "price": 3708,
+    "MRP": 3708
   },
   {
     "id": 234,
@@ -8603,7 +8435,7 @@
     "brandText": "Authentic Silver Purity with 92.5% Quality",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 8.5,
     "makingCharges": 50,
     "discount": 0,
@@ -8614,9 +8446,8 @@
     "rating": 4.8,
     "ratingCount": 44,
     "Lock": "",
-    "slug": "eternal-love-silver-couple-ring-234",
-    "price": 3546,
-    "MRP": 3546
+    "price": 3940,
+    "MRP": 3940
   },
   {
     "id": 235,
@@ -8644,7 +8475,7 @@
     "brandText": "Premium Jewellery Made from Genuine 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 8,
     "makingCharges": 50,
     "discount": 0,
@@ -8655,9 +8486,8 @@
     "rating": 4.1,
     "ratingCount": 71,
     "Lock": "",
-    "slug": "forever-together-silver-couple-band-235",
-    "price": 3337,
-    "MRP": 3337
+    "price": 3708,
+    "MRP": 3708
   },
   {
     "id": 236,
@@ -8685,7 +8515,7 @@
     "brandText": "Crafted with 92.5% Silver for Refined Style",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 7,
     "makingCharges": 50,
     "discount": 0,
@@ -8696,9 +8526,8 @@
     "rating": 4.8,
     "ratingCount": 10,
     "Lock": "",
-    "slug": "925-sterling-silver-heartbeat-couple-ring-236",
-    "price": 2920,
-    "MRP": 2920
+    "price": 3245,
+    "MRP": 3245
   },
   {
     "id": 237,
@@ -8726,7 +8555,7 @@
     "brandText": "Genuine 925 Silver with Beautiful Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 8.5,
     "makingCharges": 50,
     "discount": 0,
@@ -8737,9 +8566,8 @@
     "rating": 4.6,
     "ratingCount": 101,
     "Lock": "",
-    "slug": "soulmate-silver-couple-ring-237",
-    "price": 3546,
-    "MRP": 3546
+    "price": 3940,
+    "MRP": 3940
   },
   {
     "id": 238,
@@ -8766,7 +8594,7 @@
     "brandText": "Made from Authentic 92.5% Silver Quality",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 6.5,
     "makingCharges": 50,
     "discount": 0,
@@ -8777,9 +8605,8 @@
     "rating": 4.7,
     "ratingCount": 92,
     "Lock": "",
-    "slug": "promise-love-silver-couple-band-238",
-    "price": 2711,
-    "MRP": 2711
+    "price": 3013,
+    "MRP": 3013
   },
   {
     "id": 239,
@@ -8807,7 +8634,7 @@
     "brandText": "Premium Finish with Genuine 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 7,
     "makingCharges": 50,
     "discount": 0,
@@ -8818,9 +8645,8 @@
     "rating": 3.7,
     "ratingCount": 18,
     "Lock": "",
-    "slug": "his-and-hers-silver-couple-ring-239",
-    "price": 2920,
-    "MRP": 2920
+    "price": 3245,
+    "MRP": 3245
   },
   {
     "id": 240,
@@ -8847,7 +8673,7 @@
     "brandText": "Elegant Designs Made with 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 7.5,
     "makingCharges": 50,
     "discount": 0,
@@ -8858,9 +8684,8 @@
     "rating": 4.5,
     "ratingCount": 32,
     "Lock": "",
-    "slug": "forever-bond-silver-couple-ring-240",
-    "price": 3129,
-    "MRP": 3129
+    "price": 3476,
+    "MRP": 3476
   },
   {
     "id": 241,
@@ -8888,7 +8713,7 @@
     "brandText": "Crafted in Genuine Silver with 925 Purity",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 7.8,
     "makingCharges": 50,
     "discount": 0,
@@ -8899,9 +8724,8 @@
     "rating": 4.4,
     "ratingCount": 67,
     "Lock": "",
-    "slug": "925-sterling-silver-matching-couple-band-241",
-    "price": 3254,
-    "MRP": 3254
+    "price": 3615,
+    "MRP": 3615
   },
   {
     "id": 242,
@@ -8927,7 +8751,7 @@
     "brandText": "Authentic 925 Silver for Premium Elegance",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 8.3,
     "makingCharges": 50,
     "discount": 0,
@@ -8938,9 +8762,8 @@
     "rating": 4.5,
     "ratingCount": 49,
     "Lock": "",
-    "slug": "romantic-love-silver-couple-ring-242",
-    "price": 3462,
-    "MRP": 3462
+    "price": 3847,
+    "MRP": 3847
   },
   {
     "id": 243,
@@ -8969,7 +8792,7 @@
     "brandText": "92.5% Pure Silver with Fine Jewellery Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 9,
     "makingCharges": 50,
     "discount": 0,
@@ -8980,9 +8803,8 @@
     "rating": 3.8,
     "ratingCount": 29,
     "Lock": "",
-    "slug": "endless-promise-silver-couple-band-243",
-    "price": 3754,
-    "MRP": 3754
+    "price": 4172,
+    "MRP": 4172
   },
   {
     "id": 246,
@@ -9009,7 +8831,7 @@
     "brandText": "Fine Elegance in Genuine 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 8,
     "makingCharges": 50,
     "discount": 0,
@@ -9020,9 +8842,8 @@
     "rating": 5,
     "ratingCount": 109,
     "Lock": "",
-    "slug": "elegant-love-ring-set-for-couples-246",
-    "price": 3337,
-    "MRP": 3337
+    "price": 3708,
+    "MRP": 3708
   },
   {
     "id": 247,
@@ -9048,7 +8869,7 @@
     "brandText": "Premium 925 Silver with Authentic Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 6,
     "makingCharges": 50,
     "discount": 0,
@@ -9059,9 +8880,8 @@
     "rating": 4.4,
     "ratingCount": 47,
     "Lock": "",
-    "slug": "true-love-silver-couple-ring-247",
-    "price": 2503,
-    "MRP": 2503
+    "price": 2781,
+    "MRP": 2781
   },
   {
     "id": 248,
@@ -9082,7 +8902,7 @@
     "brandText": "Premium 925 Silver with Authentic Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 7.5,
     "makingCharges": 50,
     "discount": 0,
@@ -9093,9 +8913,8 @@
     "rating": 4.9,
     "ratingCount": 102,
     "Lock": "",
-    "slug": "silver-couple-band-248",
-    "price": 3129,
-    "MRP": 3129
+    "price": 3476,
+    "MRP": 3476
   },
   {
     "id": 261,
@@ -9122,7 +8941,7 @@
     "brandText": "Crafted with Genuine 925 Silver Purity",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 6,
     "makingCharges": 50,
     "discount": 0,
@@ -9133,9 +8952,8 @@
     "rating": 4.3,
     "ratingCount": 103,
     "Lock": "",
-    "slug": "rajput-engraved-925-sterling-silver-name-ring-261",
-    "price": 2503,
-    "MRP": 2503
+    "price": 2781,
+    "MRP": 2781
   },
   {
     "id": 262,
@@ -9162,7 +8980,7 @@
     "brandText": "Made with Premium 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 6.5,
     "makingCharges": 50,
     "discount": 0,
@@ -9173,9 +8991,8 @@
     "rating": 4.6,
     "ratingCount": 25,
     "Lock": "",
-    "slug": "rajput-sword-925-sterling-silver-ring-262",
-    "price": 2711,
-    "MRP": 2711
+    "price": 3013,
+    "MRP": 3013
   },
   {
     "id": 263,
@@ -9202,7 +9019,7 @@
     "brandText": "Authentic 925 Silver Crafted with Care",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 6.5,
     "makingCharges": 50,
     "discount": 0,
@@ -9213,9 +9030,8 @@
     "rating": 4.7,
     "ratingCount": 35,
     "Lock": "",
-    "slug": "jai-shri-mahakal-925-sterling-silver-ring-263",
-    "price": 2711,
-    "MRP": 2711
+    "price": 3013,
+    "MRP": 3013
   },
   {
     "id": 264,
@@ -9242,7 +9058,7 @@
     "brandText": "Elegant Jewellery Made from Genuine Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 6,
     "makingCharges": 50,
     "discount": 0,
@@ -9253,9 +9069,8 @@
     "rating": 4.5,
     "ratingCount": 111,
     "Lock": "",
-    "slug": "banna-925-sterling-silver-name-ring-264",
-    "price": 2503,
-    "MRP": 2503
+    "price": 2781,
+    "MRP": 2781
   },
   {
     "id": 265,
@@ -9282,7 +9097,7 @@
     "brandText": "Premium Quality 925 Silver Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 7,
     "makingCharges": 50,
     "discount": 0,
@@ -9293,9 +9108,8 @@
     "rating": 4.6,
     "ratingCount": 73,
     "Lock": "",
-    "slug": "letter-a-initial-925-sterling-silver-ring-265",
-    "price": 2920,
-    "MRP": 2920
+    "price": 3245,
+    "MRP": 3245
   },
   {
     "id": 266,
@@ -9322,7 +9136,7 @@
     "brandText": "Crafted from 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 7,
     "makingCharges": 50,
     "discount": 0,
@@ -9333,9 +9147,8 @@
     "rating": 4.6,
     "ratingCount": 75,
     "Lock": "",
-    "slug": "shri-goga-rana-925-sterling-silver-name-ring-266",
-    "price": 2920,
-    "MRP": 2920
+    "price": 3245,
+    "MRP": 3245
   },
   {
     "id": 267,
@@ -9362,7 +9175,7 @@
     "brandText": "Genuine Silver Jewellery with Premium 925 Quality",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 6.5,
     "makingCharges": 50,
     "discount": 0,
@@ -9373,9 +9186,8 @@
     "rating": 4.6,
     "ratingCount": 68,
     "Lock": "",
-    "slug": "mahakal-trishul-925-sterling-silver-ring-267",
-    "price": 2711,
-    "MRP": 2711
+    "price": 3013,
+    "MRP": 3013
   },
   {
     "id": 269,
@@ -9400,7 +9212,7 @@
     "brandText": "Fine Craftsmanship with Genuine 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 3.5,
     "makingCharges": 30,
     "discount": 0,
@@ -9411,9 +9223,8 @@
     "rating": 4.7,
     "ratingCount": 24,
     "Lock": "",
-    "slug": "krishna-hindi-name-925-sterling-silver-rakhi-269",
-    "price": 1265,
-    "MRP": 1265
+    "price": 1406,
+    "MRP": 1406
   },
   {
     "id": 270,
@@ -9439,7 +9250,7 @@
     "brandText": "Premium 925 Silver for Elegant Designs",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 3.5,
     "makingCharges": 30,
     "discount": 0,
@@ -9450,9 +9261,8 @@
     "rating": 4.8,
     "ratingCount": 73,
     "Lock": "",
-    "slug": "veera-name-925-sterling-silver-rakhi-bracelet-270",
-    "price": 1265,
-    "MRP": 1265
+    "price": 1406,
+    "MRP": 1406
   },
   {
     "id": 271,
@@ -9479,7 +9289,7 @@
     "brandText": "Crafted with 92.5% Pure Silver Excellence",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 3,
     "makingCharges": 30,
     "discount": 0,
@@ -9490,9 +9300,8 @@
     "rating": 4.4,
     "ratingCount": 12,
     "Lock": "",
-    "slug": "shyam-name-925-sterling-silver-rakhi-271",
-    "price": 1085,
-    "MRP": 1085
+    "price": 1205,
+    "MRP": 1205
   },
   {
     "id": 272,
@@ -9518,7 +9327,7 @@
     "brandText": "Authentic Silver Jewellery Crafted in 925 Purity",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 3,
     "makingCharges": 30,
     "discount": 0,
@@ -9529,9 +9338,8 @@
     "rating": 4.7,
     "ratingCount": 91,
     "Lock": "",
-    "slug": "bhai-crown-925-sterling-silver-rakhi-bracelet-272",
-    "price": 1085,
-    "MRP": 1085
+    "price": 1205,
+    "MRP": 1205
   },
   {
     "id": 273,
@@ -9558,7 +9366,7 @@
     "brandText": "Made from Genuine 925 Silver Quality",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 3.5,
     "makingCharges": 30,
     "discount": 0,
@@ -9569,9 +9377,8 @@
     "rating": 4.6,
     "ratingCount": 25,
     "Lock": "",
-    "slug": "om-lotus-925-sterling-silver-rakhi-273",
-    "price": 1265,
-    "MRP": 1265
+    "price": 1406,
+    "MRP": 1406
   },
   {
     "id": 274,
@@ -9598,7 +9405,7 @@
     "brandText": "Premium Finish with Authentic Silver Purity",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 3,
     "makingCharges": 30,
     "discount": 0,
@@ -9609,9 +9416,8 @@
     "rating": 4.6,
     "ratingCount": 62,
     "Lock": "",
-    "slug": "om-symbol-925-sterling-silver-rakhi-bracelet-274",
-    "price": 1085,
-    "MRP": 1085
+    "price": 1205,
+    "MRP": 1205
   },
   {
     "id": 275,
@@ -9638,7 +9444,7 @@
     "brandText": "Elegant Craftsmanship in 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 2,
     "makingCharges": 30,
     "discount": 0,
@@ -9649,9 +9455,8 @@
     "rating": 4.8,
     "ratingCount": 45,
     "Lock": "",
-    "slug": "ram-name-925-sterling-silver-rakhi-275",
-    "price": 723,
-    "MRP": 723
+    "price": 803,
+    "MRP": 803
   },
   {
     "id": 276,
@@ -9676,7 +9481,7 @@
     "brandText": "Genuine 925 Silver with Premium Detailing",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 2.5,
     "makingCharges": 30,
     "discount": 0,
@@ -9687,9 +9492,8 @@
     "rating": 5,
     "ratingCount": 100,
     "Lock": "",
-    "slug": "sawariya-seth-personalized-silver-rakhi-bracelet-276",
-    "price": 904,
-    "MRP": 904
+    "price": 1004,
+    "MRP": 1004
   },
   {
     "id": 277,
@@ -9715,7 +9519,7 @@
     "brandText": "Crafted Using High-Quality 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 3,
     "makingCharges": 30,
     "discount": 0,
@@ -9726,9 +9530,8 @@
     "rating": 4.6,
     "ratingCount": 47,
     "Lock": "",
-    "slug": "trendy-bhai-arrow-silver-rakhi-277",
-    "price": 1085,
-    "MRP": 1085
+    "price": 1205,
+    "MRP": 1205
   },
   {
     "id": 278,
@@ -9753,7 +9556,7 @@
     "brandText": "Made with Authentic 925 Silver Craft",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 3.5,
     "makingCharges": 30,
     "discount": 0,
@@ -9764,9 +9567,8 @@
     "rating": 4.6,
     "ratingCount": 91,
     "Lock": "",
-    "slug": "bro-mustache-silver-rakhi-for-brother-278",
-    "price": 1265,
-    "MRP": 1265
+    "price": 1406,
+    "MRP": 1406
   },
   {
     "id": 279,
@@ -9792,7 +9594,7 @@
     "brandText": "Premium Jewellery in Genuine 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 4,
     "makingCharges": 30,
     "discount": 0,
@@ -9803,9 +9605,8 @@
     "rating": 4.6,
     "ratingCount": 28,
     "Lock": "",
-    "slug": "mahadev-trishul-silver-rakhi-bracelet-279",
-    "price": 1446,
-    "MRP": 1446
+    "price": 1607,
+    "MRP": 1607
   },
   {
     "id": 280,
@@ -9832,7 +9633,7 @@
     "brandText": "925 Silver Purity with Elegant Finish",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 3,
     "makingCharges": 30,
     "discount": 0,
@@ -9843,9 +9644,8 @@
     "rating": 4.7,
     "ratingCount": 117,
     "Lock": "",
-    "slug": "lord-ganesha-silver-rakhi-280",
-    "price": 1085,
-    "MRP": 1085
+    "price": 1205,
+    "MRP": 1205
   },
   {
     "id": 281,
@@ -9871,7 +9671,7 @@
     "brandText": "Crafted from Premium 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 3,
     "makingCharges": 30,
     "discount": 0,
@@ -9882,9 +9682,8 @@
     "rating": 4.4,
     "ratingCount": 67,
     "Lock": "",
-    "slug": "lotus-design-silver-rakhi-bracelet-281",
-    "price": 1085,
-    "MRP": 1085
+    "price": 1205,
+    "MRP": 1205
   },
   {
     "id": 282,
@@ -9911,7 +9710,7 @@
     "brandText": "Genuine 925 Silver with Fine Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 3,
     "makingCharges": 30,
     "discount": 0,
@@ -9922,9 +9721,8 @@
     "rating": 4.4,
     "ratingCount": 52,
     "Lock": "",
-    "slug": "om-spiritual-silver-rakhi-bracelet-282",
-    "price": 1085,
-    "MRP": 1085
+    "price": 1205,
+    "MRP": 1205
   },
   {
     "id": 283,
@@ -9950,7 +9748,7 @@
     "brandText": "Made with 92.5% Silver for Premium Quality",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 3.5,
     "makingCharges": 30,
     "discount": 0,
@@ -9961,9 +9759,8 @@
     "rating": 4.8,
     "ratingCount": 102,
     "Lock": "",
-    "slug": "infinity-bro-silver-rakhi-bracelet-283",
-    "price": 1265,
-    "MRP": 1265
+    "price": 1406,
+    "MRP": 1406
   },
   {
     "id": 284,
@@ -9987,7 +9784,7 @@
     "brandText": "Authentic 925 Silver with Refined Design",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 0.6,
     "makingCharges": 50,
     "discount": 0,
@@ -9998,9 +9795,8 @@
     "rating": 4.9,
     "ratingCount": 99,
     "Lock": "",
-    "slug": "pink-bead-bhai-silver-rakhi-elegant-silver-rakhi-for-brother-284",
-    "price": 250,
-    "MRP": 250
+    "price": 278,
+    "MRP": 278
   },
   {
     "id": 285,
@@ -10024,7 +9820,7 @@
     "brandText": "Premium Craftsmanship in 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 0.4,
     "makingCharges": 50,
     "discount": 0,
@@ -10035,9 +9831,8 @@
     "rating": 4.3,
     "ratingCount": 62,
     "Lock": "",
-    "slug": "ganesh-silver-rakhi-red-yellow-mauli-rakhi-for-brother-285",
-    "price": 167,
-    "MRP": 167
+    "price": 185,
+    "MRP": 185
   },
   {
     "id": 286,
@@ -10061,7 +9856,7 @@
     "brandText": "Elegant Jewellery Crafted from Authentic 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 0.6,
     "makingCharges": 50,
     "discount": 0,
@@ -10072,9 +9867,8 @@
     "rating": 4.8,
     "ratingCount": 66,
     "Lock": "",
-    "slug": "ganesh-floral-silver-rakhi-traditional-red-yellow-silver-rakhi-286",
-    "price": 250,
-    "MRP": 250
+    "price": 278,
+    "MRP": 278
   },
   {
     "id": 287,
@@ -10098,7 +9892,7 @@
     "brandText": "Genuine 92.5% Silver with Premium Finish",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 0.4,
     "makingCharges": 50,
     "discount": 0,
@@ -10109,9 +9903,8 @@
     "rating": 4,
     "ratingCount": 29,
     "Lock": "",
-    "slug": "rudraksha-silver-rakhi-two-bead-spiritual-rakhi-287",
-    "price": 167,
-    "MRP": 167
+    "price": 185,
+    "MRP": 185
   },
   {
     "id": 288,
@@ -10135,7 +9928,7 @@
     "brandText": "Made with Fine 925 Silver Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 0.6,
     "makingCharges": 50,
     "discount": 0,
@@ -10146,9 +9939,8 @@
     "rating": 4.8,
     "ratingCount": 22,
     "Lock": "",
-    "slug": "three-rudraksha-silver-rakhi-red-yellow-spiritual-rakhi-288",
-    "price": 250,
-    "MRP": 250
+    "price": 278,
+    "MRP": 278
   },
   {
     "id": 289,
@@ -10172,7 +9964,7 @@
     "brandText": "Authentic Silver Quality in 92.5% Purity",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 0.2,
     "makingCharges": 110,
     "discount": 0,
@@ -10183,9 +9975,8 @@
     "rating": 5,
     "ratingCount": 71,
     "Lock": "",
-    "slug": "single-rudraksha-silver-rakhi-minimal-red-thread-rakhi-289",
-    "price": 117,
-    "MRP": 117
+    "price": 130,
+    "MRP": 130
   },
   {
     "id": 290,
@@ -10209,7 +10000,7 @@
     "brandText": "Crafted in Premium Genuine 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 0.15,
     "makingCharges": 110,
     "discount": 0,
@@ -10220,9 +10011,8 @@
     "rating": 5,
     "ratingCount": 82,
     "Lock": "",
-    "slug": "925-silver-rudraksha-rakhi-with-yellow-red-mauli-thread-290",
-    "price": 88,
-    "MRP": 88
+    "price": 97,
+    "MRP": 97
   },
   {
     "id": 291,
@@ -10246,7 +10036,7 @@
     "brandText": "925 Silver Jewellery with Fine Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 0.55,
     "makingCharges": 50,
     "discount": 0,
@@ -10257,9 +10047,8 @@
     "rating": 4.8,
     "ratingCount": 15,
     "Lock": "",
-    "slug": "925-silver-rudraksha-rakhi-with-designer-silver-caps-mauli-thread-291",
-    "price": 229,
-    "MRP": 229
+    "price": 255,
+    "MRP": 255
   },
   {
     "id": 292,
@@ -10283,7 +10072,7 @@
     "brandText": "Made from Authentic 92.5% Pure Silver Quality",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 0.15,
     "makingCharges": 110,
     "discount": 0,
@@ -10294,9 +10083,8 @@
     "rating": 4.7,
     "ratingCount": 16,
     "Lock": "",
-    "slug": "925-silver-rudraksha-rakhi-with-silver-beads-traditional-thread-292",
-    "price": 88,
-    "MRP": 88
+    "price": 97,
+    "MRP": 97
   },
   {
     "id": 293,
@@ -10320,7 +10108,7 @@
     "brandText": "Premium 925 Silver with Elegant Detailing",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 0.2,
     "makingCharges": 110,
     "discount": 0,
@@ -10331,9 +10119,8 @@
     "rating": 3.7,
     "ratingCount": 23,
     "Lock": "",
-    "slug": "925-silver-minimal-rudraksha-rakhi-with-silver-beads-mauli-thread-293",
-    "price": 117,
-    "MRP": 117
+    "price": 130,
+    "MRP": 130
   },
   {
     "id": 294,
@@ -10357,7 +10144,7 @@
     "brandText": "Genuine Silver Crafted with 925 Purity",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 0.8,
     "makingCharges": 50,
     "discount": 0,
@@ -10368,9 +10155,8 @@
     "rating": 5,
     "ratingCount": 76,
     "Lock": "",
-    "slug": "925-silver-five-rudraksha-rakhi-with-silver-beads-traditional-thread-294",
-    "price": 334,
-    "MRP": 334
+    "price": 371,
+    "MRP": 371
   },
   {
     "id": 295,
@@ -10394,7 +10180,7 @@
     "brandText": "Elegant Finish Crafted in 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 0.75,
     "makingCharges": 50,
     "discount": 0,
@@ -10405,9 +10191,8 @@
     "rating": 4.3,
     "ratingCount": 21,
     "Lock": "",
-    "slug": "925-silver-rudraksha-rakhi-with-dual-rudraksha-beads-designer-silver-centre-295",
-    "price": 313,
-    "MRP": 313
+    "price": 348,
+    "MRP": 348
   },
   {
     "id": 296,
@@ -10431,7 +10216,7 @@
     "brandText": "Made with Premium Authentic 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 0.26,
     "makingCharges": 110,
     "discount": 0,
@@ -10442,9 +10227,8 @@
     "rating": 3.9,
     "ratingCount": 35,
     "Lock": "",
-    "slug": "925-silver-om-swastik-trishul-rudraksha-rakhi-with-red-yellow-mauli-296",
-    "price": 152,
-    "MRP": 152
+    "price": 169,
+    "MRP": 169
   },
   {
     "id": 297,
@@ -10468,7 +10252,7 @@
     "brandText": "Fine Jewellery in Genuine 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 0.7,
     "makingCharges": 50,
     "discount": 0,
@@ -10479,9 +10263,8 @@
     "rating": 4.1,
     "ratingCount": 42,
     "Lock": "",
-    "slug": "925-silver-rudraksha-beads-rakhi-with-traditional-mauli-thread-297",
-    "price": 292,
-    "MRP": 292
+    "price": 324,
+    "MRP": 324
   },
   {
     "id": 298,
@@ -10505,7 +10288,7 @@
     "brandText": "Authentic 925 Silver with Premium Finish",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 0.55,
     "makingCharges": 50,
     "discount": 0,
@@ -10516,9 +10299,8 @@
     "rating": 4.1,
     "ratingCount": 64,
     "Lock": "",
-    "slug": "925-silver-rudraksha-cap-rakhi-with-elegant-silver-detailing-298",
-    "price": 229,
-    "MRP": 229
+    "price": 255,
+    "MRP": 255
   },
   {
     "id": 299,
@@ -10541,8 +10323,8 @@
     ],
     "brandText": "Crafted for Elegance with 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
-    "for": "",
-    "purity": "silverJewellery",
+    "for": "her",
+    "metal": "silver",
     "weight": 0.42,
     "makingCharges": 60,
     "discount": 0,
@@ -10553,9 +10335,8 @@
     "rating": 4.8,
     "ratingCount": 80,
     "Lock": "",
-    "slug": "925-silver-twin-rudraksha-rakhi-with-minimal-silver-beads-299",
-    "price": 187,
-    "MRP": 187
+    "price": 208,
+    "MRP": 208
   },
   {
     "id": 301,
@@ -10581,7 +10362,7 @@
     "brandText": "Made from Genuine 925 Silver with Fine Finish",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 8.67,
     "makingCharges": 80,
     "discount": 0,
@@ -10592,9 +10373,8 @@
     "rating": 4.1,
     "ratingCount": 15,
     "Lock": "",
-    "slug": "minimalist-silver-bead-payal-301",
-    "price": 4340,
-    "MRP": 4340
+    "price": 4822,
+    "MRP": 4822
   },
   {
     "id": 302,
@@ -10620,7 +10400,7 @@
     "brandText": "92.5% Pure Silver Crafted with Precision",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 9.73,
     "makingCharges": 80,
     "discount": 0,
@@ -10631,15 +10411,17 @@
     "rating": 4.2,
     "ratingCount": 11,
     "Lock": "",
-    "slug": "designer-wavy-silver-payal-302",
-    "price": 4871,
-    "MRP": 4871
+    "price": 5412,
+    "MRP": 5412
   },
   {
     "id": 303,
     "name": "Heart Charm Silver Payal",
     "category": "Silver Payal",
-    "type": [],
+    "type": [
+      "Party Wear",
+      "Silver Jewellery for Women"
+    ],
     "highlights": [
       "💎 Material: 92.5% Silver Purity",
       "✨ Finish: Fine Artisan Silver Craftsmanship",
@@ -10654,8 +10436,8 @@
     ],
     "brandText": "Authentic Silver Jewellery with Premium Craft",
     "care": "SILVER_GENERAL",
-    "for": "",
-    "purity": "silverJewellery",
+    "for": "her",
+    "metal": "silver",
     "weight": 12.38,
     "makingCharges": 80,
     "discount": 0,
@@ -10666,9 +10448,8 @@
     "rating": 3.9,
     "ratingCount": 11,
     "Lock": "",
-    "slug": "heart-charm-silver-payal-303",
-    "price": 6197,
-    "MRP": 6197
+    "price": 6886,
+    "MRP": 6886
   },
   {
     "id": 304,
@@ -10694,7 +10475,7 @@
     "brandText": "Crafted in Genuine 925 Silver for Quality",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 8.27,
     "makingCharges": 80,
     "discount": 0,
@@ -10705,9 +10486,8 @@
     "rating": 4.7,
     "ratingCount": 67,
     "Lock": "",
-    "slug": "evil-eye-silver-payal-304",
-    "price": 4140,
-    "MRP": 4140
+    "price": 4600,
+    "MRP": 4600
   },
   {
     "id": 306,
@@ -10733,7 +10513,7 @@
     "brandText": "Made with Authentic 925 Silver for Elegance",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 7.74,
     "makingCharges": 80,
     "discount": 0,
@@ -10744,9 +10524,8 @@
     "rating": 5,
     "ratingCount": 75,
     "Lock": "",
-    "slug": "two-tone-twisted-silver-payal-306",
-    "price": 3874,
-    "MRP": 3874
+    "price": 4305,
+    "MRP": 4305
   },
   {
     "id": 307,
@@ -10772,7 +10551,7 @@
     "brandText": "Genuine 92.5% Silver with Fine Finish",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 9.43,
     "makingCharges": 80,
     "discount": 0,
@@ -10783,9 +10562,8 @@
     "rating": 4.7,
     "ratingCount": 40,
     "Lock": "",
-    "slug": "silver-daily-wear-designer-payal-307",
-    "price": 4720,
-    "MRP": 4720
+    "price": 5245,
+    "MRP": 5245
   },
   {
     "id": 308,
@@ -10811,7 +10589,7 @@
     "brandText": "925 Silver Crafted for Refined Elegance",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 12.37,
     "makingCharges": 80,
     "discount": 0,
@@ -10822,15 +10600,17 @@
     "rating": 4.2,
     "ratingCount": 65,
     "Lock": "",
-    "slug": "bridal-lightweight-silver-payal-308",
-    "price": 6192,
-    "MRP": 6192
+    "price": 6880,
+    "MRP": 6880
   },
   {
     "id": 309,
     "name": "Triple Layer Designer Silver Payal",
     "category": "Silver Payal",
-    "type": [],
+    "type": [
+      "Daily Wear",
+      "Silver Gift for Her"
+    ],
     "highlights": [
       "💎 Material: 925 Sterling Silver",
       "✨ Finish: Premium Designer Silver Finish",
@@ -10845,8 +10625,8 @@
     ],
     "brandText": "Premium Jewellery Crafted from Authentic Silver",
     "care": "SILVER_GENERAL",
-    "for": "",
-    "purity": "silverJewellery",
+    "for": "her",
+    "metal": "silver",
     "weight": 14.6,
     "makingCharges": 80,
     "discount": 0,
@@ -10857,9 +10637,8 @@
     "rating": 4.1,
     "ratingCount": 13,
     "Lock": "",
-    "slug": "triple-layer-designer-silver-payal-309",
-    "price": 7308,
-    "MRP": 7308
+    "price": 8121,
+    "MRP": 8121
   },
   {
     "id": 310,
@@ -10885,7 +10664,7 @@
     "brandText": "Made with Genuine 92.5% Silver Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 9.44,
     "makingCharges": 80,
     "discount": 0,
@@ -10896,9 +10675,8 @@
     "rating": 4.6,
     "ratingCount": 9,
     "Lock": "",
-    "slug": "simple-pattern-silver-payal-310",
-    "price": 4725,
-    "MRP": 4725
+    "price": 5251,
+    "MRP": 5251
   },
   {
     "id": 311,
@@ -10924,7 +10702,7 @@
     "brandText": "Authentic 925 Silver Quality with Elegant Finish",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 10.66,
     "makingCharges": 80,
     "discount": 0,
@@ -10935,9 +10713,8 @@
     "rating": 5,
     "ratingCount": 90,
     "Lock": "",
-    "slug": "gold-polish-silver-charm-payal-311",
-    "price": 5336,
-    "MRP": 5336
+    "price": 5929,
+    "MRP": 5929
   },
   {
     "id": 312,
@@ -10963,7 +10740,7 @@
     "brandText": "Made with Genuine 92.5% Silver Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 11.16,
     "makingCharges": 80,
     "discount": 0,
@@ -10974,9 +10751,8 @@
     "rating": 3.9,
     "ratingCount": 20,
     "Lock": "",
-    "slug": "wave-pattern-silver-payal-312",
-    "price": 5586,
-    "MRP": 5586
+    "price": 6207,
+    "MRP": 6207
   },
   {
     "id": 313,
@@ -11002,7 +10778,7 @@
     "brandText": "Made with Premium 925 Silver Purity",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 13.97,
     "makingCharges": 80,
     "discount": 0,
@@ -11013,9 +10789,8 @@
     "rating": 4.5,
     "ratingCount": 47,
     "Lock": "",
-    "slug": "silver-payal-313",
-    "price": 6993,
-    "MRP": 6993
+    "price": 7770,
+    "MRP": 7770
   },
   {
     "id": 314,
@@ -11041,7 +10816,7 @@
     "brandText": "Crafted from Genuine 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 11.46,
     "makingCharges": 80,
     "discount": 0,
@@ -11052,9 +10827,8 @@
     "rating": 4.9,
     "ratingCount": 67,
     "Lock": "",
-    "slug": "silver-anklet-314",
-    "price": 5737,
-    "MRP": 5737
+    "price": 6374,
+    "MRP": 6374
   },
   {
     "id": 315,
@@ -11080,7 +10854,7 @@
     "brandText": "Authentic 925 Silver with Premium Quality",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 12.86,
     "makingCharges": 80,
     "discount": 0,
@@ -11091,9 +10865,8 @@
     "rating": 3.9,
     "ratingCount": 58,
     "Lock": "",
-    "slug": "lightweight-payal-315",
-    "price": 6437,
-    "MRP": 6437
+    "price": 7153,
+    "MRP": 7153
   },
   {
     "id": 316,
@@ -11119,7 +10892,7 @@
     "brandText": "Elegant Craftsmanship in Genuine 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 9.44,
     "makingCharges": 80,
     "discount": 0,
@@ -11130,9 +10903,8 @@
     "rating": 5,
     "ratingCount": 98,
     "Lock": "",
-    "slug": "designer-payal-316",
-    "price": 4725,
-    "MRP": 4725
+    "price": 5251,
+    "MRP": 5251
   },
   {
     "id": 317,
@@ -11158,7 +10930,7 @@
     "brandText": "Made from High-Quality 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 9.92,
     "makingCharges": 80,
     "discount": 0,
@@ -11169,343 +10941,8 @@
     "rating": 4.7,
     "ratingCount": 102,
     "Lock": "",
-    "slug": "daily-wear-silver-payal-317",
-    "price": 4966,
-    "MRP": 4966
-  },
-  {
-    "id": 318,
-    "name": "Sawariya Seth Gold Ring",
-    "category": "Religious Gold Rings",
-    "type": [
-      "Daily Wear"
-    ],
-    "highlights": [
-      "Design: Sawariya Seth Inspired Traditional Gold Ring",
-      "Metal: Pure Gold Jewellery",
-      "Finish: Premium High Polish Finish",
-      "Style: Religious & Traditional Ring Design",
-      "Suitable For: Men",
-      "Occasion: Daily Wear, Festivals & Spiritual Gifting",
-      "Craftsmanship: Detailed Handmade Jewellery Work"
-    ],
-    "description": "Celebrate devotion and elegance with this beautifully crafted Sawariya Seth Gold Ring, inspired by the divine charm of Lord Krishna. Designed with a detailed square top surface featuring traditional motifs, this gold ring showcases a perfect blend of spirituality, royal craftsmanship, and timeless style.\n\nThe intricate side patterns and premium gold finish enhance its traditional appeal, making it an ideal choice for devotees and jewellery lovers who appreciate unique religious designs. This Sawariya Seth Gold Ring can be worn for daily spiritual connection or special occasions, adding a divine touch to your jewellery collection.\\",
-    "images": [
-      "original-sawariya-seth-gold-ring-ssj-318-a.webp",
-      "seth-gold-ring-new-design-ssj-318-b.webp",
-      "traditional-sawariya-seth-gold-ring-ssj-318-c.webp",
-      "premium-sawariya-seth-gold-ring-ssj-318-d.webp"
-    ],
-    "brandText": "",
-    "care": "",
-    "for": "",
-    "purity": "",
-    "weight": 6.151,
-    "makingCharges": 0,
-    "discount": 0,
-    "newArrival": false,
-    "HUID": false,
-    "available": false,
-    "active": true,
-    "rating": 0,
-    "ratingCount": 0,
-    "Lock": "",
-    "slug": "sawariya-seth-gold-ring-318",
-    "price": 1711,
-    "MRP": 1711
-  },
-  {
-    "id": 319,
-    "name": "Mahadev Trishul Gold Ring",
-    "category": "Religious Gold Rings",
-    "type": [
-      "Office Wear"
-    ],
-    "highlights": [
-      "Design: Lord Mahadev Trishul Inspired Ring",
-      "Metal: Pure Gold Jewellery",
-      "Finish: Premium Polished Gold Finish",
-      "Style: Religious & Spiritual Jewellery",
-      "Suitable For: Men",
-      "Occasion: Daily Wear, Mahashivratri, Festivals & Gifting",
-      "Craftsmanship: Detailed Traditional Gold Work"
-    ],
-    "description": "Bring divine energy and traditional elegance together with this beautifully designed Mahadev Trishul Gold Ring. Inspired by Lord Shiva’s powerful Trishul symbol, this ring represents strength, protection, devotion, and spiritual connection.\n\nThe circular Trishul design on the top with detailed golden craftsmanship gives this ring a unique religious appeal. Crafted for those who admire spiritual jewellery, this Lord Mahadev Gold Ring is perfect for daily wear, festive occasions, and devotional gifting.",
-    "images": [
-      "new-gold-mahadev-trishul-ring-ssj-319-a.webp",
-      "mahadev-trishul-gold-ring-design-ssj-319-b.webp",
-      "trishul-symbol-gold-ring-men-ssj-319-c.webp",
-      "handmade-mahadev-gold-ring-ssj-319-d.webp"
-    ],
-    "brandText": "",
-    "care": "",
-    "for": "",
-    "purity": "",
-    "weight": 3.42,
-    "makingCharges": 0,
-    "discount": 0,
-    "newArrival": false,
-    "HUID": false,
-    "available": false,
-    "active": true,
-    "rating": 0,
-    "ratingCount": 0,
-    "Lock": "",
-    "slug": "mahadev-trishul-gold-ring-319",
-    "price": 951,
-    "MRP": 951
-  },
-  {
-    "id": 320,
-    "name": "Seth Sawra Gold Ring",
-    "category": "Religious Gold Rings",
-    "type": [
-      "Party Wear"
-    ],
-    "highlights": [
-      "Design: Sawariya Seth Religious Gold Ring",
-      "Metal: Pure Gold",
-      "Style: Traditional & Devotional Jewellery",
-      "Comfortable Fit for Daily Wear",
-      "Premium Finish & Elegant Craftsmanship",
-      "Perfect Gift for Devotees & Special Occasions",
-      "Made in India"
-    ],
-    "description": "Bring divine blessings and traditional elegance to your jewellery collection with this beautiful Sawariya Seth Gold Ring. Inspired by the devotion of Lord Sawariya Seth, this ring features a unique square-shaped top design with a detailed religious motif that represents faith, prosperity, and positivity.\n\nCrafted with premium quality gold, this Sawariya Seth Gold Ring showcases a rich traditional look with a stylish finish, making it perfect for daily wear as well as special occasions. The artistic detailing, comfortable fitting, and royal design make it an ideal choice for devotees and jewellery lovers who prefer spiritual gold jewellery.\n\nWhether gifted to a loved one or worn as a personal symbol of devotion, this Gold Sawariya Seth Ring adds a divine touch to your personality while reflecting timeless Indian craftsmanship.",
-    "images": [
-      "latest-sawariya-seth-gold-ring-ssj-320-a.webp"
-    ],
-    "brandText": "",
-    "care": "",
-    "for": "",
-    "purity": "",
-    "weight": 6.5,
-    "makingCharges": 0,
-    "discount": 0,
-    "newArrival": false,
-    "HUID": false,
-    "available": false,
-    "active": true,
-    "rating": 0,
-    "ratingCount": 0,
-    "Lock": "",
-    "slug": "seth-sawra-gold-ring-320",
-    "price": 1808,
-    "MRP": 1808
-  },
-  {
-    "id": 321,
-    "name": "Damru Silver Rudraksha Mala",
-    "category": "Silver Rudraksha Mala",
-    "type": [
-      "Spiritual Silver Jewellery",
-      "Silver Gift for Him",
-      "Silver Jewellery for Women",
-      "Daily Wear"
-    ],
-    "highlights": [],
-    "description": "This Damru Silver Rudraksha Mala beautifully combines natural-looking red Rudraksha beads with intricately designed silver Damru-shaped elements. Crafted in 925 silver, the mala features a traditional spiritual design with evenly arranged Rudraksha beads and polished silver detailing. The distinctive Damru-inspired silver beads give this mala a strong Mahadev-inspired appeal, making it suitable for devotees who prefer spiritual jewellery with a stylish and elegant finish. It can be worn for daily spiritual styling, religious occasions and as a meaningful devotional accessory.",
-    "images": [
-      "original-silver-rudraksha-mala-ssj-321-a.webp",
-      "damru-silver-rudraksha-mala-new-design-ssj-321-b.webp",
-      "925-silver-damru-rudraksha-mala-ssj-321-c.webp",
-      "mahadev-damru-silver-rudraksha-mala-ssj-321-d.webp"
-    ],
-    "brandText": "",
-    "care": "",
-    "for": "",
-    "purity": "",
-    "weight": 29.66,
-    "makingCharges": 0,
-    "discount": 0,
-    "newArrival": false,
-    "HUID": false,
-    "available": false,
-    "active": true,
-    "rating": 0,
-    "ratingCount": 0,
-    "Lock": "",
-    "slug": "damru-silver-rudraksha-mala-321",
-    "price": 8248,
-    "MRP": 8248
-  },
-  {
-    "id": 322,
-    "name": "Om Silver Rudraksha Mala",
-    "category": "Silver Rudraksha Mala",
-    "type": [
-      "Spiritual Silver Jewellery",
-      "Office Wear",
-      "Birthday Silver Gifts"
-    ],
-    "highlights": [],
-    "description": "The Om Silver Rudraksha Mala features vibrant red Rudraksha beads beautifully arranged with detailed silver spiritual motif beads. Made with 925 silver, this mala brings together traditional Rudraksha styling and meaningful devotional design. The contrasting red Rudraksha and antique-style silver detailing create a distinctive look that works well for devotees who want to wear spiritual jewellery with a refined traditional appearance. Its lightweight and elegant construction makes it suitable for everyday devotional wear as well as religious occasions.",
-    "images": [
-      "new-silver-rudraksh-om-ssj-322-a.webp",
-      "om-design-silver-rudraksha-mala-ssj-322-b.webp",
-      "925-silver-om-rudraksha-mala-ssj-322-c.webp",
-      "spiritual-om-silver-rudraksha-mala-ssj-322-d.webp"
-    ],
-    "brandText": "",
-    "care": "",
-    "for": "",
-    "purity": "",
-    "weight": 26.66,
-    "makingCharges": 0,
-    "discount": 0,
-    "newArrival": false,
-    "HUID": false,
-    "available": false,
-    "active": true,
-    "rating": 0,
-    "ratingCount": 0,
-    "Lock": "",
-    "slug": "om-silver-rudraksha-mala-322",
-    "price": 7414,
-    "MRP": 7414
-  },
-  {
-    "id": 323,
-    "name": "Antique Om Silver Rudraksha Mala",
-    "category": "Silver Rudraksha Mala",
-    "type": [
-      "Spiritual Silver Jewellery",
-      "Party Wear",
-      "Silver Gift for Him",
-      "Silver Jewellery for Men"
-    ],
-    "highlights": [],
-    "description": "This Antique Om Silver Rudraksha Mala features deep red Rudraksha beads paired with beautifully detailed silver beads carrying an antique-style finish. Crafted in 925 silver, the mala has a traditional spiritual appearance enhanced by the Om motif and darkened silver detailing. The alternating Rudraksha and silver beads create a balanced pattern throughout the mala, giving it a distinctive devotional look. It is an excellent choice for devotees looking for a meaningful spiritual accessory that combines traditional Rudraksha styling with the timeless symbolism of Om.",
-    "images": [
-      "antique-om-silver-rudraksha-mala-ssj-323-a.webp",
-      "om-design-rudraksha-silver-mala-ssj-323-b.webp",
-      "925-silver-antique-rudraksha-mala-ssj-323-c.webp",
-      "mahadev-spiritual-silver-rudraksha-mala-ssj-323-d.webp"
-    ],
-    "brandText": "",
-    "care": "",
-    "for": "",
-    "purity": "",
-    "weight": 35.19,
-    "makingCharges": 0,
-    "discount": 0,
-    "newArrival": false,
-    "HUID": false,
-    "available": false,
-    "active": true,
-    "rating": 0,
-    "ratingCount": 0,
-    "Lock": "",
-    "slug": "antique-om-silver-rudraksha-mala-323",
-    "price": 9786,
-    "MRP": 9786
-  },
-  {
-    "id": 324,
-    "name": "Original Silver Rudraksha Mala with Silver Round Beads",
-    "category": "Silver Rudraksha Mala",
-    "type": [
-      "Spiritual Silver Jewellery",
-      "Silver Gift for Him",
-      "Silver Jewellery for Women",
-      "Daily Wear"
-    ],
-    "highlights": [],
-    "description": "This Silver Rudraksha Mala features natural-looking Rudraksha beads beautifully paired with finely detailed silver round beads for a traditional yet elegant spiritual look. The alternating Rudraksha and silver bead pattern gives the mala a balanced appearance, making it suitable for daily wear, devotional occasions and spiritual styling. Crafted in a classic design, this Rudraksha mala is a meaningful choice for devotees who appreciate the combination of Rudraksha and silver jewellery.",
-    "images": [
-      "original-silver-rudraksha-mala-ssj-324-a.webp",
-      "silver-rudraksha-mala-round-beads-new-design-ssj-324-b.webp",
-      "premium-silver-rudraksha-mala-ssj-324-c.webp",
-      "traditional-silver-rudraksha-mala-ssj-324-d.webp"
-    ],
-    "brandText": "",
-    "care": "",
-    "for": "",
-    "purity": "",
-    "weight": 30.75,
-    "makingCharges": 0,
-    "discount": 0,
-    "newArrival": false,
-    "HUID": false,
-    "available": false,
-    "active": true,
-    "rating": 0,
-    "ratingCount": 0,
-    "Lock": "",
-    "slug": "original-silver-rudraksha-mala-with-silver-round-beads-324",
-    "price": 8552,
-    "MRP": 8552
-  },
-  {
-    "id": 325,
-    "name": "Silver Rudraksha Mala with Oxidised Silver Beads",
-    "category": "Silver Rudraksha Mala",
-    "type": [
-      "Spiritual Silver Jewellery",
-      "Office Wear",
-      "Birthday Silver Gifts"
-    ],
-    "highlights": [],
-    "description": "This Silver Rudraksha Mala combines natural Rudraksha beads with uniquely designed oxidised silver beads featuring a textured geometric pattern. The darker silver detailing creates a striking contrast with the warm Rudraksha beads, giving the mala a distinctive traditional appearance. Its detailed beadwork makes it a beautiful choice for devotees looking for a spiritual accessory with a more bold and artistic silver design.",
-    "images": [
-      "new-silver-rudraksha-oxidised-beads-ssj-325-a.webp",
-      "silver-rudraksha-mala-oxidised-design-ssj-325-b.webp",
-      "premium-oxidised-silver-rudraksha-mala-ssj-325-c.webp",
-      "traditional-rudraksha-mala-silver-oxidised-beads-ssj-325-d.webp"
-    ],
-    "brandText": "",
-    "care": "",
-    "for": "",
-    "purity": "",
-    "weight": 32,
-    "makingCharges": 0,
-    "discount": 0,
-    "newArrival": false,
-    "HUID": false,
-    "available": false,
-    "active": true,
-    "rating": 0,
-    "ratingCount": 0,
-    "Lock": "",
-    "slug": "silver-rudraksha-mala-with-oxidised-silver-beads-325",
-    "price": 8899,
-    "MRP": 8899
-  },
-  {
-    "id": 326,
-    "name": "Oxidised Rudraksha Mala with Silver Round Beads",
-    "category": "Silver Rudraksha Mala",
-    "type": [
-      "Spiritual Silver Jewellery",
-      "Party Wear",
-      "Silver Gift for Him",
-      "Silver Jewellery for Men"
-    ],
-    "highlights": [],
-    "description": "This Black Rudraksha Mala features dark Rudraksha-style beads arranged with beautifully detailed silver round beads in an alternating pattern. The contrast between the black beads and bright silver elements gives the mala a sophisticated and contemporary spiritual appearance. Its clean design makes it suitable for devotees who prefer a subtle yet distinctive Rudraksha accessory for daily devotional and traditional wear.",
-    "images": [
-      "black-silver-rudraksha-mala-ssj-326-a.webp",
-      "black-rudraksha-mala-silver-beads-new-design-ssj-326-b.webp",
-      "premium-black-rudraksha-silver-mala-ssj-326-c.webp",
-      "traditional-black-rudraksha-mala-silver-beads-ssj-326-d.webp"
-    ],
-    "brandText": "",
-    "care": "",
-    "for": "",
-    "purity": "",
-    "weight": 24.9,
-    "makingCharges": 0,
-    "discount": 0,
-    "newArrival": false,
-    "HUID": false,
-    "available": false,
-    "active": true,
-    "rating": 0,
-    "ratingCount": 0,
-    "Lock": "",
-    "slug": "oxidised-rudraksha-mala-with-silver-round-beads-326",
-    "price": 6925,
-    "MRP": 6925
+    "price": 5518,
+    "MRP": 5518
   },
   {
     "id": 661,
@@ -11529,7 +10966,7 @@
     "brandText": "Premium 925 Silver Crafted with Fine Detail",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 100,
     "makingCharges": 10,
     "discount": 0,
@@ -11540,9 +10977,8 @@
     "rating": 4.6,
     "ratingCount": 56,
     "Lock": "",
-    "slug": "sawariya-seth-silver-kada-661",
-    "price": 30591,
-    "MRP": 30591
+    "price": 33990,
+    "MRP": 33990
   },
   {
     "id": 662,
@@ -11564,7 +11000,7 @@
     "brandText": "Genuine Silver Jewellery with 92.5% Purity",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 100,
     "makingCharges": 10,
     "discount": 0,
@@ -11575,9 +11011,8 @@
     "rating": 4,
     "ratingCount": 44,
     "Lock": "",
-    "slug": "925-sawariya-seth-silver-kada-662",
-    "price": 30591,
-    "MRP": 30591
+    "price": 33990,
+    "MRP": 33990
   },
   {
     "id": 663,
@@ -11599,7 +11034,7 @@
     "brandText": "Crafted Using Authentic 925 Silver Quality",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 70,
     "makingCharges": 10,
     "discount": 0,
@@ -11610,9 +11045,8 @@
     "rating": 4.7,
     "ratingCount": 78,
     "Lock": "",
-    "slug": "sawariya-seth-silver-kada-for-men-663",
-    "price": 21414,
-    "MRP": 21414
+    "price": 23793,
+    "MRP": 23793
   },
   {
     "id": 664,
@@ -11634,7 +11068,7 @@
     "brandText": "92.5% Pure Silver with Premium Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 50,
     "makingCharges": 10,
     "discount": 0,
@@ -11645,9 +11079,8 @@
     "rating": 4.2,
     "ratingCount": 29,
     "Lock": "",
-    "slug": "mahadev-silver-kada-664",
-    "price": 15296,
-    "MRP": 15296
+    "price": 16995,
+    "MRP": 16995
   },
   {
     "id": 665,
@@ -11671,7 +11104,7 @@
     "brandText": "Made with Genuine 925 Silver for Lasting Elegance",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 7,
     "makingCharges": 55,
     "discount": 0,
@@ -11682,9 +11115,8 @@
     "rating": 5,
     "ratingCount": 72,
     "Lock": "",
-    "slug": "sawariya-seth-silver-ring-665",
-    "price": 3017,
-    "MRP": 3017
+    "price": 3353,
+    "MRP": 3353
   },
   {
     "id": 667,
@@ -11707,7 +11139,7 @@
     "brandText": "Fine Jewellery Crafted in Authentic 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 90,
     "makingCharges": 10,
     "discount": 0,
@@ -11718,9 +11150,8 @@
     "rating": 3.9,
     "ratingCount": 27,
     "Lock": "",
-    "slug": "gujar-silver-kada-667",
-    "price": 27532,
-    "MRP": 27532
+    "price": 30591,
+    "MRP": 30591
   },
   {
     "id": 668,
@@ -11741,7 +11172,7 @@
     "brandText": "Premium Silver Quality with 92.5% Purity",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 100,
     "makingCharges": 10,
     "discount": 0,
@@ -11752,9 +11183,8 @@
     "rating": 4.3,
     "ratingCount": 9,
     "Lock": "",
-    "slug": "gujar-silver-kada-668",
-    "price": 30591,
-    "MRP": 30591
+    "price": 33990,
+    "MRP": 33990
   },
   {
     "id": 955,
@@ -11782,7 +11212,7 @@
     "brandText": "Crafted from Genuine 925 Silver with Care",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 6.9,
     "makingCharges": 55,
     "discount": 0,
@@ -11793,9 +11223,8 @@
     "rating": 4.7,
     "ratingCount": 37,
     "Lock": "",
-    "slug": "sawariya-seth-ring-for-men-955",
-    "price": 2974,
-    "MRP": 2974
+    "price": 3305,
+    "MRP": 3305
   },
   {
     "id": 956,
@@ -11822,7 +11251,7 @@
     "brandText": "Authentic 92.5% Pure Silver Jewellery",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 6.72,
     "makingCharges": 55,
     "discount": 0,
@@ -11833,9 +11262,8 @@
     "rating": 3.9,
     "ratingCount": 24,
     "Lock": "",
-    "slug": "chandi-ki-sawariya-seth-ring-956",
-    "price": 2897,
-    "MRP": 2897
+    "price": 3219,
+    "MRP": 3219
   },
   {
     "id": 957,
@@ -11862,7 +11290,7 @@
     "brandText": "Made with Premium Silver and 925 Purity",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 7.02,
     "makingCharges": 55,
     "discount": 0,
@@ -11873,9 +11301,8 @@
     "rating": 4.6,
     "ratingCount": 114,
     "Lock": "",
-    "slug": "sawariya-seth-ring-handmade-design-957",
-    "price": 3026,
-    "MRP": 3026
+    "price": 3362,
+    "MRP": 3362
   },
   {
     "id": 959,
@@ -11902,7 +11329,7 @@
     "brandText": "Elegant Designs Crafted in Genuine 92.5% Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 5.22,
     "makingCharges": 60,
     "discount": 0,
@@ -11913,9 +11340,8 @@
     "rating": 4.2,
     "ratingCount": 17,
     "Lock": "",
-    "slug": "sawariya-seth-ring-name-engraved-959",
-    "price": 2323,
-    "MRP": 2323
+    "price": 2581,
+    "MRP": 2581
   },
   {
     "id": 960,
@@ -11942,7 +11368,7 @@
     "brandText": "Genuine 925 Silver with Premium Craft Quality",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 4.97,
     "makingCharges": 60,
     "discount": 0,
@@ -11953,9 +11379,8 @@
     "rating": 4.9,
     "ratingCount": 91,
     "Lock": "",
-    "slug": "sawariya-seth-ring-in-silver-960",
-    "price": 2211,
-    "MRP": 2211
+    "price": 2457,
+    "MRP": 2457
   },
   {
     "id": 961,
@@ -11982,7 +11407,7 @@
     "brandText": "Crafted with High-Quality 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 5.59,
     "makingCharges": 60,
     "discount": 0,
@@ -11993,9 +11418,8 @@
     "rating": 4.5,
     "ratingCount": 80,
     "Lock": "",
-    "slug": "sawariya-seth-ring-latest-design-961",
-    "price": 2487,
-    "MRP": 2487
+    "price": 2764,
+    "MRP": 2764
   },
   {
     "id": 962,
@@ -12022,7 +11446,7 @@
     "brandText": "Premium Finish in Genuine 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 6.24,
     "makingCharges": 55,
     "discount": 0,
@@ -12033,9 +11457,8 @@
     "rating": 4.4,
     "ratingCount": 23,
     "Lock": "",
-    "slug": "sawariya-seth-ring-for-boys-962",
-    "price": 2690,
-    "MRP": 2690
+    "price": 2989,
+    "MRP": 2989
   },
   {
     "id": 963,
@@ -12062,7 +11485,7 @@
     "brandText": "Made from Authentic Silver with 925 Purity",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 4.9,
     "makingCharges": 60,
     "discount": 0,
@@ -12073,9 +11496,8 @@
     "rating": 4.9,
     "ratingCount": 45,
     "Lock": "",
-    "slug": "most-iconic-sawariya-seth-ring-963",
-    "price": 2180,
-    "MRP": 2180
+    "price": 2423,
+    "MRP": 2423
   },
   {
     "id": 965,
@@ -12101,7 +11523,7 @@
     "brandText": "925 Silver Crafted with Premium Quality Standards",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 7.28,
     "makingCharges": 55,
     "discount": 0,
@@ -12112,9 +11534,8 @@
     "rating": 4.5,
     "ratingCount": 85,
     "Lock": "",
-    "slug": "925-sterling-silver-sawariya-seth-ring-965",
-    "price": 3138,
-    "MRP": 3138
+    "price": 3487,
+    "MRP": 3487
   },
   {
     "id": 966,
@@ -12140,7 +11561,7 @@
     "brandText": "Genuine 92.5% Silver with Refined Craftsmanship",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 4.92,
     "makingCharges": 60,
     "discount": 0,
@@ -12151,9 +11572,8 @@
     "rating": 4.6,
     "ratingCount": 106,
     "Lock": "",
-    "slug": "sawariya-seth-ring-engraved-966",
-    "price": 2189,
-    "MRP": 2189
+    "price": 2432,
+    "MRP": 2432
   },
   {
     "id": 967,
@@ -12178,7 +11598,7 @@
     "brandText": "Premium Jewellery Made with Authentic 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 8,
     "makingCharges": 55,
     "discount": 0,
@@ -12189,9 +11609,8 @@
     "rating": 4.8,
     "ratingCount": 34,
     "Lock": "",
-    "slug": "trending-sawariya-seth-ring-967",
-    "price": 3448,
-    "MRP": 3448
+    "price": 3832,
+    "MRP": 3832
   },
   {
     "id": 968,
@@ -12216,7 +11635,7 @@
     "brandText": "Crafted in 92.5% Pure Silver for Elegant Style",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 6,
     "makingCharges": 55,
     "discount": 0,
@@ -12227,9 +11646,8 @@
     "rating": 4.1,
     "ratingCount": 71,
     "Lock": "",
-    "slug": "modern-sawariya-seth-ring-968",
-    "price": 2586,
-    "MRP": 2586
+    "price": 2874,
+    "MRP": 2874
   },
   {
     "id": 969,
@@ -12256,7 +11674,7 @@
     "brandText": "Fine Craftsmanship Using Genuine 925 Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 6.07,
     "makingCharges": 55,
     "discount": 0,
@@ -12267,9 +11685,8 @@
     "rating": 4.9,
     "ratingCount": 114,
     "Lock": "",
-    "slug": "pure-silver-925-sawariya-seth-ring-969",
-    "price": 2617,
-    "MRP": 2617
+    "price": 2907,
+    "MRP": 2907
   },
   {
     "id": 970,
@@ -12297,7 +11714,7 @@
     "brandText": "Made with Authentic 92.5% Silver Quality",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 6.52,
     "makingCharges": 55,
     "discount": 0,
@@ -12308,9 +11725,8 @@
     "rating": 4,
     "ratingCount": 10,
     "Lock": "",
-    "slug": "original-sawariya-seth-ring-970",
-    "price": 2810,
-    "MRP": 2810
+    "price": 3123,
+    "MRP": 3123
   },
   {
     "id": 972,
@@ -12335,7 +11751,7 @@
     "brandText": "Premium 925 Silver with Genuine Purity",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 8.28,
     "makingCharges": 50,
     "discount": 0,
@@ -12346,9 +11762,8 @@
     "rating": 4.6,
     "ratingCount": 11,
     "Lock": "",
-    "slug": "sawariya-seth-ji-ki-chandi-ki-ring-972",
-    "price": 3454,
-    "MRP": 3454
+    "price": 3838,
+    "MRP": 3838
   },
   {
     "id": 973,
@@ -12374,7 +11789,7 @@
     "brandText": "Elegant Jewellery in Authentic 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 5.48,
     "makingCharges": 60,
     "discount": 0,
@@ -12385,9 +11800,8 @@
     "rating": 4.8,
     "ratingCount": 63,
     "Lock": "",
-    "slug": "sawariya-seth-chandi-ki-anguthi-973",
-    "price": 2438,
-    "MRP": 2438
+    "price": 2709,
+    "MRP": 2709
   },
   {
     "id": 974,
@@ -12413,7 +11827,7 @@
     "brandText": "Crafted with Genuine Silver at 925 Purity",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 9.32,
     "makingCharges": 55,
     "discount": 0,
@@ -12424,9 +11838,8 @@
     "rating": 4.4,
     "ratingCount": 13,
     "Lock": "",
-    "slug": "sawariya-seth-vinti-974",
-    "price": 4017,
-    "MRP": 4017
+    "price": 4464,
+    "MRP": 4464
   },
   {
     "id": 975,
@@ -12454,7 +11867,7 @@
     "brandText": "Made from Premium 925 Silver for Elegant Looks",
     "care": "SILVER_GENERAL",
     "for": "him",
-    "purity": "silverJewellery",
+    "metal": "silver",
     "weight": 5.3,
     "makingCharges": 55,
     "discount": 0,
@@ -12465,8 +11878,7 @@
     "rating": 4.8,
     "ratingCount": 21,
     "Lock": "",
-    "slug": "bold-look-sawariya-seth-ring-975",
-    "price": 2285,
-    "MRP": 2285
+    "price": 2538,
+    "MRP": 2538
   }
 ]

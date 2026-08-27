@@ -100,7 +100,7 @@ sequenceDiagram
     participant Next as Next.js Engine
     participant GHP as GitHub Pages
 
-    Admin->>GS: Update catalog data (specs, inventory, purity, prices)
+    Admin->>GS: Update catalog data (specs, inventory, metal, prices)
     Admin->>GH: Trigger Build Manually (workflow_dispatch)
     GH->>DS: Execute `npm run get-data`
     DS->>GS: Fetch raw Sheet data (CSV / JSON API)

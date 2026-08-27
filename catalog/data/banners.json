@@ -1,29 +1,26 @@
 [
   {
-    "id": "1",
+    "id": 1,
     "rank": 2,
-    "link": "/category/mahadev-silver-rings-1/",
-    "imageAnimation": "pan-right",
+    "categoryId": "1",
     "bannerDesktop": "mahadev-silver-rings-d.webp",
     "bannerMobile": "mahadev-silver-rings-m.webp",
-    "text": "Mahadev Silver Rings        Buy Shiva & Trishul Silver Rings        Shop Mahadev Silver Rings for Men & Women. Explore Shiv, Mahakal & Trishul designs in 925 sterling silver. Daily wear, skin-friendly & handcrafted at Sapna Shri Jewellers."
+    "text": "Mahadev Silver Rings        Buy Shiva & Trishul Silver Rings        Shop Mahadev Silver Rings for Men & Women."
   },
   {
-    "id": "2",
+    "id": 2,
     "rank": 1,
-    "link": "/category/buy-silver-rakhi-13/",
-    "imageAnimation": "pan-right",
+    "categoryId": "13",
     "bannerDesktop": "rakhi-d.webp",
     "bannerMobile": "rakhi-m.webp",
-    "text": "Pure 925 Silver Rakhi for Brother | Trendy Bracelet Rakhis & Divine Designs. Celebrate Raksha Bandhan in style with pure 925 silver rakhis for brothers, kids, and siblings at Sapna Shri Jewellers. From trendy bracelet-style rakhis to divine motifs and personalized charms, every chandi ki rakhi is designed to blend tradition with modern style. Our sterling silver rakhis are durable, skin-friendly, and perfect for gifting your sibling."
+    "text": "Pure 925 Silver Rakhi for Brother | Trendy Bracelet Rakhis. Raksha Bandhan pure 925 silver rakhis for brothers, kids, and siblings at Sapna Shri Jewellers"
   },
   {
-    "id": "3",
+    "id": 3,
     "rank": 1,
-    "link": "/category/sawariya-seth-ring-3/",
-    "imageAnimation": "fade",
+    "categoryId": "3",
     "bannerDesktop": "sawariya-ring-d.webp",
     "bannerMobile": "sawariya-ring-m.webp",
-    "text": "Pure 925 Silver Rakhi for Brother | Trendy Bracelet Rakhis & Divine Designs. Celebrate Raksha Bandhan in style with pure 925 silver rakhis for brothers, kids, and siblings at Sapna Shri Jewellers. From trendy bracelet-style rakhis to divine motifs and personalized charms, every chandi ki rakhi is designed to blend tradition with modern style. Our sterling silver rakhis are durable, skin-friendly, and perfect for gifting your sibling.\n\nhighlights\n- brand logo \"Sapna Shri Jewellers\" in big fonts (h1)\n- festival collection name : Silver Rakhi Collection, \n- Quality of product like with some icons: \n  - Made with 925 silver\n  - Brand logo attched"
+    "text": "Sawariya seth ring - crafted with purity, devotion, and spiritual elegance"
   }
 ]

@@ -4,7 +4,7 @@ import { useEffect, useRef, useState, useCallback } from "react";
 import { Heart } from "lucide-react";
 
 interface WishlistButtonProps {
-  slug: string;
+  id: number;
   size?: number;
   productName?: string;
 }
@@ -21,7 +21,7 @@ function safeReadWishlist(): string[] {
 }
 
 export default function WishlistButton({
-  slug,
+  id,
   size = 20,
   productName,
 }: WishlistButtonProps) {
@@ -31,8 +31,8 @@ export default function WishlistButton({
   // Synchronize internal state from localStorage
   const refreshStatus = useCallback(() => {
     const stored = safeReadWishlist();
-    setIsWishlisted(stored.includes(slug));
-  }, [slug]);
+    setIsWishlisted(stored.includes(id.toString()));
+  }, [id]);
 
   // Initial read on mount
   useEffect(() => {
@@ -94,11 +94,11 @@ export default function WishlistButton({
       e.stopPropagation();
 
       const stored = safeReadWishlist();
-      const exists = stored.includes(slug);
+      const exists = stored.includes(id.toString());
 
       const next = exists
-        ? stored.filter((s) => s !== slug)
-        : [...stored, slug];
+        ? stored.filter((s) => s !== id.toString())
+        : [...stored, id.toString()];
 
       try {
         localStorage.setItem("wishlist", JSON.stringify(next));
@@ -109,7 +109,7 @@ export default function WishlistButton({
       setIsWishlisted(!exists);
       window.dispatchEvent(new CustomEvent("wishlist-updated"));
     },
-    [slug]
+    [id]
   );
 
   const targetLabel = productName ? ` "${productName}"` : "";

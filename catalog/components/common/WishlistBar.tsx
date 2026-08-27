@@ -53,7 +53,7 @@ export default function WishlistBar() {
   const wishlistProducts = useMemo(() => {
     if (wishlistSlugs.length === 0) return [];
     const slugSet = new Set(wishlistSlugs);
-    return (productsData as Product[]).filter((p) => slugSet.has(p.slug));
+    return (productsData as Product[]).filter((p) => slugSet.has(p.id.toString()));
   }, [wishlistSlugs]);
 
   const hasItems = wishlistProducts.length > 0;

@@ -10,18 +10,19 @@ interface CategoryCardProps {
 export default function CategoryCard({ category, products }: CategoryCardProps) {
   if (!products || products.length === 0) return null;
 
-  const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "";
+  
+  const baseImageURL = process.env.NEXT_PUBLIC_BASE_IMAGE_URL;
   const firstProduct = products[0];
   const isNew = Boolean(firstProduct?.newArrival);
   const rawImage = firstProduct.images?.[0];
   const imageUrl = rawImage
-    ? `${baseURL}/static/img/products/thumbnail/${rawImage}`
+    ? `${baseImageURL}/products/thumbnail/${rawImage}`
     : "/placeholder.png";
 
   return (
     <article className="w-full flex">
       <Link
-        href={`/category/${category.slug}/`}
+        href={`/c/${category.id}/`}
         prefetch={false}
         title={`${category.name} Collection`}
         aria-label={`Explore ${category.name} jewellery collection`}

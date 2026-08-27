@@ -121,7 +121,7 @@ export default function JewelrySearch() {
     }
     if (filters.material) {
       items = items.filter((p) =>
-        p.purity?.toLowerCase().startsWith(filters.material!.toLowerCase())
+        p.metal?.toLowerCase().startsWith(filters.material!.toLowerCase())
       );
     }    
 
@@ -223,7 +223,7 @@ export default function JewelrySearch() {
             className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 list-none p-0"
           >
             {filteredProducts.map((p, idx) => (
-              <li key={p.slug || p.id} className="flex justify-stretch">
+              <li key={p.id} className="flex justify-stretch">
                 <ProductCard
                   product={p}
                   priority={idx < 4} // ✅ Fast LCP boost for first-row images

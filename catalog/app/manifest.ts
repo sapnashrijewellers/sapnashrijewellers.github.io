@@ -14,7 +14,7 @@ export default function manifest(): MetadataRoute.Manifest {
       name: `${t.type} collection`,
       short_name: t.type, // Use first word for brevity
       description: t.description || `Explore our ${t.type} collection`,
-      url: `/jewelry-type/${t.slug}?source=pwa_shortcut`,
+      url: `/jt/${t.id}?source=pwa_shortcut`,
       icons: [
         {
           src: "/icon-192x192.png", // Fallback to main icon

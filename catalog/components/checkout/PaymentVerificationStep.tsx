@@ -36,7 +36,7 @@ export default function PaymentVerificationStep({
         return `${i + 1}. ${item.product.name}
 Variant: ${"-"}
 Qty: ${item.qty}
-Link: ${process.env.NEXT_PUBLIC_BASE_URL}/product/${item.product.slug}`;
+Link: ${process.env.NEXT_PUBLIC_BASE_URL}/p/${item.product.id}`;
       })
       .join("\n\n");
 

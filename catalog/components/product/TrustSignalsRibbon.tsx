@@ -28,20 +28,16 @@ interface TrustSignalItem {
   link?: string;
 }
 
-function getMetalType(purity?: string): "gold" | "silver" {
-  return (purity || "").toLowerCase().startsWith("gold") ? "gold" : "silver";
-}
 
 export default function TrustSignalsRibbon({
   product,
   className = "",
 }: TrustSignalsRibbonProps) {
-  const metal = getMetalType(product.purity);
-  const isGold = metal === "gold";
-  const purityString = product.purity || "";
+  const metal = product.metal;
+  const isGold = metal === "gold";  
   const weight = product.weight || 0;
 
-  const isHallmarkedGold = purityString.toLowerCase().startsWith("gold") && weight > 2;
+  const isHallmarkedGold = metal=="gold" && weight > 2;
 
   const signals: TrustSignalItem[] = [
     {

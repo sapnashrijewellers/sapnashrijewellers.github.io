@@ -1,4 +1,18 @@
 User-agent: *
+
+Disallow: /cart
+Disallow: /checkout
+Disallow: /calculator
+Disallow: /wishlist
+Disallow: /account
+Disallow: /address
+Disallow: /order*
+Disallow: /rate*
+
+
 Allow: /
 
 Sitemap: https://sapnashrijewellers.in/sitemap.xml
+
+
+

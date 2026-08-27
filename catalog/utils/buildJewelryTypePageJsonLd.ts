@@ -10,10 +10,10 @@ export function buildJewelryTypePageJsonLd(
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "@id": `${baseURL}/jewelry-type/${t.slug}/#itemlist`,
+    "@id": `${baseURL}/jt/${t.id}/#itemlist`,
     "name": `${t.type} by Sapna Shri Jewellers`,
     "description": t.description,
-    "url": `${baseURL}/jewelry-type/${t.slug}/`,
+    "url": `${baseURL}/jt/${t.id}/`,
     "numberOfItems": products.length,
     "itemListElement": products.map((product, index) => {
       // 1. Generate full, validated Product JSON-LD (includes offers, price, rating, etc.)

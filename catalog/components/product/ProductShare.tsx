@@ -16,7 +16,7 @@ export default function ProductShare({
   const baseURL = (
     process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in"
   ).replace(/\/+$/, "");
-  const baseProductUrl = `${baseURL}/product/${product.slug}/`;
+  const baseProductUrl = `${baseURL}/p/${product.id}/`;
 
   const shareText = `Check out this jewellery design: ${product.name} at Sapna Shri Jewellers 💎`;
   const encodedText = encodeURIComponent(shareText);

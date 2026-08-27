@@ -37,7 +37,7 @@ export default function WishlistPage() {
 
 
     const wishlistProducts = products.filter((p) =>
-        wishlist.includes(p.slug)
+        wishlist.includes(p.id.toString())
     );
 
     return (
@@ -52,7 +52,7 @@ export default function WishlistPage() {
             ) : (
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-4">
                     {wishlistProducts.map((product) => (
-                        <ProductCard key={product.slug} product={product} />
+                        <ProductCard key={product.id} product={product} />
                     ))}
                 </div>
             )}

@@ -18,7 +18,7 @@ export default function OrderViaWhatsappButton({
     process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in"
   ).replace(/\/+$/, "");
 
-  const productUrl = `${baseUrl}/product/${product.slug}/`;
+  const productUrl = `${baseUrl}/p/${product.id}/`;
 
   const message = `
 नमस्ते,

@@ -57,8 +57,8 @@ export default function JewelleryTypeBar({
 
           return (
             <Link
-              key={item.slug}
-              href={`/jewelry-type/${item.slug}/`}
+              key={item.id}
+              href={`/jt/${item.id}/`}
               title={`${item.type} Jewellery Collection`}
               aria-label={`Explore ${item.type} jewellery collection`}
               className="

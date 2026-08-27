@@ -11,16 +11,15 @@ export const miniSearchIndexOptions: MiniSearchIndexOptions = {
     "description",
     "type",
     "for",
-    "purity"
+    "metal"
   ],
 
   storeFields: [
-    "id",
-    "slug",
+    "id",    
     "name",    
     "images",
     "category",
-    "purity",
+    "metal",
     "newArrival",
     "weight",
     "for",

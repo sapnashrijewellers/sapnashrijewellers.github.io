@@ -24,7 +24,7 @@ export async function GET() {
 
   const itemsXml = products
     .map((product) => {
-      const productUrl = `${baseUrl}/product/${product.slug}/`;
+      const productUrl = `${baseUrl}/p/${product.id}/`;
       const imageUrl = product.images?.[0]
         ? `${baseUrl}/static/img/products/optimized/${product.images[0]}`
         : "";      

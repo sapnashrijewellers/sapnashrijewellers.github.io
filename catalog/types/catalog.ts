@@ -1,14 +1,13 @@
 export interface Product {
   id: number;
   name: string;
-  purity: string;
+  metal: string;
   images: string[];
   highlights: string[];
   newArrival: boolean;
   category: string;
   type: string[];
-  for: string;
-  slug: string;
+  for: string;  
   active: boolean;
   description: string;
   available?: boolean;
@@ -27,8 +26,7 @@ export interface Category {
   id: number;
   name: string;
   title: string,
-  rank: number,
-  slug: string,
+  rank: number,  
   description: string,
   active: boolean
   material:string
@@ -56,8 +54,7 @@ export interface Rates {
 export interface Type {
   id: number,
   type: string,
-  rank: number,
-  slug: string,
+  rank: number,  
   description: string,
   icon: string,
   icon1: string,
@@ -103,8 +100,7 @@ export type Order = {
   userId: string;
 
   items: Array<{
-    productId: number;
-    slug: string;
+    productId: number;    
     title: string;
     qty: number;
   }>;

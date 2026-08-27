@@ -1,5 +1,5 @@
 import { Cart } from "@/types/catalog";
-import ProductCard from "../product/ProductCard";
+import ProductCard from "@/components/product/ProductCard";
 import { Dispatch, SetStateAction } from "react";
 import { QuantityControl } from "./QuantityControl";
 import { Trash2, Save, Check } from "lucide-react";

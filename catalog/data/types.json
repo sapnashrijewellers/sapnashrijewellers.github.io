@@ -6,8 +6,7 @@
     "icon": "Sparkle",
     "icon1": "Gem",
     "rank": 11,
-    "active": true,
-    "slug": "daily-wear-1"
+    "active": true
   },
   {
     "id": 2,
@@ -16,8 +15,7 @@
     "icon": "Briefcase",
     "icon1": "Gem",
     "rank": 12,
-    "active": true,
-    "slug": "office-wear-2"
+    "active": true
   },
   {
     "id": 3,
@@ -26,8 +24,7 @@
     "icon": "PartyPopper",
     "icon1": "Gem",
     "rank": 13,
-    "active": true,
-    "slug": "party-wear-3"
+    "active": true
   },
   {
     "id": 4,
@@ -36,8 +33,7 @@
     "icon": "Coins",
     "icon1": "Gem",
     "rank": 1,
-    "active": true,
-    "slug": "silver-jewellery-under-999-4"
+    "active": true
   },
   {
     "id": 5,
@@ -46,8 +42,7 @@
     "icon": "Flower2",
     "icon1": "HandHeart",
     "rank": 2,
-    "active": true,
-    "slug": "spiritual-silver-jewellery-5"
+    "active": true
   },
   {
     "id": 6,
@@ -56,8 +51,7 @@
     "icon": "Sparkle",
     "icon1": "Gift",
     "rank": 3,
-    "active": true,
-    "slug": "silver-gift-for-him-6"
+    "active": true
   },
   {
     "id": 7,
@@ -66,8 +60,7 @@
     "icon": "Gift",
     "icon1": "Heart",
     "rank": 5,
-    "active": true,
-    "slug": "silver-gift-for-her-7"
+    "active": true
   },
   {
     "id": 8,
@@ -76,8 +69,7 @@
     "icon": "Baby",
     "icon1": "Gem",
     "rank": 4,
-    "active": true,
-    "slug": "kids-silver-jewellery-8"
+    "active": true
   },
   {
     "id": 9,
@@ -86,8 +78,7 @@
     "icon": "User",
     "icon1": "Gem",
     "rank": 7,
-    "active": true,
-    "slug": "silver-jewellery-for-men-9"
+    "active": true
   },
   {
     "id": 10,
@@ -96,8 +87,7 @@
     "icon": "HandHeart",
     "icon1": "Gem",
     "rank": 6,
-    "active": true,
-    "slug": "silver-jewellery-for-women-10"
+    "active": true
   },
   {
     "id": 11,
@@ -106,8 +96,7 @@
     "icon": "HeartHandshake",
     "icon1": "Gem",
     "rank": 14,
-    "active": true,
-    "slug": "anniversary-silver-gifts-11"
+    "active": true
   },
   {
     "id": 12,
@@ -116,8 +105,7 @@
     "icon": "CakeSlice",
     "icon1": "Gift",
     "rank": 10,
-    "active": true,
-    "slug": "birthday-silver-gifts-12"
+    "active": true
   },
   {
     "id": 13,
@@ -126,8 +114,7 @@
     "icon": "UsersRound",
     "icon1": "HeartHandshake",
     "rank": 8,
-    "active": true,
-    "slug": "silver-couple-jewellery-13"
+    "active": true
   },
   {
     "id": 14,
@@ -136,7 +123,6 @@
     "icon": "Gem",
     "icon1": "BadgeIndianRupee",
     "rank": 9,
-    "active": true,
-    "slug": "silver-jewellery-under-3000-14"
+    "active": true
   }
 ]

@@ -74,7 +74,7 @@ export default function FilterNSort({
           ref={filterBtnRef}
           type="button"
           aria-haspopup="dialog"
-          aria-label="Open detailed filter options (price, purity, category)"
+          aria-label="Open detailed filter options (price, metal, category)"
           title="Filter results"
           className="ssj-btn bg-accent text-accent-foreground shrink-0 flex items-center justify-center w-10 h-10 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1 transition-colors hover:bg-accent/80"
         >

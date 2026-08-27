@@ -18,8 +18,8 @@ export default function ProductCard({
   product,
   className = "",
 }: ProductCardProps) {
-  const baseURL =
-    process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in";
+  
+  const baseImageURL = process.env.NEXT_PUBLIC_BASE_IMAGE_URL;
   const images = Array.isArray(product.images) ? product.images : [];
   const hasMultipleImages = images.length > 1;
 
@@ -29,7 +29,7 @@ export default function ProductCard({
 
   const currentImageFileName =
     images[activeImage] || images[0] || "placeholder.png";
-  const imageSrc = `${baseURL}/static/img/products/thumbnail/${currentImageFileName}`;
+  const imageSrc = `${baseImageURL}/products/thumbnail/${currentImageFileName}`;
 
   const handleMouseEnter = useCallback(() => {
     if (hasMultipleImages) setActiveImage(1);
@@ -58,7 +58,7 @@ export default function ProductCard({
     >
       {/* 1. Top Badges & Wishlist Action (Decoupled from card navigation link) */}
       <div className="absolute top-2.5 right-2.5 z-20">
-        <WishlistButton slug={product.slug} productName={product.name} />
+        <WishlistButton id={product.id} productName={product.name} />
       </div>
 
       {product.newArrival && (
@@ -73,7 +73,7 @@ export default function ProductCard({
 
       {/* 2. Primary Navigation Link (Takes full flexible height) */}
       <Link
-        href={`/product/${product.slug}/`}
+        href={`/p/${product.id}/`}
         prefetch={false}
         title={product.name}
         aria-label={`View full details for ${product.name}`}

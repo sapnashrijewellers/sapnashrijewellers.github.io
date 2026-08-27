@@ -20,7 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // 2. Categories
     ...categories.map((cat) => ({
-      url: `${baseUrl}/category/${cat.slug}/`,
+      url: `${baseUrl}/c/${cat.id}/`,
       lastModified: buildDate,
       changeFrequency: "weekly" as const,
       priority: 0.8,
@@ -28,7 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // 3. Jewelry Types
     ...types.map((t) => ({
-      url: `${baseUrl}/jewelry-type/${t.slug}/`,
+      url: `${baseUrl}/jt/${t.id}/`,
       lastModified: buildDate,
       changeFrequency: "weekly" as const,
       priority: 0.8,
@@ -36,7 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // 4. Products
     ...products.map((product) => ({
-      url: `${baseUrl}/product/${product.slug}/`,
+      url: `${baseUrl}/p/${product.id}/`,
       lastModified: buildDate,
       changeFrequency: "daily" as const,
       priority: 0.7,

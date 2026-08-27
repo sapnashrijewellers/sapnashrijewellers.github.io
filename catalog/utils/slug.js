@@ -1,12 +1,12 @@
 // utils/slug.js
-export function toSlug(text) {
-  if (!text) return "";
-  // normalize spaces, trim
-  text = String(text).trim();
+// export function toSlug(text) {
+//   if (!text) return "";
+//   // normalize spaces, trim
+//   text = String(text).trim();
 
-  // replace multiple spaces/tabs/newlines with single space
-  text = text.replace(/\s+/g, "-");
+//   // replace multiple spaces/tabs/newlines with single space
+//   text = text.replace(/\s+/g, "-");
 
  
-  return text || "";
-}
+//   return text || "";
+// }

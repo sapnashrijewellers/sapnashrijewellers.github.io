@@ -96,8 +96,7 @@ async function fetchAndSaveData() {
                     p.name?.length > 4 &&
                     p.category?.length > 0 &&
                     p.active &&
-                    p.weight > 0 &&
-                    p.slug?.length > 4
+                    p.weight > 0                     
             );
         }
 

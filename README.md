@@ -229,7 +229,7 @@ Currently, products are managed via Google Sheets. Many data validation rules ar
 Build a secure Admin Dashboard for:
 
 - Product Create, Read, Update, Delete (CRUD)
-- Field-level validation (weight, purity, price, category)
+- Field-level validation (weight, metal, price, category)
 - Image upload with automatic optimization and syncing
 - Preview before publish
 #### Reason & Business Value:

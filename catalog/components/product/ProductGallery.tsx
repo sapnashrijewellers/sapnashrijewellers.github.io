@@ -34,10 +34,10 @@ export default function ProductGallery({
   const isSwiping = useRef(false);
 
   const galleryId = useId();
-  const baseURL = (process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in").replace(/\/+$/, "");
+  const baseImageURL = process.env.NEXT_PUBLIC_BASE_IMAGE_URL;
 
   const activeImageFileName = images[activeIndex] || images[0];
-  const imageUrl = `${baseURL}/static/img/products/optimized/${activeImageFileName}`;
+  const imageUrl = `${baseImageURL}/products/optimized/${activeImageFileName}`;
 
   // Safe client-side media detection after hydration to prevent SSR mismatch
   useEffect(() => {
@@ -50,9 +50,9 @@ export default function ProductGallery({
     const prevIdx = activeIndex === 0 ? images.length - 1 : activeIndex - 1;
     [nextIdx, prevIdx].forEach((idx) => {
       const img = new window.Image();
-      img.src = `${baseURL}/static/img/products/optimized/${images[idx]}`;
+      img.src = `${baseImageURL}/products/optimized/${images[idx]}`;
     });
-  }, [activeIndex, images, baseURL]);
+  }, [activeIndex, images, baseImageURL]);
 
   // Desktop hover zoom tracker
   const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
@@ -194,7 +194,7 @@ export default function ProductGallery({
 
         {/* Top-Right: Wishlist Action (Decoupled & accessible) */}
         <div className="absolute top-3 right-3 z-20">
-          <WishlistButton slug={product.slug} productName={product.name} />
+          <WishlistButton id={product.id} productName={product.name} />
         </div>
 
         {/* Bottom-Left: External Direct Link (Original source guarantee) */}
@@ -276,7 +276,7 @@ export default function ProductGallery({
         >
           {images.map((img, i) => {
             const isSelected = i === activeIndex;
-            const thumbUrl = `${baseURL}/static/img/products/thumbnail/${img}`;
+            const thumbUrl = `${baseImageURL}/products/thumbnail/${img}`;
 
             return (
               <button

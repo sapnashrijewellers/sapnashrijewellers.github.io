@@ -13,18 +13,20 @@
   },
   "devDependencies": {
     "@eslint/css": "^1.4.0",
-    "@eslint/js": "^9.20.0",
+    "eslint": "^9.39.5",
+    "@eslint/js": "^9.39.5",
+    "eslint-config-next": "^16.3.3",
     "@eslint/json": "^2.0.1",
     "@eslint/markdown": "^8.0.3",
     "@types/canvas-confetti": "^1.9.0",
-    "baseline-browser-mapping": "^2.11.15",
-    "eslint": "^9.39.5",
+    "baseline-browser-mapping": "^2.11.20",
+    
     "globals": "^17.11.0",
-    "turbo": "^2.10.10",
+    "turbo": "^2.10.12",
     "typescript-eslint": "^8.68.0"
   },
-  "packageManager": "npm@10.9.3",
+  "packageManager": "npm@12.0.2",
   "dependencies": {
-    "workbox-cacheable-response": "^7.3.0"
+    "workbox-cacheable-response": "^7.4.1"
   }
 }

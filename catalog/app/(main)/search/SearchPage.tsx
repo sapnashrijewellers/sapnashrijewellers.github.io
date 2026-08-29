@@ -1,7 +1,7 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, useCallback } from "react";
 import MiniSearch from "minisearch";
 import ProductCard from "@/components/product/ProductCard";
 import Breadcrumb from "@/components/navbar/BreadcrumbItem";
@@ -24,19 +24,21 @@ export default function JewelrySearch() {
 
   const [products, setProducts] = useState<Product[]>([]);
   const [searchIndex, setSearchIndex] = useState<MiniSearch | null>(null);
-  const [results, setResults] = useState<{ id: number; score: number }[]>([]);
   const [loading, setLoading] = useState(true);
 
-  const normalizeQuery = (q: string) =>
-    q
-      .toLowerCase()
-      .trim()
-      .split(/\s+/)
-      .map((t) => queryMap[t] || t)
-      .join(" ");
+  const normalizeQuery = useCallback(
+    (q: string) =>
+      q
+        .toLowerCase()
+        .trim()
+        .split(/\s+/)
+        .map((t) => queryMap[t] || t)
+        .join(" "),
+    [queryMap]
+  );
 
   /* -----------------------------------------
-     Fetch Search Index & Catalog Data
+      Fetch Search Index & Catalog Data
   ------------------------------------------ */
   useEffect(() => {
     let cancelled = false;
@@ -71,27 +73,24 @@ export default function JewelrySearch() {
   }, []);
 
   /* -----------------------------------------
-     Execute Search Query
+      Execute Search Query (Derived with useMemo)
   ------------------------------------------ */
-  useEffect(() => {
+  const results = useMemo(() => {
     if (!searchIndex || !query) {
-      setResults([]);
-      return;
+      return [];
     }
 
     const cleaned = normalizeQuery(query);
     const r = searchIndex.search(cleaned, miniSearchQueryOptions);
 
-    setResults(
-      r.map((x) => ({
-        id: x.id,
-        score: x.score,
-      }))
-    );
-  }, [query, searchIndex]);
+    return r.map((x) => ({
+      id: x.id,
+      score: x.score,
+    }));
+  }, [query, searchIndex, normalizeQuery]);
 
   /* -----------------------------------------
-     Hydrate Search Results
+      Hydrate Search Results
   ------------------------------------------ */
   const hydratedProducts = useMemo(() => {
     if (!results.length) return [];
@@ -104,7 +103,7 @@ export default function JewelrySearch() {
   }, [results, products]);
 
   /* -----------------------------------------
-     Filter & Sort Applied Products
+      Filter & Sort Applied Products
   ------------------------------------------ */
   const filteredProducts = useMemo(() => {
     let items = [...hydratedProducts];
@@ -128,7 +127,7 @@ export default function JewelrySearch() {
     // Apply Sorting
     switch (sortBy) {
       case "name-asc":
-        items.sort((a, b) => a.name.localeCompare(b.name));
+        items.sort((a, b) => a.name.localeCompare(a.name));
         break;
       case "name-desc":
         items.sort((a, b) => b.name.localeCompare(a.name));

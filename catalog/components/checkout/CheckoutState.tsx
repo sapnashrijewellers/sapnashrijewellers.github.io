@@ -25,9 +25,30 @@ interface CheckoutStateProps {
   className?: string;
 }
 
+function getHydratedInitialCart(): Cart {
+  try {
+    const rawCart = getCart();
+    const allProducts = productsData as Product[];
+    const productMap = new Map<number, Product>();
+    allProducts.forEach((p) => productMap.set(Number(p.id), p));
+
+    const populatedItems = (rawCart.items || []).map((item) => ({
+      ...item,
+      product: productMap.get(Number(item.productId)) || item.product,
+    }));
+
+    return {
+      ...rawCart,
+      items: populatedItems,
+    };
+  } catch (error) {
+    console.error("Failed to hydrate initial cart data:", error);
+    return getCart();
+  }
+}
+
 export default function CheckoutState({ className = "" }: CheckoutStateProps) {
-  const [isHydrating, setIsHydrating] = useState(true);
-  const [cart, setCart] = useState<Cart>(() => getCart());
+  const [cart, setCart] = useState<Cart>(getHydratedInitialCart);
   const { user, loading: authLoading } = useAuth();
   const [step, setStep] = useState<CheckoutStep>("CART");
   const [paymentMethod, setPaymentMethod] = useState<PaymentMethod>("UPI");
@@ -35,34 +56,7 @@ export default function CheckoutState({ className = "" }: CheckoutStateProps) {
   const [addressLoading, setAddressLoading] = useState(false);
   const [authPending, setAuthPending] = useState(false);
 
-  /* ---------------- Step 1: Hydrate Cart Items (Local JSON to eliminate network waterfalls) ---------------- */
-  useEffect(() => {
-    try {
-      const allProducts = productsData as Product[];
-      const productMap = new Map<number, Product>();
-      allProducts.forEach((p) => productMap.set(Number(p.id), p));
-
-      setCart((prevCart) => {
-        const populatedItems = (prevCart.items || []).map((item) => ({
-          ...item,
-          product: productMap.get(Number(item.productId)) || item.product,
-        }));
-
-        const updatedCart: Cart = {
-          ...prevCart,
-          items: populatedItems,
-        };
-
-        return updatedCart;
-      });
-    } catch (error) {
-      console.error("Failed to hydrate cart data:", error);
-    } finally {
-      setIsHydrating(false);
-    }
-  }, []);
-
-  /* ---------------- Step 2: Lazy User Authentication Action ---------------- */
+  /* ---------------- Step 1: Lazy User Authentication Action ---------------- */
   const handleLogin = useCallback(async () => {
     try {
       setAuthPending(true);
@@ -81,58 +75,58 @@ export default function CheckoutState({ className = "" }: CheckoutStateProps) {
     }
   }, []);
 
-/* ---------------- Step 3: Fetch / Populate User Address ---------------- */
-useEffect(() => {
-  if (!user) return;
+  /* ---------------- Step 2: Fetch / Populate User Address ---------------- */
+  useEffect(() => {
+    if (!user) return;
 
-  let isMounted = true;
+    let isMounted = true;
 
-  async function loadAddress() {
-    setAddressLoading(true);
-    try {
-      const workerUrl = process.env.NEXT_PUBLIC_WORKER_URL || "";
-      const res = await fetch(
-        `${workerUrl}/address?uid=${encodeURIComponent(user!.uid)}`,
-        {
-          headers: { Accept: "application/json" },
+    async function loadAddress() {
+      setAddressLoading(true);
+      try {
+        const workerUrl = process.env.NEXT_PUBLIC_WORKER_URL || "";
+        const res = await fetch(
+          `${workerUrl}/address?uid=${encodeURIComponent(user!.uid)}`,
+          {
+            headers: { Accept: "application/json" },
+          }
+        );
+
+        if (res.ok) {
+          const data = await res.json();
+          if (isMounted && data) {
+            setAddress(data);
+            return;
+          }
         }
-      );
 
-      if (res.ok) {
-        const data = await res.json();
-        if (isMounted && data) {
-          setAddress(data);
-          return;
+        // Fallback pre-fill using Firebase user credentials if no remote data found
+        if (isMounted) {
+          setAddress((prev) => ({
+            ...prev,
+            uid: user!.uid || "",
+            name: prev.name || user!.displayName || "",
+            email: prev.email || user!.email || "",
+            mobile: prev.mobile || user!.phoneNumber || "",
+          }));
         }
-      }
-
-      // Fallback pre-fill using Firebase user credentials if no remote data found
-      if (isMounted) {
-        setAddress((prev) => ({
-          ...prev,
-          uid: user!.uid || "",
-          name: prev.name || user!.displayName || "",
-          email: prev.email || user!.email || "",
-          mobile: prev.mobile || user!.phoneNumber || "",
-        }));
-      }
-    } catch (err) {
-      console.error("Failed to retrieve stored user address:", err);
-    } finally {
-      if (isMounted) {
-        setAddressLoading(false);
+      } catch (err) {
+        console.error("Failed to retrieve stored user address:", err);
+      } finally {
+        if (isMounted) {
+          setAddressLoading(false);
+        }
       }
     }
-  }
 
-  loadAddress();
+    loadAddress();
 
-  return () => {
-    isMounted = false;
-  };
-}, [user]);
+    return () => {
+      isMounted = false;
+    };
+  }, [user]);
 
-  /* ---------------- Step 4: Persist Address ---------------- */
+  /* ---------------- Step 3: Persist Address ---------------- */
   const saveAddress = useCallback(async () => {
     setAddressLoading(true);
     try {
@@ -150,7 +144,7 @@ useEffect(() => {
     }
   }, [address]);
 
-  /* ---------------- Step 5: Derived Pricing Summary ---------------- */
+  /* ---------------- Step 4: Derived Pricing Summary ---------------- */
   const priceSummary = useMemo((): PriceSummaryType => {
     const productTotal = calculateFinal(cart);
     const shipping = 60;
@@ -166,10 +160,8 @@ useEffect(() => {
 
   // Synchronize cart changes to localStorage
   useEffect(() => {
-    if (!isHydrating) {
-      saveCart(cart);
-    }
-  }, [cart, isHydrating]);
+    saveCart(cart);
+  }, [cart]);
 
   const clearCart = useCallback(() => {
     clearCartStorage();
@@ -179,7 +171,7 @@ useEffect(() => {
 
   /* ---------------- UI Render State Routing ---------------- */
 
-  if (isHydrating || authLoading) {
+  if (authLoading) {
     return (
       <main
         aria-busy="true"

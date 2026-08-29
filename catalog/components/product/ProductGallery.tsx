@@ -40,9 +40,20 @@ export default function ProductGallery({
   const imageUrl = `${baseImageURL}/products/optimized/${activeImageFileName}`;
 
   // Safe client-side media detection after hydration to prevent SSR mismatch
-  useEffect(() => {
-    setIsTouchDevice(window.matchMedia("(pointer: coarse)").matches);
-  }, []);
+useEffect(() => {
+  const mediaQuery = window.matchMedia("(pointer: coarse)");
+  
+  // Set the initial value asynchronously 
+  requestAnimationFrame(() => {
+    setIsTouchDevice(mediaQuery.matches);
+  });
+
+  // Track future changes (optional but recommended)
+  const handler = (e: MediaQueryListEvent) => setIsTouchDevice(e.matches);
+  mediaQuery.addEventListener("change", handler);
+  
+  return () => mediaQuery.removeEventListener("change", handler);
+}, []);
 
   // Preload neighboring high-res images for smooth navigation
   useEffect(() => {

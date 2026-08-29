@@ -10,6 +10,7 @@ import productsData from "@/data/products.json";
 
 export default function OrdersPage() {
   const { user, loading: authLoading } = useAuth();
+  const uid = user?.uid;
 
   const [orders, setOrders] = useState<Order[]>([]);
   const [loading, setLoading] = useState(true);
@@ -44,14 +45,14 @@ export default function OrdersPage() {
     }
   }, []);
 
-  /* ---------------- Fetch Orders ---------------- */
-  const loadOrders = useCallback(async (uid: string) => {
-    try {
-      setLoading(true);
-      setError(null);
+  /* ---------------- Core Fetch Function ---------------- */
+  const fetchOrdersForUser = useCallback(async (targetUid: string) => {
+    setLoading(true);
+    setError(null);
 
+    try {
       const workerUrl = process.env.NEXT_PUBLIC_WORKER_URL || "";
-      const res = await fetch(`${workerUrl}/orders?uid=${encodeURIComponent(uid)}`, {
+      const res = await fetch(`${workerUrl}/orders?uid=${encodeURIComponent(targetUid)}`, {
         headers: {
           Accept: "application/json",
         },
@@ -62,8 +63,6 @@ export default function OrdersPage() {
       }
 
       const data = await res.json();
-
-      // Defensive filtering for valid orders with items
       const validOrders: Order[] = (data.orders || []).filter(
         (o: Order) => Array.isArray(o.items) && o.items.length > 0
       );
@@ -77,18 +76,66 @@ export default function OrdersPage() {
     }
   }, []);
 
-  useEffect(() => {
-    if (user?.uid) {
-      loadOrders(user.uid);
-    } else if (!authLoading && !user) {
-      setLoading(false);
+  /* ---------------- Manual Retry Action ---------------- */
+  const handleRetry = useCallback(() => {
+    if (uid) {
+      void fetchOrdersForUser(uid);
     }
-  }, [user?.uid, authLoading, user, loadOrders]);
+  }, [uid, fetchOrdersForUser]);
+
+  /* ---------------- Fetch Orders on Mount / UID Change ---------------- */
+  useEffect(() => {
+    if (!uid) {
+      return;
+    }
+
+    let isMounted = true;
+
+    async function loadData() {
+      try {
+        const workerUrl = process.env.NEXT_PUBLIC_WORKER_URL || "";
+        const res = await fetch(`${workerUrl}/orders?uid=${encodeURIComponent(uid!)}`, {
+          headers: {
+            Accept: "application/json",
+          },
+        });
+
+        if (!res.ok) {
+          throw new Error(`Failed to load orders: ${res.status}`);
+        }
+
+        const data = await res.json();
+        const validOrders: Order[] = (data.orders || []).filter(
+          (o: Order) => Array.isArray(o.items) && o.items.length > 0
+        );
+
+        if (isMounted) {
+          setOrders(validOrders);
+          setError(null);
+        }
+      } catch (e) {
+        console.error("Failed to load orders:", e);
+        if (isMounted) {
+          setError("Unable to load orders right now. Please try again.");
+        }
+      } finally {
+        if (isMounted) {
+          setLoading(false);
+        }
+      }
+    }
+
+    void loadData();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [uid]);
 
   /* ---------------- UI States ---------------- */
 
   // 1. Initial Loading State (Hydration Stable)
-  if (authLoading || (loading && user)) {
+  if (authLoading || (loading && uid)) {
     return (
       <main
         aria-busy="true"
@@ -104,7 +151,7 @@ export default function OrdersPage() {
   }
 
   // 2. Unauthenticated State (Actionable Login CTA)
-  if (!user) {
+  if (!uid) {
     return (
       <main className="max-w-md mx-auto px-4 py-20 text-center space-y-5">
         <div className="p-4 rounded-full bg-primary/10 text-primary w-16 h-16 mx-auto flex items-center justify-center">
@@ -151,7 +198,7 @@ export default function OrdersPage() {
         <p className="text-sm text-destructive">{error}</p>
         <button
           type="button"
-          onClick={() => user?.uid && loadOrders(user.uid)}
+          onClick={handleRetry}
           className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface border border-theme text-sm font-medium hover:bg-theme/10 active:scale-95 transition-transform"
         >
           <RefreshCw className="w-4 h-4" aria-hidden="true" />

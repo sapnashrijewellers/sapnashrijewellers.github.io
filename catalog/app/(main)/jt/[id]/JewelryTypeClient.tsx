@@ -7,10 +7,11 @@ import ProductCard from "@/components/product/ProductCard";
 
 interface JewelryTypeClientProps {
   products: Product[];
+  pFilters?: SearchFilters;
 }
 
-export default function JewelryTypeClient({ products }: JewelryTypeClientProps) {
-  const [filters, setFilters] = useState<SearchFilters>({ material: "Silver" });
+export default function JewelryTypeClient({ products, pFilters }: JewelryTypeClientProps) {
+  const [filters, setFilters] = useState<SearchFilters>(pFilters ||  { material: "Silver" });
   const [sortBy, setSortBy] = useState("best-match");
 
   const visibleProducts = useMemo(() => {    

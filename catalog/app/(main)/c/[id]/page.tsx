@@ -126,7 +126,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
       {/* 5. Product Grid / Catalog listing */}
       {/* 4. Client-side Interactive Filter & Grid */}
-      <JewelryTypeClient products={filtered} />
+      <JewelryTypeClient products={filtered} pFilters={{ material: `${category.material}` }} />
       {/* 6. Contextual SEO Content */}
       <aside aria-label="Related category searches and information">
         <SEO slug={`/categories/${id}`} />

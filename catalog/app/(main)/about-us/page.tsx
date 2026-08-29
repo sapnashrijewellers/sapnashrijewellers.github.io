@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Breadcrumb from "@/components/navbar/BreadcrumbItem";
 import TestimonialScroller from "@/components/common/Testimonials";
-import popularSearches from "@/data/popularSearches.json";
 import { promises, services, certificates, faqs } from "@/data/aboutUs.json";
 
 const title = "Sapna Shri Jewellers Nagda | सपना श्री ज्वेलर्स नागदा";
@@ -288,26 +287,7 @@ export default function AboutUsPage() {
       {/* ===== Testimonials ===== */}
       <div className="mt-16">
         <TestimonialScroller />
-      </div>
-
-      {/* ===== Popular Searches ===== */}
-      <section aria-labelledby="searches-heading" className="mt-16 text-center max-w-5xl mx-auto">
-        <h2 id="searches-heading" className="text-2xl md:text-3xl font-bold text-primary mb-6">
-          लोकप्रिय खोजें (Popular Searches)
-        </h2>
-        <div className="flex flex-wrap justify-center gap-3">
-          {popularSearches.map((item) => (
-            <Link
-              key={item.search}
-              href={`/search/?q=${encodeURIComponent(item.search)}`}
-              aria-label={`Search for ${item.search}`}
-              className="px-4 py-2 bg-surface hover:bg-primary/10 border border-theme rounded-full text-sm font-medium transition-colors"
-            >
-              {item.search}
-            </Link>
-          ))}
-        </div>
-      </section>
+      </div>     
 
       {/* ===== FAQs ===== */}
       <section aria-labelledby="faq-heading" className="mt-16 max-w-4xl mx-auto">

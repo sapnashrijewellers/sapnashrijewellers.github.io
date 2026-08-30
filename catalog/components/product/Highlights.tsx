@@ -18,11 +18,9 @@ export function HighlightsTabs({ product, className = "" }: HighlightsTabsProps)
       {/* Header with Bilingual Metadata */}
       <div className="flex items-center gap-2 mb-3 pb-2 border-b border-theme/20">
         <Sparkles className="w-4 h-4 text-primary shrink-0" aria-hidden="true" />
-        <h3
-          id="product-highlights-heading"
-          className="text-sm sm:text-base font-semibold text-foreground tracking-tight"
-        >
-          उत्पाद की मुख्य विशेषताएं (Product Highlights)
+        <h3 id="product-highlights-heading"
+          className="text-sm sm:text-base font-semibold text-foreground tracking-tight">
+          Product Highlights
         </h3>
       </div>
 

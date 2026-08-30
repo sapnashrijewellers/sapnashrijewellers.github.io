@@ -173,7 +173,7 @@ export default function JewelrySearch() {
             className="text-sm md:text-base font-medium text-muted-foreground truncate"
           >
             {loading ? (
-              <span className="opacity-70">खोज रहे हैं (Searching…)</span>
+              <span className="opacity-70">Searching…</span>
             ) : query ? (
               <span>
                 <strong className="text-foreground font-semibold">
@@ -181,7 +181,7 @@ export default function JewelrySearch() {
                 </strong> result(s) for &ldquo;{query}&rdquo; 
               </span>
             ) : (
-              <span>खोज शुरू करने के लिए टाइप करें</span>
+              <span>Enter a search term to find jewellery...</span>
             )}
           </div>
 
@@ -241,18 +241,18 @@ export default function JewelrySearch() {
           className="my-16 text-center py-16 px-4 bg-surface/50 rounded-2xl border border-dashed border-theme max-w-2xl mx-auto"
         >
           <p className="text-lg font-medium text-foreground mb-2">
-            कोई परिणाम नहीं मिला (No Results Found)
+            No Results Found
           </p>
           <p className="text-sm text-muted-foreground">
-            कृपया वर्तनी की जाँच करें या अन्य कीवर्ड्स और फ़िल्टर आज़माएँ।
-          </p>
+              Please check the spelling or try other keywords and filters.
+            </p>
         </div>
       )}
 
       {/* 6. Initial State (Prompt to search) */}
       {!loading && !query && (
         <div className="my-16 text-center py-20 px-4 text-muted-foreground">
-          <p className="text-lg">कृपया आभूषण खोजने के लिए ऊपर सर्च बार में लिखें…</p>
+          <p className="text-lg">Please enter a search term to find jewellery...</p>
         </div>
       )}
     </main>

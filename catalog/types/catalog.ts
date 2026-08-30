@@ -39,17 +39,19 @@ export interface SearchFilters {
   forWhom?: string;
 }
 
-export interface BannerItem {
-  id: string;
-  link: string;
-  bannerImage: string;
-  rank: number;
-  active: boolean;
-}
-export interface Rates {
-  gold: number;
-  silver: number;
-}
+// export interface BannerItem {
+//   id: string;
+//   link: string;
+//   bannerImage: string;
+//   rank: number;
+//   active: boolean;
+// }
+
+
+// export interface Rates {
+//   gold: number;
+//   silver: number;
+// }
 
 export interface Type {
   id: number,

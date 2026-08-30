@@ -55,3 +55,4 @@ lerna-debug.log*
 
 # Project-specific
 static/
+data/

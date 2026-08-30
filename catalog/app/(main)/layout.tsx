@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Yatra_One } from "next/font/google";
 import "@/app/globals.css";
-import "@/app/splash.css";
 import { Noto_Sans_Devanagari } from "next/font/google";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/home/Footer";

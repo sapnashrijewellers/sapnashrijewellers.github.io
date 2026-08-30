@@ -57,10 +57,8 @@ export const miniSearchQueryOptions: MiniSearchSearchOptions = {
     category: 2.5,    
     description: 2,
     type: 1.3,
-    for: 1.2,
-    purity: 1.1
-  },
-  
+    for: 1.2    
+  },  
 };
 
 

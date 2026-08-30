@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "next dev -p 3003",
     "build": "next build",
-    "start": "next start",    
-    "data-sync": "node utils/data/fetchAndSave.js"
+    "start": "next start",
+    "data-sync": "tsx utils/data/fetchAndSave.ts"
   },
   "dependencies": {
     "canvas-confetti": "^1.9.4",
@@ -23,19 +23,19 @@
     "sitemap": "^9.0.0",
     "workbox-cacheable-response": "^7.4.1"
   },
-  "devDependencies": {    
+  "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/canvas-confetti": "^1.9.0",
     "@types/node": "^20",
     "@types/qrcode": "^1.5.6",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "baseline-browser-mapping": "^2.11.20",    
-    "globals": "^17.11.0",    
+    "baseline-browser-mapping": "^2.11.20",
+    "globals": "^17.11.0",
     "schema-dts": "^2.0.0",
     "tailwindcss": "^4",
+    "tsx": "^4",
     "typescript": "^5"
-    
   },
   "browserslist": [
     "last 2 Chrome versions",

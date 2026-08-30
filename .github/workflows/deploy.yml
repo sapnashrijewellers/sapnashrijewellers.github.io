@@ -1,9 +1,11 @@
 # .github/workflows/deploy.yml
 #
-# Production deployment for:
+# Production deployment:
 #   Next.js 16 static export (SSG)
-#   -> GitHub Pages
-#   -> sapnashrijewellers.in
+#       ->
+#   GitHub Pages
+#       ->
+#   sapnashrijewellers.in
 #
 # Deployment flow:
 #
@@ -14,7 +16,7 @@
 #          |
 #          +--> npm ci
 #          |
-#          +--> DataGenerator/fetchAndSave.js
+#          +--> npm run data-sync
 #          |       |
 #          |       +--> Google Apps Script / Google Sheets
 #          |       |
@@ -32,218 +34,164 @@
 #          +--> deploy to GitHub Pages
 #
 # IMPORTANT:
-# - This workflow intentionally does NOT use gh-pages.
-# - This workflow intentionally does NOT push generated files back
-#   into the repository.
-# - The repository's main branch remains the source of truth.
-# - Deployment is manual using the GitHub Actions UI.
+# - No Turborepo
+# - No catalog directory
+# - No gh-pages package
+# - No gh-pages branch
+# - Generated files are NOT committed back to the repository
+# - main remains the source of truth
+# - Deployment is manually triggered from GitHub Actions
 #
 
 name: Deploy Production to GitHub Pages
 
-
 # ---------------------------------------------------------------------------
 # TRIGGERS
 # ---------------------------------------------------------------------------
-#
-# workflow_dispatch:
-#   Allows deployment from:
-#       GitHub -> Actions -> Deploy Production to GitHub Pages
-#
-# No "push" trigger is configured.
-#
-# Therefore:
-#   Pushing code to main DOES NOT automatically deploy.
-#
-# This is useful for your requirement that deployment should be explicitly
-# initiated by an authorized team member.
-#
+
 on:
   workflow_dispatch:
-
 
 # ---------------------------------------------------------------------------
 # GLOBAL PERMISSIONS
 # ---------------------------------------------------------------------------
-#
-# These are the minimum permissions required for a GitHub Pages deployment.
-#
-# contents: read
-#   Allows checkout of repository source code.
-#
-# pages: write
-#   Allows the deployment action to publish the Pages artifact.
-#
-# id-token: write
-#   Required by GitHub Pages deployment for its OIDC authentication.
-#
+
 permissions:
   contents: read
   pages: write
   id-token: write
 
-
 # ---------------------------------------------------------------------------
 # CONCURRENCY
 # ---------------------------------------------------------------------------
-#
-# Prevent two production deployments from running simultaneously.
-#
-# Example:
-#
-# User A starts deployment
-# User B starts another deployment before A finishes
-#
-# The second deployment will wait / replace the previous pending deployment
-# rather than allowing multiple production deployments to race each other.
-#
-concurrency:
-  group: "pages-production"
-  cancel-in-progress: false
 
+concurrency:
+  group: pages-production
+  cancel-in-progress: false
 
 jobs:
 
   # =========================================================================
   # BUILD
   # =========================================================================
-  #
-  # Everything required to generate the static website happens here.
-  #
+
   build:
     name: Build static Next.js site
     runs-on: ubuntu-latest
 
-    environment:
-      name: production
-
     steps:
 
       # ---------------------------------------------------------------------
-      # Checkout source code
+      # Checkout repository
       # ---------------------------------------------------------------------
-      #
-      # By default this checks out the branch/ref from which the workflow
-      # was manually started.
-      #
-      # When you select "main" in the Actions UI, the latest main branch
-      # code will be used.
-      #
+
       - name: Checkout repository
         uses: actions/checkout@v6
-
 
       # ---------------------------------------------------------------------
       # Setup Node.js
       # ---------------------------------------------------------------------
-      #
-      # Next.js 16 requires a modern Node.js runtime.
-      #
-      # Node 22 is deliberately selected instead of "latest" so that a
-      # future Node release does not unexpectedly change your production
-      # build environment.
-      #
+
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
           node-version: "22"
           cache: "npm"
-      #------------    
-      # setting up environment variable for application
-      - name: Create production environment
-        working-directory: .
-        run: |
-          cat > .env.production <<EOF
-          NEXT_PUBLIC_BASE_URL=${{ vars.NEXT_PUBLIC_BASE_URL }}
-          NEXT_PUBLIC_BASE_IMAGE_URL=${{ vars.NEXT_PUBLIC_BASE_IMAGE_URL }}
-          NEXT_PUBLIC_FIREBASE_API_KEY=${{ vars.NEXT_PUBLIC_FIREBASE_API_KEY }}
-          NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=${{ vars.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN }}
-          NEXT_PUBLIC_FIREBASE_PROJECT_ID=${{ vars.NEXT_PUBLIC_FIREBASE_PROJECT_ID }}
-          NEXT_PUBLIC_FIREBASE_APP_ID=${{ vars.NEXT_PUBLIC_FIREBASE_APP_ID }}
-          NEXT_PUBLIC_FIREBASE_STORAGEBUCKET=${{ vars.NEXT_PUBLIC_FIREBASE_STORAGEBUCKET }}
-          NEXT_PUBLIC_FIREBASE_MESSAGINGSENDERID=${{ vars.NEXT_PUBLIC_FIREBASE_MESSAGINGSENDERID }}
-          NEXT_PUBLIC_FIREBASE_MEASUREMENTID=${{ vars.NEXT_PUBLIC_FIREBASE_MEASUREMENTID }}
-          NEXT_PUBLIC_WORKER_URL=${{ vars.NEXT_PUBLIC_WORKER_URL }}
-          EOF
+
       # ---------------------------------------------------------------------
       # Install dependencies
       # ---------------------------------------------------------------------
-      #
-      # npm ci:
-      #   - Uses package-lock.json
-      #   - Produces reproducible installations
-      #   - Removes existing node_modules first
-      #   - Better suited for CI/CD than npm install
-      #
-      # IMPORTANT:
-      # Commit package-lock.json to the repository.
-      #
+
       - name: Install npm dependencies
         run: npm ci
 
-      - name: Verify production environment
-        working-directory: .
-        run: |
-          if [ -z "$NEXT_PUBLIC_FIREBASE_API_KEY" ]; then
-            echo "::error::NEXT_PUBLIC_FIREBASE_API_KEY is not available."
-            exit 1
-          fi
+      # ---------------------------------------------------------------------
+      # Verify required production configuration
+      # ---------------------------------------------------------------------
 
-          echo "Firebase API key is available."
-
+      - name: Verify production configuration
         env:
+          NEXT_PUBLIC_BASE_URL: ${{ vars.NEXT_PUBLIC_BASE_URL }}
+          NEXT_PUBLIC_BASE_IMAGE_URL: ${{ vars.NEXT_PUBLIC_BASE_IMAGE_URL }}
           NEXT_PUBLIC_FIREBASE_API_KEY: ${{ vars.NEXT_PUBLIC_FIREBASE_API_KEY }}
-          
+          NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN: ${{ vars.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN }}
+          NEXT_PUBLIC_FIREBASE_PROJECT_ID: ${{ vars.NEXT_PUBLIC_FIREBASE_PROJECT_ID }}
+          NEXT_PUBLIC_FIREBASE_APP_ID: ${{ vars.NEXT_PUBLIC_FIREBASE_APP_ID }}
+          NEXT_PUBLIC_FIREBASE_STORAGEBUCKET: ${{ vars.NEXT_PUBLIC_FIREBASE_STORAGEBUCKET }}
+          NEXT_PUBLIC_FIREBASE_MESSAGINGSENDERID: ${{ vars.NEXT_PUBLIC_FIREBASE_MESSAGINGSENDERID }}
+          NEXT_PUBLIC_FIREBASE_MEASUREMENTID: ${{ vars.NEXT_PUBLIC_FIREBASE_MEASUREMENTID }}
+          NEXT_PUBLIC_WORKER_URL: ${{ vars.NEXT_PUBLIC_WORKER_URL }}
+        run: |
+          required_vars=(
+            NEXT_PUBLIC_BASE_URL
+            NEXT_PUBLIC_BASE_IMAGE_URL
+            NEXT_PUBLIC_FIREBASE_API_KEY
+            NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
+            NEXT_PUBLIC_FIREBASE_PROJECT_ID
+            NEXT_PUBLIC_FIREBASE_APP_ID
+            NEXT_PUBLIC_FIREBASE_STORAGEBUCKET
+            NEXT_PUBLIC_FIREBASE_MESSAGINGSENDERID
+            NEXT_PUBLIC_FIREBASE_MEASUREMENTID
+            NEXT_PUBLIC_WORKER_URL
+          )
+
+          for variable in "${required_vars[@]}"; do
+            if [ -z "${!variable}" ]; then
+              echo "::error::$variable is not configured in GitHub Actions Variables."
+              exit 1
+            fi
+          done
+
+          echo "All required production variables are available."
+
       # ---------------------------------------------------------------------
-      # Generate website data
+      # Create Next.js production environment
       # ---------------------------------------------------------------------
-      #
-      # Your existing process:
-      #
-      #   cd DataGenerator
-      #   node fetchAndSave.js
-      #
-      # is executed directly on the GitHub-hosted runner.
-      #
-      # This means your local computer is NOT required.
-      #
-      # The runner has normal outbound Internet access, so your Node.js
-      # script can communicate with your Google Apps Script endpoint.
-      #
-      # IMPORTANT:
-      # Your Google Apps Script endpoint must be reachable by the runner.
-      #
+
+      - name: Create production environment
+        env:
+          NEXT_PUBLIC_BASE_URL: ${{ vars.NEXT_PUBLIC_BASE_URL }}
+          NEXT_PUBLIC_BASE_IMAGE_URL: ${{ vars.NEXT_PUBLIC_BASE_IMAGE_URL }}
+          NEXT_PUBLIC_FIREBASE_API_KEY: ${{ vars.NEXT_PUBLIC_FIREBASE_API_KEY }}
+          NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN: ${{ vars.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN }}
+          NEXT_PUBLIC_FIREBASE_PROJECT_ID: ${{ vars.NEXT_PUBLIC_FIREBASE_PROJECT_ID }}
+          NEXT_PUBLIC_FIREBASE_APP_ID: ${{ vars.NEXT_PUBLIC_FIREBASE_APP_ID }}
+          NEXT_PUBLIC_FIREBASE_STORAGEBUCKET: ${{ vars.NEXT_PUBLIC_FIREBASE_STORAGEBUCKET }}
+          NEXT_PUBLIC_FIREBASE_MESSAGINGSENDERID: ${{ vars.NEXT_PUBLIC_FIREBASE_MESSAGINGSENDERID }}
+          NEXT_PUBLIC_FIREBASE_MEASUREMENTID: ${{ vars.NEXT_PUBLIC_FIREBASE_MEASUREMENTID }}
+          NEXT_PUBLIC_WORKER_URL: ${{ vars.NEXT_PUBLIC_WORKER_URL }}
+        run: |
+          cat > .env.production <<EOF
+          NEXT_PUBLIC_BASE_URL=${NEXT_PUBLIC_BASE_URL}
+          NEXT_PUBLIC_BASE_IMAGE_URL=${NEXT_PUBLIC_BASE_IMAGE_URL}
+          NEXT_PUBLIC_FIREBASE_API_KEY=${NEXT_PUBLIC_FIREBASE_API_KEY}
+          NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=${NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN}
+          NEXT_PUBLIC_FIREBASE_PROJECT_ID=${NEXT_PUBLIC_FIREBASE_PROJECT_ID}
+          NEXT_PUBLIC_FIREBASE_APP_ID=${NEXT_PUBLIC_FIREBASE_APP_ID}
+          NEXT_PUBLIC_FIREBASE_STORAGEBUCKET=${NEXT_PUBLIC_FIREBASE_STORAGEBUCKET}
+          NEXT_PUBLIC_FIREBASE_MESSAGINGSENDERID=${NEXT_PUBLIC_FIREBASE_MESSAGINGSENDERID}
+          NEXT_PUBLIC_FIREBASE_MEASUREMENTID=${NEXT_PUBLIC_FIREBASE_MEASUREMENTID}
+          NEXT_PUBLIC_WORKER_URL=${NEXT_PUBLIC_WORKER_URL}
+          EOF
+
+      # ---------------------------------------------------------------------
+      # Generate latest website data
+      # ---------------------------------------------------------------------
+
       - name: Fetch latest product data from Google
-        run: | 
-          npm run data-sync
+        run: npm run data-sync
+
       # ---------------------------------------------------------------------
       # Build Next.js static site
       # ---------------------------------------------------------------------
-      #
-      # Your next.config.js contains:
-      #
-      #   output: "export"
-      #
-      # Therefore:
-      #
-      #   npm run build
-      #
-      # generates:
-      #
-      #   /out
-      #
-      # containing the complete static website.
-      #
+
       - name: Build Next.js static site
         run: npm run build
-
 
       # ---------------------------------------------------------------------
       # Verify Next.js output
       # ---------------------------------------------------------------------
-      #
-      # Fail the deployment if Next.js didn't generate the expected output.
-      #
+
       - name: Verify Next.js output
         run: |
           if [ ! -d "out" ]; then
@@ -257,106 +205,51 @@ jobs:
           fi
 
           echo "Static site generated successfully."
-
           echo "Output size:"
           du -sh out
 
+      # ---------------------------------------------------------------------
+      # Configure custom domain
+      # ---------------------------------------------------------------------
 
-      # ---------------------------------------------------------------------
-      # GitHub Pages custom domain
-      # ---------------------------------------------------------------------
-      #
-      # Your custom domain is:
-      #
-      #   sapnashrijewellers.in
-      #
-      # GitHub Pages uses the CNAME file inside the published directory.
-      #
-      # This replaces your old:
-      #
-      #   echo 'sapnashrijewellers.in' > out/CNAME
-      #
-      # from the gh-pages deployment script.
-      #
       - name: Configure custom domain
         run: |
           echo "sapnashrijewellers.in" > out/CNAME
 
-
       # ---------------------------------------------------------------------
       # Disable Jekyll processing
       # ---------------------------------------------------------------------
-      #
-      # This replaces:
-      #
-      #   touch out/.nojekyll
-      #
-      # from your old deployment command.
-      #
-      # It ensures GitHub Pages serves the generated static files directly.
-      #
+
       - name: Disable Jekyll processing
         run: |
           touch out/.nojekyll
 
-
       # ---------------------------------------------------------------------
       # Configure GitHub Pages
       # ---------------------------------------------------------------------
-      #
-      # This obtains GitHub Pages metadata and prepares the deployment.
-      #
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
+      # ---------------------------------------------------------------------
+      # Upload GitHub Pages artifact
+      # ---------------------------------------------------------------------
 
-      # ---------------------------------------------------------------------
-      # Upload static website
-      # ---------------------------------------------------------------------
-      #
-      # The entire /out directory becomes the GitHub Pages deployment
-      # artifact.
-      #
-      # IMPORTANT:
-      # Nothing is committed back to main.
-      # Nothing is pushed to a gh-pages branch.
-      #
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
           path: "./out"
 
-
   # =========================================================================
   # DEPLOY
   # =========================================================================
-  #
-  # This job actually publishes the artifact to GitHub Pages.
-  #
+
   deploy:
     name: Deploy to production
     runs-on: ubuntu-latest
 
-    # -----------------------------------------------------------------------
-    # Build must succeed before deployment can start.
-    # -----------------------------------------------------------------------
     needs: build
 
-    # -----------------------------------------------------------------------
-    # GitHub Pages production environment
-    # -----------------------------------------------------------------------
-    #
-    # IMPORTANT:
-    #
-    # Configure this "github-pages" environment in:
-    #
-    #   Repository
-    #   -> Settings
-    #   -> Environments
-    #
-    # You can add required reviewers here to control who is allowed to
-    # approve the actual production deployment.
-    #
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -366,13 +259,7 @@ jobs:
       # ---------------------------------------------------------------------
       # Deploy artifact to GitHub Pages
       # ---------------------------------------------------------------------
-      #
-      # This replaces:
-      #
-      #   gh-pages -d out --dotfiles
-      #
-      # completely.
-      #
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

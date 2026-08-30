@@ -12,7 +12,8 @@ export default function OrderViaWhatsappButton({
   title = "Order via WhatsApp",
   className = "",
 }: OrderViaWhatsappButtonProps) {
-  const rawWhatsApp = process.env.NEXT_PUBLIC_WHATSAPP || "918234042231";
+  const rawWhatsApp = process.env.NEXT_PUBLIC_WHATSAPP;
+  if (!rawWhatsApp) return null;
   const sanitizedWhatsApp = rawWhatsApp.replace(/[^0-9]/g, "");
   const baseUrl = (
     process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in"
@@ -32,7 +33,7 @@ export default function OrderViaWhatsappButton({
 `.trim();
 
   const whatsappUrl = `https://wa.me/${sanitizedWhatsApp}?text=${encodeURIComponent(
-    message
+    message,
   )}`;
 
   const accessibleLabel = `WhatsApp पर ऑर्डर करें: ${product.name} (Order ${product.name} via WhatsApp enquiry)`;

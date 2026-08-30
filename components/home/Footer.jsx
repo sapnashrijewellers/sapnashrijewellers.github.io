@@ -13,7 +13,7 @@ import BrandLogo from "../common/BrandLogo";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
-  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP || "8234042231";
+  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP;
   const sanitizedWhatsApp = whatsappNumber.replace(/[^0-9]/g, "");
 
   return (

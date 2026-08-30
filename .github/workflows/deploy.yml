@@ -127,6 +127,7 @@ jobs:
           NEXT_PUBLIC_FIREBASE_MESSAGINGSENDERID=${{ vars.NEXT_PUBLIC_FIREBASE_MESSAGINGSENDERID }}
           NEXT_PUBLIC_FIREBASE_MEASUREMENTID=${{ vars.NEXT_PUBLIC_FIREBASE_MEASUREMENTID }}
           NEXT_PUBLIC_WORKER_URL=${{ vars.NEXT_PUBLIC_WORKER_URL }}
+          NEXT_PUBLIC_WHATSAPP=${{ vars.NEXT_PUBLIC_WHATSAPP }}
           EOF
 
       # ---------------------------------------------------------------------
@@ -147,6 +148,7 @@ jobs:
             NEXT_PUBLIC_FIREBASE_MESSAGINGSENDERID
             NEXT_PUBLIC_FIREBASE_MEASUREMENTID
             NEXT_PUBLIC_WORKER_URL
+            NEXT_PUBLIC_WHATSAPP
           )
 
           for variable in "${required_vars[@]}"; do

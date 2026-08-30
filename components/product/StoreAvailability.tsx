@@ -10,7 +10,8 @@ export default function StoreAvailability({
   productName = "Jewellery Item",
   className = "",
 }: StoreAvailabilityProps) {
-  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP || "918234042231";
+  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP;
+  if (!whatsappNumber) return null;
   const sanitizedWhatsApp = whatsappNumber.replace(/[^0-9]/g, "");
 
   const appointmentMessage = `Hello Sapna Shri Jewellers, I would like to book an in-store appointment for local pickup of: ${productName}.`;
@@ -35,7 +36,10 @@ export default function StoreAvailability({
       {/* Availability Status */}
       <p className="mb-3.5 text-xs sm:text-sm text-foreground/90 leading-relaxed">
         This product is available for{" "}
-        <span className="font-semibold text-foreground">Local Store Pickup</span> (MG Road, Nagda).
+        <span className="font-semibold text-foreground">
+          Local Store Pickup
+        </span>{" "}
+        (MG Road, Nagda).
       </p>
 
       {/* Showroom Card */}
@@ -45,14 +49,20 @@ export default function StoreAvailability({
             <h4 className="text-sm sm:text-base font-semibold text-foreground font-yatra">
               Sapna Shri Jewellers
             </h4>
-            
+
             <p className="flex items-center gap-1.5 opacity-90">
-              <MapPin className="h-3.5 w-3.5 text-primary shrink-0" aria-hidden="true" />
+              <MapPin
+                className="h-3.5 w-3.5 text-primary shrink-0"
+                aria-hidden="true"
+              />
               <span>MG Road, Near Jain Mandir, Nagda Jn., MP, India</span>
             </p>
 
             <p className="flex items-center gap-1.5">
-              <Phone className="h-3.5 w-3.5 text-primary shrink-0" aria-hidden="true" />
+              <Phone
+                className="h-3.5 w-3.5 text-primary shrink-0"
+                aria-hidden="true"
+              />
               <a
                 href={`tel:+${sanitizedWhatsApp}`}
                 aria-label={`Call Sapna Shri Jewellers at +${sanitizedWhatsApp}`}
@@ -65,7 +75,10 @@ export default function StoreAvailability({
 
           {/* Turnaround Badge */}
           <div className="inline-flex items-center gap-1.5 self-start rounded-full bg-surface border border-theme/40 px-3 py-1 text-[11px] sm:text-xs font-medium text-foreground/90 shrink-0">
-            <Clock className="h-3.5 w-3.5 text-primary shrink-0" aria-hidden="true" />
+            <Clock
+              className="h-3.5 w-3.5 text-primary shrink-0"
+              aria-hidden="true"
+            />
             <span>Usually ready in 24 hours</span>
           </div>
         </div>
@@ -73,7 +86,8 @@ export default function StoreAvailability({
         {/* In-Store Appointment CTA Section */}
         <div className="pt-3 border-t border-theme/20 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <p className="text-xs text-muted-foreground leading-snug">
-            Want a personalized in-store preview? Book an appointment via WhatsApp.
+            Want a personalized in-store preview? Book an appointment via
+            WhatsApp.
           </p>
 
           <a

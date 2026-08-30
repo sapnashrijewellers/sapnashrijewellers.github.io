@@ -43,7 +43,7 @@
 # - Deployment is manually triggered from GitHub Actions
 #
 
-name: Deploy Production to GitHub Pages
+name: Deploy to Production
 
 # ---------------------------------------------------------------------------
 # TRIGGERS

@@ -1,4 +1,4 @@
-import { writeFile } from "node:fs/promises";
+import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 import buildSearchIndex from "./buildSearchIndex";
@@ -37,6 +37,10 @@ function getErrorMessage(error: unknown): string {
  */
 async function fetchAndSaveData(): Promise<void> {
   console.log(`\nStarting data fetch from: ${API_URL}`);
+
+  // Ensure required directories exist.
+  await mkdir(DATA_FOLDER, { recursive: true });
+  await mkdir(PUBLIC_DATA_FOLDER, { recursive: true });
 
   let apiResponse: unknown;
 

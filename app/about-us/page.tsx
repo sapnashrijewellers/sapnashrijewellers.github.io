@@ -8,8 +8,8 @@ import { promises, services, certificates, faqs } from "@/data/aboutUs.json";
 const title = "Sapna Shri Jewellers Nagda | सपना श्री ज्वेलर्स नागदा";
 const description =
   "Sapna Shri Jewellers Nagda - सोने और चांदी के आभूषणों में 35+ वर्षों का अनुभव। BIS 916 हॉलमार्क गोल्ड, सर्टिफाइड डायमंड और पारदर्शी सेवा।";
-const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in";
-const imageUrl = `${baseURL}/static/img/shop.webp`;
+const baseURL = process.env.NEXT_PUBLIC_BASE_IMAGE_URL ;
+const imageUrl = `${baseURL}shop.webp`;
 
 export const metadata: Metadata = {
   title,
@@ -45,7 +45,7 @@ export default function AboutUsPage() {
         name: "Sapna Shri Jewellers",
         alternateName: "सपना श्री ज्वेलर्स",
         url: `${baseURL}/about-us`,
-        logo: `${baseURL}/static/img/shop.webp`,
+        logo: `${baseURL}shop.webp`,
         image: imageUrl,
         description,
         telephone: "+91-8234042231",
@@ -161,7 +161,7 @@ export default function AboutUsPage() {
             <div key={owner.name} className="text-center">
               <div className="relative w-48 h-64 mx-auto mb-3">
                 <Image
-                  src={`${baseURL}/static/img/${owner.img}`}
+                  src={`${baseURL}${owner.img}`}
                   alt={`${owner.name} - ${owner.title}`}
                   fill
                   sizes="(max-width: 640px) 192px, 192px"

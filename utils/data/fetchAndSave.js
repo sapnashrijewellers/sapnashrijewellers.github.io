@@ -6,8 +6,8 @@ import path from 'path';
 
 import buildSearchIndex from "./buildSearchIndex.js";
 
-const DataFolder = "./catalog/data/";
-const PublicDataFolder = "./catalog/public/data/";
+const DataFolder = "./data/";
+const PublicDataFolder = "./public/data/";
 
 // The URL of your Google Apps Script Web App
 const API_URL =

@@ -5,11 +5,7 @@ const nextConfig: NextConfig = {
   images: { unoptimized: true, },
   trailingSlash: true,
   assetPrefix: "/",
-  basePath: "",
-  // env: {
-  //   NEXT_PUBLIC_BASE_URL: 'https://sapnashrijewellers.in',
-  //   NEXT_PUBLIC_WHATSAPP: '918234042231',
-  // }, 
+  basePath: "",  
 };
 
 export default nextConfig;

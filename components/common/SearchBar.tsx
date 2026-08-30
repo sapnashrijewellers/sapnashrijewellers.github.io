@@ -178,7 +178,7 @@ function SearchBarInput({ initialQuery = "" }: SearchBarProps) {
       className="relative w-full"
     >
       <label htmlFor={inputId} className="sr-only">
-        खोजें या बोलें (Search jewellery catalog)
+        Search jewellery catalog (type or speak to search)
       </label>
 
       {/* Screen-reader live status for voice feedback */}

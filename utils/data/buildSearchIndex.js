@@ -2,13 +2,13 @@ import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import MiniSearch from 'minisearch'
-import { miniSearchIndexOptions, normalize } from "../catalog/search/shared.js";
+import { miniSearchIndexOptions, normalize } from "@/search/shared.js";
 
 export default async function buildSearchIndex() {
 
    const __filename = fileURLToPath(import.meta.url);
    const __dirname = path.dirname(__filename);
-   const catalogPath = path.join(__dirname, '../catalog/data/products.json');
+   const catalogPath = path.join(__dirname, '../data/products.json');
    const catalog = JSON.parse(fs.readFileSync(catalogPath, 'utf-8'));
 
    const productsForIndex = catalog      
@@ -35,7 +35,7 @@ export default async function buildSearchIndex() {
    miniSearch.addAll(productsForIndex)
 
 
-   const outputDir = path.join(__dirname, '../catalog/public/data')
+   const outputDir = path.join(__dirname, '../public/data')
    fs.mkdirSync(outputDir, { recursive: true })
 
    const outputPath = path.join(outputDir, 'search-index.json')

@@ -48,7 +48,7 @@ export default function JewelleryTypeBar({
         className="
           flex gap-3 sm:gap-4 overflow-x-auto p-2 sm:p-3
           scrollbar-hide snap-x snap-mandatory
-          focus:outline-none  rounded-2xl
+          rounded-2xl
         "
       >
         {activeTypes.map((item) => {
@@ -66,8 +66,7 @@ export default function JewelleryTypeBar({
                 gap-2 rounded-2xl bg-surface px-2.5 py-3.5 shadow-sm
                 snap-start text-center
                 transition-[transform,box-shadow,border-color] duration-150 ease-out will-change-[transform]
-                hover:-translate-y-1 hover:shadow-md hover:border-primary/40
-                focus:outline-none focus:ring-2 focus:ring-primary
+                hover:-translate-y-1 hover:shadow-md hover:border-primary/40                
               "
             >
               {/* Badge / Icon Wrapper */}

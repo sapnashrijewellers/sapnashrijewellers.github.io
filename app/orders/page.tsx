@@ -345,7 +345,7 @@ function OrderCard({ order, productsMap }: OrderCardProps) {
                 ) : (
                   <div className="flex flex-col justify-between h-full border border-theme/40 rounded-2xl p-4 bg-background/50 text-center space-y-2">
                     <div className="space-y-1">
-                      <p className="text-xs sm:text-sm font-medium text-foreground line-clamp-2">
+                      <p className="text-xs sm:text-sm font-medium text-foreground">
                         {item.title}
                       </p>
                       <p className="text-[11px] text-muted-foreground">

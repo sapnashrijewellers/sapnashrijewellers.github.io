@@ -117,7 +117,7 @@ export default function ProductCard({
         {/* 3. Product Info & Metadata */}
         <div className="flex flex-col justify-between grow p-3 sm:p-3.5 w-full bg-card border-t border-theme/20">
           <div>
-            <h3 className="text-xs sm:text-sm font-medium leading-snug line-clamp-2 text-foreground group-hover:text-primary transition-colors duration-150">
+            <h3 className="text-xs sm:text-sm font-medium leading-snug text-foreground group-hover:text-primary transition-colors duration-150">
               {product.name}
             </h3>
 

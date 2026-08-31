@@ -126,7 +126,7 @@ export default function Tooltip({
             aria-label={`Read full policy details at ${href}`}
             className="inline-flex items-center text-xs font-semibold text-primary hover:underline focus:outline-none focus:ring-1 focus:ring-primary rounded"
           >
-            पूरा विवरण पढ़ें (Read full policy) &rarr;
+            Read full policy &rarr;
           </Link>
         </div>
       </div>

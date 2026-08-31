@@ -20,16 +20,16 @@ export default function StoreAvailability({
   return (
     <section
       aria-labelledby="store-availability-heading"
-      className={`mt-6 rounded-2xl border border-theme/40 bg-surface/90 p-4 sm:p-5 shadow-sm ${className}`}
+      className={`mt-6 rounded-2xl  bg-surface p-2 sm:p-5 shadow-sm ${className}`}
     >
       {/* Header */}
-      <div className="mb-3 flex items-center gap-2 border-b border-theme/20 pb-2.5">
+      <div className="mb-3 flex items-center gap-2 pb-1">
         <Store className="h-5 w-5 text-primary shrink-0" aria-hidden="true" />
         <h3
           id="store-availability-heading"
           className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-primary"
         >
-          Store Availability &bull; स्टोर उपलब्धता
+          Store Availability
         </h3>
       </div>
 
@@ -43,7 +43,7 @@ export default function StoreAvailability({
       </p>
 
       {/* Showroom Card */}
-      <div className="rounded-xl border border-theme/50 bg-background/60 p-3.5 sm:p-4 space-y-3">
+      <div className="rounded-xl  bg-background/60 p-3.5 sm:p-4 space-y-3">
         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
           <address className="not-italic space-y-1 text-xs sm:text-sm text-foreground/85">
             <h4 className="text-sm sm:text-base font-semibold text-foreground font-yatra">

@@ -48,7 +48,7 @@ export default function JewelleryTypeBar({
         className="
           flex gap-3 sm:gap-4 overflow-x-auto p-2 sm:p-3
           scrollbar-hide snap-x snap-mandatory
-          focus:outline-none focus:ring-1 focus:ring-primary/40 rounded-2xl
+          focus:outline-none  rounded-2xl
         "
       >
         {activeTypes.map((item) => {

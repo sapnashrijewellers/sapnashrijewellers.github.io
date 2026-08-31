@@ -121,7 +121,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
       {/* 4. Promotional/Category Rotating Banner */}
       <section aria-label={`${category.name} featured banners`} className="mb-8">
-        <RotatingBanner key={category.id} page={String(category.id)} />
+        <RotatingBanner key={category.id}/>
       </section>
 
       {/* 5. Product Grid / Catalog listing */}

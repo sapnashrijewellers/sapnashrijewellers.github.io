@@ -61,10 +61,7 @@ export default function SignatureCollections({
           className="au-h2 text-2xl sm:text-3xl font-bold text-foreground tracking-tight"
         >
           सिग्नेचर कलेक्शंस (Our Signature Collections)
-        </h2>
-        <p className="text-xs sm:text-sm text-muted-foreground mt-1">
-          हॉलमार्क प्रमाणित सोने और चांदी के आभूषण (Hallmarked Pure {material} Jewellery)
-        </p>
+        </h2>        
       </div>
 
       {/* Material Selector Toggle */}

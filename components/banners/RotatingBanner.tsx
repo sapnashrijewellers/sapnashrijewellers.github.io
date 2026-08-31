@@ -24,8 +24,7 @@ const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 const baseImageURL = process.env.NEXT_PUBLIC_BASE_IMAGE_URL;
 
 export default function RotatingBanner({
-  interval = 8000,
-  page = "home",
+  interval = 8000,  
   className = "",
 }: RotatingBannerProps) {
   const [index, setIndex] = useState(0);
@@ -60,7 +59,7 @@ export default function RotatingBanner({
       onBlur={() => setIsPaused(false)}
     >
       {/* Aspect Ratio Container preventing CLS across breakpoints */}
-      <div className="relative w-full aspect-[4/3] sm:aspect-[2.2/1] lg:aspect-[3/1] max-h-[520px] overflow-hidden rounded-2xl shadow-md bg-muted/20 border border-theme/30">
+      <div className="relative w-full aspect-[4/3] sm:aspect-[2.2/1] lg:aspect-[3/1] max-h-[520px] overflow-hidden rounded-2xl shadow-md bg-muted/20">
         <Link
           href={bannerHref}
           aria-label={current.text}

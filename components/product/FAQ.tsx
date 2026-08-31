@@ -15,11 +15,12 @@ interface FAQProps {
 }
 
 export default function FAQ({ product, className = "" }: FAQProps) {
-  const hasHighlights = Array.isArray(product.highlights) && product.highlights.length > 0;
+  const hasHighlights =
+    Array.isArray(product.highlights) && product.highlights.length > 0;
   if (!hasHighlights) return null;
 
   const productFaqs = (faqsData as FAQItem[]).filter(
-    (f) => String(f.productId) === String(product.id)
+    (f) => String(f.productId) === String(product.id),
   );
 
   if (productFaqs.length === 0) return null;
@@ -41,7 +42,7 @@ export default function FAQ({ product, className = "" }: FAQProps) {
   return (
     <section
       aria-labelledby="faq-section-heading"
-      className={`relative rounded-2xl p-5 sm:p-6 mb-6 border border-theme/40 bg-surface/90 shadow-sm ${className}`}
+      className={`relative rounded-2xl p-5 sm:p-6 mb-6 bg-surface/90 shadow-sm ${className}`}
       style={{
         background: `linear-gradient(
           180deg,
@@ -60,10 +61,13 @@ export default function FAQ({ product, className = "" }: FAQProps) {
 
       {/* Header */}
       <div className="flex items-center gap-2 mb-4 pb-2 border-b border-theme/20">
-        <HelpCircle className="w-5 h-5 text-primary shrink-0" aria-hidden="true" />
+        <HelpCircle
+          className="w-5 h-5 text-primary shrink-0"
+          aria-hidden="true"
+        />
         <h3
           id="faq-section-heading"
-          className="text-base sm:text-lg font-bold tracking-wide uppercase text-primary font-yatra"
+          className="text-xl font-bold tracking-wide uppercase text-primary font-yatra"
         >
           अक्सर पूछे जाने वाले प्रश्न (FAQs)
         </h3>
@@ -79,10 +83,13 @@ export default function FAQ({ product, className = "" }: FAQProps) {
         {productFaqs.map((f, index) => (
           <div
             key={`${f.q}-${index}`}
-            className="border border-theme/50 rounded-2xl bg-surface/95 p-4 sm:p-5 shadow-sm transition-[transform,box-shadow] duration-150 ease-out will-change-[transform]"
+            className="rounded-2xl bg-surface/95 p-4 sm:p-5 shadow-sm transition-[transform,box-shadow] duration-150 ease-out will-change-[transform]"
           >
             <dt className="text-sm sm:text-base font-semibold text-foreground leading-snug flex items-start gap-2">
-              <span className="text-primary font-bold select-none" aria-hidden="true">
+              <span
+                className="text-primary font-bold select-none"
+                aria-hidden="true"
+              >
                 Q.
               </span>
               <span>{f.q}</span>

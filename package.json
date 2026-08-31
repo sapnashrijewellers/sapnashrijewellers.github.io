@@ -7,6 +7,7 @@
     "dev": "next dev -p 3003",
     "build": "next build",
     "start": "next start",
+    "typecheck": "tsc --noEmit",
     "data-sync": "tsx utils/data/fetchAndSave.ts"
   },
   "dependencies": {

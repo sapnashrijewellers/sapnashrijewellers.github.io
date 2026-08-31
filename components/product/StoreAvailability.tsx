@@ -100,7 +100,7 @@ export default function StoreAvailability({
               inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl
               bg-[#25D366] text-white font-medium text-xs sm:text-sm shadow-sm
               hover:bg-[#20bd5a] hover:scale-[1.01] active:scale-95
-              transition-[transform,background-color] duration-150 ease-out will-change-[transform]
+              transition-[transform,background-color] duration-150 ease-out will-change-transform
               focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-1 shrink-0
             "
           >

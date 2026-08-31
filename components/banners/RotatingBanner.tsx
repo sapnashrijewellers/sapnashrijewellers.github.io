@@ -59,7 +59,7 @@ export default function RotatingBanner({
       onBlur={() => setIsPaused(false)}
     >
       {/* Aspect Ratio Container preventing CLS across breakpoints */}
-      <div className="relative w-full aspect-[4/3] sm:aspect-[2.2/1] lg:aspect-[3/1] max-h-[520px] overflow-hidden rounded-2xl shadow-md bg-muted/20">
+      <div className="relative w-full aspect-4/3 sm:aspect-[2.2/1] lg:aspect-3/1 max-h-130 overflow-hidden rounded-2xl shadow-md bg-muted/20">
         <Link
           href={bannerHref}
           aria-label={current.text}

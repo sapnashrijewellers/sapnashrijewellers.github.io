@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import QRCode from "qrcode";
-import {generateUPIString} from "@/utils/generateUPI";
+import {generateUPIString} from "@/utils/cart/generateUPI";
 import Image from "next/image";
 
 

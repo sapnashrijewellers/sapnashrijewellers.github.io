@@ -23,7 +23,7 @@ import Tooltip from "@/components/common/Tooltip";
 import ProductSelection from "@/components/product/ProductSelection";
 import StoreAvailability from "@/components/product/StoreAvailability";
 import FAQ from "@/components/product/FAQ";
-import buildProductJsonLd from "@/utils/buildProductJsonLd";
+import buildProductJsonLd from "@/utils/json-ld/buildProductJsonLd";
 import ProductChatbot from "@/components/product/ProductChatbot";
 
 interface ProductDetailPageProps {

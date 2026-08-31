@@ -83,7 +83,7 @@ export default function FAQ({ product, className = "" }: FAQProps) {
         {productFaqs.map((f, index) => (
           <div
             key={`${f.q}-${index}`}
-            className="rounded-2xl bg-surface/95 p-4 sm:p-5 shadow-sm transition-[transform,box-shadow] duration-150 ease-out will-change-[transform]"
+            className="rounded-2xl bg-surface/95 p-4 sm:p-5 shadow-sm transition-[transform,box-shadow] duration-150 ease-out will-change-transform"
           >
             <dt className="text-sm sm:text-base font-semibold text-foreground leading-snug flex items-start gap-2">
               <span

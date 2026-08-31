@@ -13,7 +13,7 @@ export function HighlightsTabs({ product, className = "" }: HighlightsTabsProps)
   return (
     <section
       aria-labelledby="product-highlights-heading"
-      className={`relative rounded-2xl bg-surface p-4 sm:p-5 shadow-sm transition-[transform,box-shadow] duration-150 ease-out will-change-[transform] ${className}`}
+      className={`relative rounded-2xl bg-surface p-4 sm:p-5 shadow-sm transition-[transform,box-shadow] duration-150 ease-out will-change-transform ${className}`}
     >
       {/* Header with Bilingual Metadata */}
       <div className="flex items-center gap-2 mb-3 pb-2 ">

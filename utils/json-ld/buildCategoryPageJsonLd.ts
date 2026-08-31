@@ -1,25 +1,25 @@
-import type { Type, Product } from "@/types/catalog";
-import buildProductJsonLd from "@/utils/buildProductJsonLd"; // adjust import path as needed
+import type { Product, Category } from "@/types/catalog";
+import buildProductJsonLd from "@/utils/json-ld/buildProductJsonLd";
 
-export function buildJewelryTypePageJsonLd(
+export function buildCategoryPageJsonLd(
   products: Product[],
-  t: Type  
+  category: Category
+  
 ) {
   const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in";
 
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "@id": `${baseURL}/jt/${t.id}/#itemlist`,
-    "name": `${t.type} by Sapna Shri Jewellers`,
-    "description": t.description,
-    "url": `${baseURL}/jt/${t.id}/`,
+    "@id": `${baseURL}/c/${category.id}/#itemlist`,
+    "name": `${category.title || category.name} | Sapna Shri Jewellers`,
+    "description": category.description,
+    "url": `${baseURL}/c/${category.id}/`,
     "numberOfItems": products.length,
     "itemListElement": products.map((product, index) => {
-      // 1. Generate full, validated Product JSON-LD (includes offers, price, rating, etc.)
       const fullProductJsonLd = buildProductJsonLd(product);
 
-      // 2. Strip root @context to maintain a clean nested structure and avoid unused var ESLint warnings
+      // Create a clean item payload without top-level @context
       const productData = { ...fullProductJsonLd };
       delete (productData as Record<string, unknown>)["@context"];
 

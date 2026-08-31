@@ -127,7 +127,7 @@ export default function TrustSignalsRibbon({
   return (
     <section
       aria-labelledby="trust-ribbon-heading"
-      className={`relative rounded-2xl p-4 sm:p-6 mb-6  bg-surface/90 shadow-sm ${className}`}
+      className={`relative rounded-2xl p-2 mb-6  bg-surface/90 shadow-sm ${className}`}
       style={{
         background: `linear-gradient(
           180deg,
@@ -160,7 +160,7 @@ export default function TrustSignalsRibbon({
       <ul
         role="list"
         aria-label="Trust assurances and purchase benefits"
-        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-4 gap-y-4 sm:gap-x-6 sm:gap-y-5"
+        className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-2 gap-y-2 sm:gap-x-2 sm:gap-y-2"
       >
         {activeSignals.map((item) => {
           const Icon = item.icon;
@@ -168,20 +168,19 @@ export default function TrustSignalsRibbon({
           return (
             <li
               key={item.id}
-              className="flex items-start gap-2.5 p-1 rounded-xl transition-colors duration-150"
+              className="flex items-center gap-2 rounded-xl transition-colors duration-150"
             >
               <div
-                className="p-1.5 rounded-lg bg-primary/10 text-primary shrink-0 mt-0.5"
+                className="group shrink-0 rounded-full border-2 border-primary/70 p-1.5"
                 aria-hidden="true"
               >
-                <Icon
-                  className="w-8 h-8 sm:w-8 sm:h-8 text-primary"
-                  aria-hidden="true"
-                />
+                <div className="rounded-full border border-dashed  p-1.5 transition-all duration-500 group-hover:rotate-360 group-hover:border-primary">
+                  <Icon className="w-7 h-7 sm:w-8 sm:h-8 text-primary" />
+                </div>
               </div>
 
               <div className="flex flex-col min-w-0">
-                <span className="text-xl leading-snug flex items-center gap-1 flex-wrap">
+                <span className="leading-snug flex items-center gap-1">
                   <span>{item.label}</span>
                   {item.link && item.toolTip && (
                     <Tooltip

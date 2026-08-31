@@ -105,7 +105,7 @@ export default function Tooltip({
           w-64 max-w-[calc(100vw-1rem)]
           rounded-xl border border-theme bg-surface shadow-xl p-3
           text-sm text-foreground font-normal not-italic antialiased
-          whitespace-normal break-words text-left
+          whitespace-normal wrap-break-word text-left
           before:absolute before:-top-2.5 before:left-0 before:w-full before:h-3 before:content-['']
           transition-[opacity,transform] duration-150 ease-out will-change-[transform,opacity]
           ${

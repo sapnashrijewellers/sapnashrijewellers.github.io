@@ -5,7 +5,7 @@ import products from "@/data/products.json";
 import types from "@/data/types.json";
 import Breadcrumb from "@/components/navbar/BreadcrumbItem";
 import JewelryTypeClient from "./JewelryTypeClient";
-import { buildJewelryTypePageJsonLd } from "@/utils/buildJewelryTypePageJsonLd";
+import { buildJewelryTypePageJsonLd } from "@/utils/json-ld/buildJewelryTypePageJsonLd";
 import JsonLd from "@/components/common/JsonLd";
 import SEO from "@/components/common/SEO";
 

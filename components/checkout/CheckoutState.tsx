@@ -9,8 +9,8 @@ import {
   PriceSummaryType,
   Product,
 } from "@/types/catalog";
-import { getCart, saveCart, clearCartStorage } from "@/utils/cart";
-import { calculateFinal } from "@/utils/calculatePrice";
+import { getCart, saveCart, clearCartStorage } from "@/utils/cart/cart";
+import { calculateFinal } from "@/utils/cart/calculatePrice";
 import CartStep from "@/components/checkout/CartStep";
 import AddressStep from "@/components/checkout/AddressStep";
 import PaymentStep from "@/components/checkout/PaymentStep";

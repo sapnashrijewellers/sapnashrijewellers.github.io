@@ -4,7 +4,7 @@ import { useCallback, useState } from "react";
 import { useRouter } from "next/navigation";
 import { ShoppingCart, Loader2 } from "lucide-react";
 import { useAuth } from "@/context/AuthContext";
-import { addToCart } from "@/utils/cart";
+import { addToCart } from "@/utils/cart/cart";
 import type { Product } from "@/types/catalog";
 
 interface BuyNowButtonProps {

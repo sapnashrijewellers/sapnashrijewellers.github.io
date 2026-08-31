@@ -222,7 +222,7 @@ export default function ProductChatbot({ product, className = "" }: ProductChatb
 
       {/* Collapsible Chat Log Container */}
       {isOpen && (
-        <div className="flex flex-col h-[360px] bg-background overflow-hidden">
+        <div className="flex flex-col h-90 bg-background overflow-hidden">
           {/* Messages Area */}
           <div
             ref={chatScrollRef}

@@ -5,7 +5,7 @@ import TestimonialScroller from "@/components/common/Testimonials";
 import SignatureCollections from "@/components/home/SignatureCollections";
 import NewArrivals from "@/components/product/NewArrivals";
 import WishlistBar from "@/components/common/WishlistBar";
-import buildHomePageJsonLd from "@/utils/buildHomePageJsonLd";
+import buildHomePageJsonLd from "@/utils/json-ld/buildHomePageJsonLd";
 import SEO from "@/components/common/SEO";
 import categories from "@/data/categories.json";
 import products from "@/data/products.json";

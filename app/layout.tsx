@@ -8,7 +8,6 @@ import FooterTrust from "@/components/home/FooterTrust";
 import FloatingWhatsAppButton from "@/components/home/FloatingWhatsAppButton";
 import RegisterSW from "@/components/home/registerSW";
 import Script from "next/script";
-import { AuthProvider } from "@/context/AuthContext";
 import BadgeHandler from "@/components/common/BadgeHandler";
 import GoToTop from "@/components/common/GoToTop";
 
@@ -28,7 +27,7 @@ const notoDevanagari = Noto_Sans_Devanagari({
   variable: "--font-noto-devanagari",
 });
 
-const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in";
+const baseURL =  process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -91,7 +90,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${yatraOne.variable} ${notoDevanagari.variable}`}>
+    <html
+      lang="en"
+      className={`${yatraOne.variable} ${notoDevanagari.variable}`}
+    >
       <body
         className={`flex flex-col min-h-screen transition-colors antialiased`}
       >
@@ -104,53 +106,50 @@ export default function RootLayout({
         </a>
 
         <BadgeHandler />
+        <RegisterSW />
+        {/* Floating WhatsApp CTA */}
+        <FloatingWhatsAppButton />
 
-        <AuthProvider>
-          <RegisterSW />
+        {/* Persistent Accessible Sticky Header */}
+        <header className="w-full sticky top-0 z-40 bg-(--color-surface)/80 backdrop-blur-xl border-theme/30 shadow-xs">
+          <div className="max-w-7xl mx-auto p-0">
+            <Navbar />
+          </div>
+        </header>
 
-          {/* Floating WhatsApp CTA */}
-          <FloatingWhatsAppButton />
+        {/* Main Landmark Area */}
+        <main
+          id="main-content"
+          tabIndex={-1}
+          className="grow w-full focus:outline-none"
+        >
+          {children}
+        </main>
 
-          {/* Persistent Accessible Sticky Header */}
-          <header className="w-full sticky top-0 z-40 bg-(--color-surface)/80 backdrop-blur-xl border-theme/30 shadow-xs">
-            <div className="max-w-7xl mx-auto p-0">
-              <Navbar />
-            </div>
-          </header>
+        {/* Trust Ribbon & Main Footer */}
+        <footer className="w-full mt-auto">
+          <FooterTrust />
+          <Footer />
 
-          {/* Main Landmark Area */}
-          <main id="main-content" tabIndex={-1} className="grow w-full focus:outline-none">
-            {children}
-          </main>
+          <div className="text-center py-2 text-xs text-muted-foreground border-t border-theme/20">
+            <a
+              id="powered-by-mehtalogy"
+              href="https://mehtalogy.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Powered by Mehtalogy LABS"
+              aria-label="Powered by Mehtalogy LABS (opens in a new window)"
+              className="hover:underline hover:text-primary transition-colors"
+            >
+              Mehtalogy LABS
+            </a>
+          </div>
+        </footer>
 
-          {/* Trust Ribbon & Main Footer */}
-          <footer className="w-full mt-auto">
-            <FooterTrust />
-            <Footer />
+        {/* Non-critical 3rd Party Script loaded lazily to preserve LCP/FID */}
+        <Script src="https://mehtalogy.in/pb/v1.js" strategy="lazyOnload" />
 
-            <div className="text-center py-2 text-xs text-muted-foreground border-t border-theme/20">
-              <a
-                id="powered-by-mehtalogy"
-                href="https://mehtalogy.in"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Powered by Mehtalogy LABS"
-                aria-label="Powered by Mehtalogy LABS (opens in a new window)"
-                className="hover:underline hover:text-primary transition-colors"
-              >
-                Mehtalogy LABS
-              </a>
-            </div>
-          </footer>
-
-          {/* Non-critical 3rd Party Script loaded lazily to preserve LCP/FID */}
-          <Script
-            src="https://mehtalogy.in/pb/v1.js"
-            strategy="lazyOnload"
-          />
-
-          <GoToTop />
-        </AuthProvider>
+        <GoToTop />
       </body>
     </html>
   );

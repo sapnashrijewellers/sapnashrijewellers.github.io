@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import RotatingBanner from "@/components/banners/RotatingBanner";
 import JewelleryTypeBar from "@/components/home/JewelleryType";
-import TestimonialScroller from "@/components/common/Testimonials";
 import SignatureCollections from "@/components/home/SignatureCollections";
 import NewArrivals from "@/components/product/NewArrivals";
 import WishlistBar from "@/components/common/WishlistBar";
@@ -87,14 +86,9 @@ export default function Home() {
       </section>
       <section aria-label="Customer reviews and ratings" className="my-8">
         <TrustSignalsRibbon product={products[0]} />
-      </section>
+      </section>     
 
-      {/* 5. Customer Testimonials & Social Proof */}
-      <section aria-label="Customer reviews and ratings" className="my-8">
-        <TestimonialScroller />
-      </section>
-
-      {/* 6. Signature Curated Collections */}
+      {/* 5. Signature Curated Collections */}
       <section aria-label="Signature jewellery collections" className="my-8">
         <SignatureCollections categories={categories} products={products} />
       </section>

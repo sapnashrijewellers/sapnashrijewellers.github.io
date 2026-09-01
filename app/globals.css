@@ -1,9 +1,9 @@
 @import "tailwindcss";
-@import "tailwindcss/utilities";
+/* @import "tailwindcss/utilities"; */
 
 @theme {
-  --font-yatra: var(--font-yatra-one), "Noto Sans Devanagari", serif;
-  --font-noto-devanagari: var(--font-noto-devanagari), sans-serif;
+  --font-yatra: var(--font-yatra-one), serif;
+  /* --font-noto-devanagari: var(--font-noto-devanagari), sans-serif; */
 }
 
 /* ============================
@@ -44,7 +44,7 @@
   --color-footer-trust-icon: #c9a24d;
 
   /* Fonts */
-  --font-yatra: var(--font-yatra-one), "Noto Sans Devanagari", serif;
+  --font-yatra: var(--font-yatra-one), "Sans Devanagari", serif;
 }
 
 /* ============================

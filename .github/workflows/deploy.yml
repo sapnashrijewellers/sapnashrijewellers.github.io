@@ -43,7 +43,7 @@
 # - Deployment is manually triggered from GitHub Actions
 #
 
-name: Deploy Production to GitHub Pages
+name: Deploy to Production
 
 # ---------------------------------------------------------------------------
 # TRIGGERS
@@ -79,6 +79,9 @@ jobs:
     name: Build static Next.js site
     runs-on: ubuntu-latest
 
+    environment:
+      name: production
+
     steps:
 
       # ---------------------------------------------------------------------
@@ -103,24 +106,36 @@ jobs:
       # ---------------------------------------------------------------------
 
       - name: Install npm dependencies
+        working-directory: .
         run: npm ci
+      
+      # ---------------------------------------------------------------------
+      # Create Next.js production environment
+      # ---------------------------------------------------------------------
+
+      - name: Create production environment
+        working-directory: .
+        run: |
+          cat > .env.production <<EOF
+          NEXT_PUBLIC_BASE_URL=${{ vars.NEXT_PUBLIC_BASE_URL }}
+          NEXT_PUBLIC_BASE_IMAGE_URL=${{ vars.NEXT_PUBLIC_BASE_IMAGE_URL }}
+          NEXT_PUBLIC_FIREBASE_API_KEY=${{ vars.NEXT_PUBLIC_FIREBASE_API_KEY }}
+          NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=${{ vars.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN }}
+          NEXT_PUBLIC_FIREBASE_PROJECT_ID=${{ vars.NEXT_PUBLIC_FIREBASE_PROJECT_ID }}
+          NEXT_PUBLIC_FIREBASE_APP_ID=${{ vars.NEXT_PUBLIC_FIREBASE_APP_ID }}
+          NEXT_PUBLIC_FIREBASE_STORAGEBUCKET=${{ vars.NEXT_PUBLIC_FIREBASE_STORAGEBUCKET }}
+          NEXT_PUBLIC_FIREBASE_MESSAGINGSENDERID=${{ vars.NEXT_PUBLIC_FIREBASE_MESSAGINGSENDERID }}
+          NEXT_PUBLIC_FIREBASE_MEASUREMENTID=${{ vars.NEXT_PUBLIC_FIREBASE_MEASUREMENTID }}
+          NEXT_PUBLIC_WORKER_URL=${{ vars.NEXT_PUBLIC_WORKER_URL }}
+          NEXT_PUBLIC_WHATSAPP=${{ vars.NEXT_PUBLIC_WHATSAPP }}
+          EOF
 
       # ---------------------------------------------------------------------
       # Verify required production configuration
       # ---------------------------------------------------------------------
 
       - name: Verify production configuration
-        env:
-          NEXT_PUBLIC_BASE_URL: ${{ vars.NEXT_PUBLIC_BASE_URL }}
-          NEXT_PUBLIC_BASE_IMAGE_URL: ${{ vars.NEXT_PUBLIC_BASE_IMAGE_URL }}
-          NEXT_PUBLIC_FIREBASE_API_KEY: ${{ vars.NEXT_PUBLIC_FIREBASE_API_KEY }}
-          NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN: ${{ vars.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN }}
-          NEXT_PUBLIC_FIREBASE_PROJECT_ID: ${{ vars.NEXT_PUBLIC_FIREBASE_PROJECT_ID }}
-          NEXT_PUBLIC_FIREBASE_APP_ID: ${{ vars.NEXT_PUBLIC_FIREBASE_APP_ID }}
-          NEXT_PUBLIC_FIREBASE_STORAGEBUCKET: ${{ vars.NEXT_PUBLIC_FIREBASE_STORAGEBUCKET }}
-          NEXT_PUBLIC_FIREBASE_MESSAGINGSENDERID: ${{ vars.NEXT_PUBLIC_FIREBASE_MESSAGINGSENDERID }}
-          NEXT_PUBLIC_FIREBASE_MEASUREMENTID: ${{ vars.NEXT_PUBLIC_FIREBASE_MEASUREMENTID }}
-          NEXT_PUBLIC_WORKER_URL: ${{ vars.NEXT_PUBLIC_WORKER_URL }}
+        working-directory: .
         run: |
           required_vars=(
             NEXT_PUBLIC_BASE_URL
@@ -133,47 +148,17 @@ jobs:
             NEXT_PUBLIC_FIREBASE_MESSAGINGSENDERID
             NEXT_PUBLIC_FIREBASE_MEASUREMENTID
             NEXT_PUBLIC_WORKER_URL
+            NEXT_PUBLIC_WHATSAPP
           )
 
           for variable in "${required_vars[@]}"; do
-            if [ -z "${!variable}" ]; then
-              echo "::error::$variable is not configured in GitHub Actions Variables."
+            if ! grep -qE "^${variable}=.+" .env.production; then
+              echo "::error::$variable is missing or empty in .env.production."
               exit 1
             fi
           done
 
           echo "All required production variables are available."
-
-      # ---------------------------------------------------------------------
-      # Create Next.js production environment
-      # ---------------------------------------------------------------------
-
-      - name: Create production environment
-        env:
-          NEXT_PUBLIC_BASE_URL: ${{ vars.NEXT_PUBLIC_BASE_URL }}
-          NEXT_PUBLIC_BASE_IMAGE_URL: ${{ vars.NEXT_PUBLIC_BASE_IMAGE_URL }}
-          NEXT_PUBLIC_FIREBASE_API_KEY: ${{ vars.NEXT_PUBLIC_FIREBASE_API_KEY }}
-          NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN: ${{ vars.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN }}
-          NEXT_PUBLIC_FIREBASE_PROJECT_ID: ${{ vars.NEXT_PUBLIC_FIREBASE_PROJECT_ID }}
-          NEXT_PUBLIC_FIREBASE_APP_ID: ${{ vars.NEXT_PUBLIC_FIREBASE_APP_ID }}
-          NEXT_PUBLIC_FIREBASE_STORAGEBUCKET: ${{ vars.NEXT_PUBLIC_FIREBASE_STORAGEBUCKET }}
-          NEXT_PUBLIC_FIREBASE_MESSAGINGSENDERID: ${{ vars.NEXT_PUBLIC_FIREBASE_MESSAGINGSENDERID }}
-          NEXT_PUBLIC_FIREBASE_MEASUREMENTID: ${{ vars.NEXT_PUBLIC_FIREBASE_MEASUREMENTID }}
-          NEXT_PUBLIC_WORKER_URL: ${{ vars.NEXT_PUBLIC_WORKER_URL }}
-        run: |
-          cat > .env.production <<EOF
-          NEXT_PUBLIC_BASE_URL=${NEXT_PUBLIC_BASE_URL}
-          NEXT_PUBLIC_BASE_IMAGE_URL=${NEXT_PUBLIC_BASE_IMAGE_URL}
-          NEXT_PUBLIC_FIREBASE_API_KEY=${NEXT_PUBLIC_FIREBASE_API_KEY}
-          NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=${NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN}
-          NEXT_PUBLIC_FIREBASE_PROJECT_ID=${NEXT_PUBLIC_FIREBASE_PROJECT_ID}
-          NEXT_PUBLIC_FIREBASE_APP_ID=${NEXT_PUBLIC_FIREBASE_APP_ID}
-          NEXT_PUBLIC_FIREBASE_STORAGEBUCKET=${NEXT_PUBLIC_FIREBASE_STORAGEBUCKET}
-          NEXT_PUBLIC_FIREBASE_MESSAGINGSENDERID=${NEXT_PUBLIC_FIREBASE_MESSAGINGSENDERID}
-          NEXT_PUBLIC_FIREBASE_MEASUREMENTID=${NEXT_PUBLIC_FIREBASE_MEASUREMENTID}
-          NEXT_PUBLIC_WORKER_URL=${NEXT_PUBLIC_WORKER_URL}
-          EOF
-
       # ---------------------------------------------------------------------
       # Generate latest website data
       # ---------------------------------------------------------------------

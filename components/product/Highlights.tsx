@@ -13,10 +13,10 @@ export function HighlightsTabs({ product, className = "" }: HighlightsTabsProps)
   return (
     <section
       aria-labelledby="product-highlights-heading"
-      className={`relative rounded-2xl border border-theme/40 bg-surface/80 p-4 sm:p-5 shadow-sm transition-[transform,box-shadow] duration-150 ease-out will-change-[transform] ${className}`}
+      className={`relative rounded-2xl bg-surface p-4 sm:p-5 shadow-sm transition-[transform,box-shadow] duration-150 ease-out will-change-transform ${className}`}
     >
       {/* Header with Bilingual Metadata */}
-      <div className="flex items-center gap-2 mb-3 pb-2 border-b border-theme/20">
+      <div className="flex items-center gap-2 mb-3 pb-2 ">
         <Sparkles className="w-4 h-4 text-primary shrink-0" aria-hidden="true" />
         <h3 id="product-highlights-heading"
           className="text-sm sm:text-base font-semibold text-foreground tracking-tight">

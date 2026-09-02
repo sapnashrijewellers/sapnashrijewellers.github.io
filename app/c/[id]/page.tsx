@@ -4,7 +4,7 @@ import type { Product, Category } from "@/types/catalog";
 import products from "@/data/products.json";
 import categories from "@/data/categories.json";
 import Breadcrumb from "@/components/navbar/BreadcrumbItem";
-import { buildCategoryPageJsonLd } from "@/utils/buildCategoryPageJsonLd";
+import { buildCategoryPageJsonLd } from "@/utils/json-ld/buildCategoryPageJsonLd";
 import JsonLd from "@/components/common/JsonLd";
 import RotatingBanner from "@/components/banners/RotatingBanner";
 import SEO from "@/components/common/SEO";
@@ -121,7 +121,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
       {/* 4. Promotional/Category Rotating Banner */}
       <section aria-label={`${category.name} featured banners`} className="mb-8">
-        <RotatingBanner key={category.id} page={String(category.id)} />
+        <RotatingBanner key={category.id}/>
       </section>
 
       {/* 5. Product Grid / Catalog listing */}

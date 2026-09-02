@@ -52,7 +52,7 @@ export default function CategoryCard({ category, products }: CategoryCardProps) 
 
         {/* Category Label */}
         <div className="flex flex-col items-center justify-center p-3 grow bg-card border-t border-theme/20">
-          <h2 className="text-center font-yatra text-base sm:text-lg text-foreground line-clamp-1 group-hover:text-primary transition-colors duration-150">
+          <h2 className="text-center font-yatra sm:text-lg text-foreground group-hover:text-primary transition-colors duration-150">
             {category.name}
           </h2>
           <span className="sr-only">

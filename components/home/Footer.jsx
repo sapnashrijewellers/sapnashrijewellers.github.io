@@ -1,9 +1,9 @@
 import Link from "next/link";
 import {
   FacebookIcon,
-  InstagramIcon,  
+  InstagramIcon,
   WhatsappIcon,
-  YoutubeIcon,  
+  YoutubeIcon,
   ClockIcon
 } from "@/components/common/BrandIcons";
 
@@ -11,11 +11,29 @@ import { Phone, MapPin } from "lucide-react";
 import BrandLogo from "../common/BrandLogo";
 
 
+
 export default function Footer() {
   const currentYear = new Date().getFullYear()
-  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP || "8234042231";
+  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP;
   const sanitizedWhatsApp = whatsappNumber.replace(/[^0-9]/g, "");
+  const policies = [
+    { text: "Disclaimer", link: "/policies/disclaimer/" },
+    { text: "Terms of Service", link: "/policies/terms/" },
+    { text: "Privacy Policy", link: "/policies/privacy/" },
+    { text: "Return & Exchange Policy", link: "/policies/returns/" },
+    { text: "Shipping Policy", link: "/policies/shipping/" },
+    { text: "Warranty & Purity Assurance", link: "/policies/warranty/" }
+  ];
 
+  const popoularCollections = [
+    { text: "Mahadev Silver Rings", link: "/c/1/" },
+    { text: "Sawariya Seth Ring", link: "/c/3/" },
+    { text: "Personalised Silver Rings", link: "/c/4/" },
+    { text: "Khatushyam Silver Rings", link: "/c/8/" },
+    { text: "Krishna Silver Pendants", link: "/c/6/" },
+    { text: "Mahadev Silver Pendants", link: "/c/10/" },
+    { text: "Hanuman Silver Rings", link: "/c/9/" }
+  ];
   return (
     <footer
       aria-label="Site footer and store information"
@@ -29,7 +47,7 @@ export default function Footer() {
             <BrandLogo view="lg" />
 
           </div>
-          <h2 className="text-xl sm:text-2xl font-yatra footer-heading tracking-wide">
+          <h2 className="text-3xl font-yatra footer-heading tracking-wide">
             Sapna Shri Jewellers
           </h2>
           <p className="text-sm italic opacity-90 leading-relaxed">
@@ -46,58 +64,17 @@ export default function Footer() {
           <h3 className="footer-heading font-yatra text-base sm:text-lg mb-3">
             Policies
           </h3>
-
-          <p className="text-xs mb-3 opacity-75 leading-relaxed">
-            Prices may vary based on live market rates...{" "}
-            <Link
-              href="/policies/disclaimer/"
-              className="underline hover:text-primary transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded"
-            >
-              Read disclaimer
-            </Link>
-          </p>
-
-          <ul className="space-y-2 text-sm">
-            <li>
-              <Link
-                href="/policies/terms/"
-                className="hover:text-primary hover:underline transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded"
-              >
-                Terms of Service
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/policies/privacy/"
-                className="hover:text-primary hover:underline transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded"
-              >
-                Privacy Policy
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/policies/returns/"
-                className="hover:text-primary hover:underline transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded"
-              >
-                Return &amp; Exchange Policy
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/policies/shipping/"
-                className="hover:text-primary hover:underline transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded"
-              >
-                Shipping Policy
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/policies/warranty/"
-                className="hover:text-primary hover:underline transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded"
-              >
-                Warranty &amp; Purity Assurance
-              </Link>
-            </li>
+          <ul className="space-y-2">
+            {policies.map((policy) => (
+              <li key={policy.link}>
+                <Link
+                  href={policy.link}
+                  className="hover:text-primary hover:underline transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded"
+                >
+                  {policy.text}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
 
@@ -106,60 +83,38 @@ export default function Footer() {
           <h3 className="footer-heading font-yatra text-base sm:text-lg mb-3">
             Quick Links
           </h3>
-
-          <ul className="space-y-2 text-sm">
-            <li>
-              <Link
-                href="/about-us/"
-                className="hover:text-primary hover:underline transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded"
-              >
-                About Our Heritage
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/#shop-by-category"
-                className="hover:text-primary hover:underline transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded"
-              >
-                Shop by Category
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/#shop-by-occasion"
-                className="hover:text-primary hover:underline transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded"
-              >
-                Shop by Occasion
-              </Link>
-            </li>            
-            <li>
-              <Link
-                href="/qr/"
-                className="hover:text-primary hover:underline transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded"
-              >
-                QR Code for Payment
-              </Link>
-            </li>
+          <ul className="space-y-2">
+            {popoularCollections.map((policy) => (
+              <li key={policy.link}>
+                <Link
+                  href={policy.link}
+                  className="hover:text-primary hover:underline transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded"
+                >
+                  {policy.text}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
 
         {/* 4. PHYSICAL STORE ADDRESS & HOURS */}
         <section aria-label="Physical showroom address and hours">
-          <h3 className="footer-heading font-yatra text-base sm:text-lg mb-3">
-            दुकान का पता (Store Address)
-          </h3>
+          <div className="flex items-start gap-2">
+            <MapPin className="w-4 h-4 shrink-0 mt-1 text-primary" aria-hidden="true" />
+            <h3 className="footer-heading font-yatra text-base sm:text-lg mb-3">
+              Store Address
+            </h3>
+          </div>
+          <address className="not-italic space-y-2.5 text-footer/90">
 
-          <address className="not-italic text-sm space-y-2.5 text-footer/90">
-            <div className="flex items-start gap-2">
-              <MapPin className="w-4 h-4 shrink-0 mt-1 text-primary" aria-hidden="true" />
-              <div>
-                <p className="font-tiro leading-snug">
-                  सपना श्री ज्वैलर्स, रेलवे स्टेशन मेन रोड, नागदा जंक्शन, उज्जैन
-                </p>
-                <p className="font-cinzel text-xs opacity-80 mt-0.5">
-                  M G Road, Near Jain Mandir, Nagda Jn., Ujjain (M.P.)
-                </p>
-              </div>
+
+            <div>
+              <p className="font-tiro leading-snug">
+                सपना श्री ज्वैलर्स, रेलवे स्टेशन मेन रोड, नागदा जंक्शन, उज्जैन
+              </p>
+              <p className="font-cinzel text-xs opacity-80 mt-0.5">
+                M G Road, Near Jain Mandir, Nagda Jn., Ujjain (M.P.)
+              </p>
             </div>
 
             <p className="flex items-center gap-2">
@@ -185,12 +140,18 @@ export default function Footer() {
               GSTIN: <span className="font-mono">23AFFPG2954P1Z8</span>
             </p>
           </address>
+          <Link
+            href="/about-us/"
+            className="hover:text-primary hover:underline transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded"
+          >
+            About Our Heritage
+          </Link>
         </section>
 
         {/* 5. DIRECT CONTACT & SOCIAL PROFILES */}
         <section aria-label="Customer communication channels">
           <h3 className="footer-heading font-yatra text-base sm:text-lg mb-3">
-            संपर्क करें (Connect With Us)
+            Connect With Us
           </h3>
 
           <a
@@ -238,6 +199,7 @@ export default function Footer() {
               <span className="sr-only">YouTube</span>
             </a>
           </div>
+
         </section>
       </div>
 

@@ -22,7 +22,8 @@ export default function BulkEnquiry({
   const quantityId = useId();
   const requirementsId = useId();
 
-  const rawWhatsApp = process.env.NEXT_PUBLIC_WHATSAPP || "";
+  const rawWhatsApp = process.env.NEXT_PUBLIC_WHATSAPP ;
+  if(!rawWhatsApp) return null;
   const sanitizedWhatsApp = rawWhatsApp.replace(/[^0-9]/g, "");
   const baseUrl = (process.env.NEXT_PUBLIC_BASE_URL || "").replace(/\/+$/, "");
   const productUrl = `${baseUrl}/p/${product.id}/`;

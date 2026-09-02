@@ -100,7 +100,7 @@ export default function JewelryTypeClient({ products, pFilters }: JewelryTypeCli
         <ul
           role="list"
           aria-label="Filtered Jewelry Products"
-          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 list-none p-0"
+          className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 list-none p-0"
         >
           {visibleProducts.map((p, idx) => (
             <li key={p.id || idx} className="flex justify-stretch">

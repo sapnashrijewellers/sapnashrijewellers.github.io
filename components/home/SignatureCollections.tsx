@@ -60,11 +60,8 @@ export default function SignatureCollections({
           id={sectionTitleId}
           className="au-h2 text-2xl sm:text-3xl font-bold text-foreground tracking-tight"
         >
-          सिग्नेचर कलेक्शंस (Our Signature Collections)
-        </h2>
-        <p className="text-xs sm:text-sm text-muted-foreground mt-1">
-          हॉलमार्क प्रमाणित सोने और चांदी के आभूषण (Hallmarked Pure {material} Jewellery)
-        </p>
+          Our Signature Collections
+        </h2>        
       </div>
 
       {/* Material Selector Toggle */}
@@ -110,7 +107,7 @@ export default function SignatureCollections({
       </div>
 
       {/* Uniform Width Category Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5 w-full items-stretch">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5 w-full items-stretch">
         {visibleCategories.map((cat) => {
           const categoryProducts = productsByCategory.get(cat.name) || [];
 

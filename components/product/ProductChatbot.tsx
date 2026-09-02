@@ -174,16 +174,16 @@ export default function ProductChatbot({ product, className = "" }: ProductChatb
   return (
     <section
       aria-label="Product AI Shopping Assistant"
-      className={`my-6 rounded-2xl border border-theme/40 bg-surface shadow-sm overflow-hidden ${className}`}
+      className={`my-6 rounded-2xl bg-surface shadow-sm overflow-hidden ${className}`}
     >
       {/* Header Bar */}
-      <div className="flex items-center justify-between border-b border-theme/20 px-4 py-3 bg-surface/90">
+      <div className="flex items-center justify-between px-4 py-3 bg-surface/90">
         <div className="flex items-center gap-2">
           <div className="p-1 rounded-lg bg-primary/10 text-primary">
             <Sparkles className="h-4 w-4" aria-hidden="true" />
           </div>
-          <h3 className="text-xs sm:text-sm font-semibold text-foreground">
-            Ask AI about this Jewellery (AI सहायता)
+          <h3 className="text-xl  font-semibold text-foreground">
+            Ask AI (AI सहायता)
           </h3>
         </div>
 
@@ -191,15 +191,15 @@ export default function ProductChatbot({ product, className = "" }: ProductChatb
           type="button"
           onClick={() => setIsOpen(!isOpen)}
           aria-expanded={isOpen}
-          className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:underline focus:outline-none focus:ring-1 focus:ring-primary rounded px-1.5 py-0.5"
+          className="ssj ssj-btn inline-flex items-center gap-1.5"
         >
           {isOpen ? <X className="h-3.5 w-3.5" /> : <MessageSquare className="h-3.5 w-3.5" />}
-          <span>{isOpen ? "Close Chat" : "Ask Question"}</span>
+          <span className="">{isOpen ? "Close Chat" : "Ask Question"}</span>
         </button>
       </div>
 
       {/* Suggested Quick Questions */}
-      <div className="p-3 sm:p-4 bg-background/50 border-b border-theme/10">
+      <div className="p-3 sm:p-4 bg-background">
         <p className="text-[11px] text-muted-foreground font-medium mb-2">
           Suggested Questions:
         </p>
@@ -222,7 +222,7 @@ export default function ProductChatbot({ product, className = "" }: ProductChatb
 
       {/* Collapsible Chat Log Container */}
       {isOpen && (
-        <div className="flex flex-col h-[360px] bg-background overflow-hidden">
+        <div className="flex flex-col h-90 bg-background overflow-hidden">
           {/* Messages Area */}
           <div
             ref={chatScrollRef}

@@ -38,7 +38,7 @@ export default function FloatingWhatsAppButton({
         "
       >
         <WhatsappIcon className="w-7 h-7 sm:w-8 sm:h-8 shrink-0 text-white" aria-hidden="true" />
-        <span className="sr-only">व्हाट्सएप पर सहायता प्राप्त करें (Contact support on WhatsApp)</span>
+        <span className="sr-only">Contact support on WhatsApp</span>
       </a>
     </aside>
   );

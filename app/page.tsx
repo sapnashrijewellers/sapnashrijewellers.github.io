@@ -1,19 +1,21 @@
 import type { Metadata } from "next";
 import RotatingBanner from "@/components/banners/RotatingBanner";
 import JewelleryTypeBar from "@/components/home/JewelleryType";
-import TestimonialScroller from "@/components/common/Testimonials";
 import SignatureCollections from "@/components/home/SignatureCollections";
 import NewArrivals from "@/components/product/NewArrivals";
 import WishlistBar from "@/components/common/WishlistBar";
-import buildHomePageJsonLd from "@/utils/buildHomePageJsonLd";
+import buildHomePageJsonLd from "@/utils/json-ld/buildHomePageJsonLd";
 import SEO from "@/components/common/SEO";
 import categories from "@/data/categories.json";
 import products from "@/data/products.json";
+import TrustSignalsRibbon from "@/components/product/TrustSignalsRibbon";
 
-const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in";
+const baseURL =
+  process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in";
 const imageUrl = `${baseURL}/icon-512x512.png`;
 
-const title = "Sapna Shri Jewellers Nagda | Latest Gold & Silver Jewellery Collection";
+const title =
+  "Sapna Shri Jewellers Nagda | Latest Gold & Silver Jewellery Collection";
 const description =
   "Explore the latest handcrafted gold and silver jewellery at Sapna Shri Jewellers Nagda. 35+ years of trust with 100% BIS 916 Hallmark certified purity.";
 
@@ -58,12 +60,16 @@ export default function Home() {
 
       {/* Accessible Screen-Reader Page Heading */}
       <h1 className="sr-only">
-        सपना श्री ज्वेलर्स नागदा - सोने एवं चांदी के आभूषण (Sapna Shri Jewellers Nagda)
+        सपना श्री ज्वेलर्स नागदा - सोने एवं चांदी के आभूषण (Sapna Shri Jewellers
+        Nagda)
       </h1>
 
       {/* 1. Hero Promotional Rotating Banner (Top LCP Element) */}
-      <section aria-label="Featured promotions and announcements" className="mb-6">
-        <RotatingBanner page="home" />
+      <section
+        aria-label="Featured promotions and announcements"
+        className="mb-6"
+      >
+        <RotatingBanner />
       </section>
 
       {/* 2. Quick Category / Jewellery Type Navigation */}
@@ -76,15 +82,13 @@ export default function Home() {
 
       {/* 4. New Arrivals Showcase */}
       <section aria-label="New jewellery arrivals" className="my-8">
-        <NewArrivals  />
+        <NewArrivals />
       </section>
-
-      {/* 5. Customer Testimonials & Social Proof */}
       <section aria-label="Customer reviews and ratings" className="my-8">
-        <TestimonialScroller />
-      </section>
+        <TrustSignalsRibbon product={products[0]} />
+      </section>     
 
-      {/* 6. Signature Curated Collections */}
+      {/* 5. Signature Curated Collections */}
       <section aria-label="Signature jewellery collections" className="my-8">
         <SignatureCollections categories={categories} products={products} />
       </section>

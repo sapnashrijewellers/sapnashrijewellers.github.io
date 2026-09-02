@@ -140,7 +140,7 @@ export default function TrustSignalsRibbon({
       <div className="flex items-center justify-between pb-3 mb-4 border-b border-theme/20">
         <h2
           id="trust-ribbon-heading"
-          className="text-xl font-bold uppercase tracking-[0.18em] text-primary"
+          className="text-xl font-bold uppercase tracking-[0.18em]"
         >
           Our Trust Promise
         </h2>
@@ -175,7 +175,7 @@ export default function TrustSignalsRibbon({
                 aria-hidden="true"
               >
                 <div className="rounded-full border border-dashed  p-1.5 transition-all duration-500 group-hover:rotate-360 group-hover:border-primary">
-                  <Icon className="w-7 h-7 sm:w-8 sm:h-8 text-primary" />
+                  <Icon className="w-7 h-7 sm:w-8 sm:h-8 " />
                 </div>
               </div>
 

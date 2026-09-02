@@ -95,7 +95,7 @@ export default function JewelleryTypeBar({
                     size={34}
                     strokeWidth={1.5}
                     className="
-                      relative z-10 text-primary
+                      relative z-10
                       transition-transform duration-150 ease-out
                       group-hover:scale-110
                     "
@@ -109,7 +109,7 @@ export default function JewelleryTypeBar({
                     className="
                       absolute -bottom-0.5 -right-0.5 z-20
                       flex h-6 w-6 items-center justify-center
-                      rounded-full bg-surface text-primary
+                      rounded-full bg-surface 
                       shadow-sm ring-1 ring-theme/40
                       transition-transform duration-150 ease-out
                       group-hover:scale-110

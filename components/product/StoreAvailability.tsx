@@ -24,10 +24,10 @@ export default function StoreAvailability({
     >
       {/* Header */}
       <div className="mb-3 flex items-center gap-2 pb-1">
-        <Store className="h-5 w-5 text-primary shrink-0" aria-hidden="true" />
+        <Store className="h-5 w-5 shrink-0" aria-hidden="true" />
         <h3
           id="store-availability-heading"
-          className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-primary"
+          className="text-xs sm:text-sm font-semibold uppercase tracking-wider"
         >
           Store Availability
         </h3>
@@ -52,7 +52,7 @@ export default function StoreAvailability({
 
             <p className="flex items-center gap-1.5 opacity-90">
               <MapPin
-                className="h-3.5 w-3.5 text-primary shrink-0"
+                className="h-3.5 w-3.5 shrink-0"
                 aria-hidden="true"
               />
               <span>MG Road, Near Jain Mandir, Nagda Jn., MP, India</span>
@@ -60,14 +60,14 @@ export default function StoreAvailability({
 
             <p className="flex items-center gap-1.5">
               <Phone
-                className="h-3.5 w-3.5 text-primary shrink-0"
+                className="h-3.5 w-3.5 shrink-0"
                 aria-hidden="true"
               />
               <a
                 href={`tel:+${sanitizedWhatsApp}`}
                 aria-label={`Call Sapna Shri Jewellers at +${sanitizedWhatsApp}`}
                 title={`Call Sapna Shri Jewellers at +${sanitizedWhatsApp}`}
-                className="font-medium text-foreground hover:text-primary transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded"
+                className="font-medium text-foreground transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded"
               >
                 +{sanitizedWhatsApp}
               </a>
@@ -77,7 +77,7 @@ export default function StoreAvailability({
           {/* Turnaround Badge */}
           <div className="inline-flex items-center gap-1.5 self-start rounded-full bg-surface border border-theme/40 px-3 py-1 text-[11px] sm:text-xs font-medium text-foreground/90 shrink-0">
             <Clock
-              className="h-3.5 w-3.5 text-primary shrink-0"
+              className="h-3.5 w-3.5 shrink-0"
               aria-hidden="true"
             />
             <span>Usually ready in 24 hours</span>

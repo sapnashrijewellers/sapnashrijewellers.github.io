@@ -216,7 +216,7 @@ export default function OrdersPage() {
           className="
             inline-flex items-center justify-center gap-2.5
             px-6 py-3 rounded-xl
-            bg-primary text-primary-foreground
+            bg-primary
             font-semibold text-sm
             shadow-sm
             hover:bg-primary/90
@@ -260,7 +260,7 @@ export default function OrdersPage() {
         "
       >
         <Loader2
-          className="w-8 h-8 animate-spin text-primary"
+          className="w-8 h-8 animate-spin"
           aria-hidden="true"
         />
 
@@ -348,8 +348,7 @@ export default function OrdersPage() {
             inline-flex items-center justify-center gap-2
             px-5 py-2.5
             rounded-xl
-            bg-primary
-            text-primary-foreground
+            bg-primary            
             font-medium text-sm
             shadow-sm
             hover:bg-primary/90

@@ -48,7 +48,7 @@ export default function ProductGeoSpecs({
         {/* Metal & Purity */}
         <div className="flex items-start gap-2.5">
           <Sparkles
-            className="w-4 h-4 text-primary mt-0.5 shrink-0"
+            className="w-4 h-4 mt-0.5 shrink-0"
             aria-hidden="true"
           />
           <div>
@@ -62,7 +62,7 @@ export default function ProductGeoSpecs({
         {/* Approximate Weight */}
         <div className="flex items-start gap-2.5">
           <Scale
-            className="w-4 h-4 text-primary mt-0.5 shrink-0"
+            className="w-4 h-4 mt-0.5 shrink-0"
             aria-hidden="true"
           />
           <div>
@@ -78,7 +78,7 @@ export default function ProductGeoSpecs({
         {/* Category & Ideal For */}
         <div className="flex items-start gap-2.5">
           <Tag
-            className="w-4 h-4 text-primary mt-0.5 shrink-0"
+            className="w-4 h-4 mt-0.5 shrink-0"
             aria-hidden="true"
           />
           <div>
@@ -95,7 +95,7 @@ export default function ProductGeoSpecs({
         {/* Suitable Occasions */}
         <div className="flex items-start gap-2.5">
           <BadgePercent
-            className="w-4 h-4 text-primary mt-0.5 shrink-0"
+            className="w-4 h-4 mt-0.5 shrink-0"
             aria-hidden="true"
           />
           <div>
@@ -109,7 +109,7 @@ export default function ProductGeoSpecs({
         {/* Pan-India Delivery */}
         <div className="flex items-start gap-2.5 sm:col-span-2">
           <Truck
-            className="w-4 h-4 text-primary mt-0.5 shrink-0"
+            className="w-4 h-4 mt-0.5 shrink-0"
             aria-hidden="true"
           />
           <div>

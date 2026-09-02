@@ -310,8 +310,7 @@ export default function CheckoutState({ className = "" }: CheckoutStateProps) {
           className="
             p-4
             rounded-full
-            bg-primary/10
-            text-primary
+            bg-primary/10            
             w-16 h-16
             mx-auto
             flex items-center
@@ -352,8 +351,7 @@ export default function CheckoutState({ className = "" }: CheckoutStateProps) {
             gap-2.5
             px-6 py-3
             rounded-xl
-            bg-primary
-            text-primary-foreground
+            bg-primary            
             font-semibold
             text-sm sm:text-base
             shadow-sm

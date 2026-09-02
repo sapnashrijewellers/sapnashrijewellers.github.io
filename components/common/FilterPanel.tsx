@@ -116,7 +116,7 @@ export function FilterPanel({ filters, onChange, triggerRef }: FilterPanelProps)
               type="button"
               onClick={clearFilters}
               aria-label="Reset all selected filters"
-              className="inline-flex items-center gap-1 text-xs text-primary hover:underline font-medium focus:outline-none focus:ring-2 focus:ring-primary rounded px-1.5 py-0.5"
+              className="inline-flex items-center gap-1 text-xs hover:underline font-medium focus:outline-none focus:ring-2 focus:ring-primary rounded px-1.5 py-0.5"
             >
               <RotateCcw className="w-3 h-3" aria-hidden="true" />
               <span>Reset</span>
@@ -208,11 +208,11 @@ export function FilterPanel({ filters, onChange, triggerRef }: FilterPanelProps)
             }
             className="w-full p-2.5  border border-theme/60 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
           >
-            <option className="bg-surface text-primary-dark" value="">सभी के लिए (For Everyone)</option>
-            <option className="bg-surface text-primary-dark" value="her">महिलाओं के लिए (For Her)</option>
-            <option className="bg-surface text-primary-dark" value="him">पुरुषों के लिए (For Him)</option>
-            <option className="bg-surface text-primary-dark" value="kids">बच्चों के लिए (For Kids)</option>
-            <option className="bg-surface text-primary-dark" value="unisex">यूनिसेक्स (Unisex)</option>
+            <option className="bg-surface" value="">For Everyone</option>
+            <option className="bg-surface" value="her">For Her</option>
+            <option className="bg-surface" value="him">For Him</option>
+            <option className="bg-surface" value="kids">For Kids</option>
+            <option className="bg-surface" value="unisex">Unisex</option>
           </select>
         </div>
 
@@ -220,7 +220,7 @@ export function FilterPanel({ filters, onChange, triggerRef }: FilterPanelProps)
         <button
           type="submit"
           aria-label="Apply chosen filters and close dialog"
-          className="w-full mt-2 py-2 text-center text-xs font-semibold bg-accent text-accent-foreground rounded-xl hover:bg-accent/80 transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+          className="btn ssj-btn w-full mt-2 py-2 text-center text-xs font-semibold bg-accent text-accent-foreground rounded-xl hover:bg-accent/80 transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
         >
           Apply Filters
         </button>

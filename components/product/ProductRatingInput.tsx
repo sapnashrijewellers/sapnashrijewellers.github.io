@@ -186,8 +186,7 @@ export default function ProductRatingInput({
           <Loader2
             className="
               w-3.5 h-3.5
-              animate-spin
-              text-primary
+              animate-spin              
               shrink-0
             "
             aria-hidden="true"

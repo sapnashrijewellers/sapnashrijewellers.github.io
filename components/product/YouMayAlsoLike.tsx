@@ -39,7 +39,7 @@ export default function YouMayAlsoLike({
       <div className="flex items-baseline justify-between px-2 sm:px-4 mb-3 border-b border-theme/20 pb-2">
         <div className="flex items-center gap-2">
           <Sparkles
-            className="w-5 h-5 text-primary shrink-0"
+            className="w-5 h-5 shrink-0"
             aria-hidden="true"
           />
           <h2

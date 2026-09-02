@@ -135,7 +135,7 @@ export function SortPanel({ sortBy, onSortChange, triggerRef }: SortPanelProps) 
               className={`
                 flex items-center justify-between w-full px-3 py-2 text-xs sm:text-sm font-medium rounded-xl
                 transition-[background-color,color] duration-150 ease-out text-left
-                focus:outline-none focus:ring-2 focus:ring-primary
+                focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer
                 ${
                   isSelected
                     ? "bg-accent text-accent-foreground font-semibold"

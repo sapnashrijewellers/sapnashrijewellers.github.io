@@ -225,7 +225,7 @@ function SearchBarInput({ initialQuery = "" }: SearchBarProps) {
             placeholder:text-muted-foreground/70
             rounded-l-xl
             transition-opacity duration-150
-            ${listening ? "animate-pulse text-primary font-medium" : ""}
+            ${listening ? "animate-pulse font-medium" : ""}
           `}
         />
 
@@ -243,14 +243,13 @@ function SearchBarInput({ initialQuery = "" }: SearchBarProps) {
             h-full
             px-2.5
             inline-flex items-center justify-center
-            text-muted-foreground
-            hover:text-primary
-            focus:outline-none focus:text-primary
+            text-muted-foreground            
+            focus:outline-none 
             transition-colors duration-150
           "
         >
           <Mic
-            className={`w-[18px] h-[18px] ${listening ? "text-primary animate-bounce" : ""}`}
+            className={`w-[18px] h-[18px] ${listening ? "animate-bounce" : ""}`}
             aria-hidden="true"
           />
           <span className="sr-only">Voice search</span>
@@ -264,9 +263,8 @@ function SearchBarInput({ initialQuery = "" }: SearchBarProps) {
             h-full
             px-3.5
             inline-flex items-center justify-center
-            text-muted-foreground
-            hover:text-primary
-            focus:outline-none focus:text-primary
+            text-muted-foreground            
+            focus:outline-none 
             transition-colors duration-150
           "
         >

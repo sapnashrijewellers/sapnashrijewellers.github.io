@@ -21,21 +21,21 @@ export default function OrderViaWhatsappButton({
   const productUrl = `${baseUrl}/p/${product.id}/`;
 
   const message = `
-नमस्ते,
+Hello,
 
-मुझे इस आभूषण के बारे में अधिक जानकारी और छूट (discount) चाहिए:
+I would like to get more information about this jewelry piece and inquire about any available discounts:
 
-🔹 उत्पाद (Product): ${product.name}
-🔹 लिंक (Link): ${productUrl}
+🔹 Product: ${product.name}
+🔹 Link: ${productUrl}
 
-कृपया विवरण और सर्वोत्तम मूल्य साझा करें।
+Please share the best price and delivery time frame.
 `.trim();
 
   const whatsappUrl = `https://wa.me/${sanitizedWhatsApp}?text=${encodeURIComponent(
     message
   )}`;
 
-  const accessibleLabel = `WhatsApp पर ऑर्डर करें: ${product.name} (Order ${product.name} via WhatsApp enquiry)`;
+  const accessibleLabel = `Order on WhatsApp: ${product.name} (Order ${product.name} via WhatsApp enquiry)`;
 
   return (
     <a

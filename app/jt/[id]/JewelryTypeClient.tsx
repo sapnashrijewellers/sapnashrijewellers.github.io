@@ -94,7 +94,7 @@ export default function JewelryTypeClient({ products, pFilters }: JewelryTypeCli
           aria-live="polite"
           className="py-16 text-center text-muted-foreground text-lg bg-surface/40 rounded-2xl border border-dashed border-theme"
         >
-          <p>चुने गए फ़िल्टर के अनुसार इस श्रेणी में कोई उत्पाद उपलब्ध नहीं है।</p>
+          <p>No products are available based on the selected filters.</p>
         </div>
       ) : (
         <ul

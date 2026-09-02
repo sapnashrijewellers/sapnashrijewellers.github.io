@@ -32,18 +32,17 @@ export default function BulkEnquiry({
   }, []);
 
   const message = `
-नमस्ते,
+Hello,
 
-मुझे निम्नलिखित उत्पाद के लिए थोक पूछताछ (Bulk Enquiry) करनी है:
+I would like to make a bulk inquiry for the following product:
+🔹 Product: ${product.name}
+🔹 Link: ${productUrl}
+🔹 Quantity: ${quantity.trim() || "Not specified"}
 
-🔹 उत्पाद (Product): ${product.name}
-🔹 लिंक (Link): ${productUrl}
-🔹 मात्रा (Quantity): ${quantity.trim() || "निर्दिष्ट नहीं (Not specified)"}
+📝 Requirements:
+${requirements.trim() || "None"}
 
-📝 अतिरिक्त विवरण (Requirements):
-${requirements.trim() || "कोई नहीं (None)"}
-
-कृपया सर्वोत्तम मूल्य और डिलीवरी की समय सीमा साझा करें।
+Please share the best price and delivery time frame.
 `.trim();
 
   const whatsappUrl = `https://wa.me/${sanitizedWhatsApp}?text=${encodeURIComponent(
@@ -66,7 +65,7 @@ ${requirements.trim() || "कोई नहीं (None)"}
           className="w-full flex items-center justify-between px-4 py-3.5 text-left text-foreground hover:bg-theme/5 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-inset transition-colors duration-150"
         >
           <span className="font-semibold text-base sm:text-lg text-foreground tracking-tight flex items-center gap-2">
-            थोक पूछताछ (Bulk Enquiry / Order)
+            Bulk Enquiry / Order
           </span>
 
           <span
@@ -105,7 +104,7 @@ ${requirements.trim() || "कोई नहीं (None)"}
               htmlFor={quantityId}
               className="block text-xs font-medium text-muted-foreground mb-1"
             >
-              आवश्यक मात्रा (Required Quantity)
+              Required Quantity
             </label>
             <input
               id={quantityId}
@@ -126,7 +125,7 @@ ${requirements.trim() || "कोई नहीं (None)"}
               htmlFor={requirementsId}
               className="block text-xs font-medium text-muted-foreground mb-1"
             >
-              अतिरिक्त विवरण / अनुकूलन (Customization &amp; Requirements)
+              Additional Details / Customization  
             </label>
             <textarea
               id={requirementsId}
@@ -154,7 +153,7 @@ ${requirements.trim() || "कोई नहीं (None)"}
             "
           >
             <WhatsappIcon className="w-5 h-5 shrink-0" aria-hidden="true" />
-            <span>व्हाट्सएप पर पूछताछ भेजें (Send on WhatsApp)</span>
+            <span>Send on WhatsApp</span>
           </a>
         </form>
       </div>

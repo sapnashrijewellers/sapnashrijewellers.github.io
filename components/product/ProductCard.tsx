@@ -55,7 +55,7 @@ export default function ProductCard({
             pointer-events-none select-none
             -rotate-2
           "
-          aria-label="नवीन आगमन (New Arrival product)"
+          aria-label="New Arrival product"
         >
           <span aria-hidden="true">✨</span>
           <span>NEW</span>
@@ -65,14 +65,12 @@ export default function ProductCard({
       <Link
         href={`/p/${product.id}/`}
         prefetch={false}
-        title={product.name}
+        title={`${product.name} - ${product.brandText}`}
         aria-label={`View full details for ${product.name}`}
         className="
           flex h-full w-full grow flex-col
           rounded-2xl
-          focus:outline-none
-          focus:ring-2 focus:ring-primary
-          focus:ring-inset
+          focus:outline-none                   
         "
       >
         {/* Product image */}
@@ -131,8 +129,7 @@ export default function ProductCard({
             <h3
               className="
                 text-xs font-medium leading-snug text-foreground
-                transition-colors duration-150
-                group-hover:text-primary
+                transition-colors duration-150                
                 sm:text-sm
               "
             >

@@ -88,7 +88,7 @@ export default function Tooltip({
         aria-label={label}
         aria-describedby={open ? tooltipId : undefined}
         aria-expanded={open}
-        className="inline-flex items-center justify-center p-0.5 rounded-full text-primary/70 hover:text-primary focus:text-primary focus:outline-none focus:ring-2 focus:ring-primary transition-colors duration-150 cursor-pointer"
+        className="inline-flex items-center justify-center p-0.5 rounded-full focus:outline-none focus:ring-2 focus:ring-primary transition-colors duration-150 cursor-pointer"
       >
         <Info className="w-3.5 h-3.5" aria-hidden="true" />
       </button>
@@ -124,7 +124,7 @@ export default function Tooltip({
             href={href}
             tabIndex={open ? 0 : -1}
             aria-label={`Read full policy details at ${href}`}
-            className="inline-flex items-center text-xs font-semibold text-primary hover:underline focus:outline-none focus:ring-1 focus:ring-primary rounded"
+            className="inline-flex items-center text-xs font-semibold hover:underline focus:outline-none focus:ring-1 focus:ring-primary rounded"
           >
             Read full policy &rarr;
           </Link>

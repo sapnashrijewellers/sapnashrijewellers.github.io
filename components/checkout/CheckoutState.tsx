@@ -10,11 +10,7 @@ import {
   Product,
 } from "@/types/catalog";
 
-import {
-  getCart,
-  saveCart,
-  clearCartStorage,
-} from "@/utils/cart/cart";
+import { getCart, saveCart, clearCartStorage } from "@/utils/cart/cart";
 
 import { calculateFinal } from "@/utils/cart/calculatePrice";
 import { requireAuth } from "@/utils/auth/auth";
@@ -30,12 +26,7 @@ import productsData from "@/data/products.json";
 
 import { Loader2, LogIn } from "lucide-react";
 
-type CheckoutStep =
-  | "CART"
-  | "ADDRESS"
-  | "PAYMENT"
-  | "REVIEW"
-  | "VERIFY";
+type CheckoutStep = "CART" | "ADDRESS" | "PAYMENT" | "REVIEW" | "VERIFY";
 
 interface CheckoutStateProps {
   className?: string;
@@ -56,8 +47,7 @@ function getHydratedInitialCart(): Cart {
 
     const populatedItems = (rawCart.items || []).map((item) => ({
       ...item,
-      product:
-        productMap.get(Number(item.productId)) || item.product,
+      product: productMap.get(Number(item.productId)) || item.product,
     }));
 
     return {
@@ -65,53 +55,38 @@ function getHydratedInitialCart(): Cart {
       items: populatedItems,
     };
   } catch (error) {
-    console.error(
-      "Failed to hydrate initial cart data:",
-      error,
-    );
+    console.error("Failed to hydrate initial cart data:", error);
 
     return getCart();
   }
 }
 
-export default function CheckoutState({
-  className = "",
-}: CheckoutStateProps) {
+export default function CheckoutState({ className = "" }: CheckoutStateProps) {
   // --------------------------------------------------
   // Authentication
   // --------------------------------------------------
 
-  const {
-    user,
-    loading: authLoading,
-  } = useAuth();
+  const { user, loading: authLoading } = useAuth();
 
-  const [authPending, setAuthPending] =
-    useState(false);
+  const [authPending, setAuthPending] = useState(false);
 
   // --------------------------------------------------
   // Cart
   // --------------------------------------------------
 
-  const [cart, setCart] = useState<Cart>(
-    getHydratedInitialCart,
-  );
+  const [cart, setCart] = useState<Cart>(getHydratedInitialCart);
 
   // --------------------------------------------------
   // Checkout state
   // --------------------------------------------------
 
-  const [step, setStep] =
-    useState<CheckoutStep>("CART");
+  const [step, setStep] = useState<CheckoutStep>("CART");
 
-  const [paymentMethod, setPaymentMethod] =
-    useState<PaymentMethod>("UPI");
+  const [paymentMethod, setPaymentMethod] = useState<PaymentMethod>("UPI");
 
-  const [address, setAddress] =
-    useState<Address>(new Address());
+  const [address, setAddress] = useState<Address>(new Address());
 
-  const [addressLoading, setAddressLoading] =
-    useState(false);
+  const [addressLoading, setAddressLoading] = useState(false);
 
   // --------------------------------------------------
   // Login
@@ -123,10 +98,7 @@ export default function CheckoutState({
 
       await requireAuth();
     } catch (error) {
-      console.error(
-        "Checkout sign-in failed:",
-        error,
-      );
+      console.error("Checkout sign-in failed:", error);
     } finally {
       setAuthPending(false);
     }
@@ -156,8 +128,7 @@ export default function CheckoutState({
       setAddressLoading(true);
 
       try {
-        const workerUrl =
-          process.env.NEXT_PUBLIC_WORKER_URL || "";
+        const workerUrl = process.env.NEXT_PUBLIC_WORKER_URL || "";
 
         const response = await fetch(
           `${workerUrl}/address?uid=${encodeURIComponent(
@@ -197,21 +168,12 @@ export default function CheckoutState({
           setAddress((previous) => ({
             ...previous,
             uid: authenticatedUser.uid,
-            name:
-              previous.name ||
-              authenticatedUser.displayName ||
-              "",
-            email:
-              previous.email ||
-              authenticatedUser.email ||
-              "",
+            name: previous.name || authenticatedUser.displayName || "",
+            email: previous.email || authenticatedUser.email || "",
           }));
         }
       } catch (error) {
-        console.error(
-          "Failed to retrieve stored user address:",
-          error,
-        );
+        console.error("Failed to retrieve stored user address:", error);
       } finally {
         if (mounted) {
           setAddressLoading(false);
@@ -238,8 +200,7 @@ export default function CheckoutState({
     setAddressLoading(true);
 
     try {
-      const workerUrl =
-        process.env.NEXT_PUBLIC_WORKER_URL || "";
+      const workerUrl = process.env.NEXT_PUBLIC_WORKER_URL || "";
 
       await fetch(`${workerUrl}/address`, {
         method: "POST",
@@ -254,10 +215,7 @@ export default function CheckoutState({
 
       setStep("PAYMENT");
     } catch (error) {
-      console.error(
-        "Failed to save address:",
-        error,
-      );
+      console.error("Failed to save address:", error);
     } finally {
       setAddressLoading(false);
     }
@@ -267,30 +225,20 @@ export default function CheckoutState({
   // Pricing
   // --------------------------------------------------
 
-  const priceSummary = useMemo(
-    (): PriceSummaryType => {
-      const productTotal =
-        calculateFinal(cart);
+  const priceSummary = useMemo((): PriceSummaryType => {
+    const productTotal = calculateFinal(cart);
 
-      const shipping = 60;
+    const shipping = 60;
 
-      const cod =
-        paymentMethod === "COD"
-          ? 200
-          : 0;
+    const cod = paymentMethod === "COD" ? 200 : 0;
 
-      return {
-        productTotal,
-        shipping,
-        cod,
-        finalPrice:
-          productTotal +
-          shipping +
-          cod,
-      };
-    },
-    [cart, paymentMethod],
-  );
+    return {
+      productTotal,
+      shipping,
+      cod,
+      finalPrice: productTotal + shipping + cod,
+    };
+  }, [cart, paymentMethod]);
 
   // --------------------------------------------------
   // Persist cart
@@ -334,16 +282,10 @@ export default function CheckoutState({
           ${className}
         `}
       >
-        <Loader2
-          className="w-8 h-8 animate-spin text-primary"
-          aria-hidden="true"
-        />
+        <Loader2 className="w-8 h-8 animate-spin " aria-hidden="true" />
 
         <p className="text-sm text-muted-foreground">
-          सुरक्षित चेकआउट लोड हो रहा है...
-          <span className="block">
-            (Loading secure checkout...)
-          </span>
+          Loading secure checkout...
         </p>
       </main>
     );
@@ -376,10 +318,7 @@ export default function CheckoutState({
             justify-center
           "
         >
-          <LogIn
-            className="w-8 h-8"
-            aria-hidden="true"
-          />
+          <LogIn className="w-8 h-8" aria-hidden="true" />
         </div>
 
         <div className="space-y-1.5">
@@ -392,15 +331,11 @@ export default function CheckoutState({
             "
           >
             चेकआउट के लिए साइन इन करें
-
-            <span className="block">
-              (Sign In to Checkout)
-            </span>
+            <span className="block">(Sign In to Checkout)</span>
           </h1>
 
           <p className="text-sm text-muted-foreground">
-            Please authenticate with Google to
-            attach your delivery address and
+            Please authenticate with Google to attach your delivery address and
             finalize your order.
           </p>
         </div>
@@ -438,22 +373,12 @@ export default function CheckoutState({
           "
         >
           {authPending ? (
-            <Loader2
-              className="w-5 h-5 animate-spin"
-              aria-hidden="true"
-            />
+            <Loader2 className="w-5 h-5 animate-spin" aria-hidden="true" />
           ) : (
-            <LogIn
-              className="w-5 h-5"
-              aria-hidden="true"
-            />
+            <LogIn className="w-5 h-5" aria-hidden="true" />
           )}
 
-          <span>
-            {authPending
-              ? "Signing in..."
-              : "Sign in with Google"}
-          </span>
+          <span>{authPending ? "Signing in..." : "Sign in with Google"}</span>
         </button>
       </main>
     );
@@ -475,10 +400,7 @@ export default function CheckoutState({
         ${className}
       `}
     >
-      <div
-        className="sr-only"
-        aria-live="polite"
-      >
+      <div className="sr-only" aria-live="polite">
         {`Current checkout step: ${step}. Total items in cart: ${
           cart.items?.length || 0
         }. Total payable: ₹${priceSummary.finalPrice}`}

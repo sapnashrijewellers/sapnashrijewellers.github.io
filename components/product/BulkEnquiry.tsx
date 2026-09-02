@@ -2,7 +2,7 @@
 
 import { useState, useId, useCallback } from "react";
 import { WhatsappIcon } from "@/components/common/BrandIcons";
-import {Plus, Minus} from "lucide-react"
+import { Plus, Minus } from "lucide-react";
 import type { Product } from "@/types/catalog";
 
 interface BulkEnquiryProps {
@@ -22,8 +22,8 @@ export default function BulkEnquiry({
   const quantityId = useId();
   const requirementsId = useId();
 
-  const rawWhatsApp = process.env.NEXT_PUBLIC_WHATSAPP ;
-  if(!rawWhatsApp) return null;
+  const rawWhatsApp = process.env.NEXT_PUBLIC_WHATSAPP;
+  if (!rawWhatsApp) return null;
   const sanitizedWhatsApp = rawWhatsApp.replace(/[^0-9]/g, "");
   const baseUrl = (process.env.NEXT_PUBLIC_BASE_URL || "").replace(/\/+$/, "");
   const productUrl = `${baseUrl}/p/${product.id}/`;
@@ -47,7 +47,7 @@ Please share the best price and delivery time frame.
 `.trim();
 
   const whatsappUrl = `https://wa.me/${sanitizedWhatsApp}?text=${encodeURIComponent(
-    message
+    message,
   )}`;
 
   return (
@@ -63,24 +63,29 @@ Please share the best price and delivery time frame.
           onClick={toggleOpen}
           aria-expanded={open}
           aria-controls={sectionId}
-          className="w-full flex items-center justify-between px-4 py-3.5 text-left text-foreground hover:bg-theme/5 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-inset transition-colors duration-150"
+          className="w-full flex items-center justify-between px-4 py-3.5 text-left text-foreground hover:bg-theme/5 focus:outline-none transition-colors duration-150 cursor-pointer"
         >
           <span className="font-semibold text-base sm:text-lg text-foreground tracking-tight flex items-center gap-2">
             Bulk Enquiry / Order
           </span>
 
           <span
-            className="p-1 rounded-lg text-primary bg-primary/10 transition-transform duration-150 will-change-transform"
+            className="p-1 rounded-lg bg-primary/10 transition-transform duration-150 will-change-transform"
             aria-hidden="true"
           >
-            {open ? <Minus className="w-3.5 h-3.5" /> : <Plus className="w-3.5 h-3.5" />}
+            {open ? (
+              <Minus className="w-3.5 h-3.5" />
+            ) : (
+              <Plus className="w-3.5 h-3.5" />
+            )}
           </span>
         </button>
       </h2>
 
       {/* Screen Reader & LLM Structured Context */}
       <div className="sr-only">
-        Bulk order enquiry form for {product.name}. Direct WhatsApp quotation channel available.
+        Bulk order enquiry form for {product.name}. Direct WhatsApp quotation
+        channel available.
       </div>
 
       {/* Collapsible Content */}
@@ -98,7 +103,10 @@ Please share the best price and delivery time frame.
           }
         `}
       >
-        <form onSubmit={(e) => e.preventDefault()} className="space-y-3.5 text-sm">
+        <form
+          onSubmit={(e) => e.preventDefault()}
+          className="space-y-3.5 text-sm"
+        >
           {/* Quantity Input */}
           <div>
             <label
@@ -126,7 +134,7 @@ Please share the best price and delivery time frame.
               htmlFor={requirementsId}
               className="block text-xs font-medium text-muted-foreground mb-1"
             >
-              Additional Details / Customization  
+              Additional Details / Customization
             </label>
             <textarea
               id={requirementsId}
@@ -144,17 +152,19 @@ Please share the best price and delivery time frame.
             target="_blank"
             rel="noopener noreferrer"
             tabIndex={open ? 0 : -1}
-            aria-label={`Send bulk order enquiry for ${product.name} on WhatsApp`}
-            className="
-              inline-flex items-center justify-center gap-2.5 w-full px-5 py-3 rounded-xl
-              bg-[#25D366] text-white font-semibold text-sm shadow-md
-              hover:bg-[#20bd5a] hover:scale-[1.01] active:scale-95
-              transition-[transform,background-color] duration-150 ease-out will-change-[transform]
-              focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2
-            "
+            aria-hidden={!open}
+            title={`Send bulk order enquiry for ${product.name} on WhatsApp`}
+            className="            
+    inline-flex items-center justify-center gap-2.5 w-full px-5 py-3 rounded-xl
+    bg-[#128C7E] text-white font-semibold text-sm shadow-md
+    hover:bg-[#075E54] hover:scale-[1.01] active:scale-95
+    transition-[transform,background-color] duration-150 ease-out will-change-[transform]
+    focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2
+  "
           >
             <WhatsappIcon className="w-5 h-5 shrink-0" aria-hidden="true" />
-            <span>Send on WhatsApp</span>
+            <span>Send bulk order enquiry for {product.name} on WhatsApp</span>
+            <span className="sr-only">(opens in a new tab)</span>
           </a>
         </form>
       </div>

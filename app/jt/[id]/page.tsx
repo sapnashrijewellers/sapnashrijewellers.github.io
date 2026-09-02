@@ -104,7 +104,7 @@ export default async function JewelryTypePage({ params }: JewelryTypePageProps) 
 
       {/* 3. Collection Header Information */}
       <header className="pl-4 border-l-4 border-primary/70 my-6">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-yatra font-bold text-primary">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-yatra font-bold ">
           {t.type}
         </h1>
         {t.description && (

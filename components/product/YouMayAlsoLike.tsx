@@ -23,7 +23,7 @@ export default function YouMayAlsoLike({
         p.for === product.for &&
         Array.isArray(product.type) &&
         Array.isArray(p.type) &&
-        product.type.some((t) => p.type.includes(t))
+        product.type.some((t) => p.type.includes(t)),
     )
     .sort((a, b) => Number(b.available) - Number(a.available))
     .slice(0, 15);
@@ -38,22 +38,27 @@ export default function YouMayAlsoLike({
       {/* Header with Bilingual Metadata */}
       <div className="flex items-baseline justify-between px-2 sm:px-4 mb-3 border-b border-theme/20 pb-2">
         <div className="flex items-center gap-2">
-          <Sparkles className="w-5 h-5 text-primary shrink-0" aria-hidden="true" />
+          <Sparkles
+            className="w-5 h-5 text-primary shrink-0"
+            aria-hidden="true"
+          />
           <h2
             id="you-may-also-like-heading"
             className="font-semibold text-lg sm:text-xl text-foreground tracking-tight"
           >
-            आपको यह भी पसंद आ सकता है (You May Also Like)
+            You May Also Like
           </h2>
         </div>
         <span className="text-xs text-muted-foreground font-medium hidden sm:inline-block">
-          {youMayAlsoLike.length} {youMayAlsoLike.length === 1 ? "सुझाव (Item)" : "सुझाव (Items)"}
+          {youMayAlsoLike.length}{" "}
+          {youMayAlsoLike.length === 1 ? "Item" : "Items"}
         </span>
       </div>
 
       {/* Screen Reader & LLM Structured Context */}
       <div className="sr-only">
-        Recommended related jewellery collections matching style and audience for {product.name}.
+        Recommended related jewellery collections matching style and audience
+        for {product.name}.
       </div>
 
       {/* Horizontally Scrollable Snap Track */}
@@ -68,16 +73,14 @@ export default function YouMayAlsoLike({
         "
       >
         {youMayAlsoLike.map((p) => (
-          <article
-            key={p.id}
-            aria-label={`${p.name} recommendation`}
+          <ProductCard
+          key={p.id}
+            product={p}
             className="
               shrink-0 w-[160px] sm:w-[200px] lg:w-[220px] snap-start
               transition-transform duration-150 ease-out will-change-transform
             "
-          >
-            <ProductCard product={p} />
-          </article>
+          />
         ))}
       </div>
     </section>

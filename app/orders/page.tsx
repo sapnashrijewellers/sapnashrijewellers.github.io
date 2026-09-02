@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
@@ -13,10 +12,7 @@ import type { Order, Product } from "@/types/catalog";
 import productsData from "@/data/products.json";
 
 export default function OrdersPage() {
-  const {
-    user,
-    loading: authLoading,
-  } = useAuth();
+  const { user, loading: authLoading } = useAuth();
 
   const uid = user?.uid ?? null;
 
@@ -57,7 +53,6 @@ export default function OrdersPage() {
       //
       // Once uid changes, the orders effect below
       // automatically fetches the orders.
-
     } catch (error) {
       console.error("Orders sign-in failed:", error);
     } finally {
@@ -159,12 +154,12 @@ export default function OrdersPage() {
         "
       >
         <Loader2
-          className="w-8 h-8 animate-spin text-primary"
+          className="w-8 h-8 animate-spin"
           aria-hidden="true"
         />
 
         <p className="text-sm text-muted-foreground animate-pulse">
-          Loading your account... (आपका अकाउंट लोड हो रहा है)
+          Loading your account... 
         </p>
       </main>
     );
@@ -187,15 +182,12 @@ export default function OrdersPage() {
         <div
           className="
             p-4 rounded-full
-            bg-primary/10 text-primary
+            bg-primary/10 
             w-16 h-16 mx-auto
             flex items-center justify-center
           "
         >
-          <LogIn
-            className="w-8 h-8"
-            aria-hidden="true"
-          />
+          <LogIn className="w-8 h-8" aria-hidden="true" />
         </div>
 
         <div className="space-y-1.5">
@@ -207,14 +199,12 @@ export default function OrdersPage() {
             "
           >
             साइन इन करें
-            <span className="block">
-              (Sign In to View Orders)
-            </span>
+            <span className="block">(Sign In to View Orders)</span>
           </h1>
 
           <p className="text-sm text-muted-foreground">
-            Please sign in with your Google account to
-            access your purchase history and order tracking.
+            Please sign in with your Google account to access your purchase
+            history and order tracking.
           </p>
         </div>
 
@@ -243,22 +233,12 @@ export default function OrdersPage() {
           "
         >
           {authPending ? (
-            <Loader2
-              className="w-4 h-4 animate-spin"
-              aria-hidden="true"
-            />
+            <Loader2 className="w-4 h-4 animate-spin" aria-hidden="true" />
           ) : (
-            <LogIn
-              className="w-4 h-4"
-              aria-hidden="true"
-            />
+            <LogIn className="w-4 h-4" aria-hidden="true" />
           )}
 
-          <span>
-            {authPending
-              ? "Signing in..."
-              : "Sign in with Google"}
-          </span>
+          <span>{authPending ? "Signing in..." : "Sign in with Google"}</span>
         </button>
       </main>
     );
@@ -305,9 +285,7 @@ export default function OrdersPage() {
           space-y-4
         "
       >
-        <p className="text-sm text-destructive">
-          {error}
-        </p>
+        <p className="text-sm text-destructive">{error}</p>
 
         <button
           type="button"
@@ -324,10 +302,7 @@ export default function OrdersPage() {
             transition-transform
           "
         >
-          <RefreshCw
-            className="w-4 h-4"
-            aria-hidden="true"
-          />
+          <RefreshCw className="w-4 h-4" aria-hidden="true" />
 
           <span>Try Again</span>
         </button>
@@ -341,14 +316,7 @@ export default function OrdersPage() {
 
   if (orders.length === 0) {
     return (
-      <main
-        className="
-          max-w-md mx-auto
-          px-4 py-20
-          text-center
-          space-y-4
-        "
-      >
+      <main className="max-w-md mx-auto px-4 py-20 text-center space-y-4">
         <div
           className="
             p-4 rounded-full
@@ -366,12 +334,7 @@ export default function OrdersPage() {
         </div>
 
         <div className="space-y-1">
-          <h1 className="text-xl font-bold text-foreground">
-            कोई ऑर्डर नहीं मिला
-            <span className="block">
-              (No Orders Found)
-            </span>
-          </h1>
+          <h1 className="text-xl font-bold text-foreground">No Orders Found</h1>
 
           <p className="text-sm text-muted-foreground">
             You haven’t placed any jewellery orders with us yet.
@@ -380,6 +343,7 @@ export default function OrdersPage() {
 
         <Link
           href="/"
+          title="visit home page for latest updates on product, browse categories & collections..."
           className="
             inline-flex items-center justify-center gap-2
             px-5 py-2.5
@@ -395,10 +359,7 @@ export default function OrdersPage() {
             duration-150 ease-out
           "
         >
-          <ShoppingBag
-            className="w-4 h-4"
-            aria-hidden="true"
-          />
+          <ShoppingBag className="w-4 h-4" aria-hidden="true" />
 
           <span>Start Shopping</span>
         </Link>
@@ -444,17 +405,13 @@ export default function OrdersPage() {
         </h1>
 
         <p className="text-xs sm:text-sm text-muted-foreground">
-          Showing {orders.length}{" "}
-          {orders.length === 1 ? "order" : "orders"}
+          Showing {orders.length} {orders.length === 1 ? "order" : "orders"}
         </p>
       </header>
 
-      <div
-        className="sr-only"
-        aria-live="polite"
-      >
-        Displaying your order history with detailed
-        product items, delivery addresses, and payment summaries.
+      <div className="sr-only" aria-live="polite">
+        Displaying your order history with detailed product items, delivery
+        addresses, and payment summaries.
       </div>
 
       <div className="space-y-6">
@@ -479,20 +436,14 @@ interface OrderCardProps {
   productsMap: Map<number, Product>;
 }
 
-function OrderCard({
-  order,
-  productsMap,
-}: OrderCardProps) {
+function OrderCard({ order, productsMap }: OrderCardProps) {
   const createdAt = new Date(order.createdAt);
 
-  const formattedDate = createdAt.toLocaleDateString(
-    "en-IN",
-    {
-      day: "numeric",
-      month: "short",
-      year: "numeric",
-    },
-  );
+  const formattedDate = createdAt.toLocaleDateString("en-IN", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  });
 
   const formattedTotal = Number(
     order.priceSummary?.finalPrice || 0,
@@ -544,9 +495,7 @@ function OrderCard({
 
           <p className="text-xs text-muted-foreground">
             Placed on:{" "}
-            <time dateTime={createdAt.toISOString()}>
-              {formattedDate}
-            </time>
+            <time dateTime={createdAt.toISOString()}>{formattedDate}</time>
           </p>
         </div>
 
@@ -555,12 +504,14 @@ function OrderCard({
             Order Total (कुल राशि)
           </p>
 
-          <p className="
+          <p
+            className="
             text-lg sm:text-xl
             font-bold
             text-foreground
             tracking-tight
-          ">
+          "
+          >
             ₹{formattedTotal}
           </p>
         </div>
@@ -594,9 +545,7 @@ function OrderCard({
           "
         >
           {order.items.map((item, index) => {
-            const product = productsMap.get(
-              Number(item.productId),
-            );
+            const product = productsMap.get(Number(item.productId));
 
             return (
               <div
@@ -644,18 +593,22 @@ function OrderCard({
                     "
                   >
                     <div className="space-y-1">
-                      <p className="
+                      <p
+                        className="
                         text-xs sm:text-sm
                         font-medium
                         text-foreground
-                      ">
+                      "
+                      >
                         {item.title}
                       </p>
 
-                      <p className="
+                      <p
+                        className="
                         text-[11px]
                         text-muted-foreground
-                      ">
+                      "
+                      >
                         (Catalog item updated)
                       </p>
                     </div>
@@ -699,9 +652,7 @@ function OrderCard({
         {/* Delivery Address */}
 
         <div className="space-y-1.5">
-          <h3 className="font-semibold text-foreground">
-            Delivery Address
-          </h3>
+          <h3 className="font-semibold text-foreground">Delivery Address</h3>
 
           <address
             className="
@@ -711,23 +662,15 @@ function OrderCard({
               leading-relaxed
             "
           >
-            <p className="font-medium text-foreground">
-              {order.address?.name}
-            </p>
+            <p className="font-medium text-foreground">{order.address?.name}</p>
 
-            <p className="text-muted-foreground">
-              {order.address?.mobile}
-            </p>
+            <p className="text-muted-foreground">{order.address?.mobile}</p>
 
-            <p className="whitespace-pre-line">
-              {order.address?.address}
-            </p>
+            <p className="whitespace-pre-line">{order.address?.address}</p>
 
             <p>
               {order.address?.city}
-              {order.address?.pin
-                ? ` – ${order.address.pin}`
-                : ""}
+              {order.address?.pin ? ` – ${order.address.pin}` : ""}
             </p>
           </address>
         </div>
@@ -735,9 +678,7 @@ function OrderCard({
         {/* Payment Details */}
 
         <div className="space-y-1.5">
-          <h3 className="font-semibold text-foreground">
-            Payment Details
-          </h3>
+          <h3 className="font-semibold text-foreground">Payment Details</h3>
 
           <div
             className="
@@ -760,10 +701,12 @@ function OrderCard({
             </p>
 
             {order.payment?.reference && (
-              <p className="
+              <p
+                className="
                 text-muted-foreground
                 break-all
-              ">
+              "
+              >
                 Ref:{" "}
                 <span className="font-mono text-xs">
                   {order.payment.reference}
@@ -784,9 +727,7 @@ function OrderCard({
             border border-theme/30
           "
         >
-          <h3 className="font-semibold text-foreground">
-            Price Summary
-          </h3>
+          <h3 className="font-semibold text-foreground">Price Summary</h3>
 
           <dl
             className="
@@ -800,9 +741,9 @@ function OrderCard({
 
               <dd>
                 ₹
-                {Number(
-                  order.priceSummary?.productTotal || 0,
-                ).toLocaleString("en-IN")}
+                {Number(order.priceSummary?.productTotal || 0).toLocaleString(
+                  "en-IN",
+                )}
               </dd>
             </div>
 
@@ -810,13 +751,11 @@ function OrderCard({
               <dt>Shipping</dt>
 
               <dd>
-                {Number(
-                  order.priceSummary?.shipping || 0,
-                ) === 0
+                {Number(order.priceSummary?.shipping || 0) === 0
                   ? "FREE"
-                  : `₹${Number(
-                      order.priceSummary?.shipping,
-                    ).toLocaleString("en-IN")}`}
+                  : `₹${Number(order.priceSummary?.shipping).toLocaleString(
+                      "en-IN",
+                    )}`}
               </dd>
             </div>
 
@@ -825,10 +764,7 @@ function OrderCard({
                 <dt>COD Charges</dt>
 
                 <dd>
-                  ₹
-                  {Number(
-                    order.priceSummary.cod,
-                  ).toLocaleString("en-IN")}
+                  ₹{Number(order.priceSummary.cod).toLocaleString("en-IN")}
                 </dd>
               </div>
             )}

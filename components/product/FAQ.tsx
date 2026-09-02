@@ -62,14 +62,14 @@ export default function FAQ({ product, className = "" }: FAQProps) {
       {/* Header */}
       <div className="flex items-center gap-2 mb-4 pb-2 border-b border-theme/20">
         <HelpCircle
-          className="w-5 h-5 text-primary shrink-0"
+          className="w-5 h-5 shrink-0"
           aria-hidden="true"
         />
         <h3
           id="faq-section-heading"
-          className="text-xl font-bold tracking-wide uppercase text-primary font-yatra"
+          className="text-xl font-bold tracking-wide font-yatra"
         >
-          अक्सर पूछे जाने वाले प्रश्न (FAQs)
+          Frequently asked questions and purchase guidance for {product.name}.
         </h3>
       </div>
 
@@ -87,7 +87,7 @@ export default function FAQ({ product, className = "" }: FAQProps) {
           >
             <dt className="text-sm sm:text-base font-semibold text-foreground leading-snug flex items-start gap-2">
               <span
-                className="text-primary font-bold select-none"
+                className="font-bold select-none"
                 aria-hidden="true"
               >
                 Q.

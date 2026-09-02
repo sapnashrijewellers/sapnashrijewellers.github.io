@@ -17,7 +17,7 @@ export function HighlightsTabs({ product, className = "" }: HighlightsTabsProps)
     >
       {/* Header with Bilingual Metadata */}
       <div className="flex items-center gap-2 mb-3 pb-2 ">
-        <Sparkles className="w-4 h-4 text-primary shrink-0" aria-hidden="true" />
+        <Sparkles className="w-4 h-4 shrink-0" aria-hidden="true" />
         <h3 id="product-highlights-heading"
           className="text-sm sm:text-base font-semibold text-foreground tracking-tight">
           Product Highlights
@@ -41,7 +41,7 @@ export function HighlightsTabs({ product, className = "" }: HighlightsTabsProps)
             className="flex items-start gap-2.5 leading-relaxed"
           >
             <CheckCircle2
-              className="w-4 h-4 text-primary mt-0.5 shrink-0 select-none"
+              className="w-4 h-4 mt-0.5 shrink-0 select-none"
               aria-hidden="true"
             />
             <span>{point}</span>

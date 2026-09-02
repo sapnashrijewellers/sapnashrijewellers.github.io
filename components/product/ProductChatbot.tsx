@@ -46,7 +46,7 @@ function FormattedMessage({ content }: { content: string }) {
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary font-medium underline underline-offset-2 hover:opacity-80 transition-opacity"
+            className="font-medium underline underline-offset-2 hover:opacity-80 transition-opacity"
           >
             {label}
           </a>
@@ -71,7 +71,7 @@ function FormattedMessage({ content }: { content: string }) {
             href={part}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary font-medium underline underline-offset-2 break-all hover:opacity-80 transition-opacity"
+            className="font-medium underline underline-offset-2 break-all hover:opacity-80 transition-opacity"
           >
             {part}
           </a>
@@ -94,7 +94,7 @@ function FormattedMessage({ content }: { content: string }) {
         if (isBullet) {
           return (
             <div key={lineIdx} className="flex items-start gap-2 pl-1">
-              <span className="text-primary font-bold select-none mt-0.5">•</span>
+              <span className="font-bold select-none mt-0.5">•</span>
               <div className="flex-1 min-w-0">{renderInlineStyles(bulletText)}</div>
             </div>
           );
@@ -179,7 +179,7 @@ export default function ProductChatbot({ product, className = "" }: ProductChatb
       {/* Header Bar */}
       <div className="flex items-center justify-between px-4 py-3 bg-surface/90">
         <div className="flex items-center gap-2">
-          <div className="p-1 rounded-lg bg-primary/10 text-primary">
+          <div className="p-1 rounded-lg bg-primary/10">
             <Sparkles className="h-4 w-4" aria-hidden="true" />
           </div>
           <h3 className="text-xl  font-semibold text-foreground">
@@ -212,7 +212,7 @@ export default function ProductChatbot({ product, className = "" }: ProductChatb
                 if (!isOpen) setIsOpen(true);
                 handleSend(q);
               }}
-              className="rounded-full border border-theme/60 bg-surface px-3 py-1 text-[11px] sm:text-xs text-foreground/85 hover:border-primary hover:text-primary hover:bg-primary/5 transition-colors cursor-pointer"
+              className="rounded-full border border-theme/60 bg-surface px-3 py-1 text-[11px] sm:text-xs text-foreground/85 hover:border-primary  hover:bg-primary/5 transition-colors cursor-pointer"
             >
               {q}
             </button>
@@ -230,7 +230,7 @@ export default function ProductChatbot({ product, className = "" }: ProductChatb
           >
             {messages.length === 0 && (
               <div className="flex flex-col items-center justify-center h-full text-center p-4 text-muted-foreground space-y-1">
-                <Bot className="h-7 w-7 text-primary/60 mb-1" aria-hidden="true" />
+                <Bot className="h-7 w-7 mb-1" aria-hidden="true" />
                 <p className="text-xs sm:text-sm font-medium text-foreground">
                   How can I help you with this piece?
                 </p>
@@ -248,7 +248,7 @@ export default function ProductChatbot({ product, className = "" }: ProductChatb
                 }`}
               >
                 {m.role === "bot" && (
-                  <div className="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+                  <div className="w-6 h-6 rounded-full bg-primary/10  flex items-center justify-center shrink-0 mt-0.5">
                     <Bot className="h-3.5 w-3.5" aria-hidden="true" />
                   </div>
                 )}
@@ -256,7 +256,7 @@ export default function ProductChatbot({ product, className = "" }: ProductChatb
                 <div
                   className={`max-w-[85%] rounded-2xl px-3.5 py-2.5 shadow-2xs ${
                     m.role === "user"
-                      ? "bg-primary text-primary-foreground rounded-tr-xs"
+                      ? "bg-primary rounded-tr-xs"
                       : "bg-surface border border-theme/40 text-foreground rounded-tl-xs"
                   }`}
                 >
@@ -279,7 +279,7 @@ export default function ProductChatbot({ product, className = "" }: ProductChatb
 
             {loading && (
               <div className="flex items-center gap-2 text-muted-foreground text-xs italic pl-1">
-                <Loader2 className="h-3.5 w-3.5 animate-spin text-primary" />
+                <Loader2 className="h-3.5 w-3.5 animate-spin " />
                 <span>Checking product details...</span>
               </div>
             )}
@@ -309,7 +309,7 @@ export default function ProductChatbot({ product, className = "" }: ProductChatb
               type="submit"
               disabled={loading || !input.trim()}
               aria-label="Send question"
-              className="p-2.5 rounded-xl bg-primary text-primary-foreground hover:bg-primary/90 disabled:opacity-40 disabled:cursor-not-allowed transition-colors cursor-pointer"
+              className="p-2.5 rounded-xl bg-primary hover:bg-primary/90 disabled:opacity-40 disabled:cursor-not-allowed transition-colors cursor-pointer"
             >
               <Send className="h-3.5 w-3.5" aria-hidden="true" />
             </button>

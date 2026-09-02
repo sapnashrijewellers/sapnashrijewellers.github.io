@@ -24,7 +24,7 @@
 
   /* Text */
   --color-text: #0a2a66;
-  --color-primary: #c9a24d;
+  --color-primary: #573f0b;
   --color-primary-dark: #081f4d;
 
   /* Brand Blues */
@@ -254,7 +254,7 @@ h1,
 h2,
 h3 {
   font-family: var(--font-yatra);
-  color: var(--color-primary-dark)
+  
 }
 
 .au-h2 {

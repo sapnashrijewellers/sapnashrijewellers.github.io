@@ -109,7 +109,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
       {/* 3. Category Header Information */}
       <header className="pl-4 border-l-4 border-primary/70 my-6">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-yatra font-bold text-primary">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-yatra font-bold">
           {category.name} <span className="font-sans text-xl md:text-2xl font-normal text-muted-foreground">| {category.title}</span>
         </h1>
         {category.description && (

@@ -46,17 +46,17 @@ Please share the best price and delivery time frame.
       title={`Order ${product.name} via WhatsApp`}
       aria-label={accessibleLabel}
       className={`
-        inline-flex items-center justify-center gap-3 px-5 py-3 rounded-2xl
-        bg-surface border border-theme/50 shadow-sm
-        hover:border-[#25D366] hover:shadow-md hover:scale-[1.01] active:scale-95
-        transition-[transform,border-color,box-shadow] duration-150 ease-out will-change-[transform]
-        focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 focus:ring-offset-background
-        ${className}
-      `}
+    inline-flex items-center justify-center gap-3 px-5 py-3 rounded-2xl
+    bg-surface border border-theme/50 shadow-sm
+    hover:border-[#128C7E] dark:hover:border-[#25D366] hover:shadow-md hover:scale-[1.01] active:scale-95
+    transition-[transform,border-color,box-shadow] duration-150 ease-out will-change-[transform]
+    focus:outline-none focus:ring-2 focus:ring-[#128C7E] dark:focus:ring-[#25D366] focus:ring-offset-2 focus:ring-offset-background
+    ${className}
+  `}
     >
-      {/* WhatsApp Brand Icon */}
+      {/* WhatsApp Brand Icon: Darker teal-green in light mode, vibrant green in dark mode */}
       <WhatsappIcon
-        className="w-7 h-7 sm:w-8 sm:h-8 text-[#25D366] shrink-0"
+        className="w-7 h-7 sm:w-8 sm:h-8 text-[#128C7E] dark:text-[#25D366] shrink-0"
         aria-hidden="true"
       />
 
@@ -65,12 +65,17 @@ Please share the best price and delivery time frame.
         <span className="font-semibold text-foreground text-sm sm:text-base">
           {title}
         </span>
-        <span className="text-[11px] sm:text-xs text-[#25D366] font-medium">
+        {/* 
+      WCAG AA Passing Subtext:
+      - Light mode: emerald-700 / #047857 (>4.5:1 on white / light gray)
+      - Dark mode: emerald-400 / #34d399 (>4.5:1 on black / dark surface)
+    */}
+        <span className="text-[11px] sm:text-xs text-emerald-700 dark:text-emerald-400 font-medium">
           Click for offers &amp; instant assistance
         </span>
       </div>
 
-      <span className="sr-only">for {product.name}</span>
+      <span className="sr-only">for {product.name} (opens in a new tab)</span>
     </a>
   );
 }

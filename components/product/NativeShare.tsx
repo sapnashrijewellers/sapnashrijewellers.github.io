@@ -37,7 +37,7 @@ export default function NativeShare({
     if (typeof navigator !== "undefined" && navigator.share && navigator.canShare?.(shareData)) {
       try {
         await navigator.share(shareData);
-        setStatusMessage("साझा किया गया (Shared successfully)");
+        setStatusMessage("Shared successfully");
         return;
       } catch (err) {
         // User cancellation is normal behavior
@@ -52,7 +52,7 @@ export default function NativeShare({
       try {
         await navigator.clipboard.writeText(shareUrl);
         setCopied(true);
-        setStatusMessage("लिंक कॉपी हो गया (Link copied to clipboard)");
+        setStatusMessage("Link copied to clipboard");
         setTimeout(() => setCopied(false), 2000);
         return;
       } catch (err) {
@@ -68,8 +68,8 @@ export default function NativeShare({
   }, [productName, shareUrl]);
 
   const accessibleLabel = copied
-    ? `लिंक कॉपी हो गया: ${productName} (Link copied to clipboard)`
-    : `शेयर करें: ${productName} (Share ${productName})`;
+    ? `${productName} Link copied to clipboard`
+    : `Share ${productName})`;
 
   return (
     <div className={`relative inline-flex items-center ${className}`}>
@@ -94,10 +94,10 @@ export default function NativeShare({
         {copied ? (
           <Check className="w-4 h-4 text-emerald-600 shrink-0 select-none" aria-hidden="true" />
         ) : (
-          <Share2 className="w-4 h-4 text-primary shrink-0 select-none" aria-hidden="true" />
+          <Share2 className="w-4 h-4 shrink-0 select-none" aria-hidden="true" />
         )}
 
-        <span>{copied ? "कॉपी हो गया (Copied)" : "शेयर करें (Share)"}</span>
+        <span>{copied ? "Copied" : "Share"}</span>
         <span className="sr-only">product details</span>
       </button>
     </div>

@@ -85,7 +85,7 @@ export default function TestimonialScroller() {
       {/* Section Heading with bilingual context for Agentic Crawlers */}
       <div className="flex items-baseline justify-between px-4 mb-4">
         <h2 id={sectionTitleId} className="au-h2 text-foreground font-bold">
-          ग्राहकों की आवाज़ (Customer Reviews)
+          Customer Reviews
         </h2>        
       </div>
 
@@ -165,7 +165,7 @@ export default function TestimonialScroller() {
 
                     <span className="inline-flex items-center gap-1 text-[11px] text-emerald-600 dark:text-emerald-400 font-medium">
                       <BadgeCheck className="w-3.5 h-3.5 shrink-0" aria-hidden="true" />
-                      <span>प्रमाणित खरीदार (Verified Buyer)</span>
+                      <span>Verified Buyer</span>
                     </span>
                   </div>
 

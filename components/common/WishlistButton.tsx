@@ -117,8 +117,8 @@ export default function WishlistButton({
 
   const targetLabel = productName ? ` "${productName}"` : "";
   const accessibleActionLabel = isWishlisted
-    ? `हटाएं: पसंद सूची से निकालें (Remove${targetLabel} from wishlist)`
-    : `जोड़ें: पसंद सूची में जोड़ें (Save${targetLabel} to wishlist)`;
+    ? `Remove${targetLabel} from wishlist`
+    : `Save${targetLabel} to wishlist`;
 
   return (
     <button
@@ -134,6 +134,7 @@ export default function WishlistButton({
         transition-[transform,background-color,border-color] duration-150 ease-out
         focus:outline-none focus:ring-2 focus:ring-primary will-change-[transform]
       "
+      title={accessibleActionLabel}
     >
       <Heart
         size={size}

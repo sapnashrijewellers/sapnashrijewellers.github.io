@@ -32,7 +32,7 @@ export default function JewelleryTypeBar({
             !home ? "au-h2" : "text-xl sm:text-2xl"
           }`}
         >
-          हर अवसर के लिए आभूषण (Jewellery for Every Occasion)
+          Jewellery for Every Occasion
         </h2>
       </div>
 
@@ -59,7 +59,7 @@ export default function JewelleryTypeBar({
             <Link
               key={item.id}
               href={`/jt/${item.id}/`}
-              title={`${item.type} Jewellery Collection`}
+              title={`${item.description}`}
               aria-label={`Explore ${item.type} jewellery collection`}
               className="
                 group relative flex shrink-0 w-24 sm:w-28 flex-col items-center
@@ -74,7 +74,7 @@ export default function JewelleryTypeBar({
                 className="
                   relative flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center
                   rounded-full bg-gradient-to-br from-amber-500/10 to-orange-500/10
-                  text-primary ring-1 ring-primary/20
+                  ring-1 ring-primary/20
                   transition-colors duration-150
                   group-hover:from-amber-500/20 group-hover:to-orange-500/20 group-hover:ring-primary/40
                 "
@@ -122,7 +122,7 @@ export default function JewelleryTypeBar({
               </div>
 
               {/* Title with multi-line wrap and fixed container constraints */}
-              <h3 className="w-full text-xs sm:text-sm font-medium leading-snug text-foreground group-hover:text-primary transition-colors duration-150 break-words whitespace-normal">
+              <h3 className="w-full text-xs sm:text-sm font-medium leading-snug text-foreground transition-colors duration-150 break-words whitespace-normal">
                 {item.type}
               </h3>
 

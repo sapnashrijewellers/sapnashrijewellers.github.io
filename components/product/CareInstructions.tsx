@@ -59,15 +59,14 @@ export default function CareInstructions({
           onClick={toggleOpen}
           aria-expanded={open}
           aria-controls={sectionId}
-          className="w-full flex items-center justify-between px-4 py-3.5 text-left text-foreground hover:bg-theme/5 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-inset transition-colors duration-150 cursor-pointer"
+          className="w-full flex items-center justify-between px-4 py-3.5 text-left text-foreground hover:bg-theme/5 focus:outline-none transition-colors duration-150 cursor-pointer"
         >
-          <span className="font-semibold text-base sm:text-lg text-foreground tracking-tight flex items-center gap-2">
-            <Sparkles className="w-4 h-4 text-primary shrink-0" aria-hidden="true" />
-            <span>देखभाल निर्देश (Care Instructions)</span>
+          <span className="font-semibold text-base sm:text-lg text-foreground tracking-tight flex items-center gap-2">            
+            <span>Care Instructions</span>
           </span>
 
           <span
-            className="p-1 rounded-lg text-primary bg-primary/10 transition-transform duration-150 will-change-transform"
+            className="p-1 rounded-lg bg-primary/10 transition-transform duration-150 will-change-transform"
             aria-hidden="true"
           >
             {open ? <Minus className="w-3.5 h-3.5" /> : <Plus className="w-3.5 h-3.5" />}
@@ -103,7 +102,7 @@ export default function CareInstructions({
               <li key={item.id} className="flex items-start gap-3 text-sm text-foreground/90">
                 {IconComponent ? (
                   <IconComponent
-                    className="w-5 h-5 text-primary mt-0.5 shrink-0"
+                    className="w-5 h-5 mt-0.5 shrink-0"
                     strokeWidth={1.5}
                     aria-hidden="true"
                   />

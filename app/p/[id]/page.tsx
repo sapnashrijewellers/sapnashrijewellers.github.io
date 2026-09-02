@@ -25,30 +25,35 @@ import StoreAvailability from "@/components/product/StoreAvailability";
 import FAQ from "@/components/product/FAQ";
 import buildProductJsonLd from "@/utils/json-ld/buildProductJsonLd";
 import ProductChatbot from "@/components/product/ProductChatbot";
+import ProductGeoSpecs from "@/components/product/ProductGeoSpecs";
 
 interface ProductDetailPageProps {
   params: Promise<{ id: string }>;
 }
 
-const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in";
+const baseURL =
+  process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in";
 const driveURL = `${baseURL}/static/img/products/optimized/`;
 
 export async function generateStaticParams() {
-  return products
-    .map((p: Product) => ({
-      id: p.id.toString(),
-    }));
+  return products.map((p: Product) => ({
+    id: p.id.toString(),
+  }));
 }
 
 // ---- METADATA (Search Engines, Social Media & Crawlers) ----
-export async function generateMetadata({ params }: ProductDetailPageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: ProductDetailPageProps): Promise<Metadata> {
   const { id } = await params;
-  const product = products.find((p: Product) => p.id === Number(id) && p.active);
+  const product = products.find(
+    (p: Product) => p.id === Number(id) && p.active,
+  );
 
   if (!product) return {};
 
   const baseProductUrl = `${baseURL}/p/${product.id}/`;
-  const title = `${product.name}`;
+  const title = `${product.name} - ${product.brandText} | Sapna Shri Jewellers`;
   const description = product.description;
 
   const primaryImageUrl = product.images?.[0]
@@ -62,7 +67,7 @@ export async function generateMetadata({ params }: ProductDetailPageProps): Prom
       title,
       description,
       url: baseProductUrl,
-      type: "website",
+      type: "article",
       images: [
         {
           url: primaryImageUrl,
@@ -70,7 +75,7 @@ export async function generateMetadata({ params }: ProductDetailPageProps): Prom
           type: "image/webp",
           width: 800,
           height: 800,
-          alt: `${product.name} - Sapna Shri Jewellers`,
+          alt: `${product.name} - ${product.brandText} - Sapna Shri Jewellers`,
         },
       ],
     },
@@ -87,10 +92,14 @@ export async function generateMetadata({ params }: ProductDetailPageProps): Prom
 }
 
 // ---- MAIN PRODUCT DETAIL PAGE ----
-export default async function ProductDetailPage({ params }: ProductDetailPageProps) {
+export default async function ProductDetailPage({
+  params,
+}: ProductDetailPageProps) {
   const { id } = await params;
 
-  const product = products.find((p: Product) => p.active && p.id === Number(id));
+  const product = products.find(
+    (p: Product) => p.active && p.id === Number(id),
+  );
 
   if (!product) {
     notFound();
@@ -121,8 +130,29 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
         ]}
       />
 
-      {/* 2. Product Hero Section (Gallery + Details) */}
-      <section aria-labelledby="product-title" className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-8 py-6">
+      {/* 2. Mobile Title & Rating Header (Visible ONLY on Mobile/Tablet < md) */}
+      <header className="block md:hidden pt-3 pb-2 space-y-1.5">
+        <h1
+          id="product-title-mobile"
+          className="text-xl sm:text-2xl font-semibold text-foreground leading-tight"
+        >
+          {product.name}
+        </h1>
+
+        <div aria-label="Customer ratings and reviews">
+          <ProductRating
+            rating={product.rating ?? 4.6}
+            count={product.ratingCount ?? 12}
+            showExpert
+          />
+        </div>
+      </header>
+
+      {/* 3. Product Hero Section (Gallery + Details) */}
+      <section
+        aria-labelledby="product-title-desktop"
+        className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-8 py-4 md:py-6"
+      >
         {/* Left Column: Gallery & Instant CTA */}
         <div className="space-y-4 md:sticky md:top-20 self-start">
           <div className="space-y-2">
@@ -140,8 +170,12 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
 
         {/* Right Column: Key Details, Customization & Highlights */}
         <div className="space-y-5">
-          <header className="space-y-2">
-            <h1 id="product-title" className="text-2xl sm:text-3xl font-semibold text-foreground leading-tight">
+          {/* Desktop Title & Rating Header (Hidden on Mobile) */}
+          <header className="hidden md:block space-y-2">
+            <h1
+              id="product-title-desktop"
+              className="text-2xl sm:text-3xl font-semibold text-foreground leading-tight"
+            >
               {product.name}
             </h1>
 
@@ -163,12 +197,19 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
           )}
 
           <HighlightsTabs product={product} />
+          {/* GEO Entity & Specs Component */}
+          <ProductGeoSpecs product={product} />
 
           <ProductShare product={product} />
 
           {/* User Review / Interactive Rating */}
-          <section aria-label="Submit jewellery rating" className="pt-2 min-h-[72px] border-t border-theme/30">
-            <p className="text-xs font-medium text-muted-foreground mb-1">Rate this jewellery</p>
+          <section
+            aria-label="Submit jewellery rating"
+            className="pt-2 min-h-[72px] border-t border-theme/30"
+          >
+            <p className="text-xs font-medium text-muted-foreground mb-1">
+              Rate this jewellery
+            </p>
             <ProductRatingInput productId={product.id} />
           </section>
 
@@ -176,24 +217,29 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
         </div>
       </section>
 
-      {/* 3. Auxiliary Information Sections */}
+      {/* 4. Auxiliary Information Sections */}
       <section aria-label="Trust signals and guarantees">
         <TrustSignalsRibbon product={product} />
       </section>
 
-      <section aria-label="Frequently asked questions about this product">
-        <FAQ product={product} />
-      </section>
-
-      <section aria-label="Bulk purchase and custom order enquiry">
+      <section
+        aria-label="Bulk purchase and custom order enquiry"
+        className="m-2"
+      >
         <BulkEnquiry product={product} />
       </section>
 
-      <section aria-label="Jewellery care instructions">
+      <section aria-label="Jewellery care instructions" className="m-2">
         <CareInstructions careKey={product.care} />
       </section>
 
-      {/* 4. Social Proof & Recommendations */}
+      <section
+        aria-label="Frequently asked questions about this product"
+        className="m-2"
+      >
+        <FAQ product={product} />
+      </section>
+
       <TestimonialScroller />
       <WishListBar />
 
@@ -202,21 +248,6 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
         <NewArrivals product={product} />
         <JewelleryTypeBar />
       </aside>
-
-      {/* 5. Trust / Pre-purchase Guidance Banner
-      <section aria-label="Important points before purchasing jewellery" className="max-w-6xl mx-auto py-8">
-        <div className="relative w-full aspect-[3/1] overflow-hidden rounded-2xl border border-theme/40 shadow-sm">
-          <Image
-            src={`${baseURL}/static/img/before-buy-banner.webp`}
-            alt="Important points to consider before you buy jewellery at Sapna Shri Jewellers Nagda"
-            title="Points to consider before you buy jewellery"
-            fill
-            sizes="(max-width: 1200px) 100vw, 1152px"
-            className="object-cover"
-            loading="lazy"
-          />
-        </div>
-      </section> */}
     </main>
   );
 }

@@ -27,18 +27,23 @@ export default function FloatingWhatsAppButton({
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={accessibleActionLabel}
-        title={`Chat on WhatsApp: +${sanitizedNumber}`}
+        aria-label={`${accessibleActionLabel} (opens in a new tab)`}
+        title={`Chat on WhatsApp: +${sanitizedNumber} (opens in a new tab)`}
         className="
-          inline-flex items-center justify-center p-3.5 sm:p-4 rounded-full
-          bg-[#25D366] text-white shadow-xl
-          hover:bg-[#20bd5a] hover:scale-105 active:scale-95
-          transition-[transform,background-color] duration-150 ease-out will-change-[transform]
-          focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 focus:ring-offset-background
-        "
+    inline-flex items-center justify-center p-3.5 sm:p-4 rounded-full
+    bg-[#128C7E] text-white shadow-xl
+    hover:bg-[#075E54] hover:scale-105 active:scale-95
+    transition-[transform,background-color] duration-150 ease-out will-change-[transform]
+    focus:outline-none focus:ring-2 focus:ring-[#128C7E] dark:focus:ring-[#25D366] focus:ring-offset-2 focus:ring-offset-background
+  "
       >
-        <WhatsappIcon className="w-7 h-7 sm:w-8 sm:h-8 shrink-0 text-white" aria-hidden="true" />
-        <span className="sr-only">Contact support on WhatsApp</span>
+        <WhatsappIcon
+          className="w-7 h-7 sm:w-8 sm:h-8 shrink-0 text-white"
+          aria-hidden="true"
+        />
+        <span className="sr-only">
+          Contact support on WhatsApp (opens in a new tab)
+        </span>
       </a>
     </aside>
   );

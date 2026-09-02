@@ -168,7 +168,7 @@ export default function ResponsiveNavbar() {
     {
       label: "Wishlist",
       href: "/wishlist/",
-      title: "Wishlist",
+      title: "View your saved Wishlist items",
       ariaLabel: "View your saved Wishlist items",
       icon: <Heart className="w-5 h-5" aria-hidden="true" />,
     },
@@ -176,7 +176,7 @@ export default function ResponsiveNavbar() {
     {
       label: "Cart",
       href: "/cart/",
-      title: "Shopping Cart",
+      title: "View items in your Shopping Cart",
       ariaLabel: "View items in your Shopping Cart",
       icon: <ShoppingCart className="w-5 h-5" aria-hidden="true" />,
     },
@@ -186,7 +186,7 @@ export default function ResponsiveNavbar() {
           {
             label: "Orders",
             href: "/orders/",
-            title: "Your Orders",
+            title: "View your previous jewellery orders and purchases",
             ariaLabel: "View your previous jewellery orders and purchases",
             icon: (
               <ClipboardList
@@ -220,7 +220,7 @@ export default function ResponsiveNavbar() {
             loading="lazy"
             decoding="async"
             className="w-5 h-5 rounded-full object-cover border border-theme/40"
-            referrerPolicy="no-referrer"
+            referrerPolicy="no-referrer"            
           />
         ) : (
           <LogOut

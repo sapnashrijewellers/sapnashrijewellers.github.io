@@ -25,7 +25,7 @@ export default function Footer() {
     { text: "Warranty & Purity Assurance", link: "/policies/warranty/" }
   ];
 
-  const popoularCollections = [
+  const popularCollections = [
     { text: "Mahadev Silver Rings", link: "/c/1/" },
     { text: "Sawariya Seth Ring", link: "/c/3/" },
     { text: "Personalised Silver Rings", link: "/c/4/" },
@@ -69,7 +69,8 @@ export default function Footer() {
               <li key={policy.link}>
                 <Link
                   href={policy.link}
-                  className="hover:text-primary hover:underline transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded"
+                  className="hover:underline transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded"
+                  title={`read full ${policy.text} policy details`}
                 >
                   {policy.text}
                 </Link>
@@ -84,13 +85,14 @@ export default function Footer() {
             Quick Links
           </h3>
           <ul className="space-y-2">
-            {popoularCollections.map((policy) => (
-              <li key={policy.link}>
+            {popularCollections.map((category) => (
+              <li key={category.link}>
                 <Link
-                  href={policy.link}
-                  className="hover:text-primary hover:underline transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded"
+                  href={category.link}
+                  className="hover:underline transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded"
+                  title={`explore ${category.text} collection`}
                 >
-                  {policy.text}
+                  {category.text}
                 </Link>
               </li>
             ))}
@@ -100,7 +102,7 @@ export default function Footer() {
         {/* 4. PHYSICAL STORE ADDRESS & HOURS */}
         <section aria-label="Physical showroom address and hours">
           <div className="flex items-start gap-2">
-            <MapPin className="w-4 h-4 shrink-0 mt-1 text-primary" aria-hidden="true" />
+            <MapPin className="w-4 h-4 shrink-0 mt-1" aria-hidden="true" />
             <h3 className="footer-heading font-yatra text-base sm:text-lg mb-3">
               Store Address
             </h3>
@@ -131,6 +133,7 @@ export default function Footer() {
               <a
                 href="tel:+918234042231"
                 className="hover:underline focus:outline-none focus:ring-1 focus:ring-primary rounded"
+                title="Connect with our customer care for any queries."
               >
                 +91-8234042231
               </a>
@@ -142,7 +145,8 @@ export default function Footer() {
           </address>
           <Link
             href="/about-us/"
-            className="hover:text-primary hover:underline transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded"
+            className="hover:underline transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded"
+            title="Know more about Sapna Shri Jewellers heritage and history"
           >
             About Our Heritage
           </Link>
@@ -160,9 +164,10 @@ export default function Footer() {
             rel="noopener noreferrer"
             aria-label="Chat directly on WhatsApp with Sapna Shri Jewellers"
             className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2.5 rounded-xl bg-[#25D366] text-white hover:bg-[#20bd5a] hover:scale-105 active:scale-95 transition-[transform,background-color] duration-150 ease-out will-change-[transform] shadow-md focus:outline-none focus:ring-2 focus:ring-[#25D366]"
+            title="Connect with us on WhatsApp"
           >
             <WhatsappIcon className="w-4 h-4 shrink-0" aria-hidden="true" />
-            <span>WhatsApp पर पूछें</span>
+            <span>Connect with us on WhatsApp</span>
           </a>
 
           <div className="flex items-center gap-4 mt-5 text-xl">
@@ -171,7 +176,8 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit Sapna Shri Jewellers on Facebook"
-              className="p-2 rounded-full border border-theme/40 hover:text-primary hover:border-primary transition-[color,border-color,transform] duration-150 hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary will-change-[transform]"
+              title="Visit Sapna Shri Jewellers on Facebook"
+              className="p-2 rounded-full border border-theme/40 hover:border-primary transition-[color,border-color,transform] duration-150 hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary will-change-[transform]"
             >
               <FacebookIcon className="w-4 h-4 shrink-0" aria-hidden="true" />
               <span className="sr-only">Facebook</span>
@@ -182,7 +188,8 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Follow Sapna Shri Jewellers on Instagram"
-              className="p-2 rounded-full border border-theme/40 hover:text-primary hover:border-primary transition-[color,border-color,transform] duration-150 hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary will-change-[transform]"
+              title="Follow Sapna Shri Jewellers on Instagram"
+              className="p-2 rounded-full border border-theme/40 hover:border-primary transition-[color,border-color,transform] duration-150 hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary will-change-[transform]"
             >
               <InstagramIcon className="w-4 h-4 shrink-0" aria-hidden="true" />
               <span className="sr-only">Instagram</span>
@@ -192,8 +199,9 @@ export default function Footer() {
               href="https://www.youtube.com/@SapnaShriJewellers-b1f/shorts"
               target="_blank"
               rel="noopener noreferrer"
+              title="Subscribe to Sapna Shri Jewellers on YouTube"
               aria-label="Subscribe to Sapna Shri Jewellers on YouTube"
-              className="p-2 rounded-full border border-theme/40 hover:text-primary hover:border-primary transition-[color,border-color,transform] duration-150 hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary will-change-[transform]"
+              className="p-2 rounded-full border border-theme/40 hover:border-primary transition-[color,border-color,transform] duration-150 hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary will-change-[transform]"
             >
               <YoutubeIcon className="w-4 h-4 shrink-0" aria-hidden="true" />
               <span className="sr-only">YouTube</span>

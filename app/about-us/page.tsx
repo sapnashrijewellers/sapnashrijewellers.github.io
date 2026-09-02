@@ -100,13 +100,13 @@ export default function AboutUsPage() {
 
       {/* ===== Header / Hero ===== */}
       <header className="text-center my-8">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4 leading-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
           सपना श्री ज्वेलर्स नागदा
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
           सपना श्री ज्वेलर्स पिछले{" "}
-          <strong className="text-primary-dark font-semibold">{years}+</strong> वर्षों से विश्वास का प्रतीक रहा है, और{" "}
-          <strong className="text-primary-dark font-semibold">{customers}+</strong> खुश ग्राहकों का परिवार बन चुका है।
+          <strong className="font-semibold">{years}+</strong> वर्षों से विश्वास का प्रतीक रहा है, और{" "}
+          <strong className="font-semibold">{customers}+</strong> खुश ग्राहकों का परिवार बन चुका है।
         </p>
       </header>
 
@@ -118,11 +118,11 @@ export default function AboutUsPage() {
 
         <p>
           सपना श्री ज्वेलर्स पिछले 35 वर्षों से सोने और चांदी के गहनों के क्षेत्र में अपनी उत्कृष्ट कला, भरोसेमंद सेवा और उच्च गुणवत्ता के लिए जाना जाता है। हमारी पहचान है —{" "}
-          <strong className="text-primary-dark font-medium">ख़ूबसूरती, विश्वसनीयता और पारदर्शिता।</strong>
+          <strong className="font-medium">ख़ूबसूरती, विश्वसनीयता और पारदर्शिता।</strong>
         </p>
 
         <div className="bg-surface border border-theme rounded-2xl p-6 shadow-sm space-y-3">
-          <p className="font-semibold text-primary">यहाँ आपको मिलेंगे:</p>
+          <p className="font-semibold">यहाँ आपको मिलेंगे:</p>
           <ul className="space-y-2 list-none pl-1">
             <li className="flex items-center gap-2">
               <span aria-hidden="true">✨</span> शुद्ध 22 कैरेट सोने के गहने (BIS 916 Hallmark)
@@ -137,20 +137,20 @@ export default function AboutUsPage() {
               <span aria-hidden="true">✨</span> धार्मिक और पारंपरिक डिज़ाइन में आधुनिकता का संगम
             </li>
           </ul>
-          <p className="pt-2 text-primary font-medium italic text-center">
+          <p className="pt-2 font-medium italic text-center">
             💠 सपना श्री ज्वेलर्स – जहां हर गहना एक कहानी कहता है। 💠
           </p>
         </div>
 
         <p>
-          श्री <strong className="text-primary-dark font-semibold">भवरलाल गांग</strong> द्वारा स्थापित यह व्यवसाय अब{" "}
-          <strong className="text-primary-dark font-semibold">अमीश कुमार गांग</strong> के नेतृत्व में 35+ वर्षों की गौरवशाली विरासत को आगे बढ़ा रहा है।
+          श्री <strong className="font-semibold">भवरलाल गांग</strong> द्वारा स्थापित यह व्यवसाय अब{" "}
+          <strong className="font-semibold">अमीश कुमार गांग</strong> के नेतृत्व में 35+ वर्षों की गौरवशाली विरासत को आगे बढ़ा रहा है।
         </p>
       </section>
 
       {/* ===== Founders / Leadership ===== */}
       <section aria-labelledby="leadership-heading" className="mt-16">
-        <h2 id="leadership-heading" className="text-2xl md:text-3xl font-bold text-center text-primary mb-8">
+        <h2 id="leadership-heading" className="text-2xl md:text-3xl font-bold text-center mb-8">
           संस्थापक एवं नेतृत्व
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto">
@@ -164,12 +164,13 @@ export default function AboutUsPage() {
                   src={`${baseURL}${owner.img}`}
                   alt={`${owner.name} - ${owner.title}`}
                   fill
+                  title={`${owner.name} - ${owner.title}`}
                   sizes="(max-width: 640px) 192px, 192px"
                   className="rounded-2xl shadow-md object-cover border-2 border-theme"
                   loading="lazy"
                 />
               </div>
-              <h3 className="text-xl font-bold text-primary-dark">{owner.name}</h3>
+              <h3 className="text-xl font-bold">{owner.name}</h3>
               <p className="text-muted-foreground">{owner.title}</p>
             </div>
           ))}
@@ -185,6 +186,7 @@ export default function AboutUsPage() {
           <Image
             src={imageUrl}
             alt="Sapna Shri Jewellers Flagship Store in Nagda Junction"
+            title="Sapna Shri Jewellers Flagship Store in Nagda Junction"
             fill
             priority
             sizes="(max-width: 1024px) 100vw, 896px"
@@ -195,19 +197,19 @@ export default function AboutUsPage() {
 
       {/* ===== Contact & Map ===== */}
       <section aria-labelledby="contact-heading" className="mt-16">
-        <h2 id="contact-heading" className="text-2xl md:text-3xl font-bold text-center text-primary mb-8">
+        <h2 id="contact-heading" className="text-2xl md:text-3xl font-bold text-center mb-8">
           हमसे संपर्क करें (Store Location)
         </h2>
 
         <div className="grid md:grid-cols-2 grid-cols-1 gap-6 max-w-4xl mx-auto">
           {/* Hindi Address */}
           <address className="not-italic bg-accent border border-theme rounded-2xl p-6 shadow-sm leading-relaxed">
-            <h3 className="text-lg font-bold text-primary mb-2">📌 सपना श्री ज्वैलर्स</h3>
+            <h3 className="text-lg font-bold mb-2">📌 सपना श्री ज्वैलर्स</h3>
             <p>रेलवे स्टेशन मेन रोड, जैन मंदिर के पास,</p>
             <p>नागदा जंक्शन, जिला उज्जैन (म.प्र.)</p>
             <p className="mt-3 font-semibold">
               📞 फ़ोन:{" "}
-              <a href="tel:+918234042231" className="hover:underline text-primary-dark" aria-label="Call 8234042231">
+              <a href="tel:+918234042231" className="hover:underline" aria-label="Call 8234042231" title="Call 8234042231">
                 +91 8234042231
               </a>
             </p>
@@ -215,12 +217,12 @@ export default function AboutUsPage() {
 
           {/* English Address */}
           <address className="not-italic bg-accent border border-theme rounded-2xl p-6 shadow-sm leading-relaxed">
-            <h3 className="text-lg font-bold text-primary mb-2">📌 Sapna Shri Jewellers</h3>
+            <h3 className="text-lg font-bold mb-2">📌 Sapna Shri Jewellers</h3>
             <p>Near Railway Station, M G Road,</p>
             <p>Nagda Junction, District: Ujjain (M.P.)</p>
             <p className="mt-3 font-semibold">
               📞 Phone:{" "}
-              <a href="tel:+918234042231" className="hover:underline text-primary-dark" aria-label="Call 8234042231">
+              <a href="tel:+918234042231" className="hover:underline" aria-label="Call 8234042231" title="Call 8234042231">
                 +91 8234042231
               </a>
             </p>
@@ -243,14 +245,14 @@ export default function AboutUsPage() {
 
       {/* ===== Promises ===== */}
       <section aria-labelledby="promises-heading" className="mt-16 text-center">
-        <h2 id="promises-heading" className="text-2xl md:text-3xl font-bold text-primary mb-8">
+        <h2 id="promises-heading" className="text-2xl md:text-3xl font-bold mb-8">
           हमारे वादे (Store Promises)
         </h2>
         <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-6 max-w-6xl mx-auto">
           {promises.map((p) => (
             <div key={p.title} className="bg-accent border border-theme rounded-2xl p-6 shadow-sm flex flex-col items-center">
               <div className="text-4xl mb-3" aria-hidden="true">{p.icon}</div>
-              <h3 className="text-xl font-bold mb-2 text-primary">{p.title}</h3>
+              <h3 className="text-xl font-bold mb-2">{p.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{p.text}</p>
             </div>
           ))}
@@ -259,13 +261,13 @@ export default function AboutUsPage() {
 
       {/* ===== Services ===== */}
       <section aria-labelledby="services-heading" className="mt-16 text-center">
-        <h2 id="services-heading" className="text-2xl md:text-3xl font-bold text-primary mb-8">
+        <h2 id="services-heading" className="text-2xl md:text-3xl font-bold mb-8">
           सेवाएँ उपलब्ध हैं (Our Services)
         </h2>
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {services.map((srv) => (
             <div key={srv.title} className="bg-accent p-6 rounded-2xl border border-theme shadow-sm text-left">
-              <h3 className="text-xl font-bold mb-2 text-primary">{srv.title}</h3>
+              <h3 className="text-xl font-bold mb-2">{srv.title}</h3>
               <p className="leading-relaxed text-muted-foreground">{srv.text}</p>
             </div>
           ))}
@@ -274,7 +276,7 @@ export default function AboutUsPage() {
 
       {/* ===== Certification / HUID ===== */}
       <section aria-labelledby="cert-heading" className="mt-16 text-center max-w-3xl mx-auto">
-        <h2 id="cert-heading" className="text-2xl md:text-3xl font-bold text-primary mb-4">
+        <h2 id="cert-heading" className="text-2xl md:text-3xl font-bold mb-4">
           सोने (HUID) का प्रमाणपत्र जाँच
         </h2>
         {certificates.map((cert, i) => (
@@ -291,7 +293,7 @@ export default function AboutUsPage() {
 
       {/* ===== FAQs ===== */}
       <section aria-labelledby="faq-heading" className="mt-16 max-w-4xl mx-auto">
-        <h2 id="faq-heading" className="text-2xl md:text-3xl font-bold text-center text-primary mb-8">
+        <h2 id="faq-heading" className="text-2xl md:text-3xl font-bold text-center mb-8">
           अक्सर पूछे जाने वाले प्रश्न (FAQ)
         </h2>
         <div className="space-y-4">
@@ -301,7 +303,7 @@ export default function AboutUsPage() {
               open={idx === 0}
               className="group border border-theme rounded-2xl bg-surface shadow-sm p-5 transition-all open:ring-1 open:ring-primary/20"
             >
-              <summary className="font-semibold text-lg cursor-pointer select-none flex items-center justify-between text-primary list-none">
+              <summary className="font-semibold text-lg cursor-pointer select-none flex items-center justify-between list-none">
                 <span>{f.q}</span>
                 <span className="text-sm font-normal text-muted-foreground transition-transform group-open:rotate-180" aria-hidden="true">
                   ▼

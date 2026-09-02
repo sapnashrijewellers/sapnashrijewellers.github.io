@@ -69,7 +69,7 @@ export default function WishlistBar() {
       {/* Header */}
       <div className="flex items-center justify-between px-2 sm:px-4 mb-3 border-b border-theme/20 pb-2">
         <div className="flex items-center gap-2">
-          <Heart className="w-5 h-5 text-primary fill-primary" aria-hidden="true" />
+          <Heart className="w-5 h-5 fill-primary" aria-hidden="true" />
           <h2
             id={sectionTitleId}
             className="text-lg sm:text-xl font-bold text-foreground"
@@ -78,7 +78,7 @@ export default function WishlistBar() {
           </h2>
         </div>
         <span className="text-xs text-muted-foreground font-medium">
-          {wishlistProducts.length} {wishlistProducts.length === 1 ? "आइटम (Item)" : "आइटम (Items)"}
+          {wishlistProducts.length} {wishlistProducts.length === 1 ? "Item" : "Items"}
         </span>
       </div>
 

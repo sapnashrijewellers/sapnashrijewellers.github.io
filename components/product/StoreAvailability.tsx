@@ -66,6 +66,7 @@ export default function StoreAvailability({
               <a
                 href={`tel:+${sanitizedWhatsApp}`}
                 aria-label={`Call Sapna Shri Jewellers at +${sanitizedWhatsApp}`}
+                title={`Call Sapna Shri Jewellers at +${sanitizedWhatsApp}`}
                 className="font-medium text-foreground hover:text-primary transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded"
               >
                 +{sanitizedWhatsApp}
@@ -94,18 +95,21 @@ export default function StoreAvailability({
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            title="Book an appointment via WhatsApp"
-            aria-label={`Book an in-store appointment for ${productName} on WhatsApp`}
+            title={`Book an in-store appointment for ${productName} via WhatsApp`}
+            aria-label={`Book an in-store appointment for ${productName} on WhatsApp (opens in a new tab)`}
             className="
-              inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl
-              bg-[#25D366] text-white font-medium text-xs sm:text-sm shadow-sm
-              hover:bg-[#20bd5a] hover:scale-[1.01] active:scale-95
-              transition-[transform,background-color] duration-150 ease-out will-change-transform
-              focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-1 shrink-0
-            "
+    inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl
+    bg-[#128C7E] text-white font-medium text-xs sm:text-sm shadow-sm
+    hover:bg-[#075E54] hover:scale-[1.01] active:scale-95
+    transition-[transform,background-color] duration-150 ease-out will-change-[transform]
+    focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-1 focus:ring-offset-background shrink-0
+  "
           >
             <WhatsappIcon className="h-4 w-4 shrink-0" aria-hidden="true" />
             <span>Book Appointment</span>
+            <span className="sr-only">
+              for {productName} (opens in a new tab)
+            </span>
           </a>
         </div>
       </div>

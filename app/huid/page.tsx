@@ -103,7 +103,7 @@ export default function HUIDInfo() {
       <Breadcrumb
         items={[
           { name: "Home", href: "/" },
-          { name: "Hallmark", href: "/huid" },
+          { name: "Hallmark", href: "/huid/" },
         ]}
       />
 
@@ -115,7 +115,7 @@ export default function HUIDInfo() {
         <span className="text-3xl text-accent" aria-hidden="true">
           ℹ️
         </span>
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold">
           HUID हॉलमार्किंग क्यों ज़रूरी है?
         </h1>
       </header>
@@ -129,7 +129,7 @@ export default function HUIDInfo() {
           <strong className="text-foreground">HUID (Hallmark Unique Identification)</strong> एक{" "}
           <strong className="text-foreground">विशेष 6-अंकों का अल्फ़ान्यूमेरिक कोड</strong> होता है, जो प्रत्येक सोने और चांदी के
           आभूषण पर लेज़र द्वारा अंकित किया जाता है। यह कोड प्रमाणित करता है कि आपका आभूषण{" "}
-          <strong className="text-primary-dark">BIS (भारतीय मानक ब्यूरो)</strong> के शुद्धता मानकों के अनुरूप प्रमाणित है।
+          <strong className="">BIS (भारतीय मानक ब्यूरो)</strong> के शुद्धता मानकों के अनुरूप प्रमाणित है।
         </p>
 
         <ul className="list-disc pl-6 space-y-2 pt-2">
@@ -152,8 +152,8 @@ export default function HUIDInfo() {
 
         <p className="font-medium text-foreground pt-4 bg-accent/10 p-4 rounded-xl border border-accent/20">
           अगली बार जब भी आप सोने या चांदी के गहने खरीदें, तो{" "}
-          <strong className="text-primary-dark">HUID 6-डिजिट कोड</strong> और{" "}
-          <strong className="text-primary-dark">BIS Logo</strong> अवश्य देखें — यही असली और सुरक्षित निवेश का आधार है।
+          <strong className="">HUID 6-डिजिट कोड</strong> और{" "}
+          <strong className="">BIS Logo</strong> अवश्य देखें — यही असली और सुरक्षित निवेश का आधार है।
         </p>
       </section>
 
@@ -183,7 +183,7 @@ export default function HUIDInfo() {
 
       {/* FAQ Section */}
       <section aria-labelledby="faq-heading" className="mt-12">
-        <h2 id="faq-heading" className="text-2xl font-bold text-primary mb-6">
+        <h2 id="faq-heading" className="text-2xl font-bold  mb-6">
           अक्सर पूछे जाने वाले प्रश्न (FAQ)
         </h2>
         <div className="space-y-4">
@@ -193,7 +193,7 @@ export default function HUIDInfo() {
               open={index === 0}
               className="group border border-theme rounded-xl bg-surface p-4 shadow-sm transition-all open:ring-1 open:ring-primary/20"
             >
-              <summary className="font-semibold text-base md:text-lg cursor-pointer select-none flex items-center justify-between text-primary list-none">
+              <summary className="font-semibold text-base md:text-lg cursor-pointer select-none flex items-center justify-between list-none">
                 <span>{item.q}</span>
                 <span
                   className="text-xs text-muted-foreground transition-transform duration-200 group-open:rotate-180"

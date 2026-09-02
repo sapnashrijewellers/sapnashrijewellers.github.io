@@ -64,7 +64,7 @@ export default function Breadcrumb({ items, className = "" }: BreadcrumbProps) {
                   href={item.href}
                   title={`Navigate to ${item.name}`}
                   aria-label={`Go to ${item.name} page`}
-                  className="text-muted-foreground hover:text-primary transition-colors duration-150 rounded focus:outline-none focus:ring-1 focus:ring-primary"
+                  className="text-muted-foreground transition-colors duration-150 rounded focus:outline-none focus:ring-1 focus:ring-primary"
                 >
                   <span>{item.name}</span>
                 </Link>

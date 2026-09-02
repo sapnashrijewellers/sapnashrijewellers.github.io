@@ -32,7 +32,7 @@ export default function buildProductJsonLd(
 
   const now = new Date();
   const validFrom = hasValidPrice ? now.toISOString().split("T")[0] : undefined;
-  const priceValidUntil = hasValidPrice
+  const priceValidUntil = hasValidPrice 
     ? new Date(now.getTime() + 3 * 24 * 60 * 60 * 1000).toISOString().split("T")[0]
     : undefined;
 

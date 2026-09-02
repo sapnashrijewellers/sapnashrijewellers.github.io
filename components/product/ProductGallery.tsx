@@ -294,6 +294,7 @@ useEffect(() => {
                 key={`${img}-${i}`}
                 type="button"
                 aria-label={`Select product image ${i + 1} of ${images.length}`}
+                title={`Select product image ${i + 1} of ${images.length}`}
                 aria-current={isSelected ? "true" : undefined}
                 onClick={() => setActiveIndex(i)}
                 className={`
@@ -308,13 +309,12 @@ useEffect(() => {
               >
                 <Image
                   src={thumbUrl}
-                  alt={`${product.name} thumbnail ${i + 1}`}
+                  alt={`${product.name} - ${product.brandText} thumbnail ${i + 1}`}
                   fill
                   sizes="80px"
                   loading="eager"
                   decoding="async"
-                  className="object-contain p-1"
-
+                  className="object-contain p-1 cursor-pointer"
                 />
               </button>
             );

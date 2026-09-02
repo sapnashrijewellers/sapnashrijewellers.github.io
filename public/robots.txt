@@ -12,7 +12,25 @@ Disallow: /rate*
 
 Allow: /
 
+LLM: https://sapnashrijewellers.in/llms.txt
 Sitemap: https://sapnashrijewellers.in/sitemap.xml
 
+
+
+# Explicitly invite dedicated AI Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
 
 

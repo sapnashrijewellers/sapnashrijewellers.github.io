@@ -48,12 +48,12 @@ export async function generateMetadata({ params }: JewelryTypePageProps): Promis
     title,
     description,
     alternates: {
-      canonical: `${baseURL}/jt/${id}`,
+      canonical: `${baseURL}/jt/${id}/`,
     },
     openGraph: {
       title,
       description,
-      url: `${baseURL}/jt/${id}`,
+      url: `${baseURL}/jt/${id}/`,
       type: "website",
       images: [
         {

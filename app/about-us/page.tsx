@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import Breadcrumb from "@/components/navbar/BreadcrumbItem";
 import TestimonialScroller from "@/components/common/Testimonials";
 import { promises, services, certificates, faqs } from "@/data/aboutUs.json";
@@ -17,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title,
     description,
-    url: `${baseURL}/about-us`,
+    url: `${baseURL}/about-us/`,
     type: "website",
     images: [{ url: imageUrl, width: 1200, height: 630, alt: title }],
   },
@@ -28,7 +27,7 @@ export const metadata: Metadata = {
     images: [imageUrl],
   },
   alternates: {
-    canonical: `${baseURL}/about-us`,
+    canonical: `${baseURL}/about-us/`,
   },
 };
 
@@ -44,9 +43,9 @@ export default function AboutUsPage() {
         "@id": `${baseURL}/#store`,
         name: "Sapna Shri Jewellers",
         alternateName: "सपना श्री ज्वेलर्स",
-        url: `${baseURL}/about-us`,
-        logo: `${baseURL}shop.webp`,
+        url: `${baseURL}/about-us/`,
         image: imageUrl,
+        logo: `${baseURL}/logo-wide.png`,
         description,
         telephone: "+91-8234042231",
         priceRange: "₹₹₹",

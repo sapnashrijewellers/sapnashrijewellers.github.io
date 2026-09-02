@@ -64,10 +64,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     openGraph: {
       title: `${cs.title}`,
       description: cs.description,
-      url: `/policies/${cs.slug}`,      
+      url: `/policies/${cs.slug}/`,      
     },    
     alternates: {
-      canonical: `/policies/${slug}`,
+      canonical: `/policies/${slug}/`,
     },
   };
 }

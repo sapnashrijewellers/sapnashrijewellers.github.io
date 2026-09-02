@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "HUID Hallmarking Info - Sapna Shri Jewellers Nagda",
     description:
       "BIS प्रमाणित HUID हॉलमार्किंग का महत्व जानें। असली और सुरक्षित निवेश के लिए जरूरी जानकारी।",
-    url: `${baseURL}/huid`,
+    url: `${baseURL}/huid/`,
     images: [
       {
         url: imageUrl,
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   alternates: {
-    canonical: `${baseURL}/huid`,
+    canonical: `${baseURL}/huid/`,
   },
 };
 

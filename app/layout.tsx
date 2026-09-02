@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 
   title: {
     default: "सपना श्री ज्वेलर्स नागदा | Sapna Shri Jewellers Nagda",
-    template: "%s | Sapna Shri Jewellers Nagda",
+    template: "%s",
   },
 
   description:
@@ -110,6 +110,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={yatraOne.variable}>
+      <head>
+        <link
+          rel="describedby"
+          type="text/markdown"
+          href="https://sapnashrijewellers.in/llms.txt"
+        />
+      </head>
       <body className="flex min-h-screen flex-col antialiased">
         <a
           href="#main-content"
@@ -136,7 +143,7 @@ export default function RootLayout({
 
         <footer className="w-full">
           <FooterTrust />
-          <Footer />         
+          <Footer />
         </footer>
         <GoToTop />
       </body>

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import type { Product } from "@/types/catalog";
 import products from "@/data/products.json";

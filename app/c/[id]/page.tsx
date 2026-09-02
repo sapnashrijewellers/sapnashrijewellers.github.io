@@ -49,7 +49,7 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
     openGraph: {
       title,
       description,
-      url: `${baseURL}/c/${id}`,
+      url: `${baseURL}/c/${id}/`,
       type: "website",
       images: [
         {
@@ -67,7 +67,7 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
       images: [imageUrl],
     },
     alternates: {
-      canonical: `${baseURL}/c/${id}`,
+      canonical: `${baseURL}/c/${id}/`,
     },
   };
 }

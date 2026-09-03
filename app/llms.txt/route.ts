@@ -61,7 +61,18 @@ export async function GET() {
 - Heritage: 35+ years of craft legacy with 5,000+ satisfied customers.
 - Address: Near Railway Station, M G Road, Nagda Junction, District: Ujjain, Madhya Pradesh, India.
 - Contact: +91 8234042231
-- Services: Gold polishing, easy old-gold exchange, HUID verification, loan against gold/silver jewelry, guaranteed buyback.
+- Services: Gold polishing, easy old-gold exchange, HUID verification, loan against gold/silver jewelry, Buyback available subject to the store's applicable buyback terms..
+
+## About This File
+
+This file provides structured information about Sapnashri Jewellers,
+its physical store, jewellery categories, jewellery types, policies,
+and currently listed products.
+
+Product URLs in this file use the current canonical website URL structure.
+Product information should be treated as catalogue information and
+verified against the linked product page for current price, availability,
+weight, and other changing attributes.
 
 ## Main Landing Pages
 - [Home Page](${baseUrl}/): Official storefront, live rate calculations, and featured collections.

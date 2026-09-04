@@ -119,7 +119,7 @@ sequenceDiagram
     - Static Site Generation (next build):
     - Configured with output: 'export' in next.config.ts.
     - generateStaticParams() pre-renders every product and category path into static HTML.
-    - Dynamic routes via [slug].
+    - Dynamic routes via [id].
     - Sitemaps (sitemap.ts) and Merchant feeds (gmc-feed.xml/route.ts) are compiled to static XML files.
 
 - GitHub Actions CI/CD: Manual trigger via workflow_dispatch executes the pre-build fetch, runs next build, and deploys /out to GitHub Pages.- 
@@ -163,9 +163,3 @@ Live Rate Sources
 - Decoupled Pricing Engine: Combines static product base weights (SSG for SEO) with client-side live rate feeds for real-time price calculations at checkout.
 - Feed & JSON-LD Parity: Generates sitemap.xml, gmc-feed.xml, and on-page application/ld+json from identical source JSON to avoid data mismatches across Googlebot and Merchant Center.
 
-## Coding Guidelines
-- Avoid errors: Calling setState synchronously within an effect can trigger cascading renders
-- Strictly follow ESLint rules and avoid errors
-- Use Link and Iamge rather than HTML anchor and img tags in next.js
-- Avoid using generic type like any, use Declared type whereever possible
-- Code must be optimized for LCP / Core Web Vitals, Accessibility (a11y), and LLM & Search Engine Crawlability

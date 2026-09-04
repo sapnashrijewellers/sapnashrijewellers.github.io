@@ -1,4 +1,7 @@
-## Progressive Web App (PWA) for Jewellery Product Catalog  
+# Jewellery Product Catalog
+
+This document provides a comprehensive overview of the technical architecture, core features, and integration strategies for our modern jewellery website. It is designed to serve as the primary reference for the development team, stakeholders, and AI-driven automation workflows.
+
 **Technology Stack:** 
 - Next.js - Static Site Generation (SSG)  
 - React 
@@ -11,12 +14,12 @@
 
 ---
 
-### 1. Overview
-This proposal outlines a modern, high-performance Progressive Web App (PWA) designed specifically for showcasing a jewellery product catalog. The platform combines elegant visual presentation with strong SEO foundations, mobile-first design, and advanced PWA capabilities to deliver a premium digital experience aligned with a luxury jewellery brand.
+## Overview
+This proposal outlines a modern, high-performance website designed specifically for showcasing a jewellery product catalog. The platform combines elegant visual presentation with strong SEO foundations, mobile-first design, and optimized performance to deliver a premium digital experience aligned with a luxury jewellery brand.
 
 ---
 
-### 2. Product Catalog & Presentation
+### Product Catalog & Presentation
 - Elegantly presents the jewellery catalog using multiple visual layouts and views.
 - Designed to highlight craftsmanship, detail, and luxury aesthetics.
 - Supports curated landing pages for collections, occasions, and featured products.
@@ -24,7 +27,7 @@ This proposal outlines a modern, high-performance Progressive Web App (PWA) desi
 
 ---
 
-### 3. SEO & LLM-Friendly Architecture
+### SEO & LLM-Friendly Architecture
 - Built with a search-engine-optimized and AI-friendly content structure.
 - **Custom SEO Controls**
   - User-defined page titles, meta descriptions.
@@ -36,7 +39,7 @@ This proposal outlines a modern, high-performance Progressive Web App (PWA) desi
 
 ---
 
-### 4. High Performance & Scalability
+### High Performance & Scalability
 - Fully **statically generated** using Next.js (SSG).
 - No server-side runtime dependency, ensuring:
   - Ultra-fast page loads
@@ -46,7 +49,7 @@ This proposal outlines a modern, high-performance Progressive Web App (PWA) desi
 
 ---
 
-### 5. Responsive & Mobile-First Design
+### Responsive & Mobile-First Design
 - Optimized for **mobile, tablet, and desktop** devices.
 - Mobile-first UI ensures:
   - Seamless browsing on smartphones
@@ -55,15 +58,14 @@ This proposal outlines a modern, high-performance Progressive Web App (PWA) desi
 
 ---
 
-### 6. Progressive Web App (PWA) Capabilities
-- Installable as a native-like app on Android, iOS, and desktop devices.
-- Offline caching and faster repeat visits using service workers.
-- Push notification support for real-time engagement.
-- App-like experience without App Store dependency.
+### Website Capabilities
+- Accessible on Android, iOS, and desktop browsers.
+- Optimized for fast page loads.
+- App-like experience for a clean, professional feel.
 
 ---
 
-### 7. Live Gold & Silver Rate Integration
+### Live Gold & Silver Rate Integration
 - Real-time gold and silver price integration.
 - Rates refreshed automatically at regular intervals.
 - **Push Notifications**
@@ -72,7 +74,7 @@ This proposal outlines a modern, high-performance Progressive Web App (PWA) desi
 
 ---
 
-### 8. Customer Education & Engagement
+### Customer Education & Engagement
 - Smart **Jewellery Buying Tips** feature:
   - A subtle animated chip highlights its availability without distraction.
   - Displays curated buying tips, checklists, and best practices.
@@ -82,67 +84,75 @@ This proposal outlines a modern, high-performance Progressive Web App (PWA) desi
   - Remains hidden for the next 24 hours once dismissed.
 
 ---
+### 🌐 Commerce & Multi-Platform Integrations
 
-### 9. Customizable Pages & Views
+| Integration Platform | Data Source/Endpoint | Sync Frequency |
+| :--- | :--- | :--- |
+| Google Merchant Center | `/gmc-feed.xml` | Daily |
+| Meta Commerce (FB, IG, WhatsApp) | RSS XML & CSV Feeds | Scheduled / Automated |
+| Pinterest Integration | Product Feed (RSS XML / CSV) | Scheduled |
+| WhatsApp Business | Direct Inquiry & Catalog Sync | Real-time / Scheduled |
 
-#### 9.1 Home Page
-- Live gold & silver rate updates every 5 minutes.
-- Announcement ticker for promotions, offers, and important notices.
-- Fully customizable banner system:
-  - Banner heading and descriptive text
-  - Adjustable text positioning
-  - Text and image animations
-  - Custom images per banner
-  - Click-through navigation
-  - Unlimited number of banners
+#### Google Merchant Center (GMC)
+- Automated RSS 2.0 XML product feed generated at build time via `app/gmc-feed.xml/route.ts`.
+- Mapped attributes: `<g:id>`, `<g:title>`, `<g:description>`, `<g:price>` (INR), `<g:availability>`, `<g:brand>`, and `<g:shipping>` flat-rate rules.
+- Setup for GMC Scheduled Daily Fetches with zero GTIN dependency (`<g:identifier_exists>no</g:identifier_exists>`).
+
+#### Meta Commerce, Pinterest & WhatsApp Catalog Automation
+- **Multi-Platform Automated Catalog Population:** Automatically syncs and populates products to WhatsApp Business, Instagram Shop, Facebook Shop, and Pinterest using tailored RSS XML and CSV product data feeds.
+- **Meta Commerce Catalog:** Scheduled sync via data feeds aligned with product routes (`/p/[id]/`) and dynamic pricing logic.
+- **WhatsApp Business Catalog & Inquiry:** Catalog sync paired with direct inquiry channel via custom URLs (`https://wa.me/<number>`) carrying pre-filled, bilingual quotation requests.
+- **Social Commerce Linking:** Enhanced discovery on Instagram, Facebook, and Pinterest with Open Graph `article` metadata and direct storefront catalog linking.
+---
+### 📍 Local SEO & Local Business Presence
+- **Grounded Local Business JSON-LD:** Implemented `JewelryStore` entity schema, linking physical showroom address (Nagda, MP), operating hours, geo-coordinates, and `sameAs` social links.
+- **Bilingual GEO Markup:** On-page semantic markup (`components/product/ProductGeoSpecs.tsx`) providing natural-language entity verification for AI-driven search (SearchGPT, Google Gemini Overviews).
+
+---
+### Customizable Pages & Views
+
+#### Home Page
+- Customizable top 3 banner with user provided images 
 - Jewellery Type Bar:
   - Showcases jewellery for various occasions (wedding, festive, daily wear, etc.).
   - Supports hundreds of jewellery type customizations.
   - Each type leads to a dedicated landing page.
 - New Arrivals section linking directly to product detail pages.
-- Collection sections for curated categories with “view more” navigation.
+- Collection sections for curated categories and filter for Gold and Silver product categories.
+- Store trust signal highlights
 - Trust-focused footer highlighting store legacy and credibility.
 - Extended footer with:
   - Store address and contact details
   - Social media links
-  - Quick links (About Us, Privacy Policy, Hallmarking, Buying Tips, etc.)
-
+  - Quick links 
+- Section to highlight store promises, features, services etc.
 ---
 
-#### 9.2 Category Pages
+#### Category Pages
 - Displays all products under a specific category.
 - Optimized for browsing, filtering, and SEO visibility.
 
 ---
 
-#### 9.3 Jewellery by Occasion Pages
+#### Jewellery by Occasion Pages
 - Dedicated pages for occasions such as:
   - Daily Wear
   - Office Wear
   - Festive Wear
   - Bridal & Wedding Collections
 - Helps customers quickly discover relevant designs.
+- Optimized for browsing, filtering, and SEO visibility.
 
 ---
 
-#### 9.4 Search Page
+#### Search Page
 - Free-text search across the entire catalog.
 - Enables fast discovery of products by name, type.
+- Filter by price, type & metal type, sort by match, name & price
 
 ---
 
-#### 9.5 Jewellery Price Estimate Calculator
-- Interactive tool to estimate jewellery price.
-- Calculation based on:
-  - Metal purity
-  - Weight
-  - Making charges
-  - Applicable GST
-- Improves price transparency and customer confidence.
-
----
-
-#### 9.6 Hallmarking Information Page
+### Hallmarking Information Page
 - Educates customers about:
   - What hallmarking is
   - Benefits of hallmarked jewellery
@@ -151,32 +161,31 @@ This proposal outlines a modern, high-performance Progressive Web App (PWA) desi
 
 ---
 
-#### 9.7 Wishlist
+### Wishlist
 - Allows customers to save favourite items.
 - Displays all wishlisted products in one place.
 - Encourages repeat visits and purchase intent.
 
 ---
 
-#### 9.8 About Us Page
+### About Us Page
 - Highlights store legacy and brand story.
 - Details store promises, services, and craftsmanship.
 - Includes store location, customer testimonials, and trust indicators.
 
 ---
 
-### 10. Summary of Key Benefits
+## Summary of Key Benefits
 - Luxury-focused presentation aligned with jewellery brands.
 - SEO-optimized and AI-ready architecture.
 - Lightning-fast performance with static generation.
-- Native-app-like experience via PWA.
-- Strong customer engagement through live rates, notifications, and education.
+- Responsive design for all devices.
 - Highly customizable and scalable for future growth.
 
 ---
 
 ## 11. Future Enhancements
-### 11.1 Flexible Price Calculation Strategies
+### Flexible Price Calculation Strategies
 
 #### Problem Statement:
 Currently, jewellery price estimation follows a single calculation logic. This is limiting because different products require different pricing approaches such as fixed pricing, weight-based pricing, or special promotional pricing.
@@ -196,26 +205,7 @@ Introduce configurable price calculation strategies at the product level:
 - Enables faster go-to-market for offers and special collections.
 - Enhances transparency and trust for customers using the price estimator.
 
-### 11.2 Product-Level Weight Unit Support (Gram / Carat / Others)
-
-#### Problem Statement:
-At present, the system accepts weight only in grams. This creates inaccuracies for products containing stones (diamonds, gemstones) where pricing is based on carats, not grams.
-
-#### Enhancement Description:
-Allow selection of weight unit per product, such as:
-
-- Grams (g) – for gold and silver
-- Carats (ct) – for diamonds and stones
-- Optional future units (mg, pcs)
-
-#### Reason & Business Value:
-
-- Enables accurate pricing for stone-based jewellery.
-- Aligns the catalog with industry-standard measurement practices.
-- Prevents incorrect price estimation and customer confusion.
-- Improves scalability for more complex jewellery designs.
-
-### 11.3 Dedicated Admin Panel for Product Management (CRUD)
+### Dedicated Admin Panel for Product Management (CRUD)
 
 #### Problem Statement:
 Currently, products are managed via Google Sheets. Many data validation rules are bypassed, leading to:
@@ -239,7 +229,7 @@ Build a secure Admin Dashboard for:
 - Improves operational efficiency for non-technical users.
 - Ensures data integrity and consistent catalog quality.
 
-### 11.4 AI-Assisted Product Creation (LLM Automation)
+### AI-Assisted Product Creation (LLM Automation)
 
 #### Problem Statement:
 Adding a new product is time-consuming and requires filling many repetitive fields manually, increasing effort and chances of error.
@@ -265,59 +255,7 @@ The system automatically generates:
 - Lowers dependency on skilled content writers.
 - Makes catalog expansion fast and scalable.
 
-### 11.5 Automated Product Publishing Pipeline
-
-#### Problem Statement:
-Currently, product updates require manual syncing from Google Sheets to JSON, followed by a full site build and deployment. This delays product visibility.
-
-#### Enhancement Description:
-Implement a fully automated pipeline:
-
-- Product saved → validated → published automatically
-- Trigger build or incremental update without manual intervention
-- Near real-time visibility of new products on the website
-- Reason & Business Value:
-- Eliminates manual deployment steps.
-- Ensures customers see new products instantly.
-- Reduces operational friction and deployment errors.
-- Enables faster response to market demand.
-
-### 11.6 Incremental & Partial Site Updates
-
-### Problem Statement:
-At present, the entire website is regenerated and redeployed even when a single product is added or updated, which is inefficient and time-consuming.
-
-### Enhancement Description:
-Adopt incremental publishing strategies such as:
-
-- Incremental Static Regeneration (ISR)
-- Partial builds for affected pages only
-- Smart cache invalidation
-- Reason & Business Value:
-- Faster deployments and lower build times.
-- Reduced infrastructure and CI/CD load.
-- Better scalability as catalog size grows.
-- More responsive content updates.
-
-### 11.7 Chat-Based Product Entry Experience
-
-#### Problem Statement:
-Traditional form-based data entry feels repetitive and boring, especially for frequent product additions.
-
-#### Enhancement Description:
-Introduce a chat-style product entry interface where the admin can:
-
-- Add products conversationally
-- Answer step-by-step prompts
-- Instantly preview generated product data
-- Edit fields in natural language
-- Reason & Business Value:
-- Makes data entry intuitive and engaging.
-- Reduces learning curve for new users.
-- Aligns with modern AI-first workflows.
-- Encourages more frequent and accurate catalog updates.
-
-**This PWA solution delivers a premium, future-ready digital presence designed to elevate customer experience, improve discoverability, and strengthen brand trust.**
+**This website solution delivers a premium, future-ready digital presence designed to elevate customer experience, improve discoverability, and strengthen brand trust.**
 
 
 

@@ -1,0 +1,5 @@
+name: component
+description: Scaffold a compliant Next.js UI component
+---
+Create a reusable component named {{{ input }}} matching our Tailwind design tokens and TypeScript standards.
+Read architecture.md and types/catalog.ts for reference.

@@ -53,7 +53,7 @@ export async function generateMetadata({
   if (!product) return {};
 
   const baseProductUrl = `${baseURL}/p/${product.id}/`;
-  const title = `${product.name} - ${product.brandText} | Sapna Shri Jewellers`;
+  const title = `${product.name}`;
   const description = product.description;
 
   const primaryImageUrl = product.images?.[0]

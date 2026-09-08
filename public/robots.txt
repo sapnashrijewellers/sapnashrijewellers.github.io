@@ -8,8 +8,11 @@ Disallow: /account
 Disallow: /address
 Disallow: /order*
 Disallow: /rate*
+Disallow: /qr
+Disallow: /search
 Disallow: /product
 Disallow: /category
+Disallow: /p/*
 
 Allow: /
 

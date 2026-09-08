@@ -3,7 +3,9 @@ import Image from "next/image";
 import Breadcrumb from "@/components/navbar/BreadcrumbItem";
 import JsonLd from "@/components/common/JsonLd";
 
-const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in";
+const baseURL = (
+  process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in"
+).replace(/\/+$/, "");
 const imageUrl = `${baseURL}/icons/icon-512x512.png`;
 
 export const metadata: Metadata = {
@@ -64,7 +66,7 @@ export default function HUIDInfo() {
       {
         "@type": "WebPage",
         "@id": `${baseURL}/huid/#webpage`,
-        url: `${baseURL}/huid`,
+        url: `${baseURL}/huid/`,
         name: metadata.title,
         description: metadata.description,
         publisher: {

@@ -7,8 +7,10 @@ import { promises, services, certificates, faqs } from "@/data/aboutUs.json";
 const title = "Sapna Shri Jewellers Nagda | सपना श्री ज्वेलर्स नागदा";
 const description =
   "Sapna Shri Jewellers Nagda - सोने और चांदी के आभूषणों में 35+ वर्षों का अनुभव। BIS 916 हॉलमार्क गोल्ड, सर्टिफाइड डायमंड और पारदर्शी सेवा।";
-const baseURL = process.env.NEXT_PUBLIC_BASE_IMAGE_URL ;
-const imageUrl = `${baseURL}shop.webp`;
+const baseURL = (
+  process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in"
+).replace(/\/+$/, "");
+const imageUrl = process.env.NEXT_PUBLIC_BASE_IMAGE_URL;
 
 export const metadata: Metadata = {
   title,
@@ -18,13 +20,13 @@ export const metadata: Metadata = {
     description,
     url: `${baseURL}/about-us/`,
     type: "website",
-    images: [{ url: imageUrl, width: 1200, height: 630, alt: title }],
+    images: [{ url: `${imageUrl}shop.webp`, width: 1200, height: 630, alt: title }],
   },
   twitter: {
     card: "summary_large_image",
     title,
     description,
-    images: [imageUrl],
+    images: [`${imageUrl}shop.webp`],
   },
   alternates: {
     canonical: `${baseURL}/about-us/`,
@@ -44,7 +46,7 @@ export default function AboutUsPage() {
         name: "Sapna Shri Jewellers",
         alternateName: "सपना श्री ज्वेलर्स",
         url: `${baseURL}/about-us/`,
-        image: imageUrl,
+        image: `${imageUrl}shop.webp`,
         logo: `${baseURL}/logo-wide.png`,
         description,
         telephone: "+91-8234042231",
@@ -160,7 +162,7 @@ export default function AboutUsPage() {
             <div key={owner.name} className="text-center">
               <div className="relative w-48 h-64 mx-auto mb-3">
                 <Image
-                  src={`${baseURL}${owner.img}`}
+                  src={`${imageUrl}${owner.img}`}
                   alt={`${owner.name} - ${owner.title}`}
                   fill
                   title={`${owner.name} - ${owner.title}`}
@@ -183,7 +185,7 @@ export default function AboutUsPage() {
         </h2>
         <div className="relative w-full max-w-4xl mx-auto aspect-[16/9] overflow-hidden rounded-3xl shadow-xl border-4 border-yellow-500/80">
           <Image
-            src={imageUrl}
+            src={`${imageUrl}shop.webp`}
             alt="Sapna Shri Jewellers Flagship Store in Nagda Junction"
             title="Sapna Shri Jewellers Flagship Store in Nagda Junction"
             fill

@@ -12,7 +12,6 @@ Disallow: /qr
 Disallow: /search
 Disallow: /product
 Disallow: /category
-Disallow: /p/*
 
 Allow: /
 

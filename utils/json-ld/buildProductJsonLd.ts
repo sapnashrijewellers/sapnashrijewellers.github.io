@@ -20,14 +20,15 @@ function sanitizeDescription(text?: string): string {
 export default function buildProductJsonLd(
   product: Product
 ): WithContext<SchemaProduct> {
-  const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "";
+  const baseURL = (
+    process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in"
+  ).replace(/\/+$/, "");
   const imageBaseUrl = `${baseURL}/static/img/products/optimized/`;  
-  const productUrl = `${baseURL}/p/${product.id}`;
+  const productUrl = `${baseURL}/p/${product.id}/`;
 
   const productImages: string[] = product.images?.length
     ? product.images.map((img: string) => `${imageBaseUrl}${img}`)
     : [`${baseURL}/icons/icon-512x512.png`];
-  const primaryImageUrl = productImages[0];
   const hasValidPrice = product.price !== null && product.price !== undefined;
 
   const now = new Date();
@@ -109,15 +110,12 @@ export default function buildProductJsonLd(
     "@type": "Product",
     "@id": `${productUrl}#product`,
     name: product.name,
-    image: [
-      {
-        "@type": "ImageObject",
-        url: primaryImageUrl,
-        contentUrl: primaryImageUrl,
-        caption: `${product.name} - Sapna Shri Jewellers`,
-      },
-      ...productImages.slice(1),
-    ],
+    image: productImages.map((imageUrl) => ({
+      "@type": "ImageObject" as const,
+      url: imageUrl,
+      contentUrl: imageUrl,
+      caption: `${product.name} - Sapna Shri Jewellers`,
+    })),
     description: sanitizeDescription(product.description),
     sku: String(product.id),
     url: productUrl,

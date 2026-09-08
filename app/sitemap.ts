@@ -6,7 +6,7 @@ import types from "@/data/types.json";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://sapnashrijewellers.in";
+  const baseUrl = "https://sapnashrijewellers.in".replace(/\/+$/, "");
   const buildDate = new Date();
 
   return [

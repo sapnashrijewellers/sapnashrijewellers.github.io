@@ -19,8 +19,9 @@ const yatraOne = Yatra_One({
   adjustFontFallback: true,
 });
 
-const baseURL =
-  process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in";
+const baseURL = (
+  process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in"
+).replace(/\/+$/, "");
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -87,7 +88,7 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: baseURL,
+    canonical: `${baseURL}/`,
     types: {
       "application/opensearchdescription+xml": [
         {
@@ -116,6 +117,8 @@ export default function RootLayout({
           type="text/markdown"
           href="https://sapnashrijewellers.in/llms.txt"
         />
+        {/* pinterest verification meta tag */}
+        <meta name="p:domain_verify" content="757373a06d146840bd703f3b5dd8ec21"/>
       </head>
       <body className="flex min-h-screen flex-col antialiased">
         <a

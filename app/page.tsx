@@ -10,8 +10,9 @@ import categories from "@/data/categories.json";
 import products from "@/data/products.json";
 import TrustSignalsRibbon from "@/components/product/TrustSignalsRibbon";
 
-const baseURL =
-  process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in";
+const baseURL = (
+  process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in"
+).replace(/\/+$/, "");
 const imageUrl = `${baseURL}/icon-512x512.png`;
 
 const title =
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
     images: [imageUrl],
   },
   alternates: {
-    canonical: baseURL,
+    canonical: `${baseURL}/`,
   },
 };
 

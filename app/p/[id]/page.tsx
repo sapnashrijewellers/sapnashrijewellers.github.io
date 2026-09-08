@@ -30,8 +30,9 @@ interface ProductDetailPageProps {
   params: Promise<{ id: string }>;
 }
 
-const baseURL =
-  process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in";
+const baseURL = (
+  process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in"
+).replace(/\/+$/, "");
 const driveURL = `${baseURL}/static/img/products/optimized/`;
 
 export async function generateStaticParams() {

@@ -56,3 +56,5 @@ lerna-debug.log*
 # Project-specific
 static/
 data/
+public/data/products.json
+public/data/search-index.json

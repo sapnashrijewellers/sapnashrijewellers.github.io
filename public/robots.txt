@@ -16,7 +16,9 @@ Disallow: /category
 Allow: /
 
 LLM: https://sapnashrijewellers.in/llms.txt
-Sitemap: https://sapnashrijewellers.in/sitemap.xml
+
+Sitemap: https://sapnashrijewellers.in/sitemap/priority.xml
+Sitemap: https://sapnashrijewellers.in/sitemap/products.xml
 
 
 

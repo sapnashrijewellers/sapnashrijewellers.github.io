@@ -5,7 +5,7 @@ import { useEffect, useMemo, useState, useCallback } from "react";
 import MiniSearch from "minisearch";
 import ProductCard from "@/components/product/ProductCard";
 import Breadcrumb from "@/components/navbar/BreadcrumbItem";
-import { miniSearchIndexOptions, miniSearchQueryOptions } from "@/search/shared";
+import { miniSearchIndexOptions, miniSearchQueryOptions } from "@/utils/search/shared";
 import type { Product, SearchFilters } from "@/types/catalog";
 import FilterNSort from "@/components/common/FilterNSort";
 import rawQueryMap from "@/data/queryMap.json";

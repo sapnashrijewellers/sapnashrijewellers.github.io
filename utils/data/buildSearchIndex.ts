@@ -5,7 +5,7 @@ import MiniSearch from "minisearch";
 import {
   miniSearchIndexOptions,
   normalize,
-} from "../../search/shared";
+} from "../search/shared";
 
 type Product = {
   id: string;

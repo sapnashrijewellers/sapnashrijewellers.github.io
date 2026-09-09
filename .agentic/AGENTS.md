@@ -22,7 +22,7 @@ Important:
 
 ## Technology
 
-- Next.js 16
+- Next.js 16+
 - TypeScript
 - React
 - Static generation
@@ -55,7 +55,7 @@ components
 
 ## Images
 
-Images are NOT maintained in this repository.
+Product images are NOT maintained in this repository.
 
 They come from the `static` repository.
 
@@ -107,7 +107,10 @@ Avoid:
 - unnecessary dependencies
 - premature optimization
 - large framework additions
+- Avoid code duplication even with slight variations
 
+Utils:
+- all common function used across pages like sanatize text, creating structure data, slug generation, login info etc function should not be repeat in pages and must be references from /utils folder. scan files for different objects in this folder
 ## Before changing code
 
 Understand:
@@ -122,6 +125,7 @@ At minimum:
 - npm build
 - relevant lint/type checks
 - test affected functionality
+- must meet quality standard of CodeQL, ESLint, check for duplicate code
 
 For data/schema changes, verify consumers as well.
 

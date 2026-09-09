@@ -101,7 +101,7 @@ export default function ProductCard({
           {hasSecondImage && (
             <Image
               src={`${baseImageURL}/products/thumbnail/${secondImage}`}
-              alt=""
+              alt={`${product.name} - Sapna Shri Jewellers`}
               fill
               sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
               loading="lazy"

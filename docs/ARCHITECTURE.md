@@ -46,23 +46,34 @@ flowchart TD
 ```
 ## 3. Logical Architecture & Project Structure
 
+Below tree is just explaining main file and folder structucture details
+
     ├── .github/
     │   └── workflows/
     │       └── deploy.yml              # GitHub Actions manual workflow (workflow_dispatch)
     ├── app/                            # Next.js App Router
-    │   ├── (main)/                     # Main UI layout route group
-    │   │   ├── layout.tsx              # Application shell layout
-    │   │   ├── page.tsx                # Homepage
-    │   │   ├── product/[slug]/         # Dynamic Product Details page (SSG)
-    │   │   ├── category/[slug]/        # Category listing page (SSG)
-    │   │   └── jewelry-type/[slug]/    # Jewelry type listing page (SSG)
+    │   ├── about-us/page.tsx           # page to convery store haritage, history, features and offers
+    │   ├── layout.tsx                  # Application shell layout
+    │   ├── page.tsx                    # Homepage
+    │   ├── p/[slug]/                   # Dynamic Product Details page (SSG)
+    │   ├── c/[slug]/                   # Dynamic Category listing page (SSG)
+    │   ├── cart/page.tsx               # Store cart > checkout > Address > payment > order processing 
+    │   ├── huid/page.tsx               # A Page to educate website users about Hallmarking
+    │   ├── orders/page.tsx             # user's order history
+    │   ├── jewelry-type/[slug]/        # Dynamic Jewelry type listing page (SSG)
+    │   ├── policies/page.tsx           # dictate terms of various policies like warrany, returns, shipping etc...
+    │   ├── wihshlist/page.tsx          # List all wishlisted items
     │   ├── sitemap.ts                  # Static sitemap generator (sitemap.xml)
     │   └── gmc-feed.xml/               # Google Merchant Center RSS feed route
     │       └── route.ts
     ├── components/                     # Reusable UI component library
-    │   ├── common/                     # Header, Footer, Navigation, App Shell modals
-    │   ├── product/                    # ProductCard, PriceBox, Gallery
-    │   └── rates/                      # LiveRateTicker, PriceCalculator
+    │   ├───banners
+    │   ├───checkout
+    │   ├───common                      # Header, Footer, Navigation, App Shell modals
+    │   ├───home
+    │   ├───mdx
+    │   ├───navbar
+    │   └───product                     # ProductCard, PriceBox, Gallery    
     ├── data/                           # Generated/fetched JSON data artifacts
     │   ├── products.json
     │   ├── categories.json
@@ -123,7 +134,7 @@ sequenceDiagram
     - Sitemaps (sitemap.ts) and Merchant feeds (gmc-feed.xml/route.ts) are compiled to static XML files.
 
 - GitHub Actions CI/CD: Manual trigger via workflow_dispatch executes the pre-build fetch, runs next build, and deploys /out to GitHub Pages.- 
-## 5. PWA Architecture & Browser Runtime
+## 5. PWA Architecture & Browser Runtime [feature is on hold for sometime to stablize page performance]
 
 PWA Modules
 - Web App Manifest (manifest.json): Defines standalone display mode, background colors, theme branding, orientation, and standard maskable app icons.
@@ -144,22 +155,13 @@ PWA Modules
 - Hosting: GitHub Pages with global CDN edge delivery and static asset caching headers.
 
 ## Key Design Decisions
-Live Rate Sources
-- Dynamic pricing calculations occur on the client side using real-time rate integrations:
-
-  - Arihant Spot: HTTP call and regex parsing of raw text block.
-  - Nakoda Bullion: Event-driven streaming using socket.io for continuous updates.
-  - MCX: HTTP call to JSON API endpoint.
-  - bullions.co.in: HTTP call with web scraping and DOM extraction.
-  - Metal Price API: Authenticated HTTP API call and JSON parsing.
-  - MMTC: HTTP API call and JSON parsing.
-  - Manual Updates: Admin-defined baseline overrides stored in local configuration/state when provider feeds are unreachable.
+- Rates of metals are coming for json file rates.json in data folder. rates will be published every day in google sheet
+- Website is expecting at-least one deployment per day for new rates
 
 ## Architectural Principles
 
 - Static Export (output: 'export'): Removes the need for a Node.js server, eliminates runtime vulnerabilities, and allows zero-cost hosting on GitHub Pages.
 - Pre-Build Local Ingestion: Fetching Google Sheets into local JSON before next build ensures atomic builds and protects against external API rate limits.
 - Manual GitHub Trigger (workflow_dispatch): Gives the operations team total control over deployment timings after batch catalog edits.
-- Decoupled Pricing Engine: Combines static product base weights (SSG for SEO) with client-side live rate feeds for real-time price calculations at checkout.
 - Feed & JSON-LD Parity: Generates sitemap.xml, gmc-feed.xml, and on-page application/ld+json from identical source JSON to avoid data mismatches across Googlebot and Merchant Center.
 

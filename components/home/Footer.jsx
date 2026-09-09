@@ -158,28 +158,6 @@ export default function Footer() {
             Connect With Us
           </h3>
 
-          <a
-            href={`https://wa.me/${sanitizedWhatsApp}?text=${encodeURIComponent(
-              "Hello! I want to enquire about jewellery designs."
-            )}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Connect with us on WhatsApp (opens in a new tab)"
-            aria-label="Connect with us on WhatsApp (opens in a new tab)"
-            className="
-    inline-flex items-center gap-2 text-sm font-semibold px-4 py-2.5 rounded-xl
-    bg-[#128C7E] text-white shadow-md
-    hover:bg-[#075E54] hover:scale-105 active:scale-95
-    transition-[transform,background-color] duration-150 ease-out will-change-[transform]
-    focus:outline-none focus:ring-2 focus:ring-[#128C7E] dark:focus:ring-[#25D366]
-    focus:ring-offset-2 focus:ring-offset-background
-  "
-          >
-            <WhatsappIcon className="w-4 h-4 shrink-0 text-white" aria-hidden="true" />
-            <span>Connect with us on WhatsApp</span>
-            <span className="sr-only">(opens in a new tab)</span>
-          </a>
-
           <div className="flex items-center gap-4 mt-5 text-xl">
             <a
               href="https://www.facebook.com/share/14JjQReswYv/"

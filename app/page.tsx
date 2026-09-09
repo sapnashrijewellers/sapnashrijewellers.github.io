@@ -4,7 +4,7 @@ import JewelleryTypeBar from "@/components/home/JewelleryType";
 import SignatureCollections from "@/components/home/SignatureCollections";
 import NewArrivals from "@/components/product/NewArrivals";
 import WishlistBar from "@/components/common/WishlistBar";
-import buildHomePageJsonLd from "@/utils/json-ld/buildHomePageJsonLd";
+import buildBusinessJsonLd from "@/utils/json-ld/buildBusinessJsonLd";
 import SEO from "@/components/common/SEO";
 import categories from "@/data/categories.json";
 import products from "@/data/products.json";
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const jsonLd = buildHomePageJsonLd();
+  const jsonLd = buildBusinessJsonLd();
 
   return (
     <main className="container mx-auto px-4 py-4 max-w-7xl">

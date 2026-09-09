@@ -3,6 +3,7 @@ import Image from "next/image";
 import Breadcrumb from "@/components/navbar/BreadcrumbItem";
 import TestimonialScroller from "@/components/common/Testimonials";
 import { promises, services, certificates, faqs } from "@/data/aboutUs.json";
+import buildBusinessJsonLd from "@/utils/json-ld/buildBusinessJsonLd";
 
 const title = "Sapna Shri Jewellers Nagda | सपना श्री ज्वेलर्स नागदा";
 const description =
@@ -37,57 +38,7 @@ export default function AboutUsPage() {
   const years = 35;
   const customers = 5000;
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "JewelryStore",
-        "@id": `${baseURL}/#store`,
-        name: "Sapna Shri Jewellers",
-        alternateName: "सपना श्री ज्वेलर्स",
-        url: `${baseURL}/about-us/`,
-        image: `${imageUrl}shop.webp`,
-        logo: `${baseURL}/logo-wide.png`,
-        description,
-        telephone: "+91-8234042231",
-        priceRange: "₹₹₹",
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: "Near Railway Station, M G Road",
-          addressLocality: "Nagda Junction",
-          addressRegion: "Madhya Pradesh",
-          postalCode: "456335",
-          addressCountry: "IN",
-        },
-        founder: [
-          {
-            "@type": "Person",
-            name: "Bhawarlal Gang",
-            alternateName: "श्री भवरलाल गांग",
-          },
-        ],
-        employee: [
-          {
-            "@type": "Person",
-            name: "Amish Kumar Gang",
-            alternateName: "अमीश कुमार गांग",
-            jobTitle: "Owner",
-          },
-        ],
-      },
-      {
-        "@type": "FAQPage",
-        mainEntity: faqs.map((f) => ({
-          "@type": "Question",
-          name: f.q,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: f.a,
-          },
-        })),
-      },
-    ],
-  };
+  const jsonLd = buildBusinessJsonLd();
 
   return (
     <article className="container mx-auto px-4 py-6 max-w-7xl">
@@ -290,7 +241,7 @@ export default function AboutUsPage() {
       {/* ===== Testimonials ===== */}
       <div className="mt-16">
         <TestimonialScroller />
-      </div>     
+      </div>
 
       {/* ===== FAQs ===== */}
       <section aria-labelledby="faq-heading" className="mt-16 max-w-4xl mx-auto">

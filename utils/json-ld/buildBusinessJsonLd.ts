@@ -5,8 +5,9 @@ Test the implementation:
 3. **Structured Data Testing Tool**: https://developers.google.com/search/docs/appearance/structured-data
 */
 import businessMeta from '@/data/businessMeta.json';
+import type { Person } from 'schema-dts';
 
-export default function buildBusinessJsonLd() {
+export default function buildBusinessJsonLd(): Record<string, any> {
     const baseURL = process.env.NEXT_PUBLIC_BASE_URL || businessMeta.url;
 
     // Parse opening times from businessMeta
@@ -76,23 +77,19 @@ export default function buildBusinessJsonLd() {
         }
     ];
 
-    // Build founder with image
-    const founderData: any = {
+    // Build founder with image using schema-dts types
+    const founderData: Person = {
         "@type": "Person",
-        "name": businessMeta['people.founder']
+        "name": businessMeta['people.founder'],
+        ...(businessMeta['founder.image'] && { "image": businessMeta['founder.image'] })
     };
-    if (businessMeta['founder.image']) {
-        founderData.image = businessMeta['founder.image'];
-    }
 
-    // Build owner with image
-    const ownerData: any = {
+    // Build owner with image using schema-dts types
+    const ownerData: Person = {
         "@type": "Person",
-        "name": businessMeta['people.owner']
+        "name": businessMeta['people.owner'],
+        ...(businessMeta['owner.image'] && { "image": businessMeta['owner.image'] })
     };
-    if (businessMeta['owner.image']) {
-        ownerData.image = businessMeta['owner.image'];
-    }
 
     return {
         "@context": "https://schema.org",
@@ -170,7 +167,7 @@ export default function buildBusinessJsonLd() {
                         "ratingValue": String(businessMeta.trustScore),
                         "bestRating": "5",
                         "worstRating": "1",
-                        "ratingCount": "50+",
+                        "ratingCount": 50,
                         "url": businessMeta['google.businessProfileUrl'] || businessMeta['google.mapsUrl'],
                         "description": "Ratings and reviews from Google Business Profile and Google Maps"
                     }
@@ -181,7 +178,11 @@ export default function buildBusinessJsonLd() {
                         "name": `${businessMeta.name} Collection & Showcase`,
                         "description": "Handcrafted jewellery collection",
                         "url": businessMeta.video,
-                        "thumbnailUrl": businessMeta.image
+                        "embedUrl": businessMeta.video.includes('/shorts/') 
+                            ? `https://www.youtube.com/embed/${businessMeta.video.split('/shorts/')[1]}`
+                            : businessMeta.video,
+                        "thumbnailUrl": businessMeta.image,
+                        "uploadDate": businessMeta.videoUploadDate
                     }
                 })
             },
@@ -191,6 +192,8 @@ export default function buildBusinessJsonLd() {
                 "name": businessMeta.name,
                 "url": baseURL,
                 "telephone": businessMeta['contact.phone'],
+                "priceRange": "₹100-₹200000",
+                "image": businessMeta.image,
                 "address": {
                     "@type": "PostalAddress",
                     "streetAddress": streetAddress,

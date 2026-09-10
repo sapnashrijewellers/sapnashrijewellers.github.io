@@ -19,6 +19,7 @@ Important:
 - Do not introduce a database for catalogue data.
 - Product data comes from generated JSON.
 - Product images are hosted separately.
+- avoid any legacy baggage in planning or coding
 
 ## Technology
 

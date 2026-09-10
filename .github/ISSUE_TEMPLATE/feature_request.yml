@@ -1,0 +1,20 @@
+name: Feature Request
+description: Propose a new feature or user requirement
+title: "[Feat]: "
+labels: ["type: feature"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / Context
+      description: What problem does this solve? As a user, what do you want?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria
+      description: List testable conditions that must pass for this to be complete.
+      placeholder: "- [ ] User can click...\n- [ ] Returns 200 OK with payload..."
+    validations:
+      required: true

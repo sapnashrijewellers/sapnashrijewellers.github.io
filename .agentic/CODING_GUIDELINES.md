@@ -154,6 +154,7 @@ You are an expert Next.js, React, and TypeScript engineer. These rules are non-n
 - Keep functions **small and focused** (single responsibility)
 - Code must be **optimized for LLMs and search crawlers**
 - Document API contracts and data structures
+- avoid legacy baggage API or code
 
 ## Imports & Exports
 

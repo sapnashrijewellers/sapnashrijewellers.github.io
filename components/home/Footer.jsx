@@ -186,7 +186,8 @@ export default function Footer() {
 
       {/* COPYRIGHT & CREDITS */}
       <div className="border-t border-theme/20 text-center py-4 px-4 text-xs opacity-75">
-        &copy; {currentYear} Sapna Shri Jewellers. All Rights Reserved.
+        &copy; {currentYear} Sapna Shri Jewellers. All Rights Reserved. | Technology Partner&nbsp;  
+        <a href="https://mehtalogy.in" className="hover:underline">mehtalogy.in</a>
       </div>
     </footer>
   );

@@ -39,7 +39,7 @@ export default function Footer() {
       aria-label="Site footer and store information"
       className="bg-footer text-footer border-t border-theme/30"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
 
         {/* 1. BRAND & TRUST PILLARS */}
         <section aria-label="Brand overview" className="space-y-3">
@@ -54,9 +54,43 @@ export default function Footer() {
             Crafting Trust in Gold &amp; Silver Since Generations
           </p>
 
-          <p className="text-xs opacity-80 leading-normal">
-            BIS Hallmarked Jewellery &bull; Transparent Live Pricing
-          </p>
+          <div className="flex items-center gap-4 mt-5 text-xl">
+            <a
+              href="https://www.facebook.com/share/14JjQReswYv/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Sapna Shri Jewellers on Facebook"
+              title="Visit Sapna Shri Jewellers on Facebook"
+              className="p-2 rounded-full border border-theme/40 hover:border-primary transition-[color,border-color,transform] duration-150 hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary will-change-[transform]"
+            >
+              <FacebookIcon className="w-4 h-4 shrink-0" aria-hidden="true" />
+              <span className="sr-only">Facebook</span>
+            </a>
+
+            <a
+              href="https://www.instagram.com/sapna_shri_jewllers_nagda/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow Sapna Shri Jewellers on Instagram"
+              title="Follow Sapna Shri Jewellers on Instagram"
+              className="p-2 rounded-full border border-theme/40 hover:border-primary transition-[color,border-color,transform] duration-150 hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary will-change-[transform]"
+            >
+              <InstagramIcon className="w-4 h-4 shrink-0" aria-hidden="true" />
+              <span className="sr-only">Instagram</span>
+            </a>
+
+            <a
+              href="https://www.youtube.com/@SapnaShriJewellers-b1f/shorts"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Subscribe to Sapna Shri Jewellers on YouTube"
+              aria-label="Subscribe to Sapna Shri Jewellers on YouTube"
+              className="p-2 rounded-full border border-theme/40 hover:border-primary transition-[color,border-color,transform] duration-150 hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary will-change-[transform]"
+            >
+              <YoutubeIcon className="w-4 h-4 shrink-0" aria-hidden="true" />
+              <span className="sr-only">YouTube</span>
+            </a>
+          </div>
         </section>
 
         {/* 2. POLICIES & LEGAL */}
@@ -107,16 +141,13 @@ export default function Footer() {
               Store Address
             </h3>
           </div>
-          <address className="not-italic space-y-2.5 text-footer/90">
-
-
-            <div>
-              <p className="font-tiro leading-snug">
-                सपना श्री ज्वैलर्स, रेलवे स्टेशन मेन रोड, नागदा जंक्शन, उज्जैन
+          <address className="space-y-2.5 text-footer/90">
+            <div>              
+              <p>Sapna Shri Jewwellers</p>
+              <p className="mt-0.5">                
+                M G Road, Near Jain Mandir, 
               </p>
-              <p className="font-cinzel text-xs opacity-80 mt-0.5">
-                M G Road, Near Jain Mandir, Nagda Jn., Ujjain (M.P.)
-              </p>
+              <p>Nagda Jn., Ujjain (M.P.)</p>
             </div>
 
             <p className="flex items-center gap-2">
@@ -150,53 +181,7 @@ export default function Footer() {
           >
             About Our Heritage
           </Link>
-        </section>
-
-        {/* 5. DIRECT CONTACT & SOCIAL PROFILES */}
-        <section aria-label="Customer communication channels">
-          <h3 className="footer-heading font-yatra text-base sm:text-lg mb-3">
-            Connect With Us
-          </h3>
-
-          <div className="flex items-center gap-4 mt-5 text-xl">
-            <a
-              href="https://www.facebook.com/share/14JjQReswYv/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit Sapna Shri Jewellers on Facebook"
-              title="Visit Sapna Shri Jewellers on Facebook"
-              className="p-2 rounded-full border border-theme/40 hover:border-primary transition-[color,border-color,transform] duration-150 hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary will-change-[transform]"
-            >
-              <FacebookIcon className="w-4 h-4 shrink-0" aria-hidden="true" />
-              <span className="sr-only">Facebook</span>
-            </a>
-
-            <a
-              href="https://www.instagram.com/sapna_shri_jewllers_nagda/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Follow Sapna Shri Jewellers on Instagram"
-              title="Follow Sapna Shri Jewellers on Instagram"
-              className="p-2 rounded-full border border-theme/40 hover:border-primary transition-[color,border-color,transform] duration-150 hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary will-change-[transform]"
-            >
-              <InstagramIcon className="w-4 h-4 shrink-0" aria-hidden="true" />
-              <span className="sr-only">Instagram</span>
-            </a>
-
-            <a
-              href="https://www.youtube.com/@SapnaShriJewellers-b1f/shorts"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Subscribe to Sapna Shri Jewellers on YouTube"
-              aria-label="Subscribe to Sapna Shri Jewellers on YouTube"
-              className="p-2 rounded-full border border-theme/40 hover:border-primary transition-[color,border-color,transform] duration-150 hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary will-change-[transform]"
-            >
-              <YoutubeIcon className="w-4 h-4 shrink-0" aria-hidden="true" />
-              <span className="sr-only">YouTube</span>
-            </a>
-          </div>
-
-        </section>
+        </section>        
       </div>
 
       {/* COPYRIGHT & CREDITS */}

@@ -88,9 +88,9 @@ export default function OrdersPage() {
 
       const validOrders: Order[] = Array.isArray(data.orders)
         ? data.orders.filter(
-            (order: Order) =>
-              Array.isArray(order.items) && order.items.length > 0,
-          )
+          (order: Order) =>
+            Array.isArray(order.items) && order.items.length > 0,
+        )
         : [];
 
       setOrders(validOrders);
@@ -159,7 +159,7 @@ export default function OrdersPage() {
         />
 
         <p className="text-sm text-muted-foreground animate-pulse">
-          Loading your account... 
+          Loading your account...
         </p>
       </main>
     );
@@ -392,15 +392,8 @@ export default function OrdersPage() {
       >
         <h1
           id="orders-page-heading"
-          className="
-            text-2xl sm:text-3xl
-            font-bold
-            text-foreground
-            font-yatra
-            tracking-tight
-          "
-        >
-          मेरे ऑर्डर (My Orders)
+          className="text-2xl sm:text-3xl font-bold text-foreground font-yatra tracking-tight">
+          My Orders
         </h1>
 
         <p className="text-xs sm:text-sm text-muted-foreground">
@@ -500,7 +493,7 @@ function OrderCard({ order, productsMap }: OrderCardProps) {
 
         <div className="text-left sm:text-right">
           <p className="text-xs text-muted-foreground">
-            Order Total (कुल राशि)
+            Order Total
           </p>
 
           <p
@@ -753,8 +746,8 @@ function OrderCard({ order, productsMap }: OrderCardProps) {
                 {Number(order.priceSummary?.shipping || 0) === 0
                   ? "FREE"
                   : `₹${Number(order.priceSummary?.shipping).toLocaleString(
-                      "en-IN",
-                    )}`}
+                    "en-IN",
+                  )}`}
               </dd>
             </div>
 

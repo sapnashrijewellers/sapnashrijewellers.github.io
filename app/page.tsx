@@ -65,14 +65,7 @@ export default function Home() {
         Nagda)
       </h1>
 
-      {/* 1. Hero Promotional Rotating Banner (Top LCP Element) */}
-      <section
-        aria-label="Featured promotions and announcements"
-        className="mb-6"
-      >
-        <RotatingBanner />
-      </section>
-
+      
       {/* 2. Quick Category / Jewellery Type Navigation */}
       <section aria-label="Jewellery categories by type" className="my-6">
         <JewelleryTypeBar home={false} />
@@ -83,8 +76,16 @@ export default function Home() {
 
       {/* 4. New Arrivals Showcase */}
       <section aria-label="New jewellery arrivals" className="my-8">
-        <NewArrivals />
+        <NewArrivals />      
       </section>
+      {/* 1. Hero Promotional Rotating Banner (Top LCP Element) */}
+      <section
+        aria-label="Featured promotions and announcements"
+        className="mb-6"
+      >
+        <RotatingBanner />
+      </section>
+
       <section aria-label="Customer reviews and ratings" className="my-8">
         <TrustSignalsRibbon product={products[0]} />
       </section>     

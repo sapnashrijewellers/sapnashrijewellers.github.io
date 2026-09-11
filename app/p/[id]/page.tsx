@@ -23,7 +23,8 @@ import ProductSelection from "@/components/product/ProductSelection";
 import StoreAvailability from "@/components/product/StoreAvailability";
 import FAQ from "@/components/product/FAQ";
 import buildProductJsonLd from "@/utils/json-ld/buildProductJsonLd";
-import ProductChatbot from "@/components/product/ProductChatbot";
+import dynamic from "next/dynamic";
+const ProductChatbot = dynamic(() => import("@/components/product/ProductChatbot"));
 import ProductGeoSpecs from "@/components/product/ProductGeoSpecs";
 
 interface ProductDetailPageProps {

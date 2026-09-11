@@ -7,20 +7,9 @@ import {
   Menu,
   X,
   ShoppingCart,
-  LogIn,
-  LogOut,
   ClipboardList,
 } from "lucide-react";
 import { useState, useCallback, useId, useEffect, useRef } from "react";
-import Image from "next/image";
-
-import {
-  signInWithGoogle,
-  signOutUser,
-  AuthUserSnapshot,
-  subscribeAuth,
-  getCachedUser,
-} from "@/utils/auth/auth";
 
 interface NavItem {
   label: string;
@@ -28,111 +17,20 @@ interface NavItem {
   ariaLabel: string;
   icon: React.ReactNode;
   href?: string;
-  onClick?: () => void;
 }
 
 export default function ResponsiveNavbar() {
   const pathname = usePathname();
-
-  /*
-   * Start with null to avoid SSR/localStorage hydration mismatch.
-   *
-   * The cached user is loaded immediately after hydration and
-   * future changes are received through subscribeAuth().
-   */
-  const [user, setUser] = useState<AuthUserSnapshot | null>(null);
-
   const [menuOpen, setMenuOpen] = useState(false);
-  const [authPending, setAuthPending] = useState(false);
-
   const menuContainerRef = useRef<HTMLDivElement | null>(null);
   const menuId = useId();
-
-  // --------------------------------------------------
-  // Authentication state
-  // --------------------------------------------------
-
-  useEffect(() => {
-    /*
-     * Restore lightweight cached auth state.
-     *
-     * This does NOT initialize Firebase.
-     */
-    setUser(getCachedUser());
-
-    /*
-     * Listen for:
-     * - login/logout in this tab
-     * - login/logout from another tab
-     *
-     * Firebase itself is NOT initialized here.
-     */
-    return subscribeAuth(setUser);
-  }, []);
-
-  // --------------------------------------------------
-  // Login
-  // --------------------------------------------------
-
-  const login = useCallback(async () => {
-    try {
-      setAuthPending(true);
-
-      /*
-       * signInWithGoogle() publishes the auth event.
-       *
-       * Therefore we intentionally do NOT call setUser()
-       * here. subscribeAuth() will update the navbar.
-       */
-      await signInWithGoogle();
-
-      closeMenu();
-    } catch (error) {
-      console.error("Login failed:", error);
-    } finally {
-      setAuthPending(false);
-    }
-  }, []);
-
-  // --------------------------------------------------
-  // Logout
-  // --------------------------------------------------
-
-  const logout = useCallback(async () => {
-    try {
-      setAuthPending(true);
-
-      /*
-       * signOutUser() publishes null auth state.
-       *
-       * subscribeAuth() updates the navbar automatically.
-       */
-      await signOutUser();
-
-      closeMenu();
-    } catch (error) {
-      console.error("Logout failed:", error);
-    } finally {
-      setAuthPending(false);
-    }
-  }, []);
-
-  // --------------------------------------------------
-  // Close menu
-  // --------------------------------------------------
 
   const closeMenu = useCallback(() => {
     setMenuOpen(false);
   }, []);
 
-  // --------------------------------------------------
-  // Outside click / ESC
-  // --------------------------------------------------
-
   useEffect(() => {
-    if (!menuOpen) {
-      return;
-    }
+    if (!menuOpen) return;
 
     function handleClickOutside(event: MouseEvent) {
       if (
@@ -158,12 +56,6 @@ export default function ResponsiveNavbar() {
     };
   }, [menuOpen]);
 
-  // --------------------------------------------------
-  // Navigation
-  // --------------------------------------------------
-
-  const displayName = user?.displayName || "User account";
-
   const primaryNav: NavItem[] = [
     {
       label: "Wishlist",
@@ -172,7 +64,6 @@ export default function ResponsiveNavbar() {
       ariaLabel: "View your saved Wishlist items",
       icon: <Heart className="w-5 h-5" aria-hidden="true" />,
     },
-
     {
       label: "Cart",
       href: "/cart/",
@@ -180,90 +71,24 @@ export default function ResponsiveNavbar() {
       ariaLabel: "View items in your Shopping Cart",
       icon: <ShoppingCart className="w-5 h-5" aria-hidden="true" />,
     },
-
-    ...(user
-      ? [
-          {
-            label: "Orders",
-            href: "/orders/",
-            title: "View your previous jewellery orders and purchases",
-            ariaLabel: "View your previous jewellery orders and purchases",
-            icon: (
-              <ClipboardList
-                className="w-5 h-5"
-                aria-hidden="true"
-              />
-            ),
-          },
-        ]
-      : []),
-
     {
-      label: user ? "Sign Out" : "Sign In",
-
-      title: user
-        ? `Sign out of ${displayName}`
-        : "Sign in with Google",
-
-      ariaLabel: user
-        ? `Sign out of account (${displayName})`
-        : "Sign in to account with Google",
-
-      icon: user ? (
-        user.photoURL ? (
-          <Image
-            src={user.photoURL}
-            alt={`${displayName} profile avatar`}
-            width={22}
-            height={22}
-            sizes="22px"
-            loading="lazy"
-            decoding="async"
-            className="w-5 h-5 rounded-full object-cover border border-theme/40"
-            referrerPolicy="no-referrer"            
-          />
-        ) : (
-          <LogOut
-            className="w-5 h-5"
-            aria-hidden="true"
-          />
-        )
-      ) : (
-        <LogIn
-          className="w-5 h-5"
-          aria-hidden="true"
-        />
-      ),
-
-      onClick: user ? logout : login,
+      label: "Orders",
+      href: "/orders/",
+      title: "View your previous jewellery orders and purchases",
+      ariaLabel: "View your previous jewellery orders and purchases",
+      icon: <ClipboardList className="w-5 h-5" aria-hidden="true" />,
     },
   ];
 
-  // --------------------------------------------------
-  // Active route
-  // --------------------------------------------------
-
   const isActive = useCallback(
     (href?: string) => {
-      if (!href) {
-        return false;
-      }
-
-      return href === "/"
-        ? pathname === "/"
-        : pathname.startsWith(href);
+      if (!href) return false;
+      return href === "/" ? pathname === "/" : pathname.startsWith(href);
     },
     [pathname],
   );
 
-  // --------------------------------------------------
-  // Render navigation item
-  // --------------------------------------------------
-
-  const renderItem = (
-    item: NavItem,
-    isMobileDropdown = false,
-  ) => {
+  const renderItem = (item: NavItem, isMobileDropdown = false) => {
     const active = isActive(item.href);
 
     const baseClass = isMobileDropdown
@@ -292,11 +117,7 @@ export default function ResponsiveNavbar() {
         active:scale-95
         focus:outline-none
         focus:ring-2 focus:ring-primary
-        ${
-          active
-            ? "text-primary font-bold"
-            : ""
-        }
+        ${active ? "text-primary font-bold" : ""}
       `;
 
     const content = (
@@ -304,7 +125,6 @@ export default function ResponsiveNavbar() {
         <span className="flex items-center justify-center shrink-0">
           {item.icon}
         </span>
-
         <span
           className={
             isMobileDropdown
@@ -316,22 +136,6 @@ export default function ResponsiveNavbar() {
         </span>
       </>
     );
-
-    if (item.onClick) {
-      return (
-        <button
-          key={item.label}
-          type="button"
-          disabled={authPending}
-          onClick={item.onClick}
-          title={item.title}
-          aria-label={item.ariaLabel}
-          className={baseClass}
-        >
-          {content}
-        </button>
-      );
-    }
 
     return (
       <Link
@@ -348,23 +152,13 @@ export default function ResponsiveNavbar() {
     );
   };
 
-  // --------------------------------------------------
-  // Render
-  // --------------------------------------------------
-
   return (
     <div className="flex items-center">
-
       {/* Mobile Navigation */}
-      <div
-        ref={menuContainerRef}
-        className="md:hidden relative"
-      >
+      <div ref={menuContainerRef} className="md:hidden relative">
         <button
           type="button"
-          onClick={() =>
-            setMenuOpen((open) => !open)
-          }
+          onClick={() => setMenuOpen((open) => !open)}
           aria-label={
             menuOpen
               ? "Close navigation menu"
@@ -388,15 +182,9 @@ export default function ResponsiveNavbar() {
           "
         >
           {menuOpen ? (
-            <X
-              className="w-5 h-5"
-              aria-hidden="true"
-            />
+            <X className="w-5 h-5" aria-hidden="true" />
           ) : (
-            <Menu
-              className="w-5 h-5"
-              aria-hidden="true"
-            />
+            <Menu className="w-5 h-5" aria-hidden="true" />
           )}
         </button>
 
@@ -419,9 +207,7 @@ export default function ResponsiveNavbar() {
             }
           `}
         >
-          {primaryNav.map((item) =>
-            renderItem(item, true),
-          )}
+          {primaryNav.map((item) => renderItem(item, true))}
         </div>
       </div>
 
@@ -429,14 +215,9 @@ export default function ResponsiveNavbar() {
       <div
         role="navigation"
         aria-label="Desktop primary menu"
-        className="
-          hidden md:flex
-          items-center gap-1.5
-        "
+        className="hidden md:flex items-center gap-1.5"
       >
-        {primaryNav.map((item) =>
-          renderItem(item, false),
-        )}
+        {primaryNav.map((item) => renderItem(item, false))}
       </div>
     </div>
   );

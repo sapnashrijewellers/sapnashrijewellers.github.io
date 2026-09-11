@@ -108,7 +108,7 @@ export default function SignatureCollections({
 
       {/* Uniform Width Category Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5 w-full items-stretch">
-        {visibleCategories.map((cat) => {
+        {visibleCategories.map((cat, index) => {
           const categoryProducts = productsByCategory.get(cat.name) || [];
 
           return (
@@ -116,6 +116,7 @@ export default function SignatureCollections({
               <CategoryCard
                 category={cat}
                 products={categoryProducts}
+                priority={index < 4}
               />
             </div>
           );

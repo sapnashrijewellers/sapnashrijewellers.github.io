@@ -100,7 +100,7 @@ export default function WishlistBar() {
           focus:outline-none focus:ring-1 focus:ring-primary/40 rounded-2xl
         "
       >
-        {wishlistProducts.map((p) => (
+        {wishlistProducts.map((p, index) => (
           <article
             key={p.id}
             aria-label={`${p.name} wishlisted item`}
@@ -109,7 +109,7 @@ export default function WishlistBar() {
               transition-transform duration-150 will-change-transform
             "
           >
-            <ProductCard product={p} />
+            <ProductCard product={p} priority={index < 4} />
           </article>
         ))}
       </div>

@@ -51,8 +51,9 @@ export default function NewArrivals({
         className="flex gap-3 sm:gap-4 overflow-x-auto px-2 sm:px-4 pb-3 pt-1
           scrollbar-hide snap-x snap-mandatory
           focus:outline-none focus:ring-1 focus:ring-primary/40 rounded-2xl">
-        {filteredArrivals.map((p) => (
+        {filteredArrivals.map((p, index) => (
           <ProductCard product={p} key={p.id}
+            priority={index < 4}
             className="shrink-0 w-[160px] sm:w-[200px] lg:w-[220px] snap-start
               transition-transform duration-150 ease-out will-change-transform"/>
         ))}

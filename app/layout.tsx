@@ -11,10 +11,10 @@ import GoToTop from "@/components/common/GoToTop";
 
 const yatraOne = Yatra_One({
   weight: "400",
-  subsets: ["devanagari"],
+  subsets: ["devanagari", "latin"],
   display: "swap",
   variable: "--font-yatra-one",
-  preload: false,
+  preload: true,
   fallback: ["Noto Sans Devanagari", "serif"],
   adjustFontFallback: true,
 });

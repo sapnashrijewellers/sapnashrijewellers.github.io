@@ -3,7 +3,6 @@ import RotatingBanner from "@/components/banners/RotatingBanner";
 import JewelleryTypeBar from "@/components/home/JewelleryType";
 import SignatureCollections from "@/components/home/SignatureCollections";
 import NewArrivals from "@/components/product/NewArrivals";
-import WishlistBar from "@/components/common/WishlistBar";
 import buildBusinessJsonLd from "@/utils/json-ld/buildBusinessJsonLd";
 import SEO from "@/components/common/SEO";
 import categories from "@/data/categories.json";
@@ -65,25 +64,22 @@ export default function Home() {
         Nagda)
       </h1>
 
-
-      {/* 2. Quick Category / Jewellery Type Navigation */}
-      <section aria-label="Jewellery categories by type" className="my-6">
-        <JewelleryTypeBar home={false} />
-      </section>
-
-      {/* 3. User Wishlist Bar */}
-      <WishlistBar />
-
-      {/* 4. New Arrivals Showcase */}
-      <section aria-label="New jewellery arrivals" className="my-8">
-        <NewArrivals />
-      </section>
       {/* 1. Hero Promotional Rotating Banner (Top LCP Element) */}
       <section
         aria-label="Featured promotions and announcements"
         className="mb-6"
       >
         <RotatingBanner />
+      </section>
+
+      {/* 2. Quick Category / Jewellery Type Navigation */}
+      <section aria-label="Jewellery categories by type" className="my-6">
+        <JewelleryTypeBar home={false} />
+      </section>
+
+      {/* 3. New Arrivals Showcase */}
+      <section aria-label="New jewellery arrivals" className="my-8">
+        <NewArrivals />
       </section>
 
       <section aria-label="Customer reviews and ratings" className="my-8">

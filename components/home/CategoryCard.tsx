@@ -5,9 +5,10 @@ import Image from "next/image";
 interface CategoryCardProps {
   category: Category;
   products: Product[];
+  priority?: boolean;
 }
 
-export default function CategoryCard({ category, products }: CategoryCardProps) {
+export default function CategoryCard({ category, products, priority = false }: CategoryCardProps) {
   if (!products || products.length === 0) return null;
 
   
@@ -44,15 +45,17 @@ export default function CategoryCard({ category, products }: CategoryCardProps) 
             alt={firstProduct.name ? `${category.name} - ${firstProduct.name}` : `${category.name} jewellery category`}
             fill
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-            loading="lazy"
-            decoding="async"
+            priority={priority}
+            loading={priority ? "eager" : "lazy"}
+            fetchPriority={priority ? "high" : "auto"}
+            decoding={priority ? "sync" : "async"}
             className="object-cover object-center transition-transform duration-300 ease-out group-hover:scale-105 will-change-transform"
           />
         </div>
 
         {/* Category Label */}
         <div className="flex flex-col items-center justify-center p-3 grow bg-card border-t border-theme/20">
-          <h2 className="text-center font-yatra sm:text-lg text-foreground transition-colors duration-150">
+          <h2 className="text-center font-yatra text-lg text-foreground transition-colors duration-150">
             {category.name}
           </h2>
           <span className="sr-only">

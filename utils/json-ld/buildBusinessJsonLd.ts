@@ -1,245 +1,318 @@
-/*
-Test the implementation:
-1. **Google Rich Results Test**: https://search.google.com/test/rich-results
-2. **Schema.org Validator**: https://validator.schema.org/
-3. **Structured Data Testing Tool**: https://developers.google.com/search/docs/appearance/structured-data
-*/
 import businessMeta from '@/data/businessMeta.json';
 import type { Person } from 'schema-dts';
 
 export default function buildBusinessJsonLd(): Record<string, any> {
-    const baseURL = process.env.NEXT_PUBLIC_BASE_URL || businessMeta.url;
+    const baseURL = (
+        process.env.NEXT_PUBLIC_BASE_URL || businessMeta.url
+    ).replace(/\/$/, '');
 
-    // Parse opening times from businessMeta
-    const parseTime = (timeString: string) => {
-        const date = new Date(timeString);
-        const hours = String(date.getHours()).padStart(2, '0');
-        const minutes = String(date.getMinutes()).padStart(2, '0');
-        return `${hours}:${minutes}`;
-    };
+    /*
+     * -------------------------------------------------------------------------
+     * IDs
+     * -------------------------------------------------------------------------
+     */
 
-    const openingTime = parseTime(businessMeta.openTime);
-    const closingTime = parseTime(businessMeta.closeTime);
+    const storeId = `${baseURL}/#store`;
+    const websiteId = `${baseURL}/#website`;
+    const brandId = `${baseURL}/#brand`;
+    const founderId = `${baseURL}/#founder`;
+    const ownerId = `${baseURL}/#owner`;
 
-    // Build opening hours specification for each day
-    const openingHoursSpecification = businessMeta.dayOfWeek.map(day => ({
+    /*
+     * -------------------------------------------------------------------------
+     * Address
+     * -------------------------------------------------------------------------
+     */
+
+    const streetAddress = Array.isArray(businessMeta.address.streetAddress)
+        ? businessMeta.address.streetAddress.join(', ')
+        : businessMeta.address.streetAddress;
+
+    /*
+     * -------------------------------------------------------------------------
+     * Opening Hours
+     * -------------------------------------------------------------------------
+     */
+
+    const openingHoursSpecification = businessMeta.hours.days.map(day => ({
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": day,
-        "opens": openingTime,
-        "closes": closingTime
+        "opens": businessMeta.hours.open,
+        "closes": businessMeta.hours.close
     }));
 
-    // Build street address
-    const streetAddress = Array.isArray(businessMeta['address.streetAddress'])
-        ? businessMeta['address.streetAddress'].join(', ')
-        : businessMeta['address.streetAddress'];
+    /*
+     * -------------------------------------------------------------------------
+     * Payment Methods
+     * -------------------------------------------------------------------------
+     */
 
-    // Build dynamic payment methods based on business capabilities
-    const paymentMethods = [];
-    if (businessMeta.acceptCash) paymentMethods.push("Cash");
-    if (businessMeta.acceptCreditCard) paymentMethods.push("Credit Card");
-    if (businessMeta.acceptDebitCard) paymentMethods.push("Debit Card");
-    if (businessMeta.acceptUPI) paymentMethods.push("UPI");
-    paymentMethods.push("Mobile Payment"); // Default mobile payment option
+    const paymentMethods: string[] = [];
 
-    // Build certifications with proper schema
-    const certifications = businessMeta.certifications?.map(cert => ({
-        "@type": "Thing",
-        "name": cert
-    })) || [];
+    if (businessMeta.payments.cash) {
+        paymentMethods.push("Cash");
+    }
 
-    // Build services with proper schema
-    const services = businessMeta.services?.map(service => ({
-        "@type": "Service",
-        "name": service,
-        "areaServed": businessMeta.serviceRadius || "IN"
-    })) || [];
+    if (businessMeta.payments.creditCard) {
+        paymentMethods.push("Credit Card");
+    }
 
-    // Build multiple contact points including WhatsApp
+    if (businessMeta.payments.debitCard) {
+        paymentMethods.push("Debit Card");
+    }
+
+    if (businessMeta.payments.upi) {
+        paymentMethods.push("UPI");
+    }
+
+    /*
+     * -------------------------------------------------------------------------
+     * External Profiles
+     *
+     * Google Maps is represented using hasMap.
+     * Other real-world profiles are represented using sameAs.
+     * -------------------------------------------------------------------------
+     */
+
+    const sameAs = [
+        businessMeta.profiles.googleBusinessProfile,
+        businessMeta.profiles.instagram,
+        businessMeta.profiles.youtube,
+        businessMeta.profiles.facebook
+    ].filter(Boolean);
+
+    /*
+     * -------------------------------------------------------------------------
+     * Contact Points
+     * -------------------------------------------------------------------------
+     */
+
     const contactPoints = [
         {
             "@type": "ContactPoint",
             "contactType": "Customer Service",
-            "telephone": businessMeta['contact.phone'],
-            "email": businessMeta['contact.email'],
+            "telephone": businessMeta.contact.phone,
+            "email": businessMeta.contact.email,
             "url": baseURL
         },
         {
             "@type": "ContactPoint",
             "contactType": "WhatsApp Support",
-            "telephone": businessMeta['contact.whatsApp'],
-            "url": `https://wa.me/${businessMeta['contact.whatsApp'].replace(/\D/g, '')}`
-        },
-        {
-            "@type": "ContactPoint",
-            "contactType": "Social Media",
-            "url": businessMeta.sameAs?.[0] || baseURL
+            "telephone": businessMeta.contact.whatsApp,
+            "url": `https://wa.me/${businessMeta.contact.whatsApp.replace(/\D/g, '')}`
         }
     ];
 
-    // Build founder with image using schema-dts types
+    /*
+     * -------------------------------------------------------------------------
+     * Founder
+     * -------------------------------------------------------------------------
+     */
+
     const founderData: Person = {
         "@type": "Person",
-        "name": businessMeta['people.founder'],
-        ...(businessMeta['founder.image'] && { "image": businessMeta['founder.image'] })
+        "@id": founderId,
+        "name": businessMeta.people.founder.name,
+        ...(businessMeta.people.founder.image && {
+            "image": businessMeta.people.founder.image
+        })
     };
 
-    // Build owner with image using schema-dts types
+    /*
+     * -------------------------------------------------------------------------
+     * Owner
+     * -------------------------------------------------------------------------
+     */
+
     const ownerData: Person = {
         "@type": "Person",
-        "name": businessMeta['people.owner'],
-        ...(businessMeta['owner.image'] && { "image": businessMeta['owner.image'] })
+        "@id": ownerId,
+        "name": businessMeta.people.owner.name,
+        ...(businessMeta.people.owner.image && {
+            "image": businessMeta.people.owner.image
+        })
     };
+
+    /*
+     * -------------------------------------------------------------------------
+     * Services
+     *
+     * These are actual services provided by the jewellery store.
+     * We intentionally do NOT assign serviceArea from salesCoverage.
+     * -------------------------------------------------------------------------
+     */
+
+    const services = businessMeta.services?.map(service => ({
+        "@type": "Service",
+        "name": service,
+        "provider": {
+            "@id": storeId
+        }
+    })) || [];
+
+    /*
+     * -------------------------------------------------------------------------
+     * Video
+     * -------------------------------------------------------------------------
+     */
+
+    const video = businessMeta.video
+        ? {
+            "@type": "VideoObject",
+            "name": `${businessMeta.name} Collection & Showcase`,
+            "description": "Handcrafted jewellery collection",
+            "url": businessMeta.video.url,
+            "embedUrl": businessMeta.video.url.includes('/shorts/')
+                ? `https://www.youtube.com/embed/${businessMeta.video.url.split('/shorts/')[1]}`
+                : businessMeta.video.url,
+            "thumbnailUrl": businessMeta.images,
+            "uploadDate": businessMeta.video.uploadDate,
+            "publisher": {
+                "@id": storeId
+            }
+        }
+        : undefined;
+
+    /*
+     * -------------------------------------------------------------------------
+     * Business Entity
+     * -------------------------------------------------------------------------
+     */
+
+    const store = {
+        "@type": businessMeta.type,
+        "@id": storeId,
+
+        "name": businessMeta.name,
+        "alternateName": businessMeta.alternateName,
+        "legalName": businessMeta.legalName,
+
+        "url": baseURL,
+        "logo": businessMeta.logo,
+        "image": businessMeta.images,
+
+        "description": businessMeta.description,
+
+        "email": businessMeta.contact.email,
+        "telephone": businessMeta.contact.phone,
+
+        "contactPoint": contactPoints,
+
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": streetAddress,
+            "addressLocality": businessMeta.address.addressLocality,
+            "addressRegion": businessMeta.address.addressRegion,
+            "postalCode": String(businessMeta.address.postalCode),
+            "addressCountry": businessMeta.address.addressCountry
+        },
+
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": businessMeta.geo.latitude,
+            "longitude": businessMeta.geo.longitude
+        },
+
+        "hasMap": businessMeta.profiles.googleMaps,
+
+        "openingHoursSpecification": openingHoursSpecification,
+
+        "founder": {
+            "@id": founderId
+        },
+
+        "owner": {
+            "@id": ownerId
+        },
+
+        "brand": {
+            "@id": brandId
+        },
+
+        "sameAs": sameAs,
+
+        "paymentAccepted": paymentMethods,
+
+        "currenciesAccepted": "INR",
+
+        "knowsAbout": [
+            ...businessMeta.knownFor,
+            ...businessMeta.productCategories,
+            ...businessMeta.productAttributes
+        ],
+
+        "knowsLanguage": businessMeta.languages,
+
+        "taxID": businessMeta.registrations.gstin,
+
+        "foundingDate": String(businessMeta.foundingYear),
+
+        ...(services.length > 0 && {
+            "service": services
+        }),
+
+        ...(video && {
+            "video": video
+        })
+    };
+
+    /*
+     * -------------------------------------------------------------------------
+     * Website Entity
+     * -------------------------------------------------------------------------
+     */
+
+    const website = {
+        "@type": "WebSite",
+        "@id": websiteId,
+
+        "url": baseURL,
+        "name": businessMeta.name,
+        "description": businessMeta.description,
+
+        "publisher": {
+            "@id": storeId
+        }
+    };
+
+    /*
+     * -------------------------------------------------------------------------
+     * Brand Entity
+     * -------------------------------------------------------------------------
+     */
+
+    const brand = {
+        "@type": "Brand",
+        "@id": brandId,
+
+        "name": businessMeta.name,
+        "logo": businessMeta.logo,
+        "url": baseURL,
+
+        "description": businessMeta.description,
+
+        "founder": {
+            "@id": founderId
+        },
+
+        "sameAs": sameAs
+    };
+
+    /*
+     * -------------------------------------------------------------------------
+     * Final JSON-LD Graph
+     * -------------------------------------------------------------------------
+     */
 
     return {
         "@context": "https://schema.org",
+
         "@graph": [
-            {
-                "@type": "JewelryStore",
-                "@id": `${baseURL}/#store`,
-                "name": businessMeta.name,
-                "alternateName": businessMeta.alternateName,
-                "url": baseURL,
-                "logo": businessMeta.logo,
-                "image": [
-                    businessMeta.image,
-                    businessMeta.logo,
-                    `${baseURL}/icon-512x512.png`
-                ],
-                "description": businessMeta.description,
-                "legalName": businessMeta.legalName,
-                "email": businessMeta['contact.email'],
-                "telephone": businessMeta['contact.phone'],
-                "contactPoint": contactPoints,
-                "address": {
-                    "@type": "PostalAddress",
-                    "streetAddress": streetAddress,
-                    "addressLocality": businessMeta['address.addressLocality'],
-                    "addressRegion": businessMeta['address.addressRegion'],
-                    "postalCode": String(businessMeta['address.postalCode']),
-                    "addressCountry": businessMeta['address.addressCountry']
-                },
-                "geo": {
-                    "@type": "GeoCoordinates",
-                    "latitude": businessMeta['geo.latitude'],
-                    "longitude": businessMeta['geo.longitude']
-                },
-                "openingHoursSpecification": openingHoursSpecification,
-                "priceRange": "₹₹₹",
-                "founder": founderData,
-                "owner": ownerData,
-                "sameAs": businessMeta.sameAs,
-                "areaServed": [
-                    {
-                        "@type": "AdministrativeArea",
-                        "name": businessMeta['address.addressRegion']
-                    },
-                    {
-                        "@type": "Country",
-                        "name": businessMeta['address.addressCountry']
-                    }
-                ],
-                ...(businessMeta.serviceRadius && businessMeta.serviceRadius !== "IN" ? {
-                    "serviceArea": {
-                        "@type": "Place",
-                        "name": businessMeta.serviceRadius
-                    }
-                } : {}),
-                "paymentAccepted": paymentMethods,
-                "currenciesAccepted": "INR",
-                "knowsAbout": businessMeta.knownFor ? [businessMeta.knownFor] : ["Sterling Silver Jewellery", "Gold Jewellery", "BIS Hallmarked Jewellery", "Handcrafted Jewellery"],
-                "knowsLanguage": businessMeta.languages || ["en", "hi"],
-                "taxID": businessMeta.gstin,
-                "businessType": businessMeta.businessType || "JewelryStore",
-                ...(businessMeta.establishedDate && {
-                    "foundingDate": String(businessMeta.establishedDate)
-                }),
-                ...(certifications.length > 0 && {
-                    "certifications": certifications
-                }),
-                ...(services.length > 0 && {
-                    "service": services
-                }),
-                // Aggregate Rating linked to Google Business Profile
-                ...(businessMeta.trustScore && {
-                    "aggregateRating": {
-                        "@type": "AggregateRating",
-                        "ratingValue": String(businessMeta.trustScore),
-                        "bestRating": "5",
-                        "worstRating": "1",
-                        "ratingCount": 50,
-                        "url": businessMeta['google.businessProfileUrl'] || businessMeta['google.mapsUrl'],
-                        "description": "Ratings and reviews from Google Business Profile and Google Maps"
-                    }
-                }),
-                ...(businessMeta.video && {
-                    "video": {
-                        "@type": "VideoObject",
-                        "name": `${businessMeta.name} Collection & Showcase`,
-                        "description": "Handcrafted jewellery collection",
-                        "url": businessMeta.video,
-                        "embedUrl": businessMeta.video.includes('/shorts/') 
-                            ? `https://www.youtube.com/embed/${businessMeta.video.split('/shorts/')[1]}`
-                            : businessMeta.video,
-                        "thumbnailUrl": businessMeta.image,
-                        "uploadDate": businessMeta.videoUploadDate
-                    }
-                })
-            },
-            {
-                "@type": "LocalBusiness",
-                "@id": `${baseURL}/#localbusiness`,
-                "name": businessMeta.name,
-                "url": baseURL,
-                "telephone": businessMeta['contact.phone'],
-                "priceRange": "₹100-₹200000",
-                "image": businessMeta.image,
-                "address": {
-                    "@type": "PostalAddress",
-                    "streetAddress": streetAddress,
-                    "addressLocality": businessMeta['address.addressLocality'],
-                    "addressRegion": businessMeta['address.addressRegion'],
-                    "postalCode": String(businessMeta['address.postalCode']),
-                    "addressCountry": businessMeta['address.addressCountry']
-                },
-                "geo": {
-                    "@type": "GeoCoordinates",
-                    "latitude": businessMeta['geo.latitude'],
-                    "longitude": businessMeta['geo.longitude']
-                },
-                "sameAs": businessMeta.sameAs,
-                "hasMap": businessMeta['google.mapsUrl'],
-                "google.businessProfileUrl": businessMeta['google.businessProfileUrl']
-            },
-            {
-                "@type": "WebSite",
-                "@id": `${baseURL}/#website`,
-                "url": baseURL,
-                "name": businessMeta.name,
-                "description": businessMeta.description,
-                "publisher": {
-                    "@type": "Organization",
-                    "@id": `${baseURL}/#store`
-                },
-                "potentialAction": {
-                    "@type": "SearchAction",
-                    "target": {
-                        "@type": "EntryPoint",
-                        "urlTemplate": `${baseURL}/search?q={search_term_string}`
-                    },
-                    "query-input": "required name=search_term_string"
-                }
-            },
-            {
-                "@type": "Brand",
-                "@id": `${baseURL}/#brand`,
-                "name": businessMeta.name,
-                "logo": businessMeta.logo,
-                "url": baseURL,
-                "description": businessMeta.description,
-                "founder": founderData,
-                "sameAs": businessMeta.sameAs
-            }
+            store,
+            founderData,
+            ownerData,
+            website,
+            brand
         ]
-    }
+    };
 }

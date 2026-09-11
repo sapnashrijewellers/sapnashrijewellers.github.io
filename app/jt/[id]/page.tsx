@@ -121,7 +121,7 @@ export default async function JewelryTypePage({ params }: JewelryTypePageProps) 
 
       {/* 6. Contextual SEO Content */}
       <aside aria-label="Related category searches and information">
-        <SEO slug={`/jt/${id}`} />
+        <SEO slug={`/jewelry-type/${id}`} />
       </aside>
 
     </main>

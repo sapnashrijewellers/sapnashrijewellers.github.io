@@ -84,7 +84,7 @@ export async function GET() {
             getProductUrl(product),
             primaryImage ? getImageUrl(primaryImage) : "",
             product.brandText,
-            product.category,
+            product.collection,
         ]
             .map(csvEscape)
             .join(",");

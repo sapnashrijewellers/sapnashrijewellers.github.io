@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import type { Product } from "@/types/catalog";
 import products from "@/data/products.json";
-import categories from "@/data/categories.json";
+import collections from "@/data/collections.json";
 import ProductShare from "@/components/product/ProductShare";
 import { HighlightsTabs } from "@/components/product/Highlights";
 import ProductGallery from "@/components/product/ProductGallery";
@@ -106,7 +106,7 @@ export default async function ProductDetailPage({
     notFound();
   }
 
-  const category = categories.find((c) => c.name === product.category);
+  const collection = collections.find((c) => c.name === product.collection);
 
   // Schema.org Structured Data for LLMs and Google Rich Results
   const productSchema = buildProductJsonLd(product);
@@ -124,8 +124,8 @@ export default async function ProductDetailPage({
         items={[
           { name: "Home", href: "/" },
           {
-            name: product.category,
-            href: `/c/${category?.id}/`,
+            name: product.collection,
+            href: `/c/${collection?.id}/`,
           },
           { name: product.name },
         ]}

@@ -13,7 +13,7 @@ export default function YouMayAlsoLike({
   products,
   className = "",
 }: YouMayAlsoLikeProps) {
-  // Filter matching category/type products while excluding current product & new arrivals
+  // Filter matching collection/type products while excluding current product & new arrivals
   const youMayAlsoLike = products
     .filter(
       (p) =>

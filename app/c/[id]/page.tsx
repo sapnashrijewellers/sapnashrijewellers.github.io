@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import type { Product, Category } from "@/types/catalog";
+import type { Product, Collection } from "@/types/catalog";
 import products from "@/data/products.json";
-import categories from "@/data/categories.json";
+import collections from "@/data/collections.json";
 import Breadcrumb from "@/components/navbar/BreadcrumbItem";
-import { buildCategoryPageJsonLd } from "@/utils/json-ld/buildCategoryPageJsonLd";
+import { buildCollectionPageJsonLd } from "@/utils/json-ld/buildCollectionPageJsonLd";
 import JsonLd from "@/components/common/JsonLd";
 import RotatingBanner from "@/components/banners/RotatingBanner";
 import SEO from "@/components/common/SEO";
 import JewelryTypeClient from "../../jt/[id]/JewelryTypeClient";
 
-interface CategoryPageProps {
+interface CollectionPageProps {
   params: Promise<{ id: string }>;
 }
 
@@ -20,25 +20,25 @@ const baseURL = (
 const driveURL = `${baseURL}/static/img/products/optimized/`;
 
 export async function generateStaticParams() {
-  return categories
+  return collections
     .filter((c) => c.active)
-    .map((cat: Category) => ({
+    .map((cat: Collection) => ({
       id: cat.id.toString(),
     }));
 }
 
 // ---- METADATA (Search Engines & Social Crawlers) ----
-export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: CollectionPageProps): Promise<Metadata> {
   const { id } = await params;  
-  const category = categories.find((cat: Category) => cat.id === Number(id));
+  const collection = collections.find((cat: Collection) => cat.id === Number(id));
 
-  if (!category) return {};
+  if (!collection) return {};
 
   const filtered = products.filter(
-    (p: Product) => p.category === category.name);
+    (p: Product) => p.collection === collection.name);
 
-  const title = `${category.name} - ${category.title}`;
-  const description = category.description;
+  const title = `${collection.name} - ${collection.title}`;
+  const description = collection.description;
 
   const imageUrl =
     filtered.length > 0 && filtered[0].images?.[0]
@@ -58,7 +58,7 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
           url: imageUrl,
           width: 800,
           height: 800,
-          alt: `${category.name} collection at Sapna Shri Jewellers`,
+          alt: `${collection.name} collection at Sapna Shri Jewellers`,
         },
       ],
     },
@@ -74,27 +74,27 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   };
 }
 
-// ---- MAIN CATEGORY PAGE ----
-export default async function CategoryPage({ params }: CategoryPageProps) {
+// ---- MAIN collection PAGE ----
+export default async function collectionPage({ params }: CollectionPageProps) {
   const { id } = await params;
-  const category = categories.find(
-    (cat: Category) => cat.id === Number(id) && cat.active
+  const collection = collections.find(
+    (cat: Collection) => cat.id === Number(id) && cat.active
   );
 
-  if (!category) {
+  if (!collection) {
     notFound();
   }
 
   // Sort available products first for better UX & immediate availability signals
   const filtered = products
-    .filter((p: Product) => p.category === category.name && p.active)
+    .filter((p: Product) => p.collection === collection.name && p.active)
     .sort((a: Product, b: Product) => {
       if (a.available && !b.available) return -1;
       if (!a.available && b.available) return 1;
       return 0;
     });
 
-  const JsonLdObj = buildCategoryPageJsonLd(filtered, category);
+  const JsonLdObj = buildCollectionPageJsonLd(filtered, collection);
 
   return (
     <main className="container mx-auto px-4 py-4 max-w-7xl">
@@ -102,36 +102,36 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       <Breadcrumb
         items={[
           { name: "Home", href: "/" },
-          { name: category.name },
+          { name: collection.name },
         ]}
       />
 
       {/* 2. Structured Data Schema */}
       <JsonLd json={JsonLdObj} />
 
-      {/* 3. Category Header Information */}
+      {/* 3. collection Header Information */}
       <header className="pl-4 border-l-4 border-primary/70 my-6">
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-yatra font-bold">
-          {category.name} <span className="font-sans text-xl md:text-2xl font-normal text-muted-foreground">| {category.title}</span>
+          {collection.name} <span className="font-sans text-xl md:text-2xl font-normal text-muted-foreground">| {collection.title}</span>
         </h1>
-        {category.description && (
+        {collection.description && (
           <p className="mt-2 text-sm sm:text-base text-muted-foreground/90 leading-relaxed max-w-4xl">
-            {category.description}
+            {collection.description}
           </p>
         )}
       </header>
 
-      {/* 4. Promotional/Category Rotating Banner */}
-      <section aria-label={`${category.name} featured banners`} className="mb-8">
-        <RotatingBanner key={category.id}/>
+      {/* 4. Promotional/collection Rotating Banner */}
+      <section aria-label={`${collection.name} featured banners`} className="mb-8">
+        <RotatingBanner key={collection.id}/>
       </section>
 
       {/* 5. Product Grid / Catalog listing */}
       {/* 4. Client-side Interactive Filter & Grid */}
-      <JewelryTypeClient products={filtered} pFilters={{ material: `${category.material}` }} />
+      <JewelryTypeClient products={filtered} pFilters={{ material: `${collection.material}` }} />
       {/* 6. Contextual SEO Content */}
-      <aside aria-label="Related category searches and information">
-        <SEO slug={`/categories/${id}`} />
+      <aside aria-label="Related collection searches and information">
+        <SEO slug={`/collections/${id}`} />
       </aside>
     </main>
   );

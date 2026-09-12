@@ -2,7 +2,7 @@
 export const dynamic = "force-static";
 
 import products from "@/data/products.json";
-import categories from "@/data/categories.json";
+import collections from "@/data/collections.json";
 import types from "@/data/types.json";
 
 interface CatalogItem {
@@ -27,8 +27,8 @@ function cleanText(text?: string): string {
 export async function GET() {
   const baseUrl = "https://sapnashrijewellers.in";
 
-  // Category Landing Pages
-  const categoryLinks = categories 
+  // Collection Landing Pages
+  const collectionLinks = collections 
     .map((cat) => {
       const title = cat.name;
       return `- [${title}](${baseUrl}/c/${cat.id}/): Explore all ${cleanText(title)} collections.`;
@@ -66,7 +66,7 @@ export async function GET() {
 ## About This File
 
 This file provides structured information about Sapnashri Jewellers,
-its physical store, jewellery categories, jewellery types, policies,
+its physical store, jewellery collection, jewellery types, policies,
 and currently listed products.
 
 Product URLs in this file use the current canonical website URL structure.
@@ -79,8 +79,8 @@ weight, and other changing attributes.
 - [About Us](${baseUrl}/about-us/): Store legacy, founders, craftsmanship standards, and customer trust.
 - [HUID Purity Verification](${baseUrl}/huid/): BIS 916 Hallmark and unique HUID tracking code verification details.
 
-## Category Landing Pages
-${categoryLinks}
+## collection Landing Pages
+${collectionLinks}
 
 ## Jewellery Type Landing Pages
 ${jewelryTypeLinks}

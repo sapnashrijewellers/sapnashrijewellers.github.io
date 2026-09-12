@@ -1,14 +1,14 @@
-import type { Category, Product } from "@/types/catalog";
+import type { Collection, Product } from "@/types/catalog";
 import Link from "next/link";
 import Image from "next/image";
 
-interface CategoryCardProps {
-  category: Category;
+interface CollectionCardProps {
+  collection: Collection;
   products: Product[];
   priority?: boolean;
 }
 
-export default function CategoryCard({ category, products, priority = false }: CategoryCardProps) {
+export default function CollectionCard({ collection, products, priority = false }: CollectionCardProps) {
   if (!products || products.length === 0) return null;
 
   
@@ -23,10 +23,10 @@ export default function CategoryCard({ category, products, priority = false }: C
   return (
     <article className="w-full flex">
       <Link
-        href={`/c/${category.id}/`}
+        href={`/c/${collection.id}/`}
         prefetch={false}
-        title={`${category.name} Collection`}
-        aria-label={`Explore ${category.name} jewellery collection`}
+        title={`${collection.name} Collection`}
+        aria-label={`Explore ${collection.name} jewellery collection`}
         className="group relative flex flex-col w-full h-full bg-card border border-theme/40 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-[transform,box-shadow] duration-200 ease-out hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-primary will-change-[transform,box-shadow]"
       >
         {/* Aspect Ratio Box (Width-Filling Responsive Container) */}
@@ -42,7 +42,7 @@ export default function CategoryCard({ category, products, priority = false }: C
 
           <Image
             src={imageUrl}
-            alt={firstProduct.name ? `${category.name} - ${firstProduct.name}` : `${category.name} jewellery category`}
+            alt={firstProduct.name ? `${collection.name} - ${firstProduct.name}` : `${collection.name} jewellery collection`}
             fill
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
             priority={priority}
@@ -53,13 +53,13 @@ export default function CategoryCard({ category, products, priority = false }: C
           />
         </div>
 
-        {/* Category Label */}
+        {/* Collection Label */}
         <div className="flex flex-col items-center justify-center p-3 grow bg-card border-t border-theme/20">
           <h2 className="text-center font-yatra text-lg text-foreground transition-colors duration-150">
-            {category.name}
+            {collection.name}
           </h2>
           <span className="sr-only">
-            Browse {category.name} category products
+            Browse {collection.name} collection products
           </span>
         </div>
       </Link>

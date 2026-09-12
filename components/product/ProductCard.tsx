@@ -50,7 +50,7 @@ export default function ProductCard({
             absolute left-2.5 top-2.5 z-10
             inline-flex items-center gap-1
             rounded-full bg-accent px-2 py-0.5
-            text-[11px] font-bold text-accent-foreground
+            text-[11px] text-accent-foreground
             shadow-md
             pointer-events-none select-none
             -rotate-2

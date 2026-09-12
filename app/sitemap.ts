@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import products from "@/data/products.json";
-import categories from "@/data/categories.json";
+import collections from "@/data/collections.json";
 import types from "@/data/types.json";
 
 export const dynamic = "force-static";
@@ -36,7 +36,7 @@ export default async function sitemap(
       changeFrequency: "daily",
       priority: 1.0,
     },
-    ...categories.map((cat) => ({
+    ...collections.map((cat) => ({
       url: `${baseUrl}/c/${cat.id}/`,
       lastModified: buildDate,
       changeFrequency: "weekly" as const,

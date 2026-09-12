@@ -119,14 +119,14 @@ export default function Footer() {
             Quick Links
           </h3>
           <ul className="space-y-2">
-            {popularCollections.map((category) => (
-              <li key={category.link}>
+            {popularCollections.map((collection) => (
+              <li key={collection.link}>
                 <Link
-                  href={category.link}
+                  href={collection.link}
                   className="hover:underline transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded"
-                  title={`explore ${category.text} collection`}
+                  title={`explore ${collection.text} collection`}
                 >
-                  {category.text}
+                  {collection.text}
                 </Link>
               </li>
             ))}

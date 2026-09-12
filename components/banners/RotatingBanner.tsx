@@ -9,7 +9,7 @@ interface BannerItem {
   rank: number;
   bannerDesktop: string;
   bannerMobile?: string;
-  categoryId: number;
+  collectionId: number;
   text: string;
   active: boolean;
 }
@@ -74,7 +74,7 @@ export default function RotatingBanner({
           return (
             <Link
               key={item.id}
-              href={`${baseURL}/c/${item.categoryId}/`}
+              href={`${baseURL}/c/${item.collectionId}/`}
               aria-label={item.text}
               aria-hidden={!isActive}
               tabIndex={isActive ? 0 : -1}

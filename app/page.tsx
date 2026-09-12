@@ -5,7 +5,7 @@ import SignatureCollections from "@/components/home/SignatureCollections";
 import NewArrivals from "@/components/product/NewArrivals";
 import buildBusinessJsonLd from "@/utils/json-ld/buildBusinessJsonLd";
 import SEO from "@/components/common/SEO";
-import categories from "@/data/categories.json";
+import collections from "@/data/collections.json";
 import products from "@/data/products.json";
 import TrustSignalsRibbon from "@/components/product/TrustSignalsRibbon";
 
@@ -72,8 +72,8 @@ export default function Home() {
         <RotatingBanner />
       </section>
 
-      {/* 2. Quick Category / Jewellery Type Navigation */}
-      <section aria-label="Jewellery categories by type" className="my-6">
+      {/* 2. Jewellery Type Navigation */}
+      <section aria-label="Jewellery types" className="my-6">
         <JewelleryTypeBar home={false} />
       </section>
 
@@ -88,7 +88,7 @@ export default function Home() {
 
       {/* 5. Signature Curated Collections */}
       <section aria-label="Signature jewellery collections" className="my-8">
-        <SignatureCollections categories={categories} products={products} />
+        <SignatureCollections collections={collections} products={products} />
       </section>
       <SEO slug="/home"></SEO>
     </main>

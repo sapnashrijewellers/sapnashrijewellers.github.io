@@ -73,13 +73,13 @@ function getMaterial(product: Product): string {
 }
 
 function getProductType(product: Product): string {
-    const category = sanitizeText(product.category);
+    const collection = sanitizeText(product.collection);
 
-    if (!category) {
+    if (!collection) {
         return "Jewellery";
     }
 
-    return `Jewellery > ${category}`;
+    return `Jewellery > ${collection}`;
 }
 
 export async function GET() {

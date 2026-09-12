@@ -343,7 +343,7 @@ export default function OrdersPage() {
 
         <Link
           href="/"
-          title="visit home page for latest updates on product, browse categories & collections..."
+          title="visit home page for latest updates on product, browse  collections..."
           className="
             inline-flex items-center justify-center gap-2
             px-5 py-2.5

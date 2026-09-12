@@ -1,9 +1,9 @@
-import type { Product, Category } from "@/types/catalog";
+import type { Product, Collection } from "@/types/catalog";
 import buildProductJsonLd from "@/utils/json-ld/buildProductJsonLd";
 
-export function buildCategoryPageJsonLd(
+export function buildCollectionPageJsonLd(
   products: Product[],
-  category: Category
+  collection: Collection
   
 ) {
   const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in";
@@ -11,10 +11,10 @@ export function buildCategoryPageJsonLd(
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "@id": `${baseURL}/c/${category.id}/#itemlist`,
-    "name": `${category.title || category.name} | Sapna Shri Jewellers`,
-    "description": category.description,
-    "url": `${baseURL}/c/${category.id}/`,
+    "@id": `${baseURL}/c/${collection.id}/#itemlist`,
+    "name": `${collection.title || collection.name} | Sapna Shri Jewellers`,
+    "description": collection.description,
+    "url": `${baseURL}/c/${collection.id}/`,
     "numberOfItems": products.length,
     "itemListElement": products.map((product, index) => {
       const fullProductJsonLd = buildProductJsonLd(product);

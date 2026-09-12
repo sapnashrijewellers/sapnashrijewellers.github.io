@@ -39,12 +39,12 @@ export async function GET() {
       const title = sanitizeXml(product.name);
       const description = sanitizeXml(product.description || product.name);
 
-      // Collect all store-defined types and category
+      // Collect all store-defined types and collection
       const storeProductTypes: string[] = [];
 
-      // 1. Add Store Category
-      if (product.category) {
-        storeProductTypes.push(`Jewelry > ${product.category}`);
+      // 1. Add Store Collection
+      if (product.collection) {
+        storeProductTypes.push(`Jewelry > ${product.collection}`);
       }
 
       // 2. Add each custom Jewelry Type from your array
@@ -55,7 +55,7 @@ export async function GET() {
         : [];
 
       typesList.forEach((typeName) => {
-        if (typeName && typeName !== product.category) {
+        if (typeName && typeName !== product.collection) {
           storeProductTypes.push(`Jewelry > ${typeName}`);
         }
       });

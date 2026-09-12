@@ -5,9 +5,9 @@ export interface Product {
   images: string[];
   highlights: string[];
   newArrival: boolean;
-  category: string;
+  collection: string;
   type: string[];
-  for: string;  
+  for: string;
   active: boolean;
   description: string;
   available?: boolean;
@@ -22,14 +22,16 @@ export interface Product {
   MRP: number;
 }
 
-export interface Category {
+export interface Collection {
   id: number;
   name: string;
   title: string,
-  rank: number,  
+  rank: number,
   description: string,
   active: boolean
-  material:string
+  material: string
+  group: string,
+  category: string
 }
 
 export interface SearchFilters {
@@ -56,7 +58,7 @@ export interface SearchFilters {
 export interface Type {
   id: number,
   type: string,
-  rank: number,  
+  rank: number,
   description: string,
   icon: string,
   icon1: string,
@@ -102,7 +104,7 @@ export type Order = {
   userId: string;
 
   items: Array<{
-    productId: number;    
+    productId: number;
     title: string;
     qty: number;
   }>;

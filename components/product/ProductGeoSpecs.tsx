@@ -75,7 +75,7 @@ export default function ProductGeoSpecs({
           </div>
         </div>
 
-        {/* Category & Ideal For */}
+        {/* Collection & Ideal For */}
         <div className="flex items-start gap-2.5">
           <Tag
             className="w-4 h-4 mt-0.5 shrink-0"
@@ -83,11 +83,11 @@ export default function ProductGeoSpecs({
           />
           <div>
             <dt className="text-muted-foreground font-normal">
-              Ideal For &amp; Category
+              Ideal For 
             </dt>
             <dd className="font-medium text-foreground capitalize">
               {product.for ? `${product.for} • ` : ""}
-              {product.category}
+              {product.collection}
             </dd>
           </div>
         </div>

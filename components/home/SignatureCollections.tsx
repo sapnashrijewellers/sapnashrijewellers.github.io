@@ -1,13 +1,13 @@
 "use client";
 
 import { useState, useId, useMemo } from "react";
-import CategoryCard from "./CategoryCard";
-import type { Category, Product } from "@/types/catalog";
+import CollectionCard from "./CollectionCard";
+import type { Collection, Product } from "@/types/catalog";
 
 type Material = "Gold" | "Silver";
 
 interface SignatureCollectionsProps {
-  categories: Category[];
+  collections: Collection[];
   products: Product[];
   className?: string;
 }
@@ -15,7 +15,7 @@ interface SignatureCollectionsProps {
 const MATERIALS: readonly Material[] = ["Silver", "Gold"] as const;
 
 export default function SignatureCollections({
-  categories,
+  collections,
   products,
   className = "",
 }: SignatureCollectionsProps) {
@@ -24,33 +24,33 @@ export default function SignatureCollections({
 
   // Filter active categories for the selected metal type
   const filteredCategories = useMemo(() => {
-    return categories
+    return collections
       .filter((c) => c.active && c.material === material)
       .sort((a, b) => a.rank - b.rank);
-  }, [categories, material]);
+  }, [collections, material]);
 
-  // Pre-group products by category name for O(1) grid lookups
-  const productsByCategory = useMemo(() => {
+  // Pre-group products by collection name for O(1) grid lookups
+  const productsByCollection = useMemo(() => {
     const map = new Map<string, Product[]>();
     products.forEach((p) => {
-      if (!p.category) return;
-      const list = map.get(p.category) || [];
+      if (!p.collection) return;
+      const list = map.get(p.collection) || [];
       list.push(p);
-      map.set(p.category, list);
+      map.set(p.collection, list);
     });
     return map;
   }, [products]);
 
   const visibleCategories = useMemo(() => {
     return filteredCategories.filter((cat) => {
-      const items = productsByCategory.get(cat.name);
+      const items = productsByCollection.get(cat.name);
       return items && items.length > 0;
     });
-  }, [filteredCategories, productsByCategory]);
+  }, [filteredCategories, productsByCollection]);
 
   return (
     <section
-      id="shop-by-category"
+      id="shop-by-collection"
       aria-labelledby={sectionTitleId}
       className={`relative w-full my-8 ${className}`}
     >
@@ -106,16 +106,16 @@ export default function SignatureCollections({
         Showing {visibleCategories.length} {material} jewellery categories.
       </div>
 
-      {/* Uniform Width Category Grid */}
+      {/* Uniform Width Collection Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5 w-full items-stretch">
         {visibleCategories.map((cat, index) => {
-          const categoryProducts = productsByCategory.get(cat.name) || [];
+          const collectionProducts = productsByCollection.get(cat.name) || [];
 
           return (
             <div key={cat.name} className="w-full flex">
-              <CategoryCard
-                category={cat}
-                products={categoryProducts}
+              <CollectionCard
+                collection={cat}
+                products={collectionProducts}
                 priority={index < 4}
               />
             </div>

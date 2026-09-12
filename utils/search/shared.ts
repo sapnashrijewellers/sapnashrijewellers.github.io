@@ -7,7 +7,7 @@ export const miniSearchIndexOptions: MiniSearchIndexOptions = {
   fields: [
     "name",    
     "highlights",    
-    "category",    
+    "collection",    
     "description",
     "type",
     "for",
@@ -18,7 +18,7 @@ export const miniSearchIndexOptions: MiniSearchIndexOptions = {
     "id",    
     "name",    
     "images",
-    "category",
+    "collection",
     "metal",
     "newArrival",
     "weight",
@@ -54,7 +54,7 @@ export const miniSearchQueryOptions: MiniSearchSearchOptions = {
   boost: {
     name: 5,
     highlights: 3.5,        
-    category: 2.5,    
+    collection: 2.5,    
     description: 2,
     type: 1.3,
     for: 1.2    

@@ -2,6 +2,7 @@ import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 import buildSearchIndex from "./buildSearchIndex";
+import { Product } from "@/types/catalog";
 
 const DATA_FOLDER = "./data/";
 const PUBLIC_DATA_FOLDER = "./public/data/";
@@ -10,12 +11,6 @@ const PUBLIC_DATA_FOLDER = "./public/data/";
 const API_URL =
   "https://script.google.com/macros/s/AKfycbwNQ9fFmV0MqVEKg6pk-x56FsCw-xOnV__A3l6hqrlUVukKyx6gf31DpiO4hn4Vep6U5w/exec";
 
-type Product = {
-  name?: string;
-  category?: string;
-  active?: boolean;
-  weight?: number;
-};
 
 type ApiResponse = Record<string, unknown>;
 
@@ -111,8 +106,8 @@ async function fetchAndSaveData(): Promise<void> {
         (product) =>
           product.name &&
           product.name.length > 4 &&
-          product.category &&
-          product.category.length > 0 &&
+          product.collection &&
+          product.collection.length > 0 &&
           product.active === true &&
           product.weight !== undefined &&
           product.weight > 0

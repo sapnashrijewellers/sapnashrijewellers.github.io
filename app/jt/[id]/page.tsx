@@ -120,7 +120,7 @@ export default async function JewelryTypePage({ params }: JewelryTypePageProps) 
       <JewelryTypeClient products={baseProducts} />
 
       {/* 6. Contextual SEO Content */}
-      <aside aria-label="Related category searches and information">
+      <aside aria-label="Related collection searches and information">
         <SEO slug={`/jewelry-type/${id}`} />
       </aside>
 

@@ -212,7 +212,7 @@ function SearchBarInput({ initialQuery = "" }: SearchBarProps) {
           onChange={(e) => setQuery(e.target.value)}
           placeholder={currentPlaceholder}
           inputMode="search"
-          aria-label="Search jewellery by name, design, or category"
+          aria-label="Search jewellery by name, design, or collection"
           className={`
             flex-1
             h-full

@@ -32,9 +32,9 @@ export default function ProductCard({
       aria-label={`${product.name} jewellery item`}
       className={`
         group relative flex h-full w-full min-w-0 flex-col
-        overflow-hidden rounded-2xl border border-theme/40 bg-card shadow-sm
-        transition-[transform,box-shadow,border-color] duration-150 ease-out
-        hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg
+        overflow-hidden rounded-2xl shadow-sm
+        transition-[transform,box-shadow] duration-150 ease-out
+        hover:-translate-y-1  hover:shadow-lg
         ${className}
       `}
     >
@@ -119,32 +119,19 @@ export default function ProductCard({
         </div>
 
         {/* Product information */}
-        <div
-          className="
-            flex w-full grow flex-col justify-between
-            border-t border-theme/20
-            bg-card
-            p-3 sm:p-3.5
-          "
-        >
-          <div>
-            <h3
-              className="
-                text-xs font-medium leading-snug text-foreground
-                transition-colors duration-150                
-                sm:text-sm
-              "
-            >
+        <div          className="flex w-full grow flex-col justify-between  p-3">
+          
+            <span className="leading-snug text-foreground transition-colors duration-150">
               {product.name}
-            </h3>
+            </span>
 
             <div className="mt-2">
               <ProductPrice product={product} />
             </div>
-          </div>
+          
 
           {rating > 0 && ratingCount > 0 && (
-            <div className="mt-2.5 border-t border-theme/20 pt-2">
+            <div className="mt-2.5  pt-2">
               <ProductRating
                 rating={rating}
                 count={ratingCount}

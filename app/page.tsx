@@ -5,10 +5,11 @@ import SignatureCollections from "@/components/home/SignatureCollections";
 import NewArrivals from "@/components/product/NewArrivals";
 import buildBusinessJsonLd from "@/utils/json-ld/buildBusinessJsonLd";
 import SEO from "@/components/common/SEO";
-import collections from "@/data/collections.json";
 import products from "@/data/products.json";
 import TrustSignalsRibbon from "@/components/product/TrustSignalsRibbon";
-
+import HomeCategoryBar from "@/components/home/HomeCategoriesBar";
+import HomeFaq from "@/components/home/HomeFaq";
+import HeritageStory from "@/components/home/HeritageStory";
 const baseURL = (
   process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in"
 ).replace(/\/+$/, "");
@@ -57,40 +58,21 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <RotatingBanner />
 
-      {/* Accessible Screen-Reader Page Heading */}
-      <h1 className="sr-only">
-        सपना श्री ज्वेलर्स नागदा - सोने एवं चांदी के आभूषण (Sapna Shri Jewellers
-        Nagda)
-      </h1>
+      <JewelleryTypeBar home={false} />
 
-      {/* 1. Hero Promotional Rotating Banner (Top LCP Element) */}
-      <section
-        aria-label="Featured promotions and announcements"
-        className="mb-6"
-      >
-        <RotatingBanner />
-      </section>
+      <HomeCategoryBar />
 
-      {/* 2. Jewellery Type Navigation */}
-      <section aria-label="Jewellery types" className="my-6">
-        <JewelleryTypeBar home={false} />
-      </section>
+      <NewArrivals />
 
-      {/* 3. New Arrivals Showcase */}
-      <section aria-label="New jewellery arrivals" className="my-8">
-        <NewArrivals />
-      </section>
+      <TrustSignalsRibbon product={products[0]} />
 
-      <section aria-label="Customer reviews and ratings" className="my-8">
-        <TrustSignalsRibbon product={products[0]} />
-      </section>
+      <SignatureCollections  />
 
-      {/* 5. Signature Curated Collections */}
-      <section aria-label="Signature jewellery collections" className="my-8">
-        <SignatureCollections collections={collections} products={products} />
-      </section>
-      <SEO slug="/home"></SEO>
+      <HeritageStory />
+      
+      <HomeFaq />
     </main>
   );
 }

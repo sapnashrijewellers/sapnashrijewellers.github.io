@@ -25,10 +25,7 @@ export default function StoreAvailability({
       {/* Header */}
       <div className="mb-3 flex items-center gap-2 pb-1">
         <Store className="h-5 w-5 shrink-0" aria-hidden="true" />
-        <h3
-          id="store-availability-heading"
-          className="text-xs sm:text-sm font-semibold uppercase tracking-wider"
-        >
+        <h3 id="store-availability-heading">
           Store Availability
         </h3>
       </div>

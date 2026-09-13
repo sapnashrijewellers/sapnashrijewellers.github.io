@@ -8,6 +8,7 @@ import SEO from "@/components/common/SEO";
 import collections from "@/data/collections.json";
 import products from "@/data/products.json";
 import TrustSignalsRibbon from "@/components/product/TrustSignalsRibbon";
+import HomeCategoryBar from "@/components/home/HomeCategoriesBar";
 
 const baseURL = (
   process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in"
@@ -58,38 +59,18 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Accessible Screen-Reader Page Heading */}
-      <h1 className="sr-only">
-        सपना श्री ज्वेलर्स नागदा - सोने एवं चांदी के आभूषण (Sapna Shri Jewellers
-        Nagda)
-      </h1>
+      <HomeCategoryBar />
 
-      {/* 1. Hero Promotional Rotating Banner (Top LCP Element) */}
-      <section
-        aria-label="Featured promotions and announcements"
-        className="mb-6"
-      >
-        <RotatingBanner />
-      </section>
+      <JewelleryTypeBar home={false} />
 
-      {/* 2. Jewellery Type Navigation */}
-      <section aria-label="Jewellery types" className="my-6">
-        <JewelleryTypeBar home={false} />
-      </section>
+      <RotatingBanner />
 
-      {/* 3. New Arrivals Showcase */}
-      <section aria-label="New jewellery arrivals" className="my-8">
-        <NewArrivals />
-      </section>
+      <NewArrivals />
 
-      <section aria-label="Customer reviews and ratings" className="my-8">
-        <TrustSignalsRibbon product={products[0]} />
-      </section>
+      <TrustSignalsRibbon product={products[0]} />
 
-      {/* 5. Signature Curated Collections */}
-      <section aria-label="Signature jewellery collections" className="my-8">
-        <SignatureCollections collections={collections} products={products} />
-      </section>
+      <SignatureCollections collections={collections} products={products} />
+
       <SEO slug="/home"></SEO>
     </main>
   );

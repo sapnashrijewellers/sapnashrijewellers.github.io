@@ -27,11 +27,7 @@ export default function JewelleryTypeBar({
       {/* Section Header with Bilingual Context for Crawlers & Assistive Tech */}
       <div className="flex items-baseline justify-between px-2 sm:px-4 mb-2">
         <h2
-          id="occasion-heading"
-          className={`font-semibold text-foreground tracking-tight ${
-            !home ? "au-h2" : "text-xl sm:text-2xl"
-          }`}
-        >
+          id="occasion-heading" className="au-h2">
           Jewellery for Every Occasion
         </h2>
       </div>
@@ -122,9 +118,9 @@ export default function JewelleryTypeBar({
               </div>
 
               {/* Title with multi-line wrap and fixed container constraints */}
-              <h3 className="w-full text-xs sm:text-sm font-medium leading-snug text-foreground transition-colors duration-150 break-words whitespace-normal">
+              <span className="w-full leading-snugtransition-colors duration-150 break-words whitespace-normal">
                 {item.type}
-              </h3>
+              </span>
 
               <span className="sr-only">
                 {item.description || `Browse ${item.type} jewellery items`}

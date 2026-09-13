@@ -250,16 +250,37 @@ button {
 /* ============================
    HEADINGS
 ============================ */
+/* Shared font family with generic fallbacks */
 h1,
 h2,
-h3 {
-  font-family: var(--font-yatra);
-  
+h3,
+h4 {
+  font-family: var(--font-yatra), cursive, sans-serif;
 }
 
-.au-h2 {
-  @apply text-3xl mb-8 text-center;
-  color: var(--color-primary-dark)
+/* Tailwind-equivalent font-size and line-height pairs */
+h1 {
+  font-size: 2.25rem;  /* text-4xl (36px) */
+  line-height: 2.5rem; /* 40px */
+}
+
+h2 {
+  font-size: 1.875rem; /* text-3xl (30px) */
+  line-height: 2.25rem; /* 36px */
+}
+
+h3 {
+  font-size: 1.5rem;   /* text-2xl (24px) */
+  line-height: 2rem;   /* 32px */
+}
+
+h4 {
+  font-size: 1.25rem;  /* text-xl (20px) */
+  line-height: 1.75rem; /* 28px */
+}
+h5 {
+  font-size: 1rem;  /* text-xl (20px) */
+  line-height: 1.5rem; /* 28px */
 }
 
 /* ============================

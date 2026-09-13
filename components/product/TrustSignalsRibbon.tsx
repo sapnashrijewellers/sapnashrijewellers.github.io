@@ -137,16 +137,13 @@ export default function TrustSignalsRibbon({
       }}
     >
       {/* Section Header */}
-      <div className="flex items-center justify-between pb-3 mb-4 border-b border-theme/20">
+      <div className="flex items-center justify-between pb-3 mb-4 ">
         <h2
           id="trust-ribbon-heading"
-          className="text-xl font-bold uppercase tracking-[0.18em]"
+          className=""
         >
-          Our Trust Promise
-        </h2>
-        <span className="text-[11px] sm:text-xs text-muted-foreground font-medium">
-          100% Certified
-        </span>
+          Our Trust Promises
+        </h2>        
       </div>
 
       {/* Screen Reader & LLM Structured Summary */}

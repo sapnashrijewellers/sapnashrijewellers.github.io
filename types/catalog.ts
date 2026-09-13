@@ -22,6 +22,12 @@ export interface Product {
   MRP: number;
 }
 
+export interface Category{
+  name: string;
+  xPosition: string;
+  yPosition: string;
+}
+
 export interface Collection {
   id: number;
   name: string;

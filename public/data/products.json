@@ -124,7 +124,7 @@
   {
     "id": 4,
     "name": "Sawariya Seth Silver Ring",
-    "collection": "Sawariya Seth Ring",
+    "collection": "Sawariya Seth Rings",
     "type": [
       "Spiritual Silver Jewellery",
       "Silver Jewellery Under ₹3000"
@@ -808,7 +808,7 @@
   {
     "id": 23,
     "name": "Sawariya Seth Silver Ring",
-    "collection": "Sawariya Seth Ring",
+    "collection": "Sawariya Seth Rings",
     "type": [
       "Spiritual Silver Jewellery",
       "Daily Wear"
@@ -845,7 +845,7 @@
   {
     "id": 24,
     "name": "Pure Silver Sawariya Seth Silver Ring",
-    "collection": "Sawariya Seth Ring",
+    "collection": "Sawariya Seth Rings",
     "type": [
       "Spiritual Silver Jewellery",
       "Daily Wear"
@@ -3669,7 +3669,7 @@
   {
     "id": 95,
     "name": "925 Sterling Silver Sanwariya Seth Ring for Men",
-    "collection": "Sawariya Seth Ring",
+    "collection": "Sawariya Seth Rings",
     "type": [
       "Spiritual Silver Jewellery",
       "Daily Wear",
@@ -3710,7 +3710,7 @@
   {
     "id": 96,
     "name": "Sawariya Seth ji ki Chandi ki Ring",
-    "collection": "Sawariya Seth Ring",
+    "collection": "Sawariya Seth Rings",
     "type": [
       "Spiritual Silver Jewellery",
       "Birthday Silver Gifts",
@@ -3750,7 +3750,7 @@
   {
     "id": 97,
     "name": "Handmade Sawariya Seth Ring for Men",
-    "collection": "Sawariya Seth Ring",
+    "collection": "Sawariya Seth Rings",
     "type": [
       "Spiritual Silver Jewellery",
       "Daily Wear",
@@ -3791,7 +3791,7 @@
   {
     "id": 98,
     "name": "925 Silver Sawariya Seth Ring",
-    "collection": "Sawariya Seth Ring",
+    "collection": "Sawariya Seth Rings",
     "type": [
       "Spiritual Silver Jewellery",
       "Birthday Silver Gifts",
@@ -3833,7 +3833,7 @@
   {
     "id": 99,
     "name": "Most Iconic Sawariya Seth Ring",
-    "collection": "Sawariya Seth Ring",
+    "collection": "Sawariya Seth Rings",
     "type": [
       "Spiritual Silver Jewellery",
       "Daily Wear",
@@ -3873,7 +3873,7 @@
   {
     "id": 100,
     "name": "Divine Sawariya Seth Silver Ring Flute Design",
-    "collection": "Sawariya Seth Ring",
+    "collection": "Sawariya Seth Rings",
     "type": [
       "Spiritual Silver Jewellery",
       "Birthday Silver Gifts",
@@ -3912,7 +3912,7 @@
   {
     "id": 101,
     "name": "925 Sterling Silver Chain Pendant Set for Women",
-    "collection": "Silver Chain with Pendant",
+    "collection": "Silver Chain with Pendants",
     "type": [
       "Silver Jewellery for Women",
       "Daily Wear",
@@ -3938,7 +3938,7 @@
     "for": "her",
     "metal": "silver",
     "weight": 4.1,
-    "makingCharges": 130,
+    "makingCharges": 150,
     "discount": 0,
     "newArrival": true,
     "HUID": false,
@@ -3947,13 +3947,13 @@
     "rating": 4.1,
     "ratingCount": 104,
     "Lock": "",
-    "price": 2671,
-    "MRP": 2671
+    "price": 2903,
+    "MRP": 2903
   },
   {
     "id": 102,
     "name": "Latest Design Women's Silver Chain Pendant",
-    "collection": "Silver Chain with Pendant",
+    "collection": "Silver Chain with Pendants",
     "type": [
       "Office Wear",
       "Party Wear",
@@ -3979,7 +3979,7 @@
     "for": "her",
     "metal": "silver",
     "weight": 4.7,
-    "makingCharges": 130,
+    "makingCharges": 150,
     "discount": 0,
     "newArrival": false,
     "HUID": false,
@@ -3988,13 +3988,13 @@
     "rating": 4.7,
     "ratingCount": 84,
     "Lock": "",
-    "price": 3062,
-    "MRP": 3062
+    "price": 3328,
+    "MRP": 3328
   },
   {
     "id": 103,
     "name": "925 Sterling Silver Pink Stone Chain Pendant Set for Girls",
-    "collection": "Silver Chain with Pendant",
+    "collection": "Silver Chain with Pendants",
     "type": [
       "Daily Wear",
       "Birthday Silver Gifts",
@@ -4019,7 +4019,7 @@
     "for": "her",
     "metal": "silver",
     "weight": 4.84,
-    "makingCharges": 130,
+    "makingCharges": 150,
     "discount": 0,
     "newArrival": false,
     "HUID": false,
@@ -4028,13 +4028,13 @@
     "rating": 4.4,
     "ratingCount": 26,
     "Lock": "",
-    "price": 3153,
-    "MRP": 3153
+    "price": 3427,
+    "MRP": 3427
   },
   {
     "id": 104,
     "name": "Pure Silver Chain Pendant Set for Daily Wear",
-    "collection": "Silver Chain with Pendant",
+    "collection": "Silver Chain with Pendants",
     "type": [
       "Silver Jewellery for Women",
       "Daily Wear",
@@ -4060,7 +4060,7 @@
     "for": "her",
     "metal": "silver",
     "weight": 7.39,
-    "makingCharges": 130,
+    "makingCharges": 150,
     "discount": 0,
     "newArrival": false,
     "HUID": false,
@@ -4069,13 +4069,13 @@
     "rating": 4.3,
     "ratingCount": 55,
     "Lock": "",
-    "price": 4814,
-    "MRP": 4814
+    "price": 5233,
+    "MRP": 5233
   },
   {
     "id": 105,
     "name": "Elegant Silver Chain Pendant Jewellery Set for Women",
-    "collection": "Silver Chain with Pendant",
+    "collection": "Silver Chain with Pendants",
     "type": [
       "Office Wear",
       "Party Wear",
@@ -4100,7 +4100,7 @@
     "for": "her",
     "metal": "silver",
     "weight": 4.24,
-    "makingCharges": 130,
+    "makingCharges": 150,
     "discount": 0,
     "newArrival": false,
     "HUID": false,
@@ -4109,13 +4109,13 @@
     "rating": 4.9,
     "ratingCount": 116,
     "Lock": "",
-    "price": 2762,
-    "MRP": 2762
+    "price": 3002,
+    "MRP": 3002
   },
   {
     "id": 106,
     "name": "Stylish Women's Silver Chain Pendant Set",
-    "collection": "Silver Chain with Pendant",
+    "collection": "Silver Chain with Pendants",
     "type": [
       "Daily Wear",
       "Birthday Silver Gifts",
@@ -4140,7 +4140,7 @@
     "for": "her",
     "metal": "silver",
     "weight": 5.47,
-    "makingCharges": 130,
+    "makingCharges": 150,
     "discount": 0,
     "newArrival": false,
     "HUID": false,
@@ -4149,13 +4149,13 @@
     "rating": 4.5,
     "ratingCount": 20,
     "Lock": "",
-    "price": 3564,
-    "MRP": 3564
+    "price": 3873,
+    "MRP": 3873
   },
   {
     "id": 107,
     "name": "Heart Design Silver Chain Pendant Set for Women",
-    "collection": "Silver Chain with Pendant",
+    "collection": "Silver Chain with Pendants",
     "type": [
       "Silver Jewellery for Women",
       "Daily Wear",
@@ -4181,7 +4181,7 @@
     "for": "her",
     "metal": "silver",
     "weight": 3.23,
-    "makingCharges": 130,
+    "makingCharges": 150,
     "discount": 0,
     "newArrival": false,
     "HUID": false,
@@ -4190,13 +4190,13 @@
     "rating": 4.6,
     "ratingCount": 41,
     "Lock": "",
-    "price": 2104,
-    "MRP": 2104
+    "price": 2287,
+    "MRP": 2287
   },
   {
     "id": 108,
     "name": "Pearl Silver Chain Pendant Set for Women",
-    "collection": "Silver Chain with Pendant",
+    "collection": "Silver Chain with Pendants",
     "type": [
       "Office Wear",
       "Party Wear",
@@ -4222,7 +4222,7 @@
     "for": "her",
     "metal": "silver",
     "weight": 4.32,
-    "makingCharges": 130,
+    "makingCharges": 150,
     "discount": 2,
     "newArrival": false,
     "HUID": false,
@@ -4231,13 +4231,13 @@
     "rating": 4.2,
     "ratingCount": 91,
     "Lock": "",
-    "price": 2814,
-    "MRP": 2871
+    "price": 3059,
+    "MRP": 3121
   },
   {
     "id": 109,
     "name": "925 Sterling Silver Planet Heart Chain Pendant with Zircon Stones",
-    "collection": "Silver Chain with Pendant",
+    "collection": "Silver Chain with Pendants",
     "type": [
       "Daily Wear",
       "Birthday Silver Gifts",
@@ -4278,7 +4278,7 @@
   {
     "id": 110,
     "name": "Elegant Dual Flower Silver Chain Pendant Set for Daily Wear",
-    "collection": "Silver Chain with Pendant",
+    "collection": "Silver Chain with Pendants",
     "type": [
       "Silver Jewellery for Women",
       "Daily Wear",
@@ -4319,7 +4319,7 @@
   {
     "id": 111,
     "name": "Leaf Vine Zircon Silver Necklace for Women",
-    "collection": "Silver Chain with Pendant",
+    "collection": "Silver Chain with Pendants",
     "type": [
       "Office Wear",
       "Party Wear",
@@ -4345,7 +4345,7 @@
     "for": "her",
     "metal": "silver",
     "weight": 3.25,
-    "makingCharges": 130,
+    "makingCharges": 150,
     "discount": 2,
     "newArrival": false,
     "HUID": false,
@@ -4354,13 +4354,13 @@
     "rating": 4.5,
     "ratingCount": 90,
     "Lock": "",
-    "price": 2117,
-    "MRP": 2160
+    "price": 2301,
+    "MRP": 2348
   },
   {
     "id": 113,
     "name": "Starry Night Cascading Silver Chain Pendant for Girlfriend",
-    "collection": "Silver Chain with Pendant",
+    "collection": "Silver Chain with Pendants",
     "type": [
       "Silver Jewellery for Women",
       "Daily Wear",
@@ -4401,7 +4401,7 @@
   {
     "id": 114,
     "name": "Chic Pink Crystal Planet Silver Chain Pendant for Girls",
-    "collection": "Silver Chain with Pendant",
+    "collection": "Silver Chain with Pendants",
     "type": [
       "Office Wear",
       "Party Wear",
@@ -4442,7 +4442,7 @@
   {
     "id": 115,
     "name": "Silver Necklace for Women",
-    "collection": "Silver Chain with Pendant",
+    "collection": "Silver Chain with Pendants",
     "type": [
       "Daily Wear",
       "Birthday Silver Gifts",
@@ -4482,7 +4482,7 @@
   {
     "id": 116,
     "name": "Designer Baroque Gold Polish Pearl Pendant with Zircon Heart and Star in 925 Silver",
-    "collection": "Silver Chain with Pendant",
+    "collection": "Silver Chain with Pendants",
     "type": [
       "Silver Jewellery for Women",
       "Office Wear",
@@ -10357,10 +10357,10 @@
     ],
     "brandText": "Made from Genuine 925 Silver with Fine Finish",
     "care": "SILVER_GENERAL",
-    "for": "",
+    "for": "her",
     "metal": "silver",
     "weight": 8.67,
-    "makingCharges": 80,
+    "makingCharges": 42,
     "discount": 0,
     "newArrival": true,
     "HUID": false,
@@ -10369,8 +10369,8 @@
     "rating": 4.1,
     "ratingCount": 15,
     "Lock": "",
-    "price": 4420,
-    "MRP": 4420
+    "price": 3487,
+    "MRP": 3487
   },
   {
     "id": 302,
@@ -10395,10 +10395,10 @@
     ],
     "brandText": "92.5% Pure Silver Crafted with Precision",
     "care": "SILVER_GENERAL",
-    "for": "",
+    "for": "her",
     "metal": "silver",
     "weight": 9.73,
-    "makingCharges": 80,
+    "makingCharges": 60,
     "discount": 0,
     "newArrival": false,
     "HUID": false,
@@ -10407,8 +10407,8 @@
     "rating": 4.2,
     "ratingCount": 11,
     "Lock": "",
-    "price": 4961,
-    "MRP": 4961
+    "price": 4410,
+    "MRP": 4410
   },
   {
     "id": 303,
@@ -10435,7 +10435,7 @@
     "for": "her",
     "metal": "silver",
     "weight": 12.38,
-    "makingCharges": 80,
+    "makingCharges": 42,
     "discount": 0,
     "newArrival": false,
     "HUID": false,
@@ -10444,8 +10444,8 @@
     "rating": 3.9,
     "ratingCount": 11,
     "Lock": "",
-    "price": 6312,
-    "MRP": 6312
+    "price": 4979,
+    "MRP": 4979
   },
   {
     "id": 304,
@@ -10470,7 +10470,7 @@
     ],
     "brandText": "Crafted in Genuine 925 Silver for Quality",
     "care": "SILVER_GENERAL",
-    "for": "",
+    "for": "her",
     "metal": "silver",
     "weight": 8.27,
     "makingCharges": 80,
@@ -10508,10 +10508,10 @@
     ],
     "brandText": "Made with Authentic 925 Silver for Elegance",
     "care": "SILVER_GENERAL",
-    "for": "",
+    "for": "her",
     "metal": "silver",
     "weight": 7.74,
-    "makingCharges": 80,
+    "makingCharges": 100,
     "discount": 0,
     "newArrival": false,
     "HUID": false,
@@ -10520,8 +10520,8 @@
     "rating": 5,
     "ratingCount": 75,
     "Lock": "",
-    "price": 3946,
-    "MRP": 3946
+    "price": 4385,
+    "MRP": 4385
   },
   {
     "id": 307,
@@ -10546,10 +10546,10 @@
     ],
     "brandText": "Genuine 92.5% Silver with Fine Finish",
     "care": "SILVER_GENERAL",
-    "for": "",
+    "for": "her",
     "metal": "silver",
     "weight": 9.43,
-    "makingCharges": 80,
+    "makingCharges": 100,
     "discount": 0,
     "newArrival": false,
     "HUID": false,
@@ -10558,8 +10558,8 @@
     "rating": 4.7,
     "ratingCount": 40,
     "Lock": "",
-    "price": 4808,
-    "MRP": 4808
+    "price": 5342,
+    "MRP": 5342
   },
   {
     "id": 308,
@@ -10584,25 +10584,25 @@
     ],
     "brandText": "925 Silver Crafted for Refined Elegance",
     "care": "SILVER_GENERAL",
-    "for": "",
+    "for": "her",
     "metal": "silver",
-    "weight": 12.37,
-    "makingCharges": 80,
+    "weight": 29.7,
+    "makingCharges": 50,
     "discount": 0,
     "newArrival": false,
-    "HUID": false,
+    "HUID": true,
     "available": true,
     "active": true,
     "rating": 4.2,
     "ratingCount": 65,
     "Lock": "",
-    "price": 6307,
-    "MRP": 6307
+    "price": 12619,
+    "MRP": 12619
   },
   {
     "id": 309,
-    "name": "Triple Layer Designer Silver Payal",
-    "collection": "Silver Payal",
+    "name": "Triple Layer Designer Silver Bracelet",
+    "collection": "Silver Bracelets",
     "type": [
       "Daily Wear",
       "Silver Gift for Her"
@@ -10621,20 +10621,20 @@
     ],
     "brandText": "Premium Jewellery Crafted from Authentic Silver",
     "care": "SILVER_GENERAL",
-    "for": "her",
+    "for": "unisex",
     "metal": "silver",
-    "weight": 14.6,
-    "makingCharges": 80,
+    "weight": 11.3,
+    "makingCharges": 50,
     "discount": 0,
     "newArrival": true,
-    "HUID": false,
+    "HUID": true,
     "available": true,
     "active": true,
     "rating": 4.1,
     "ratingCount": 13,
     "Lock": "",
-    "price": 7444,
-    "MRP": 7444
+    "price": 4801,
+    "MRP": 4801
   },
   {
     "id": 310,
@@ -10659,7 +10659,7 @@
     ],
     "brandText": "Made with Genuine 92.5% Silver Craftsmanship",
     "care": "SILVER_GENERAL",
-    "for": "",
+    "for": "her",
     "metal": "silver",
     "weight": 9.44,
     "makingCharges": 80,
@@ -10697,10 +10697,10 @@
     ],
     "brandText": "Authentic 925 Silver Quality with Elegant Finish",
     "care": "SILVER_GENERAL",
-    "for": "",
+    "for": "her",
     "metal": "silver",
     "weight": 10.66,
-    "makingCharges": 80,
+    "makingCharges": 100,
     "discount": 0,
     "newArrival": false,
     "HUID": false,
@@ -10709,8 +10709,8 @@
     "rating": 5,
     "ratingCount": 90,
     "Lock": "",
-    "price": 5435,
-    "MRP": 5435
+    "price": 6039,
+    "MRP": 6039
   },
   {
     "id": 312,
@@ -10735,7 +10735,7 @@
     ],
     "brandText": "Made with Genuine 92.5% Silver Craftsmanship",
     "care": "SILVER_GENERAL",
-    "for": "",
+    "for": "her",
     "metal": "silver",
     "weight": 11.16,
     "makingCharges": 80,
@@ -10773,7 +10773,7 @@
     ],
     "brandText": "Made with Premium 925 Silver Purity",
     "care": "SILVER_GENERAL",
-    "for": "",
+    "for": "her",
     "metal": "silver",
     "weight": 13.97,
     "makingCharges": 80,
@@ -10814,7 +10814,7 @@
     "for": "",
     "metal": "silver",
     "weight": 11.46,
-    "makingCharges": 80,
+    "makingCharges": 100,
     "discount": 0,
     "newArrival": false,
     "HUID": false,
@@ -10823,8 +10823,8 @@
     "rating": 4.9,
     "ratingCount": 67,
     "Lock": "",
-    "price": 5843,
-    "MRP": 5843
+    "price": 6492,
+    "MRP": 6492
   },
   {
     "id": 315,
@@ -10849,7 +10849,7 @@
     ],
     "brandText": "Authentic 925 Silver with Premium Quality",
     "care": "SILVER_GENERAL",
-    "for": "",
+    "for": "her",
     "metal": "silver",
     "weight": 12.86,
     "makingCharges": 80,
@@ -10887,7 +10887,7 @@
     ],
     "brandText": "Elegant Craftsmanship in Genuine 925 Silver",
     "care": "SILVER_GENERAL",
-    "for": "",
+    "for": "her",
     "metal": "silver",
     "weight": 9.44,
     "makingCharges": 80,
@@ -10925,10 +10925,10 @@
     ],
     "brandText": "Made from High-Quality 92.5% Pure Silver",
     "care": "SILVER_GENERAL",
-    "for": "",
+    "for": "her",
     "metal": "silver",
     "weight": 9.92,
-    "makingCharges": 80,
+    "makingCharges": 90,
     "discount": 0,
     "newArrival": true,
     "HUID": false,
@@ -10937,8 +10937,8 @@
     "rating": 4.7,
     "ratingCount": 102,
     "Lock": "",
-    "price": 5058,
-    "MRP": 5058
+    "price": 5339,
+    "MRP": 5339
   },
   {
     "id": 318,
@@ -11759,7 +11759,7 @@
   {
     "id": 665,
     "name": "Sawariya Seth Ring Pure Silver",
-    "collection": "Sawariya Seth Ring",
+    "collection": "Sawariya Seth Rings",
     "type": [
       "Spiritual Silver Jewellery",
       "Silver Gift for Him"
@@ -11861,7 +11861,7 @@
   {
     "id": 955,
     "name": "Sawariya seth ring for Men",
-    "collection": "Sawariya Seth Ring",
+    "collection": "Sawariya Seth Rings",
     "type": [
       "Daily Wear",
       "Silver Jewellery Under ₹3000",
@@ -11901,7 +11901,7 @@
   {
     "id": 956,
     "name": "Chandi ki Sawariya Seth Ring",
-    "collection": "Sawariya Seth Ring",
+    "collection": "Sawariya Seth Rings",
     "type": [
       "Daily Wear",
       "Silver Jewellery Under ₹3000",
@@ -11940,7 +11940,7 @@
   {
     "id": 957,
     "name": "Sawariya seth ring Handmade Design",
-    "collection": "Sawariya Seth Ring",
+    "collection": "Sawariya Seth Rings",
     "type": [
       "Daily Wear",
       "Silver Jewellery Under ₹3000",
@@ -11979,7 +11979,7 @@
   {
     "id": 959,
     "name": "Sawariya Seth Ring Name Engraved",
-    "collection": "Sawariya Seth Ring",
+    "collection": "Sawariya Seth Rings",
     "type": [
       "Daily Wear",
       "Silver Jewellery Under ₹3000",
@@ -12018,7 +12018,7 @@
   {
     "id": 960,
     "name": "Sawariya seth ring in Silver",
-    "collection": "Sawariya Seth Ring",
+    "collection": "Sawariya Seth Rings",
     "type": [
       "Daily Wear",
       "Silver Jewellery Under ₹3000",
@@ -12057,7 +12057,7 @@
   {
     "id": 961,
     "name": "Sawariya Seth Ring Latest Design",
-    "collection": "Sawariya Seth Ring",
+    "collection": "Sawariya Seth Rings",
     "type": [
       "Daily Wear",
       "Silver Jewellery Under ₹3000",
@@ -12096,7 +12096,7 @@
   {
     "id": 962,
     "name": "Sawariya seth ring for Boys",
-    "collection": "Sawariya Seth Ring",
+    "collection": "Sawariya Seth Rings",
     "type": [
       "Daily Wear",
       "Silver Jewellery Under ₹3000",
@@ -12135,7 +12135,7 @@
   {
     "id": 963,
     "name": "Most Iconic Handmade Sawariya Seth Ring",
-    "collection": "Sawariya Seth Ring",
+    "collection": "Sawariya Seth Rings",
     "type": [
       "Daily Wear",
       "Silver Jewellery Under ₹3000",
@@ -12174,7 +12174,7 @@
   {
     "id": 965,
     "name": "925 Sterling Silver Sawariya Seth Ring",
-    "collection": "Sawariya Seth Ring",
+    "collection": "Sawariya Seth Rings",
     "type": [
       "Daily Wear",
       "Silver Jewellery Under ₹3000",
@@ -12212,7 +12212,7 @@
   {
     "id": 966,
     "name": "Sawariya Seth Ring Engraved",
-    "collection": "Sawariya Seth Ring",
+    "collection": "Sawariya Seth Rings",
     "type": [
       "Daily Wear",
       "Silver Jewellery Under ₹3000",
@@ -12250,7 +12250,7 @@
   {
     "id": 967,
     "name": "Trending Sawariya Seth Ring",
-    "collection": "Sawariya Seth Ring",
+    "collection": "Sawariya Seth Rings",
     "type": [
       "Daily Wear",
       "Spiritual Silver Jewellery",
@@ -12287,7 +12287,7 @@
   {
     "id": 968,
     "name": "Modern Sawariya seth ring",
-    "collection": "Sawariya Seth Ring",
+    "collection": "Sawariya Seth Rings",
     "type": [
       "Daily Wear",
       "Spiritual Silver Jewellery",
@@ -12324,7 +12324,7 @@
   {
     "id": 969,
     "name": "Pure Silver 925 Sawariya seth ring",
-    "collection": "Sawariya Seth Ring",
+    "collection": "Sawariya Seth Rings",
     "type": [
       "Daily Wear",
       "Silver Jewellery Under ₹3000",
@@ -12363,7 +12363,7 @@
   {
     "id": 970,
     "name": "Original Sawariya seth ring",
-    "collection": "Sawariya Seth Ring",
+    "collection": "Sawariya Seth Rings",
     "type": [
       "Daily Wear",
       "Silver Jewellery Under ₹3000",
@@ -12403,7 +12403,7 @@
   {
     "id": 972,
     "name": "Sawariya Seth ji ki Chandi ki Ring",
-    "collection": "Sawariya Seth Ring",
+    "collection": "Sawariya Seth Rings",
     "type": [
       "Daily Wear",
       "Spiritual Silver Jewellery",
@@ -12440,7 +12440,7 @@
   {
     "id": 973,
     "name": "Sawariya seth Chandi ki Anguthi",
-    "collection": "Sawariya Seth Ring",
+    "collection": "Sawariya Seth Rings",
     "type": [
       "Daily Wear",
       "Silver Jewellery Under ₹3000",
@@ -12478,7 +12478,7 @@
   {
     "id": 974,
     "name": "Sawariya seth Vinti",
-    "collection": "Sawariya Seth Ring",
+    "collection": "Sawariya Seth Rings",
     "type": [
       "Daily Wear",
       "Spiritual Silver Jewellery",
@@ -12516,7 +12516,7 @@
   {
     "id": 975,
     "name": "Bold Look Sawariya seth ring",
-    "collection": "Sawariya Seth Ring",
+    "collection": "Sawariya Seth Rings",
     "type": [
       "Daily Wear",
       "Silver Jewellery Under ₹3000",
@@ -12552,5 +12552,166 @@
     "Lock": "",
     "price": 2327,
     "MRP": 2327
+  },
+  {
+    "id": 976,
+    "name": "Mahakal Rajwadi Silver Ring Divine Shiv Design for Devotees",
+    "collection": "Mahadev Silver Rings",
+    "type": [
+      "Daily Wear",
+      "Silver Jewellery Under ₹3000",
+      "Spiritual Silver Jewellery",
+      "Silver Gift for Him"
+    ],
+    "highlights": [
+      "💎 Material: 92.5% Silver Quality",
+      "🪷 Design: Lord Shiva Spiritual Jewellery Design",
+      "✨ Finish: Elegant Polish with Detailed Crafting",
+      "🙏 Wear Your Devotion with Pride",
+      "🔒 Secure Online Shopping Available |"
+    ],
+    "description": "Bring the power and blessings of Mahadev closer with this beautifully crafted Mahakal Rajwadi Silver Ring. Designed with a traditional Rajwadi touch, the ring features the powerful Shiv symbol with detailed artwork that reflects devotion, strength, and spirituality. Its bold design and royal finish make it a perfect choice for Mahakal devotees who love wearing meaningful jewellery.\n\nA perfect combination of spiritual faith and traditional craftsmanship, this Mahakal Ring can be worn daily or gifted to someone special as a symbol of blessings, protection, and devotion.",
+    "images": [
+      "mahakal-rajwadi-silver-ring-divine-design-ssj-976-a.webp",
+      "mahakal-rajwadi-silver-ring-shiv-symbol-ssj-976-b.webp",
+      "mahakal-silver-ring-men-spiritual-jewellery-ssj-976-c.webp",
+      "mahakal-rajwadi-ring-premium-finish-ssj-976-d.webp"
+    ],
+    "brandText": "Elegant Jewellery in Authentic 92.5% Pure Silver",
+    "care": "SILVER_GENERAL",
+    "for": "him",
+    "metal": "silver",
+    "weight": 5.5,
+    "makingCharges": 55,
+    "discount": 0,
+    "newArrival": true,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 4,
+    "ratingCount": 45,
+    "Lock": "",
+    "price": 2415,
+    "MRP": 2415
+  },
+  {
+    "id": 977,
+    "name": "Hanuman Silver Ring Handmade Design",
+    "collection": "Hanuman Silver Rings",
+    "type": [
+      "Daily Wear",
+      "Silver Jewellery Under ₹3000",
+      "Spiritual Silver Jewellery",
+      "Silver Gift for Him"
+    ],
+    "highlights": [
+      "\"💎 Material: 925 Sterling Silver",
+      "🪷 Design: Hanuman Ji Devotional Ring for Men",
+      "✨ Finish: Premium Craftsmanship with Bright Finish",
+      "🙏 Add Spiritual Charm to Your Style",
+      "🚚 Pan India Shipping Available\""
+    ],
+    "description": "Celebrate the power and devotion of Lord Hanuman with this elegant Hanuman Rajwadi Silver Ring. The ring showcases a detailed Hanuman design with a traditional Rajwadi pattern, giving it a royal and spiritual appearance. Crafted with intricate detailing and a premium finish, it represents courage, confidence, and unwavering devotion.\n\nPerfect for devotees who want to carry the blessings of Bajrangbali in their everyday life, this Hanuman Ring is also a thoughtful gift for loved ones on special occasions.",
+    "images": [
+      "hanuman-rajwadi-silver-ring-bajrangbali-design-ssj-977-a.webp",
+      "hanuman-silver-ring-devotional-jewellery-ssj-977-b.webp",
+      "bajrangbali-rajwadi-ring-for-men-ssj-977-c.webp",
+      "hanuman-rajwadi-silver-ring-premium-finish-ssj-977-d.webp"
+    ],
+    "brandText": "Crafted with Genuine Silver at 925 Purity",
+    "care": "SILVER_GENERAL",
+    "for": "him",
+    "metal": "silver",
+    "weight": 5.5,
+    "makingCharges": 55,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 4.1,
+    "ratingCount": 90,
+    "Lock": "",
+    "price": 2415,
+    "MRP": 2415
+  },
+  {
+    "id": 978,
+    "name": "Rajwadi Pawanputra Hanuman Silver Ring",
+    "collection": "Hanuman Silver Rings",
+    "type": [
+      "Silver Gift for Him",
+      "Hanuman Jayanti",
+      "Silver Jewellery Under ₹3000"
+    ],
+    "highlights": [
+      "\"💎 Material: 925 Sterling Silver",
+      "🪷 Design: Hanuman Ji Devotional Ring for Men",
+      "✨ Finish: Premium Craftsmanship with Bright Finish",
+      "🙏 Add Spiritual Charm to Your Style",
+      "🚚 Pan India Shipping Available\""
+    ],
+    "description": "Bring devotion and royal elegance together with this beautifully crafted Rajwadi Pawanputra Hanuman Silver Ring. The ring features the sacred name \"Pawanputra Hanuman\" beautifully engraved on the top, representing the strength, courage, and divine blessings of Lord Hanuman.",
+    "images": [
+      "pawanputra-hanuman-rajwadi-silver-ring-ssj-978-a.webp",
+      "pawanputra-hanuman-silver-ring-design-ssj-978-b.webp",
+      "hanuman-name-silver-ring-for-men-ssj-978-c.webp",
+      "rajwadi-hanuman-bhakti-silver-ring-ssj-978-d.webp"
+    ],
+    "brandText": "Genuine 92.5% Silver with Refined Craftsmanship",
+    "care": "SILVER_GENERAL",
+    "for": "him",
+    "metal": "silver",
+    "weight": 5.5,
+    "makingCharges": 50,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 3.6,
+    "ratingCount": 10,
+    "Lock": "",
+    "price": 2337,
+    "MRP": 2337
+  },
+  {
+    "id": 979,
+    "name": "Shree Ram Silver Ring for Men",
+    "collection": "Hanuman Silver Rings",
+    "type": [
+      "Silver Jewellery for Men",
+      "Ram Navami",
+      "Silver Jewellery Under ₹3000"
+    ],
+    "highlights": [
+      "\"💎 Material: 925 Sterling Silver",
+      "🪷 Design: Lord Ram Ji Devotional Ring for Men",
+      "✨ Finish: Premium Craftsmanship with Bright Finish",
+      "🙏 Add Spiritual Charm to Your Style",
+      "🚚 Pan India Shipping Available\""
+    ],
+    "description": "Celebrate the divine blessings of Lord Ram with this beautifully designed Ram Rajwadi Silver Ring. Featuring the sacred name “राम” in an elegant design, this ring reflects devotion, positivity, and the values of truth and righteousness associated with Prabhu Shri Ram.\n\nThe traditional Rajwadi pattern with detailed craftsmanship gives this ring a royal appearance, making it a perfect choice for devotees who prefer spiritual jewellery with a bold and meaningful style. This Ram Ring for Men can be worn daily as a symbol of faith, strength, and divine connection.",
+    "images": [
+      "ram-rajwadi-silver-ring-divine-design-ssj-979-a.webp",
+      "shri-ram-silver-ring-spiritual-jewellery-ssj-979-b.webp",
+      "ram-name-rajwadi-ring-for-men-ssj-979-c.webp"
+    ],
+    "brandText": "Premium Jewellery Made with Authentic 925 Silver",
+    "care": "SILVER_GENERAL",
+    "for": "him",
+    "metal": "silver",
+    "weight": 7,
+    "makingCharges": 50,
+    "discount": 0,
+    "newArrival": false,
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 4.5,
+    "ratingCount": 48,
+    "Lock": "",
+    "price": 2974,
+    "MRP": 2974
   }
 ]

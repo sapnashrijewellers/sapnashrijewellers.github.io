@@ -5,11 +5,11 @@ import SignatureCollections from "@/components/home/SignatureCollections";
 import NewArrivals from "@/components/product/NewArrivals";
 import buildBusinessJsonLd from "@/utils/json-ld/buildBusinessJsonLd";
 import SEO from "@/components/common/SEO";
-import collections from "@/data/collections.json";
 import products from "@/data/products.json";
 import TrustSignalsRibbon from "@/components/product/TrustSignalsRibbon";
 import HomeCategoryBar from "@/components/home/HomeCategoriesBar";
-
+import HomeFaq from "@/components/home/HomeFaq";
+import HeritageStory from "@/components/home/HeritageStory";
 const baseURL = (
   process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in"
 ).replace(/\/+$/, "");
@@ -58,20 +58,21 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-
-      <HomeCategoryBar />
+      <RotatingBanner />
 
       <JewelleryTypeBar home={false} />
 
-      <RotatingBanner />
+      <HomeCategoryBar />
 
       <NewArrivals />
 
       <TrustSignalsRibbon product={products[0]} />
 
-      <SignatureCollections collections={collections} products={products} />
+      <SignatureCollections  />
 
-      <SEO slug="/home"></SEO>
+      <HeritageStory />
+      
+      <HomeFaq />
     </main>
   );
 }

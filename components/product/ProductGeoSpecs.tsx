@@ -34,9 +34,9 @@ export default function ProductGeoSpecs({
             className="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0"
             aria-hidden="true"
           />
-          <h2 className="text-base sm:text-lg font-semibold tracking-tight">
+          <h3>
             Authenticity &amp; Product Details
-          </h2>
+          </h3>
         </div>
         <span className="text-[11px] sm:text-xs font-medium px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">
           Certified Genuine

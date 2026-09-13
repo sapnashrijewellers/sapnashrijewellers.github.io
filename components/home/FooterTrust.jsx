@@ -18,7 +18,7 @@ export default function FooterTrust() {
           {yearsOfTrust}+
         </h2>
         <p className="mt-2 text-2xl md:text-3xl tracking-wide ">
-          years of trust
+          Years of Trust
         </p>
       </div>
 

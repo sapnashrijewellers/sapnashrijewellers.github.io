@@ -31,8 +31,7 @@ function CategoryIcon({ category }: { category: Category }) {
         rounded-2xl overflow-hidden
         transition-colors duration-150
         group-hover:ring-primary/40
-        shadow-inner
-        border border-black/5
+        shadow-inner        
         bg-surface-alt
       "
     >
@@ -60,19 +59,16 @@ export default function HomeCategoriesBar({
 
   if (!categories || categories.length === 0) return null;
 
-  return (    
+  return (
     <section
       id="shop-by-category"
       aria-labelledby="category-heading"
-      className={`relative w-full py-4 ${className}`}
+      className={`relative w-full ${className}`}
     >
 
       {/* Section Header */}
-      <div className="flex items-baseline justify-between px-2 sm:px-4 mb-2">
-        <h2
-          id="category-heading"
-          className="au-h2"
-        >
+      <div className="flex items-baseline justify-between">
+        <h2 id="category-heading">
           Shop by Categories
         </h2>
       </div>
@@ -87,31 +83,25 @@ export default function HomeCategoriesBar({
         aria-label="Jewelry categories"
         tabIndex={0}
         className="
-          flex gap-3 sm:gap-4 overflow-x-auto p-2 sm:p-3
+          flex gap-3 sm:gap-4 overflow-x-auto p-2
           scrollbar-hide snap-x snap-mandatory
           /* TRACK UI: Maintain simple squared corners. */
           rounded-2xl
         "
       >
         {categories.map((category) => {
-          // Generate slug from category name
-          const slug = category.name
-            .toLowerCase()
-            .replace(/ & /g, "-")
-            .replace(/ /g, "-");
-
           return (
             <Link
               key={category.name}
-              href={`/search?q=${slug}`}
+              href={`/search?q=${category.keywords}`}
               title={`Explore ${category.name} collection`}
               aria-label={`Explore ${category.name} jewelry collection`}
               className="
                 group relative flex shrink-0 w-24 sm:w-28 flex-col items-center
-                gap-2 rounded-2xl bg-surface-alt px-2.5 py-3.5 shadow-sm
+                gap-2 rounded-2xl bg-surface-alt px-2 py-1 shadow-sm
                 snap-start text-center
-                transition-[transform,box-shadow,border-color] duration-150 ease-out will-change-[transform]
-                hover:-translate-y-1 hover:shadow-md hover:border-primary/40
+                transition-[transform,box-shadow] duration-150 ease-out will-change-[transform]
+                hover:-translate-y-1 hover:shadow-md 
               "
             >
               <CategoryIcon category={category} />

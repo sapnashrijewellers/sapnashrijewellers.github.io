@@ -23,21 +23,25 @@ export interface Product {
 }
 
 export interface Category{
+  id:number;
   name: string;
   xPosition: string;
   yPosition: string;
+  keywords: string;
+  active: boolean;
 }
 
 export interface Collection {
   id: number;
   name: string;
-  title: string,
-  rank: number,
-  description: string,
-  active: boolean
-  material: string
-  group: string,
-  category: string
+  title: string;
+  rank: number;
+  description: string;
+  active: boolean;
+  material: string;
+  group: string;
+  category: string;
+  image:string;
 }
 
 export interface SearchFilters {

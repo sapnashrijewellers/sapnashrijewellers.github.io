@@ -22,20 +22,14 @@ export default function NewArrivals({
   return (
     <section
       aria-labelledby="new-arrivals-heading"
-      className={`relative w-full py-4 my-6 ${className}`}
+      className={`relative w-full ${className}`}
     >
       {/* Header with Bilingual Support for Search Engines and Screen Readers */}
-      <div className="flex items-baseline justify-between px-2 sm:px-4">
-        <div className="flex items-center gap-2">
-
-          <h2
-            id="new-arrivals-heading"
-            className={`au-h2 font-semibold text-foreground tracking-tight text-xl sm:text-2xl}`}
-            title="Explore recently launched gold and silver jewellery designs and latest hallmark collections."
-          >
+      <div className="flex items-baseline justify-between ">
+          <h2 id="new-arrivals-heading"
+            title="Explore recently launched gold and silver jewellery designs and latest hallmark collections.">
             New Arrivals
-          </h2>
-        </div>
+          </h2>        
       </div>
 
       {/* Screen Reader & LLM Structured Context */}

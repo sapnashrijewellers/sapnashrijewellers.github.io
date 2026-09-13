@@ -33,26 +33,14 @@ export default function YouMayAlsoLike({
   return (
     <section
       aria-labelledby="you-may-also-like-heading"
-      className={`relative w-full py-4 my-6 ${className}`}
+      className={`relative w-full py-2 my-2 ${className}`}
     >
       {/* Header with Bilingual Metadata */}
-      <div className="flex items-baseline justify-between px-2 sm:px-4 mb-3 border-b border-theme/20 pb-2">
-        <div className="flex items-center gap-2">
-          <Sparkles
-            className="w-5 h-5 shrink-0"
-            aria-hidden="true"
-          />
-          <h2
-            id="you-may-also-like-heading"
-            className="font-semibold text-lg sm:text-xl text-foreground tracking-tight"
-          >
-            You May Also Like
-          </h2>
-        </div>
-        <span className="text-xs text-muted-foreground font-medium hidden sm:inline-block">
-          {youMayAlsoLike.length}{" "}
-          {youMayAlsoLike.length === 1 ? "Item" : "Items"}
-        </span>
+      <div className="flex items-baseline justify-between">
+        <h2 id="you-may-also-like-heading">
+          You May Also Like
+        </h2>
+
       </div>
 
       {/* Screen Reader & LLM Structured Context */}
@@ -74,7 +62,7 @@ export default function YouMayAlsoLike({
       >
         {youMayAlsoLike.map((p) => (
           <ProductCard
-          key={p.id}
+            key={p.id}
             product={p}
             className="
               shrink-0 w-[160px] sm:w-[200px] lg:w-[220px] snap-start

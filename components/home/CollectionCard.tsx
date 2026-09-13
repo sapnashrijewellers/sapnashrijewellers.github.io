@@ -1,24 +1,16 @@
-import type { Collection, Product } from "@/types/catalog";
+import type { Collection } from "@/types/catalog";
 import Link from "next/link";
 import Image from "next/image";
 
 interface CollectionCardProps {
   collection: Collection;
-  products: Product[];
   priority?: boolean;
 }
 
-export default function CollectionCard({ collection, products, priority = false }: CollectionCardProps) {
-  if (!products || products.length === 0) return null;
-
-  
-  const baseImageURL = process.env.NEXT_PUBLIC_BASE_IMAGE_URL;
-  const firstProduct = products[0];
-  const isNew = Boolean(firstProduct?.newArrival);
-  const rawImage = firstProduct.images?.[0];
-  const imageUrl = rawImage
-    ? `${baseImageURL}/products/thumbnail/${rawImage}`
-    : "/placeholder.png";
+export default function CollectionCard({ collection }: CollectionCardProps) {    
+  const baseImageURL = process.env.NEXT_PUBLIC_BASE_IMAGE_URL;    
+    
+  const imageUrl =  `${baseImageURL}/collection/optimized/${collection.image}`;   
 
   return (
     <article className="w-full flex">
@@ -31,24 +23,15 @@ export default function CollectionCard({ collection, products, priority = false 
       >
         {/* Aspect Ratio Box (Width-Filling Responsive Container) */}
         <div className="relative w-full aspect-square bg-muted/20 overflow-hidden shrink-0">
-          {isNew && (
-            <span
-              className="absolute top-2.5 left-2.5 z-10 inline-flex items-center gap-1 bg-accent text-accent-foreground text-[11px] font-bold px-2 py-0.5 rounded-full shadow-md -rotate-2"
-              aria-label="New arrival collection"
-            >
-              ✨ NEW
-            </span>
-          )}
-
+          
           <Image
-            src={imageUrl}
-            alt={firstProduct.name ? `${collection.name} - ${firstProduct.name}` : `${collection.name} jewellery collection`}
+            src={`/collection-cards/${collection.id}.optimized.webp`}
+            alt={`${collection.name} jewellery collection`}
             fill
-            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-            priority={priority}
-            loading={priority ? "eager" : "lazy"}
-            fetchPriority={priority ? "high" : "auto"}
-            decoding={priority ? "sync" : "async"}
+            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"            
+            loading="lazy"
+            fetchPriority= "auto"
+            decoding= "async"
             className="object-cover object-center transition-transform duration-300 ease-out group-hover:scale-105 will-change-transform"
           />
         </div>

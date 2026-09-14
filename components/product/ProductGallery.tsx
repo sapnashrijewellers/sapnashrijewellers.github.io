@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect, useCallback, useId } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import Image from "next/image";
 import type { Product } from "@/types/catalog";
 import WishlistButton from "@/components/common/WishlistButton";
@@ -33,7 +33,6 @@ export default function ProductGallery({
   const touchStartY = useRef(0);
   const isSwiping = useRef(false);
 
-  const galleryId = useId();
   const baseImageURL = process.env.NEXT_PUBLIC_BASE_IMAGE_URL;
 
   const activeImageFileName = images[activeIndex] || images[0];

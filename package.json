@@ -5,10 +5,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 3003",
-    "build": "next build",
+    "build": "tsc --noEmit && next build",
     "start": "next start",
     "typecheck": "tsc --noEmit",
-    "data-sync": "tsx utils/data/fetchAndSave.ts"
+    "data-sync": "tsx utils/data/fetchAndSave.ts"    
   },
   "dependencies": {
     "canvas-confetti": "^1.9.4",

@@ -8,16 +8,6 @@ export const revalidate = false;
 const SITE_URL = "https://sapnashrijewellers.in";
 const IMAGE_BASE_URL = `${SITE_URL}/static/img/products/optimized`;
 
-function sanitizeText(str?: string): string {
-    if (!str) return "";
-
-    return str
-        .replace(/<[^>]*>/g, "")   // Remove HTML markup
-        .replace(/[\r\n\t]+/g, " ") // Normalize whitespace
-        .replace(/\s+/g, " ")
-        .trim();
-}
-
 function csvEscape(value: unknown): string {
     if (value === null || value === undefined) {
         return "";

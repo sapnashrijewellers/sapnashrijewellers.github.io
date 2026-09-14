@@ -25,8 +25,6 @@ export interface Product {
 export interface Category{
   id:number;
   name: string;
-  xPosition: string;
-  yPosition: string;
   keywords: string;
   active: boolean;
 }

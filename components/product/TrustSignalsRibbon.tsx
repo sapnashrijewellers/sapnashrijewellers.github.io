@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 
 interface TrustSignalsRibbonProps {
-  product: Product;
+  product?: Product;
   className?: string;
 }
 
@@ -26,7 +26,6 @@ interface TrustSignalItem {
     "aria-hidden"?: boolean | "true" | "false";
   }>;
   label: string;
-  hindiLabel?: string;
   toolTip?: string;
   link?: string;
 }
@@ -35,9 +34,9 @@ export default function TrustSignalsRibbon({
   product,
   className = "",
 }: TrustSignalsRibbonProps) {
-  const metal = product.metal;
+  const metal = product?.metal || "silver";
   const isGold = metal === "gold";
-  const weight = product.weight || 0;
+  const weight = product?.weight || 0;
 
   const isHallmarkedGold = metal == "gold" && weight > 2;
 
@@ -148,7 +147,7 @@ export default function TrustSignalsRibbon({
 
       {/* Screen Reader & LLM Structured Summary */}
       <div className="sr-only">
-        Customer assurances for {product.name}: BIS Hallmark certification,
+        Customer assurances for {product?.name}: BIS Hallmark certification,
         6-month warranty, skin-safe metals, insured delivery across India, and
         transparent returns.
       </div>

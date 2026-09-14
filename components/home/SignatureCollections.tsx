@@ -4,7 +4,7 @@ import collections from "@/data/collections.json"
 
 type Material = "Gold" | "Silver";
 
-interface SignatureCollectionsProps {  
+interface SignatureCollectionsProps {
   className?: string;
 }
 
@@ -20,22 +20,20 @@ export default function SignatureCollections({
     <section
       id="shop-by-collection"
       aria-labelledby="Signature collections"
-      className={`relative w-full ${className}`}
+      className={`relative w-full py-4 ${className}`}
     >
-      {/* Header */}
-      <div className="flex items-baseline justify-between">
-        <h2>
-          Our Signature Collections
-        </h2>
-      </div>
+      <h2>
+        Our Signature Collections
+      </h2>
 
-      {/* Uniform Width Collection Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5 w-full items-stretch">
+
+      
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5 w-full items-stretch p-2">
         {collections.map((cat, index) => {
           return (
             <div key={cat.name} className="w-full flex">
               <CollectionCard
-                collection={cat}                
+                collection={cat}
               />
             </div>
           );

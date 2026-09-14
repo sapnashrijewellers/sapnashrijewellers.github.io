@@ -16,7 +16,7 @@ export default function FloatingWhatsAppButton({
   const sanitizedNumber = phoneNumber.replace(/[^0-9]/g, "");
   const encodedText = encodeURIComponent(defaultMessage);
   const whatsappUrl = `https://wa.me/${sanitizedNumber}?text=${encodedText}`;
-  const accessibleActionLabel = `WhatsApp पर चैट करें: प्रश्न पूछें (Chat on WhatsApp with customer support at +${sanitizedNumber})`;
+  const accessibleActionLabel = `Chat on WhatsApp with customer support at +${sanitizedNumber}`;
 
   return (
     <aside

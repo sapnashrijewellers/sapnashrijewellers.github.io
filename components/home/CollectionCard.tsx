@@ -25,7 +25,7 @@ export default function CollectionCard({ collection }: CollectionCardProps) {
         <div className="relative w-full aspect-square bg-muted/20 overflow-hidden shrink-0">
           
           <Image
-            src={`/collection-cards/${collection.id}.optimized.webp`}
+            src={`/collection-cards/${collection.id}.webp`}
             alt={`${collection.name} jewellery collection`}
             fill
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"            

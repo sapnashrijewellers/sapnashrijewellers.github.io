@@ -4,12 +4,10 @@ import typesData from "@/data/types.json";
 import { AppIconMap } from "@/utils/appIcons";
 
 interface JewelleryTypeBarProps {
-  home?: boolean;
   className?: string;
 }
 
 export default function JewelleryTypeBar({
-  home = true,
   className = "",
 }: JewelleryTypeBarProps) {
   const activeTypes = (typesData as Type[])
@@ -24,13 +22,9 @@ export default function JewelleryTypeBar({
       aria-labelledby="occasion-heading"
       className={`relative w-full py-4 ${className}`}
     >
-      {/* Section Header with Bilingual Context for Crawlers & Assistive Tech */}
-      <div className="flex items-baseline justify-between px-2 sm:px-4 mb-2">
-        <h2
-          id="occasion-heading" className="au-h2">
-          Jewellery for Every Occasion
-        </h2>
-      </div>
+      <h2 id="occasion-heading" >
+        Jewellery for Every Occasion
+      </h2>
 
       {/* Screen Reader & Agentic Context */}
       <div className="sr-only">
@@ -58,9 +52,10 @@ export default function JewelleryTypeBar({
               title={`${item.description}`}
               aria-label={`Explore ${item.type} jewellery collection`}
               className="
-                group relative flex shrink-0 w-24 sm:w-28 flex-col items-center
-                gap-2 rounded-2xl bg-surface px-2.5 py-3.5 shadow-sm
-                snap-start text-center
+                group relative flex shrink-0 w-28 
+                flex-col items-center text-center
+                gap-2 rounded-2xl bg-surface p-2 shadow-sm
+                snap-start 
                 transition-[transform,box-shadow,border-color] duration-150 ease-out will-change-[transform]
                 hover:-translate-y-1 hover:shadow-md hover:border-primary/40                
               "

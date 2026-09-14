@@ -121,7 +121,7 @@ export default function RootLayout({
         <meta name="p:domain_verify" content="757373a06d146840bd703f3b5dd8ec21"/>
       </head>
       <body className="flex min-h-screen flex-col antialiased">
-        <h1 className="text-5xl !important text-primary text-center p-4">
+        <h1 className="text-primary text-center p-4">
         Sapna Shri Jewellers        
       </h1>
         <a

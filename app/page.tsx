@@ -4,8 +4,6 @@ import JewelleryTypeBar from "@/components/home/JewelleryType";
 import SignatureCollections from "@/components/home/SignatureCollections";
 import NewArrivals from "@/components/product/NewArrivals";
 import buildBusinessJsonLd from "@/utils/json-ld/buildBusinessJsonLd";
-import SEO from "@/components/common/SEO";
-import products from "@/data/products.json";
 import TrustSignalsRibbon from "@/components/product/TrustSignalsRibbon";
 import HomeCategoryBar from "@/components/home/HomeCategoriesBar";
 import HomeFaq from "@/components/home/HomeFaq";
@@ -59,19 +57,12 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <RotatingBanner />
-
-      <JewelleryTypeBar home={false} />
-
-      <HomeCategoryBar />
-
+      <JewelleryTypeBar />      
+      <HomeCategoryBar />      
       <NewArrivals />
-
-      <TrustSignalsRibbon product={products[0]} />
-
+      <TrustSignalsRibbon />
       <SignatureCollections  />
-
       <HeritageStory />
-      
       <HomeFaq />
     </main>
   );

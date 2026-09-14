@@ -21,16 +21,14 @@ export default function NewArrivals({
 
   return (
     <section
-      aria-labelledby="new-arrivals-heading"
-      className={`relative w-full ${className}`}
-    >
-      {/* Header with Bilingual Support for Search Engines and Screen Readers */}
-      <div className="flex items-baseline justify-between ">
-          <h2 id="new-arrivals-heading"
-            title="Explore recently launched gold and silver jewellery designs and latest hallmark collections.">
-            New Arrivals
-          </h2>        
-      </div>
+      aria-labelledby="new-arrivals-heading" 
+      className={`relative w-full py-2 ${className}`}    >
+
+      <h2 id="new-arrivals-heading"
+        title="Explore recently launched gold and silver jewellery designs and latest hallmark collections.">
+        New Arrivals
+      </h2>
+
 
       {/* Screen Reader & LLM Structured Context */}
       <div className="sr-only">
@@ -42,13 +40,14 @@ export default function NewArrivals({
         role="region"
         aria-label="New arrivals jewellery carousel"
         tabIndex={0}
-        className="flex gap-3 sm:gap-4 overflow-x-auto px-2 sm:px-4 pb-3 pt-1
+        className="flex gap-3 sm:gap-4 overflow-x-auto p-2
           scrollbar-hide snap-x snap-mandatory
           focus:outline-none focus:ring-1 focus:ring-primary/40 rounded-2xl">
         {filteredArrivals.map((p, index) => (
           <ProductCard product={p} key={p.id}
             priority={index < 4}
-            className="shrink-0 w-[160px] sm:w-[200px] lg:w-[220px] snap-start
+            className="shrink-0 w-[160px] sm:w-[180px] lg:w-[220px] 
+            snap-start snap-x snap-mandatory
               transition-transform duration-150 ease-out will-change-transform"/>
         ))}
       </div>

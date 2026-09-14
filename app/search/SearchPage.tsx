@@ -127,7 +127,7 @@ export default function JewelrySearch() {
     // Apply Sorting
     switch (sortBy) {
       case "name-asc":
-        items.sort((a, b) => a.name.localeCompare(a.name));
+        items.sort((a, b) => a.name.localeCompare(b.name));
         break;
       case "name-desc":
         items.sort((a, b) => b.name.localeCompare(a.name));

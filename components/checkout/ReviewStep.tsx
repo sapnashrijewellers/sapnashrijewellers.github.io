@@ -4,7 +4,7 @@ import { PriceSummary } from "./PriceSummary";
 import CartStep from "@/components/checkout/CartStep"
 import PayViaUPIButton from "./PayViaUPIButton";
 import Link from "next/link";
-import { ChevronLeft, ChevronRight, PackageCheck } from "lucide-react";
+import { ChevronLeft, PackageCheck } from "lucide-react";
 
 export default function ReviewStep(
   {

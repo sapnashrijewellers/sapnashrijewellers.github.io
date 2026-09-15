@@ -4,7 +4,6 @@ import { useEffect, useState, useId, useTransition, useMemo } from "react";
 import ProductCard from "@/components/product/ProductCard";
 import productsData from "@/data/products.json";
 import type { Product } from "@/types/catalog";
-import { Heart } from "lucide-react";
 
 export default function WishlistBar() {
   const [wishlistSlugs, setWishlistSlugs] = useState<string[]>([]);

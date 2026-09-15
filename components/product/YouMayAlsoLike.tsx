@@ -1,6 +1,5 @@
 import ProductCard from "@/components/product/ProductCard";
 import type { Product } from "@/types/catalog";
-import { Sparkles } from "lucide-react";
 
 interface YouMayAlsoLikeProps {
   product: Product;

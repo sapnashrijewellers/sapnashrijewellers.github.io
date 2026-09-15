@@ -4,7 +4,7 @@ import { useState, useId, useMemo, useCallback } from "react";
 import careData from "@/data/careInstructions.json";
 import { AppIconMap } from "@/utils/appIcons";
 import { Plus, Minus } from "lucide-react";
-import { Sparkles } from "lucide-react";
+
 
 interface CareInstructionItem {
   id: string | number;

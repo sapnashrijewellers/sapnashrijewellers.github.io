@@ -1,5 +1,5 @@
 import { PaymentMethod} from "@/types/catalog"
-import { Trash2, Save, Check, ChevronLeft } from "lucide-react";
+import { Save, ChevronLeft } from "lucide-react";
 
 export default function PaymentStep({
     method,

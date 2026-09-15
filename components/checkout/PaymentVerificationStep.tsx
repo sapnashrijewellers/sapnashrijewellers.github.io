@@ -32,7 +32,6 @@ export default function PaymentVerificationStep({
   function buildWhatsAppMessage() {
     const productLines = cart.items
       .map((item, i) => {
-        const v = item.product;
         return `${i + 1}. ${item.product.name}
 Qty: ${item.qty}
 Link: ${process.env.NEXT_PUBLIC_BASE_URL}/p/${item.product.id}`;
@@ -97,11 +96,11 @@ ${productLines}
       fireConfetti();
       clearCart();
       setOrderPlaced(true);
-      
+
 
       setTimeout(openWhatsApp, 1200);
     } catch (e) {
-        console.log(e);
+      console.log(e);
       setError("Something went wrong. Please try again.");
     } finally {
       setSubmitting(false);

@@ -2,15 +2,13 @@ import CollectionCard from "./CollectionCard";
 import type { Collection } from "@/types/catalog";
 import collections from "@/data/collections.json"
 
-type Material = "Gold" | "Silver";
-
 interface SignatureCollectionsProps {
   className?: string;
 }
 
 const filteredCollections = collections
   .filter(c => c.active)
-  .sort((a: Collection, b: Collection) => b.rank - a.rank);
+  .sort((a: Collection, b: Collection) => a.rank - b.rank);
 
 export default function SignatureCollections({
   className = ""
@@ -26,14 +24,11 @@ export default function SignatureCollections({
         Our Signature Collections
       </h2>
 
-
-      
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5 w-full items-stretch p-2">
-        {collections.map((cat, index) => {
+        {filteredCollections.map((cat) => {
           return (
             <div key={cat.name} className="w-full flex">
-              <CollectionCard
-                collection={cat}
+              <CollectionCard collection={cat}
               />
             </div>
           );

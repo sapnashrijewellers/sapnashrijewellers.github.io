@@ -5,13 +5,6 @@ import products from "@/data/products.json";
 import collections from "@/data/collections.json";
 import types from "@/data/types.json";
 
-interface CatalogItem {
-  id: number;
-  name?: string;
-  title?: string;
-  description?: string;
-}
-
 /**
  * Strips HTML tags and normalizes line breaks for clean AI/LLM consumption
  */

@@ -115,6 +115,7 @@ export default function RootLayout({
         <h1 className="text-primary text-center p-4">
         Sapna Shri Jewellers        
       </h1>
+      <p className="text-center">Modern Silver & Gold Jewellery, Backed by 35+ Years of Trust</p>
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:left-3 focus:top-3 focus:z-50 focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:shadow-lg"

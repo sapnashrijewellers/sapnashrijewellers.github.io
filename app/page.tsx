@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import RotatingBanner from "@/components/banners/RotatingBanner";
 import JewelleryTypeBar from "@/components/home/JewelleryType";
 import SignatureCollections from "@/components/home/SignatureCollections";
-import NewArrivals from "@/components/product/NewArrivals";
 import buildBusinessJsonLd from "@/utils/json-ld/buildBusinessJsonLd";
 import TrustSignalsRibbon from "@/components/product/TrustSignalsRibbon";
 import HomeCategoryBar from "@/components/home/HomeCategoriesBar";
 import HomeFaq from "@/components/home/HomeFaq";
 import HeritageStory from "@/components/home/HeritageStory";
+import FeaturedJewellery from "@/components/common/FeaturedJewellery";
+import WishlistBar from "@/components/common/WishlistBar";
 const baseURL = (
   process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in"
 ).replace(/\/+$/, "");
@@ -58,8 +59,9 @@ export default function Home() {
       />
       <RotatingBanner />
       <JewelleryTypeBar />      
-      <HomeCategoryBar />      
-      <NewArrivals />
+      <HomeCategoryBar />
+      <WishlistBar />
+      <FeaturedJewellery />            
       <TrustSignalsRibbon />
       <SignatureCollections  />
       <HeritageStory />

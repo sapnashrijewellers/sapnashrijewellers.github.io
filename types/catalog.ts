@@ -7,6 +7,7 @@ export interface Product {
   newArrival: boolean;
   collection: string;
   type: string[];
+  labels: string[];
   for: string;
   active: boolean;
   description: string;
@@ -21,6 +22,12 @@ export interface Product {
   price: number;
   MRP: number;
 }
+export interface Label {
+    key: string;
+    name: string;
+    collectionName: string;
+    icon: string;
+};
 
 export interface Category{
   id:number;

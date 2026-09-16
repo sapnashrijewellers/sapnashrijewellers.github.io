@@ -11,7 +11,8 @@ export const miniSearchIndexOptions: MiniSearchIndexOptions = {
     "description",
     "type",
     "for",
-    "metal"
+    "metal",
+    "labels"
   ],
 
   storeFields: [
@@ -20,7 +21,7 @@ export const miniSearchIndexOptions: MiniSearchIndexOptions = {
     "images",
     "collection",
     "metal",
-    "newArrival",
+    "labels",
     "weight",
     "for",
     "type",
@@ -56,8 +57,9 @@ export const miniSearchQueryOptions: MiniSearchSearchOptions = {
     highlights: 3.5,        
     collection: 2.5,    
     description: 2,
-    type: 1.3,
-    for: 1.2    
+    type: 1.5,
+    for: 1.5,
+    labels:1.5    
   },  
 };
 

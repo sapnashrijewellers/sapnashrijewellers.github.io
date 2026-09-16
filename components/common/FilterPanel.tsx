@@ -106,9 +106,9 @@ export function FilterPanel({ filters, onChange, triggerRef }: FilterPanelProps)
     >
       {/* Header */}
       <div className="flex items-center justify-between pb-3 mb-3 border-b border-theme/30">
-        <h3 id={titleId} className="font-semibold text-base text-foreground">
+        <span id={titleId} className="font-semibold text-base text-foreground">
           Filters
-        </h3>
+        </span>
 
         <div className="flex items-center gap-1">
           {hasActiveFilters && (

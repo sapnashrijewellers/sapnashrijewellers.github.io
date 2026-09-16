@@ -44,7 +44,7 @@ export default function ProductCard({
       </div>
 
       {/* New arrival badge */}
-      {product.newArrival && (
+      {(product.labels && product.labels.length > 0) && (
         <span
           className="
             absolute left-2.5 top-2.5 z-10
@@ -57,8 +57,7 @@ export default function ProductCard({
           "
           aria-label="New Arrival product"
         >
-          <span aria-hidden="true">✨</span>
-          <span>NEW</span>
+          <span>{`${product.labels[0]}`}</span>
         </span>
       )}
 
@@ -119,16 +118,16 @@ export default function ProductCard({
         </div>
 
         {/* Product information */}
-        <div          className="flex w-full grow flex-col justify-between  p-3">
-          
-            <span className="leading-snug text-foreground transition-colors duration-150">
-              {product.name}
-            </span>
+        <div className="flex w-full grow flex-col justify-between  p-3">
 
-            <div className="mt-2">
-              <ProductPrice product={product} />
-            </div>
-          
+          <span className="leading-snug text-foreground transition-colors duration-150">
+            {product.name}
+          </span>
+
+          <div className="mt-2">
+            <ProductPrice product={product} />
+          </div>
+
 
           {rating > 0 && ratingCount > 0 && (
             <div className="mt-2.5  pt-2">

@@ -11,7 +11,7 @@ import Breadcrumb from "@/components/navbar/BreadcrumbItem";
 import ProductRating from "@/components/product/ProductRating";
 import WishListBar from "@/components/common/WishlistBar";
 import ProductRatingInput from "@/components/product/ProductRatingInput";
-import NewArrivals from "@/components/product/NewArrivals";
+import FeaturesJewellery from "@/components/common/FeaturedJewellery";
 import YouMAyAlsoLike from "@/components/product/YouMayAlsoLike";
 import TestimonialScroller from "@/components/common/Testimonials";
 import TrustSignalsRibbon from "@/components/product/TrustSignalsRibbon";
@@ -250,7 +250,7 @@ export default async function ProductDetailPage({
 
       <aside aria-label="Recommended and related products">
         <YouMAyAlsoLike product={product} products={products} />
-        <NewArrivals product={product} />
+        <FeaturesJewellery />
         <JewelleryTypeBar />
       </aside>
     </main>

@@ -35,7 +35,7 @@ export default function ProductCardPrice({
             <span className="sr-only">Original Price: </span>₹{formattedMRP}
           </span>
           <span
-            className="inline-flex items-center rounded-full bg-emerald-600/10 text-emerald-700 dark:text-emerald-400 border border-emerald-600/20 px-1.5 py-0.2 text-[10px] sm:text-[11px] font-bold"
+            className="inline-flex items-center rounded-full bg-emerald-600/10 text-emerald-700 border border-emerald-600/20 px-1.5 py-0.2 text-[10px] sm:text-[11px] font-bold"
             aria-label={`${product.discount}% discount`}
           >
             {product.discount}% OFF

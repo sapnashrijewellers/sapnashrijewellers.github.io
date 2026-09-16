@@ -34,7 +34,7 @@ export default function FloatingWhatsAppButton({
     bg-[#128C7E] text-white shadow-xl
     hover:bg-[#075E54] hover:scale-105 active:scale-95
     transition-[transform,background-color] duration-150 ease-out will-change-[transform]
-    focus:outline-none focus:ring-2 focus:ring-[#128C7E] dark:focus:ring-[#25D366] focus:ring-offset-2 focus:ring-offset-background
+    focus:outline-none focus:ring-2 focus:ring-[#128C7E] focus:ring-offset-2 focus:ring-offset-background
   "
       >
         <WhatsappIcon

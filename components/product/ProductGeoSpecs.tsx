@@ -31,14 +31,14 @@ export default function ProductGeoSpecs({
       <div className="flex items-center justify-between pb-3 mb-4 border-b border-theme/20">
         <div className="flex items-center gap-2">
           <ShieldCheck
-            className="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0"
+            className="w-5 h-5 text-emerald-600 shrink-0"
             aria-hidden="true"
           />
           <h3>
             Authenticity &amp; Product Details
           </h3>
         </div>
-        <span className="text-[11px] sm:text-xs font-medium px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">
+        <span className="text-[11px] sm:text-xs font-medium px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800">
           Certified Genuine
         </span>
       </div>

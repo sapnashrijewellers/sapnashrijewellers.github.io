@@ -15,7 +15,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  color-scheme: light dark;
+  color-scheme: light;
 
   /* Core Surfaces */
   --color-bg: #f7f9fc;
@@ -47,32 +47,7 @@
   --font-yatra: var(--font-yatra-one), "Sans Devanagari", serif;
 }
 
-/* ============================
-   DARK MODE
-============================ */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg: #000000;
-    --color-accent-bg: #f9f6ea;
-    --color-surface: #000000;
-    --color-border: #f7e2b2;
 
-    --color-text: #f7e2b2;
-    --color-primary: #c4a458;
-    --color-primary-dark: #b38511;
-    --color-accent: #0a2a66;
-    --color-accent-text: #071a3a;
-
-    --color-footer-bg: #020617;
-    --color-footer-text: #94a3b8;
-    --color-footer-heading: #ffffff;
-    --color-footer-border: #0b1d3a;
-
-    --color-footer-trust-bg: #050f2a;
-    --color-footer-trust-text: #e5e7eb;
-    --color-footer-trust-icon: #d6b35f;
-  }
-}
 /* ============================
    UTILITIES
 ============================ */

@@ -75,10 +75,10 @@ export default function PayViaUPIButton({ finalPrice }: { finalPrice: number }) 
           ref={errorRef}
           tabIndex={-1}
           role="alert"
-          className="animate-bounce-short flex items-start gap-2.5 rounded-xl border border-amber-400 bg-amber-50 p-3.5 text-sm font-medium text-amber-900 shadow-md outline-none dark:border-amber-600 dark:bg-amber-950/60 dark:text-amber-200"
+          className="animate-bounce-short flex items-start gap-2.5 rounded-xl border border-amber-400 bg-amber-50 p-3.5 text-sm font-medium text-amber-900 shadow-md outline-none"
         >
           <svg
-            className="mt-0.5 h-5 w-5 flex-shrink-0 text-amber-600 dark:text-amber-400"
+            className="mt-0.5 h-5 w-5 flex-shrink-0 text-amber-600 "
             fill="currentColor"
             viewBox="0 0 20 20"
           >
@@ -89,8 +89,8 @@ export default function PayViaUPIButton({ finalPrice }: { finalPrice: number }) 
             />
           </svg>
           <div>
-            <p className="font-semibold text-amber-950 dark:text-amber-100">UPI App Not Detected</p>
-            <p className="mt-0.5 text-xs sm:text-sm text-amber-800 dark:text-amber-300">{errorMessage}</p>
+            <p className="font-semibold text-amber-950 ">UPI App Not Detected</p>
+            <p className="mt-0.5 text-xs sm:text-sm text-amber-800">{errorMessage}</p>
           </div>
         </div>
       )}

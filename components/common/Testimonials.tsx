@@ -163,7 +163,7 @@ export default function TestimonialScroller() {
                       ))}
                     </div>
 
-                    <span className="inline-flex items-center gap-1 text-[11px] text-emerald-600 dark:text-emerald-400 font-medium">
+                    <span className="inline-flex items-center gap-1 text-[11px] text-emerald-600 font-medium">
                       <BadgeCheck className="w-3.5 h-3.5 shrink-0" aria-hidden="true" />
                       <span>Verified Buyer</span>
                     </span>

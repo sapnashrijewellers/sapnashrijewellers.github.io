@@ -44,7 +44,7 @@ export default function ProductPrice({
                 <span className="sr-only">Original Price: </span>₹{formattedMRP}
               </span>
               <span
-                className="inline-flex items-center rounded-full bg-emerald-600/10 text-emerald-700 dark:text-emerald-400 border border-emerald-600/20 px-2 py-0.5 text-xs font-bold"
+                className="inline-flex items-center rounded-full bg-emerald-600/10 text-emerald-700 border border-emerald-600/20 px-2 py-0.5 text-xs font-bold"
                 aria-label={`${product.discount}% discount`}
               >
                 {product.discount}% OFF

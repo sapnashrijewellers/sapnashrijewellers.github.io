@@ -100,7 +100,7 @@ export default async function PrivacyPage({ params }: { params: Promise<{ slug: 
                 <p className="text-muted max-w-xl">{frontmatter.description}</p>                
             </header>
 
-            <article className="prose prose-neutral dark:prose-invert max-w-none">
+            <article className="prose prose-neutral max-w-none">
                 <MDXRemote source={content} components={components} />
             </article>
         </main>

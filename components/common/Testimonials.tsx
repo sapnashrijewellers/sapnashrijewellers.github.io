@@ -35,16 +35,9 @@ export default function TestimonialScroller() {
 
   return (
     <section aria-labelledby={sectionTitleId} className="my-14">
-      {/* Section Heading */}
-      <div className="flex items-baseline justify-between px-4 mb-4">
-        <h2
-          id={sectionTitleId}
-          className="au-h2 text-foreground font-bold"
-        >
-          Customer Reviews
-        </h2>
-      </div>
-
+      <h2 id={sectionTitleId} className="">
+        Customer Reviews
+      </h2>
       <div className="relative group">
         {/* Previous */}
         <button
@@ -110,11 +103,10 @@ export default function TestimonialScroller() {
                     {Array.from({ length: 5 }).map((_, idx) => (
                       <Star
                         key={idx}
-                        className={`w-3.5 h-3.5 ${
-                          idx < t.rating
-                            ? "text-amber-500 fill-amber-500"
-                            : "text-muted-foreground/30"
-                        }`}
+                        className={`w-3.5 h-3.5 ${idx < t.rating
+                          ? "text-amber-500 fill-amber-500"
+                          : "text-muted-foreground/30"
+                          }`}
                         aria-hidden="true"
                       />
                     ))}

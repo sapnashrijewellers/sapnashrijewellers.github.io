@@ -8,6 +8,7 @@ import Footer from "@/components/home/Footer";
 import FooterTrust from "@/components/home/FooterTrust";
 import FloatingWhatsAppButton from "@/components/home/FloatingWhatsAppButton";
 import GoToTop from "@/components/common/GoToTop";
+import CollectionMenu from "@/components/home/CollectionMenu";
 
 const yatraOne = Yatra_One({
   weight: "400",
@@ -128,6 +129,7 @@ export default function RootLayout({
         <header className="sticky top-0 z-40 w-full border-theme/30 bg-(--color-surface)/80 shadow-xs backdrop-blur-xl">
           <div className="mx-auto max-w-7xl p-0">
             <Navbar />
+            <CollectionMenu />
           </div>
         </header>
 

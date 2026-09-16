@@ -26,6 +26,8 @@ import buildProductJsonLd from "@/utils/json-ld/buildProductJsonLd";
 import dynamic from "next/dynamic";
 const ProductChatbot = dynamic(() => import("@/components/product/ProductChatbot"));
 import ProductGeoSpecs from "@/components/product/ProductGeoSpecs";
+import ProductViewTracker from "@/components/product/ProductViewTracker";
+import RecentlyViewedBar from "@/components/common/RecentlyViewedBar";
 
 interface ProductDetailPageProps {
   params: Promise<{ id: string }>;
@@ -243,6 +245,8 @@ export default async function ProductDetailPage({
 
       <TestimonialScroller />
       <WishListBar />
+      <ProductViewTracker productId={product.id} />
+      <RecentlyViewedBar />
 
       <aside aria-label="Recommended and related products">
         <YouMAyAlsoLike product={product} products={products} />

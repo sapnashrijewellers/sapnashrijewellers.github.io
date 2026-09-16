@@ -85,22 +85,11 @@ export default function WishlistBar() {
         aria-label="Wishlisted products horizontal carousel"
         tabIndex={0}
         className="
-          flex gap-3 sm:gap-4 overflow-x-auto px-2 sm:px-4 pb-3 pt-1
+          flex gap-3 sm:gap-4 overflow-x-auto py-4
           scrollbar-hide snap-x snap-mandatory
-          focus:outline-none focus:ring-1 focus:ring-primary/40 rounded-2xl
-        "
-      >
+          focus:outline-none focus:ring-1 focus:ring-primary/40 rounded-2xl">
         {wishlistProducts.map((p, index) => (
-          <article
-            key={p.id}
-            aria-label={`${p.name} wishlisted item`}
-            className="
-              shrink-0 w-[160px] sm:w-[200px] lg:w-[220px] snap-start
-              transition-transform duration-150 will-change-transform
-            "
-          >
-            <ProductCard product={p} priority={index < 4} />
-          </article>
+            <ProductCard key={p.id} product={p} priority={index < 4}  />
         ))}
       </div>
     </section>

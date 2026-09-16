@@ -9,7 +9,6 @@ import HomeFaq from "@/components/home/HomeFaq";
 import HeritageStory from "@/components/home/HeritageStory";
 import FeaturedJewellery from "@/components/common/FeaturedJewellery";
 import WishlistBar from "@/components/common/WishlistBar";
-import Testimonial from "@/components/mdx/Testimonial";
 import TestimonialScroller from "@/components/common/Testimonials";
 import RecentlyViewedBar from "@/components/common/RecentlyViewedBar";
 const baseURL = (

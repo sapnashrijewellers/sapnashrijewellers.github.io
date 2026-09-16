@@ -1,16 +1,17 @@
+"use client";
+
+import React, { useState } from "react";
 import type { Product } from "@/types/catalog";
-import Tooltip from "@/components/common/Tooltip";
 import {
   ShieldCheck,
   Truck,
-  CreditCard,
-  IndianRupee,
   Heart,
-  Globe,
   RefreshCcw,
-  Triangle,
   Sparkles,
-  RectangleHorizontal,
+  Award,
+  ChevronRight,
+  X,
+  ExternalLink,
 } from "lucide-react";
 
 interface TrustSignalsRibbonProps {
@@ -21,103 +22,85 @@ interface TrustSignalsRibbonProps {
 interface TrustSignalItem {
   id: string;
   show: boolean;
-  icon: React.ComponentType<{
-    className?: string;
-    "aria-hidden"?: boolean | "true" | "false";
-  }>;
-  label: string;
-  toolTip?: string;
+  icon: React.ComponentType<{ className?: string; "aria-hidden"?: boolean | "true" | "false" }>;
+  title: string;
+  subtitle: string;
+  explanation: string;
   link?: string;
+  badge?: string;
 }
 
 export default function TrustSignalsRibbon({
   product,
   className = "",
 }: TrustSignalsRibbonProps) {
+  const [activeModalItem, setActiveModalItem] = useState<TrustSignalItem | null>(null);
+
   const metal = product?.metal || "silver";
   const isGold = metal === "gold";
   const weight = product?.weight || 0;
-
-  const isHallmarkedGold = metal == "gold" && weight > 2;
+  const isHallmarkedGold = isGold && weight > 2;
 
   const signals: TrustSignalItem[] = [
     {
-      id: "auth-certificate",
+      id: "authenticity",
       show: true,
-      icon: Triangle,
-      label: isHallmarkedGold
-        ? "BIS Hallmark Gold"
-        : "Authentication Certificate",
-      toolTip: isHallmarkedGold
-        ? "Government-approved BIS 916 Hallmarked jewellery ensuring genuine gold purity with laser-engraved HUID verification."
-        : "Certified pure and authenticated precious metal jewellery from Sapna Shri Jewellers.",
-      link: "/policies/warranty/",
-    },
-    {
-      id: "metal-purity",
-      show: true,
-      icon: RectangleHorizontal,
-      label: `${isGold ? "Pure Gold" : "Pure Silver"} Jewellery`,
-    },
-    {
-      id: "craftsmanship",
-      show: true,
-      icon: Sparkles,
-      label: "Superior Craftsmanship",
+      icon: Award,
+      title: isHallmarkedGold ? "BIS 916 Hallmark" : "925 Certified Silver",
+      subtitle: "Authenticity guaranteed",
+      badge: "Govt. Verified",
+      explanation: isHallmarkedGold
+        ? "Government-approved BIS 916 hallmarking verifies precious gold purity with a unique laser-engraved HUID number traceable in the BIS Care app."
+        : "Stamped authentic 925 sterling silver alloy containing 92.5% fine pure silver, tested and certified for lifelong metal integrity.",
+      link: "/policies/authenticity/",
     },
     {
       id: "warranty",
       show: true,
       icon: ShieldCheck,
-      label: "6 Month Warranty",
-      toolTip:
-        "All our products come with a 6-month limited warranty from the date of purchase, applicable under normal use and proper care.",
+      title: "6 Month Warranty",
+      subtitle: "We're here after delivery",
+      explanation:
+        "Covers structural repairs, stone resetting, plating defects, and clasp malfunctions under regular wear. Claim easily via WhatsApp or email.",
       link: "/policies/warranty/",
     },
     {
       id: "skin-safe",
       show: true,
       icon: Heart,
-      label: "Skin Safe & Hypoallergenic",
+      title: "Skin Safe Wear",
+      subtitle: "100% hypoallergenic",
+      explanation:
+        "Completely lead-free and nickel-free composition. Rigorously tested against corrosion to avoid irritation, rashes, or greenish skin discoloration.",
     },
     {
-      id: "pan-india-delivery",
+      id: "shipping",
       show: true,
-      icon: Globe,
-      label: "All India Delivery",
-      toolTip:
-        "We deliver safely and securely across 19,000+ pin codes in India with insured courier partners.",
+      icon: Truck,
+      title: "Insured Delivery",
+      subtitle: "Travels safely to your door",
+      explanation:
+        "All parcels are shipped under transit insurance in tamper-evident sealed packaging. In case of theft or damage, we issue a prompt replacement or 100% refund.",
       link: "/policies/shipping/",
     },
     {
-      id: "cod-available",
-      show: !isGold,
-      icon: IndianRupee,
-      label: "Cash on Delivery",
-    },
-    {
-      id: "easy-exchange",
+      id: "returns",
       show: true,
       icon: RefreshCcw,
-      label: "Easy Exchange & Returns",
-      toolTip:
-        "Transparent return and exchange policies for your peace of mind. Read our full policy terms.",
+      title: "Transparent Returns",
+      subtitle: "Shop with total confidence",
+      explanation:
+        "Try it on at home. If the fit or finish isn't perfect, initiate a straightforward doorstep exchange or return within our return window with zero hassle.",
       link: "/policies/returns/",
     },
     {
-      id: "upi-payments",
+      id: "craftsmanship",
       show: true,
-      icon: CreditCard,
-      label: "UPI & Online Payments",
-    },
-    {
-      id: "secure-shipping",
-      show: true,
-      icon: Truck,
-      label: "100% Insured Shipping",
-      toolTip:
-        "Every shipment is fully insured against damage or loss during transit until it reaches your doorstep.",
-      link: "/policies/shipping/",
+      icon: Sparkles,
+      title: "Authentic Certificate",
+      subtitle: "Official grading card included",
+      explanation:
+        "Every order ships with a physical certificate of authenticity detailing metal gross weight, net weight, purity mark, and authorized signature.",
     },
   ];
 
@@ -126,71 +109,136 @@ export default function TrustSignalsRibbon({
   return (
     <section
       aria-labelledby="trust-ribbon-heading"
-      className={`relative rounded-2xl p-2 mb-6  bg-surface/90 shadow-sm ${className}`}
-      style={{
-        background: `linear-gradient(
-          180deg,
-          color-mix(in srgb, var(--color-primary, #b8860b) 10%, transparent),
-          color-mix(in srgb, var(--color-primary, #b8860b) 3%, transparent)
-        )`,
-      }}
+      className={`relative rounded-2xl py-2 ${className}`}
     >
-      {/* Section Header */}
-      <div className="flex items-center justify-between pb-3 mb-4 ">
-        <h2
-          id="trust-ribbon-heading"
-          className=""
-        >
-          Our Trust Promises
-        </h2>        
+      {/* Header */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 pb-3 mb-3">
+        <div>
+          <h2
+            id="trust-ribbon-heading"
+            className=""
+          >
+            Your Trust Promise
+          </h2>
+          <p className="text-xs text-neutral-600">
+            Tap or hover over any assurance to review verification details.
+          </p>
+        </div>
       </div>
 
-      {/* Screen Reader & LLM Structured Summary */}
+      {/* Screen Reader & SEO Context */}
       <div className="sr-only">
-        Customer assurances for {product?.name}: BIS Hallmark certification,
-        6-month warranty, skin-safe metals, insured delivery across India, and
-        transparent returns.
+        Customer assurances for {product?.name || "this item"}: Certified pure metal purity, 
+        6-month repair warranty, hypoallergenic nickel-safe metals, transit-insured courier 
+        shipping, and transparent return policies.
       </div>
 
-      {/* Semantic Signals Grid */}
-      <ul
+      {/* Interactive Assurance Cards */}
+      <div
         role="list"
-        aria-label="Trust assurances and purchase benefits"
-        className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-2 gap-y-2 sm:gap-x-2 sm:gap-y-2"
+        aria-label="Trust assurances and guarantee details"
+        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2.5"
       >
         {activeSignals.map((item) => {
           const Icon = item.icon;
 
           return (
-            <li
+            <button
               key={item.id}
-              className="flex items-center gap-2 rounded-xl transition-colors duration-150"
+              type="button"
+              onClick={() => setActiveModalItem(item)}
+              aria-haspopup="dialog"
+              className="group relative flex flex-col text-left p-3 rounded-xl border border-neutral-200/80 bg-white/70 hover:bg-white hover:border-primary/50 hover:shadow-md transition-all duration-200 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             >
+              {/* Badge if present */}
+              {item.badge && (
+                <span className="absolute top-2 right-2 text-[10px] font-medium tracking-wide bg-primary/15 text-primary-900 px-1.5 py-0.5 rounded-md">
+                  {item.badge}
+                </span>
+              )}
+
+              {/* Icon Container */}
               <div
-                className="group shrink-0 rounded-full border-2 border-primary/70 p-1.5"
+                className="w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-2.5 group-hover:scale-105 group-hover:bg-primary group-hover:text-primary transition-all duration-200"
                 aria-hidden="true"
               >
-                <div className="rounded-full border border-dashed  p-1.5 transition-all duration-500 group-hover:rotate-360 group-hover:border-primary">
-                  <Icon className="w-7 h-7 sm:w-8 sm:h-8 " />
+                <Icon className="w-5 h-5" />
+              </div>
+
+              {/* Text Meta */}
+              <span className="text-xs sm:text-sm font-semibold text-neutral-900 leading-snug group-hover:text-primary transition-colors">
+                {item.title}
+              </span>
+              <span className="text-[11px] text-neutral-600 leading-tight mt-0.5">
+                {item.subtitle}
+              </span>
+
+              {/* Subtle hover trigger indicator */}
+              <span className="inline-flex items-center text-[10px] font-medium text-neutral-600 group-hover:text-primary mt-2">
+                Details <ChevronRight className="w-3 h-3 ml-0.5 transition-transform group-hover:translate-x-0.5" />
+              </span>
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Accessible Detail Modal / Bottom Drawer for Deep Risk Reduction */}
+      {activeModalItem && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="trust-modal-title"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-xs"
+          onClick={() => setActiveModalItem(null)}
+          onKeyDown={(e) => {
+            if (e.key === "Escape") setActiveModalItem(null);
+          }}
+        >
+          <div
+            className="relative w-full max-w-sm rounded-2xl bg-white p-5 shadow-xl border border-neutral-200 animate-in fade-in zoom-in-95 duration-150"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-start justify-between gap-3">
+              <div className="flex items-center gap-2.5">
+                <div className="p-2 rounded-xl bg-primary/10 text-primary">
+                  <activeModalItem.icon className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 id="trust-modal-title" className="text-sm font-bold text-neutral-900">
+                    {activeModalItem.title}
+                  </h3>
+                  <p className="text-xs text-neutral-600">{activeModalItem.subtitle}</p>
                 </div>
               </div>
 
-              <div className="flex flex-col min-w-0">
-                <span className="leading-snug flex items-center gap-1">
-                  <span>{item.label}</span>
-                  {item.link && item.toolTip && (
-                    <Tooltip
-                      text={item.toolTip}
-                      href={item.link}
-                      label={`Learn more about ${item.label}`}
-                    />
-                  )}
-                </span>
-              </div>
-            </li>
-          );
-        })}
-      </ul>
+              <button
+                type="button"
+                onClick={() => setActiveModalItem(null)}
+                className="rounded-lg p-1 text-neutral-400 hover:text-neutral-700 hover:bg-neutral-100 transition-colors"
+                aria-label="Close details"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+
+            <p className="mt-3.5 text-xs sm:text-sm text-neutral-700 leading-relaxed">
+              {activeModalItem.explanation}
+            </p>
+
+            {activeModalItem.link && (
+              <a
+                href={activeModalItem.link}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:underline"
+              >
+                Read our official policy terms
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            )}
+          </div>
+        </div>
+      )}
     </section>
   );
 }

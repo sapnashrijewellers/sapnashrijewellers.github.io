@@ -9,6 +9,8 @@ import HomeFaq from "@/components/home/HomeFaq";
 import HeritageStory from "@/components/home/HeritageStory";
 import FeaturedJewellery from "@/components/common/FeaturedJewellery";
 import WishlistBar from "@/components/common/WishlistBar";
+import Testimonial from "@/components/mdx/Testimonial";
+import TestimonialScroller from "@/components/common/Testimonials";
 const baseURL = (
   process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in"
 ).replace(/\/+$/, "");
@@ -64,6 +66,7 @@ export default function Home() {
       <FeaturedJewellery />            
       <TrustSignalsRibbon />
       <SignatureCollections  />
+      <TestimonialScroller />
       <HeritageStory />
       <HomeFaq />
     </main>

@@ -1,22 +1,23 @@
-import type { Metadata } from "next";
-import { notFound } from "next/navigation";
-import type { Product, Collection } from "@/types/catalog";
-import products from "@/data/products.json";
-import collections from "@/data/collections.json";
-import Breadcrumb from "@/components/navbar/BreadcrumbItem";
-import { buildCollectionPageJsonLd } from "@/utils/json-ld/buildCollectionPageJsonLd";
-import JsonLd from "@/components/common/JsonLd";
-import RotatingBanner from "@/components/banners/RotatingBanner";
-import SEO from "@/components/common/SEO";
-import JewelryTypeClient from "../../jt/[id]/JewelryTypeClient";
+import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
+import type { Product, Collection } from '@/types/catalog';
+import products from '@/data/products.json';
+import collections from '@/data/collections.json';
+import Breadcrumb from '@/components/navbar/BreadcrumbItem';
+import { buildCollectionPageJsonLd } from '@/utils/json-ld/buildCollectionPageJsonLd';
+import JsonLd from '@/components/common/JsonLd';
+import RotatingBanner from '@/components/banners/RotatingBanner';
+import SEO from '@/components/common/SEO';
+import JewelryTypeClient from '../../jt/[id]/JewelryTypeClient';
+import RecentlyViewedBar from '@/components/common/RecentlyViewedBar';
+import WishlistBar from '@/components/common/WishlistBar';
+import FeaturedJewellery from '@/components/common/FeaturedJewellery';
 
 interface CollectionPageProps {
   params: Promise<{ id: string }>;
 }
 
-const baseURL = (
-  process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in"
-).replace(/\/+$/, "");
+const baseURL = (process.env.NEXT_PUBLIC_BASE_URL || 'https://sapnashrijewellers.in').replace(/\/+$/, '');
 const driveURL = `${baseURL}/static/img/products/optimized/`;
 
 export async function generateStaticParams() {
@@ -29,13 +30,12 @@ export async function generateStaticParams() {
 
 // ---- METADATA (Search Engines & Social Crawlers) ----
 export async function generateMetadata({ params }: CollectionPageProps): Promise<Metadata> {
-  const { id } = await params;  
+  const { id } = await params;
   const collection = collections.find((cat: Collection) => cat.id === Number(id));
 
   if (!collection) return {};
 
-  const filtered = products.filter(
-    (p: Product) => p.collection === collection.name);
+  const filtered = products.filter((p: Product) => p.collection === collection.name);
 
   const title = `${collection.name} - ${collection.title}`;
   const description = collection.description;
@@ -52,7 +52,7 @@ export async function generateMetadata({ params }: CollectionPageProps): Promise
       title,
       description,
       url: `${baseURL}/c/${id}/`,
-      type: "website",
+      type: 'website',
       images: [
         {
           url: imageUrl,
@@ -63,7 +63,7 @@ export async function generateMetadata({ params }: CollectionPageProps): Promise
       ],
     },
     twitter: {
-      card: "summary_large_image",
+      card: 'summary_large_image',
       title,
       description,
       images: [imageUrl],
@@ -77,9 +77,7 @@ export async function generateMetadata({ params }: CollectionPageProps): Promise
 // ---- MAIN collection PAGE ----
 export default async function collectionPage({ params }: CollectionPageProps) {
   const { id } = await params;
-  const collection = collections.find(
-    (cat: Collection) => cat.id === Number(id) && cat.active
-  );
+  const collection = collections.find((cat: Collection) => cat.id === Number(id) && cat.active);
 
   if (!collection) {
     notFound();
@@ -97,38 +95,34 @@ export default async function collectionPage({ params }: CollectionPageProps) {
   const JsonLdObj = buildCollectionPageJsonLd(filtered, collection);
 
   return (
-    <main className="container mx-auto px-4 py-4 max-w-7xl">
-      {/* 1. Breadcrumbs */}
-      <Breadcrumb
-        items={[
-          { name: "Home", href: "/" },
-          { name: collection.name },
-        ]}
-      />
+    <main className="container mx-auto max-w-7xl px-4 py-4">
+      <Breadcrumb items={[{ name: 'Home', href: '/' }, { name: collection.name }]} />
 
-      {/* 2. Structured Data Schema */}
       <JsonLd json={JsonLdObj} />
 
-      {/* 3. collection Header Information */}
-      <header className="pl-4 border-l-4 border-primary/70 my-6">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-yatra font-bold">
-          {collection.name} <span className="font-sans text-xl md:text-2xl font-normal text-muted-foreground">| {collection.title}</span>
-        </h1>
+      <header className="border-primary/70 my-6 border-l-4 pl-4">
+        <h2 className="">
+          {collection.name}{' '}
+          <span className="text-muted-foreground font-sans text-xl font-normal md:text-2xl">| {collection.title}</span>
+        </h2>
         {collection.description && (
-          <p className="mt-2 text-sm sm:text-base text-muted-foreground/90 leading-relaxed max-w-4xl">
+          <p className="text-muted-foreground/90 mt-2 max-w-4xl text-sm leading-relaxed sm:text-base">
             {collection.description}
           </p>
         )}
       </header>
 
-      {/* 4. Promotional/collection Rotating Banner */}
-      <section aria-label={`${collection.name} featured banners`} className="mb-8">
-        <RotatingBanner key={collection.id}/>
+      <section aria-label={`${collection.name} featured banners`} className="mb-4">
+        <RotatingBanner key={collection.id} />
       </section>
 
-      {/* 5. Product Grid / Catalog listing */}
-      {/* 4. Client-side Interactive Filter & Grid */}
-      <JewelryTypeClient products={filtered} pFilters={{ material: `${collection.material}` }} />
+      <JewelryTypeClient products={filtered} pFilters={{ material: `${collection.material}` }} className="py-4" />
+
+      <FeaturedJewellery className="py-2" />
+
+      <RecentlyViewedBar />
+
+      <WishlistBar />
       {/* 6. Contextual SEO Content */}
       <aside aria-label="Related collection searches and information">
         <SEO slug={`/collections/${id}`} />

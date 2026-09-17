@@ -1,24 +1,25 @@
-"use client";
+'use client';
 
-import { useMemo, useState } from "react";
-import type { Product, SearchFilters } from "@/types/catalog";
-import FilterNSort from "@/components/common/FilterNSort";
-import ProductCard from "@/components/product/ProductCard";
-import Pagination from "@/components/common/Pagination";
+import { useMemo, useState } from 'react';
+import type { Product, SearchFilters } from '@/types/catalog';
+import FilterNSort from '@/components/common/FilterNSort';
+import ProductCard from '@/components/product/ProductCard';
+import Pagination from '@/components/common/Pagination';
 
 interface JewelryTypeClientProps {
   products: Product[];
   pFilters?: SearchFilters;
+  className?: string;
 }
 
 const PRODUCTS_PER_PAGE = 20; // Show 20 products per page to reduce initial HTML size
 
-export default function JewelryTypeClient({ products, pFilters }: JewelryTypeClientProps) {
-  const [filters, setFilters] = useState<SearchFilters>(pFilters || { material: "Silver" });
-  const [sortBy, setSortBy] = useState("best-match");
+export default function JewelryTypeClient({ products, pFilters, className }: JewelryTypeClientProps) {
+  const [filters, setFilters] = useState<SearchFilters>(pFilters || { material: 'Silver' });
+  const [sortBy, setSortBy] = useState('best-match');
   const [currentPage, setCurrentPage] = useState(1);
 
-  const visibleProducts = useMemo(() => {    
+  const visibleProducts = useMemo(() => {
     let items = products;
 
     // 2. Multi-criteria filtering
@@ -32,23 +33,21 @@ export default function JewelryTypeClient({ products, pFilters }: JewelryTypeCli
       items = items.filter((p) => p.for === filters.forWhom);
     }
     if (filters.material) {
-      items = items.filter((p) =>
-        p.metal?.toLowerCase().startsWith(filters.material!.toLowerCase())
-      );
+      items = items.filter((p) => p.metal?.toLowerCase().startsWith(filters.material!.toLowerCase()));
     }
 
     // 3. Sorting logic
     switch (sortBy) {
-      case "name-asc":
+      case 'name-asc':
         items.sort((a, b) => a.name.localeCompare(b.name));
         break;
-      case "name-desc":
+      case 'name-desc':
         items.sort((a, b) => b.name.localeCompare(a.name));
         break;
-      case "price-asc":
+      case 'price-asc':
         items.sort((a, b) => a.price - b.price);
         break;
-      case "price-desc":
+      case 'price-desc':
         items.sort((a, b) => b.price - a.price);
         break;
       default:
@@ -80,21 +79,18 @@ export default function JewelryTypeClient({ products, pFilters }: JewelryTypeCli
     setSortBy(newSort);
   };
 
+  //{`w-full p-10 ${className || ''}`.trim()}
+
   return (
-    <section aria-label="Product Catalog Filter and Grid" className="w-full">
+    <section aria-label="Product Catalog Filter and Grid" className={`${className}`}>
       {/* Filter and Live Counter Header */}
-      <div className="flex flex-wrap items-center justify-between gap-3 mb-6 px-1">
-        <div
-          role="status"
-          aria-live="polite"
-          className="text-sm font-medium text-muted-foreground"
-        >
-          {visibleProducts.length}{" "}
-          {visibleProducts.length === 1 ? "product found" : "products found"}
+      <div className="mb-6 flex flex-wrap items-center justify-between gap-3 px-1">
+        <div role="status" aria-live="polite" className="text-muted-foreground text-sm font-medium">
+          {visibleProducts.length} {visibleProducts.length === 1 ? 'product found' : 'products found'}
           {totalPages > 1 && ` • Showing page ${currentPage} of ${totalPages}`}
         </div>
 
-        <div className="flex justify-end ml-auto">
+        <div className="ml-auto flex justify-end">
           <FilterNSort
             filters={filters}
             onFilterChange={handleFilterChange}
@@ -109,7 +105,7 @@ export default function JewelryTypeClient({ products, pFilters }: JewelryTypeCli
         <div
           role="status"
           aria-live="polite"
-          className="py-16 text-center text-muted-foreground text-lg bg-surface/40 rounded-2xl border border-dashed border-theme"
+          className="text-muted-foreground bg-surface/40 border-theme rounded-2xl border border-dashed py-16 text-center text-lg"
         >
           <p>No products are available based on the selected filters.</p>
         </div>
@@ -118,7 +114,7 @@ export default function JewelryTypeClient({ products, pFilters }: JewelryTypeCli
           <ul
             role="list"
             aria-label="Filtered Jewelry Products"
-            className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 list-none p-0"
+            className="grid list-none grid-cols-1 gap-4 p-0 sm:grid-cols-3 md:gap-6 lg:grid-cols-4"
           >
             {paginatedProducts.map((p, idx) => (
               <li key={p.id || idx} className="flex justify-stretch">
@@ -131,11 +127,7 @@ export default function JewelryTypeClient({ products, pFilters }: JewelryTypeCli
           </ul>
 
           {/* Separated Pagination Component */}
-          <Pagination
-            currentPage={currentPage}
-            totalPages={totalPages}
-            onPageChange={setCurrentPage}
-          />
+          <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />
         </>
       )}
     </section>

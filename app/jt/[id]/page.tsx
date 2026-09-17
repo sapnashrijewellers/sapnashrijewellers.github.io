@@ -1,21 +1,22 @@
-import type { Metadata } from "next";
-import { notFound } from "next/navigation";
-import type { Type } from "@/types/catalog";
-import products from "@/data/products.json";
-import types from "@/data/types.json";
-import Breadcrumb from "@/components/navbar/BreadcrumbItem";
-import JewelryTypeClient from "./JewelryTypeClient";
-import { buildJewelryTypePageJsonLd } from "@/utils/json-ld/buildJewelryTypePageJsonLd";
-import JsonLd from "@/components/common/JsonLd";
-import SEO from "@/components/common/SEO";
+import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
+import type { Type } from '@/types/catalog';
+import products from '@/data/products.json';
+import types from '@/data/types.json';
+import Breadcrumb from '@/components/navbar/BreadcrumbItem';
+import JewelryTypeClient from './JewelryTypeClient';
+import { buildJewelryTypePageJsonLd } from '@/utils/json-ld/buildJewelryTypePageJsonLd';
+import JsonLd from '@/components/common/JsonLd';
+import SEO from '@/components/common/SEO';
+import FeaturedJewellery from '@/components/common/FeaturedJewellery';
+import RecentlyViewedBar from '@/components/common/RecentlyViewedBar';
+import WishlistBar from '@/components/common/WishlistBar';
 
 interface JewelryTypePageProps {
   params: Promise<{ id: string }>;
 }
 
-const baseURL = (
-  process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in"
-).replace(/\/+$/, "");
+const baseURL = (process.env.NEXT_PUBLIC_BASE_URL || 'https://sapnashrijewellers.in').replace(/\/+$/, '');
 const driveURL = `${baseURL}/static/img/products/optimized/`;
 
 export async function generateStaticParams() {
@@ -29,12 +30,10 @@ export async function generateStaticParams() {
 // ---- METADATA (Search Engines & Social Crawlers) ----
 export async function generateMetadata({ params }: JewelryTypePageProps): Promise<Metadata> {
   const { id } = await params;
-  const t = types.find((typeItem) => typeItem.id === Number(id) );
+  const t = types.find((typeItem) => typeItem.id === Number(id));
   if (!t) return {};
 
-  const matchingProducts = products.filter(
-    (p) => p.type?.includes(t.type) && p.active && p.images?.length > 0
-  );
+  const matchingProducts = products.filter((p) => p.type?.includes(t.type) && p.active && p.images?.length > 0);
 
   const title = `${t.type}`;
   const description =
@@ -56,7 +55,7 @@ export async function generateMetadata({ params }: JewelryTypePageProps): Promis
       title,
       description,
       url: `${baseURL}/jt/${id}/`,
-      type: "website",
+      type: 'website',
       images: [
         {
           url: imageUrl,
@@ -67,7 +66,7 @@ export async function generateMetadata({ params }: JewelryTypePageProps): Promis
       ],
     },
     twitter: {
-      card: "summary_large_image",
+      card: 'summary_large_image',
       title,
       description,
       images: [imageUrl],
@@ -92,38 +91,28 @@ export default async function JewelryTypePage({ params }: JewelryTypePageProps) 
   const JsonLdObj = buildJewelryTypePageJsonLd(baseProducts, t);
 
   return (
-    <main className="container mx-auto px-4 py-4 max-w-7xl">
-      {/* 1. Breadcrumbs */}
-      <Breadcrumb
-        items={[
-          { name: "Home", href: "/" },
-          { name: t.type },
-        ]}
-      />
+    <main className="container mx-auto max-w-7xl px-4 py-4">
+      <Breadcrumb items={[{ name: 'Home', href: '/' }, { name: t.type }]} />
 
-      {/* 2. Structured Data Schema */}
       <JsonLd json={JsonLdObj} />
 
-      {/* 3. Collection Header Information */}
-      <header className="pl-4 border-l-4 border-primary/70 my-6">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-yatra font-bold ">
-          {t.type}
-        </h1>
+      <header className="border-primary/70 my-6 border-l-4 pl-4">
+        <h2 className="">{t.type}</h2>
         {t.description && (
-          <p className="mt-2 text-sm sm:text-base text-muted-foreground/90 leading-relaxed max-w-4xl">
+          <p className="text-muted-foreground/90 mt-2 max-w-4xl text-sm leading-relaxed sm:text-base">
             {t.description}
           </p>
         )}
       </header>
 
-      {/* 4. Client-side Interactive Filter & Grid */}
-      <JewelryTypeClient products={baseProducts} />
+      <JewelryTypeClient products={baseProducts} className="py-4" />
+      <FeaturedJewellery />
+      <RecentlyViewedBar />
+      <WishlistBar />
 
-      {/* 6. Contextual SEO Content */}
       <aside aria-label="Related collection searches and information">
         <SEO slug={`/jewelry-type/${id}`} />
       </aside>
-
     </main>
   );
 }

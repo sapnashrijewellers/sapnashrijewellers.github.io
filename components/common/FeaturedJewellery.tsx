@@ -8,8 +8,11 @@ import { Label, Product } from '@/types/catalog';
 import SectionHeading from './SectionHeading';
 
 const merchandisingLabels = labels as Label[];
+interface FeaturedJewelleryProps {
+  className?: string;
+}
 
-export default function FeaturedJewellery() {
+export default function FeaturedJewellery({ className = '' }: FeaturedJewelleryProps) {
   const [activeKey, setActiveKey] = useState(merchandisingLabels[0]?.key ?? '');
 
   const [productsByLabel, setProductsByLabel] = useState<Record<string, Product[]>>({});
@@ -56,7 +59,7 @@ export default function FeaturedJewellery() {
   }, [activeKey]);
 
   return (
-    <section aria-labelledby="merchandising-heading" className="w-full">
+    <section aria-labelledby="merchandising-heading" className={`w-full ${className}`}>
       <SectionHeading
         heading="Top Picks & Trends"
         punchline="Handcrafted perfection meets current obsession: discover what’s in demand."

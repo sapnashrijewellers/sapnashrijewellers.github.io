@@ -121,7 +121,7 @@ export default function Footer() {
           <ul className="space-y-1.5 text-sm opacity-90 pt-1">
             {trustHighlights.map((highlight) => (
               <li key={highlight} className="flex items-center gap-2">
-                <CheckCircle2 className="w-3.5 h-3.5 shrink-0 text-primary opacity-80" aria-hidden="true" />
+                <CheckCircle2 className="w-3.5 h-3.5 shrink-0 opacity-80" aria-hidden="true" />
                 <span>{highlight}</span>
               </li>
             ))}

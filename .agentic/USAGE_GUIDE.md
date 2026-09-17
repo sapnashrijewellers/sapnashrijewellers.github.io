@@ -10,7 +10,6 @@ A quick visual guide to the split documentation.
 .agentic/
 ├── CODING_GUIDELINES.md        (8.5 KB) — MANDATORY RULES
 ├── dev-instructions.md         (18.5 KB) — Implementation Guide
-├── SPLIT_SUMMARY.md            (6.3 KB) — This split explanation
 ├── AGENTS.md                   (3.2 KB) — Agent configuration
 └── ssj-context.md              (2.6 KB) — Project context
 ```

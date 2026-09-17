@@ -40,6 +40,16 @@ You are an expert Next.js, React, and TypeScript engineer. These rules are non-n
 - **Types**: Always in `/types/catalog.ts` unless component-specific and non-reusable
 - Keep each file focused on a single responsibility
 
+## Code Formatting Rules
+
+- Use Prettier formatting.
+- Do not manually put each Tailwind class on a separate line.
+- Keep Tailwind className values on one line whenever they fit within printWidth.
+- Use Tailwind classes normally; do not introduce unnecessary whitespace or line breaks.
+- Do not add blank lines between closely related JSX elements.
+- Preserve existing formatting conventions.
+- Run the project formatter before considering the change complete.
+
 ## Styling & Tailwind CSS
 
 - **Tailwind CSS ONLY** — No inline styles or CSS modules except in rare cases

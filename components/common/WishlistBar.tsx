@@ -32,7 +32,6 @@ export default function WishlistBar() {
       }
     };
 
-    // Initial load on mount
     loadWishlist();
 
     const onStorage = (e: StorageEvent) => {
@@ -61,14 +60,16 @@ export default function WishlistBar() {
   return (
     <section
       aria-labelledby={sectionTitleId}
-      className={`relative w-full transition-[opacity,transform] duration-200 ease-out will-change-[opacity,transform] ${hasItems ? 'visible my-8 opacity-100' : 'pointer-events-none invisible hidden opacity-0'} `}
+      className={`relative w-full transition-[opacity,transform] duration-200 ease-out will-change-[opacity,transform] ${
+        hasItems ? 'visible my-8 opacity-100' : 'pointer-events-none invisible hidden opacity-0'
+      }`}
     >
       <SectionHeading
         heading="My Wish List"
         punchline="Save the pieces you love and make them yours when the moment is right."
       />
 
-      {/* Screen reader context for crawlers & assistive tech */}
+      {/* Screen reader context */}
       <div className="sr-only" aria-live="polite">
         {hasItems
           ? `Your wishlist contains ${wishlistProducts.length} saved jewellery products.`
@@ -80,10 +81,12 @@ export default function WishlistBar() {
         role="region"
         aria-label="Wishlisted products horizontal carousel"
         tabIndex={0}
-        className="scrollbar-hide focus:ring-primary/40 flex snap-x snap-mandatory gap-3 overflow-x-auto rounded-2xl py-4 focus:ring-1 focus:outline-none sm:gap-4"
+        className="focus:ring-primary/40 flex snap-x snap-mandatory gap-3 overflow-x-auto rounded-2xl py-4 pb-6 focus:ring-1 focus:outline-none sm:gap-4"
       >
         {wishlistProducts.map((p, index) => (
-          <ProductCard key={p.id} product={p} priority={index < 4} />
+          <div key={p.id} className="w-64 shrink-0 snap-start sm:w-72 md:w-80">
+            <ProductCard product={p} priority={index < 4} />
+          </div>
         ))}
       </div>
     </section>

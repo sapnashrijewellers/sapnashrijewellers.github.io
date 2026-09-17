@@ -1,10 +1,10 @@
-import Link from "next/link";
-import Image from "next/image";
-import type { Product } from "@/types/catalog";
+import Link from 'next/link';
+import Image from 'next/image';
+import type { Product } from '@/types/catalog';
 
-import WishlistButton from "@/components/common/WishlistButton";
-import ProductRating from "@/components/product/ProductRating";
-import ProductPrice from "./ProductCardPrice";
+import WishlistButton from '@/components/common/WishlistButton';
+import ProductRating from '@/components/product/ProductRating';
+import ProductPrice from './ProductCardPrice';
 
 interface ProductCardProps {
   product: Product;
@@ -14,13 +14,9 @@ interface ProductCardProps {
 
 const baseImageURL = process.env.NEXT_PUBLIC_BASE_IMAGE_URL!;
 
-export default function ProductCard({
-  product,
-  priority = false,
-  className = "",
-}: ProductCardProps) {
+export default function ProductCard({ product, priority = false, className = '' }: ProductCardProps) {
   const images = product.images;
-  const firstImage = images[0] || "placeholder.png";
+  const firstImage = images[0] || 'placeholder.png';
   const secondImage = images[1];
 
   const rating = Number(product.rating || 0);
@@ -30,31 +26,17 @@ export default function ProductCard({
   return (
     <article
       aria-label={`${product.name} jewellery item`}
-      className={`
-        group relative flex h-full w-full min-w-0 flex-col
-        overflow-hidden rounded-2xl shadow-sm
-        transition-[transform,box-shadow] duration-150 ease-out
-        hover:-translate-y-1  hover:shadow-lg
-        ${className}
-      `}
+      className={`group relative flex h-full w-full min-w-0 flex-col overflow-hidden rounded-2xl shadow-sm transition-[transform,box-shadow] duration-150 ease-out hover:-translate-y-1 hover:shadow-lg ${className} `}
     >
       {/* Wishlist */}
-      <div className="absolute right-2.5 top-2.5 z-20">
+      <div className="absolute top-2.5 right-2.5 z-20">
         <WishlistButton id={product.id} productName={product.name} />
       </div>
 
       {/* New arrival badge */}
-      {(product.labels && product.labels.length > 0) && (
+      {product.labels && product.labels.length > 0 && (
         <span
-          className="
-            absolute left-2.5 top-2.5 z-10
-            inline-flex items-center gap-1
-            rounded-full bg-accent px-2 py-0.5
-            text-[11px] text-accent-foreground
-            shadow-md
-            pointer-events-none select-none
-            -rotate-2
-          "
+          className="bg-accent text-accent-foreground pointer-events-none absolute top-2.5 left-2.5 z-10 inline-flex -rotate-2 items-center gap-1 rounded-full px-2 py-0.5 text-[11px] shadow-md select-none"
           aria-label="New Arrival product"
         >
           <span>{`${product.labels[0]}`}</span>
@@ -66,36 +48,20 @@ export default function ProductCard({
         prefetch={false}
         title={`${product.name} - ${product.brandText}`}
         aria-label={`View full details for ${product.name}`}
-        className="
-          flex h-full w-full grow flex-col
-          rounded-2xl
-          focus:outline-none                   
-        "
+        className="flex h-full w-full grow flex-col rounded-2xl focus:outline-none"
       >
         {/* Product image */}
-        <div
-          className="
-            relative w-full shrink-0
-            aspect-square
-            overflow-hidden
-            bg-muted/20
-          "
-        >
+        <div className="bg-muted/20 relative aspect-square w-full shrink-0 overflow-hidden">
           {/* Primary image */}
           <Image
             src={`${baseImageURL}/products/thumbnail/${firstImage}`}
             alt={`${product.name} - Sapna Shri Jewellers`}
             fill
             priority={priority}
-            loading={priority ? "eager" : "lazy"}
-            fetchPriority={priority ? "high" : "auto"}
+            loading={priority ? 'eager' : 'lazy'}
+            fetchPriority={priority ? 'high' : 'auto'}
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-            className={`
-              object-cover object-center
-              transition-transform duration-300 ease-out
-              group-hover:scale-105
-              ${hasSecondImage ? "group-hover:opacity-0" : ""}
-            `}
+            className={`object-cover object-center transition-transform duration-300 ease-out group-hover:scale-105 ${hasSecondImage ? 'group-hover:opacity-0' : ''} `}
           />
 
           {/* Secondary image */}
@@ -106,37 +72,23 @@ export default function ProductCard({
               fill
               sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
               loading="lazy"
-              className="
-                object-cover object-center
-                opacity-0
-                transition-opacity duration-300
-                group-hover:opacity-100
-              "
+              className="object-cover object-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"
               aria-hidden="true"
             />
           )}
         </div>
 
         {/* Product information */}
-        <div className="flex w-full grow flex-col justify-between  p-3">
-
-          <span className="leading-snug text-foreground transition-colors duration-150">
-            {product.name}
-          </span>
+        <div className="flex w-full grow flex-col justify-between p-3">
+          <span className="line-clamp-1 leading-snug transition-colors duration-150">{product.name}</span>
 
           <div className="mt-2">
             <ProductPrice product={product} />
           </div>
 
-
           {rating > 0 && ratingCount > 0 && (
-            <div className="mt-2.5  pt-2">
-              <ProductRating
-                rating={rating}
-                count={ratingCount}
-                size={14}
-                showExpert={false}
-              />
+            <div className="mt-2.5 pt-2">
+              <ProductRating rating={rating} count={ratingCount} size={14} showExpert={false} />
             </div>
           )}
         </div>

@@ -32,9 +32,6 @@ export const CustomerReviewCard: React.FC<CustomerReviewCardProps> = ({ review, 
             className="flex items-center gap-0.5"
             role="meter"
             aria-label={`Rating: ${clampedRating} out of ${MAX_STARS} stars`}
-            aria-valuenow={clampedRating}
-            aria-valuemin={1}
-            aria-valuemax={MAX_STARS}
           >
             <meta itemProp="ratingValue" content={String(clampedRating)} />
             <meta itemProp="bestRating" content={String(MAX_STARS)} />
@@ -53,7 +50,7 @@ export const CustomerReviewCard: React.FC<CustomerReviewCardProps> = ({ review, 
 
           {isVerified && (
             <span className="inline-flex items-center gap-1" aria-label="Verified buyer review">
-              <BadgeCheck className="bold h-3.5 w-3.5 shrink-0 text-sm text-emerald-800" aria-hidden="true" />
+              <BadgeCheck className="h-3.5 w-3.5 shrink-0 text-sm font-bold text-emerald-800" aria-hidden="true" />
               <span className="text-xs">Verified Buyer</span>
             </span>
           )}

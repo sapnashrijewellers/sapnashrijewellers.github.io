@@ -22,7 +22,7 @@ export default function ShopByCategory({ className = '' }: ShopByCategoryProps) 
 
       <nav
         aria-label="Jewelry categories"
-        className="scrollbar-hide flex snap-x snap-mandatory gap-3 overflow-x-auto rounded-2xl p-2 sm:gap-4 sm:p-3"
+        className="scrollbar-hide flex snap-x snap-mandatory gap-3 overflow-x-auto rounded-2xl sm:gap-4"
       >
         {categories.map((category) => {
           const searchUrl = `/search?q=${encodeURIComponent(category.keywords)}`;

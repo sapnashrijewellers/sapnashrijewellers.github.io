@@ -7,15 +7,14 @@ import {
   ClockIcon
 } from "@/components/common/BrandIcons";
 
-import { Phone, MapPin } from "lucide-react";
+import { Phone, MapPin, CheckCircle2, ArrowRight } from "lucide-react";
 import BrandLogo from "../common/BrandLogo";
 
-
-
 export default function Footer() {
-  const currentYear = new Date().getFullYear()
-  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP;
+  const currentYear = new Date().getFullYear();
+  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP || "";
   const sanitizedWhatsApp = whatsappNumber.replace(/[^0-9]/g, "");
+  
   const policies = [
     { text: "Disclaimer", link: "/policies/disclaimer/" },
     { text: "Terms of Service", link: "/policies/terms/" },
@@ -25,15 +24,13 @@ export default function Footer() {
     { text: "Warranty & Purity Assurance", link: "/policies/warranty/" }
   ];
 
-  const popularCollections = [
-    { text: "Mahadev Silver Rings", link: "/c/1/" },
-    { text: "Sawariya Seth Ring", link: "/c/3/" },
-    { text: "Personalised Silver Rings", link: "/c/4/" },
-    { text: "Khatushyam Silver Rings", link: "/c/8/" },
-    { text: "Krishna Silver Pendants", link: "/c/6/" },
-    { text: "Mahadev Silver Pendants", link: "/c/10/" },
-    { text: "Hanuman Silver Rings", link: "/c/9/" }
+  const trustHighlights = [
+    "35+ years of craftsmanship",
+    "5,000+ happy customers",
+    "BIS-certified jewellery",
+    "Pan-India delivery"
   ];
+
   return (
     <footer
       aria-label="Site footer and store information"
@@ -45,7 +42,6 @@ export default function Footer() {
         <section aria-label="Brand overview" className="space-y-3">
           <div className="flex items-center gap-2">
             <BrandLogo view="lg" />
-
           </div>
           <h2 className="text-3xl font-yatra footer-heading tracking-wide">
             Sapna Shri Jewellers
@@ -113,25 +109,35 @@ export default function Footer() {
           </ul>
         </nav>
 
-        {/* 3. QUICK LINKS & UTILITIES */}
-        <nav aria-label="Quick catalog navigation">
-          <h3 className="footer-heading font-yatra text-base sm:text-lg mb-3">
-            Quick Links
+        {/* 3. OUR STORY & TRUST PILLARS */}
+        <section aria-label="Our story and heritage" className="space-y-3">
+          <h3 className="footer-heading font-yatra text-base sm:text-lg">
+            35+ Years of Trust
           </h3>
-          <ul className="space-y-2">
-            {popularCollections.map((collection) => (
-              <li key={collection.link}>
-                <Link
-                  href={collection.link}
-                  className="hover:underline transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded"
-                  title={`explore ${collection.text} collection`}
-                >
-                  {collection.text}
-                </Link>
+          <p className="text-sm opacity-90 leading-relaxed">
+            From a family jeweller in Nagda to jewellery lovers across India.
+          </p>
+
+          <ul className="space-y-1.5 text-sm opacity-90 pt-1">
+            {trustHighlights.map((highlight) => (
+              <li key={highlight} className="flex items-center gap-2">
+                <CheckCircle2 className="w-3.5 h-3.5 shrink-0 text-primary opacity-80" aria-hidden="true" />
+                <span>{highlight}</span>
               </li>
             ))}
           </ul>
-        </nav>
+
+          <div className="pt-2">
+            <Link
+              href="/about-us"
+              className="inline-flex items-center gap-1.5 text-sm font-medium hover:underline hover:text-primary transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded group"
+              title="Discover the journey and heritage of Sapna Shri Jewellers"
+            >
+              <span>Discover Our Story</span>
+              <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+            </Link>
+          </div>
+        </section>
 
         {/* 4. PHYSICAL STORE ADDRESS & HOURS */}
         <section aria-label="Physical showroom address and hours">
@@ -141,11 +147,11 @@ export default function Footer() {
               Store Address
             </h3>
           </div>
-          <address className="space-y-2.5 text-footer/90">
-            <div>              
-              <p>Sapna Shri Jewwellers</p>
-              <p className="mt-0.5">                
-                M G Road, Near Jain Mandir, 
+          <address className="space-y-2.5 text-footer/90 not-italic">
+            <div>
+              <p>Sapna Shri Jewellers</p>
+              <p className="mt-0.5">
+                M G Road, Near Jain Mandir,
               </p>
               <p>Nagda Jn., Ujjain (M.P.)</p>
             </div>
@@ -174,19 +180,12 @@ export default function Footer() {
               GSTIN: <span className="font-mono">23AFFPG2954P1Z8</span>
             </p>
           </address>
-          <Link
-            href="/about-us/"
-            className="hover:underline transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded"
-            title="Know more about Sapna Shri Jewellers heritage and history"
-          >
-            About Our Heritage
-          </Link>
         </section>        
       </div>
 
       {/* COPYRIGHT & CREDITS */}
       <div className="border-t border-theme/20 text-center py-4 px-4 text-xs opacity-75">
-        &copy; {currentYear} Sapna Shri Jewellers. All Rights Reserved. | Technology Partner&nbsp;  
+        &copy; {currentYear} Sapna Shri Jewellers. All Rights Reserved. | Technology Partner&nbsp;
         <a href="https://mehtalogy.in" className="hover:underline">mehtalogy.in</a>
       </div>
     </footer>

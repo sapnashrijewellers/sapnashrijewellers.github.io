@@ -1,5 +1,6 @@
-import ProductCard from "@/components/product/ProductCard";
-import type { Product } from "@/types/catalog";
+import ProductCard from '@/components/product/ProductCard';
+import type { Product } from '@/types/catalog';
+import SectionHeading from '../common/SectionHeading';
 
 interface YouMayAlsoLikeProps {
   product: Product;
@@ -7,11 +8,7 @@ interface YouMayAlsoLikeProps {
   className?: string;
 }
 
-export default function YouMayAlsoLike({
-  product,
-  products,
-  className = "",
-}: YouMayAlsoLikeProps) {
+export default function YouMayAlsoLike({ product, products, className = '' }: YouMayAlsoLikeProps) {
   // Filter matching collection/type products while excluding current product & new arrivals
   const youMayAlsoLike = products
     .filter(
@@ -30,22 +27,15 @@ export default function YouMayAlsoLike({
   if (youMayAlsoLike.length === 0) return null;
 
   return (
-    <section
-      aria-labelledby="you-may-also-like-heading"
-      className={`relative w-full py-2 my-2 ${className}`}
-    >
-      {/* Header with Bilingual Metadata */}
-      <div className="flex items-baseline justify-between">
-        <h2 id="you-may-also-like-heading">
-          You May Also Like
-        </h2>
-
-      </div>
+    <section aria-labelledby="you-may-also-like-heading" className={`relative my-2 w-full py-2 ${className}`}>
+      <SectionHeading
+        heading="You May Also Like"
+        punchline="More handcrafted pieces curated to match your taste and aesthetic."
+      />
 
       {/* Screen Reader & LLM Structured Context */}
       <div className="sr-only">
-        Recommended related jewellery collections matching style and audience
-        for {product.name}.
+        Recommended related jewellery collections matching style and audience for {product.name}.
       </div>
 
       {/* Horizontally Scrollable Snap Track */}
@@ -53,20 +43,13 @@ export default function YouMayAlsoLike({
         role="region"
         aria-label="Recommended jewellery products carousel"
         tabIndex={0}
-        className="
-          flex gap-3 sm:gap-4 overflow-x-auto px-2 sm:px-4 pb-3 pt-1
-          scrollbar-hide snap-x snap-mandatory
-          focus:outline-none focus:ring-1 focus:ring-primary/40 rounded-2xl
-        "
+        className="scrollbar-hide focus:ring-primary/40 flex snap-x snap-mandatory gap-3 overflow-x-auto rounded-2xl px-2 pt-1 pb-3 focus:ring-1 focus:outline-none sm:gap-4 sm:px-4"
       >
         {youMayAlsoLike.map((p) => (
           <ProductCard
             key={p.id}
             product={p}
-            className="
-              shrink-0 w-[160px] sm:w-[200px] lg:w-[220px] snap-start
-              transition-transform duration-150 ease-out will-change-transform
-            "
+            className="w-[160px] shrink-0 snap-start transition-transform duration-150 ease-out will-change-transform sm:w-[200px] lg:w-[220px]"
           />
         ))}
       </div>

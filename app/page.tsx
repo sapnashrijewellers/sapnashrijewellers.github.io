@@ -6,7 +6,6 @@ import buildBusinessJsonLd from '@/utils/json-ld/buildBusinessJsonLd';
 import TrustSignalsRibbon from '@/components/product/TrustSignalsRibbon';
 import HomeCategoryBar from '@/components/home/ShopByCategory';
 import HomeFaq from '@/components/home/HomeFaq';
-import HeritageStory from '@/components/home/HeritageStory';
 import FeaturedJewellery from '@/components/common/FeaturedJewellery';
 import WishlistBar from '@/components/common/WishlistBar';
 import TestimonialScroller from '@/components/common/Testimonials';
@@ -62,7 +61,7 @@ export default function Home() {
       <SignatureCollections />
       <RecentlyViewedBar />
       <TestimonialScroller />
-      <HeritageStory />
+
       <HomeFaq />
     </main>
   );

@@ -135,3 +135,10 @@ export type Order = {
 
   createdAt: number;
 };
+
+export interface CustomerReview {
+  name: string;
+  rating: number;
+  text: string;
+  isVerified?: boolean;
+}

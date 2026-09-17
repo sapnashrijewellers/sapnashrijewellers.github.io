@@ -1,25 +1,22 @@
-import type { Metadata } from "next";
-import RotatingBanner from "@/components/banners/RotatingBanner";
-import JewelleryTypeBar from "@/components/home/JewelleryType";
-import SignatureCollections from "@/components/home/SignatureCollections";
-import buildBusinessJsonLd from "@/utils/json-ld/buildBusinessJsonLd";
-import TrustSignalsRibbon from "@/components/product/TrustSignalsRibbon";
-import HomeCategoryBar from "@/components/home/HomeCategoriesBar";
-import HomeFaq from "@/components/home/HomeFaq";
-import HeritageStory from "@/components/home/HeritageStory";
-import FeaturedJewellery from "@/components/common/FeaturedJewellery";
-import WishlistBar from "@/components/common/WishlistBar";
-import TestimonialScroller from "@/components/common/Testimonials";
-import RecentlyViewedBar from "@/components/common/RecentlyViewedBar";
-const baseURL = (
-  process.env.NEXT_PUBLIC_BASE_URL || "https://sapnashrijewellers.in"
-).replace(/\/+$/, "");
+import type { Metadata } from 'next';
+import RotatingBanner from '@/components/banners/RotatingBanner';
+import JewelleryTypeBar from '@/components/home/ShopByPurpose';
+import SignatureCollections from '@/components/home/SignatureCollections';
+import buildBusinessJsonLd from '@/utils/json-ld/buildBusinessJsonLd';
+import TrustSignalsRibbon from '@/components/product/TrustSignalsRibbon';
+import HomeCategoryBar from '@/components/home/ShopByCategory';
+import HomeFaq from '@/components/home/HomeFaq';
+import HeritageStory from '@/components/home/HeritageStory';
+import FeaturedJewellery from '@/components/common/FeaturedJewellery';
+import WishlistBar from '@/components/common/WishlistBar';
+import TestimonialScroller from '@/components/common/Testimonials';
+import RecentlyViewedBar from '@/components/common/RecentlyViewedBar';
+const baseURL = (process.env.NEXT_PUBLIC_BASE_URL || 'https://sapnashrijewellers.in').replace(/\/+$/, '');
 const imageUrl = `${baseURL}/icon-512x512.png`;
 
-const title =
-  "Sapna Shri Jewellers Nagda | Latest Gold & Silver Jewellery Collection";
+const title = 'Sapna Shri Jewellers Nagda | Latest Gold & Silver Jewellery Collection';
 const description =
-  "Explore the latest handcrafted gold and silver jewellery at Sapna Shri Jewellers Nagda. 35+ years of trust with 100% BIS 916 Hallmark certified purity.";
+  'Explore the latest handcrafted gold and silver jewellery at Sapna Shri Jewellers Nagda. 35+ years of trust with 100% BIS 916 Hallmark certified purity.';
 
 export const metadata: Metadata = {
   title,
@@ -28,18 +25,18 @@ export const metadata: Metadata = {
     title,
     description,
     url: baseURL,
-    type: "website",
+    type: 'website',
     images: [
       {
         url: imageUrl,
         width: 1200,
         height: 630,
-        alt: "Sapna Shri Jewellers Nagda - Official Store",
+        alt: 'Sapna Shri Jewellers Nagda - Official Store',
       },
     ],
   },
   twitter: {
-    card: "summary_large_image",
+    card: 'summary_large_image',
     title,
     description,
     images: [imageUrl],
@@ -53,19 +50,16 @@ export default function Home() {
   const jsonLd = buildBusinessJsonLd();
 
   return (
-    <main className="container mx-auto px-4 py-4 max-w-7xl">
+    <main className="container mx-auto max-w-7xl px-4 py-4">
       {/* Schema.org Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <RotatingBanner />
-      <JewelleryTypeBar />      
+      <JewelleryTypeBar />
       <HomeCategoryBar />
       <WishlistBar />
-      <FeaturedJewellery />            
+      <FeaturedJewellery />
       <TrustSignalsRibbon />
-      <SignatureCollections  />
+      <SignatureCollections />
       <RecentlyViewedBar />
       <TestimonialScroller />
       <HeritageStory />

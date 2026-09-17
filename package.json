@@ -8,7 +8,7 @@
     "build": "tsc --noEmit && next build",
     "start": "next start",
     "typecheck": "tsc --noEmit",
-    "data-sync": "tsx utils/data/fetchAndSave.ts"    
+    "data-sync": "tsx utils/data/fetchAndSave.ts"
   },
   "dependencies": {
     "canvas-confetti": "^1.9.4",
@@ -31,6 +31,8 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "globals": "^17.11.0",
+    "prettier": "^3.9.7",
+    "prettier-plugin-tailwindcss": "^0.8.1",
     "schema-dts": "^2.0.0",
     "tailwindcss": "^4",
     "tsx": "^4",

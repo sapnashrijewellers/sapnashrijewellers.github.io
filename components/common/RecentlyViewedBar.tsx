@@ -1,11 +1,12 @@
-"use client";
+'use client';
 
-import { useEffect, useState, useId, useTransition, useMemo } from "react";
-import ProductCard from "@/components/product/ProductCard";
-import productsData from "@/data/products.json";
-import type { Product } from "@/types/catalog";
+import { useEffect, useState, useId, useTransition, useMemo } from 'react';
+import ProductCard from '@/components/product/ProductCard';
+import productsData from '@/data/products.json';
+import type { Product } from '@/types/catalog';
+import SectionHeading from './SectionHeading';
 
-const STORAGE_KEY = "recently_viewed";
+const STORAGE_KEY = 'recently_viewed';
 
 interface RecentlyViewedBarProps {
   currentProductId?: string | number;
@@ -33,7 +34,7 @@ export default function RecentlyViewedBar({ currentProductId }: RecentlyViewedBa
           setViewedIds([]);
         });
       } catch (e) {
-        console.error("Failed to parse recently viewed from localStorage:", e);
+        console.error('Failed to parse recently viewed from localStorage:', e);
       }
     };
 
@@ -45,12 +46,12 @@ export default function RecentlyViewedBar({ currentProductId }: RecentlyViewedBa
 
     const onCustomUpdate = () => loadRecentlyViewed();
 
-    window.addEventListener("storage", onStorage);
-    window.addEventListener("recently-viewed-updated", onCustomUpdate);
+    window.addEventListener('storage', onStorage);
+    window.addEventListener('recently-viewed-updated', onCustomUpdate);
 
     return () => {
-      window.removeEventListener("storage", onStorage);
-      window.removeEventListener("recently-viewed-updated", onCustomUpdate);
+      window.removeEventListener('storage', onStorage);
+      window.removeEventListener('recently-viewed-updated', onCustomUpdate);
     };
   }, []);
 
@@ -75,31 +76,22 @@ export default function RecentlyViewedBar({ currentProductId }: RecentlyViewedBa
   return (
     <section
       aria-labelledby={sectionTitleId}
-      className={`
-        relative w-full transition-[opacity,transform] duration-200 ease-out will-change-[opacity,transform]
-        ${hasItems ? "my-8 opacity-100 visible" : "opacity-0 invisible pointer-events-none hidden"}
-      `}
+      className={`relative w-full transition-[opacity,transform] duration-200 ease-out will-change-[opacity,transform] ${hasItems ? 'visible my-8 opacity-100' : 'pointer-events-none invisible hidden opacity-0'} `}
     >
-      <div className="flex items-center justify-between">
-        <h2 id={sectionTitleId} className="text-xl font-semibold tracking-tight">
-          Recently Viewed
-        </h2>
-      </div>
+      <SectionHeading
+        heading="Recently Viewed"
+        punchline="Pick up right where you left off and take a second look at your recent favourites."
+      />
 
       <div className="sr-only" aria-live="polite">
-        {hasItems
-          ? `You have ${recentProducts.length} recently viewed items.`
-          : "No recently viewed products."}
+        {hasItems ? `You have ${recentProducts.length} recently viewed items.` : 'No recently viewed products.'}
       </div>
 
       <div
         role="region"
         aria-label="Recently viewed products carousel"
         tabIndex={0}
-        className="
-          flex gap-3 sm:gap-4 overflow-x-auto py-4
-          scrollbar-hide snap-x snap-mandatory
-          focus:outline-none focus:ring-1 focus:ring-primary/40 rounded-2xl"
+        className="scrollbar-hide focus:ring-primary/40 flex snap-x snap-mandatory gap-3 overflow-x-auto rounded-2xl py-4 focus:ring-1 focus:outline-none sm:gap-4"
       >
         {recentProducts.map((p, index) => (
           <ProductCard key={p.id} product={p} priority={index < 4} />

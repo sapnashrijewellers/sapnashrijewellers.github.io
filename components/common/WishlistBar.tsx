@@ -1,9 +1,10 @@
-"use client";
+'use client';
 
-import { useEffect, useState, useId, useTransition, useMemo } from "react";
-import ProductCard from "@/components/product/ProductCard";
-import productsData from "@/data/products.json";
-import type { Product } from "@/types/catalog";
+import { useEffect, useState, useId, useTransition, useMemo } from 'react';
+import ProductCard from '@/components/product/ProductCard';
+import productsData from '@/data/products.json';
+import type { Product } from '@/types/catalog';
+import SectionHeading from './SectionHeading';
 
 export default function WishlistBar() {
   const [wishlistSlugs, setWishlistSlugs] = useState<string[]>([]);
@@ -13,7 +14,7 @@ export default function WishlistBar() {
   useEffect(() => {
     const loadWishlist = () => {
       try {
-        const stored = localStorage.getItem("wishlist");
+        const stored = localStorage.getItem('wishlist');
         if (stored) {
           const parsed = JSON.parse(stored);
           if (Array.isArray(parsed)) {
@@ -27,7 +28,7 @@ export default function WishlistBar() {
           });
         }
       } catch (e) {
-        console.error("Failed to parse wishlist from localStorage:", e);
+        console.error('Failed to parse wishlist from localStorage:', e);
       }
     };
 
@@ -35,17 +36,17 @@ export default function WishlistBar() {
     loadWishlist();
 
     const onStorage = (e: StorageEvent) => {
-      if (e.key === "wishlist") loadWishlist();
+      if (e.key === 'wishlist') loadWishlist();
     };
 
     const onCustomUpdate = () => loadWishlist();
 
-    window.addEventListener("storage", onStorage);
-    window.addEventListener("wishlist-updated", onCustomUpdate);
+    window.addEventListener('storage', onStorage);
+    window.addEventListener('wishlist-updated', onCustomUpdate);
 
     return () => {
-      window.removeEventListener("storage", onStorage);
-      window.removeEventListener("wishlist-updated", onCustomUpdate);
+      window.removeEventListener('storage', onStorage);
+      window.removeEventListener('wishlist-updated', onCustomUpdate);
     };
   }, []);
 
@@ -60,23 +61,18 @@ export default function WishlistBar() {
   return (
     <section
       aria-labelledby={sectionTitleId}
-      className={`
-        relative w-full transition-[opacity,transform] duration-200 ease-out will-change-[opacity,transform]
-        ${hasItems ? "my-8 opacity-100 visible" : "opacity-0 invisible pointer-events-none hidden"}
-      `}
+      className={`relative w-full transition-[opacity,transform] duration-200 ease-out will-change-[opacity,transform] ${hasItems ? 'visible my-8 opacity-100' : 'pointer-events-none invisible hidden opacity-0'} `}
     >
-      {/* Header */}
-      <div className="flex items-center justify-between">
-        <h2 id={sectionTitleId}>
-          My Wish List
-        </h2>
-      </div>
+      <SectionHeading
+        heading="My Wish List"
+        punchline="Save the pieces you love and make them yours when the moment is right."
+      />
 
       {/* Screen reader context for crawlers & assistive tech */}
       <div className="sr-only" aria-live="polite">
         {hasItems
           ? `Your wishlist contains ${wishlistProducts.length} saved jewellery products.`
-          : "Your wishlist is currently empty."}
+          : 'Your wishlist is currently empty.'}
       </div>
 
       {/* Horizontally Scrollable Product Track */}
@@ -84,12 +80,10 @@ export default function WishlistBar() {
         role="region"
         aria-label="Wishlisted products horizontal carousel"
         tabIndex={0}
-        className="
-          flex gap-3 sm:gap-4 overflow-x-auto py-4
-          scrollbar-hide snap-x snap-mandatory
-          focus:outline-none focus:ring-1 focus:ring-primary/40 rounded-2xl">
+        className="scrollbar-hide focus:ring-primary/40 flex snap-x snap-mandatory gap-3 overflow-x-auto rounded-2xl py-4 focus:ring-1 focus:outline-none sm:gap-4"
+      >
         {wishlistProducts.map((p, index) => (
-            <ProductCard key={p.id} product={p} priority={index < 4}  />
+          <ProductCard key={p.id} product={p} priority={index < 4} />
         ))}
       </div>
     </section>

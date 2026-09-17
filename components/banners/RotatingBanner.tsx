@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import banners from "@/data/banners.json";
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import banners from '@/data/banners.json';
 
 interface BannerItem {
   id: number;
@@ -22,15 +22,12 @@ interface RotatingBannerProps {
   className?: string;
 }
 
-const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "";
-const baseImageURL = process.env.NEXT_PUBLIC_BASE_IMAGE_URL || "";
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL || '';
+const baseImageURL = process.env.NEXT_PUBLIC_BASE_IMAGE_URL || '';
 
 const items: BannerItem[] = (banners as BannerItem[]).filter((b) => b.active);
 
-export default function RotatingBanner({
-  interval = 6000,
-  className = "",
-}: RotatingBannerProps) {
+export default function RotatingBanner({ interval = 6000, className = '' }: RotatingBannerProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
@@ -39,7 +36,7 @@ export default function RotatingBanner({
   useEffect(() => {
     if (totalBanners <= 1 || isPaused) return;
 
-    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     if (mediaQuery.matches) return;
 
     const timer = window.setInterval(() => {
@@ -65,7 +62,7 @@ export default function RotatingBanner({
         }
       }}
     >
-      <div className="relative aspect-[4/5] max-h-[640px] w-full overflow-hidden rounded-2xl sm:aspect-[16/9] lg:aspect-[21/9]">
+      <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl sm:aspect-[16/9] lg:aspect-[16/5]">
         {items.map((item, index) => {
           const isActive = index === activeIndex;
           const desktopSrc = `${baseImageURL}/banner/optimized/${item.bannerDesktop}`;
@@ -75,9 +72,7 @@ export default function RotatingBanner({
             <div
               key={item.id}
               className={`absolute inset-0 h-full w-full transition-opacity duration-1000 ease-out will-change-[opacity] ${
-                isActive
-                  ? "z-10 opacity-100 pointer-events-auto"
-                  : "z-0 opacity-0 pointer-events-none"
+                isActive ? 'pointer-events-auto z-10 opacity-100' : 'pointer-events-none z-0 opacity-0'
               }`}
               aria-hidden={!isActive}
             >
@@ -94,10 +89,10 @@ export default function RotatingBanner({
                     src={desktopSrc}
                     alt={item.headline}
                     width={1920}
-                    height={820}
-                    loading={index === 0 ? "eager" : "lazy"}
-                    fetchPriority={index === 0 ? "high" : "low"}
-                    decoding={index === 0 ? "sync" : "async"}
+                    height={600}
+                    loading={index === 0 ? 'eager' : 'lazy'}
+                    fetchPriority={index === 0 ? 'high' : 'low'}
+                    decoding={index === 0 ? 'sync' : 'async'}
                     className="h-full w-full object-cover object-center"
                   />
                 </picture>
@@ -112,7 +107,7 @@ export default function RotatingBanner({
               {/* Editorial Typography Overlay */}
               <div className="pointer-events-none absolute inset-0 z-20 flex items-end p-6 sm:items-center sm:p-12 lg:p-16">
                 <div className="max-w-md text-white">
-                  <span className="text-[11px] font-medium tracking-[0.25em] uppercase text-white/75">
+                  <span className="text-[11px] font-medium tracking-[0.25em] text-white/75 uppercase">
                     {item.eyebrow}
                   </span>
 
@@ -125,7 +120,7 @@ export default function RotatingBanner({
                   </p>
 
                   <div className="mt-4 sm:mt-6">
-                    <span className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-widest text-white border-b border-white/60 pb-1 transition-all hover:border-white">
+                    <span className="inline-flex items-center gap-2 border-b border-white/60 pb-1 text-xs font-medium tracking-widest text-white uppercase transition-all hover:border-white">
                       {item.cta} &rarr;
                     </span>
                   </div>

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import banners from '@/data/banners.json';
 
@@ -30,21 +30,57 @@ const items: BannerItem[] = (banners as BannerItem[]).filter((b) => b.active);
 export default function RotatingBanner({ interval = 6000, className = '' }: RotatingBannerProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
   const totalBanners = items.length;
 
+  /*
+   * Detect reduced motion.
+   * We still rotate the banners, but remove the fade animation.
+   */
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    const updateReducedMotion = () => {
+      setPrefersReducedMotion(mediaQuery.matches);
+    };
+
+    updateReducedMotion();
+
+    mediaQuery.addEventListener('change', updateReducedMotion);
+
+    return () => {
+      mediaQuery.removeEventListener('change', updateReducedMotion);
+    };
+  }, []);
+
+  /*
+   * Autoplay.
+   *
+   * IMPORTANT:
+   * Do not use focus state here. Mobile browsers can leave
+   * a tapped link focused, which can permanently stop rotation.
+   */
   useEffect(() => {
     if (totalBanners <= 1 || isPaused) return;
-
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    if (mediaQuery.matches) return;
 
     const timer = window.setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % totalBanners);
     }, interval);
 
-    return () => window.clearInterval(timer);
+    return () => {
+      window.clearInterval(timer);
+    };
   }, [totalBanners, interval, isPaused]);
+
+  /*
+   * Safety: if banner data changes and the current index becomes invalid.
+   */
+  useEffect(() => {
+    if (activeIndex >= totalBanners && totalBanners > 0) {
+      setActiveIndex(0);
+    }
+  }, [activeIndex, totalBanners]);
 
   if (totalBanners === 0) return null;
 
@@ -53,27 +89,30 @@ export default function RotatingBanner({ interval = 6000, className = '' }: Rota
       aria-roledescription="carousel"
       aria-label="Editorial jewellery campaigns"
       className={`relative w-full ${className}`}
+      /*
+       * Hover pause is useful on desktop.
+       * Touch devices don't have meaningful mouse hover,
+       * so this does not interfere with mobile autoplay.
+       */
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
-      onFocusCapture={() => setIsPaused(true)}
-      onBlurCapture={(e) => {
-        if (!e.currentTarget.contains(e.relatedTarget as Node)) {
-          setIsPaused(false);
-        }
-      }}
     >
       <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl sm:aspect-[16/9] lg:aspect-[16/5]">
         {items.map((item, index) => {
           const isActive = index === activeIndex;
+
           const desktopSrc = `${baseImageURL}/banner/optimized/${item.bannerDesktop}`;
           const mobileSrc = `${baseImageURL}/banner/optimized/${item.bannerMobile}`;
 
           return (
             <div
               key={item.id}
-              className={`absolute inset-0 h-full w-full transition-opacity duration-1000 ease-out will-change-[opacity] ${
-                isActive ? 'pointer-events-auto z-10 opacity-100' : 'pointer-events-none z-0 opacity-0'
-              }`}
+              className={[
+                'absolute inset-0 h-full w-full',
+                'ease-out will-change-[opacity]',
+                prefersReducedMotion ? 'duration-0' : 'transition-opacity duration-1000',
+                isActive ? 'pointer-events-auto z-10 opacity-100' : 'pointer-events-none z-0 opacity-0',
+              ].join(' ')}
               aria-hidden={!isActive}
             >
               {/* Full Image Canvas */}
@@ -85,6 +124,7 @@ export default function RotatingBanner({ interval = 6000, className = '' }: Rota
               >
                 <picture>
                   <source media="(max-width: 639px)" srcSet={mobileSrc} />
+
                   <img
                     src={desktopSrc}
                     alt={item.headline}
@@ -98,13 +138,13 @@ export default function RotatingBanner({ interval = 6000, className = '' }: Rota
                 </picture>
               </Link>
 
-              {/* Minimal Scrim: Ultra-soft linear gradient protecting text legibility without obscuring the art */}
+              {/* Scrim */}
               <div
                 aria-hidden="true"
                 className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent sm:bg-gradient-to-r sm:from-black/50 sm:via-black/15 sm:to-transparent"
               />
 
-              {/* Editorial Typography Overlay */}
+              {/* Editorial Typography */}
               <div className="pointer-events-none absolute inset-0 z-20 flex items-end p-6 sm:items-center sm:p-12 lg:p-16">
                 <div className="max-w-md text-white">
                   <span className="text-[11px] font-medium tracking-[0.25em] text-white/75 uppercase">
@@ -120,7 +160,7 @@ export default function RotatingBanner({ interval = 6000, className = '' }: Rota
                   </p>
 
                   <div className="mt-4 sm:mt-6">
-                    <span className="inline-flex items-center gap-2 border-b border-white/60 pb-1 text-xs font-medium tracking-widest text-white uppercase transition-all hover:border-white">
+                    <span className="inline-flex items-center gap-2 border-b border-white/60 pb-1 text-xs font-medium tracking-widest text-white uppercase">
                       {item.cta} &rarr;
                     </span>
                   </div>

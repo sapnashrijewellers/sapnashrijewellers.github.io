@@ -32,7 +32,7 @@ export default function CollectionCard({ collection, priority = false }: Collect
 
           {/* Collection Name Bar with 60% Black Opacity */}
           <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-black/60 px-3 py-2 text-center">
-            <h4 className="md:text-normal truncate text-white">{collection.name}</h4>
+            <h3 className="md:text-normal truncate text-white">{collection.name}</h3>
           </div>
         </div>
 

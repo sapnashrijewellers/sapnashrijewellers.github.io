@@ -128,7 +128,7 @@
   },
   {
     "id": 4,
-    "name": "Sawariya Seth Silver Ring",
+    "name": "Sawariya Seth Silver Ring - Morpankhi Design",
     "collection": "Sawariya Seth Rings",
     "type": [
       "Spiritual Silver Jewellery",
@@ -882,7 +882,7 @@
     "labels": [
       "New Arrival"
     ],
-    "newArrival": true,
+    "newArrival": false,
     "HUID": false,
     "available": true,
     "active": true,

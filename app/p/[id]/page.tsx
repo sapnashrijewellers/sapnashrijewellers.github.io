@@ -53,7 +53,7 @@ export async function generateMetadata({ params }: ProductDetailPageProps): Prom
   const title = `${product.name}`;
   const description = product.description;
 
-  const primaryImageUrl = product.images?.[0] ? `${driveURL}${product.images[0]}` : `${baseURL}/icons/icon-512x512.png`;
+  const primaryImageUrl = product.images?.[0] ? `${driveURL}${product.images[0]}` : `${baseURL}/icon-512x512.png`;
 
   return {
     title,

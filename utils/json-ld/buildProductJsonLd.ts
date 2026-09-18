@@ -28,7 +28,7 @@ export default function buildProductJsonLd(
 
   const productImages: string[] = product.images?.length
     ? product.images.map((img: string) => `${imageBaseUrl}${img}`)
-    : [`${baseURL}/icons/icon-512x512.png`];
+    : [`${baseURL}/icon-512x512.png`];
   const hasValidPrice = product.price !== null && product.price !== undefined;
 
   const now = new Date();

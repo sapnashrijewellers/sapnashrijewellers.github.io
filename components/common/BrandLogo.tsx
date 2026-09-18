@@ -12,16 +12,16 @@ export default function BrandLogo({ className = '' }: BrandLogoProps) {
         href="/"
         title="Sapna Shri Jewellers - Homepage"
         aria-label="Sapna Shri Jewellers - Homepage"
-        className="inline-flex items-center rounded-xl"
+        className="inline-flex items-center rounded-lg"
       >
         <Image
-          src="/logo.png"
+          src="/logo.webp"
           alt="Sapna Shri Jewellers Nagda Official Logo"
-          width={100}
-          height={100}
+          width={80}
+          height={80}
           priority
-          sizes="(max-width: 200px) 100px, 100px"
-          className="h-auto w-24 rounded-xl object-contain sm:w-24"
+          sizes="80px"
+          className="h-14 w-14 rounded-lg object-contain min-[400px]:h-16 min-[400px]:w-16 sm:h-20 sm:w-20"
         />
       </Link>
     </div>

@@ -177,7 +177,7 @@ function SearchBarInput({ initialQuery = '', className = '' }: SearchBarProps) {
           : `Search jewellery catalog. Suggested query: ${currentPlaceholder}`}
       </div>
 
-      <div className="bg-light border-theme focus-within:ring-primary flex h-11 items-center rounded-xl border transition-[border-color,box-shadow] duration-150 ease-out will-change-[box-shadow] focus-within:border-transparent focus-within:ring-2">
+      <div className="bg-light border-theme focus-within:ring-primary flex h-11 min-w-0 items-center rounded-xl border transition-[border-color,box-shadow] duration-150 ease-out will-change-[box-shadow] focus-within:border-transparent focus-within:ring-2">
         {/* Search Input */}
         <input
           id={inputId}
@@ -191,7 +191,9 @@ function SearchBarInput({ initialQuery = '', className = '' }: SearchBarProps) {
           placeholder={currentPlaceholder}
           inputMode="search"
           aria-label="Search jewellery by name, design, or collection"
-          className={`text-foreground placeholder:text-muted-foreground/70 h-full flex-1 rounded-l-xl border-0 bg-transparent px-3.5 text-sm transition-opacity duration-150 outline-none ${listening ? 'animate-pulse font-medium' : ''} `}
+          className={`text-foreground placeholder:text-muted-foreground/70 h-full min-w-0 flex-1 rounded-l-xl border-0 bg-transparent px-3 text-sm transition-opacity duration-150 outline-none ${
+            listening ? 'animate-pulse font-medium' : ''
+          }`}
         />
 
         {/* Voice Search Button */}
@@ -200,9 +202,9 @@ function SearchBarInput({ initialQuery = '', className = '' }: SearchBarProps) {
           onClick={startSpeechRecognition}
           aria-label={listening ? 'Listening for voice input...' : 'Voice search: search jewellery using microphone'}
           aria-pressed={listening}
-          className="text-muted-foreground inline-flex h-full items-center justify-center px-2.5 transition-colors duration-150 focus:outline-none"
+          className="text-muted-foreground inline-flex h-full shrink-0 items-center justify-center px-1.5 transition-colors duration-150 focus:outline-none min-[400px]:px-2.5"
         >
-          <Mic className={`h-[18px] w-[18px] ${listening ? 'animate-bounce' : ''}`} aria-hidden="true" />
+          <Mic className={`h-[17px] w-[17px] ${listening ? 'animate-bounce' : ''}`} aria-hidden="true" />
           <span className="sr-only">Voice search</span>
         </button>
 
@@ -210,9 +212,9 @@ function SearchBarInput({ initialQuery = '', className = '' }: SearchBarProps) {
         <button
           type="submit"
           aria-label="Submit search query"
-          className="text-muted-foreground inline-flex h-full items-center justify-center px-3.5 transition-colors duration-150 focus:outline-none"
+          className="text-muted-foreground inline-flex h-full shrink-0 items-center justify-center px-2 transition-colors duration-150 focus:outline-none min-[400px]:px-3.5"
         >
-          <Search className="h-[18px] w-[18px]" aria-hidden="true" />
+          <Search className="h-[17px] w-[17px]" aria-hidden="true" />
           <span className="sr-only">Search</span>
         </button>
       </div>

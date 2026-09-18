@@ -47,10 +47,7 @@ function getCategoriesForGroup(groupName: string): Category[] {
 
 export default function CatalogNavigation() {
   return (
-    <nav
-      aria-label="Jewellery catalog navigation"
-      className="relative z-50 w-full border-b border-black/[0.08] bg-white dark:border-white/[0.08] dark:bg-neutral-950"
-    >
+    <nav aria-label="Jewellery catalog navigation" className="relative z-50 w-full">
       {/* ============================================================
           MOBILE / TABLET NAVIGATION
           ============================================================ */}
@@ -62,13 +59,13 @@ export default function CatalogNavigation() {
               {/* Mobile menu */}
 
               <details className="group relative">
-                <summary className="flex cursor-pointer list-none items-center gap-2 rounded-full px-3 py-2 text-sm font-medium text-neutral-700 transition hover:bg-black/[0.04] dark:text-neutral-200 dark:hover:bg-white/[0.06] [&::-webkit-details-marker]:hidden">
+                <summary className="flex cursor-pointer list-none items-center gap-2 rounded-full px-3 py-2 text-sm font-medium transition [&::-webkit-details-marker]:hidden">
                   <AppIconMap.Menu className="h-5 w-5 shrink-0" aria-hidden="true" />
 
                   <span>Collections</span>
                 </summary>
 
-                <div className="absolute top-full left-0 mt-2 w-[calc(100vw-2rem)] max-w-md overflow-hidden rounded-2xl border border-black/[0.08] bg-white shadow-[0_20px_60px_rgba(0,0,0,0.12)] dark:border-white/[0.08] dark:bg-neutral-950">
+                <div className="absolute top-full left-0 mt-2 w-[calc(100vw-2rem)] max-w-md overflow-hidden rounded-2xl">
                   <div className="max-h-[75vh] overflow-y-auto p-2">
                     {(groups as Group[]).map((group) => {
                       const Icon = AppIconMap[group.icon ?? 'Shapes'] ?? AppIconMap.Shapes;
@@ -76,10 +73,7 @@ export default function CatalogNavigation() {
                       const groupCategories = getCategoriesForGroup(group.name);
 
                       return (
-                        <details
-                          key={group.id}
-                          className="group/mobile border-b border-black/[0.06] last:border-0 dark:border-white/[0.06]"
-                        >
+                        <details key={group.id} className="group/mobile">
                           <summary className="flex cursor-pointer list-none items-center gap-3 rounded-xl px-3 py-3 [&::-webkit-details-marker]:hidden">
                             <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-neutral-100">
                               <Icon className="h-[18px] w-[18px]" aria-hidden="true" />
@@ -105,7 +99,7 @@ export default function CatalogNavigation() {
 
                               return (
                                 <details key={category.id} className="group/category mb-1 last:mb-0">
-                                  <summary className="flex cursor-pointer list-none items-center gap-2 rounded-lg px-2 py-2 text-xs uppercase hover:bg-black/[0.04] dark:text-neutral-300 dark:hover:bg-white/[0.05] [&::-webkit-details-marker]:hidden">
+                                  <summary className="flex cursor-pointer list-none items-center gap-2 rounded-lg px-2 py-2 text-xs uppercase [&::-webkit-details-marker]:hidden">
                                     <span className="flex-1">{category.name}</span>
 
                                     <span
@@ -121,7 +115,7 @@ export default function CatalogNavigation() {
                                       <Link
                                         key={collection.id}
                                         href={`/c/${collection.id}/`}
-                                        className="block rounded-lg px-2 py-2 text-xs transition hover:bg-black/[0.04] hover:text-neutral-900 dark:text-neutral-400 dark:hover:bg-white/[0.05] dark:hover:text-white"
+                                        className="block rounded-lg px-2 py-2 text-xs transition"
                                       >
                                         {collection.name}
                                       </Link>
@@ -150,7 +144,7 @@ export default function CatalogNavigation() {
                     key={item.href}
                     href={item.href}
                     aria-label={item.label}
-                    className="flex h-10 w-10 items-center justify-center rounded-full transition hover:bg-black/[0.05] hover:text-neutral-950 dark:text-neutral-300 dark:hover:bg-white/[0.07] dark:hover:text-white"
+                    className="flex h-10 w-10 items-center justify-center rounded-full transition"
                   >
                     <Icon className="h-[19px] w-[19px]" aria-hidden="true" />
                   </Link>
@@ -182,7 +176,7 @@ export default function CatalogNavigation() {
 
                     <button
                       type="button"
-                      className="flex items-center gap-2 rounded-full px-3 py-2.5 text-sm font-medium whitespace-nowrap text-neutral-700 transition outline-none hover:bg-black/[0.04] hover:text-neutral-950 focus-visible:ring-2 focus-visible:ring-black/20 dark:text-neutral-200 dark:hover:bg-white/[0.06] dark:hover:text-white dark:focus-visible:ring-white/30"
+                      className="flex items-center gap-2 rounded-full px-3 py-2.5 text-sm font-medium whitespace-nowrap transition outline-none focus-visible:ring-2"
                       aria-haspopup="true"
                     >
                       <Icon className="h-[17px] w-[17px]" aria-hidden="true" />
@@ -202,7 +196,7 @@ export default function CatalogNavigation() {
                         ================================================= */}
 
                     <div className="invisible absolute top-full left-0 pt-2 opacity-0 transition-all duration-150 group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100">
-                      <div className="w-[min(760px,calc(100vw-3rem))] overflow-hidden rounded-2xl border border-black/[0.08] bg-white shadow-[0_24px_70px_rgba(0,0,0,0.14)] dark:border-white/[0.08] dark:bg-neutral-950">
+                      <div className="bg-surface w-[min(760px,calc(100vw-3rem))] overflow-hidden rounded-b-2xl shadow-[0_24px_70px_rgba(0,0,0,0.14)]">
                         <div className="grid max-h-[70vh] grid-cols-2 gap-x-8 overflow-y-auto p-6 xl:grid-cols-3">
                           {groupCategories.map((category) => {
                             const categoryCollections = getCollections(group.name, category.name);
@@ -229,7 +223,7 @@ export default function CatalogNavigation() {
                                     <Link
                                       key={collection.id}
                                       href={`/c/${collection.id}/`}
-                                      className="group/item block rounded-lg px-2 py-1.5 text-sm leading-5 transition hover:bg-black/[0.04] dark:text-neutral-400 dark:hover:bg-white/[0.05] dark:hover:text-white"
+                                      className="group/item block rounded-lg px-2 py-1.5 text-sm leading-5 transition"
                                     >
                                       <span className="transition-transform group-hover/item:translate-x-0.5">
                                         {collection.name}
@@ -252,7 +246,7 @@ export default function CatalogNavigation() {
                 DESKTOP UTILITY NAVIGATION
                 ========================================================== */}
 
-            <div className="ml-auto flex shrink-0 items-center gap-1 border-l border-black/[0.08] pl-4 dark:border-white/[0.08]">
+            <div className="ml-auto flex shrink-0 items-center gap-1 border-l border-black/[0.08] pl-4">
               {primaryNav.map((item) => {
                 const Icon = item.icon;
 
@@ -260,7 +254,7 @@ export default function CatalogNavigation() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="group/utility flex items-center gap-2 rounded-full px-3 py-2 text-sm transition hover:bg-black/[0.04] hover:text-neutral-950 dark:text-neutral-300 dark:hover:bg-white/[0.06] dark:hover:text-white"
+                    className="group/utility flex items-center gap-2 rounded-full px-3 py-2 text-sm transition"
                   >
                     <Icon
                       className="h-[18px] w-[18px] transition-transform group-hover/utility:scale-105"

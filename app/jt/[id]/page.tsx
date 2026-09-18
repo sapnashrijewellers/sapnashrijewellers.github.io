@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: JewelryTypePageProps): Promis
   const imageUrl =
     matchingProducts.length > 0 && matchingProducts[0].images?.[0]
       ? `${driveURL}${matchingProducts[0].images[0]}`
-      : `${baseURL}/icons/icon-512x512.png`;
+      : `${baseURL}/icon-512x512.png`;
 
   return {
     title,

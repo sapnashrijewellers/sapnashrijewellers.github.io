@@ -1,21 +1,18 @@
-"use client";
+'use client';
 
-import { useCallback, useState } from "react";
-import { useRouter } from "next/navigation";
-import { ShoppingCart, Loader2 } from "lucide-react";
+import { useCallback, useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { ShoppingCart, Loader2 } from 'lucide-react';
 
-import { addToCart } from "@/utils/cart/cart";
-import type { Product } from "@/types/catalog";
+import { addToCart } from '@/utils/cart/cart';
+import type { Product } from '@/types/catalog';
 
 interface BuyNowButtonProps {
   product: Product;
   className?: string;
 }
 
-export default function BuyNowButton({
-  product,
-  className = "",
-}: BuyNowButtonProps) {
+export default function BuyNowButton({ product, className = '' }: BuyNowButtonProps) {
   const router = useRouter();
   const [isProcessing, setIsProcessing] = useState(false);
 
@@ -27,21 +24,20 @@ export default function BuyNowButton({
     try {
       setIsProcessing(true);
 
-     
       addToCart({
         productId: product.id,
         qty: 1,
         product,
       });
 
-      router.push("/cart/");
+      router.push('/cart/');
     } catch (error) {
-      console.error("Failed to initialize Buy Now:", error);
+      console.error('Failed to initialize Buy Now:', error);
       setIsProcessing(false);
     }
   }, [isProcessing, product, router]);
 
-  const accessibleLabel = `अभी खरीदें: ${product.name} (Buy ${product.name} now and proceed to checkout)`;
+  const accessibleLabel = `Buy ${product.name} now and proceed to checkout)`;
 
   return (
     <button
@@ -50,49 +46,17 @@ export default function BuyNowButton({
       disabled={isProcessing}
       aria-label={accessibleLabel}
       aria-busy={isProcessing}
-      className={`
-        inline-flex items-center justify-center gap-2.5
-        px-6 py-3 rounded-xl
-        bg-accent text-accent-foreground
-        font-bold text-base sm:text-lg
-        shadow-md
-        transition-[transform,opacity,background-color]
-        duration-150 ease-out
-        will-change-[transform]
-        hover:bg-accent/90 hover:scale-[1.02]
-        active:scale-95
-        focus:outline-none
-        focus:ring-2
-        focus:ring-primary
-        focus:ring-offset-2
-        focus:ring-offset-background
-        disabled:opacity-60
-        disabled:pointer-events-none
-        cursor-pointer
-        ${className}
-      `}
+      className={`bg-accent text-accent-foreground hover:bg-accent/90 focus:ring-primary focus:ring-offset-background inline-flex cursor-pointer items-center justify-center gap-2.5 rounded-xl px-6 py-3 text-base font-bold shadow-md transition-[transform,opacity,background-color] duration-150 ease-out will-change-[transform] hover:scale-[1.02] focus:ring-2 focus:ring-offset-2 focus:outline-none active:scale-95 disabled:pointer-events-none disabled:opacity-60 sm:text-lg ${className} `}
     >
       {isProcessing ? (
-        <Loader2
-          className="w-5 h-5 shrink-0 animate-spin"
-          aria-hidden="true"
-        />
+        <Loader2 className="h-5 w-5 shrink-0 animate-spin" aria-hidden="true" />
       ) : (
-        <ShoppingCart
-          className="w-5 h-5 shrink-0"
-          aria-hidden="true"
-        />
+        <ShoppingCart className="h-5 w-5 shrink-0" aria-hidden="true" />
       )}
 
-      <span>
-        {isProcessing
-          ? "Processing..."
-          : "अभी खरीदें (Buy Now)"}
-      </span>
+      <span>{isProcessing ? 'Processing...' : 'Buy Now'}</span>
 
-      <span className="sr-only">
-        for {product.name}
-      </span>
+      <span className="sr-only">for {product.name}</span>
     </button>
   );
 }

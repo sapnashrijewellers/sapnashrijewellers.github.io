@@ -182,7 +182,7 @@ export default function ProductChatbot({ product, className = '' }: ProductChatb
           <div className="bg-primary/10 rounded-lg p-1">
             <Sparkles className="h-4 w-4" aria-hidden="true" />
           </div>
-          <h3 className="text-foreground text-xl font-semibold">Ask AI (AI सहायता)</h3>
+          <h3 className="text-foreground text-xl font-semibold">Ask AI</h3>
         </div>
 
         <button
@@ -287,7 +287,7 @@ export default function ProductChatbot({ product, className = '' }: ProductChatb
               onChange={(e) => setInput(e.target.value)}
               placeholder="Ask about dimensions, purity, dispatch..."
               disabled={loading}
-              className="bg-background border-theme/40 text-foreground placeholder:text-muted-foreground/60 focus:ring-primary flex-1 rounded-xl border px-3.5 py-2 text-xs outline-none focus:ring-1 disabled:opacity-50 sm:text-sm"
+              className="bg-background border-theme/40 text-foreground placeholder:text-muted-foreground/60 focus:ring-primary flex-1 rounded-xl border px-3.5 py-2 text-sm outline-none focus:ring-1 disabled:opacity-50 sm:text-sm"
             />
             <button
               type="submit"

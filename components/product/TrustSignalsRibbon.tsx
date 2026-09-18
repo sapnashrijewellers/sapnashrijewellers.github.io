@@ -125,27 +125,27 @@ export default function TrustSignalsRibbon({ product, className = '' }: TrustSig
             >
               {/* Badge if present */}
               {item.badge && (
-                <span className="bg-primary/15 text-primary-900 absolute top-2 right-2 rounded-md px-1.5 py-0.5 text-[10px] font-medium tracking-wide">
+                <span className="bg-primary/15 absolute top-2 right-2 rounded-md px-1.5 py-0.5 text-[10px] font-medium tracking-wide">
                   {item.badge}
                 </span>
               )}
 
               {/* Icon Container */}
               <div
-                className="bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary mb-2.5 flex h-9 w-9 items-center justify-center rounded-full transition-all duration-200 group-hover:scale-105"
+                className="bg-primary/10 group-hover:bg-primary mb-2.5 flex h-9 w-9 items-center justify-center rounded-full transition-all duration-200 group-hover:scale-105"
                 aria-hidden="true"
               >
                 <Icon className="h-5 w-5" />
               </div>
 
               {/* Text Meta */}
-              <span className="group-hover:text-primary text-xs leading-snug font-semibold text-neutral-900 transition-colors sm:text-sm">
+              <span className="text-xs leading-snug font-semibold text-neutral-900 transition-colors sm:text-sm">
                 {item.title}
               </span>
               <span className="mt-0.5 text-[11px] leading-tight text-neutral-600">{item.subtitle}</span>
 
               {/* Subtle hover trigger indicator */}
-              <span className="group-hover:text-primary mt-2 inline-flex items-center text-[10px] font-medium text-neutral-600">
+              <span className="mt-2 inline-flex items-center text-[10px] font-medium text-neutral-600">
                 Details <ChevronRight className="ml-0.5 h-3 w-3 transition-transform group-hover:translate-x-0.5" />
               </span>
             </button>
@@ -171,7 +171,7 @@ export default function TrustSignalsRibbon({ product, className = '' }: TrustSig
           >
             <div className="flex items-start justify-between gap-3">
               <div className="flex items-center gap-2.5">
-                <div className="bg-primary/10 text-primary rounded-xl p-2">
+                <div className="bg-primary/10 rounded-xl p-2">
                   <activeModalItem.icon className="h-5 w-5" />
                 </div>
                 <div>
@@ -199,7 +199,7 @@ export default function TrustSignalsRibbon({ product, className = '' }: TrustSig
                 href={activeModalItem.link}
                 target="_blank"
                 rel="noreferrer"
-                className="text-primary mt-4 inline-flex items-center gap-1.5 text-xs font-semibold hover:underline"
+                className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold hover:underline"
               >
                 Read our official policy terms
                 <ExternalLink className="h-3.5 w-3.5" />

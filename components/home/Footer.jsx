@@ -34,7 +34,7 @@ export default function Footer() {
   return (
     <footer
       aria-label="Site footer and store information"
-      className="bg-footer text-footer border-t border-theme/30"
+      className="bg-(--color-footer-bg) text-(--color-footer-text) border-t border-theme/30"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
 
@@ -43,7 +43,7 @@ export default function Footer() {
           <div className="flex items-center gap-2">
             <BrandLogo view="lg" />
           </div>
-          <h2 className="text-3xl font-yatra footer-heading tracking-wide">
+          <h2 className="text-3xl footer-heading tracking-wide">
             Sapna Shri Jewellers
           </h2>
           <p className="text-sm italic opacity-90 leading-relaxed">
@@ -91,7 +91,7 @@ export default function Footer() {
 
         {/* 2. POLICIES & LEGAL */}
         <nav aria-label="Store policies and customer protection">
-          <h3 className="footer-heading font-yatra text-base sm:text-lg mb-3">
+          <h3 className="footer-heading text-base sm:text-lg mb-3">
             Policies
           </h3>
           <ul className="space-y-2">
@@ -111,7 +111,7 @@ export default function Footer() {
 
         {/* 3. OUR STORY & TRUST PILLARS */}
         <section aria-label="Our story and heritage" className="space-y-3">
-          <h3 className="footer-heading font-yatra text-base sm:text-lg">
+          <h3 className="footer-heading text-base sm:text-lg">
             35+ Years of Trust
           </h3>
           <p className="text-sm opacity-90 leading-relaxed">
@@ -130,7 +130,7 @@ export default function Footer() {
           <div className="pt-2">
             <Link
               href="/about-us"
-              className="inline-flex items-center gap-1.5 text-sm font-medium hover:underline hover:text-primary transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded group"
+              className="inline-flex items-center gap-1.5 text-sm font-medium hover:underline transition-colors focus:outline-none focus:ring-1 focus:ring-primary rounded group"
               title="Discover the journey and heritage of Sapna Shri Jewellers"
             >
               <span>Discover Our Story</span>
@@ -143,11 +143,11 @@ export default function Footer() {
         <section aria-label="Physical showroom address and hours">
           <div className="flex items-start gap-2">
             <MapPin className="w-4 h-4 shrink-0 mt-1" aria-hidden="true" />
-            <h3 className="footer-heading font-yatra text-base sm:text-lg mb-3">
+            <h3 className="footer-heading mb-3">
               Store Address
             </h3>
           </div>
-          <address className="space-y-2.5 text-footer/90 not-italic">
+          <address className="space-y-2.5 text-(--color-footer-text)/90 not-italic">
             <div>
               <p>Sapna Shri Jewellers</p>
               <p className="mt-0.5">

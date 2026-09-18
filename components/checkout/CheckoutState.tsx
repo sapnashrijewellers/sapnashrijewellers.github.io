@@ -281,7 +281,7 @@ export default function CheckoutState({ className = '' }: CheckoutStateProps) {
         </div>
 
         <div className="space-y-1.5">
-          <h2 className="text-foreground font-yatra text-2xl font-bold">
+          <h2 className="">
             Please sign-in to checkout
             <span className="block">(Sign In to Checkout)</span>
           </h2>
@@ -317,7 +317,7 @@ export default function CheckoutState({ className = '' }: CheckoutStateProps) {
   return (
     <main
       aria-label="Jewellery order checkout funnel"
-      className={`bg-page mx-auto max-w-5xl space-y-6 p-4 sm:p-6 ${className} `}
+      className={`mx-auto max-w-5xl space-y-6 p-4 sm:p-6 ${className} `}
     >
       <div className="sr-only" aria-live="polite">
         {`Current checkout step: ${step}. Total items in cart: ${

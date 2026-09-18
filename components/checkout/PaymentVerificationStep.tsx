@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { Address, Cart, PaymentMethod, PriceSummaryType } from "@/types/catalog";
-import { fireConfetti } from "@/components/checkout/FireConfetti";
-import { useState } from "react";
-import { PackageCheck, Loader2 } from "lucide-react";
+import { Address, Cart, PaymentMethod, PriceSummaryType } from '@/types/catalog';
+import { fireConfetti } from '@/components/checkout/FireConfetti';
+import { useState } from 'react';
+import { PackageCheck, Loader2 } from 'lucide-react';
 
 type Props = {
   cart: Cart;
@@ -13,14 +13,8 @@ type Props = {
   clearCart: () => void;
 };
 
-export default function PaymentVerificationStep({
-  cart,
-  address,
-  paymentMethod,
-  priceSummary,
-  clearCart,
-}: Props) {
-  const [paymentRef, setPaymentRef] = useState("");
+export default function PaymentVerificationStep({ cart, address, paymentMethod, priceSummary, clearCart }: Props) {
+  const [paymentRef, setPaymentRef] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [orderPlaced, setOrderPlaced] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -36,7 +30,7 @@ export default function PaymentVerificationStep({
 Qty: ${item.qty}
 Link: ${process.env.NEXT_PUBLIC_BASE_URL}/p/${item.product.id}`;
       })
-      .join("\n\n");
+      .join('\n\n');
 
     return `
 🛍️ Order Confirmation
@@ -61,17 +55,15 @@ ${productLines}
 
   function openWhatsApp() {
     const msg = buildWhatsAppMessage();
-    const url = `https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP}?text=${encodeURIComponent(
-      msg
-    )}`;
-    window.open(url, "_blank");
+    const url = `https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP}?text=${encodeURIComponent(msg)}`;
+    window.open(url, '_blank');
   }
 
   /* ---------------- Order API ---------------- */
 
   async function submitOrder() {
     if (!paymentRef.trim()) {
-      setError("Payment Reference ID is required");
+      setError('Payment Reference ID is required');
       return;
     }
 
@@ -80,8 +72,8 @@ ${productLines}
 
     try {
       const res = await fetch(`${process.env.NEXT_PUBLIC_WORKER_URL}/order`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           cart,
           address,
@@ -91,17 +83,16 @@ ${productLines}
         }),
       });
 
-      if (!res.ok) throw new Error("Order creation failed");
+      if (!res.ok) throw new Error('Order creation failed');
 
       fireConfetti();
       clearCart();
       setOrderPlaced(true);
 
-
       setTimeout(openWhatsApp, 1200);
     } catch (e) {
       console.log(e);
-      setError("Something went wrong. Please try again.");
+      setError('Something went wrong. Please try again.');
     } finally {
       setSubmitting(false);
     }
@@ -110,17 +101,15 @@ ${productLines}
   /* ---------------- UI ---------------- */
 
   return (
-    <div className="bg-surface border border-theme rounded-xl p-6 space-y-5">
-      <h2 className="text-xl font-yatra">Payment Verification</h2>
+    <div className="bg-surface border-theme space-y-5 rounded-xl border p-6">
+      <h2 className="">Payment Verification</h2>
 
-      <p className="text-sm text-muted">
+      <p className="text-muted text-sm">
         To process your order at <b>Sapna Shri Jewellers</b>, please enter your
         <b> Payment Transaction / Reference ID</b>.
       </p>
 
-      <p className="text-xs text-muted italic">
-        * This ID is required for manual payment reconciliation.
-      </p>
+      <p className="text-muted text-xs italic">* This ID is required for manual payment reconciliation.</p>
 
       <div>
         <label className="labelClasses">
@@ -132,7 +121,7 @@ ${productLines}
           placeholder="e.g. UPI / Bank Ref No."
           className="inputClasses"
         />
-        {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
+        {error && <p className="mt-1 text-sm text-red-500">{error}</p>}
       </div>
 
       <button
@@ -154,19 +143,14 @@ ${productLines}
 
       {/* ---------------- Success Modal ---------------- */}
       {orderPlaced && (
-        <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center">
-          <div className="bg-surface border border-theme rounded-xl p-8 max-w-md text-center space-y-4">
-            <h3 className="text-2xl font-yatra">
-              🎉 Thank You for Your Order!
-            </h3>
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
+          <div className="bg-surface border-theme max-w-md space-y-4 rounded-xl border p-8 text-center">
+            <h3 className="">🎉 Thank You for Your Order!</h3>
 
-            <p className="text-muted">
-              Your payment details have been received successfully.
-            </p>
+            <p className="text-muted">Your payment details have been received successfully.</p>
 
-            <p className="text-sm text-muted">
-              Our team will verify your payment and confirm availability shortly
-              via WhatsApp.
+            <p className="text-muted text-sm">
+              Our team will verify your payment and confirm availability shortly via WhatsApp.
             </p>
 
             <button className="ssj-btn w-full" onClick={openWhatsApp}>

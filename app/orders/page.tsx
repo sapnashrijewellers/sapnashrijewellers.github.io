@@ -162,10 +162,7 @@ export default function OrdersPage() {
         </div>
 
         <div className="space-y-1.5">
-          <h2 className="text-foreground font-yatra text-2xl font-bold">
-            साइन इन करें
-            <span className="block">(Sign In to View Orders)</span>
-          </h2>
+          <h2 className="">Sign In to View Orders</h2>
 
           <p className="text-muted-foreground text-sm">
             Please sign in with your Google account to access your purchase history and order tracking.
@@ -268,10 +265,7 @@ export default function OrdersPage() {
   return (
     <main aria-labelledby="orders-page-heading" className="mx-auto max-w-6xl space-y-8 px-4 py-8">
       <header className="border-theme/20 flex flex-col justify-between gap-2 border-b pb-4 sm:flex-row sm:items-baseline">
-        <h2
-          id="orders-page-heading"
-          className="text-foreground font-yatra text-2xl font-bold tracking-tight sm:text-3xl"
-        >
+        <h2 id="orders-page-heading" className="">
           My Orders
         </h2>
 

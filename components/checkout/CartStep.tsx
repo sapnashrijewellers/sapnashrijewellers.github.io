@@ -1,9 +1,8 @@
-import { Cart } from "@/types/catalog";
-import ProductCard from "@/components/product/ProductCard";
-import { Dispatch, SetStateAction } from "react";
-import { QuantityControl } from "./QuantityControl";
-import { Trash2, Check } from "lucide-react";
-
+import { Cart } from '@/types/catalog';
+import ProductCard from '@/components/product/ProductCard';
+import { Dispatch, SetStateAction } from 'react';
+import { QuantityControl } from './QuantityControl';
+import { Trash2, Check } from 'lucide-react';
 
 type CartStepProps = {
   cart: Cart;
@@ -11,39 +10,20 @@ type CartStepProps = {
   onNext?: () => void;
 };
 
-export default function CartStep({
-  cart,
-  setCart,
-  onNext,
-}: CartStepProps) {
-
-  function updateCartQtyInState(
-    cart: Cart,
-    productId: number,    
-    qty: number
-  ): Cart {
+export default function CartStep({ cart, setCart, onNext }: CartStepProps) {
+  function updateCartQtyInState(cart: Cart, productId: number, qty: number): Cart {
     return {
       ...cart,
-      items: cart.items.map(item =>
-        item.productId === productId
-          ? { ...item, qty: Math.max(1, Math.min(10, qty)) }
-          : item
+      items: cart.items.map((item) =>
+        item.productId === productId ? { ...item, qty: Math.max(1, Math.min(10, qty)) } : item,
       ),
     };
   }
 
-  function removeItemFromCart(
-    cart: Cart,
-    productId: number,
-  ): Cart {
+  function removeItemFromCart(cart: Cart, productId: number): Cart {
     return {
       ...cart,
-      items: cart.items.filter(
-        item =>
-          !(
-            item.productId === productId
-          )
-      ),
+      items: cart.items.filter((item) => !(item.productId === productId)),
     };
   }
 
@@ -51,32 +31,22 @@ export default function CartStep({
 
   return (
     <>
-      <h2 className="text-xl mb-4 font-yatra">Your Cart</h2>
+      <h2 className="">Your Cart</h2>
 
       {isEmpty ? (
-        <div className="text-center py-12 text-muted">
-          <p className="text-lg mb-2">Your cart is empty</p>
+        <div className="text-muted py-12 text-center">
+          <p className="mb-2 text-lg">Your cart is empty</p>
           <p className="text-sm opacity-70">Add some products to continue</p>
         </div>
       ) : (
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-          {cart.items.map(item => (
-            <div
-              key={`${item.productId}`}
-              className="bg-surface border border-theme rounded-lg p-2 relative"
-            >
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
+          {cart.items.map((item) => (
+            <div key={`${item.productId}`} className="bg-surface border-theme relative rounded-lg border p-2">
               {/* Delete button */}
               {setCart && (
                 <button
-                  className="absolute bottom-4 right-4 text-muted hover:text-red-600"
-                  onClick={() =>
-                    setCart(prev =>
-                      removeItemFromCart(
-                        prev,
-                        item.productId
-                      )
-                    )
-                  }
+                  className="text-muted absolute right-4 bottom-4 hover:text-red-600"
+                  onClick={() => setCart((prev) => removeItemFromCart(prev, item.productId))}
                   aria-label="Remove item from the cart"
                 >
                   <Trash2 size={22} />
@@ -89,13 +59,7 @@ export default function CartStep({
                 <QuantityControl
                   qty={item.qty}
                   onChange={(newQty) => {
-                    setCart(prev =>
-                      updateCartQtyInState(
-                        prev,
-                        item.productId,                        
-                        newQty
-                      )
-                    );
+                    setCart((prev) => updateCartQtyInState(prev, item.productId, newQty));
                   }}
                 />
               ) : (
@@ -108,7 +72,7 @@ export default function CartStep({
 
       {/* Continue button only when cart has items */}
       {!isEmpty && onNext && (
-        <button className="ssj-btn w-full mt-6" onClick={onNext}>
+        <button className="ssj-btn mt-6 w-full" onClick={onNext}>
           <Check size={16} strokeWidth={3} />
           Continue
         </button>

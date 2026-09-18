@@ -1,9 +1,7 @@
 @import "tailwindcss";
-/* @import "tailwindcss/utilities"; */
 
 @theme {
   --font-yatra: var(--font-yatra-one), serif;
-  /* --font-noto-devanagari: var(--font-noto-devanagari), sans-serif; */
 }
 
 /* ============================
@@ -36,12 +34,6 @@
   --color-footer-bg: #050e24;
   --color-footer-text: #cbd5e1;
   --color-footer-heading: #ffffff;
-  --color-footer-border: #0f2a5f;
-
-  /* Footer Trust */
-  --color-footer-trust-bg: #071a3a;
-  --color-footer-trust-text: #e5e7eb;
-  --color-footer-trust-icon: #c9a24d;
 
   /* Fonts */
   --font-yatra: var(--font-yatra-one), "Sans Devanagari", serif;
@@ -52,12 +44,6 @@
    UTILITIES
 ============================ */
 @layer utilities {
-
-  /* Backgrounds */
-  .bg-page {
-    background-color: var(--color-bg);
-  }
-
   .bg-surface {
     background-color: var(--color-surface);
   }
@@ -79,64 +65,15 @@
   .border-primary {
     border-color: var(--color-primary);
   }
-
-  /* Text */
-  .text-normal {
-    color: var(--color-text);
-  }
-
-  .text-primary {
-    color: var(--color-primary);
-  }
-
-  .text-primary-dark {
-    color: var(--color-primary-dark);
-  }
-
   .text-muted {
     color: color-mix(in srgb, var(--color-text) 65%, transparent);
   }
 
-  /* Footer */
-  .bg-footer {
-    background-color: var(--color-footer-bg);
-  }
-
-  .text-footer {
-    color: var(--color-footer-text);
-  }
-
-  .border-footer {
-    border-color: var(--color-footer-border);
-  }
-
   .footer-heading {
     color: var(--color-footer-heading) !important;
-  }
-
-  /* Footer Trust */
-  .bg-footer-trust {
-    background-color: var(--color-footer-trust-bg);
-  }
-
-  .text-footer-trust {
-    color: var(--color-footer-trust-text);
-  }
-
-  .icon-footer-trust {
-    color: var(--color-footer-trust-icon);
-  }
-
-  /* Font */
-  .font-yatra {
-    font-family: var(--font-yatra);
-    letter-spacing: 0.03em;
-  }
+  }  
 }
 
-/* ============================
-   COMPONENTS
-============================ */
 @layer components {
 
   /* Buttons */
@@ -269,27 +206,6 @@ h5 {
   border: 1px solid var(--color-border);
   border-radius: 0.5rem;
   padding: 0.5rem;
-}
-
-/* ============================
-   TESTIMONIALS
-============================ */
-.testimonial-track-auto {
-  animation: testimonial-track-scroll 18s linear infinite;
-}
-
-@keyframes testimonial-track-scroll {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-40%);
-  }
-}
-
-.testimonial-track-auto:hover {
-  animation-play-state: paused;
 }
 
 /* Styling for MDX content wrapped in .policy-container */

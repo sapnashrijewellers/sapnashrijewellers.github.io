@@ -1,6 +1,6 @@
-import type { Product } from "@/types/catalog";
-import faqsData from "@/data/faqs.json";
-import { HelpCircle } from "lucide-react";
+import type { Product } from '@/types/catalog';
+import faqsData from '@/data/faqs.json';
+import { HelpCircle } from 'lucide-react';
 
 interface FAQItem {
   id?: string | number;
@@ -14,27 +14,24 @@ interface FAQProps {
   className?: string;
 }
 
-export default function FAQ({ product, className = "" }: FAQProps) {
-  const hasHighlights =
-    Array.isArray(product.highlights) && product.highlights.length > 0;
+export default function FAQ({ product, className = '' }: FAQProps) {
+  const hasHighlights = Array.isArray(product.highlights) && product.highlights.length > 0;
   if (!hasHighlights) return null;
 
-  const productFaqs = (faqsData as FAQItem[]).filter(
-    (f) => String(f.productId) === String(product.id),
-  );
+  const productFaqs = (faqsData as FAQItem[]).filter((f) => String(f.productId) === String(product.id));
 
   if (productFaqs.length === 0) return null;
 
   // Schema.org FAQPage structured data for Search Engines & LLM crawling
   const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
     mainEntity: productFaqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.q.replace(/[\r\n\t]+/g, " ").trim(),
+      '@type': 'Question',
+      name: faq.q.replace(/[\r\n\t]+/g, ' ').trim(),
       acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.a.replace(/[\r\n\t]+/g, " ").trim(),
+        '@type': 'Answer',
+        text: faq.a.replace(/[\r\n\t]+/g, ' ').trim(),
       },
     })),
   };
@@ -42,7 +39,7 @@ export default function FAQ({ product, className = "" }: FAQProps) {
   return (
     <section
       aria-labelledby="faq-section-heading"
-      className={`relative rounded-2xl p-5 sm:p-6 mb-6 bg-surface/90 shadow-sm ${className}`}
+      className={`bg-surface/90 relative mb-6 rounded-2xl p-5 shadow-sm sm:p-6 ${className}`}
       style={{
         background: `linear-gradient(
           180deg,
@@ -60,41 +57,30 @@ export default function FAQ({ product, className = "" }: FAQProps) {
       />
 
       {/* Header */}
-      <div className="flex items-center gap-2 mb-4 pb-2 border-b border-theme/20">
-        <HelpCircle
-          className="w-5 h-5 shrink-0"
-          aria-hidden="true"
-        />
-        <h3
-          id="faq-section-heading"
-          className="text-xl font-bold tracking-wide font-yatra"
-        >
+      <div className="border-theme/20 mb-4 flex items-center gap-2 border-b pb-2">
+        <HelpCircle className="h-5 w-5 shrink-0" aria-hidden="true" />
+        <h3 id="faq-section-heading" className="">
           Frequently asked questions and purchase guidance for {product.name}.
         </h3>
       </div>
 
       {/* LLM & Screen Reader Context */}
-      <div className="sr-only">
-        Frequently asked questions and purchase guidance for {product.name}.
-      </div>
+      <div className="sr-only">Frequently asked questions and purchase guidance for {product.name}.</div>
 
       {/* Semantic Question/Answer List */}
       <dl className="space-y-3.5">
         {productFaqs.map((f, index) => (
           <div
             key={`${f.q}-${index}`}
-            className="rounded-2xl bg-surface/95 p-4 sm:p-5 shadow-sm transition-[transform,box-shadow] duration-150 ease-out will-change-transform"
+            className="bg-surface/95 rounded-2xl p-4 shadow-sm transition-[transform,box-shadow] duration-150 ease-out will-change-transform sm:p-5"
           >
-            <dt className="text-sm sm:text-base font-semibold text-foreground leading-snug flex items-start gap-2">
-              <span
-                className="font-bold select-none"
-                aria-hidden="true"
-              >
+            <dt className="text-foreground flex items-start gap-2 text-sm leading-snug font-semibold sm:text-base">
+              <span className="font-bold select-none" aria-hidden="true">
                 Q.
               </span>
               <span>{f.q}</span>
             </dt>
-            <dd className="mt-2.5 text-xs sm:text-sm text-foreground/85 leading-relaxed pl-5 sm:pl-6 border-l-2 border-primary/30">
+            <dd className="text-foreground/85 border-primary/30 mt-2.5 border-l-2 pl-5 text-xs leading-relaxed sm:pl-6 sm:text-sm">
               {f.a}
             </dd>
           </div>

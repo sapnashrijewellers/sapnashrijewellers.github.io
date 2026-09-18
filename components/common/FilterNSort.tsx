@@ -1,49 +1,36 @@
-"use client";
+'use client';
 
-import { useRef } from "react";
-import { Funnel, ArrowUpDown } from "lucide-react";
-import { FilterPanel } from "@/components/common/FilterPanel";
-import { SortPanel } from "@/components/common/SortPanel";
-import type { SearchFilters } from "@/types/catalog";
+import { useRef } from 'react';
+import { Funnel, ArrowUpDown } from 'lucide-react';
+import { FilterPanel } from '@/components/common/FilterPanel';
+import { SortPanel } from '@/components/common/SortPanel';
+import type { SearchFilters } from '@/types/catalog';
 
-type Material = "Gold" | "Silver";
+type Material = 'Gold' | 'Silver';
 
 export interface FilterNSortProps {
   filters: SearchFilters;
-  onFilterChange: <K extends keyof SearchFilters>(
-    key: K,
-    value: SearchFilters[K]
-  ) => void;
+  onFilterChange: <K extends keyof SearchFilters>(key: K, value: SearchFilters[K]) => void;
   sortBy: string;
   onSortChange: (sort: string) => void;
 }
 
-export default function FilterNSort({
-  filters,
-  onFilterChange,
-  sortBy,
-  onSortChange,
-}: FilterNSortProps) {
+export default function FilterNSort({ filters, onFilterChange, sortBy, onSortChange }: FilterNSortProps) {
   const filterBtnRef = useRef<HTMLButtonElement>(null);
   const sortBtnRef = useRef<HTMLButtonElement>(null);
 
-  const materials: Material[] = ["Silver", "Gold"];
+  const materials: Material[] = ['Silver', 'Gold'];
 
   return (
     <div
       role="toolbar"
       aria-label="Jewellery filter and sort controls"
-      className="relative flex items-center gap-2 flex-nowrap"
+      className="relative flex flex-nowrap items-center gap-2"
     >
       {/* Material Quick-Filter Toggles */}
-      <div
-        role="group"
-        aria-label="Filter by material"
-        className="flex items-center gap-1.5 sm:gap-2 shrink-0"
-      >
+      <div role="group" aria-label="Filter by material" className="flex shrink-0 items-center gap-1.5 sm:gap-2">
         {materials.map((m) => {
-          const isSelected =
-            filters.material?.toLowerCase() === m.toLowerCase();
+          const isSelected = filters.material?.toLowerCase() === m.toLowerCase();
 
           return (
             <button
@@ -51,16 +38,11 @@ export default function FilterNSort({
               type="button"
               role="button"
               aria-pressed={isSelected}
-              onClick={() => onFilterChange("material", m)}
+              onClick={() => onFilterChange('material', m)}
               aria-label={`Filter by ${m} jewellery`}
-              className={`
-                ssj-btn border px-4 sm:px-6 py-2 text-sm font-medium transition-colors shrink-0 flex items-center justify-center min-h-[40px] rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1
-                ${
-                  isSelected
-                    ? "bg-accent font-bold text-accent-foreground border-theme"
-                    : "bg-surface text-primary-dark hover:bg-primary/10 cursor-pointer border-theme/40"
-                }
-              `}
+              className={`btn focus:ring-primary flex min-h-[40px] shrink-0 items-center justify-center rounded-xl border px-4 py-2 text-sm font-medium transition-colors focus:ring-2 focus:ring-offset-1 focus:outline-none sm:px-6 ${
+                isSelected ? 'ssj-btn ssj-btn' : 'ssj-btn-outline'
+              } `}
             >
               {m}
             </button>
@@ -76,16 +58,12 @@ export default function FilterNSort({
           aria-haspopup="dialog"
           aria-label="Open detailed filter options (price, metal, collection)"
           title="Filter results"
-          className="ssj-btn bg-accent text-accent-foreground shrink-0 flex items-center justify-center w-10 h-10 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1 transition-colors hover:bg-accent/80"
+          className="ssj-btn bg-accent text-accent-foreground focus:ring-primary hover:bg-accent/80 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl transition-colors focus:ring-2 focus:ring-offset-1 focus:outline-none"
         >
           <Funnel size={16} aria-hidden="true" />
         </button>
 
-        <FilterPanel
-          filters={filters}
-          onChange={onFilterChange}
-          triggerRef={filterBtnRef}
-        />
+        <FilterPanel filters={filters} onChange={onFilterChange} triggerRef={filterBtnRef} />
       </div>
 
       {/* Sort Options Panel Trigger */}
@@ -96,16 +74,12 @@ export default function FilterNSort({
           aria-haspopup="listbox"
           aria-label="Open sort options (by name, weight, or relevance)"
           title="Sort results"
-          className="ssj-btn bg-accent text-accent-foreground shrink-0 flex items-center justify-center w-10 h-10 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1 transition-colors hover:bg-accent/80"
+          className="ssj-btn bg-accent text-accent-foreground focus:ring-primary hover:bg-accent/80 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl transition-colors focus:ring-2 focus:ring-offset-1 focus:outline-none"
         >
           <ArrowUpDown size={16} aria-hidden="true" />
         </button>
 
-        <SortPanel
-          sortBy={sortBy}
-          onSortChange={onSortChange}
-          triggerRef={sortBtnRef}
-        />
+        <SortPanel sortBy={sortBy} onSortChange={onSortChange} triggerRef={sortBtnRef} />
       </div>
     </div>
   );

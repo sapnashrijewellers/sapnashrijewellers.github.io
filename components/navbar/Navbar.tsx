@@ -18,7 +18,7 @@ export default function Navbar({ className = '' }: NavbarProps) {
           <BrandLogo className="shrink-0" />
 
           <div className="hidden min-w-0 shrink-0 lg:block">
-            <h1 className="text-primary text-xl leading-tight font-semibold tracking-tight">Sapna Shri Jewellers</h1>
+            <h1 className="text-xl leading-tight font-semibold tracking-tight">Sapna Shri Jewellers</h1>
 
             <p className="text-secondary mt-1 text-sm leading-tight">
               Modern Silver &amp; Gold Jewellery, Backed by 35+ Years of Trust

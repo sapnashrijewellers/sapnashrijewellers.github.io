@@ -14,7 +14,7 @@ export default function Navbar({ className = '' }: NavbarProps) {
       className={`bg-surface/95 sticky top-0 z-30 w-full backdrop-blur-md transition-colors duration-150 ${className} `}
     >
       <div className="container mx-auto px-2 min-[400px]:px-4 sm:px-6">
-        <div className="flex min-h-24 items-center gap-2 min-[400px]:gap-4 lg:gap-6">
+        <div className="flex min-h-16 items-center gap-2 min-[400px]:gap-4 lg:gap-6">
           <BrandLogo className="shrink-0" />
 
           <div className="hidden min-w-0 shrink-0 lg:block">

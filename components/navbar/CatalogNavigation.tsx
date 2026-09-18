@@ -54,7 +54,7 @@ export default function CatalogNavigation() {
 
       <div className="lg:hidden">
         <div className="mx-auto max-w-screen-xl px-4">
-          <div className="flex min-h-14 items-center justify-between gap-2">
+          <div className="flex min-h-10 items-center justify-between gap-2">
             <div className="flex min-w-0 items-center gap-1">
               {/* Mobile menu */}
 
@@ -161,7 +161,7 @@ export default function CatalogNavigation() {
 
       <div className="hidden lg:block">
         <div className="mx-auto max-w-screen-xl px-6">
-          <div className="flex min-h-14 items-center">
+          <div className="flex min-h-10 items-center">
             {/* Catalog groups */}
 
             <div className="flex min-w-0 flex-1 items-center gap-1">

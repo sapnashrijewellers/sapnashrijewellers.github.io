@@ -149,7 +149,7 @@ export default function HUIDInfo() {
           <li>चांदी के आभूषणों के लिए हॉलमार्किंग स्वैच्छिक है, परंतु प्रामाणिकता के लिए अनुशंसित है।</li>
         </ul>
 
-        <p className="text-foreground bg-accent/10 border-accent/20 rounded-xl border p-4 pt-4 font-medium">
+        <p className="rounded-xl border p-4 pt-4 font-medium">
           अगली बार जब भी आप सोने या चांदी के गहने खरीदें, तो <strong className="">HUID 6-डिजिट कोड</strong> और{' '}
           <strong className="">BIS Logo</strong> अवश्य देखें — यही असली और सुरक्षित निवेश का आधार है।
         </p>

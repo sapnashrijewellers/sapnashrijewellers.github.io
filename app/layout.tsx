@@ -1,22 +1,9 @@
 import type { Metadata, Viewport } from 'next';
-import { Yatra_One } from 'next/font/google';
-
 import '@/app/globals.css';
-
 import Navbar from '@/components/navbar/Navbar';
 import Footer from '@/components/home/Footer';
 import FloatingWhatsAppButton from '@/components/home/FloatingWhatsAppButton';
 import GoToTop from '@/components/common/GoToTop';
-
-const yatraOne = Yatra_One({
-  weight: '400',
-  subsets: ['devanagari', 'latin'],
-  display: 'swap',
-  variable: '--font-yatra-one',
-  preload: true,
-  fallback: ['Noto Sans Devanagari', 'serif'],
-  adjustFontFallback: true,
-});
 
 const baseURL = (process.env.NEXT_PUBLIC_BASE_URL || 'https://sapnashrijewellers.in').replace(/\/+$/, '');
 
@@ -98,7 +85,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={yatraOne.variable}>
+    <html lang="en">
       <head>
         <link rel="describedby" type="text/markdown" href="https://sapnashrijewellers.in/llms.txt" />
         {/* pinterest verification meta tag */}

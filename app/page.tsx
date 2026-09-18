@@ -10,6 +10,7 @@ import FeaturedJewellery from '@/components/common/FeaturedJewellery';
 import WishlistBar from '@/components/common/WishlistBar';
 import TestimonialScroller from '@/components/common/Testimonials';
 import RecentlyViewedBar from '@/components/common/RecentlyViewedBar';
+import JsonLd from '@/components/common/JsonLd';
 const baseURL = (process.env.NEXT_PUBLIC_BASE_URL || 'https://sapnashrijewellers.in').replace(/\/+$/, '');
 const imageUrl = `${baseURL}/icon-512x512.png`;
 
@@ -50,8 +51,7 @@ export default function Home() {
 
   return (
     <main className="container mx-auto max-w-7xl px-4 py-4">
-      {/* Schema.org Structured Data */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <JsonLd json={jsonLd} />
       <RotatingBanner />
       <JewelleryTypeBar />
       <HomeCategoryBar />

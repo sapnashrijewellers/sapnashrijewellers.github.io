@@ -1,18 +1,9 @@
 @import "tailwindcss";
 
-@theme {
-  --font-yatra: var(--font-yatra-one), serif;
-}
-
-/* ============================
-   ROOT THEME VARIABLES
-============================ */
 :root {
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
+  
   color-scheme: light;
 
   /* Core Surfaces */
@@ -22,9 +13,7 @@
 
   /* Text */
   --color-text: #0a2a66;
-  --color-primary: #573f0b;
-  --color-primary-dark: #081f4d;
-
+ 
   /* Brand Blues */
   --color-accent: #0a2a66;
   --color-accent-bg: #081f4d;
@@ -35,8 +24,27 @@
   --color-footer-text: #cbd5e1;
   --color-footer-heading: #ffffff;
 
-  /* Fonts */
-  --font-yatra: var(--font-yatra-one), "Sans Devanagari", serif;
+  /* ============================
+     TYPOGRAPHY
+  ============================ */
+
+  --font-sans:
+    ui-sans-serif,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  --font-serif:
+    ui-serif,
+    Georgia,
+    Cambria,
+    "Times New Roman",
+    Times,
+    serif;
 }
 
 
@@ -58,13 +66,6 @@
     border-color: var(--color-border);
   }
 
-  .border-accent {
-    border-color: var(--color-accent);
-  }
-
-  .border-primary {
-    border-color: var(--color-primary);
-  }
   .text-muted {
     color: color-mix(in srgb, var(--color-text) 65%, transparent);
   }
@@ -152,24 +153,12 @@ body {
   background-color: var(--color-bg);
   height: 100%;
   color: var(--color-text);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-button {
-  transition: all 0.2s ease;
+  font-family: var(--font-sans);
 }
 
 /* ============================
    HEADINGS
 ============================ */
-/* Shared font family with generic fallbacks */
-h1,
-h2,
-h3,
-h4 {
-  font-family: var(--font-yatra), cursive, sans-serif;
-}
-
 /* Tailwind-equivalent font-size and line-height pairs */
 h1 {
   font-size: 2.25rem;  /* text-4xl (36px) */

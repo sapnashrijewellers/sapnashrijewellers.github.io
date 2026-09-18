@@ -100,7 +100,7 @@ export default async function collectionPage({ params }: CollectionPageProps) {
 
       <JsonLd json={JsonLdObj} />
 
-      <header className="border-primary/70 my-6 border-l-4 pl-4">
+      <header className="my-6 border-l-4 pl-4">
         <h2 className="">
           {collection.name}{' '}
           <span className="text-muted-foreground font-sans text-xl font-normal md:text-2xl">| {collection.title}</span>

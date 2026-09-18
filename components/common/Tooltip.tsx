@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { Info } from "lucide-react";
-import { useState, useRef, useId, useCallback, useEffect } from "react";
+import Link from 'next/link';
+import { Info } from 'lucide-react';
+import { useState, useRef, useId, useCallback, useEffect } from 'react';
 
 interface TooltipProps {
   text: string;
@@ -13,12 +13,12 @@ interface TooltipProps {
 
 export default function Tooltip({
   text,
-  href = "/policies/disclaimer/",
-  className = "",
-  label = "Important disclaimer and policy information",
+  href = '/policies/disclaimer/',
+  className = '',
+  label = 'Important disclaimer and policy information',
 }: TooltipProps) {
   const [open, setOpen] = useState(false);
-  const [positionClass, setPositionClass] = useState<"left-0" | "right-0">("left-0");
+  const [positionClass, setPositionClass] = useState<'left-0' | 'right-0'>('left-0');
 
   const tooltipId = useId();
   const triggerRef = useRef<HTMLButtonElement | null>(null);
@@ -31,10 +31,9 @@ export default function Tooltip({
       const rect = trigger.getBoundingClientRect();
       const tooltipWidth = 256; // Tailwind w-64 = 16rem = 256px
       const viewportPadding = 8;
-      const wouldOverflowRight =
-        rect.left + tooltipWidth > window.innerWidth - viewportPadding;
+      const wouldOverflowRight = rect.left + tooltipWidth > window.innerWidth - viewportPadding;
 
-      setPositionClass(wouldOverflowRight ? "right-0" : "left-0");
+      setPositionClass(wouldOverflowRight ? 'right-0' : 'left-0');
     }
   }, []);
 
@@ -88,9 +87,9 @@ export default function Tooltip({
         aria-label={label}
         aria-describedby={open ? tooltipId : undefined}
         aria-expanded={open}
-        className="inline-flex items-center justify-center p-0.5 rounded-full focus:outline-none focus:ring-2 focus:ring-primary transition-colors duration-150 cursor-pointer"
+        className="focus:ring-primary inline-flex cursor-pointer items-center justify-center rounded-full p-0.5 transition-colors duration-150 focus:ring-2 focus:outline-none"
       >
-        <Info className="w-3.5 h-3.5" aria-hidden="true" />
+        <Info className="h-3.5 w-3.5" aria-hidden="true" />
       </button>
 
       {/* Floating Popup (with hover bridge & safe hit-area) */}
@@ -100,31 +99,18 @@ export default function Tooltip({
         aria-hidden={!open}
         onMouseEnter={showTooltip}
         onMouseLeave={hideTooltip}
-        className={`
-          absolute z-50 top-[calc(100%+0.5rem)] ${positionClass}
-          w-64 max-w-[calc(100vw-1rem)]
-          rounded-xl border border-theme bg-surface shadow-xl p-3
-          text-sm text-foreground font-normal not-italic antialiased
-          whitespace-normal wrap-break-word text-left
-          before:absolute before:-top-2.5 before:left-0 before:w-full before:h-3 before:content-['']
-          transition-[opacity,transform] duration-150 ease-out will-change-[transform,opacity]
-          ${
-            open
-              ? "opacity-100 scale-100 pointer-events-auto visible"
-              : "opacity-0 scale-95 pointer-events-none hidden"
-          }
-        `}
+        className={`absolute top-[calc(100%+0.5rem)] z-50 ${positionClass} border-theme bg-surface text-foreground w-64 max-w-[calc(100vw-1rem)] rounded-xl border p-3 text-left text-sm font-normal wrap-break-word whitespace-normal not-italic shadow-xl transition-[opacity,transform] duration-150 ease-out will-change-[transform,opacity] before:absolute before:-top-2.5 before:left-0 before:h-3 before:w-full before:content-[''] ${
+          open ? 'pointer-events-auto visible scale-100 opacity-100' : 'pointer-events-none hidden scale-95 opacity-0'
+        } `}
       >
-        <p className="leading-snug m-0 text-xs sm:text-sm text-foreground/90 font-normal">
-          {text}
-        </p>
+        <p className="text-foreground/90 m-0 text-xs leading-snug font-normal sm:text-sm">{text}</p>
 
-        <div className="mt-2 pt-2 border-t border-theme/20">
+        <div className="border-theme/20 mt-2 border-t pt-2">
           <Link
             href={href}
             tabIndex={open ? 0 : -1}
             aria-label={`Read full policy details at ${href}`}
-            className="inline-flex items-center text-xs font-semibold hover:underline focus:outline-none focus:ring-1 focus:ring-primary rounded"
+            className="focus:ring-primary inline-flex items-center rounded text-xs font-semibold hover:underline focus:ring-1 focus:outline-none"
           >
             Read full policy &rarr;
           </Link>

@@ -121,7 +121,7 @@ export default function TrustSignalsRibbon({ product, className = '' }: TrustSig
               type="button"
               onClick={() => setActiveModalItem(item)}
               aria-haspopup="dialog"
-              className="group hover:border-primary/50 focus-visible:outline-primary relative flex cursor-pointer flex-col rounded-xl border border-neutral-200/80 bg-white/70 p-3 text-left transition-all duration-200 hover:bg-white hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2"
+              className="group relative flex cursor-pointer flex-col rounded-xl border border-neutral-200/80 bg-white/70 p-3 text-left transition-all duration-200 hover:bg-white hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2"
             >
               {/* Badge if present */}
               {item.badge && (

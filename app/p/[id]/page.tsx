@@ -28,6 +28,7 @@ const ProductChatbot = dynamic(() => import('@/components/product/ProductChatbot
 import ProductGeoSpecs from '@/components/product/ProductGeoSpecs';
 import ProductViewTracker from '@/components/product/ProductViewTracker';
 import RecentlyViewedBar from '@/components/common/RecentlyViewedBar';
+import JsonLd from '@/components/common/JsonLd';
 
 interface ProductDetailPageProps {
   params: Promise<{ id: string }>;
@@ -103,10 +104,8 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
 
   return (
     <main className="container mx-auto max-w-7xl px-4 py-4">
-      {/* Schema.org Structured Data */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
+      <JsonLd json={productSchema} />
 
-      {/* 1. Breadcrumbs */}
       <Breadcrumb
         items={[
           { name: 'Home', href: '/' },

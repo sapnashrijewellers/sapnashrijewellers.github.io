@@ -57,7 +57,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               aria-label="Visit Sapna Shri Jewellers on Facebook"
               title="Visit Sapna Shri Jewellers on Facebook"
-              className="p-2 rounded-full border border-theme/40 hover:border-primary transition-[color,border-color,transform] duration-150 hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary will-change-[transform]"
+              className="p-2 rounded-full"
             >
               <FacebookIcon className="w-4 h-4 shrink-0" aria-hidden="true" />
               <span className="sr-only">Facebook</span>
@@ -69,7 +69,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               aria-label="Follow Sapna Shri Jewellers on Instagram"
               title="Follow Sapna Shri Jewellers on Instagram"
-              className="p-2 rounded-full border border-theme/40 hover:border-primary transition-[color,border-color,transform] duration-150 hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary will-change-[transform]"
+              className="p-2 rounded-full"
             >
               <InstagramIcon className="w-4 h-4 shrink-0" aria-hidden="true" />
               <span className="sr-only">Instagram</span>
@@ -81,7 +81,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               title="Subscribe to Sapna Shri Jewellers on YouTube"
               aria-label="Subscribe to Sapna Shri Jewellers on YouTube"
-              className="p-2 rounded-full border border-theme/40 hover:border-primary transition-[color,border-color,transform] duration-150 hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary will-change-[transform]"
+              className="p-2 rounded-full"
             >
               <YoutubeIcon className="w-4 h-4 shrink-0" aria-hidden="true" />
               <span className="sr-only">YouTube</span>

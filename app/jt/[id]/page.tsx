@@ -96,7 +96,7 @@ export default async function JewelryTypePage({ params }: JewelryTypePageProps) 
 
       <JsonLd json={JsonLdObj} />
 
-      <header className="border-primary/70 my-6 border-l-4 pl-4">
+      <header className="my-6 border-l-4 pl-4">
         <h2 className="">{t.type}</h2>
         {t.description && (
           <p className="text-muted-foreground/90 mt-2 max-w-4xl text-sm leading-relaxed sm:text-base">

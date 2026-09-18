@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import { useState, useRef, useEffect, useId } from "react";
-import { MessageSquare, Send, X, Sparkles, Bot, User, Loader2 } from "lucide-react";
-import type { Product } from "@/types/catalog";
+import { useState, useRef, useEffect, useId } from 'react';
+import { MessageSquare, Send, X, Sparkles, Bot, User, Loader2 } from 'lucide-react';
+import type { Product } from '@/types/catalog';
 
 interface Message {
-  role: "user" | "bot";
+  role: 'user' | 'bot';
   text: string;
 }
 
@@ -22,8 +22,8 @@ function FormattedMessage({ content }: { content: string }) {
   if (!content) return null;
 
   // Split content by explicit newlines or inline bullet points (* / -)
-  const normalizedContent = content.replace(/\s\*\s\*\*/g, "\n* **");
-  const lines = normalizedContent.split("\n").filter((l) => l.trim().length > 0);
+  const normalizedContent = content.replace(/\s\*\s\*\*/g, '\n* **');
+  const lines = normalizedContent.split('\n').filter((l) => l.trim().length > 0);
 
   const renderInlineStyles = (text: string) => {
     // Regex matches:
@@ -46,7 +46,7 @@ function FormattedMessage({ content }: { content: string }) {
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-medium underline underline-offset-2 hover:opacity-80 transition-opacity"
+            className="font-medium underline underline-offset-2 transition-opacity hover:opacity-80"
           >
             {label}
           </a>
@@ -57,21 +57,21 @@ function FormattedMessage({ content }: { content: string }) {
       const boldMatch = part.match(/^\*\*([^*]+)\*\*$/);
       if (boldMatch) {
         return (
-          <strong key={index} className="font-semibold text-foreground">
+          <strong key={index} className="text-foreground font-semibold">
             {boldMatch[1]}
           </strong>
         );
       }
 
       // Match Raw URLs: https://...
-      if (part.startsWith("http://") || part.startsWith("https://")) {
+      if (part.startsWith('http://') || part.startsWith('https://')) {
         return (
           <a
             key={index}
             href={part}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-medium underline underline-offset-2 break-all hover:opacity-80 transition-opacity"
+            className="font-medium break-all underline underline-offset-2 transition-opacity hover:opacity-80"
           >
             {part}
           </a>
@@ -83,19 +83,19 @@ function FormattedMessage({ content }: { content: string }) {
   };
 
   return (
-    <div className="space-y-2 text-xs sm:text-sm leading-relaxed">
+    <div className="space-y-2 text-xs leading-relaxed sm:text-sm">
       {lines.map((line, lineIdx) => {
         const trimmed = line.trim();
 
         // Check if line is a bullet item (* item or - item)
-        const isBullet = trimmed.startsWith("* ") || trimmed.startsWith("- ");
-        const bulletText = isBullet ? trimmed.replace(/^(\*|-)\s+/, "") : trimmed;
+        const isBullet = trimmed.startsWith('* ') || trimmed.startsWith('- ');
+        const bulletText = isBullet ? trimmed.replace(/^(\*|-)\s+/, '') : trimmed;
 
         if (isBullet) {
           return (
             <div key={lineIdx} className="flex items-start gap-2 pl-1">
-              <span className="font-bold select-none mt-0.5">•</span>
-              <div className="flex-1 min-w-0">{renderInlineStyles(bulletText)}</div>
+              <span className="mt-0.5 font-bold select-none">•</span>
+              <div className="min-w-0 flex-1">{renderInlineStyles(bulletText)}</div>
             </div>
           );
         }
@@ -110,19 +110,19 @@ function FormattedMessage({ content }: { content: string }) {
 /* Main Product Chatbot Component                                             */
 /* -------------------------------------------------------------------------- */
 
-export default function ProductChatbot({ product, className = "" }: ProductChatbotProps) {
+export default function ProductChatbot({ product, className = '' }: ProductChatbotProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const chatScrollRef = useRef<HTMLDivElement>(null);
   const inputId = useId();
 
   const suggestedQuestions = [
-    "Is this pure 925 silver?",
-    "What is the return & exchange policy?",
-    "What are the delivery charges?",
-    "Can I get this customized on WhatsApp?",
+    'Is this pure 925 silver?',
+    'What is the return & exchange policy?',
+    'What are the delivery charges?',
+    'Can I get this customized on WhatsApp?',
   ];
 
   useEffect(() => {
@@ -135,17 +135,17 @@ export default function ProductChatbot({ product, className = "" }: ProductChatb
     const textToSend = (queryText || input).trim();
     if (!textToSend || loading) return;
 
-    const userMessage: Message = { role: "user", text: textToSend };
+    const userMessage: Message = { role: 'user', text: textToSend };
     const nextMessages = [...messages, userMessage];
     setMessages(nextMessages);
-    setInput("");
+    setInput('');
     setLoading(true);
 
     try {
-      const workerUrl = process.env.NEXT_PUBLIC_WORKER_URL || "";
+      const workerUrl = process.env.NEXT_PUBLIC_WORKER_URL || '';
       const res = await fetch(`${workerUrl}/chat`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           messages: nextMessages,
           currentProduct: product,
@@ -157,13 +157,13 @@ export default function ProductChatbot({ product, className = "" }: ProductChatb
       }
 
       const data = await res.json();
-      setMessages([...nextMessages, { role: "bot", text: data.reply }]);
+      setMessages([...nextMessages, { role: 'bot', text: data.reply }]);
     } catch {
       setMessages([
         ...nextMessages,
         {
-          role: "bot",
-          text: "I am unable to connect right now. Please reach out to us on WhatsApp at **+91 8234042231**.",
+          role: 'bot',
+          text: 'I am unable to connect right now. Please reach out to us on WhatsApp at **+91 8234042231**.',
         },
       ]);
     } finally {
@@ -174,17 +174,15 @@ export default function ProductChatbot({ product, className = "" }: ProductChatb
   return (
     <section
       aria-label="Product AI Shopping Assistant"
-      className={`my-6 rounded-2xl bg-surface shadow-sm overflow-hidden ${className}`}
+      className={`bg-surface my-6 overflow-hidden rounded-2xl shadow-sm ${className}`}
     >
       {/* Header Bar */}
-      <div className="flex items-center justify-between px-4 py-3 bg-surface/90">
+      <div className="bg-surface/90 flex items-center justify-between px-4 py-3">
         <div className="flex items-center gap-2">
-          <div className="p-1 rounded-lg bg-primary/10">
+          <div className="bg-primary/10 rounded-lg p-1">
             <Sparkles className="h-4 w-4" aria-hidden="true" />
           </div>
-          <h3 className="text-xl  font-semibold text-foreground">
-            Ask AI (AI सहायता)
-          </h3>
+          <h3 className="text-foreground text-xl font-semibold">Ask AI (AI सहायता)</h3>
         </div>
 
         <button
@@ -194,15 +192,13 @@ export default function ProductChatbot({ product, className = "" }: ProductChatb
           className="ssj ssj-btn inline-flex items-center gap-1.5"
         >
           {isOpen ? <X className="h-3.5 w-3.5" /> : <MessageSquare className="h-3.5 w-3.5" />}
-          <span className="">{isOpen ? "Close Chat" : "Ask Question"}</span>
+          <span className="">{isOpen ? 'Close Chat' : 'Ask Question'}</span>
         </button>
       </div>
 
       {/* Suggested Quick Questions */}
-      <div className="p-3 sm:p-4 bg-background">
-        <p className="text-[11px] text-muted-foreground font-medium mb-2">
-          Suggested Questions:
-        </p>
+      <div className="bg-background p-3 sm:p-4">
+        <p className="text-muted-foreground mb-2 text-[11px] font-medium">Suggested Questions:</p>
         <div className="flex flex-wrap gap-1.5">
           {suggestedQuestions.map((q, idx) => (
             <button
@@ -212,7 +208,7 @@ export default function ProductChatbot({ product, className = "" }: ProductChatb
                 if (!isOpen) setIsOpen(true);
                 handleSend(q);
               }}
-              className="rounded-full border border-theme/60 bg-surface px-3 py-1 text-[11px] sm:text-xs text-foreground/85 hover:border-primary  hover:bg-primary/5 transition-colors cursor-pointer"
+              className="border-theme/60 bg-surface text-foreground/85 cursor-pointer rounded-full border px-3 py-1 text-[11px] transition-colors sm:text-xs"
             >
               {q}
             </button>
@@ -222,55 +218,43 @@ export default function ProductChatbot({ product, className = "" }: ProductChatb
 
       {/* Collapsible Chat Log Container */}
       {isOpen && (
-        <div className="flex flex-col h-90 bg-background overflow-hidden">
+        <div className="bg-background flex h-90 flex-col overflow-hidden">
           {/* Messages Area */}
-          <div
-            ref={chatScrollRef}
-            className="flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 scroll-smooth"
-          >
+          <div ref={chatScrollRef} className="flex-1 space-y-3 overflow-y-auto scroll-smooth p-3 sm:p-4">
             {messages.length === 0 && (
-              <div className="flex flex-col items-center justify-center h-full text-center p-4 text-muted-foreground space-y-1">
-                <Bot className="h-7 w-7 mb-1" aria-hidden="true" />
-                <p className="text-xs sm:text-sm font-medium text-foreground">
-                  How can I help you with this piece?
-                </p>
-                <p className="text-[11px] max-w-xs">
+              <div className="text-muted-foreground flex h-full flex-col items-center justify-center space-y-1 p-4 text-center">
+                <Bot className="mb-1 h-7 w-7" aria-hidden="true" />
+                <p className="text-foreground text-xs font-medium sm:text-sm">How can I help you with this piece?</p>
+                <p className="max-w-xs text-[11px]">
                   Ask regarding purity, dispatch timelines, custom name engraving, or store policies.
                 </p>
               </div>
             )}
 
             {messages.map((m, i) => (
-              <div
-                key={i}
-                className={`flex gap-2.5 ${
-                  m.role === "user" ? "justify-end" : "justify-start"
-                }`}
-              >
-                {m.role === "bot" && (
-                  <div className="w-6 h-6 rounded-full bg-primary/10  flex items-center justify-center shrink-0 mt-0.5">
+              <div key={i} className={`flex gap-2.5 ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+                {m.role === 'bot' && (
+                  <div className="bg-primary/10 mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full">
                     <Bot className="h-3.5 w-3.5" aria-hidden="true" />
                   </div>
                 )}
 
                 <div
                   className={`max-w-[85%] rounded-2xl px-3.5 py-2.5 shadow-2xs ${
-                    m.role === "user"
-                      ? "bg-primary rounded-tr-xs"
-                      : "bg-surface border border-theme/40 text-foreground rounded-tl-xs"
+                    m.role === 'user'
+                      ? 'bg-primary rounded-tr-xs'
+                      : 'bg-surface border-theme/40 text-foreground rounded-tl-xs border'
                   }`}
                 >
-                  {m.role === "bot" ? (
+                  {m.role === 'bot' ? (
                     <FormattedMessage content={m.text} />
                   ) : (
-                    <p className="text-xs sm:text-sm whitespace-pre-wrap leading-relaxed">
-                      {m.text}
-                    </p>
+                    <p className="text-xs leading-relaxed whitespace-pre-wrap sm:text-sm">{m.text}</p>
                   )}
                 </div>
 
-                {m.role === "user" && (
-                  <div className="w-6 h-6 rounded-full bg-muted text-muted-foreground flex items-center justify-center shrink-0 mt-0.5">
+                {m.role === 'user' && (
+                  <div className="bg-muted text-muted-foreground mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full">
                     <User className="h-3.5 w-3.5" aria-hidden="true" />
                   </div>
                 )}
@@ -278,8 +262,8 @@ export default function ProductChatbot({ product, className = "" }: ProductChatb
             ))}
 
             {loading && (
-              <div className="flex items-center gap-2 text-muted-foreground text-xs italic pl-1">
-                <Loader2 className="h-3.5 w-3.5 animate-spin " />
+              <div className="text-muted-foreground flex items-center gap-2 pl-1 text-xs italic">
+                <Loader2 className="h-3.5 w-3.5 animate-spin" />
                 <span>Checking product details...</span>
               </div>
             )}
@@ -291,7 +275,7 @@ export default function ProductChatbot({ product, className = "" }: ProductChatb
               e.preventDefault();
               handleSend();
             }}
-            className="flex items-center border-t border-theme/20 bg-surface p-2 gap-2"
+            className="border-theme/20 bg-surface flex items-center gap-2 border-t p-2"
           >
             <label htmlFor={inputId} className="sr-only">
               Ask AI a question about this product
@@ -303,13 +287,13 @@ export default function ProductChatbot({ product, className = "" }: ProductChatb
               onChange={(e) => setInput(e.target.value)}
               placeholder="Ask about dimensions, purity, dispatch..."
               disabled={loading}
-              className="flex-1 bg-background border border-theme/40 rounded-xl px-3.5 py-2 text-xs sm:text-sm text-foreground placeholder:text-muted-foreground/60 outline-none focus:ring-1 focus:ring-primary disabled:opacity-50"
+              className="bg-background border-theme/40 text-foreground placeholder:text-muted-foreground/60 focus:ring-primary flex-1 rounded-xl border px-3.5 py-2 text-xs outline-none focus:ring-1 disabled:opacity-50 sm:text-sm"
             />
             <button
               type="submit"
               disabled={loading || !input.trim()}
               aria-label="Send question"
-              className="p-2.5 rounded-xl bg-primary hover:bg-primary/90 disabled:opacity-40 disabled:cursor-not-allowed transition-colors cursor-pointer"
+              className="bg-primary hover:bg-primary/90 cursor-pointer rounded-xl p-2.5 transition-colors disabled:cursor-not-allowed disabled:opacity-40"
             >
               <Send className="h-3.5 w-3.5" aria-hidden="true" />
             </button>

@@ -18,6 +18,7 @@ import {
   MapPin,
   CheckCircle2,
 } from 'lucide-react';
+import JsonLd from '@/components/common/JsonLd';
 
 const title = 'Sapna Shri Jewellers Nagda | Sapna Shri Jewellers';
 const description =
@@ -82,14 +83,7 @@ export default function AboutUsPage() {
 
   return (
     <article className="container mx-auto max-w-7xl px-4 py-6">
-      {/* Schema.org Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(jsonLd),
-        }}
-      />
-
+      <JsonLd json={jsonLd} />
       <Breadcrumb items={[{ name: 'Home', href: '/' }, { name: 'About Us' }]} />
 
       {/* =========================================================

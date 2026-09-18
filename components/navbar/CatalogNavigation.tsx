@@ -65,7 +65,7 @@ export default function CatalogNavigation() {
                   <span>Collections</span>
                 </summary>
 
-                <div className="absolute top-full left-0 mt-2 w-[calc(100vw-2rem)] max-w-md overflow-hidden rounded-2xl">
+                <div className="bg-surface absolute top-full left-0 mt-2 w-[calc(100vw-2rem)] max-w-md overflow-hidden rounded-2xl">
                   <div className="max-h-[75vh] overflow-y-auto p-2">
                     {(groups as Group[]).map((group) => {
                       const Icon = AppIconMap[group.icon ?? 'Shapes'] ?? AppIconMap.Shapes;

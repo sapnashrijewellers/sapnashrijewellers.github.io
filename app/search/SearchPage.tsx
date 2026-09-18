@@ -1,26 +1,26 @@
-"use client";
+'use client';
 
-import { useSearchParams } from "next/navigation";
-import { useEffect, useMemo, useState, useCallback } from "react";
-import MiniSearch from "minisearch";
-import ProductCard from "@/components/product/ProductCard";
-import Breadcrumb from "@/components/navbar/BreadcrumbItem";
-import { miniSearchIndexOptions, miniSearchQueryOptions } from "@/utils/search/shared";
-import type { Product, SearchFilters } from "@/types/catalog";
-import FilterNSort from "@/components/common/FilterNSort";
-import rawQueryMap from "@/data/queryMap.json";
+import { useSearchParams } from 'next/navigation';
+import { useEffect, useMemo, useState, useCallback } from 'react';
+import MiniSearch from 'minisearch';
+import ProductCard from '@/components/product/ProductCard';
+import Breadcrumb from '@/components/navbar/BreadcrumbItem';
+import { miniSearchIndexOptions, miniSearchQueryOptions } from '@/utils/search/shared';
+import type { Product, SearchFilters } from '@/types/catalog';
+import FilterNSort from '@/components/common/FilterNSort';
+import rawQueryMap from '@/data/queryMap.json';
 
 export default function JewelrySearch() {
   const searchParams = useSearchParams();
   const queryMap: Record<string, string> = rawQueryMap;
 
   const query = useMemo(() => {
-    const raw = decodeURIComponent(searchParams.get("q") || "");
-    return raw.replace(/^web\+ssj:(\/\/)?/i, "").trim();
+    const raw = decodeURIComponent(searchParams.get('q') || '');
+    return raw.replace(/^web\+ssj:(\/\/)?/i, '').trim();
   }, [searchParams]);
 
-  const [filters, setFilters] = useState<SearchFilters>({ material: "Silver" });
-  const [sortBy, setSortBy] = useState("best-match");
+  const [filters, setFilters] = useState<SearchFilters>({ material: 'Silver' });
+  const [sortBy, setSortBy] = useState('best-match');
 
   const [products, setProducts] = useState<Product[]>([]);
   const [searchIndex, setSearchIndex] = useState<MiniSearch | null>(null);
@@ -33,8 +33,8 @@ export default function JewelrySearch() {
         .trim()
         .split(/\s+/)
         .map((t) => queryMap[t] || t)
-        .join(" "),
-    [queryMap]
+        .join(' '),
+    [queryMap],
   );
 
   /* -----------------------------------------
@@ -48,8 +48,8 @@ export default function JewelrySearch() {
         setLoading(true);
 
         const [indexRes, productRes] = await Promise.all([
-          fetch("/data/search-index.json"),
-          fetch("/data/products.json"),
+          fetch('/data/search-index.json'),
+          fetch('/data/products.json'),
         ]);
 
         const indexJSON = await indexRes.text();
@@ -60,7 +60,7 @@ export default function JewelrySearch() {
         setSearchIndex(MiniSearch.loadJSON(indexJSON, miniSearchIndexOptions));
         setProducts(productJSON ?? []);
       } catch (e) {
-        console.error("Failed to load search index:", e);
+        console.error('Failed to load search index:', e);
       } finally {
         if (!cancelled) setLoading(false);
       }
@@ -97,9 +97,7 @@ export default function JewelrySearch() {
 
     const map = new Map(products.map((p) => [p.id, p]));
 
-    return results
-      .map((r) => map.get(r.id))
-      .filter((p): p is Product => Boolean(p));
+    return results.map((r) => map.get(r.id)).filter((p): p is Product => Boolean(p));
   }, [results, products]);
 
   /* -----------------------------------------
@@ -119,23 +117,21 @@ export default function JewelrySearch() {
       items = items.filter((p) => p.for === filters.forWhom);
     }
     if (filters.material) {
-      items = items.filter((p) =>
-        p.metal?.toLowerCase().startsWith(filters.material!.toLowerCase())
-      );
-    }    
+      items = items.filter((p) => p.metal?.toLowerCase().startsWith(filters.material!.toLowerCase()));
+    }
 
     // Apply Sorting
     switch (sortBy) {
-      case "name-asc":
+      case 'name-asc':
         items.sort((a, b) => a.name.localeCompare(b.name));
         break;
-      case "name-desc":
+      case 'name-desc':
         items.sort((a, b) => b.name.localeCompare(a.name));
         break;
-      case "price-asc":
+      case 'price-asc':
         items.sort((a, b) => a.price - b.price);
         break;
-      case "price-desc":
+      case 'price-desc':
         items.sort((a, b) => b.price - a.price);
         break;
       default:
@@ -152,33 +148,27 @@ export default function JewelrySearch() {
   }, [hydratedProducts, filters, sortBy]);
 
   return (
-    <main className="container mx-auto px-4 py-4 max-w-7xl">
+    <main className="container mx-auto max-w-7xl px-4 py-4">
       {/* 1. Breadcrumb Navigation */}
-      <Breadcrumb
-        items={[
-          { name: "Home", href: "/" },
-          { name: "Search" },
-        ]}
-      />
+      <Breadcrumb items={[{ name: 'Home', href: '/' }, { name: 'Search' }]} />
 
       {/* 2. Header & Controls */}
       <header className="my-6">
-        <h1 className="sr-only">Jewellery Search Results</h1>
+        <h2 className="sr-only">Jewellery Search Results</h2>
 
         <div className="flex flex-wrap items-center justify-between gap-3">
           {/* Accessible Live Counter */}
           <div
             role="status"
             aria-live="polite"
-            className="text-sm md:text-base font-medium text-muted-foreground truncate"
+            className="text-muted-foreground truncate text-sm font-medium md:text-base"
           >
             {loading ? (
               <span className="opacity-70">Searching…</span>
             ) : query ? (
               <span>
-                <strong className="text-foreground font-semibold">
-                  {filteredProducts.length}
-                </strong> result(s) for &ldquo;{query}&rdquo; 
+                <strong className="text-foreground font-semibold">{filteredProducts.length}</strong> result(s) for
+                &ldquo;{query}&rdquo;
               </span>
             ) : (
               <span>Enter a search term to find jewellery...</span>
@@ -186,12 +176,10 @@ export default function JewelrySearch() {
           </div>
 
           {/* Filter & Sort Bar */}
-          <div className="flex justify-end ml-auto">
+          <div className="ml-auto flex justify-end">
             <FilterNSort
               filters={filters}
-              onFilterChange={(key, val) =>
-                setFilters((prev) => ({ ...prev, [key]: val }))
-              }
+              onFilterChange={(key, val) => setFilters((prev) => ({ ...prev, [key]: val }))}
               sortBy={sortBy}
               onSortChange={setSortBy}
             />
@@ -202,12 +190,9 @@ export default function JewelrySearch() {
       {/* 3. Skeleton Loading State */}
       {loading && (
         <section aria-label="Loading search results" className="my-8">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 lg:grid-cols-4">
             {Array.from({ length: 8 }).map((_, i) => (
-              <div
-                key={i}
-                className="aspect-square rounded-2xl bg-surface border border-theme/40 animate-pulse"
-              />
+              <div key={i} className="bg-surface border-theme/40 aspect-square animate-pulse rounded-2xl border" />
             ))}
           </div>
         </section>
@@ -219,7 +204,7 @@ export default function JewelrySearch() {
           <ul
             role="list"
             aria-label="Jewellery search results"
-            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 list-none p-0"
+            className="grid list-none grid-cols-2 gap-4 p-0 sm:grid-cols-3 md:gap-6 lg:grid-cols-4"
           >
             {filteredProducts.map((p, idx) => (
               <li key={p.id} className="flex justify-stretch">
@@ -238,20 +223,16 @@ export default function JewelrySearch() {
         <div
           role="status"
           aria-live="polite"
-          className="my-16 text-center py-16 px-4 bg-surface/50 rounded-2xl border border-dashed border-theme max-w-2xl mx-auto"
+          className="bg-surface/50 border-theme mx-auto my-16 max-w-2xl rounded-2xl border border-dashed px-4 py-16 text-center"
         >
-          <p className="text-lg font-medium text-foreground mb-2">
-            No Results Found
-          </p>
-          <p className="text-sm text-muted-foreground">
-              Please check the spelling or try other keywords and filters.
-            </p>
+          <p className="text-foreground mb-2 text-lg font-medium">No Results Found</p>
+          <p className="text-muted-foreground text-sm">Please check the spelling or try other keywords and filters.</p>
         </div>
       )}
 
       {/* 6. Initial State (Prompt to search) */}
       {!loading && !query && (
-        <div className="my-16 text-center py-20 px-4 text-muted-foreground">
+        <div className="text-muted-foreground my-16 px-4 py-20 text-center">
           <p className="text-lg">Please enter a search term to find jewellery...</p>
         </div>
       )}

@@ -1,18 +1,15 @@
-"use client";
+'use client';
 
-import { useEffect, useState, useCallback, useId, Suspense } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
-import { Search, Mic } from "lucide-react";
+import { useEffect, useState, useCallback, useId, Suspense } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
+import { Search, Mic } from 'lucide-react';
 
 interface SearchBarProps {
   initialQuery?: string;
+  className?: string;
 }
 
-const SUGGESTED_QUERIES = [
-  "Sawariya Seth Ring",
-  "Mahadev Kada",
-  "Lightweight mangalsutra",
-];
+const SUGGESTED_QUERIES = ['Sawariya Seth Ring', 'Mahadev Kada', 'Lightweight mangalsutra'];
 
 /* -------------------------------------------------------------------------- */
 /* Speech Recognition Web API Types                                           */
@@ -69,27 +66,20 @@ interface WindowWithSpeechRecognition extends Window {
 /* Main SearchBar Component                                                   */
 /* -------------------------------------------------------------------------- */
 
-export default function SearchBar({ initialQuery = "" }: SearchBarProps) {
+export default function SearchBar({ initialQuery = '', className = '' }: SearchBarProps) {
   return (
-    <Suspense
-      fallback={
-        <div className="h-11 w-full rounded-xl bg-light/50 border border-theme animate-pulse" />
-      }
-    >
-      <SearchBarConsumer initialQuery={initialQuery} />
+    <Suspense fallback={<div className="bg-light/50 border-theme h-11 w-full animate-pulse rounded-xl border" />}>
+      <SearchBarConsumer initialQuery={initialQuery} className={className} />
     </Suspense>
   );
 }
 
-function SearchBarConsumer({ initialQuery = "" }: SearchBarProps) {
+function SearchBarConsumer({ initialQuery = '', className = '' }: SearchBarProps) {
   const searchParams = useSearchParams();
-  const urlQuery = searchParams.get("q");
+  const urlQuery = searchParams.get('q');
 
   return (
-    <SearchBarInput
-      key={urlQuery ?? "__no_query__"}
-      initialQuery={urlQuery ?? initialQuery}
-    />
+    <SearchBarInput key={urlQuery ?? '__no_query__'} initialQuery={urlQuery ?? initialQuery} className={className} />
   );
 }
 
@@ -97,7 +87,7 @@ function SearchBarConsumer({ initialQuery = "" }: SearchBarProps) {
 /* Search Input Form                                                          */
 /* -------------------------------------------------------------------------- */
 
-function SearchBarInput({ initialQuery = "" }: SearchBarProps) {
+function SearchBarInput({ initialQuery = '', className = '' }: SearchBarProps) {
   const router = useRouter();
   const inputId = useId();
 
@@ -106,7 +96,7 @@ function SearchBarInput({ initialQuery = "" }: SearchBarProps) {
   const [placeholderIndex, setPlaceholderIndex] = useState(0);
 
   useEffect(() => {
-    if (query.trim() !== "") return;
+    if (query.trim() !== '') return;
 
     const intervalId = window.setInterval(() => {
       setPlaceholderIndex((val) => (val + 1) % SUGGESTED_QUERIES.length);
@@ -129,16 +119,15 @@ function SearchBarInput({ initialQuery = "" }: SearchBarProps) {
 
   const startSpeechRecognition = useCallback(() => {
     const speechWindow = window as WindowWithSpeechRecognition;
-    const SpeechRecognition =
-      speechWindow.SpeechRecognition ?? speechWindow.webkitSpeechRecognition;
+    const SpeechRecognition = speechWindow.SpeechRecognition ?? speechWindow.webkitSpeechRecognition;
 
     if (!SpeechRecognition) {
-      alert("Voice search is not supported on this browser.");
+      alert('Voice search is not supported on this browser.');
       return;
     }
 
     const recognition = new SpeechRecognition();
-    recognition.lang = query.match(/[\u0900-\u097F]/) ? "hi-IN" : "en-IN";
+    recognition.lang = query.match(/[\u0900-\u097F]/) ? 'hi-IN' : 'en-IN';
     recognition.interimResults = false;
     recognition.maxAlternatives = 1;
     recognition.continuous = false;
@@ -148,10 +137,10 @@ function SearchBarInput({ initialQuery = "" }: SearchBarProps) {
 
     recognition.onerror = (event) => {
       setListening(false);
-      if (event.error === "not-allowed") {
-        alert("Please allow microphone access to use voice search.");
-      } else if (event.error === "no-speech") {
-        alert("No speech detected. Try again.");
+      if (event.error === 'not-allowed') {
+        alert('Please allow microphone access to use voice search.');
+      } else if (event.error === 'no-speech') {
+        alert('No speech detected. Try again.');
       }
     };
 
@@ -175,7 +164,7 @@ function SearchBarInput({ initialQuery = "" }: SearchBarProps) {
       role="search"
       aria-label="Sitewide jewellery catalog search"
       onSubmit={handleFormSubmit}
-      className="relative w-full"
+      className={`relative w-full ${className}`}
     >
       <label htmlFor={inputId} className="sr-only">
         Search jewellery catalog (type or speak to search)
@@ -184,22 +173,11 @@ function SearchBarInput({ initialQuery = "" }: SearchBarProps) {
       {/* Screen-reader live status for voice feedback */}
       <div className="sr-only" aria-live="polite">
         {listening
-          ? "Microphone is listening. Speak to search."
+          ? 'Microphone is listening. Speak to search.'
           : `Search jewellery catalog. Suggested query: ${currentPlaceholder}`}
       </div>
 
-      <div
-        className="
-          flex items-center
-          h-11
-          rounded-xl
-          bg-light
-          border border-theme
-          focus-within:ring-2 focus-within:ring-primary focus-within:border-transparent
-          transition-[border-color,box-shadow] duration-150 ease-out
-          will-change-[box-shadow]
-        "
-      >
+      <div className="bg-light border-theme focus-within:ring-primary flex h-11 items-center rounded-xl border transition-[border-color,box-shadow] duration-150 ease-out will-change-[box-shadow] focus-within:border-transparent focus-within:ring-2">
         {/* Search Input */}
         <input
           id={inputId}
@@ -213,45 +191,18 @@ function SearchBarInput({ initialQuery = "" }: SearchBarProps) {
           placeholder={currentPlaceholder}
           inputMode="search"
           aria-label="Search jewellery by name, design, or collection"
-          className={`
-            flex-1
-            h-full
-            bg-transparent
-            border-0
-            outline-none
-            px-3.5
-            text-sm
-            text-foreground
-            placeholder:text-muted-foreground/70
-            rounded-l-xl
-            transition-opacity duration-150
-            ${listening ? "animate-pulse font-medium" : ""}
-          `}
+          className={`text-foreground placeholder:text-muted-foreground/70 h-full flex-1 rounded-l-xl border-0 bg-transparent px-3.5 text-sm transition-opacity duration-150 outline-none ${listening ? 'animate-pulse font-medium' : ''} `}
         />
 
         {/* Voice Search Button */}
         <button
           type="button"
           onClick={startSpeechRecognition}
-          aria-label={
-            listening
-              ? "Listening for voice input..."
-              : "Voice search: search jewellery using microphone"
-          }
+          aria-label={listening ? 'Listening for voice input...' : 'Voice search: search jewellery using microphone'}
           aria-pressed={listening}
-          className="
-            h-full
-            px-2.5
-            inline-flex items-center justify-center
-            text-muted-foreground            
-            focus:outline-none 
-            transition-colors duration-150
-          "
+          className="text-muted-foreground inline-flex h-full items-center justify-center px-2.5 transition-colors duration-150 focus:outline-none"
         >
-          <Mic
-            className={`w-[18px] h-[18px] ${listening ? "animate-bounce" : ""}`}
-            aria-hidden="true"
-          />
+          <Mic className={`h-[18px] w-[18px] ${listening ? 'animate-bounce' : ''}`} aria-hidden="true" />
           <span className="sr-only">Voice search</span>
         </button>
 
@@ -259,16 +210,9 @@ function SearchBarInput({ initialQuery = "" }: SearchBarProps) {
         <button
           type="submit"
           aria-label="Submit search query"
-          className="
-            h-full
-            px-3.5
-            inline-flex items-center justify-center
-            text-muted-foreground            
-            focus:outline-none 
-            transition-colors duration-150
-          "
+          className="text-muted-foreground inline-flex h-full items-center justify-center px-3.5 transition-colors duration-150 focus:outline-none"
         >
-          <Search className="w-[18px] h-[18px]" aria-hidden="true" />
+          <Search className="h-[18px] w-[18px]" aria-hidden="true" />
           <span className="sr-only">Search</span>
         </button>
       </div>

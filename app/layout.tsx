@@ -7,7 +7,6 @@ import Navbar from '@/components/navbar/Navbar';
 import Footer from '@/components/home/Footer';
 import FloatingWhatsAppButton from '@/components/home/FloatingWhatsAppButton';
 import GoToTop from '@/components/common/GoToTop';
-import CollectionMenu from '@/components/home/CollectionMenu';
 
 const yatraOne = Yatra_One({
   weight: '400',
@@ -106,8 +105,6 @@ export default function RootLayout({
         <meta name="p:domain_verify" content="757373a06d146840bd703f3b5dd8ec21" />
       </head>
       <body className="flex min-h-screen flex-col antialiased">
-        <h1 className="text-primary p-4 text-center">Sapna Shri Jewellers</h1>
-        <p className="text-center">Modern Silver & Gold Jewellery, Backed by 35+ Years of Trust</p>
         <a
           href="#main-content"
           className="focus:bg-primary sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:rounded-md focus:px-4 focus:py-2 focus:shadow-lg"
@@ -120,7 +117,6 @@ export default function RootLayout({
         <header className="border-theme/30 sticky top-0 z-40 w-full bg-(--color-surface)/80 shadow-xs backdrop-blur-xl">
           <div className="mx-auto max-w-7xl p-0">
             <Navbar />
-            <CollectionMenu />
           </div>
         </header>
 

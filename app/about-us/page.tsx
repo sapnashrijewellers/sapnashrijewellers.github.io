@@ -98,7 +98,7 @@ export default function AboutUsPage() {
       <header className="mx-auto my-10 max-w-4xl text-center md:my-14">
         <p className="text-muted-foreground mb-3 text-sm font-semibold tracking-wider uppercase">{hero.eyebrow}</p>
 
-        <h1 className="mb-5">{hero.title}</h1>
+        <h2 className="mb-5">{hero.title}</h2>
 
         <p className="text-muted-foreground mx-auto max-w-3xl text-lg leading-relaxed md:text-xl">{hero.description}</p>
       </header>

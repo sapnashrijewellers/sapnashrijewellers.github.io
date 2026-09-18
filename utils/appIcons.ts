@@ -40,6 +40,15 @@ import {
   Flame,
   Hourglass,
   UserCheck,
+  Menu,
+  X,
+  ShoppingCart,
+  ClipboardList,
+  ShoppingBag,
+  Circle,
+  CircleDot,
+  Infinity
+
 } from "lucide-react";
 
 export const AppIconMap: Record<string, React.ElementType> = {
@@ -86,4 +95,12 @@ export const AppIconMap: Record<string, React.ElementType> = {
   Flame,
   Hourglass,
   UserCheck,
+  Menu,
+  X,
+  ShoppingCart,
+  ClipboardList,
+  ShoppingBag,
+  Circle,
+  CircleDot,
+  Infinity
 };

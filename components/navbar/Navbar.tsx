@@ -1,45 +1,51 @@
-import ResponsiveNavbar from "@/components/navbar/ResponsiveNavbar";
-import BrandLogo from "../common/BrandLogo";
-import SearchBar from "@/components/common/SearchBar";
+import BrandLogo from '../common/BrandLogo';
+import SearchBar from '@/components/common/SearchBar';
+import CatalogNavigation from './CatalogNavigation';
 
 interface NavbarProps {
   className?: string;
 }
 
-export default function Navbar({ className = "" }: NavbarProps) {
+export default function Navbar({ className = '' }: NavbarProps) {
   return (
     <header
       role="banner"
       aria-label="Site header and navigation"
-      className={`sticky top-0 z-30 w-full bg-surface/95 backdrop-blur-md  border-theme/20 transition-colors duration-150 ${className}`}
+      className={`bg-surface/95 sticky top-0 z-30 w-full backdrop-blur-md transition-colors duration-150 ${className} `}
     >
-      <div className="container mx-auto px-4 sm:px-6 py-2.5 sm:py-3">
-        {/* TOP ROW */}
-        <div className="flex items-center justify-between gap-3 sm:gap-6">
-          {/* LEFT: Logo */}
-          <div className="flex-shrink-0">
-            <BrandLogo />
+      {/* =========================================================
+          ROW 1 — BRAND + SEARCH
+          ========================================================= */}
+
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="flex min-h-24 items-center gap-4 lg:gap-6">
+          {/* Logo */}
+
+          <BrandLogo className="shrink-0" />
+
+          {/* Brand name + tagline — desktop only */}
+
+          <div className="hidden min-w-0 shrink-0 lg:block">
+            <h1 className="text-primary text-xl leading-tight font-semibold tracking-tight">Sapna Shri Jewellers</h1>
+
+            <p className="text-secondary mt-1 text-sm leading-tight">
+              Modern Silver &amp; Gold Jewellery, Backed by 35+ Years of Trust
+            </p>
           </div>
 
-          {/* CENTER (Desktop / Tablet): Search Form */}
-          <div className="hidden md:flex flex-1 justify-center max-w-xl mx-auto">
-            <SearchBar />
+          {/* Search */}
+
+          <div className="ml-auto min-w-0 flex-1">
+            <SearchBar className="ml-auto w-full max-w-2xl" />
           </div>
-
-          {/* RIGHT: Main Navigation & Actions */}
-          <nav
-            aria-label="Primary navigation menu"
-            className="flex items-center flex-shrink-0 gap-2"
-          >
-            <ResponsiveNavbar />
-          </nav>
-        </div>
-
-        {/* SECOND ROW (Mobile Viewport Search Bar) */}
-        <div className="mt-2.5 md:hidden w-full">
-          <SearchBar />
         </div>
       </div>
+
+      {/* =========================================================
+          ROW 2 — CATALOG NAVIGATION
+          ========================================================= */}
+
+      <CatalogNavigation />
     </header>
   );
 }

@@ -22,12 +22,30 @@ export interface Product {
   price: number;
   MRP: number;
 }
+
 export interface Label {
     key: string;
     name: string;
     collectionName: string;
     icon: string;
 };
+
+export interface NavItem {
+  label: string;
+  title?: string;
+  ariaLabel?: string;
+  icon: React.ElementType;
+  href: string;
+}
+
+export type Group = {
+  id: number;
+  name: string;
+  icon?: string;
+  keywords?: string;
+  title?: string;
+};
+
 
 export interface Category{
   id:number;
@@ -45,8 +63,7 @@ export interface Collection {
   active: boolean;
   material: string;
   group: string;
-  category: string;
-  image:string;
+  category: string;  
 }
 
 export interface SearchFilters {

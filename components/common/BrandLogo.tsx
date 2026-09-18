@@ -1,38 +1,28 @@
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link';
+import Image from 'next/image';
 
 type BrandLogoProps = {
-  pulse?: boolean;
   className?: string;
 };
 
-export default function BrandLogo({
-  pulse = true,
-  className = "",
-}: BrandLogoProps) {
+export default function BrandLogo({ className = '' }: BrandLogoProps) {
   return (
-    <div className={`flex items-center shrink-0 leading-none ${className}`}>
+    <div className={`flex shrink-0 items-center leading-none ${className}`}>
       <Link
         href="/"
         title="Sapna Shri Jewellers - Homepage"
         aria-label="Sapna Shri Jewellers - Homepage"
         className="inline-flex items-center rounded-xl"
       >
-        <span
-          className={`inline-block ${
-            pulse ? "brand-pulse motion-reduce:animate-none" : ""
-          }`}
-        >
-          <Image
-            src="/icons/logo-wide.webp"
-            alt="Sapna Shri Jewellers Nagda Official Logo"
-            width={200}
-            height={63}
-            priority
-            sizes="(max-width: 640px) 160px, 200px"
-            className="w-40 sm:w-50 h-auto object-contain rounded-xl"
-          />
-        </span>
+        <Image
+          src="/logo.png"
+          alt="Sapna Shri Jewellers Nagda Official Logo"
+          width={100}
+          height={100}
+          priority
+          sizes="(max-width: 200px) 100px, 100px"
+          className="h-auto w-24 rounded-xl object-contain sm:w-24"
+        />
       </Link>
     </div>
   );

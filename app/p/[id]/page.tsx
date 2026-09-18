@@ -120,9 +120,9 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
 
       {/* 2. Mobile Title & Rating Header (Visible ONLY on Mobile/Tablet < md) */}
       <header className="block space-y-1.5 pt-3 pb-2 md:hidden">
-        <h1 id="product-title-mobile" className="text-foreground text-xl leading-tight font-semibold sm:text-2xl">
+        <h2 id="product-title-mobile" className="text-foreground text-xl leading-tight font-semibold sm:text-2xl">
           {product.name}
-        </h1>
+        </h2>
 
         <div aria-label="Customer ratings and reviews">
           <ProductRating rating={product.rating ?? 4.6} count={product.ratingCount ?? 12} showExpert />
@@ -153,9 +153,9 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
         <div className="space-y-5">
           {/* Desktop Title & Rating Header (Hidden on Mobile) */}
           <header className="hidden space-y-2 md:block">
-            <h1 id="product-title-desktop" className="text-foreground text-2xl leading-tight font-semibold sm:text-3xl">
+            <h2 id="product-title-desktop" className="text-foreground text-2xl leading-tight font-semibold sm:text-3xl">
               {product.name}
-            </h1>
+            </h2>
 
             <div aria-label="Customer ratings and reviews">
               <ProductRating rating={product.rating ?? 4.6} count={product.ratingCount ?? 12} showExpert />

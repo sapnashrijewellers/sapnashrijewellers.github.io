@@ -1,32 +1,26 @@
-"use client";
+'use client';
 
-import { useEffect, useMemo, useState, useCallback } from "react";
+import { useEffect, useMemo, useState, useCallback } from 'react';
 
-import {
-  Address,
-  Cart,
-  PaymentMethod,
-  PriceSummaryType,
-  Product,
-} from "@/types/catalog";
+import { Address, Cart, PaymentMethod, PriceSummaryType, Product } from '@/types/catalog';
 
-import { getCart, saveCart, clearCartStorage } from "@/utils/cart/cart";
+import { getCart, saveCart, clearCartStorage } from '@/utils/cart/cart';
 
-import { calculateFinal } from "@/utils/cart/calculatePrice";
-import { requireAuth } from "@/utils/auth/auth";
-import { useAuth } from "@/hooks/useAuth";
+import { calculateFinal } from '@/utils/cart/calculatePrice';
+import { requireAuth } from '@/utils/auth/auth';
+import { useAuth } from '@/hooks/useAuth';
 
-import CartStep from "@/components/checkout/CartStep";
-import AddressStep from "@/components/checkout/AddressStep";
-import PaymentStep from "@/components/checkout/PaymentStep";
-import ReviewStep from "@/components/checkout/ReviewStep";
-import PaymentVerificationStep from "./PaymentVerificationStep";
+import CartStep from '@/components/checkout/CartStep';
+import AddressStep from '@/components/checkout/AddressStep';
+import PaymentStep from '@/components/checkout/PaymentStep';
+import ReviewStep from '@/components/checkout/ReviewStep';
+import PaymentVerificationStep from './PaymentVerificationStep';
 
-import productsData from "@/data/products.json";
+import productsData from '@/data/products.json';
 
-import { Loader2, LogIn } from "lucide-react";
+import { Loader2, LogIn } from 'lucide-react';
 
-type CheckoutStep = "CART" | "ADDRESS" | "PAYMENT" | "REVIEW" | "VERIFY";
+type CheckoutStep = 'CART' | 'ADDRESS' | 'PAYMENT' | 'REVIEW' | 'VERIFY';
 
 interface CheckoutStateProps {
   className?: string;
@@ -55,13 +49,13 @@ function getHydratedInitialCart(): Cart {
       items: populatedItems,
     };
   } catch (error) {
-    console.error("Failed to hydrate initial cart data:", error);
+    console.error('Failed to hydrate initial cart data:', error);
 
     return getCart();
   }
 }
 
-export default function CheckoutState({ className = "" }: CheckoutStateProps) {
+export default function CheckoutState({ className = '' }: CheckoutStateProps) {
   // --------------------------------------------------
   // Authentication
   // --------------------------------------------------
@@ -80,9 +74,9 @@ export default function CheckoutState({ className = "" }: CheckoutStateProps) {
   // Checkout state
   // --------------------------------------------------
 
-  const [step, setStep] = useState<CheckoutStep>("CART");
+  const [step, setStep] = useState<CheckoutStep>('CART');
 
-  const [paymentMethod, setPaymentMethod] = useState<PaymentMethod>("UPI");
+  const [paymentMethod, setPaymentMethod] = useState<PaymentMethod>('UPI');
 
   const [address, setAddress] = useState<Address>(new Address());
 
@@ -98,7 +92,7 @@ export default function CheckoutState({ className = "" }: CheckoutStateProps) {
 
       await requireAuth();
     } catch (error) {
-      console.error("Checkout sign-in failed:", error);
+      console.error('Checkout sign-in failed:', error);
     } finally {
       setAuthPending(false);
     }
@@ -128,18 +122,13 @@ export default function CheckoutState({ className = "" }: CheckoutStateProps) {
       setAddressLoading(true);
 
       try {
-        const workerUrl = process.env.NEXT_PUBLIC_WORKER_URL || "";
+        const workerUrl = process.env.NEXT_PUBLIC_WORKER_URL || '';
 
-        const response = await fetch(
-          `${workerUrl}/address?uid=${encodeURIComponent(
-            authenticatedUser.uid,
-          )}`,
-          {
-            headers: {
-              Accept: "application/json",
-            },
+        const response = await fetch(`${workerUrl}/address?uid=${encodeURIComponent(authenticatedUser.uid)}`, {
+          headers: {
+            Accept: 'application/json',
           },
-        );
+        });
 
         if (response.ok) {
           const data = await response.json();
@@ -168,12 +157,12 @@ export default function CheckoutState({ className = "" }: CheckoutStateProps) {
           setAddress((previous) => ({
             ...previous,
             uid: authenticatedUser.uid,
-            name: previous.name || authenticatedUser.displayName || "",
-            email: previous.email || authenticatedUser.email || "",
+            name: previous.name || authenticatedUser.displayName || '',
+            email: previous.email || authenticatedUser.email || '',
           }));
         }
       } catch (error) {
-        console.error("Failed to retrieve stored user address:", error);
+        console.error('Failed to retrieve stored user address:', error);
       } finally {
         if (mounted) {
           setAddressLoading(false);
@@ -200,12 +189,12 @@ export default function CheckoutState({ className = "" }: CheckoutStateProps) {
     setAddressLoading(true);
 
     try {
-      const workerUrl = process.env.NEXT_PUBLIC_WORKER_URL || "";
+      const workerUrl = process.env.NEXT_PUBLIC_WORKER_URL || '';
 
       await fetch(`${workerUrl}/address`, {
-        method: "POST",
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           ...address,
@@ -213,9 +202,9 @@ export default function CheckoutState({ className = "" }: CheckoutStateProps) {
         }),
       });
 
-      setStep("PAYMENT");
+      setStep('PAYMENT');
     } catch (error) {
-      console.error("Failed to save address:", error);
+      console.error('Failed to save address:', error);
     } finally {
       setAddressLoading(false);
     }
@@ -230,7 +219,7 @@ export default function CheckoutState({ className = "" }: CheckoutStateProps) {
 
     const shipping = 60;
 
-    const cod = paymentMethod === "COD" ? 200 : 0;
+    const cod = paymentMethod === 'COD' ? 200 : 0;
 
     return {
       productTotal,
@@ -259,7 +248,7 @@ export default function CheckoutState({ className = "" }: CheckoutStateProps) {
       items: [],
     });
 
-    setStep("CART");
+    setStep('CART');
   }, []);
 
   // --------------------------------------------------
@@ -271,22 +260,11 @@ export default function CheckoutState({ className = "" }: CheckoutStateProps) {
       <main
         aria-busy="true"
         aria-live="polite"
-        className={`
-          max-w-5xl mx-auto
-          p-8
-          flex flex-col
-          items-center
-          justify-center
-          min-h-[40vh]
-          space-y-3
-          ${className}
-        `}
+        className={`mx-auto flex min-h-[40vh] max-w-5xl flex-col items-center justify-center space-y-3 p-8 ${className} `}
       >
-        <Loader2 className="w-8 h-8 animate-spin " aria-hidden="true" />
+        <Loader2 className="h-8 w-8 animate-spin" aria-hidden="true" />
 
-        <p className="text-sm text-muted-foreground">
-          Loading secure checkout...
-        </p>
+        <p className="text-muted-foreground text-sm">Loading secure checkout...</p>
       </main>
     );
   }
@@ -297,45 +275,19 @@ export default function CheckoutState({ className = "" }: CheckoutStateProps) {
 
   if (!user) {
     return (
-      <main
-        className={`
-          max-w-md mx-auto
-          px-4 py-16
-          text-center
-          space-y-5
-          ${className}
-        `}
-      >
-        <div
-          className="
-            p-4
-            rounded-full
-            bg-primary/10            
-            w-16 h-16
-            mx-auto
-            flex items-center
-            justify-center
-          "
-        >
-          <LogIn className="w-8 h-8" aria-hidden="true" />
+      <main className={`mx-auto max-w-md space-y-5 px-4 py-16 text-center ${className} `}>
+        <div className="bg-primary/10 mx-auto flex h-16 w-16 items-center justify-center rounded-full p-4">
+          <LogIn className="h-8 w-8" aria-hidden="true" />
         </div>
 
         <div className="space-y-1.5">
-          <h1
-            className="
-              text-2xl
-              font-bold
-              text-foreground
-              font-yatra
-            "
-          >
-            चेकआउट के लिए साइन इन करें
+          <h2 className="text-foreground font-yatra text-2xl font-bold">
+            Please sign-in to checkout
             <span className="block">(Sign In to Checkout)</span>
-          </h1>
+          </h2>
 
-          <p className="text-sm text-muted-foreground">
-            Please authenticate with Google to attach your delivery address and
-            finalize your order.
+          <p className="text-muted-foreground text-sm">
+            Please authenticate with Google to attach your delivery address and finalize your order.
           </p>
         </div>
 
@@ -344,39 +296,15 @@ export default function CheckoutState({ className = "" }: CheckoutStateProps) {
           onClick={handleLogin}
           disabled={authPending}
           aria-label="Sign in with Google to continue checkout"
-          className="
-            inline-flex
-            items-center
-            justify-center
-            gap-2.5
-            px-6 py-3
-            rounded-xl
-            bg-primary            
-            font-semibold
-            text-sm sm:text-base
-            shadow-sm
-            hover:bg-primary/90
-            hover:scale-[1.02]
-            active:scale-95
-            transition-[transform,background-color]
-            duration-150
-            ease-out
-            focus:outline-none
-            focus:ring-2
-            focus:ring-primary
-            focus:ring-offset-2
-            disabled:opacity-60
-            disabled:pointer-events-none
-            cursor-pointer
-          "
+          className="bg-primary hover:bg-primary/90 focus:ring-primary inline-flex cursor-pointer items-center justify-center gap-2.5 rounded-xl px-6 py-3 text-sm font-semibold shadow-sm transition-[transform,background-color] duration-150 ease-out hover:scale-[1.02] focus:ring-2 focus:ring-offset-2 focus:outline-none active:scale-95 disabled:pointer-events-none disabled:opacity-60 sm:text-base"
         >
           {authPending ? (
-            <Loader2 className="w-5 h-5 animate-spin" aria-hidden="true" />
+            <Loader2 className="h-5 w-5 animate-spin" aria-hidden="true" />
           ) : (
-            <LogIn className="w-5 h-5" aria-hidden="true" />
+            <LogIn className="h-5 w-5" aria-hidden="true" />
           )}
 
-          <span>{authPending ? "Signing in..." : "Sign in with Google"}</span>
+          <span>{authPending ? 'Signing in...' : 'Sign in with Google'}</span>
         </button>
       </main>
     );
@@ -389,14 +317,7 @@ export default function CheckoutState({ className = "" }: CheckoutStateProps) {
   return (
     <main
       aria-label="Jewellery order checkout funnel"
-      className={`
-        max-w-5xl
-        mx-auto
-        p-4 sm:p-6
-        bg-page
-        space-y-6
-        ${className}
-      `}
+      className={`bg-page mx-auto max-w-5xl space-y-6 p-4 sm:p-6 ${className} `}
     >
       <div className="sr-only" aria-live="polite">
         {`Current checkout step: ${step}. Total items in cart: ${
@@ -404,47 +325,41 @@ export default function CheckoutState({ className = "" }: CheckoutStateProps) {
         }. Total payable: ₹${priceSummary.finalPrice}`}
       </div>
 
-      {step === "CART" && (
-        <CartStep
-          cart={cart}
-          setCart={setCart}
-          onNext={() => setStep("ADDRESS")}
-        />
-      )}
+      {step === 'CART' && <CartStep cart={cart} setCart={setCart} onNext={() => setStep('ADDRESS')} />}
 
-      {step === "ADDRESS" && (
+      {step === 'ADDRESS' && (
         <AddressStep
           value={address}
           loading={addressLoading}
           onChange={setAddress}
           onSubmit={saveAddress}
-          onBack={() => setStep("CART")}
+          onBack={() => setStep('CART')}
         />
       )}
 
-      {step === "PAYMENT" && (
+      {step === 'PAYMENT' && (
         <PaymentStep
           method={paymentMethod}
           onChange={setPaymentMethod}
-          onNext={() => setStep("REVIEW")}
-          onBack={() => setStep("ADDRESS")}
+          onNext={() => setStep('REVIEW')}
+          onBack={() => setStep('ADDRESS')}
         />
       )}
 
-      {step === "REVIEW" && (
+      {step === 'REVIEW' && (
         <ReviewStep
           cart={cart}
           address={address}
           paymentMethod={paymentMethod}
           priceSummary={priceSummary}
-          onEditAddress={() => setStep("ADDRESS")}
-          onEditPayment={() => setStep("PAYMENT")}
-          onBack={() => setStep("PAYMENT")}
-          onNext={() => setStep("VERIFY")}
+          onEditAddress={() => setStep('ADDRESS')}
+          onEditPayment={() => setStep('PAYMENT')}
+          onBack={() => setStep('PAYMENT')}
+          onNext={() => setStep('VERIFY')}
         />
       )}
 
-      {step === "VERIFY" && (
+      {step === 'VERIFY' && (
         <PaymentVerificationStep
           cart={cart}
           address={address}

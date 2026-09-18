@@ -4,7 +4,6 @@ export interface Product {
   metal: string;
   images: string[];
   highlights: string[];
-  newArrival: boolean;
   collection: string;
   type: string[];
   labels: string[];

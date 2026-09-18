@@ -15,7 +15,7 @@ export default function YouMayAlsoLike({ product, products, className = '' }: Yo
       (p) =>
         p.active &&
         p.id !== product.id &&
-        !p.newArrival &&
+        !p.labels.includes('New Arrival') &&
         p.for === product.for &&
         Array.isArray(product.type) &&
         Array.isArray(p.type) &&

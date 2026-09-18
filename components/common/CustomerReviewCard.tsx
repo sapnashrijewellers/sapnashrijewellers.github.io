@@ -3,6 +3,7 @@ import { Star, BadgeCheck } from 'lucide-react';
 import { CustomerReview } from '@/types/catalog';
 
 const MAX_STARS = 5;
+const MIN_STARS = 1;
 const STAR_ARRAY = Array.from({ length: MAX_STARS }, (_, idx) => idx + 1);
 
 export interface CustomerReviewCardProps {
@@ -14,7 +15,10 @@ export interface CustomerReviewCardProps {
 
 export const CustomerReviewCard: React.FC<CustomerReviewCardProps> = ({ review, className = '', datePublished }) => {
   const { name, rating, text, isVerified = true } = review;
-  const clampedRating = Math.max(0, Math.min(MAX_STARS, Math.round(rating)));
+
+  // Reviews are expected to be rated from 1–5.
+  // Round first, then keep the value within the valid range.
+  const clampedRating = Math.max(MIN_STARS, Math.min(MAX_STARS, Math.round(rating)));
 
   return (
     <article
@@ -32,10 +36,13 @@ export const CustomerReviewCard: React.FC<CustomerReviewCardProps> = ({ review, 
             className="flex items-center gap-0.5"
             role="meter"
             aria-label={`Rating: ${clampedRating} out of ${MAX_STARS} stars`}
+            aria-valuenow={clampedRating}
+            aria-valuemin={MIN_STARS}
+            aria-valuemax={MAX_STARS}
           >
             <meta itemProp="ratingValue" content={String(clampedRating)} />
             <meta itemProp="bestRating" content={String(MAX_STARS)} />
-            <meta itemProp="worstRating" content="1" />
+            <meta itemProp="worstRating" content={String(MIN_STARS)} />
 
             {STAR_ARRAY.map((starIndex) => (
               <Star

@@ -1,6 +1,5 @@
 import type { Product } from '@/types/catalog';
 import faqsData from '@/data/faqs.json';
-import { HelpCircle } from 'lucide-react';
 import JsonLd from '../common/JsonLd';
 
 interface FAQItem {

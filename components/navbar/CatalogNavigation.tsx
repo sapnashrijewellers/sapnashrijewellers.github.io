@@ -94,7 +94,7 @@ export default function CatalogNavigation() {
      DESKTOP MENU STATE
      ================================================================ */
 
-  const [activeGroupId, setActiveGroupId] = useState<string | null>(null);
+  const [activeGroupId, setActiveGroupId] = useState<number | 0>(0);
 
   const [megaMenuPosition, setMegaMenuPosition] = useState<{
     left: number;
@@ -108,7 +108,7 @@ export default function CatalogNavigation() {
      DESKTOP MENU OPEN
      ================================================================ */
 
-  const openMegaMenu = useCallback((groupId: string) => {
+  const openMegaMenu = useCallback((groupId: number) => {
     const trigger = triggerRefs.current[groupId];
 
     if (!trigger) {
@@ -126,7 +126,7 @@ export default function CatalogNavigation() {
      ================================================================ */
 
   const closeMegaMenu = useCallback(() => {
-    setActiveGroupId(null);
+    setActiveGroupId(0);
     setMegaMenuPosition(null);
   }, []);
 

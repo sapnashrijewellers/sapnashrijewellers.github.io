@@ -57,46 +57,6 @@ export default function HUIDInfo() {
     },
   ];
 
-  const ldjson = {
-    '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': 'WebPage',
-        '@id': `${baseURL}/huid/#webpage`,
-        url: `${baseURL}/huid/`,
-        name: metadata.title,
-        description: metadata.description,
-        publisher: {
-          '@type': 'JewelryStore',
-          name: 'Sapna Shri Jewellers Nagda',
-          url: baseURL,
-          logo: imageUrl,
-          image: imageUrl,
-          address: {
-            '@type': 'PostalAddress',
-            streetAddress: 'Railway Station Main Road, Near Jain Mandir',
-            addressLocality: 'Nagda',
-            addressRegion: 'Madhya Pradesh',
-            postalCode: '456335',
-            addressCountry: 'IN',
-          },
-          telephone: '+91-8234042231',
-        },
-      },
-      {
-        '@type': 'FAQPage',
-        mainEntity: faqs.map((item) => ({
-          '@type': 'Question',
-          name: item.q,
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: item.a,
-          },
-        })),
-      },
-    ],
-  };
-
   return (
     <article className="container mx-auto max-w-4xl px-4 py-6">
       <Breadcrumb
@@ -105,10 +65,6 @@ export default function HUIDInfo() {
           { name: 'Hallmark', href: '/huid/' },
         ]}
       />
-
-      {/* Structured Data */}
-      <JsonLd json={ldjson} />
-
       {/* Page Header */}
       <header className="border-theme/40 my-6 flex items-center gap-3 border-b pb-2">
         <span className="text-accent text-3xl" aria-hidden="true">

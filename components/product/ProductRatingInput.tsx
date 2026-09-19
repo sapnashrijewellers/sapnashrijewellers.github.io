@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { useState, useCallback, useId } from "react";
-import { Star, Loader2 } from "lucide-react";
-import { requireAuth } from "@/utils/auth/auth";
+import { useState, useCallback, useId } from 'react';
+import { Star, Loader2 } from 'lucide-react';
+import { requireAuth } from '@/utils/auth/auth';
 
 interface ProductRatingInputProps {
   productId: number;
@@ -17,12 +17,12 @@ export default function ProductRatingInput({
   productId,
   initialRating = 0,
   onRatingSubmit,
-  className = "",
+  className = '',
 }: ProductRatingInputProps) {
   const [hovered, setHovered] = useState(0);
   const [selected, setSelected] = useState(initialRating);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [statusMessage, setStatusMessage] = useState("");
+  const [statusMessage, setStatusMessage] = useState('');
 
   const groupId = useId();
 
@@ -34,7 +34,7 @@ export default function ProductRatingInput({
 
       try {
         setIsSubmitting(true);
-        setStatusMessage("Saving rating...");
+        setStatusMessage('Saving rating...');
 
         /*
          * Authentication is required only when the user
@@ -50,10 +50,10 @@ export default function ProductRatingInput({
         /*
          * Submit rating using the authenticated Firebase UID.
          */
-        const res = await fetch("/api/ratings", {
-          method: "POST",
+        const res = await fetch('/api/ratings', {
+          method: 'POST',
           headers: {
-            "Content-Type": "application/json",
+            'Content-Type': 'application/json',
           },
           body: JSON.stringify({
             productId,
@@ -63,26 +63,17 @@ export default function ProductRatingInput({
         });
 
         if (!res.ok) {
-          throw new Error(
-            `Failed to save rating: ${res.status}`,
-          );
+          throw new Error(`Failed to save rating: ${res.status}`);
         }
 
         setSelected(rating);
-        setStatusMessage(
-          `Thank you! Rated ${rating} out of 5 stars`,
-        );
+        setStatusMessage(`Thank you! Rated ${rating} out of 5 stars`);
 
         onRatingSubmit?.(rating);
       } catch (error) {
-        console.error(
-          "Rating submission error:",
-          error,
-        );
+        console.error('Rating submission error:', error);
 
-        setStatusMessage(
-          "Failed to submit rating. Please try again.",
-        );
+        setStatusMessage('Failed to submit rating. Please try again.');
       } finally {
         setIsSubmitting(false);
       }
@@ -91,39 +82,23 @@ export default function ProductRatingInput({
   );
 
   return (
-    <div
-      className={`inline-flex flex-wrap items-center gap-2 ${className}`}
-    >
+    <div className={`inline-flex flex-wrap items-center gap-2 ${className}`}>
       {/* Screen Reader Live Status */}
-      <div
-        className="sr-only"
-        aria-live="polite"
-      >
+      <div className="sr-only" aria-live="polite">
         {statusMessage ||
-          (selected > 0
-            ? `Current rating: ${selected} out of 5 stars`
-            : "Rate this product from 1 to 5 stars")}
+          (selected > 0 ? `Current rating: ${selected} out of 5 stars` : 'Rate this product from 1 to 5 stars')}
       </div>
 
       {/* Accessible Rating Selector Group */}
-      <div
-        role="group"
-        aria-labelledby={`${groupId}-label`}
-        className="flex items-center gap-1"
-      >
-        <span
-          id={`${groupId}-label`}
-          className="sr-only"
-        >
+      <div role="group" aria-labelledby={`${groupId}-label`} className="flex items-center gap-1">
+        <span id={`${groupId}-label`} className="sr-only">
           Rate this product
         </span>
 
         {STAR_VALUES.map((value) => {
-          const isFilled =
-            value <= (hovered || selected);
+          const isFilled = value <= (hovered || selected);
 
-          const isSelected =
-            value === selected;
+          const isSelected = value === selected;
 
           return (
             <button
@@ -137,37 +112,12 @@ export default function ProductRatingInput({
               onBlur={() => setHovered(0)}
               aria-label={`Rate ${value} out of 5 stars`}
               aria-pressed={isSelected}
-              className="
-                p-1 rounded-lg
-                text-muted-foreground
-                hover:text-amber-500
-                focus:outline-none
-                focus:ring-2
-                focus:ring-primary
-                focus:ring-offset-1
-                transition-[color,transform]
-                duration-150
-                ease-out
-                will-change-[transform]
-                active:scale-90
-                disabled:opacity-50
-                disabled:pointer-events-none
-                cursor-pointer
-              "
+              className="text-muted-foreground focus:ring-primary cursor-pointer rounded-lg p-1 transition-[color,transform] duration-150 ease-out will-change-[transform] hover:text-amber-500 focus:ring-2 focus:ring-offset-1 focus:outline-none active:scale-90 disabled:pointer-events-none disabled:opacity-50"
             >
               <Star
-                className={`
-                  w-5 h-5
-                  transition-transform
-                  duration-150
-                  ease-out
-                  will-change-transform
-                  ${
-                    isFilled
-                      ? "text-amber-500 fill-amber-500 scale-110"
-                      : "text-muted-foreground/40 fill-none"
-                  }
-                `}
+                className={`h-5 w-5 transition-transform duration-150 ease-out will-change-transform ${
+                  isFilled ? 'scale-110 fill-amber-500 text-amber-500' : 'text-muted-foreground/40 fill-none'
+                } `}
                 aria-hidden="true"
               />
             </button>
@@ -176,32 +126,19 @@ export default function ProductRatingInput({
       </div>
 
       {/* Login hint */}
-      <span className="text-xs text-muted-foreground select-none">
-        (Sign in to rate)
-      </span>
+      <span className="text-muted-foreground text-xs select-none">(Sign in to rate)</span>
 
       {/* Saving indicator */}
       {isSubmitting && (
-        <span className="inline-flex items-center gap-1 text-xs text-muted-foreground">
-          <Loader2
-            className="
-              w-3.5 h-3.5
-              animate-spin              
-              shrink-0
-            "
-            aria-hidden="true"
-          />
+        <span className="text-muted-foreground inline-flex items-center gap-1 text-xs">
+          <Loader2 className="h-3.5 w-3.5 shrink-0 animate-spin" aria-hidden="true" />
 
           <span>Saving…</span>
         </span>
       )}
 
       {/* Selected rating */}
-      {selected > 0 && !isSubmitting && (
-        <span className="text-xs font-semibold text-foreground/90">
-          {selected}/5
-        </span>
-      )}
+      {selected > 0 && !isSubmitting && <span className="text-foreground/90 text-xs font-semibold">{selected}/5</span>}
     </div>
   );
 }

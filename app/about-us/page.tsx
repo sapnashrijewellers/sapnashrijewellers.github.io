@@ -78,7 +78,6 @@ function getIcon(name: string, className = 'w-6 h-6') {
 }
 
 export default function AboutUsPage() {
-  // Keep JSON-LD exactly as the existing implementation.
   const jsonLd = buildBusinessJsonLd();
 
   return (

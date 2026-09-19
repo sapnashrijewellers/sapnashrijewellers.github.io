@@ -13,7 +13,6 @@ import WishListBar from '@/components/common/WishlistBar';
 import ProductRatingInput from '@/components/product/ProductRatingInput';
 import FeaturesJewellery from '@/components/common/FeaturedJewellery';
 import YouMAyAlsoLike from '@/components/product/YouMayAlsoLike';
-import TestimonialScroller from '@/components/common/Testimonials';
 import TrustSignalsRibbon from '@/components/product/TrustSignalsRibbon';
 import CareInstructions from '@/components/product/CareInstructions';
 import BulkEnquiry from '@/components/product/BulkEnquiry';
@@ -200,7 +199,6 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
         <FAQ product={product} />
       </section>
 
-      <TestimonialScroller />
       <WishListBar />
       <ProductViewTracker productId={product.id} />
       <RecentlyViewedBar />

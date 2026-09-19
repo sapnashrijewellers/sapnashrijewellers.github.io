@@ -54,7 +54,6 @@ export default function TrustSignalsRibbon({ product, className = '' }: TrustSig
       explanation: isHallmarkedGold
         ? 'Government-approved BIS 916 hallmarking verifies precious gold purity with a unique laser-engraved HUID number traceable through the BIS Care app.'
         : 'Stamped authentic 925 sterling silver alloy containing 92.5% fine pure silver, tested and certified for metal purity.',
-      link: '/policies/authenticity/',
     },
     {
       id: 'warranty',

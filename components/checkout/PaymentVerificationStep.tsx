@@ -28,7 +28,7 @@ export default function PaymentVerificationStep({ cart, address, paymentMethod, 
       .map((item, i) => {
         return `${i + 1}. ${item.product.name}
 Qty: ${item.qty}
-Link: ${process.env.NEXT_PUBLIC_BASE_URL}/p/${item.product.id}`;
+Link: ${process.env.NEXT_PUBLIC_BASE_URL}/p/${item.product.id}/`;
       })
       .join('\n\n');
 

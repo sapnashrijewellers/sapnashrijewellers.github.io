@@ -4,6 +4,7 @@ import Navbar from '@/components/navbar/Navbar';
 import Footer from '@/components/home/Footer';
 import FloatingWhatsAppButton from '@/components/home/FloatingWhatsAppButton';
 import GoToTop from '@/components/common/GoToTop';
+import Script from 'next/script';
 
 const baseURL = (process.env.NEXT_PUBLIC_BASE_URL || 'https://sapnashrijewellers.in').replace(/\/+$/, '');
 
@@ -87,6 +88,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-93YXKJV18B" strategy="afterInteractive" />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-93YXKJV18B');
+          `}
+        </Script>
+
         <link rel="describedby" type="text/markdown" href="https://sapnashrijewellers.in/llms.txt" />
         {/* pinterest verification meta tag */}
         <meta name="p:domain_verify" content="757373a06d146840bd703f3b5dd8ec21" />

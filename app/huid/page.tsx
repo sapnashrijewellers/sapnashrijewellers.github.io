@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Breadcrumb from '@/components/navbar/BreadcrumbItem';
-import JsonLd from '@/components/common/JsonLd';
 
 const baseURL = (process.env.NEXT_PUBLIC_BASE_URL || 'https://sapnashrijewellers.in').replace(/\/+$/, '');
 const imageUrl = `${baseURL}/logo.png`;

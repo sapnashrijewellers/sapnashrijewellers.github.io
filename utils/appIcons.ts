@@ -47,7 +47,9 @@ import {
   ShoppingBag,
   Circle,
   CircleDot,
-  Infinity
+  Infinity,
+  LogIn,
+  LogOut
 
 } from "lucide-react";
 
@@ -102,5 +104,7 @@ export const AppIconMap: Record<string, React.ElementType> = {
   ShoppingBag,
   Circle,
   CircleDot,
-  Infinity
+  Infinity,
+  LogIn,
+  LogOut
 };

@@ -12,6 +12,7 @@ interface ProductRatingInputProps {
 }
 
 const STAR_VALUES = [1, 2, 3, 4, 5] as const;
+const workerUrl = process.env.NEXT_PUBLIC_WORKER_URL || '';
 
 export default function ProductRatingInput({
   productId,
@@ -50,7 +51,7 @@ export default function ProductRatingInput({
         /*
          * Submit rating using the authenticated Firebase UID.
          */
-        const res = await fetch('/api/ratings', {
+        const res = await fetch(workerUrl + '/ratings', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

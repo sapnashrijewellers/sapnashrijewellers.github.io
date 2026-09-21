@@ -5,16 +5,34 @@ import Link from 'next/link';
 import { Loader2, Package, LogIn, RefreshCw, ShoppingBag } from 'lucide-react';
 
 import OrderedProductCard from '@/components/product/OrderedProductCard';
-import { useAuth } from '@/hooks/useAuth';
-import { getIdToken, signInWithGoogle } from '@/utils/auth/auth';
+import { getCachedUser, getIdToken, signInWithGoogle, subscribeAuth, type AuthUserSnapshot } from '@/utils/auth/auth';
 
 import type { Order, Product } from '@/types/catalog';
 import productsData from '@/data/products.json';
 
 export default function OrdersPage() {
-  const { user, loading: authLoading } = useAuth();
+  // --------------------------------------------------
+  // Authentication
+  // --------------------------------------------------
+
+  const [user, setUser] = useState<AuthUserSnapshot | null>(null);
+  const [authLoading, setAuthLoading] = useState(true);
 
   const uid = user?.uid ?? null;
+
+  // Initialize from the lightweight auth cache.
+  //
+  // subscribeAuth() then keeps this page synchronized with:
+  // - login/logout in this tab
+  // - login/logout in another browser tab
+  useEffect(() => {
+    setUser(getCachedUser());
+    setAuthLoading(false);
+
+    return subscribeAuth((nextUser) => {
+      setUser(nextUser);
+    });
+  }, []);
 
   const [orders, setOrders] = useState<Order[]>([]);
   const [ordersLoading, setOrdersLoading] = useState(false);
@@ -46,15 +64,14 @@ export default function OrdersPage() {
 
       await signInWithGoogle();
 
-      // Do NOT set user here.
-      //
       // signInWithGoogle() publishes the authentication
-      // event. useAuth() receives it and updates user.
+      // event through subscribeAuth().
       //
-      // Once uid changes, the orders effect below
-      // automatically fetches the orders.
+      // The authentication effect above receives the new
+      // user and updates `user`, which changes `uid`.
     } catch (error) {
       console.error('Orders sign-in failed:', error);
+      setError('Unable to sign in right now. Please try again.');
     } finally {
       setAuthPending(false);
     }
@@ -73,6 +90,10 @@ export default function OrdersPage() {
 
       const idToken = await getIdToken();
 
+      if (!idToken) {
+        throw new Error('Authentication token is unavailable');
+      }
+
       const res = await fetch(`${workerUrl}/api/v1/orders`, {
         headers: {
           Accept: 'application/json',
@@ -83,11 +104,14 @@ export default function OrdersPage() {
       if (!res.ok) {
         throw new Error(`Failed to load orders: ${res.status}`);
       }
+
       const response = await res.json();
+
       console.log(response);
+
       const data = response.data;
 
-      const validOrders: Order[] = Array.isArray(data.orders)
+      const validOrders: Order[] = Array.isArray(data?.orders)
         ? data.orders.filter((order: Order) => Array.isArray(order.items) && order.items.length > 0)
         : [];
 
@@ -104,13 +128,6 @@ export default function OrdersPage() {
 
   // --------------------------------------------------
   // Authentication → Orders
-  //
-  // Whenever useAuth() changes the authenticated user:
-  //
-  //   logged out → uid = null
-  //   logged in  → uid = user's uid
-  //
-  // This effect reacts automatically.
   // --------------------------------------------------
 
   useEffect(() => {
@@ -166,7 +183,7 @@ export default function OrdersPage() {
         </div>
 
         <div className="space-y-1.5">
-          <h2 className="">Sign In to View Orders</h2>
+          <h2>Sign In to View Orders</h2>
 
           <p className="text-muted-foreground text-sm">
             Please sign in with your Google account to access your purchase history and order tracking.
@@ -251,7 +268,7 @@ export default function OrdersPage() {
 
         <Link
           href="/"
-          title="visit home page for latest updates on product, browse  collections..."
+          title="visit home page for latest updates on product, browse collections..."
           className="bg-primary hover:bg-primary/90 inline-flex items-center justify-center gap-2 rounded-xl px-5 py-2.5 text-sm font-medium shadow-sm transition-[transform,background-color] duration-150 ease-out hover:scale-[1.02] active:scale-95"
         >
           <ShoppingBag className="h-4 w-4" aria-hidden="true" />
@@ -269,9 +286,7 @@ export default function OrdersPage() {
   return (
     <main aria-labelledby="orders-page-heading" className="mx-auto max-w-6xl space-y-8 px-4 py-8">
       <header className="border-theme/20 flex flex-col justify-between gap-2 border-b pb-4 sm:flex-row sm:items-baseline">
-        <h2 id="orders-page-heading" className="">
-          My Orders
-        </h2>
+        <h2 id="orders-page-heading">My Orders</h2>
 
         <p className="text-muted-foreground text-xs sm:text-sm">
           Showing {orders.length} {orders.length === 1 ? 'order' : 'orders'}
@@ -351,14 +366,13 @@ function OrderCard({ order }: OrderCardProps) {
           {order.items.map((item, index) => {
             return (
               <div key={`${order.orderId}-item-${item.product.productId}-${index}`} className="flex h-full flex-col">
-                {
-                  <div className="flex h-full flex-col justify-between space-y-2">
-                    <OrderedProductCard product={item.product} />
-                    <span className="text-muted-foreground bg-background/80 border-theme/30 rounded-lg border px-2 py-1 text-center text-xs font-medium">
-                      Qty: {item.qty}
-                    </span>
-                  </div>
-                }
+                <div className="flex h-full flex-col justify-between space-y-2">
+                  <OrderedProductCard product={item.product} />
+
+                  <span className="text-muted-foreground bg-background/80 border-theme/30 rounded-lg border px-2 py-1 text-center text-xs font-medium">
+                    Qty: {item.qty}
+                  </span>
+                </div>
               </div>
             );
           })}

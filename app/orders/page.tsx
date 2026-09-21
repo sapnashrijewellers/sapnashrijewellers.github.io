@@ -121,7 +121,7 @@ export default function OrdersPage() {
       return;
     }
 
-    void fetchOrders(uid);
+    void fetchOrders();
   }, [uid, fetchOrders]);
 
   // --------------------------------------------------
@@ -133,7 +133,7 @@ export default function OrdersPage() {
       return;
     }
 
-    void fetchOrders(uid);
+    void fetchOrders();
   }, [uid, fetchOrders]);
 
   // --------------------------------------------------

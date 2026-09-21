@@ -34,19 +34,19 @@ export default function WishlistPage() {
   const wishlistProducts = products.filter((p) => wishlist.includes(p.id.toString()));
 
   return (
-    <section className="container mx-auto">
+    <main className="container mx-auto max-w-7xl px-4 py-4">
       <Breadcrumb items={[{ name: 'Home', href: '/' }, { name: 'Wish-list' }]} />
-      <h2 className="mb-6 text-2xl">My Wishlist ❤️</h2>
+      <h2 className="mb-4">My Wishlist ❤️</h2>
 
       {wishlistProducts.length === 0 ? (
         <p className="text-muted-foreground text-sm">Your wishlist is empty. Browse products and add some!</p>
       ) : (
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4">
+        <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4">
           {wishlistProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
       )}
-    </section>
+    </main>
   );
 }

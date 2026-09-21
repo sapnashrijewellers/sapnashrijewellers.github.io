@@ -23,11 +23,11 @@ export interface Product {
 }
 
 export interface Label {
-    key: string;
-    name: string;
-    collectionName: string;
-    icon: string;
-};
+  key: string;
+  name: string;
+  collectionName: string;
+  icon: string;
+}
 
 export interface NavItem {
   label: string;
@@ -45,9 +45,8 @@ export type Group = {
   title?: string;
 };
 
-
-export interface Category{
-  id:number;
+export interface Category {
+  id: number;
   name: string;
   keywords: string;
   active: boolean;
@@ -62,7 +61,7 @@ export interface Collection {
   active: boolean;
   material: string;
   group: string;
-  category: string;  
+  category: string;
 }
 
 export interface SearchFilters {
@@ -71,34 +70,19 @@ export interface SearchFilters {
   maxPrice?: number;
   forWhom?: string;
 }
-
-// export interface BannerItem {
-//   id: string;
-//   link: string;
-//   bannerImage: string;
-//   rank: number;
-//   active: boolean;
-// }
-
-
-// export interface Rates {
-//   gold: number;
-//   silver: number;
-// }
-
 export interface Type {
-  id: number,
-  type: string,
-  rank: number,
-  description: string,
-  icon: string,
-  icon1: string,
-  active: boolean
+  id: number;
+  type: string;
+  rank: number;
+  description: string;
+  icon: string;
+  icon1: string;
+  active: boolean;
 }
 
 export type CartItem = {
   productId: number;
-  product: Product
+  product: Product;
   qty: number;
 };
 
@@ -107,7 +91,6 @@ export type Cart = {
 };
 
 export class Address {
-  uid!: string;
   name!: string;
   email!: string;
   mobile!: string;
@@ -117,26 +100,28 @@ export class Address {
 }
 
 export type PriceSummaryType = {
-  productTotal: number,
-  shipping: number,
-  finalPrice: number,
-  cod: number
+  productTotal: number;
+  shipping: number;
+  finalPrice: number;
+  cod: number;
+};
+
+export type PaymentMethod = 'UPI' | 'COD';
+
+export type OrderStatus = 'CREATED' | 'CONFIRMED' | 'CANCELLED';
+
+export interface OrderedProduct {
+  productId: number;
+  name: string;
+  weight: number;
+  price: number;
+  image: string;
 }
 
-export type PaymentMethod = "UPI" | "COD";
-
-export type OrderStatus =
-  | "CREATED"
-  | "CONFIRMED"
-  | "CANCELLED";
-
-export type Order = {
+export interface Order {
   orderId: string;
-  userId: string;
-
   items: Array<{
-    productId: number;
-    title: string;
+    product: OrderedProduct;
     qty: number;
   }>;
 
@@ -144,13 +129,13 @@ export type Order = {
 
   payment: {
     method: PaymentMethod;
-    reference: string;          // REQUIRED
+    reference: string; // REQUIRED
   };
 
   priceSummary: PriceSummaryType;
 
-  createdAt: number;
-};
+  createdAt: Date;
+}
 
 export interface CustomerReview {
   name: string;
@@ -158,3 +143,19 @@ export interface CustomerReview {
   text: string;
   isVerified?: boolean;
 }
+
+export type ApiSuccess<T> = {
+  success: true;
+  data: T;
+};
+
+export type ApiError = {
+  success: false;
+  error?: {
+    message?: string;
+    code?: string;
+  };
+  message?: string;
+};
+
+export type ApiResponse<T> = ApiSuccess<T> | ApiError;

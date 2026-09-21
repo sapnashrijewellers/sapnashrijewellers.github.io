@@ -4,9 +4,9 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { Loader2, Package, LogIn, RefreshCw, ShoppingBag } from 'lucide-react';
 
-import ProductCard from '@/components/product/ProductCard';
+import OrderedProductCard from '@/components/product/OrderedProductCard';
 import { useAuth } from '@/hooks/useAuth';
-import { signInWithGoogle } from '@/utils/auth/auth';
+import { getIdToken, signInWithGoogle } from '@/utils/auth/auth';
 
 import type { Order, Product } from '@/types/catalog';
 import productsData from '@/data/products.json';
@@ -64,24 +64,28 @@ export default function OrdersPage() {
   // Fetch Orders
   // --------------------------------------------------
 
-  const fetchOrders = useCallback(async (targetUid: string) => {
+  const fetchOrders = useCallback(async () => {
     setOrdersLoading(true);
     setError(null);
 
     try {
       const workerUrl = process.env.NEXT_PUBLIC_WORKER_URL || '';
 
-      const res = await fetch(`${workerUrl}/orders?uid=${encodeURIComponent(targetUid)}`, {
+      const idToken = await getIdToken();
+
+      const res = await fetch(`${workerUrl}/api/v1/orders`, {
         headers: {
           Accept: 'application/json',
+          Authorization: `Bearer ${idToken}`,
         },
       });
 
       if (!res.ok) {
         throw new Error(`Failed to load orders: ${res.status}`);
       }
-
-      const data = await res.json();
+      const response = await res.json();
+      console.log(response);
+      const data = response.data;
 
       const validOrders: Order[] = Array.isArray(data.orders)
         ? data.orders.filter((order: Order) => Array.isArray(order.items) && order.items.length > 0)
@@ -296,7 +300,7 @@ interface OrderCardProps {
   productsMap: Map<number, Product>;
 }
 
-function OrderCard({ order, productsMap }: OrderCardProps) {
+function OrderCard({ order }: OrderCardProps) {
   const createdAt = new Date(order.createdAt);
 
   const formattedDate = createdAt.toLocaleDateString('en-IN', {
@@ -345,31 +349,16 @@ function OrderCard({ order, productsMap }: OrderCardProps) {
 
         <div className="grid grid-cols-2 items-stretch gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">
           {order.items.map((item, index) => {
-            const product = productsMap.get(Number(item.productId));
-
             return (
-              <div key={`${order.orderId}-item-${item.productId}-${index}`} className="flex h-full flex-col">
-                {product ? (
+              <div key={`${order.orderId}-item-${item.product.productId}-${index}`} className="flex h-full flex-col">
+                {
                   <div className="flex h-full flex-col justify-between space-y-2">
-                    <ProductCard product={product} />
-
+                    <OrderedProductCard product={item.product} />
                     <span className="text-muted-foreground bg-background/80 border-theme/30 rounded-lg border px-2 py-1 text-center text-xs font-medium">
                       Qty: {item.qty}
                     </span>
                   </div>
-                ) : (
-                  <div className="border-theme/40 bg-background/50 flex h-full flex-col justify-between space-y-2 rounded-2xl border p-4 text-center">
-                    <div className="space-y-1">
-                      <p className="text-foreground text-xs font-medium sm:text-sm">{item.title}</p>
-
-                      <p className="text-muted-foreground text-[11px]">(Catalog item updated)</p>
-                    </div>
-
-                    <span className="text-muted-foreground bg-surface border-theme/30 rounded-lg border px-2 py-1 text-xs font-medium">
-                      Qty: {item.qty}
-                    </span>
-                  </div>
-                )}
+                }
               </div>
             );
           })}

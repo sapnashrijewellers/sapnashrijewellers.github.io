@@ -7,8 +7,8 @@ import { Address, Cart, PaymentMethod, PriceSummaryType, Product } from '@/types
 import { getCart, saveCart, clearCartStorage } from '@/utils/cart/cart';
 
 import { calculateFinal } from '@/utils/cart/calculatePrice';
-import { requireAuth } from '@/utils/auth/auth';
-import { useAuth } from '@/hooks/useAuth';
+
+import { getCachedUser, subscribeAuth, requireAuth, getIdToken, type AuthUserSnapshot } from '@/utils/auth/auth';
 
 import CartStep from '@/components/checkout/CartStep';
 import AddressStep from '@/components/checkout/AddressStep';
@@ -25,6 +25,8 @@ type CheckoutStep = 'CART' | 'ADDRESS' | 'PAYMENT' | 'REVIEW' | 'VERIFY';
 interface CheckoutStateProps {
   className?: string;
 }
+
+const WORKER_URL = process.env.NEXT_PUBLIC_WORKER_URL || '';
 
 /**
  * Hydrate cart items with the latest product data from products.json.
@@ -60,7 +62,9 @@ export default function CheckoutState({ className = '' }: CheckoutStateProps) {
   // Authentication
   // --------------------------------------------------
 
-  const { user, loading: authLoading } = useAuth();
+  const [user, setUser] = useState<AuthUserSnapshot | null>(getCachedUser);
+
+  const [authLoading, setAuthLoading] = useState(true);
 
   const [authPending, setAuthPending] = useState(false);
 
@@ -81,6 +85,26 @@ export default function CheckoutState({ className = '' }: CheckoutStateProps) {
   const [address, setAddress] = useState<Address>(new Address());
 
   const [addressLoading, setAddressLoading] = useState(false);
+
+  // --------------------------------------------------
+  // Subscribe to application auth state
+  // --------------------------------------------------
+
+  useEffect(() => {
+    const unsubscribe = subscribeAuth((nextUser) => {
+      setUser(nextUser);
+    });
+
+    /*
+     * The cached authentication state is synchronous.
+     *
+     * We therefore don't need Firebase initialization just
+     * to render the checkout UI.
+     */
+    setAuthLoading(false);
+
+    return unsubscribe;
+  }, []);
 
   // --------------------------------------------------
   // Login
@@ -107,13 +131,6 @@ export default function CheckoutState({ className = '' }: CheckoutStateProps) {
       return;
     }
 
-    /*
-     * Capture the narrowed user.
-     *
-     * This is important because TypeScript does not
-     * preserve the `user !== null` narrowing inside
-     * the nested async function.
-     */
     const authenticatedUser = user;
 
     let mounted = true;
@@ -122,11 +139,27 @@ export default function CheckoutState({ className = '' }: CheckoutStateProps) {
       setAddressLoading(true);
 
       try {
-        const workerUrl = process.env.NEXT_PUBLIC_WORKER_URL || '';
+        /*
+         * Get a fresh Firebase ID token.
+         *
+         * The UID is intentionally NOT sent by the browser.
+         * The Worker obtains it from the verified JWT.
+         */
+        const idToken = await getIdToken();
 
-        const response = await fetch(`${workerUrl}/address?uid=${encodeURIComponent(authenticatedUser.uid)}`, {
+        if (!idToken) {
+          if (mounted) {
+            setUser(null);
+          }
+
+          return;
+        }
+
+        const response = await fetch(`${WORKER_URL}/api/v1/address`, {
+          method: 'GET',
           headers: {
             Accept: 'application/json',
+            Authorization: `Bearer ${idToken}`,
           },
         });
 
@@ -134,7 +167,7 @@ export default function CheckoutState({ className = '' }: CheckoutStateProps) {
           const data = await response.json();
 
           if (mounted && data) {
-            setAddress(data);
+            setAddress(data.data.address);
             return;
           }
         }
@@ -142,16 +175,8 @@ export default function CheckoutState({ className = '' }: CheckoutStateProps) {
         /*
          * No saved address found.
          *
-         * AuthUserSnapshot contains:
-         * uid
-         * displayName
-         * email
-         * photoURL
-         *
-         * It does NOT contain phoneNumber.
-         *
-         * Therefore mobile cannot be populated from
-         * the lightweight auth snapshot.
+         * Populate whatever information is available from
+         * the lightweight authentication snapshot.
          */
         if (mounted) {
           setAddress((previous) => ({
@@ -189,18 +214,29 @@ export default function CheckoutState({ className = '' }: CheckoutStateProps) {
     setAddressLoading(true);
 
     try {
-      const workerUrl = process.env.NEXT_PUBLIC_WORKER_URL || '';
+      /*
+       * Always obtain the token immediately before the
+       * authenticated API request.
+       */
+      const idToken = await getIdToken();
 
-      await fetch(`${workerUrl}/address`, {
+      if (!idToken) {
+        throw new Error('Authentication session is no longer available.');
+      }
+
+      const response = await fetch(`${WORKER_URL}/api/v1/address`, {
         method: 'POST',
         headers: {
+          Accept: 'application/json',
           'Content-Type': 'application/json',
+          Authorization: `Bearer ${idToken}`,
         },
-        body: JSON.stringify({
-          ...address,
-          uid: user.uid,
-        }),
+        body: JSON.stringify(address),
       });
+
+      if (!response.ok) {
+        throw new Error(`Failed to save address (${response.status})`);
+      }
 
       setStep('PAYMENT');
     } catch (error) {
@@ -260,7 +296,7 @@ export default function CheckoutState({ className = '' }: CheckoutStateProps) {
       <main
         aria-busy="true"
         aria-live="polite"
-        className={`mx-auto flex min-h-[40vh] max-w-5xl flex-col items-center justify-center space-y-3 p-8 ${className} `}
+        className={`mx-auto flex min-h-[40vh] max-w-5xl flex-col items-center justify-center space-y-3 p-8 ${className}`}
       >
         <Loader2 className="h-8 w-8 animate-spin" aria-hidden="true" />
 
@@ -275,13 +311,13 @@ export default function CheckoutState({ className = '' }: CheckoutStateProps) {
 
   if (!user) {
     return (
-      <main className={`mx-auto max-w-md space-y-5 px-4 py-16 text-center ${className} `}>
+      <main className={`mx-auto max-w-md space-y-5 px-4 py-16 text-center ${className}`}>
         <div className="bg-primary/10 mx-auto flex h-16 w-16 items-center justify-center rounded-full p-4">
           <LogIn className="h-8 w-8" aria-hidden="true" />
         </div>
 
         <div className="space-y-1.5">
-          <h2 className="">
+          <h2>
             Please sign-in to checkout
             <span className="block">(Sign In to Checkout)</span>
           </h2>
@@ -317,7 +353,7 @@ export default function CheckoutState({ className = '' }: CheckoutStateProps) {
   return (
     <main
       aria-label="Jewellery order checkout funnel"
-      className={`mx-auto max-w-5xl space-y-6 p-4 sm:p-6 ${className} `}
+      className={`mx-auto max-w-5xl space-y-6 p-4 sm:p-6 ${className}`}
     >
       <div className="sr-only" aria-live="polite">
         {`Current checkout step: ${step}. Total items in cart: ${

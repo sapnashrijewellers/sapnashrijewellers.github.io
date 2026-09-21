@@ -2,7 +2,8 @@
 
 import { useState, useRef, useEffect, useId } from 'react';
 import { MessageSquare, Send, X, Sparkles, Bot, User, Loader2 } from 'lucide-react';
-import type { Product } from '@/types/catalog';
+import type { ApiResponse, Product } from '@/types/catalog';
+import { getIdToken } from '@/utils/auth/auth';
 
 interface Message {
   role: 'user' | 'bot';
@@ -135,30 +136,68 @@ export default function ProductChatbot({ product, className = '' }: ProductChatb
     const textToSend = (queryText || input).trim();
     if (!textToSend || loading) return;
 
-    const userMessage: Message = { role: 'user', text: textToSend };
+    const userMessage: Message = {
+      role: 'user',
+      text: textToSend,
+    };
+
     const nextMessages = [...messages, userMessage];
+
     setMessages(nextMessages);
     setInput('');
     setLoading(true);
 
     try {
       const workerUrl = process.env.NEXT_PUBLIC_WORKER_URL || '';
-      const res = await fetch(`${workerUrl}/chat`, {
+
+      // Get Firebase ID token
+      const idToken = await getIdToken();
+
+      if (!idToken) {
+        setMessages([
+          ...nextMessages,
+          {
+            role: 'bot',
+            text: 'Please sign in to use the product assistant.',
+          },
+        ]);
+
+        return;
+      }
+
+      const response = await fetch(`${workerUrl}/api/v1/chat`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${idToken}`,
+        },
         body: JSON.stringify({
           messages: nextMessages,
           currentProduct: product,
         }),
       });
 
-      if (!res.ok) {
-        throw new Error(`Worker returned status: ${res.status}`);
+      const result: ApiResponse<{ reply: string }> = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(
+          result.success
+            ? `Worker returned status: ${response.status}`
+            : result.error?.message || result.message || 'Unable to process your request.',
+        );
       }
 
-      const data = await res.json();
-      setMessages([...nextMessages, { role: 'bot', text: data.reply }]);
-    } catch {
+      setMessages([
+        ...nextMessages,
+        {
+          role: 'bot',
+          text: result.data.reply,
+        },
+      ]);
+    } catch (error) {
+      console.error('Product chatbot error:', error);
+
       setMessages([
         ...nextMessages,
         {

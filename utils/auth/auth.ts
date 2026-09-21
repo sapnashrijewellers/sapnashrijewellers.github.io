@@ -256,3 +256,20 @@ export async function requireAuth(): Promise<User> {
 
   return signInWithGoogle();
 }
+
+/**
+ * Get a Firebase ID token for the currently authenticated user.
+ *
+ * Firebase Auth is initialized only when the token is actually needed.
+ *
+ * Returns null when there is no authenticated Firebase user.
+ */
+export async function getIdToken(): Promise<string | null> {
+  const currentUser = await getCurrentUser();
+
+  if (!currentUser) {
+    return null;
+  }
+
+  return currentUser.getIdToken();
+}

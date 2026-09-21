@@ -1,9 +1,10 @@
 'use client';
 
-import { Address, Cart, PaymentMethod, PriceSummaryType } from '@/types/catalog';
+import { Address, Cart, PaymentMethod, PriceSummaryType, Order, OrderedProduct } from '@/types/catalog';
 import { fireConfetti } from '@/components/checkout/FireConfetti';
 import { useState } from 'react';
 import { PackageCheck, Loader2 } from 'lucide-react';
+import { getIdToken } from '@/utils/auth/auth';
 
 type Props = {
   cart: Cart;
@@ -71,16 +72,41 @@ ${productLines}
     setError(null);
 
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_WORKER_URL}/order`, {
+      const od: Order = {
+        orderId: 'new-order-1',
+        items: cart.items.map((c): { product: OrderedProduct; qty: number } => ({
+          product: {
+            productId: c.product.id,
+            name: c.product.name,
+            weight: c.product.weight,
+            price: c.product.price,
+            image: c.product.images[0],
+          },
+          qty: c.qty,
+        })),
+        address: address!,
+
+        payment: {
+          method: paymentMethod,
+          reference: paymentRef,
+        },
+        priceSummary,
+        createdAt: new Date(),
+      };
+
+      const idToken = await getIdToken();
+
+      if (!idToken) {
+        return;
+      }
+
+      const res = await fetch(`${process.env.NEXT_PUBLIC_WORKER_URL}/api/v1/orders`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          cart,
-          address,
-          paymentMethod,
-          paymentRef,
-          priceSummary,
-        }),
+        headers: {
+          Accept: 'application/json',
+          Authorization: `Bearer ${idToken}`,
+        },
+        body: JSON.stringify(od),
       });
 
       if (!res.ok) throw new Error('Order creation failed');

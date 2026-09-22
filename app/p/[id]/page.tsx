@@ -16,24 +16,26 @@ import YouMAyAlsoLike from '@/components/product/YouMayAlsoLike';
 import TrustSignalsRibbon from '@/components/product/TrustSignalsRibbon';
 import CareInstructions from '@/components/product/CareInstructions';
 import BulkEnquiry from '@/components/product/BulkEnquiry';
-import JewelleryTypeBar from '@/components/home/ShopByPurpose';
 import Tooltip from '@/components/common/Tooltip';
-import ProductSelection from '@/components/product/ProductSelection';
 import StoreAvailability from '@/components/product/StoreAvailability';
 import FAQ from '@/components/product/FAQ';
 import buildProductJsonLd from '@/utils/json-ld/buildProductJsonLd';
-import dynamic from 'next/dynamic';
-const ProductChatbot = dynamic(() => import('@/components/product/ProductChatbot'));
 import ProductGeoSpecs from '@/components/product/ProductGeoSpecs';
 import ProductViewTracker from '@/components/product/ProductViewTracker';
 import RecentlyViewedBar from '@/components/common/RecentlyViewedBar';
 import JsonLd from '@/components/common/JsonLd';
+import ProductPrice from '@/components/product/ProductPrice';
+
+import dynamic from 'next/dynamic';
+
+const ProductChatbot = dynamic(() => import('@/components/product/ProductChatbot'));
 
 interface ProductDetailPageProps {
   params: Promise<{ id: string }>;
 }
 
 const baseURL = (process.env.NEXT_PUBLIC_BASE_URL || 'https://sapnashrijewellers.in').replace(/\/+$/, '');
+
 const driveURL = `${baseURL}/static/img/products/optimized/`;
 
 export async function generateStaticParams() {
@@ -42,9 +44,11 @@ export async function generateStaticParams() {
   }));
 }
 
-// ---- METADATA (Search Engines, Social Media & Crawlers) ----
+// ---- METADATA ----
+
 export async function generateMetadata({ params }: ProductDetailPageProps): Promise<Metadata> {
   const { id } = await params;
+
   const product = products.find((p: Product) => p.id === Number(id) && p.active);
 
   if (!product) return {};
@@ -58,6 +62,7 @@ export async function generateMetadata({ params }: ProductDetailPageProps): Prom
   return {
     title,
     description,
+
     openGraph: {
       title,
       description,
@@ -74,12 +79,14 @@ export async function generateMetadata({ params }: ProductDetailPageProps): Prom
         },
       ],
     },
+
     twitter: {
       card: 'summary_large_image',
       title,
       description,
       images: [primaryImageUrl],
     },
+
     alternates: {
       canonical: baseProductUrl,
     },
@@ -87,6 +94,7 @@ export async function generateMetadata({ params }: ProductDetailPageProps): Prom
 }
 
 // ---- MAIN PRODUCT DETAIL PAGE ----
+
 export default async function ProductDetailPage({ params }: ProductDetailPageProps) {
   const { id } = await params;
 
@@ -98,12 +106,15 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
 
   const collection = collections.find((c) => c.name === product.collection);
 
-  // Schema.org Structured Data for LLMs and Google Rich Results
   const productSchema = buildProductJsonLd(product);
 
   return (
     <main className="container mx-auto max-w-7xl px-4 py-4">
       <JsonLd json={productSchema} />
+
+      {/* ------------------------------------------------------------
+          1. BREADCRUMB
+      ------------------------------------------------------------ */}
 
       <Breadcrumb
         items={[
@@ -116,76 +127,113 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
         ]}
       />
 
-      {/* 2. Mobile Title & Rating Header (Visible ONLY on Mobile/Tablet < md) */}
-      <header className="block space-y-1.5 pt-3 pb-2 md:hidden">
-        <h2 id="product-title-mobile" className="text-foreground text-xl leading-tight font-semibold sm:text-2xl">
+      {/* ------------------------------------------------------------
+          2. MOBILE PRODUCT IDENTITY
+          Name + Rating + PRICE are intentionally together at the top.
+      ------------------------------------------------------------ */}
+
+      <header className="block space-y-2 pt-3 pb-2 md:hidden">
+        <h1 id="product-title-mobile" className="text-foreground text-xl leading-tight font-semibold sm:text-2xl">
           {product.name}
-        </h2>
+        </h1>
 
         <div aria-label="Customer ratings and reviews">
           <ProductRating rating={product.rating ?? 4.6} count={product.ratingCount ?? 12} showExpert />
         </div>
+
+        {/* PRICE DISCOVERY — immediately after product identity */}
+        <ProductPrice product={product} />
       </header>
 
-      {/* 3. Product Hero Section (Gallery + Details) */}
+      {/* ------------------------------------------------------------
+          3. PRODUCT HERO
+      ------------------------------------------------------------ */}
+
       <section
         aria-labelledby="product-title-desktop"
-        className="mx-auto grid w-full max-w-6xl gap-8 py-4 md:grid-cols-2 md:py-6"
+        className="mx-auto grid w-full max-w-6xl gap-6 py-3 md:grid-cols-2 md:gap-8 md:py-6"
       >
-        {/* Left Column: Gallery & Instant CTA */}
+        {/* ============================================================
+            LEFT COLUMN
+            Gallery
+        ============================================================ */}
+
         <div className="space-y-4 self-start md:sticky md:top-20">
           <div className="space-y-2">
             <div className="text-muted-foreground flex items-center gap-1.5 text-xs">
               <span>Product images</span>
+
               <Tooltip text="Product appearance may vary slightly due to photographic lighting." />
             </div>
 
             <ProductGallery product={product} />
-            <ProductChatbot product={product} />
           </div>
-
-          <OrderViaWhatsappButton product={product} />
         </div>
 
-        {/* Right Column: Key Details, Customization & Highlights */}
+        {/* ============================================================
+            RIGHT COLUMN
+            Product decision / qualification area
+        ============================================================ */}
+
         <div className="space-y-5">
-          {/* Desktop Title & Rating Header (Hidden on Mobile) */}
+          {/* ----------------------------------------------------------
+              DESKTOP PRODUCT IDENTITY + PRICE
+          ---------------------------------------------------------- */}
+
           <header className="hidden space-y-2 md:block">
-            <h2 id="product-title-desktop" className="text-foreground text-2xl leading-tight font-semibold sm:text-3xl">
+            <h1 id="product-title-desktop" className="text-foreground text-2xl leading-tight font-semibold sm:text-3xl">
               {product.name}
-            </h2>
+            </h1>
 
             <div aria-label="Customer ratings and reviews">
               <ProductRating rating={product.rating ?? 4.6} count={product.ratingCount ?? 12} showExpert />
             </div>
+
+            {/* PRICE IMMEDIATELY AFTER PRODUCT IDENTITY */}
+            <ProductPrice product={product} />
           </header>
 
-          <ProductSelection product={product} />
+          {/* ----------------------------------------------------------
+              PRIMARY PURCHASE SUPPORT
+          ---------------------------------------------------------- */}
 
-          {product.description && (
-            <p className="text-muted-foreground text-sm leading-relaxed sm:text-base">{product.description}</p>
-          )}
+          <OrderViaWhatsappButton product={product} />
+
+          {/* ----------------------------------------------------------
+              PRODUCT QUALIFICATION
+          ---------------------------------------------------------- */}
+
+          <ProductGeoSpecs product={product} />
+
+          <TrustSignalsRibbon product={product} />
 
           <HighlightsTabs product={product} />
-          {/* GEO Entity & Specs Component */}
-          <ProductGeoSpecs product={product} />
+
+          {/* ----------------------------------------------------------
+              PRODUCT DESCRIPTION
+          ---------------------------------------------------------- */}
+
+          <section aria-label="Product description">
+            <p className="text-muted-foreground text-sm leading-relaxed sm:text-base">{product.description}</p>
+          </section>
+
+          {/* ----------------------------------------------------------
+              SHARE + RATING
+          ---------------------------------------------------------- */}
 
           <ProductShare product={product} />
 
-          {/* User Review / Interactive Rating */}
           <section aria-label="Submit jewellery rating" className="border-theme/30 min-h-[72px] border-t pt-2">
             <p className="text-muted-foreground mb-1 text-xs font-medium">Rate this jewellery</p>
+
             <ProductRatingInput productId={product.id} />
           </section>
-
-          <StoreAvailability />
         </div>
       </section>
 
-      {/* 4. Auxiliary Information Sections */}
-      <section aria-label="Trust signals and guarantees">
-        <TrustSignalsRibbon product={product} />
-      </section>
+      {/* ==============================================================
+          4. SECONDARY PRODUCT INFORMATION
+      ============================================================== */}
 
       <section aria-label="Bulk purchase and custom order enquiry" className="m-2">
         <BulkEnquiry product={product} />
@@ -199,14 +247,40 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
         <FAQ product={product} />
       </section>
 
+      {/* ==============================================================
+          5. USER PERSONALIZATION
+      ============================================================== */}
+
       <WishListBar />
+
       <ProductViewTracker productId={product.id} />
+
       <RecentlyViewedBar />
 
-      <aside aria-label="Recommended and related products">
+      {/* ==============================================================
+          6. LOW-PRIORITY SUPPORT / STORE INFORMATION
+          These remain available but no longer interrupt the
+          primary purchase decision.
+      ============================================================== */}
+
+      <section
+        aria-label="Store availability and product assistance"
+        className="mx-auto mt-6 grid max-w-6xl gap-4 md:grid-cols-2"
+      >
+        <StoreAvailability />
+
+        <ProductChatbot product={product} />
+      </section>
+
+      {/* ==============================================================
+          7. PRODUCT DISCOVERY
+          Kept intact, but deliberately pushed to the bottom.
+      ============================================================== */}
+
+      <aside aria-label="Recommended and related products" className="mt-8">
         <YouMAyAlsoLike product={product} products={products} />
+
         <FeaturesJewellery />
-        <JewelleryTypeBar />
       </aside>
     </main>
   );

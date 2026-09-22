@@ -107,20 +107,12 @@ export default function TrustSignalsRibbon({ product, className = '' }: TrustSig
 
   const activeSignals = signals.filter((signal) => signal.show);
 
-  /*
-   * Open modal:
-   * Store the currently focused trigger so focus can be restored
-   * when the dialog closes.
-   */
   const openModal = (item: TrustSignalItem) => {
     previouslyFocusedElementRef.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
 
     setActiveModalItem(item);
   };
 
-  /*
-   * Close modal and restore focus to the triggering button.
-   */
   const closeModal = () => {
     setActiveModalItem(null);
 
@@ -130,18 +122,13 @@ export default function TrustSignalsRibbon({ product, className = '' }: TrustSig
     });
   };
 
-  /*
-   * Dialog keyboard/focus management.
-   */
   useEffect(() => {
     if (!activeModalItem) return;
 
     const previousOverflow = document.body.style.overflow;
 
-    // Prevent background page scrolling while dialog is open.
     document.body.style.overflow = 'hidden';
 
-    // Move focus into the dialog.
     requestAnimationFrame(() => {
       closeButtonRef.current?.focus();
     });
@@ -153,12 +140,6 @@ export default function TrustSignalsRibbon({ product, className = '' }: TrustSig
         return;
       }
 
-      /*
-       * Basic focus trap.
-       *
-       * The dialog is intentionally small, so there are only a few
-       * focusable elements to cycle through.
-       */
       if (event.key === 'Tab') {
         const dialog = document.getElementById(dialogId);
 
@@ -194,35 +175,48 @@ export default function TrustSignalsRibbon({ product, className = '' }: TrustSig
   return (
     <section aria-labelledby={headingId} className={`relative rounded-2xl py-2 ${className}`.trim()}>
       <SectionHeading
-        heading="Your Trust Promise"
+        heading="Our Trust Promise"
         punchline="Tap any assurance to review verification and policy details."
         id={headingId}
       />
 
-      <div className="grid grid-cols-2 gap-2.5 md:grid-cols-3 lg:grid-cols-6" aria-label="Customer trust assurances">
+      {/* 
+        Container-width responsive layout.
+
+        Unlike md:grid-cols-3 / lg:grid-cols-6, this does NOT
+        depend on viewport width.
+
+        Each card gets at least 180px.
+        The number of columns is automatically determined by
+        the available width of this component's parent.
+      */}
+      <div
+        className="grid grid-cols-[repeat(auto-fit,minmax(180px,1fr))] gap-2.5"
+        aria-label="Customer trust assurances"
+      >
         {activeSignals.map((item) => {
           const Icon = item.icon;
           const isActive = activeModalItem?.id === item.id;
 
           return (
-            <div key={item.id}>
+            <div key={item.id} className="min-w-0">
               <button
                 type="button"
                 onClick={() => openModal(item)}
                 aria-haspopup="dialog"
                 aria-expanded={isActive}
                 aria-controls={isActive ? dialogId : undefined}
-                className="group focus-visible:outline-primary relative flex w-full cursor-pointer flex-col rounded-xl border border-neutral-200/80 bg-white/70 p-3 text-left transition-all duration-200 hover:bg-white hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2"
+                className="group focus-visible:outline-primary relative flex min-h-[145px] w-full cursor-pointer flex-col rounded-xl border border-neutral-200/80 bg-white/70 p-3 text-left transition-all duration-200 hover:bg-white hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2"
               >
                 {item.badge && (
-                  <span className="bg-primary/15 absolute top-2 right-2 rounded-md px-1.5 py-0.5 text-[10px] font-medium tracking-wide">
+                  <span className="bg-primary/15 absolute top-2 right-2 max-w-[calc(100%-1rem)] truncate rounded-md px-1.5 py-0.5 text-[10px] font-medium tracking-wide">
                     {item.badge}
                   </span>
                 )}
 
                 <span
                   aria-hidden="true"
-                  className="bg-primary/10 group-hover:bg-primary mb-2.5 flex h-9 w-9 items-center justify-center rounded-full transition-all duration-200 group-hover:scale-105"
+                  className="bg-primary/10 group-hover:bg-primary mb-2.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full transition-all duration-200 group-hover:scale-105"
                 >
                   <Icon className="h-5 w-5" aria-hidden="true" />
                 </span>
@@ -235,7 +229,7 @@ export default function TrustSignalsRibbon({ product, className = '' }: TrustSig
 
                 <span
                   aria-hidden="true"
-                  className="mt-2 inline-flex items-center text-[10px] font-medium text-neutral-600"
+                  className="mt-auto inline-flex items-center pt-2 text-[10px] font-medium text-neutral-600"
                 >
                   Details
                   <ChevronRight className="ml-0.5 h-3 w-3 transition-transform group-hover:translate-x-0.5" />

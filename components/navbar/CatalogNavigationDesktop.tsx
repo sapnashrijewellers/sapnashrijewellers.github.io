@@ -194,7 +194,7 @@ export default function CatalogNavigationDesktop() {
                     {/* Category */}
 
                     <Link
-                      href={`/search/?${category.keywords}/`}
+                      href={`/search?q=${category.keywords}`}
                       className="mb-2 block text-xs font-semibold uppercase transition"
                       onClick={closeMegaMenu}
                     >

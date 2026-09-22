@@ -12,6 +12,8 @@ import JewelryTypeClient from '../../jt/[id]/JewelryTypeClient';
 import RecentlyViewedBar from '@/components/common/RecentlyViewedBar';
 import WishlistBar from '@/components/common/WishlistBar';
 import FeaturedJewellery from '@/components/common/FeaturedJewellery';
+import JewelleryTypeBar from '@/components/home/ShopByPurpose';
+import ShopByCategory from '@/components/home/ShopByCategory';
 
 interface CollectionPageProps {
   params: Promise<{ id: string }>;
@@ -123,6 +125,8 @@ export default async function collectionPage({ params }: CollectionPageProps) {
       <RecentlyViewedBar />
 
       <WishlistBar />
+      <JewelleryTypeBar />
+      <ShopByCategory />
       {/* 6. Contextual SEO Content */}
       <aside aria-label="Related collection searches and information">
         <SEO slug={`/collections/${id}`} />

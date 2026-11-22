@@ -1,18 +1,10 @@
-export function generateUPIString({
-  vpa,
-  name,
-  amount,
-  //orderId,
-}: {
-  vpa: string;
-  name: string;
-  amount: number;
-  //orderId: string;
-}) {
-  return `upi://pay?pa=${encodeURIComponent(vpa)}&pn=${encodeURIComponent(
-    name
-  )}&am=${amount.toFixed(2)}&cu=INR
-  
-  `;
-  //&tn=${encodeURIComponent(    `Order ${orderId}`  )}
+export function generateUPIString({ vpa, name, amount }: { vpa: string; name: string; amount: number }) {
+  const params = new URLSearchParams({
+    pa: vpa,
+    pn: name,
+    am: amount.toFixed(2),
+    cu: 'INR',
+  });
+
+  return `upi://pay?${params.toString()}`;
 }

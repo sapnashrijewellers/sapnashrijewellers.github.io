@@ -1217,7 +1217,7 @@
     "for": "unisex",
     "metal": "silver",
     "weight": 1.42,
-    "makingCharges": 80,
+    "makingCharges": 85,
     "discount": 3,
     "labels": [],
     "HUID": false,
@@ -1226,8 +1226,8 @@
     "rating": 4.6,
     "ratingCount": 90,
     "Lock": "",
-    "price": 658,
-    "MRP": 678
+    "price": 676,
+    "MRP": 697
   },
   {
     "id": 33,
@@ -1259,7 +1259,7 @@
     "for": "her",
     "metal": "silver",
     "weight": 1.41,
-    "makingCharges": 80,
+    "makingCharges": 85,
     "discount": 5,
     "labels": [
       "Most Loved"
@@ -1270,8 +1270,8 @@
     "rating": 4.6,
     "ratingCount": 24,
     "Lock": "",
-    "price": 654,
-    "MRP": 688
+    "price": 672,
+    "MRP": 707
   },
   {
     "id": 34,
@@ -1302,7 +1302,7 @@
     "for": "him",
     "metal": "silver",
     "weight": 1.62,
-    "makingCharges": 80,
+    "makingCharges": 85,
     "discount": 5,
     "labels": [
       "New Arrival"
@@ -1313,8 +1313,8 @@
     "rating": 4.3,
     "ratingCount": 108,
     "Lock": "",
-    "price": 751,
-    "MRP": 791
+    "price": 772,
+    "MRP": 813
   },
   {
     "id": 35,
@@ -1344,7 +1344,7 @@
     "for": "him",
     "metal": "silver",
     "weight": 1.3,
-    "makingCharges": 75,
+    "makingCharges": 85,
     "discount": 5,
     "labels": [
       "New Arrival"
@@ -1355,8 +1355,8 @@
     "rating": 5,
     "ratingCount": 113,
     "Lock": "",
-    "price": 586,
-    "MRP": 617
+    "price": 619,
+    "MRP": 652
   },
   {
     "id": 36,
@@ -1388,7 +1388,7 @@
     "for": "her",
     "metal": "silver",
     "weight": 0.42,
-    "makingCharges": 100,
+    "makingCharges": 120,
     "discount": 5,
     "labels": [
       "Trending"
@@ -1399,8 +1399,8 @@
     "rating": 4.5,
     "ratingCount": 15,
     "Lock": "",
-    "price": 216,
-    "MRP": 227
+    "price": 238,
+    "MRP": 251
   },
   {
     "id": 37,
@@ -1431,7 +1431,7 @@
     "for": "her",
     "metal": "silver",
     "weight": 0.95,
-    "makingCharges": 85,
+    "makingCharges": 90,
     "discount": 5,
     "labels": [
       "New Arrival"
@@ -1442,8 +1442,8 @@
     "rating": 4.8,
     "ratingCount": 14,
     "Lock": "",
-    "price": 453,
-    "MRP": 477
+    "price": 465,
+    "MRP": 489
   },
   {
     "id": 38,
@@ -1475,7 +1475,7 @@
     "for": "her",
     "metal": "silver",
     "weight": 0.9,
-    "makingCharges": 80,
+    "makingCharges": 85,
     "discount": 5,
     "labels": [],
     "HUID": false,
@@ -1484,8 +1484,8 @@
     "rating": 4.5,
     "ratingCount": 72,
     "Lock": "",
-    "price": 417,
-    "MRP": 439
+    "price": 429,
+    "MRP": 452
   },
   {
     "id": 39,
@@ -1517,7 +1517,7 @@
     "for": "him",
     "metal": "silver",
     "weight": 0.91,
-    "makingCharges": 75,
+    "makingCharges": 85,
     "discount": 5,
     "labels": [],
     "HUID": false,
@@ -1526,8 +1526,8 @@
     "rating": 4.9,
     "ratingCount": 110,
     "Lock": "",
-    "price": 410,
-    "MRP": 432
+    "price": 434,
+    "MRP": 457
   },
   {
     "id": 40,
@@ -1558,7 +1558,7 @@
     "for": "her",
     "metal": "silver",
     "weight": 1.09,
-    "makingCharges": 75,
+    "makingCharges": 80,
     "discount": 5,
     "labels": [],
     "HUID": false,
@@ -1567,8 +1567,8 @@
     "rating": 4.9,
     "ratingCount": 101,
     "Lock": "",
-    "price": 491,
-    "MRP": 517
+    "price": 505,
+    "MRP": 532
   },
   {
     "id": 41,
@@ -1600,7 +1600,7 @@
     "for": "her",
     "metal": "silver",
     "weight": 0.42,
-    "makingCharges": 100,
+    "makingCharges": 120,
     "discount": 5,
     "labels": [],
     "HUID": false,
@@ -1609,8 +1609,8 @@
     "rating": 4.7,
     "ratingCount": 111,
     "Lock": "",
-    "price": 216,
-    "MRP": 227
+    "price": 238,
+    "MRP": 251
   },
   {
     "id": 42,
@@ -1685,7 +1685,7 @@
     "for": "him",
     "metal": "silver",
     "weight": 1.3,
-    "makingCharges": 78,
+    "makingCharges": 85,
     "discount": 5,
     "labels": [
       "New Arrival"
@@ -1696,8 +1696,8 @@
     "rating": 4.9,
     "ratingCount": 49,
     "Lock": "",
-    "price": 596,
-    "MRP": 627
+    "price": 619,
+    "MRP": 652
   },
   {
     "id": 44,
@@ -1726,7 +1726,7 @@
     "for": "him",
     "metal": "silver",
     "weight": 1.5,
-    "makingCharges": 75,
+    "makingCharges": 80,
     "discount": 3,
     "labels": [
       "New Arrival"
@@ -1737,8 +1737,8 @@
     "rating": 4.9,
     "ratingCount": 94,
     "Lock": "",
-    "price": 676,
-    "MRP": 697
+    "price": 695,
+    "MRP": 716
   },
   {
     "id": 45,
@@ -1769,7 +1769,7 @@
     "for": "him",
     "metal": "silver",
     "weight": 1.52,
-    "makingCharges": 78,
+    "makingCharges": 85,
     "discount": 4,
     "labels": [],
     "HUID": false,
@@ -1778,8 +1778,8 @@
     "rating": 4.4,
     "ratingCount": 16,
     "Lock": "",
-    "price": 697,
-    "MRP": 726
+    "price": 724,
+    "MRP": 754
   },
   {
     "id": 46,
@@ -1934,7 +1934,7 @@
     "for": "him",
     "metal": "silver",
     "weight": 1.39,
-    "makingCharges": 75,
+    "makingCharges": 80,
     "discount": 5,
     "labels": [],
     "HUID": false,
@@ -1943,8 +1943,8 @@
     "rating": 4.2,
     "ratingCount": 10,
     "Lock": "",
-    "price": 626,
-    "MRP": 659
+    "price": 644,
+    "MRP": 678
   },
   {
     "id": 50,
@@ -2358,7 +2358,7 @@
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "metal": "silver",
-    "weight": 1.7,
+    "weight": 2.25,
     "makingCharges": 60,
     "discount": 0,
     "labels": [],
@@ -2368,8 +2368,8 @@
     "rating": 3.9,
     "ratingCount": 12,
     "Lock": "",
-    "price": 700,
-    "MRP": 700
+    "price": 927,
+    "MRP": 927
   },
   {
     "id": 60,
@@ -3214,7 +3214,7 @@
     "for": "",
     "metal": "silver",
     "weight": 6.5,
-    "makingCharges": 52,
+    "makingCharges": 50,
     "discount": 0,
     "labels": [
       "New Arrival",
@@ -3226,8 +3226,8 @@
     "rating": 4.9,
     "ratingCount": 52,
     "Lock": "",
-    "price": 2544,
-    "MRP": 2544
+    "price": 2511,
+    "MRP": 2511
   },
   {
     "id": 82,
@@ -3713,7 +3713,7 @@
     "care": "SILVER_GENERAL",
     "for": "",
     "metal": "silver",
-    "weight": 7,
+    "weight": 5,
     "makingCharges": 55,
     "discount": 0,
     "labels": [
@@ -3725,8 +3725,8 @@
     "rating": 4.8,
     "ratingCount": 65,
     "Lock": "",
-    "price": 2794,
-    "MRP": 2794
+    "price": 1996,
+    "MRP": 1996
   },
   {
     "id": 94,
@@ -4812,7 +4812,7 @@
     "for": "unisex",
     "metal": "silver",
     "weight": 1,
-    "makingCharges": 55,
+    "makingCharges": 65,
     "discount": 3,
     "labels": [
       "New Arrival"
@@ -4823,8 +4823,8 @@
     "rating": 4.4,
     "ratingCount": 33,
     "Lock": "",
-    "price": 399,
-    "MRP": 411
+    "price": 425,
+    "MRP": 438
   },
   {
     "id": 123,
@@ -4894,7 +4894,7 @@
     "for": "unisex",
     "metal": "silver",
     "weight": 0.88,
-    "makingCharges": 55,
+    "makingCharges": 65,
     "discount": 3,
     "labels": [
       "Bestseller",
@@ -4906,8 +4906,8 @@
     "rating": 4.1,
     "ratingCount": 109,
     "Lock": "",
-    "price": 351,
-    "MRP": 362
+    "price": 374,
+    "MRP": 386
   },
   {
     "id": 125,
@@ -4937,7 +4937,7 @@
     "for": "unisex",
     "metal": "silver",
     "weight": 0.95,
-    "makingCharges": 55,
+    "makingCharges": 65,
     "discount": 2,
     "labels": [],
     "HUID": false,
@@ -4946,8 +4946,8 @@
     "rating": 4.8,
     "ratingCount": 46,
     "Lock": "",
-    "price": 379,
-    "MRP": 387
+    "price": 404,
+    "MRP": 412
   },
   {
     "id": 126,
@@ -4978,7 +4978,7 @@
     "for": "unisex",
     "metal": "silver",
     "weight": 0.9,
-    "makingCharges": 55,
+    "makingCharges": 60,
     "discount": 5,
     "labels": [],
     "HUID": false,
@@ -4987,8 +4987,8 @@
     "rating": 4.1,
     "ratingCount": 86,
     "Lock": "",
-    "price": 359,
-    "MRP": 378
+    "price": 371,
+    "MRP": 391
   },
   {
     "id": 127,
@@ -5017,7 +5017,7 @@
     "for": "unisex",
     "metal": "silver",
     "weight": 0.62,
-    "makingCharges": 56,
+    "makingCharges": 70,
     "discount": 4,
     "labels": [
       "New Arrival"
@@ -5028,8 +5028,8 @@
     "rating": 4.5,
     "ratingCount": 67,
     "Lock": "",
-    "price": 249,
-    "MRP": 259
+    "price": 271,
+    "MRP": 282
   },
   {
     "id": 128,
@@ -5059,7 +5059,7 @@
     "for": "unisex",
     "metal": "silver",
     "weight": 0.95,
-    "makingCharges": 55,
+    "makingCharges": 65,
     "discount": 4,
     "labels": [],
     "HUID": false,
@@ -5068,8 +5068,8 @@
     "rating": 4.6,
     "ratingCount": 115,
     "Lock": "",
-    "price": 379,
-    "MRP": 395
+    "price": 404,
+    "MRP": 421
   },
   {
     "id": 129,
@@ -5100,7 +5100,7 @@
     "for": "unisex",
     "metal": "silver",
     "weight": 0.8,
-    "makingCharges": 55,
+    "makingCharges": 65,
     "discount": 3,
     "labels": [
       "New Arrival"
@@ -5111,8 +5111,8 @@
     "rating": 4.6,
     "ratingCount": 67,
     "Lock": "",
-    "price": 319,
-    "MRP": 329
+    "price": 340,
+    "MRP": 351
   },
   {
     "id": 130,
@@ -5182,7 +5182,7 @@
     "for": "him",
     "metal": "silver",
     "weight": 0.55,
-    "makingCharges": 85,
+    "makingCharges": 90,
     "discount": 4,
     "labels": [],
     "HUID": false,
@@ -5191,8 +5191,8 @@
     "rating": 4.6,
     "ratingCount": 110,
     "Lock": "",
-    "price": 262,
-    "MRP": 273
+    "price": 269,
+    "MRP": 280
   },
   {
     "id": 132,
@@ -5221,7 +5221,7 @@
     "for": "him",
     "metal": "silver",
     "weight": 0.6,
-    "makingCharges": 70,
+    "makingCharges": 80,
     "discount": 3,
     "labels": [],
     "HUID": false,
@@ -5230,8 +5230,8 @@
     "rating": 4.9,
     "ratingCount": 37,
     "Lock": "",
-    "price": 263,
-    "MRP": 271
+    "price": 278,
+    "MRP": 287
   },
   {
     "id": 133,
@@ -5260,7 +5260,7 @@
     "for": "him",
     "metal": "silver",
     "weight": 1.58,
-    "makingCharges": 54,
+    "makingCharges": 70,
     "discount": 3,
     "labels": [],
     "HUID": false,
@@ -5269,8 +5269,8 @@
     "rating": 4.4,
     "ratingCount": 56,
     "Lock": "",
-    "price": 627,
-    "MRP": 646
+    "price": 692,
+    "MRP": 713
   },
   {
     "id": 134,
@@ -5299,7 +5299,7 @@
     "for": "him",
     "metal": "silver",
     "weight": 0.45,
-    "makingCharges": 80,
+    "makingCharges": 100,
     "discount": 5,
     "labels": [],
     "HUID": false,
@@ -5308,8 +5308,8 @@
     "rating": 4.2,
     "ratingCount": 106,
     "Lock": "",
-    "price": 209,
-    "MRP": 220
+    "price": 232,
+    "MRP": 244
   },
   {
     "id": 136,
@@ -5321,6 +5321,7 @@
       "Spiritual Silver Jewellery"
     ],
     "highlights": [
+      "👶 Single Piece Bracelet",
       "💎 Material: 925 Sterling Silver (92.5% Silver Purity)",
       "✨ Finish: Premium Smooth & Baby Safe Finish",
       "🧿 Design: Traditional Nazariya Bracelet with Cute Detailing",
@@ -5338,8 +5339,8 @@
     "care": "SILVER_GENERAL",
     "for": "unisex",
     "metal": "silver",
-    "weight": 8.04,
-    "makingCharges": 50,
+    "weight": 8.6,
+    "makingCharges": 40,
     "discount": 2,
     "labels": [],
     "HUID": false,
@@ -5348,8 +5349,8 @@
     "rating": 4.8,
     "ratingCount": 89,
     "Lock": "",
-    "price": 3105,
-    "MRP": 3168
+    "price": 3100,
+    "MRP": 3163
   },
   {
     "id": 137,
@@ -15233,8 +15234,8 @@
     "care": "SILVER_GENERAL",
     "for": "her",
     "metal": "silver",
-    "weight": 2,
-    "makingCharges": 200,
+    "weight": 2.65,
+    "makingCharges": 30,
     "discount": 3,
     "labels": [],
     "HUID": false,
@@ -15243,8 +15244,8 @@
     "rating": 0,
     "ratingCount": 0,
     "Lock": "",
-    "price": 1545,
-    "MRP": 1593
+    "price": 887,
+    "MRP": 914
   },
   {
     "id": 1051,
@@ -15296,6 +15297,7 @@
       "Baby Gifts"
     ],
     "highlights": [
+      "👶 Single Piece Bracelet",
       "💎 Material: 925 Sterling Silver Jewellery with Black Beads",
       "🪷 Design: Elegant Black Bead Chain Pattern with Silver Interspersed Balls & Extension Chain",
       "✨ Finish: Premium Silver Shine with High-Polish Textured Accents",
@@ -15312,8 +15314,8 @@
     "care": "SILVER_GENERAL",
     "for": "kids",
     "metal": "silver",
-    "weight": 3,
-    "makingCharges": 100,
+    "weight": 2.85,
+    "makingCharges": 60,
     "discount": 5,
     "labels": [],
     "HUID": false,
@@ -15322,8 +15324,8 @@
     "rating": 0,
     "ratingCount": 0,
     "Lock": "",
-    "price": 1545,
-    "MRP": 1626
+    "price": 1174,
+    "MRP": 1236
   },
   {
     "id": 1062,
@@ -15352,8 +15354,8 @@
     "care": "SILVER_GENERAL",
     "for": "her",
     "metal": "silver",
-    "weight": 4,
-    "makingCharges": 100,
+    "weight": 3.25,
+    "makingCharges": 30,
     "discount": 5,
     "labels": [],
     "HUID": false,
@@ -15362,8 +15364,8 @@
     "rating": 0,
     "ratingCount": 0,
     "Lock": "",
-    "price": 2060,
-    "MRP": 2168
+    "price": 1088,
+    "MRP": 1145
   },
   {
     "id": 1063,
@@ -15392,8 +15394,8 @@
     "care": "SILVER_GENERAL",
     "for": "her",
     "metal": "silver",
-    "weight": 3,
-    "makingCharges": 100,
+    "weight": 2.65,
+    "makingCharges": 40,
     "discount": 5,
     "labels": [],
     "HUID": false,
@@ -15402,8 +15404,8 @@
     "rating": 0,
     "ratingCount": 0,
     "Lock": "",
-    "price": 1545,
-    "MRP": 1626
+    "price": 955,
+    "MRP": 1005
   },
   {
     "id": 1064,
@@ -15431,8 +15433,8 @@
     "care": "SILVER_GENERAL",
     "for": "her",
     "metal": "silver",
-    "weight": 3,
-    "makingCharges": 100,
+    "weight": 2.58,
+    "makingCharges": 40,
     "discount": 5,
     "labels": [],
     "HUID": false,
@@ -15441,8 +15443,8 @@
     "rating": 0,
     "ratingCount": 0,
     "Lock": "",
-    "price": 1545,
-    "MRP": 1626
+    "price": 930,
+    "MRP": 979
   },
   {
     "id": 1073,
@@ -15632,7 +15634,7 @@
     "for": "him",
     "metal": "silver",
     "weight": 5.5,
-    "makingCharges": 52,
+    "makingCharges": 55,
     "discount": 5,
     "labels": [
       "New Arrival"
@@ -15643,8 +15645,8 @@
     "rating": 0,
     "ratingCount": 0,
     "Lock": "",
-    "price": 2153,
-    "MRP": 2266
+    "price": 2195,
+    "MRP": 2311
   },
   {
     "id": 1078,
@@ -15979,8 +15981,8 @@
     "care": "SILVER_GENERAL",
     "for": "her",
     "metal": "silver",
-    "weight": 3,
-    "makingCharges": 20,
+    "weight": 2.95,
+    "makingCharges": 40,
     "discount": 2,
     "labels": [],
     "HUID": false,
@@ -15989,8 +15991,8 @@
     "rating": 0,
     "ratingCount": 0,
     "Lock": "",
-    "price": 927,
-    "MRP": 946
+    "price": 1063,
+    "MRP": 1085
   },
   {
     "id": 1089,
@@ -16018,7 +16020,7 @@
     "care": "SILVER_GENERAL",
     "for": "her",
     "metal": "silver",
-    "weight": 3,
+    "weight": 3.75,
     "makingCharges": 20,
     "discount": 1,
     "labels": [],
@@ -16028,8 +16030,8 @@
     "rating": 0,
     "ratingCount": 0,
     "Lock": "",
-    "price": 927,
-    "MRP": 936
+    "price": 1159,
+    "MRP": 1171
   },
   {
     "id": 1090,
@@ -16098,7 +16100,7 @@
     "care": "SILVER_GENERAL",
     "for": "her",
     "metal": "silver",
-    "weight": 3,
+    "weight": 3.45,
     "makingCharges": 20,
     "discount": 4,
     "labels": [],
@@ -16108,8 +16110,8 @@
     "rating": 0,
     "ratingCount": 0,
     "Lock": "",
-    "price": 927,
-    "MRP": 966
+    "price": 1066,
+    "MRP": 1110
   },
   {
     "id": 1092,
@@ -16137,8 +16139,8 @@
     "care": "SILVER_GENERAL",
     "for": "her",
     "metal": "silver",
-    "weight": 3,
-    "makingCharges": 20,
+    "weight": 2.65,
+    "makingCharges": 40,
     "discount": 5,
     "labels": [],
     "HUID": false,
@@ -16147,8 +16149,8 @@
     "rating": 0,
     "ratingCount": 0,
     "Lock": "",
-    "price": 927,
-    "MRP": 976
+    "price": 955,
+    "MRP": 1005
   },
   {
     "id": 1093,
@@ -16177,8 +16179,8 @@
     "care": "SILVER_GENERAL",
     "for": "her",
     "metal": "silver",
-    "weight": 3,
-    "makingCharges": 20,
+    "weight": 3.3,
+    "makingCharges": 40,
     "discount": 4,
     "labels": [],
     "HUID": false,
@@ -16187,8 +16189,8 @@
     "rating": 0,
     "ratingCount": 0,
     "Lock": "",
-    "price": 927,
-    "MRP": 966
+    "price": 1190,
+    "MRP": 1240
   },
   {
     "id": 1094,
@@ -16215,8 +16217,8 @@
     "care": "SILVER_GENERAL",
     "for": "her",
     "metal": "silver",
-    "weight": 3,
-    "makingCharges": 20,
+    "weight": 2.25,
+    "makingCharges": 40,
     "discount": 3,
     "labels": [],
     "HUID": false,
@@ -16225,8 +16227,8 @@
     "rating": 0,
     "ratingCount": 0,
     "Lock": "",
-    "price": 927,
-    "MRP": 956
+    "price": 811,
+    "MRP": 836
   },
   {
     "id": 1095,
@@ -16254,8 +16256,8 @@
     "care": "SILVER_GENERAL",
     "for": "her",
     "metal": "silver",
-    "weight": 3,
-    "makingCharges": 20,
+    "weight": 3.3,
+    "makingCharges": 40,
     "discount": 2,
     "labels": [],
     "HUID": false,
@@ -16264,8 +16266,8 @@
     "rating": 0,
     "ratingCount": 0,
     "Lock": "",
-    "price": 927,
-    "MRP": 946
+    "price": 1190,
+    "MRP": 1214
   },
   {
     "id": 1096,
@@ -16293,8 +16295,8 @@
     "care": "SILVER_GENERAL",
     "for": "her",
     "metal": "silver",
-    "weight": 3,
-    "makingCharges": 20,
+    "weight": 2.24,
+    "makingCharges": 40,
     "discount": 5,
     "labels": [],
     "HUID": false,
@@ -16303,17 +16305,18 @@
     "rating": 0,
     "ratingCount": 0,
     "Lock": "",
-    "price": 927,
-    "MRP": 976
+    "price": 808,
+    "MRP": 851
   },
   {
     "id": 1097,
-    "name": "925 Sterling Silver Rudraksha Bracelet",
+    "name": "925 Sterling Silver Rudraksha Bracelet for Kids",
     "collection": "Baby Nazariya Bracelets",
     "type": [
       "Kids Silver Jewellery"
     ],
     "highlights": [
+      "👶 Single Piece Bracelet",
       "💎 Material: 925 Sterling Silver",
       "🪷 Design: Authentic Rudraksha Bead with Black Nazariya Beads & Silver Spacers",
       "✨ Finish: Premium High-Shine Silver Finish",
@@ -16331,8 +16334,8 @@
     "care": "SILVER_GENERAL",
     "for": "kids",
     "metal": "silver",
-    "weight": 6,
-    "makingCharges": 20,
+    "weight": 3.53,
+    "makingCharges": 60,
     "discount": 6,
     "labels": [],
     "HUID": false,
@@ -16341,7 +16344,1815 @@
     "rating": 0,
     "ratingCount": 0,
     "Lock": "",
-    "price": 1854,
-    "MRP": 1972
+    "price": 1454,
+    "MRP": 1547
+  },
+  {
+    "id": 1099,
+    "name": "Hanuman Silver Ring with Gada Motif",
+    "collection": "Hanuman Silver Pendants",
+    "type": [
+      "Party Wear",
+      "Spiritual Silver Jewellery",
+      "Silver Jewellery for Men"
+    ],
+    "highlights": [
+      "💎 Material: 925 Sterling Silver Jewellery",
+      "🪷 Design: Traditional Men’s Silver Ring Featuring the Name “हनुमान” with Gada Motif",
+      "✨ Finish: Premium Silver Shine with Ornate Borders, Rope-Style Detailing and Textured Accents",
+      "🙏 Designed for Hanuman Devotees, Spiritual Wear & Traditional Elegance",
+      "🔒 Safe & Secure Shopping Experience"
+    ],
+    "description": "Show your devotion with this traditional Hanuman Silver Ring for Men, featuring the name “हनुमान” (Hanuman) alongside a distinctive gada motif. The ring's bold central design is complemented by detailed rope-style borders, ornamental silver work and a beautifully textured finish. Inspired by the strength, courage and devotion associated with Lord Hanuman, this statement ring is ideal for devotees who appreciate spiritual jewellery with a traditional Indian look. Wear it for daily styling, religious gatherings, festive occasions or gift it to someone special who admires Bajrangbali.",
+    "images": [
+      "silver-ring-for-men-ssj-1099-a.webp",
+      "hanuman-gada-sterling-silver-ring-ssj-1099-b.webp",
+      "hanuman-silver-ring-for-gents-ssj-1099-c.webp",
+      "traditional-hanuman-silver-ring-ssj-1099-d.webp"
+    ],
+    "brandText": "Made from Silver for Elegant Looks",
+    "care": "SILVER_GENERAL",
+    "for": "him",
+    "metal": "silver",
+    "weight": 5,
+    "makingCharges": 50,
+    "discount": 2,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 1931,
+    "MRP": 1970
+  },
+  {
+    "id": 1101,
+    "name": "Mahakal 925 Sterling Silver Ring For Men",
+    "collection": "Mahadev Silver Rings",
+    "type": [
+      "Party Wear",
+      "Spiritual Silver Jewellery",
+      "Silver Jewellery for Men"
+    ],
+    "highlights": [
+      "💎 Material: 925 Sterling Silver Jewellery",
+      "🪷 Design: Bold Men's Mahakal Ring with Hindi “महाकाल” Inscription and Decorative Beaded Border",
+      "✨ Finish: Premium Silver Shine with Intricate Traditional Textured Detailing",
+      "🙏 Designed for Mahakal Devotees, Daily Wear & Spiritual Gifting",
+      "🔒 Safe & Secure Shopping Experience"
+    ],
+    "description": "Celebrate your devotion to Baba Mahakal with this striking Mahakal silver ring for men. The ring features the Hindi inscription “महाकाल” on its broad central face, complemented by a decorative beaded border and intricate silver detailing. Its bold traditional styling gives it a distinctive spiritual look, making it a suitable choice for Mahakal devotees, everyday religious wear and gifting on special occasions. Pair it with ethnic outfits or casual clothing for a timeless devotional style.",
+    "images": [
+      "silver-ring-for-men-ssj-1101-a.webp",
+      "mahakal-silver-gents-ring-ssj-1101-b.webp",
+      "mahakal-ring-for-men-925-silver-ssj-1101-c.webp"
+    ],
+    "brandText": "Crafted with Genuine Silver at 925 Purity",
+    "care": "SILVER_GENERAL",
+    "for": "him",
+    "metal": "silver",
+    "weight": 5.5,
+    "makingCharges": 50,
+    "discount": 4,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 2124,
+    "MRP": 2213
+  },
+  {
+    "id": 1102,
+    "name": "Shiv Written 925 Sterling Silver Men's Ring",
+    "collection": "Mahadev Silver Rings",
+    "type": [
+      "Party Wear",
+      "Spiritual Silver Jewellery",
+      "Silver Jewellery for Men"
+    ],
+    "highlights": [
+      "💎 Material: 925 Sterling Silver Jewellery",
+      "🪷 Design: Traditional Men's Silver Ring Featuring “शिव” Written in Hindi with Decorative Detailing",
+      "✨ Finish: Premium Silver Shine with Intricate Borders and Textured Accents",
+      "🙏 Designed for Mahadev Devotees, Daily Wear & Traditional Occasions",
+      "🔒 Safe & Secure Shopping Experience"
+    ],
+    "description": "Show your devotion to Lord Shiva with this beautifully crafted Shiv Written Silver Men's Ring. Featuring the word “शिव” in an artistic Hindi design, this ring showcases a decorative silver frame, detailed textured borders and an elegant traditional look. Its bold design makes it a meaningful choice for Mahadev devotees and men who appreciate spiritual silver jewellery. Suitable for daily wear, festive occasions and religious gatherings.",
+    "images": [
+      "men-silver-ring-ssj-1102-a.webp",
+      "sterling-silver-gents-ring-ssj-1102-b.webp",
+      "shiv-written-silver-ring-ssj-1102-c.webp",
+      "925-silver-shiv-ring-for-men-ssj-1102-d.webp"
+    ],
+    "brandText": "Genuine 92.5% Silver with Refined Craftsmanship",
+    "care": "SILVER_GENERAL",
+    "for": "him",
+    "metal": "silver",
+    "weight": 4.9,
+    "makingCharges": 60,
+    "discount": 1,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 2019,
+    "MRP": 2039
+  },
+  {
+    "id": 1103,
+    "name": "Mahakal 925 Sterling Silver Men's Ring",
+    "collection": "Mahadev Silver Rings",
+    "type": [
+      "Party Wear",
+      "Spiritual Silver Jewellery",
+      "Silver Jewellery for Men"
+    ],
+    "highlights": [
+      "💎 Material: 925 Sterling Silver Jewellery",
+      "🪷 Design: Mahakal Written Men's Silver Ring Featuring “महाकाल” in Hindi with a Trishul-Inspired Motif",
+      "✨ Finish: Premium Silver Shine with Ornamental Borders and Detailed Textured Work",
+      "🙏 Designed for Mahakal Devotees, Daily Wear & Spiritual Occasions",
+      "🔒 Safe & Secure Shopping Experience"
+    ],
+    "description": "Express your devotion to Mahakal with this traditional Mahakal Written Silver Men's Ring. The ring features “महाकाल” in Hindi, complemented by a Trishul-inspired motif and an ornate rectangular centre with beautifully detailed silver borders. Its bold design combines spiritual significance with traditional men's jewellery styling. Ideal for Mahadev devotees, this silver ring is a distinctive accessory for everyday wear, festive occasions and religious celebrations.",
+    "images": [
+      "silver-ring-for-men-ssj-1103-a.webp",
+      "mahakal-silver-ring-for-men-ssj-1103-b.webp",
+      "925-sterling-silver-mahakal-ring-ssj-1103-c.webp",
+      "mahakal-written-gents-ring-ssj-1103-d.webp"
+    ],
+    "brandText": "Made from Premium 925 Silver for Elegant Looks",
+    "care": "SILVER_GENERAL",
+    "for": "him",
+    "metal": "silver",
+    "weight": 5,
+    "makingCharges": 55,
+    "discount": 2,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 1996,
+    "MRP": 2037
+  },
+  {
+    "id": 1105,
+    "name": "925 Sterling Silver Jai Shree Mahakal Ring for Men",
+    "collection": "Mahadev Silver Rings",
+    "type": [
+      "Party Wear",
+      "Spiritual Silver Jewellery",
+      "Silver Jewellery for Men"
+    ],
+    "highlights": [
+      "💎 Material: 925 Sterling Silver Jewellery",
+      "🪷 Design: Jai Shree Mahakal Hindi Inscription with Ornate Traditional Borders & Decorative Side Work",
+      "✨ Finish: Premium Silver Shine with Raised Hindi Lettering & Textured Detailing",
+      "🙏 Designed for Mahakal Devotees & Lovers of Spiritual Silver Jewellery",
+      "🔒 Safe & Secure Shopping Experience"
+    ],
+    "description": "Show your devotion to Lord Mahakal with this distinctive silver ring for men, featuring the Hindi inscription “जय श्री महाकाल” on a rectangular raised top. Detailed decorative borders and ornate side elements give the ring a traditional, royal appearance. Designed for devotees who want to carry their faith with them, this Mahakal ring is suitable for religious occasions, festive wear and everyday styling. It also makes a meaningful gift for Shiva devotees.",
+    "images": [
+      "silver-ring-for-men-ssj-1105-a.webp",
+      "jai-shree-mahakal-silver-ring-ssj-1105-b.webp",
+      "mahakal-hindi-name-ring-for-men-ssj-1105-c.webp",
+      "spiritual-silver-gents-ring-ssj-1105-d.webp"
+    ],
+    "brandText": "Elegant Jewellery in Silver",
+    "care": "SILVER_GENERAL",
+    "for": "him",
+    "metal": "silver",
+    "weight": 5,
+    "makingCharges": 50,
+    "discount": 5,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 1931,
+    "MRP": 2033
+  },
+  {
+    "id": 1107,
+    "name": "Hanuman Gada Silver Ring for Men Online",
+    "collection": "Hanuman Silver Rings",
+    "type": [
+      "Party Wear",
+      "Spiritual Silver Jewellery",
+      "Silver Jewellery for Men"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "🙏 Lord Hanuman Gada & Name Inspired Design",
+      "✨ Detailed Antique Finish with Premium Silver Shine",
+      "🪷 Proudly Made in India",
+      "🎁 Perfect Gift for Hanuman Bhakts",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Express your devotion to Lord Hanuman with this beautifully crafted Hanuman Gada 925 silver ring for men. Featuring a distinctive hexagonal centre with an intricately detailed gada (mace) and Hanuman-inspired lettering, this ring represents strength, courage and unwavering devotion. Its bold traditional design is complemented by an artistic silver framework, decorative detailing and an elegant antique finish. Perfect for devotees who love wearing spiritual jewellery with a statement look, this silver ring combines religious significance with traditional craftsmanship. An ideal choice for daily wear, festive occasions or a meaningful gift for Hanuman devotees.",
+    "images": [
+      "hanuman-gada-925-silver-ring-men-ssj-1107-a.webp",
+      "antique-hanuman-gada-ring-design-closeup-ssj-1107-b.webp"
+    ],
+    "brandText": "Elegant Jewellery in Authentic 92.5% Pure Silver",
+    "care": "SILVER_GENERAL",
+    "for": "him",
+    "metal": "silver",
+    "weight": 5,
+    "makingCharges": 55,
+    "discount": 2,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 1996,
+    "MRP": 2037
+  },
+  {
+    "id": 1108,
+    "name": "Shri Ram Naam Silver Ring for Men Online Design",
+    "collection": "Hanuman Silver Rings",
+    "type": [
+      "Party Wear",
+      "Spiritual Silver Jewellery",
+      "Silver Jewellery for Men"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "🙏 Sacred Shri Ram Naam & Gada Inspired Design",
+      "✨ Intricate Traditional Silver Work with Antique Detailing",
+      "🪷 Proudly Made in India",
+      "🎁 Meaningful Gift for Shri Ram Devotees",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Carry the blessings and divine name of Shri Ram with this premium Shri Ram Naam 925 silver ring for men. The ring features a beautifully designed hexagonal centre showcasing the sacred name of Ram along with a gada-inspired motif, symbolising devotion, strength and righteousness. Its distinctive traditional framework includes intricate ornamental silver detailing, decorative curves and finely crafted borders that give the ring a bold Rajwadi appearance. Designed for devotees who appreciate spiritual silver jewellery, this statement ring is suitable for daily wear, religious occasions, festivals and special celebrations. It also makes a thoughtful gift for Ram Bhakts and anyone who wishes to keep the name of Shri Ram close to their heart.",
+    "images": [
+      "shri-ram-naam-925-silver-ring-men-ssj-1108-a.webp",
+      "traditional-ram-naam-silver-ring-closeup-ssj-1108-b.webp"
+    ],
+    "brandText": "Crafted with Genuine Silver at 925 Purity",
+    "care": "SILVER_GENERAL",
+    "for": "him",
+    "metal": "silver",
+    "weight": 5.5,
+    "makingCharges": 55,
+    "discount": 3,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 2195,
+    "MRP": 2263
+  },
+  {
+    "id": 1109,
+    "name": "925 Silver Ram Naam Ring Hindu Spiritual Ring",
+    "collection": "Hanuman Silver Rings",
+    "type": [
+      "Silver Gift for Him",
+      "Spiritual Silver Jewellery"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "🙏 Beautiful Ram Naam Spiritual Design",
+      "✨ Intricate Traditional Detailing with Premium Silver Finish",
+      "🪷 Proudly Made in India",
+      "🎁 Perfect Gift for Ram Bhakts and Special Occasions",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Express your devotion to Lord Ram with this beautifully crafted 925 silver Ram Naam ring for men. Featuring an elegant hexagonal centre with the sacred name Ram in a distinctive traditional font, this ring showcases intricate detailing and sparkling stone accents around the lettering. Its ornate silver border, decorative side patterns and finely textured finish give it a bold traditional appearance. Designed for devotees who love wearing spiritual jewellery, this statement ring beautifully combines faith, craftsmanship and timeless Indian artistry. A meaningful choice for Ram Bhakts and an ideal spiritual gift for birthdays, festivals and special occasions.",
+    "images": [
+      "silver-ram-naam-ring-men-ssj-1109-a.webp",
+      "ram-naam-spiritual-silver-ring-closeup-ssj-1109-b.webp",
+      "ram-silver-ring-ssj-1109-c.webp"
+    ],
+    "brandText": "Elegant Jewellery in Silver",
+    "care": "SILVER_GENERAL",
+    "for": "him",
+    "metal": "silver",
+    "weight": 5.2,
+    "makingCharges": 55,
+    "discount": 1,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 2075,
+    "MRP": 2096
+  },
+  {
+    "id": 1110,
+    "name": "925 Silver Mahakal Ring Premium Lord Shiva Devotional Ring",
+    "collection": "Mahadev Silver Rings",
+    "type": [
+      "Silver Gift for Him"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "🙏 Mahakal Name Design with Sacred Trishul Symbol",
+      "✨ Intricate Traditional Detailing with Premium Silver Finish",
+      "🪷 Proudly Made in India",
+      "🎁 Perfect Gift for Mahadev Bhakts and Special Occasions",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Carry the blessings of Mahakal wherever you go with this premium 925 silver Mahakal ring for men. Beautifully designed with the sacred name Mahakal and a Trishul symbol, this spiritual silver ring represents devotion, strength and the divine presence of Lord Shiva. The distinctive centre design is complemented by an intricately detailed traditional silver frame, decorative sidework and a finely polished finish. Its bold statement appearance makes it a perfect choice for Mahadev devotees who appreciate traditional spiritual jewellery. An ideal gift for Shiv Bhakts on Mahashivratri, birthdays, religious occasions and other special celebrations.",
+    "images": [
+      "silver-mahakal-trishul-ring-men-ssj-1110-a.webp",
+      "mahakal-trishul-silver-ring-closeup-ssj-1110-b.webp"
+    ],
+    "brandText": "Made from Silver for Elegant Looks",
+    "care": "SILVER_GENERAL",
+    "for": "him",
+    "metal": "silver",
+    "weight": 5.3,
+    "makingCharges": 55,
+    "discount": 2,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 2115,
+    "MRP": 2158
+  },
+  {
+    "id": 1111,
+    "name": "Lord Shiva Silver Ring for Men",
+    "collection": "Mahadev Silver Rings",
+    "type": [
+      "Daily Wear"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "🕉️ Beautiful Shiv Devotional Engraved Design",
+      "✨ Intricate Traditional Oxidised Detailing",
+      "🪷 Proudly Made in India",
+      "🎁 Perfect Gift for Shiv Bhakts",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Express your devotion to Lord Shiva with this beautifully crafted 925 silver Shiv ring for men. Featuring an intricately engraved Shiv design at the centre, this ring showcases traditional Indian craftsmanship with an elegant oxidised finish. Its distinctive ornamental borders, detailed sidework and bold devotional artwork give it a royal traditional appearance. Designed for men who love spiritual jewellery and wish to keep their faith close, this statement silver ring beautifully combines devotion, heritage and timeless style. A meaningful choice for daily wear, religious occasions and gifting to Lord Shiva devotees.",
+    "images": [
+      "silver-shiv-devotional-ring-men-ssj-1111-a.webp",
+      "traditional-oxidised-shiv-silver-ring-closeup-ssj-1111-b.webp"
+    ],
+    "brandText": "Elegant Jewellery in Authentic 92.5% Pure Silver",
+    "care": "SILVER_GENERAL",
+    "for": "him",
+    "metal": "silver",
+    "weight": 4.95,
+    "makingCharges": 60,
+    "discount": 1.5,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 2039,
+    "MRP": 2070
+  },
+  {
+    "id": 1112,
+    "name": "Mahadev Silver Ring for Men Online",
+    "collection": "Mahadev Silver Rings",
+    "type": [
+      "Spiritual Silver Jewellery"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "🙏 Beautiful Mahadev Name Engraving",
+      "✨ Premium Traditional Oxidised Design",
+      "🪷 Proudly Made in India",
+      "🎁 Meaningful Gift for Mahadev Devotees",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Carry the blessings and divine presence of Mahadev with this premium 925 silver Mahadev name ring for men. Featuring a beautifully engraved Mahadev inscription on a distinctive hexagonal centre, this traditional ring showcases intricate ornamental detailing and an elegant oxidised finish. The decorative side patterns and finely crafted borders give it a bold Rajwadi-inspired appearance. Perfect for Mahadev devotees who appreciate spiritual silver jewellery, this statement ring blends traditional Indian artistry with devotional significance. An ideal gift for Shiv Bhakts on Mahashivratri, birthdays and other special religious occasions.",
+    "images": [
+      "silver-mahadev-name-ring-men-ssj-1112-a.webp",
+      "hexagon-mahadev-engraved-silver-ring-closeup-ssj-1112-b.webp"
+    ],
+    "brandText": "Crafted with Genuine Silver at 925 Purity",
+    "care": "SILVER_GENERAL",
+    "for": "him",
+    "metal": "silver",
+    "weight": 4.89,
+    "makingCharges": 60,
+    "discount": 5,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 2015,
+    "MRP": 2121
+  },
+  {
+    "id": 1113,
+    "name": "Mahakal Silver Ring Rajwadi Handmade Design",
+    "collection": "Mahadev Silver Rings",
+    "type": [
+      "Silver Jewellery Under ₹3000"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "✨ Intricate Mahakal Engraving with Traditional Decorative Design",
+      "🪷 Proudly Made in India",
+      "🎁 Perfect Gift for Mahadev Devotees and Special Moments",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Express your devotion to Lord Shiva with this beautifully crafted 925 silver Mahakal ring for men. Featuring the sacred Trishul symbol and the Hindi inscription \"महाकाल\" at its centre, this ring showcases a distinctive square-shaped face surrounded by intricate traditional silver detailing. Its elegant ornamental borders, finely carved patterns and polished finish give it a premium traditional appearance. Designed for Mahadev devotees, this spiritual silver ring beautifully combines religious significance with bold jewellery styling. A meaningful choice for daily wear, festive occasions or gifting someone who carries devotion to Mahakal close to their heart.",
+    "images": [
+      "mahakal-square-silver-ring-men-ssj-1113-a.webp",
+      "925-silver-mahakal-ring-trishul-design-ssj-1113-b.webp"
+    ],
+    "brandText": "Genuine 92.5% Silver with Refined Craftsmanship",
+    "care": "SILVER_GENERAL",
+    "for": "him",
+    "metal": "silver",
+    "weight": 5,
+    "makingCharges": 55,
+    "discount": 4,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 1996,
+    "MRP": 2079
+  },
+  {
+    "id": 1114,
+    "name": "Mahakal Tripundra Silver Ring for Men",
+    "collection": "Mahadev Silver Rings",
+    "type": [
+      "Silver Jewellery Under ₹3000"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "✨ Hexagonal Mahakal Face with Bold Trishul Engraving",
+      "🪷 Proudly Made in India",
+      "🎁 Perfect Gift for Mahadev Devotees and Special Moments",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Carry the blessings of Mahakal with this premium 925 silver ring for men, featuring a distinctive hexagonal design inspired by Lord Shiva. The centre showcases the sacred Trishul symbol along with the beautifully engraved Hindi name \"महाकाल\", creating a powerful devotional appearance. Its detailed ornamental sidework, decorative beaded borders and traditional silver craftsmanship give the ring a distinctive Rajwadi-inspired look. Designed for devotees of Mahadev, this spiritual silver ring is suitable for everyday styling, religious occasions and festive celebrations. It also makes a thoughtful gift for Shiva devotees who appreciate traditional jewellery with deep spiritual meaning.",
+    "images": [
+      "hexagonal-mahakal-silver-ring-men-ssj-1114-a.webp",
+      "trishul-mahakal-925-silver-ring-closeup-ssj-1114-b.webp",
+      "mahakal-silverr-ring-sapna-shree-ssj-1114-c.webp",
+      "mahakal-ring-sapna-shri-jewellers-ssj-1114-d.webp"
+    ],
+    "brandText": "Made from Premium 925 Silver for Elegant Looks",
+    "care": "SILVER_GENERAL",
+    "for": "him",
+    "metal": "silver",
+    "weight": 5.1,
+    "makingCharges": 55,
+    "discount": 2,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 2036,
+    "MRP": 2078
+  },
+  {
+    "id": 1115,
+    "name": "Premium 925 Silver Sawariya Seth Ring for Men",
+    "collection": "Sawariya Seth Rings",
+    "type": [
+      "Silver Jewellery Under ₹3000"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "🙏 Beautiful Sawariya Seth Devotional Design",
+      "✨ Intricate Traditional Silver Work",
+      "🪷 Proudly Made in India",
+      "🎁 Perfect Gift for Devotees and Special Moments",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Express your devotion with this beautifully crafted 925 sterling silver Sawariya Seth ring for men. Featuring the sacred name of Shri Sawariya Seth in an attractive Hindi inscription, this ring showcases an elegant central plaque surrounded by intricate traditional silver detailing. Its distinctive ornamental borders, textured silver finish and finely crafted patterns give it a rich Rajwadi appearance. Designed for devotees who love wearing spiritual jewellery, this statement ring beautifully combines faith, traditional craftsmanship and timeless style. A meaningful choice for daily devotion, festive occasions and a thoughtful gift for Sawariya Seth Bhakts.",
+    "images": [
+      "sawariya-seth-925-silver-ring-men-ornate-design-ssj-1115-a.webp",
+      "traditional-sawariya-seth-silver-ring-closeup-ssj-1115-b.webp"
+    ],
+    "brandText": "Elegant Jewellery in Authentic 92.5% Pure Silver",
+    "care": "SILVER_GENERAL",
+    "for": "him",
+    "metal": "silver",
+    "weight": 5.05,
+    "makingCharges": 55,
+    "discount": 3,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 2016,
+    "MRP": 2078
+  },
+  {
+    "id": 1116,
+    "name": "925 Silver Sawariya Seth Name Ring for Men",
+    "collection": "Sawariya Seth Rings",
+    "type": [
+      "Spiritual Silver Jewellery"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "🙏 Elegant Sawariya Seth Name Design",
+      "✨ Royal Fan Pattern with Ornamental Detailing",
+      "🪷 Proudly Made in India",
+      "🎁 Perfect Gift for Devotees and Special Moments",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Carry the blessings of Shri Sawariya Seth with this premium 925 sterling silver devotional ring for men. The ring features a beautifully engraved Sawariya Seth name in Hindi, highlighted by a distinctive rectangular frame and an elegant fan-inspired pattern. Its detailed side elements, raised silver lettering and traditional ornamental craftsmanship create a royal and eye-catching appearance. Perfect for devotees who appreciate spiritual jewellery with a traditional touch, this designer silver ring makes a meaningful addition to your collection. It is also a thoughtful gift for Sawariya Seth devotees on birthdays, festivals and special religious occasions.",
+    "images": [
+      "sawariya-seth-silver-name-ring-men-royal-design-ssj-1116-a.webp",
+      "sawariya-seth-devotional-silver-ring-closeup-ssj-1116-b.webp"
+    ],
+    "brandText": "Elegant Jewellery in Silver",
+    "care": "SILVER_GENERAL",
+    "for": "him",
+    "metal": "silver",
+    "weight": 5.3,
+    "makingCharges": 55,
+    "discount": 2,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 2115,
+    "MRP": 2158
+  },
+  {
+    "id": 1117,
+    "name": "Sawariya Seth Silver Ring Traditional Devotional Design",
+    "collection": "Sawariya Seth Rings",
+    "type": [
+      "Daily Wear"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "✨ Beautiful Sawariya Seth Name Engraving",
+      "🪷 Proudly Made in India",
+      "🎁 Perfect Gift for Special Moments",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Celebrate your devotion with this premium Sawariya Seth silver ring for men, beautifully crafted in 925 sterling silver. The ring features an elegant hexagonal centre plate engraved with the sacred name of Sawariya Seth in Hindi, making it a meaningful choice for devotees. Its distinctive traditional design is enhanced with intricate decorative detailing, beautifully textured borders and a polished silver finish. Combining spiritual significance with traditional Indian craftsmanship, this devotional silver ring makes a wonderful addition to your jewellery collection. Perfect for daily wear, religious occasions and gifting to someone special, it is an ideal choice for those who wish to keep their faith close to them.",
+    "images": [
+      "sawariya-seth-925-silver-ring-men-ssj-1117-a.webp",
+      "sawariya-seth-silver-ring-engraved-design-ssj-1117-b.webp"
+    ],
+    "brandText": "Made from Silver for Elegant Looks",
+    "care": "SILVER_GENERAL",
+    "for": "him",
+    "metal": "silver",
+    "weight": 5.5,
+    "makingCharges": 55,
+    "discount": 1,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 2195,
+    "MRP": 2217
+  },
+  {
+    "id": 1118,
+    "name": "925 Sterling Silver Mahakal Ring for Men Trishul Design",
+    "collection": "Mahadev Silver Rings",
+    "type": [
+      "Shravan"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "🔱 Mahakal & Trishul Inspired Spiritual Design",
+      "🪷 Proudly Made in India",
+      "🎁 Perfect Gift for Mahadev Devotees & Special Moments",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Express your devotion to Lord Mahakal with this beautifully crafted 925 sterling silver ring for men. Featuring a bold Trishul symbol and the Hindi engraving \"महाकाल\" at the centre, this ring reflects faith, strength and spiritual identity. Its intricate side patterns, detailed borders and premium silver finish give it a distinctive traditional look. Designed for Mahadev devotees who appreciate meaningful jewellery, this statement ring is suitable for daily wear, religious occasions and special gatherings. A thoughtful gift for birthdays, festivals, Mahashivratri and other special moments.",
+    "images": [
+      "mahakal-trishul-925-silver-ring-for-men-ssj-1118-a.webp",
+      "mahakal-silver-ring-hindi-engraving-closeup-ssj-1118-b.webp"
+    ],
+    "brandText": "Elegant Jewellery in Authentic 92.5% Pure Silver",
+    "care": "SILVER_GENERAL",
+    "for": "him",
+    "metal": "silver",
+    "weight": 5.7,
+    "makingCharges": 55,
+    "discount": 6,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 2275,
+    "MRP": 2420
+  },
+  {
+    "id": 1119,
+    "name": "925 Sterling Silver Jai Shri Mahakal Ring for Men",
+    "collection": "Mahadev Silver Rings",
+    "type": [
+      "Shravan"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "🙏 Beautiful Mahadev Name Engraving",
+      "✨ Premium Traditional Oxidised Design",
+      "🪷 Proudly Made in India",
+      "🎁 Meaningful Gift for Mahadev Devotees",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Celebrate your devotion to Lord Shiva with this beautifully crafted 925 Sterling Silver Jai Shri Mahakal Ring for Men from Sapna Shri Jewellers. Featuring the sacred inscription \"जय श्री महाकाल\" along with an elegant Trishul motif, this ring showcases intricate traditional craftsmanship and detailed ornamental side patterns. Its distinctive octagonal centre, decorative beaded borders and finely textured silver finish give it a royal and spiritual appearance. Perfect for Mahadev devotees, this statement silver ring is ideal for daily wear, temple visits, religious occasions, festivals and gifting. A meaningful combination of faith, traditional artistry and timeless silver jewellery.",
+    "images": [
+      "925-silver-jai-shri-mahakal-ring-men-ssj-1119-a.webp",
+      "mahakal-trishul-silver-ring-closeup-ssj-1119-b.webp",
+      "mahakal-ring-for-men-engrave-ssj-1119-c.webp"
+    ],
+    "brandText": "Crafted with Genuine Silver at 925 Purity",
+    "care": "SILVER_GENERAL",
+    "for": "him",
+    "metal": "silver",
+    "weight": 5.08,
+    "makingCharges": 55,
+    "discount": 5,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 2028,
+    "MRP": 2135
+  },
+  {
+    "id": 1120,
+    "name": "The Majestic Two-Tone Lion Crest Silver Signet Ring",
+    "collection": "Silver Rings for Men",
+    "type": [
+      "Silver Jewellery for Men"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "🦁 Royal Gold-Polished Lion Head Design",
+      "✨ Intricate Traditional Detailing with Premium Finish",
+      "🪷 Proudly Made in India",
+      "🎁 Perfect Gift for Men on Special Occasions",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Make a bold impression with this premium 925 sterling silver lion head ring for men from Sapna Shri Jewellers. Featuring a beautifully detailed gold-polished lion face at the centre, this statement ring showcases a striking combination of silver and golden tones. The hexagonal centre frame, intricate silver craftsmanship and ornate side detailing give the ring a distinctive royal and traditional appearance. Designed for men who appreciate powerful motifs and unique jewellery, this eye-catching ring is perfect for festive occasions, special celebrations and everyday style statements. A memorable gift choice for men who love bold and royal silver jewellery.",
+    "images": [
+      "gold-polish-lion-head-silver-ring-men-ssj-1120-a.webp",
+      "royal-lion-face-925-silver-ring-closeup-ssj-1120-b.webp"
+    ],
+    "brandText": "Elegant Jewellery in Silver",
+    "care": "SILVER_GENERAL",
+    "for": "him",
+    "metal": "silver",
+    "weight": 5.02,
+    "makingCharges": 80,
+    "discount": 4,
+    "labels": [
+      "Limited"
+    ],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 2327,
+    "MRP": 2424
+  },
+  {
+    "id": 1121,
+    "name": "Silver Ring for Men Online Design",
+    "collection": "Silver Rings for Men",
+    "type": [
+      "Silver Jewellery for Men"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "✨ Personalised Name & Custom Design Option",
+      "🪷 Proudly Made in India",
+      "🎁 Perfect Gift for Special Moments",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Celebrate your unique identity or gift a meaningful keepsake with this premium personalized sterling silver ring for men. Expertly crafted with a smooth, high-polish finish, the ring features a crisp, customizable name engraving in an elegant, modern font. The inner band is stamped with the \"925\" hallmark, certifying its genuine silver purity. Its classic dome-shaped profile provides a timeless aesthetic while ensuring maximum comfort for daily wear. Made with high-grade, durable 92.5% pure silver, this band is highly resistant to bending and is designed to last. It serves as an exceptional personalized gift for birthdays, anniversaries, weddings, or milestones, seamlessly blending classic style with sentimental value.",
+    "images": [
+      "925-silver-flower-ring-men-ssj-1121-a.webp",
+      "flower-silver-ring-closeup-ssj-1121-b.webp",
+      "mens-silver-flower-signet-ring-ssj-1121-c.webp",
+      "designer-silver-flower-ring-ssj-1121-d.webp"
+    ],
+    "brandText": "Made from Silver for Elegant Looks",
+    "care": "SILVER_GENERAL",
+    "for": "him",
+    "metal": "silver",
+    "weight": 5,
+    "makingCharges": 55,
+    "discount": 2,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 1996,
+    "MRP": 2037
+  },
+  {
+    "id": 1122,
+    "name": "925 Sterling Silver Ace of Spades Ace Signet Men's Ring",
+    "collection": "Silver Rings for Men",
+    "type": [
+      "Silver Gift for Him"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "✨ Personalised Name & Custom Design Option",
+      "🪷 Proudly Made in India",
+      "🎁 Perfect Gift for Special Moments",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Celebrate your unique identity or gift a meaningful keepsake with this premium personalized sterling silver ring for men. Expertly crafted with a smooth, high-polish finish, the ring features a crisp, customizable name engraving in an elegant, modern font. The inner band is stamped with the \"925\" hallmark, certifying its genuine silver purity. Its classic dome-shaped profile provides a timeless aesthetic while ensuring maximum comfort for daily wear. Made with high-grade, durable 92.5% pure silver, this band is highly resistant to bending and is designed to last. It serves as an exceptional personalized gift for birthdays, anniversaries, weddings, or milestones, seamlessly blending classic style with sentimental value.",
+    "images": [
+      "925-silver-spades-card-symbol-ring-men-ssj-1122-a.webp",
+      "spades-motif-silver-ring-closeup-ssj-1122-b.webp"
+    ],
+    "brandText": "Elegant Jewellery in Authentic 92.5% Pure Silver",
+    "care": "SILVER_GENERAL",
+    "for": "him",
+    "metal": "silver",
+    "weight": 4.9,
+    "makingCharges": 55,
+    "discount": 4,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 1956,
+    "MRP": 2038
+  },
+  {
+    "id": 1123,
+    "name": "925 Sterling Silver Horse Knight Signet Men's Ring",
+    "collection": "Silver Rings for Men",
+    "type": [
+      "Silver Gift for Him"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "✨ Personalised Name & Custom Design Option",
+      "🪷 Proudly Made in India",
+      "🎁 Perfect Gift for Special Moments",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Celebrate your unique identity or gift a meaningful keepsake with this premium personalized sterling silver ring for men. Expertly crafted with a smooth, high-polish finish, the ring features a crisp, customizable name engraving in an elegant, modern font. The inner band is stamped with the \"925\" hallmark, certifying its genuine silver purity. Its classic dome-shaped profile provides a timeless aesthetic while ensuring maximum comfort for daily wear. Made with high-grade, durable 92.5% pure silver, this band is highly resistant to bending and is designed to last. It serves as an exceptional personalized gift for birthdays, anniversaries, weddings, or milestones, seamlessly blending classic style with sentimental value.",
+    "images": [
+      "925-silver-horse-ring-men-ssj-1123-a.webp",
+      "horse-motif-silver-ring-closeup-ssj-1123-b.webp",
+      "mens-silver-horse-head-ring-ssj-1123-c.webp",
+      "925-sterling-silver-horse-signet-ring-ssj-1123-d.webp"
+    ],
+    "brandText": "Crafted with Genuine Silver at 925 Purity",
+    "care": "SILVER_GENERAL",
+    "for": "him",
+    "metal": "silver",
+    "weight": 5,
+    "makingCharges": 55,
+    "discount": 2,
+    "labels": [
+      "Trending"
+    ],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 1996,
+    "MRP": 2037
+  },
+  {
+    "id": 1125,
+    "name": "925 Sterling Silver Trishul Ring for Men",
+    "collection": "Mahadev Silver Rings",
+    "type": [
+      "Shravan"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "✨ Personalised Name & Custom Design Option",
+      "🪷 Proudly Made in India",
+      "🎁 Perfect Gift for Special Moments",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Celebrate your unique identity or gift a meaningful keepsake with this premium personalized sterling silver ring for men. Expertly crafted with a smooth, high-polish finish, the ring features a crisp, customizable name engraving in an elegant, modern font. The inner band is stamped with the \"925\" hallmark, certifying its genuine silver purity. Its classic dome-shaped profile provides a timeless aesthetic while ensuring maximum comfort for daily wear. Made with high-grade, durable 92.5% pure silver, this band is highly resistant to bending and is designed to last. It serves as an exceptional personalized gift for birthdays, anniversaries, weddings, or milestones, seamlessly blending classic style with sentimental value.",
+    "images": [
+      "925-silver-trishul-damru-ring-men-ssj-1125-a.webp",
+      "shiva-trishul-damru-silver-ring-closeup-ssj-1125-b.webp"
+    ],
+    "brandText": "Elegant Jewellery in Authentic 92.5% Pure Silver",
+    "care": "SILVER_GENERAL",
+    "for": "him",
+    "metal": "silver",
+    "weight": 5.1,
+    "makingCharges": 55,
+    "discount": 2,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 2036,
+    "MRP": 2078
+  },
+  {
+    "id": 1126,
+    "name": "Gold Polish Trishul 925 Silver Ring for Men",
+    "collection": "Mahadev Silver Rings",
+    "type": [
+      "Shravan"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "✨ Personalised Name & Custom Design Option",
+      "🪷 Proudly Made in India",
+      "🎁 Perfect Gift for Special Moments",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Celebrate your unique identity or gift a meaningful keepsake with this premium personalized sterling silver ring for men. Expertly crafted with a smooth, high-polish finish, the ring features a crisp, customizable name engraving in an elegant, modern font. The inner band is stamped with the \"925\" hallmark, certifying its genuine silver purity. Its classic dome-shaped profile provides a timeless aesthetic while ensuring maximum comfort for daily wear. Made with high-grade, durable 92.5% pure silver, this band is highly resistant to bending and is designed to last. It serves as an exceptional personalized gift for birthdays, anniversaries, weddings, or milestones, seamlessly blending classic style with sentimental value.",
+    "images": [
+      "925-silver-gold-polish-trishul-damru-ring-men-ssj-1126-a.webp",
+      "mahakal-trishul-damru-silver-ring-closeup-ssj-1126-b.webp",
+      "dual-tone-trishul-damru-silver-ring-for-men-ssj-1126-c.webp",
+      "lord-shiva-trishul-damru-925-silver-ring-ssj-1126-d.webp"
+    ],
+    "brandText": "Crafted with Genuine Silver at 925 Purity",
+    "care": "SILVER_GENERAL",
+    "for": "him",
+    "metal": "silver",
+    "weight": 5,
+    "makingCharges": 70,
+    "discount": 7,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 2189,
+    "MRP": 2354
+  },
+  {
+    "id": 1127,
+    "name": "Ace of Spades Signet Ring in 925 Silver",
+    "collection": "Silver Rings for Men",
+    "type": [
+      "Party Wear"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "✨ Personalised Name & Custom Design Option",
+      "🪷 Proudly Made in India",
+      "🎁 Perfect Gift for Special Moments",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Celebrate your unique identity or gift a meaningful keepsake with this premium personalized sterling silver ring for men. Expertly crafted with a smooth, high-polish finish, the ring features a crisp, customizable name engraving in an elegant, modern font. The inner band is stamped with the \"925\" hallmark, certifying its genuine silver purity. Its classic dome-shaped profile provides a timeless aesthetic while ensuring maximum comfort for daily wear. Made with high-grade, durable 92.5% pure silver, this band is highly resistant to bending and is designed to last. It serves as an exceptional personalized gift for birthdays, anniversaries, weddings, or milestones, seamlessly blending classic style with sentimental value.",
+    "images": [
+      "925-silver-ace-of-spade-ring-men-ssj-1127-a.webp",
+      "ace-of-spade-silver-ring-closeup-ssj-1127-b.webp"
+    ],
+    "brandText": "Genuine 92.5% Silver with Refined Craftsmanship",
+    "care": "SILVER_GENERAL",
+    "for": "him",
+    "metal": "silver",
+    "weight": 4.75,
+    "makingCharges": 55,
+    "discount": 2,
+    "labels": [
+      "Limited"
+    ],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 1896,
+    "MRP": 1935
+  },
+  {
+    "id": 1128,
+    "name": "925 Sterling Silver Royal Lion Face Ring for Men",
+    "collection": "Silver Rings for Men",
+    "type": [
+      "Party Wear"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "✨ Personalised Name & Custom Design Option",
+      "🪷 Proudly Made in India",
+      "🎁 Perfect Gift for Special Moments",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Celebrate your unique identity or gift a meaningful keepsake with this premium personalized sterling silver ring for men. Expertly crafted with a smooth, high-polish finish, the ring features a crisp, customizable name engraving in an elegant, modern font. The inner band is stamped with the \"925\" hallmark, certifying its genuine silver purity. Its classic dome-shaped profile provides a timeless aesthetic while ensuring maximum comfort for daily wear. Made with high-grade, durable 92.5% pure silver, this band is highly resistant to bending and is designed to last. It serves as an exceptional personalized gift for birthdays, anniversaries, weddings, or milestones, seamlessly blending classic style with sentimental value.",
+    "images": [
+      "ace-of-lion-silver-ring-men-ssj-1128-a.webp",
+      "lion-card-design-silver-ring-closeup-ssj-1128-b.webp",
+      "925-sterling-silver-ace-lion-ring-ssj-1128-c.webp"
+    ],
+    "brandText": "Made from Premium 925 Silver for Elegant Looks",
+    "care": "SILVER_GENERAL",
+    "for": "him",
+    "metal": "silver",
+    "weight": 5.5,
+    "makingCharges": 55,
+    "discount": 3,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 2195,
+    "MRP": 2263
+  },
+  {
+    "id": 1129,
+    "name": "This Too Shall Pass Engraved Silver Ring Handmade",
+    "collection": "Personalised Silver Rings",
+    "type": [
+      "Office Wear"
+    ],
+    "highlights": [
+      "💎 Material: Crafted in 925 Sterling Silver (92.5% Silver Purity)",
+      "🪷 Design: Minimalist Wide Silver Band with \"This Too Shall Pass\" Inspirational English Engraving",
+      "✨ Finish: Premium Mirror-Like High-Polish Silver Finish with Elegant Black Lettering",
+      "🙏 Designed for: Men Who Love Minimalist Jewellery, Meaningful Quotes & Everyday Style",
+      "🔒 Safe & Secure Shopping Experience"
+    ],
+    "description": "A simple ring with a powerful message! This 925 Sterling Silver Men's Ring features the inspiring words \"This Too Shall Pass\" engraved across its smooth, broad silver band. The quote serves as a gentle reminder to stay strong, patient and positive through every situation in life. Its clean design, polished silver surface and bold black lettering create a timeless look without unnecessary detailing. Perfect for everyday wear or as a meaningful gift for someone who values motivation and simplicity.",
+    "images": [
+      "silver-ring-engraved-this-too-shall-pass-ssj-1129-a.webp",
+      "925-sterling-silver-message-ring-ssj-1129-b.webp"
+    ],
+    "brandText": "Elegant Jewellery in Authentic 92.5% Pure Silver",
+    "care": "SILVER_GENERAL",
+    "for": "unisex",
+    "metal": "silver",
+    "weight": 4,
+    "makingCharges": 100,
+    "discount": 3,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 2060,
+    "MRP": 2124
+  },
+  {
+    "id": 1130,
+    "name": "Yeh bhi badal jayega Engraved Silver Ring",
+    "collection": "Personalised Silver Rings",
+    "type": [
+      "Office Wear"
+    ],
+    "highlights": [
+      "💎 Material: Crafted in 925 Sterling Silver (92.5% Silver Purity)",
+      "🪷 Design: Elegant Wide Silver Band with Hindi Engraving \"यह भी बदल जायेगा\" and a Trishul Symbol",
+      "✨ Finish: Premium High-Polish Silver Finish with Bold Black Engraved Detailing",
+      "🙏 Designed for: Men Who Appreciate Meaningful Jewellery, Spiritual Symbols & Inspirational Messages",
+      "🔒 Safe & Secure Shopping Experience"
+    ],
+    "description": "Carry a meaningful reminder with this beautifully crafted 925 Sterling Silver Men's Hindi Engraved Ring. Featuring the powerful words \"यह भी बदल जायेगा\" along with a Trishul symbol, this ring represents hope, patience and the belief that every phase of life is temporary. Its broad, smooth silver band and bold black engraving give it a distinctive appearance. The comfortable band design makes it suitable for everyday styling, while its meaningful message makes it a thoughtful gift for someone special.",
+    "images": [
+      "yeh-bhi-badal-jayega-engraved-silver-ring-ssj-1130-a.webp",
+      "sterling-silver-gents-ring-ssj-1130-b.webp"
+    ],
+    "brandText": "Elegant Jewellery in Silver",
+    "care": "SILVER_GENERAL",
+    "for": "unisex",
+    "metal": "silver",
+    "weight": 4,
+    "makingCharges": 100,
+    "discount": 3,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 2060,
+    "MRP": 2124
+  },
+  {
+    "id": 1131,
+    "name": "Personalised Mahakal Bhakt Silver Ring",
+    "collection": "Mahadev Silver Rings",
+    "type": [
+      "Daily Wear",
+      "Silver Jewellery for Men",
+      "Silver Jewellery for Women"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "✨ Personalised Name & Custom Design Option",
+      "🪷 Proudly Made in India",
+      "🎁 Perfect Gift for Special Moments",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Express your devotion to Lord Mahakal with this premium personalised 925 silver ring for men. Featuring the beautifully engraved Hindi words \"महाकाल भक्त\" on its front, this ring represents faith, devotion and a deep connection with Mahadev. Its smooth, polished finish and classic band design create a stylish look suitable for everyday wear. The inner band carries the 925 silver purity hallmark. A meaningful choice for Mahakal devotees and a thoughtful gift for birthdays, special occasions and Shiv Bhakts.",
+    "images": [
+      "mahakal-bhakt-engraved-ring-ssj-1131-a.webp"
+    ],
+    "brandText": "Made from Silver for Elegant Looks",
+    "care": "SILVER_GENERAL",
+    "for": "unisex",
+    "metal": "silver",
+    "weight": 3,
+    "makingCharges": 70,
+    "discount": 3,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 1313,
+    "MRP": 1354
+  },
+  {
+    "id": 1132,
+    "name": "Personalised Hanuman Chalisa Silver Ring",
+    "collection": "Hanuman Silver Rings",
+    "type": [
+      "Daily Wear",
+      "Silver Jewellery for Men",
+      "Silver Jewellery for Women"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "✨ Personalised Name & Custom Design Option",
+      "🪷 Proudly Made in India",
+      "🎁 Perfect Gift for Special Moments",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Carry the blessings of Bajrangbali with this beautifully designed 925 silver personalised ring for men. Featuring the devotional Hindi engraving \"तुम रक्षक काहू को डरना\" along with a detailed gada symbol, this ring represents courage, faith and protection. Its elegant polished silver band combines spiritual meaning with a modern everyday style. The inner band is stamped with the 925 hallmark, signifying its silver purity. An ideal gift for Hanuman devotees and anyone who finds strength and inspiration in Bajrangbali.",
+    "images": [
+      "hanuman-chalisa-silver-ring-men-ssj-1132-a.webp",
+      "hanuman-gada-engraved-silver-ring-closeup-ssj-1132-b.webp"
+    ],
+    "brandText": "Elegant Jewellery in Authentic 92.5% Pure Silver",
+    "care": "SILVER_GENERAL",
+    "for": "unisex",
+    "metal": "silver",
+    "weight": 3.5,
+    "makingCharges": 65,
+    "discount": 4,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 1487,
+    "MRP": 1549
+  },
+  {
+    "id": 1133,
+    "name": "Personalised Adiyogi Silver Ring",
+    "collection": "Mahadev Silver Rings",
+    "type": [
+      "Daily Wear",
+      "Silver Jewellery for Men",
+      "Silver Jewellery for Women"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "✨ Personalised Name & Custom Design Option",
+      "🪷 Proudly Made in India",
+      "🎁 Perfect Gift for Special Moments",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Celebrate your devotion to Lord Shiva with this premium Adiyogi 925 silver ring for men. Featuring the elegant \"Adiyogi\" engraving alongside a detailed Lord Shiva illustration and Trishul, this ring beautifully represents spirituality, strength and inner peace. Crafted with a smooth, high-polish finish, its classic silver band offers a timeless look for everyday wear. The inner band carries the 925 silver purity hallmark. A meaningful jewellery choice for Mahadev devotees and a thoughtful gift for birthdays, festivals and special moments.",
+    "images": [
+      "adiyogi-silver-ring-men-ssj-1133-a.webp",
+      "adiyogi-shiva-engraved-ring-closeup-ssj-1133-b.webp"
+    ],
+    "brandText": "Crafted with Genuine Silver at 925 Purity",
+    "care": "SILVER_GENERAL",
+    "for": "unisex",
+    "metal": "silver",
+    "weight": 4,
+    "makingCharges": 60,
+    "discount": 5,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 1648,
+    "MRP": 1735
+  },
+  {
+    "id": 1134,
+    "name": "Custom Engraved \"FEARLESS\" 925 Sterling Silver Ring",
+    "collection": "Personalised Silver Rings",
+    "type": [
+      "Daily Wear",
+      "Silver Jewellery for Men",
+      "Silver Jewellery for Women"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "✨ Personalised Name & Custom Design Option",
+      "🪷 Proudly Made in India",
+      "🎁 Perfect Gift for Special Moments",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Express your bold spirit or gift an empowering keepsake with this premium personalized \"FEARLESS\" sterling silver ring. Expertly crafted with a smooth, high-polish finish, the ring showcases a sharp, stylish serif-script engraving in rich black contrast, while offering custom engraving for your own name or word of strength. The inner band is stamped with the \"925\" hallmark, certifying its genuine silver purity. Its classic dome-shaped profile provides a timeless aesthetic while ensuring maximum comfort for daily wear. Made with high-grade, durable 92.5% pure silver, this band is highly resistant to bending and is designed to last. It serves as an exceptional personalized gift for birthdays, anniversaries, achievements, or milestones, seamlessly blending statement style with lasting sentimental value.",
+    "images": [
+      "personalised-statement-silver-ring-closeup-ssj-1134-a.webp"
+    ],
+    "brandText": "Elegant Jewellery in Silver",
+    "care": "SILVER_GENERAL",
+    "for": "unisex",
+    "metal": "silver",
+    "weight": 3,
+    "makingCharges": 60,
+    "discount": 3,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 1236,
+    "MRP": 1274
+  },
+  {
+    "id": 1135,
+    "name": "Personalised Shri Ram Silver Ring",
+    "collection": "Hanuman Silver Rings",
+    "type": [
+      "Daily Wear",
+      "Silver Jewellery for Men",
+      "Silver Jewellery for Women"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "✨ Personalised Name & Custom Design Option",
+      "🪷 Proudly Made in India",
+      "🎁 Perfect Gift for Special Moments",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Celebrate your devotion to Lord Shri Ram with this premium personalised sterling silver ring for men. Beautifully engraved with the words \"Shri Ram\", this elegant ring represents faith, strength and devotion. Expertly crafted with a smooth, high-polish finish, it features a classic dome-shaped band with stylish lettering that creates a sophisticated yet spiritual look. The inner band carries the 925 hallmark, certifying its silver purity. Perfect for everyday wear, this meaningful silver ring also makes a thoughtful gift for Ram devotees, birthdays, religious occasions and special celebrations.",
+    "images": [
+      "shri-ram-name-engraved-silver-ring-men-ssj-1135-a.webp"
+    ],
+    "brandText": "Elegant Jewellery in Authentic 92.5% Pure Silver",
+    "care": "SILVER_GENERAL",
+    "for": "unisex",
+    "metal": "silver",
+    "weight": 3.5,
+    "makingCharges": 60,
+    "discount": 4,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 1442,
+    "MRP": 1502
+  },
+  {
+    "id": 1136,
+    "name": "Faith Over Fear Personalised Silver Ring",
+    "collection": "Personalised Silver Rings",
+    "type": [
+      "Daily Wear",
+      "Silver Jewellery for Men",
+      "Silver Jewellery for Women"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "✨ Personalised Name & Custom Design Option",
+      "🪷 Proudly Made in India",
+      "🎁 Perfect Gift for Special Moments",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Wear a powerful reminder of courage and confidence with this premium personalised 925 sterling silver ring for men. Featuring the inspiring engraving \"Faith Over Fear\", this stylish ring symbolises positivity, inner strength and the belief that faith can overcome every challenge. Expertly crafted with a smooth, high-polish finish, it features a timeless rounded band with elegant lettering and a comfortable design for everyday wear. The inner band is stamped with the 925 hallmark, representing genuine silver purity. An ideal personalised gift for birthdays, anniversaries, achievements or anyone who believes in staying strong and fearless.",
+    "images": [
+      "faith-over-fear-engraved-silver-ring-men-ssj-1136-a.webp"
+    ],
+    "brandText": "Crafted with Genuine Silver at 925 Purity",
+    "care": "SILVER_GENERAL",
+    "for": "unisex",
+    "metal": "silver",
+    "weight": 3,
+    "makingCharges": 60,
+    "discount": 5,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 1236,
+    "MRP": 1301
+  },
+  {
+    "id": 1137,
+    "name": "Always & Forever – Personalised Silver Ring",
+    "collection": "Personalised Silver Rings",
+    "type": [
+      "Daily Wear",
+      "Silver Jewellery for Men",
+      "Silver Jewellery for Women"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "✨ Personalised Name & Custom Design Option",
+      "🪷 Proudly Made in India",
+      "🎁 Perfect Gift for Special Moments",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Celebrate everlasting love with this premium personalised sterling silver ring for men. Expertly crafted with a smooth, high-polish finish, this elegant band features the heartfelt engraving \"Always & Forever\" in a stylish cursive font. The inner band carries the 925 hallmark, reflecting its sterling silver purity. Its classic dome-shaped design offers a timeless look with a comfortable feel for everyday wear. A meaningful personalised gift for anniversaries, weddings, birthdays, Valentine's Day, or someone special.",
+    "images": [
+      "always-forever-engraved-silver-ring-closeup-ssj-1137-a.webp"
+    ],
+    "brandText": "Genuine 92.5% Silver with Refined Craftsmanship",
+    "care": "SILVER_GENERAL",
+    "for": "unisex",
+    "metal": "silver",
+    "weight": 3.5,
+    "makingCharges": 60,
+    "discount": 3,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 1442,
+    "MRP": 1487
+  },
+  {
+    "id": 1138,
+    "name": "Infinite Love – Personalised Silver Ring",
+    "collection": "Personalised Silver Rings",
+    "type": [
+      "Daily Wear",
+      "Silver Jewellery for Men",
+      "Silver Jewellery for Women"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "✨ Personalised Name & Custom Design Option",
+      "🪷 Proudly Made in India",
+      "🎁 Perfect Gift for Special Moments",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Express a love that has no limits with this premium personalised sterling silver ring. Featuring a beautifully engraved infinity symbol above the words \"Infinite Love\", this elegant band represents an endless bond and everlasting affection. Crafted with a smooth, high-polish finish, it showcases a timeless dome-shaped profile and a comfortable design for everyday wear. The inner band features the 925 hallmark, reflecting its sterling silver purity. A thoughtful personalised gift for couples, anniversaries, Valentine's Day, birthdays, and unforgettable romantic moments.",
+    "images": [
+      "infinite-love-personalised-silver-ring-with-infinity-ssj-1138-a.webp"
+    ],
+    "brandText": "Made from Premium 925 Silver for Elegant Looks",
+    "care": "SILVER_GENERAL",
+    "for": "unisex",
+    "metal": "silver",
+    "weight": 3.5,
+    "makingCharges": 60,
+    "discount": 4,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 1442,
+    "MRP": 1502
+  },
+  {
+    "id": 1139,
+    "name": "I Am Enough – Personalised Silver Ring",
+    "collection": "Personalised Silver Rings",
+    "type": [
+      "Daily Wear",
+      "Silver Jewellery for Men",
+      "Silver Jewellery for Women"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "✨ Personalised Name & Custom Design Option",
+      "🪷 Proudly Made in India",
+      "🎁 Perfect Gift for Special Moments",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Carry a powerful reminder of self-worth with this premium engraved sterling silver ring. Featuring the meaningful message \"I Am Enough\", this elegant band celebrates confidence, self-love, and individuality. Expertly crafted with a smooth, high-polish finish, it features a classic dome-shaped profile that blends timeless style with everyday comfort. The inner band carries the 925 hallmark, reflecting its sterling silver purity. A thoughtful gift for birthdays, personal milestones, achievements, or anyone who appreciates meaningful jewellery and positive reminders.",
+    "images": [
+      "i-am-enough-inspirational-silver-ring-men-ssj-1139-a.webp"
+    ],
+    "brandText": "Elegant Jewellery in Authentic 92.5% Pure Silver",
+    "care": "SILVER_GENERAL",
+    "for": "unisex",
+    "metal": "silver",
+    "weight": 4,
+    "makingCharges": 60,
+    "discount": 5,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 1648,
+    "MRP": 1735
+  },
+  {
+    "id": 1140,
+    "name": "Personalised Limitless Engraved 925 Silver Ring",
+    "collection": "Personalised Silver Rings",
+    "type": [
+      "Daily Wear",
+      "Silver Jewellery for Men",
+      "Silver Jewellery for Women"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "✨ Personalised Name & Custom Design Option",
+      "🪷 Proudly Made in India",
+      "🎁 Perfect Gift for Special Moments",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Celebrate endless possibilities with this premium personalised sterling silver ring for men. Expertly crafted with a smooth, high-polish finish, this elegant band features the inspiring word \"LIMITLESS\" engraved on its front, symbolising ambition, confidence and unlimited potential. The inner band carries the 925 silver purity stamp. Its classic rounded profile offers a timeless look with comfortable everyday wear. A meaningful gift for birthdays, anniversaries, achievements or anyone who believes in living without limits.",
+    "images": [
+      "silver-limitless-engraved-ring-men-ssj-1140-a.webp"
+    ],
+    "brandText": "Elegant Jewellery in Silver",
+    "care": "SILVER_GENERAL",
+    "for": "unisex",
+    "metal": "silver",
+    "weight": 3,
+    "makingCharges": 60,
+    "discount": 3,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 1236,
+    "MRP": 1274
+  },
+  {
+    "id": 1141,
+    "name": "Personalised Breathe Engraved 925 Silver Ring",
+    "collection": "Personalised Silver Rings",
+    "type": [
+      "Daily Wear",
+      "Silver Jewellery for Men",
+      "Silver Jewellery for Women"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "✨ Personalised Name & Custom Design Option",
+      "🪷 Proudly Made in India",
+      "🎁 Perfect Gift for Special Moments",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Embrace calmness and positivity with this premium personalised sterling silver ring for men. Featuring the beautifully engraved word \"BREATHE\" in an elegant script font, this ring serves as a gentle reminder to slow down, stay present and find balance in everyday life. Its smooth, high-polish finish and classic rounded band create a refined, minimal look. The inner band is stamped with the 925 silver hallmark. A thoughtful gift for birthdays, anniversaries and special moments, with custom engraving options to make it uniquely yours.",
+    "images": [
+      "silver-breathe-engraved-ring-men-ssj-1141-a.webp"
+    ],
+    "brandText": "Made from Silver for Elegant Looks",
+    "care": "SILVER_GENERAL",
+    "for": "unisex",
+    "metal": "silver",
+    "weight": 3.5,
+    "makingCharges": 60,
+    "discount": 4,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 1442,
+    "MRP": 1502
+  },
+  {
+    "id": 1142,
+    "name": "Personalised Never Give Up Engraved 925 Silver Ring",
+    "collection": "Personalised Silver Rings",
+    "type": [
+      "Daily Wear",
+      "Silver Jewellery for Men",
+      "Silver Jewellery for Women"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "✨ Personalised Name & Custom Design Option",
+      "🪷 Proudly Made in India",
+      "🎁 Perfect Gift for Special Moments",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Wear your determination with this premium personalised sterling silver ring for men. Designed with a smooth, polished finish, this stylish band features the powerful words \"NEVER GIVE UP\" engraved across the front, making it a meaningful symbol of strength, perseverance and self-belief. The inner band carries the 925 silver purity stamp, while its classic rounded design offers timeless appeal and comfortable everyday styling. An inspiring gift for birthdays, achievements, anniversaries or someone who never stops chasing their dreams.",
+    "images": [
+      "silver-never-give-up-ring-men-ssj-1142-a.webp",
+      "never-give-up-silver-ring-closeup-ssj-1142-b.webp"
+    ],
+    "brandText": "Elegant Jewellery in Authentic 92.5% Pure Silver",
+    "care": "SILVER_GENERAL",
+    "for": "unisex",
+    "metal": "silver",
+    "weight": 3.5,
+    "makingCharges": 60,
+    "discount": 5,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 1442,
+    "MRP": 1518
+  },
+  {
+    "id": 1143,
+    "name": "Custom Engraved 925 Sterling Silver Ring",
+    "collection": "Personalised Silver Rings",
+    "type": [
+      "Daily Wear",
+      "Silver Jewellery for Men",
+      "Silver Jewellery for Women"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "✨ Personalised Name & Custom Design Option",
+      "🪷 Proudly Made in India",
+      "🎁 Perfect Gift for Special Moments",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Celebrate your unique mindset or gift a meaningful daily reminder with this premium personalized \"LET IT BE\" sterling silver ring. Expertly crafted with a smooth, high-polish finish, the ring features a crisp, bold black-filled engraving in a clean modern block font, with full customization available for your own name or mantra. The inner band is stamped with the \"925\" hallmark, certifying its genuine silver purity. Its classic dome-shaped profile provides a timeless aesthetic while ensuring maximum comfort for daily wear. Made with high-grade, durable 92.5% pure silver, this band is highly resistant to bending and is designed to last. It serves as an exceptional personalized gift for birthdays, anniversaries, graduations, or personal milestones, seamlessly blending minimalist style with sentimental value.",
+    "images": [
+      "let-it-be-silver-engraved-ring-ssj-1143-a.webp",
+      "custom-quote-silver-band-closeup-ssj-1143-b.webp"
+    ],
+    "brandText": "Crafted with Genuine Silver at 925 Purity",
+    "care": "SILVER_GENERAL",
+    "for": "unisex",
+    "metal": "silver",
+    "weight": 4,
+    "makingCharges": 60,
+    "discount": 3,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 1648,
+    "MRP": 1699
+  },
+  {
+    "id": 1144,
+    "name": "Custom Engraved 925 Sterling Silver Ring",
+    "collection": "Personalised Silver Rings",
+    "type": [
+      "Daily Wear",
+      "Silver Jewellery for Men",
+      "Silver Jewellery for Women"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "✨ Personalised Name & Custom Design Option",
+      "🪷 Proudly Made in India",
+      "🎁 Perfect Gift for Special Moments",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Stay inspired every day or gift a thoughtful keepsake with this premium personalized \"trust the process\" sterling silver ring. Expertly crafted with a smooth, high-polish finish, the ring features a crisp, fluid italic script engraving in deep black contrast, with the option to customize with any name, date, or phrase. The inner band is stamped with the \"925\" hallmark, certifying its genuine silver purity. Its classic dome-shaped profile provides a timeless aesthetic while ensuring maximum comfort for daily wear. Made with high-grade, durable 92.5% pure silver, this band is highly resistant to bending and is designed to last. It serves as an exceptional personalized gift for birthdays, anniversaries, new beginnings, or milestones, seamlessly blending modern elegance with daily motivation.",
+    "images": [
+      "trust-the-process-silver-ring-ssj-1144-a.webp"
+    ],
+    "brandText": "Elegant Jewellery in Silver",
+    "care": "SILVER_GENERAL",
+    "for": "unisex",
+    "metal": "silver",
+    "weight": 3,
+    "makingCharges": 60,
+    "discount": 4,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 1236,
+    "MRP": 1288
+  },
+  {
+    "id": 1145,
+    "name": "Ram Engraved 925 Sterling Silver Band Ring for Men and Women",
+    "collection": "Hanuman Silver Rings",
+    "type": [
+      "Spiritual Silver Jewellery",
+      "Silver Jewellery for Men",
+      "Silver Jewellery for Women"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "✨ Personalised Name & Custom Design Option",
+      "🪷 Proudly Made in India",
+      "🎁 Perfect Gift for Special Moments",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Carry daily devotion and timeless style with this 925 sterling silver band ring featuring crisp outer engraving of \"राम राम\" and inner engraving of \"संकटमोचन\". Crafted with a smooth, high-polish finish and sturdy band profile, it offers comfortable everyday wear and lasting durability. Stamped with 925 silver purity, it makes a meaningful spiritual keepsake or thoughtful gift for festivals, birthdays, anniversaries, and special milestones.",
+    "images": [
+      "sankatmochan-ram-ram-silver-ring-ssj-1145-a.webp",
+      "sankatmochan-ram-ram-engraving-closeup-ssj-1145-b.webp"
+    ],
+    "brandText": "Genuine 92.5% Silver with Refined Craftsmanship",
+    "care": "SILVER_GENERAL",
+    "for": "unisex",
+    "metal": "silver",
+    "weight": 5,
+    "makingCharges": 60,
+    "discount": 5,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 2060,
+    "MRP": 2168
+  },
+  {
+    "id": 1146,
+    "name": "Sankatmochan Engraved 925 Sterling Silver Flat Band Ring",
+    "collection": "Hanuman Silver Rings",
+    "type": [
+      "Spiritual Silver Jewellery",
+      "Silver Jewellery for Men",
+      "Silver Jewellery for Women"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "✨ Personalised Name & Custom Design Option",
+      "🪷 Proudly Made in India",
+      "🎁 Perfect Gift for Special Moments",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Express quiet faith and everyday strength with this 925 sterling silver band ring engraved with \"संकटमोचन\" across the outer band. Designed with a clean, solid band structure and soft brushed-silver character, it pairs effortlessly with daily and festive attire. Made in 92.5% pure silver for lasting wear, it serves as a heartfelt devotional gift for loved ones on special occasions.",
+    "images": [
+      "sankatmochan-engraved-silver-ring-ssj-1146-a.webp",
+      "sankatmochan-band-engraving-closeup-ssj-1146-b.webp"
+    ],
+    "brandText": "Made from Premium 925 Silver for Elegant Looks",
+    "care": "SILVER_GENERAL",
+    "for": "unisex",
+    "metal": "silver",
+    "weight": 5,
+    "makingCharges": 60,
+    "discount": 5,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 2060,
+    "MRP": 2168
+  },
+  {
+    "id": 1147,
+    "name": "Pawanputra Engraved 925 Sterling Silver Band Ring",
+    "collection": "Hanuman Silver Rings",
+    "type": [
+      "Spiritual Silver Jewellery",
+      "Silver Jewellery for Men",
+      "Silver Jewellery for Women"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "✨ Personalised Name & Custom Design Option",
+      "🪷 Proudly Made in India",
+      "🎁 Perfect Gift for Special Moments",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Celebrate devotion and inner resolve with this 925 sterling silver band ring featuring clear \"पवनपुत्र\" engraving along the outer band. Built with a sturdy, comfortable band fit suited for regular wear, it blends traditional spiritual meaning with versatile styling. Crafted in 92.5% pure silver, it is a thoughtful keepsake gift for religious celebrations, birthdays, and meaningful milestones.",
+    "images": [
+      "pawanputra-engraved-silver-ring-ssj-1147-a.webp",
+      "pawanputra-band-engraving-closeup-ssj-1147-b.webp"
+    ],
+    "brandText": "Elegant Jewellery in Authentic 92.5% Pure Silver",
+    "care": "SILVER_GENERAL",
+    "for": "unisex",
+    "metal": "silver",
+    "weight": 5,
+    "makingCharges": 60,
+    "discount": 5,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 2060,
+    "MRP": 2168
+  },
+  {
+    "id": 1148,
+    "name": "Hanuman Chalisa Mantra Silver Ring Tum Rakshak Kahu Ko Darna",
+    "collection": "Hanuman Silver Rings",
+    "type": [
+      "Spiritual Silver Jewellery",
+      "Silver Jewellery for Men",
+      "Silver Jewellery for Women"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Silver Purity",
+      "✨ Personalised Name & Custom Design Option",
+      "🪷 Proudly Made in India",
+      "🎁 Perfect Gift for Special Moments",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "Celebrate your unique identity or gift a meaningful keepsake with this premium personalized sterling silver ring for men. Expertly crafted with a smooth, high-polish finish, the ring features a crisp, customizable name engraving in an elegant, modern font. The inner band is stamped with the \"925\" hallmark, certifying its genuine silver purity. Its classic dome-shaped profile provides a timeless aesthetic while ensuring maximum comfort for daily wear. Made with high-grade, durable 92.5% pure silver, this band is highly resistant to bending and is designed to last. It serves as an exceptional personalized gift for birthdays, anniversaries, weddings, or milestones, seamlessly blending classic style with sentimental value.",
+    "images": [
+      "silver-name-ring-men-personalised-ssj-1148-a.webp",
+      "engraved-name-ring-closeup-ssj-1148-b.webp"
+    ],
+    "brandText": "Elegant Jewellery in Silver",
+    "care": "SILVER_GENERAL",
+    "for": "unisex",
+    "metal": "silver",
+    "weight": 5,
+    "makingCharges": 60,
+    "discount": 5,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 2060,
+    "MRP": 2168
+  },
+  {
+    "id": 1149,
+    "name": "Personalised Jai Shri Ram Name Ring for Men & Women",
+    "collection": "Hanuman Silver Rings",
+    "type": [
+      "Spiritual Silver Jewellery",
+      "Silver Jewellery for Men",
+      "Silver Jewellery for Women"
+    ],
+    "highlights": [
+      "\"💎 Crafted in 925 Silver Purity",
+      "✨ Personalised Name & Custom Design Option",
+      "🪷 Proudly Made in India",
+      "🎁 Perfect Gift for Special Moments",
+      "🚚 Pan India Delivery Available\""
+    ],
+    "description": "Celebrate your unique identity or gift a meaningful keepsake with this personalized sterling silver ring crafted in a textured hammered band style. Designed with a tactile hammered finish that adds depth and character, the ring features crisp custom engraving options such as devotional text, names, or special messages. Made in durable 92.5% pure sterling silver, it offers a solid, comfortable fit suitable for daily wear and special occasions. An ideal choice for birthdays, anniversaries, festive celebrations, or meaningful milestones",
+    "images": [
+      "hammered-silver-ring-with-devanagari-engraving-ssj-1149-a.webp",
+      "silver-hammered-ring-engraved-ssj-1149-b.webp"
+    ],
+    "brandText": "Made from Silver for Elegant Looks",
+    "care": "SILVER_GENERAL",
+    "for": "unisex",
+    "metal": "silver",
+    "weight": 7,
+    "makingCharges": 50,
+    "discount": 5,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 2704,
+    "MRP": 2846
+  },
+  {
+    "id": 1150,
+    "name": "925 Sterling Silver Hammered Band Ring",
+    "collection": "Silver Rings for Men",
+    "type": [
+      "Silver Jewellery for Men",
+      "Silver Gift for Her"
+    ],
+    "highlights": [
+      "💎 Crafted in 925 Sterling Silver",
+      "✨ Hand-Hammered Texture with Unique Reflective Finish",
+      "🪷 Minimal, Timeless & Unisex Design",
+      "🎁 Perfect for Everyday Wear & Gifting",
+      "🚚 Pan India Delivery Available"
+    ],
+    "description": "A timeless silver band featuring a beautifully hammered surface that creates a unique play of light and reflections. Its handcrafted textured finish gives the ring a bold yet minimal look, making it perfect for everyday wear.\n\nDesigned for those who appreciate simple, artistic jewellery, this silver band pairs effortlessly with casual outfits, office wear, and traditional styling. Its clean circular design makes it suitable for both men and women, and it also makes a thoughtful gift for birthdays, anniversaries, or special occasions.",
+    "images": [
+      "hammered-sterling-silver-band-ring-1150-a.webp",
+      "handcrafted-textured-silver-ring-1150-b.webp"
+    ],
+    "brandText": "Handmade 925 Silver Hammered Ring",
+    "care": "SILVER_GENERAL",
+    "for": "unisex",
+    "metal": "silver",
+    "weight": 8,
+    "makingCharges": 50,
+    "discount": 4,
+    "labels": [],
+    "HUID": false,
+    "available": true,
+    "active": true,
+    "rating": 0,
+    "ratingCount": 0,
+    "Lock": "",
+    "price": 3090,
+    "MRP": 3219
   }
 ]

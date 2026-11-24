@@ -85,13 +85,22 @@ export default async function collectionPage({ params }: CollectionPageProps) {
     notFound();
   }
 
-  // Sort available products first for better UX & immediate availability signals
   const filtered = products
     .filter((p: Product) => p.collection === collection.name && p.active)
     .sort((a: Product, b: Product) => {
-      if (a.available && !b.available) return -1;
-      if (!a.available && b.available) return 1;
-      return 0;
+      const labelA = a.labels?.[0] ?? '';
+      const labelB = b.labels?.[0] ?? '';
+
+      // New Arrival always comes first
+      if (labelA === 'New Arrival' && labelB !== 'New Arrival') return -1;
+      if (labelB === 'New Arrival' && labelA !== 'New Arrival') return 1;
+
+      // Empty labels go last
+      if (!labelA && labelB) return 1;
+      if (!labelB && labelA) return -1;
+
+      // Remaining labels in alphabetical order
+      return labelA.localeCompare(labelB);
     });
 
   const JsonLdObj = buildCollectionPageJsonLd(filtered, collection);

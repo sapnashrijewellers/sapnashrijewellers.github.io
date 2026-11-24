@@ -26,10 +26,6 @@ import RecentlyViewedBar from '@/components/common/RecentlyViewedBar';
 import JsonLd from '@/components/common/JsonLd';
 import ProductPrice from '@/components/product/ProductPrice';
 
-import dynamic from 'next/dynamic';
-
-const ProductChatbot = dynamic(() => import('@/components/product/ProductChatbot'));
-
 interface ProductDetailPageProps {
   params: Promise<{ id: string }>;
 }

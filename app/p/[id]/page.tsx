@@ -17,7 +17,7 @@ import TrustSignalsRibbon from '@/components/product/TrustSignalsRibbon';
 import CareInstructions from '@/components/product/CareInstructions';
 import BulkEnquiry from '@/components/product/BulkEnquiry';
 import Tooltip from '@/components/common/Tooltip';
-import StoreAvailability from '@/components/product/StoreAvailability';
+//import StoreAvailability from '@/components/product/StoreAvailability';
 import FAQ from '@/components/product/FAQ';
 import buildProductJsonLd from '@/utils/json-ld/buildProductJsonLd';
 import ProductGeoSpecs from '@/components/product/ProductGeoSpecs';
@@ -263,14 +263,14 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
           primary purchase decision.
       ============================================================== */}
 
-      <section
+      {/* <section
         aria-label="Store availability and product assistance"
         className="mx-auto mt-6 grid max-w-6xl gap-4 md:grid-cols-2"
       >
         <StoreAvailability />
 
         <ProductChatbot product={product} />
-      </section>
+      </section> */}
 
       {/* ==============================================================
           7. PRODUCT DISCOVERY
